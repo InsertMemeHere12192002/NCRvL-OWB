@@ -1,5 +1,4 @@
 namespace = NVL_Unifier
-
 country_event = {
 	id = NVL.1
 	title = NVL.1.t
@@ -19,99 +18,78 @@ country_event = {
 		}
 		trigger = {
 			tag = SHI
-			has_game_rule = SHI/EUR/ARR # SHI annex Eureka and Arroyo
+			has_game_rule = SHI/EUR/ARR			# SHI annex Eureka and Arroyo
 		}
 		hidden_effect = {
 			SHI = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = EUR							
-							is_core_of = PAC							
-							is_core_of = UMB							
-							is_core_of = ARR							
-							is_core_of = DIS							 
-							is_core_of = MLT							
-							is_core_of = PMR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL						
+						OR = {
+							is_core_of = EUR
+							is_ARR_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = SHI
-                        }
+						NOT = {
+							is_controlled_by = SHI
+						}
 					}
 					transfer_state_to = SHI
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-    option = {
-		name = NVL.1.b # SHI annex Eureka and Arroyo and Oregon
+	option = {
+		name = NVL.1.b		# SHI annex Eureka and Arroyo and Oregon
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
 			tag = SHI
-			has_game_rule = SHI/EUR 
+			has_game_rule = SHI/EUR
 		}
 		hidden_effect = {
 			SHI = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = EUR							
-							is_core_of = PAC							
-							is_core_of = UMB							
-							is_core_of = ARR							
-							is_core_of = DIS							 
-							is_core_of = MLT							
-							is_core_of = PMR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL
-                            is_core_of = MDT
-                            is_core_of = TIM
-                            is_core_of = BDT						
+						OR = {
+							is_core_of = EUR
+							is_ARR_expansion_target = yes
+							is_OREGON_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = SHI
-                        }
+						NOT = {
+							is_controlled_by = SHI
+						}
 					}
 					transfer_state_to = SHI
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-        option = {
-		name = NVL.1.c # SHI annex Eureka
+	option = {
+		name = NVL.1.c		# SHI annex Eureka
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
 			tag = SHI
-			has_game_rule = SHI/EUR 
+			has_game_rule = SHI/EUR
 		}
 		hidden_effect = {
 			SHI = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = EUR												
+						OR = {
+							is_core_of = EUR
 						}
-                        NOT = {
-                            is_controlled_by = SHI
-                        }
+						NOT = {
+							is_controlled_by = SHI
+						}
 					}
 					transfer_state_to = SHI
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
 }
@@ -135,37 +113,27 @@ country_event = {
 		}
 		trigger = {
 			tag = EUR
-			has_game_rule = EUR/ARR # EUR annex Arroyo
+			has_game_rule = EUR/ARR			# EUR annex Arroyo
 		}
 		hidden_effect = {
 			EUR = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = ARR							
-							is_core_of = PAC							
-							is_core_of = UMB							
-							is_core_of = ARR							
-							is_core_of = DIS							 
-							is_core_of = MLT							
-							is_core_of = PMR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL						
+						OR = {
+							is_ARR_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = EUR
-                        }
+						NOT = {
+							is_controlled_by = EUR
+						}
 					}
 					transfer_state_to = EUR
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-    option = {
-		name = NVL.2.b # EUR annex Arroyo and Oregon
+	option = {
+		name = NVL.2.b		# EUR annex Arroyo and Oregon
 		ai_chance = {
 			factor = 0
 		}
@@ -177,33 +145,20 @@ country_event = {
 			SHI = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = ARR							
-							is_core_of = PAC							
-							is_core_of = UMB							
-							is_core_of = ARR							
-							is_core_of = DIS							 
-							is_core_of = MLT							
-							is_core_of = PMR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL
-                            is_core_of = MDT
-                            is_core_of = TIM
-                            is_core_of = BDT						
+						OR = {
+							is_ARR_expansion_target = yes
+							is_OREGON_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = EUR
-                        }
+						NOT = {
+							is_controlled_by = EUR
+						}
 					}
 					transfer_state_to = EUR
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-        
 }
 
 country_event = {
@@ -225,28 +180,27 @@ country_event = {
 		}
 		trigger = {
 			tag = ARR
-			has_game_rule = ARR/EUR # ARR annex Eureka
+			has_game_rule = ARR/EUR			# ARR annex Eureka
 		}
 		hidden_effect = {
 			ARR = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = EUR					
+						OR = {
+							is_core_of = EUR
 						}
-                        NOT = {
-                            is_controlled_by = ARR
-                        }
+						NOT = {
+							is_controlled_by = ARR
+						}
 					}
 					transfer_state_to = ARR
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-    option = {
-		name = NVL.3.b # ARR annex Eureka and Oregon
+	option = {
+		name = NVL.3.b		# ARR annex Eureka and Oregon
 		ai_chance = {
 			factor = 0
 		}
@@ -258,30 +212,22 @@ country_event = {
 			ARR = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = EUR							
-							is_core_of = ARR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL
-                            is_core_of = MDT
-                            is_core_of = TIM
-                            is_core_of = BDT						
+						OR = {
+							is_core_of = EUR
+							is_OREGON_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = ARR
-                        }
+						NOT = {
+							is_controlled_by = ARR
+						}
 					}
 					transfer_state_to = ARR
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-
-    option = {
-		name = NVL.3.c # ARR annex Oregon
+	option = {
+		name = NVL.3.c		# ARR annex Oregon
 		ai_chance = {
 			factor = 0
 		}
@@ -293,27 +239,19 @@ country_event = {
 			ARR = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = ARR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL
-                            is_core_of = MDT
-                            is_core_of = TIM
-                            is_core_of = BDT						
+						OR = {
+							is_OREGON_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = ARR
-                        }
+						NOT = {
+							is_controlled_by = ARR
+						}
 					}
 					transfer_state_to = ARR
-                    add_compliance = 0.6
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-        
 }
 
 country_event = {
@@ -329,100 +267,309 @@ country_event = {
 		days = 1247		# should trigger around June 2778
 	}
 	option = {
-		name = NVL.3.a
+		name = NVL.4.a
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
-			tag = NEW 
-			has_game_rule = NEW/DES # NEW annex Ranger
+			tag = NEW
+			has_game_rule = NEW/DES			# NEW annex Ranger
 		}
 		hidden_effect = {
-			ARR = {
+			NEW = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = EUR					
+						OR = {
+							is_DES_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = ARR
-                        }
+						NOT = {
+							is_controlled_by = NEW
+						}
 					}
-					transfer_state_to = ARR
-                    add_compliance = 0.6
+					transfer_state_to = NEW
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-    option = {
-		name = NVL.3.b # ARR annex Eureka and Oregon
-		ai_chance = {
-			factor = 0
-		}
-		trigger = {
-			tag = ARR
-			has_game_rule = ARR/EUR/OREGON
-		}
-		hidden_effect = {
-			ARR = {
-				every_state = {
-					limit = {
-						OR = {							
-							is_core_of = EUR							
-							is_core_of = ARR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL
-                            is_core_of = MDT
-                            is_core_of = TIM
-                            is_core_of = BDT						
-						}
-                        NOT = {
-                            is_controlled_by = ARR
-                        }
-					}
-					transfer_state_to = ARR
-                    add_compliance = 0.6
-				}
-			}
-            
-		}
-	}
-
-    option = {
-		name = NVL.3.c # ARR annex Oregon
+	option = {
+		name = NVL.4.b		# NEW annex Ranger and Oregon
 		ai_chance = {
 			factor = 0
 		}
 		trigger = {
 			tag = ARR
-			has_game_rule = ARR/OREGON
+			has_game_rule = NEW/DES/OREGON
 		}
 		hidden_effect = {
-			ARR = {
+			NEW = {
 				every_state = {
 					limit = {
-						OR = {							
-							is_core_of = ARR							
-							is_core_of = RBT							
-							is_core_of = CCW							
-							is_core_of = TRL
-                            is_core_of = MDT
-                            is_core_of = TIM
-                            is_core_of = BDT						
+						OR = {
+							is_DES_expansion_target = yes
+							is_OREGON_expansion_target = yes
 						}
-                        NOT = {
-                            is_controlled_by = ARR
-                        }
+						NOT = {
+							is_controlled_by = NEW
+						}
 					}
-					transfer_state_to = ARR
-                    add_compliance = 0.6
+					transfer_state_to = NEW
+					add_compliance = 0.6
 				}
 			}
-            
 		}
 	}
-        
+	option = {
+		name = NVL.4.c		# NEW annex Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ARR
+			has_game_rule = NEW/OREGON
+		}
+		hidden_effect = {
+			NEW = {
+				every_state = {
+					limit = {
+						OR = {
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = NEW
+						}
+					}
+					transfer_state_to = NEW
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
 }
 
+country_event = {
+	id = NVL.5
+	title = NVL.5.t
+	desc = NVL.5.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = VLT
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.5.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = VLT
+			has_game_rule = VLT/NEW			#VLT annex NEW
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = VLT
+						}
+					}
+					transfer_state_to = VLT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.5.b		# VLT annex NEW and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = VLT
+			has_game_rule = VLT/NEW/OREGON
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = VLT
+						}
+					}
+					transfer_state_to = VLT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.5.c		# VLT annex Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = VLT
+			has_game_rule = VLT/OREGON
+		}
+		hidden_effect = {
+			NEW = {
+				every_state = {
+					limit = {
+						OR = {
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = VLT
+						}
+					}
+					transfer_state_to = VLT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.6
+	title = NVL.6.t
+	desc = NVL.6.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = DES
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.6.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = DES/NEW			#DES annex NEW
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = DES
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.6.b		# DES annex NEW and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = DES/NEW/OREGON
+		}
+		hidden_effect = {
+			DES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = DES
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.7
+	title = NVL.7.t
+	desc = NVL.7.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = DES
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.6.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = DES/NEW			#DES annex NEW
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = DES
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.6.b		# DES annex NEW and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = DES/NEW/OREGON
+		}
+		hidden_effect = {
+			DES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_controlled_by = DES
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}

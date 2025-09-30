@@ -1,0 +1,66 @@
+is_NEW_expansion_target = {
+	OR = {
+		is_core_of = NEW
+		is_core_of = YKZ
+		is_core_of = MOD
+		is_core_of = SLA
+		is_core_of = TDN
+		is_core_of = KLA
+		is_core_of = JAC
+	}
+}
+
+is_VLT_expansion_target = {
+	OR = {
+		is_core_of = SLT
+		is_core_of = PAL
+		is_core_of = CYC
+		is_core_of = EAS
+		is_core_of = SHO
+		is_core_of = CHE
+		is_core_of = VLT
+	}
+}
+
+is_ARR_expansion_target = {
+	OR = {
+		is_core_of = PAC
+		is_core_of = UMB
+		is_core_of = DIS
+		is_core_of = MXS
+		is_core_of = MLT
+		is_core_of = PMR
+		is_core_of = ARR
+	}
+}
+
+is_OREGON_expansion_target = {
+	OR = {
+		is_core_of = RBT
+		is_core_of = CCW
+		is_core_of = TIM
+		is_core_of = TRL
+		is_core_of = MDT
+		is_core_of = BDT
+	}
+}
+
+is_DES_expansion_target = {
+	OR = {
+		is_core_of = SOK
+		is_core_of = GRD
+		is_core_of = TVT
+		is_core_of = TOF
+		is_core_of = SKY
+		is_core_of = VIP
+        is_core_of = DES
+        is_core_of = PSH
+	}
+}
+
+is_MOT_expansion_target = {
+	OR = {
+		is_core_of = MOJ
+		is_core_of = MOT
+	}
+}
