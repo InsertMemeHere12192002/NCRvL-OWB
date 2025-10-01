@@ -202,54 +202,183 @@ NCR_VEG_unifier = {
 	}
 }
 
-Legion_unifier = {
-	name = "RULE_LEGION_UNIFIER"
-	group = "RULE_GROUP_UNIFIERS"
-	default = {
-		name = "NONE"
-		text = "RULE_UNIFIERS_LEGION_DEFAULT"
-		desc = "RULE_UNIFIERS_LEGION_DEFAULT_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "LEGION/TWOSUN/NAVARRO/WHITELEG"
-		text = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/WHITELEG"
-		desc = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/WHITELEG_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "LEGION/TWOSUN/NAVARRO/EIGHTIES"
-		text = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/EIGHTIES"
-		desc = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/EIGHTIES_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "LEGION/TWOSUN/NAVARRO/IRONALLIANCE"
-		text = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/IRONALLIANCE"
-		desc = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/IRONALLIANCE_DESC"
-		allow_achievements = yes
-	}
-}
-
 Legion_TWO_unifier = {
 	name = "RULE_Legion_UNIFIER"
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
-		text = "RULE_UNIFIERS_NCR_EUR_DEFAULT"
-		desc = "RULE_UNIFIERS_NCR_EUR_DEFAULT_DESC"
+		text = "RULE_UNIFIERS_LEGION_TWO_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_TWO_DEFAULT_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = "DES/NEW"
-		text = "RULE_DES/NEW"
-		desc = "RULE_UNIFIERS_DES/NEW_DESC"
+		name = "TWO/GDH"
+		text = "RULE_UNIFIERS_TWO/GDH"
+		desc = "RULE_UNIFIERS_TWO/GDH_DESC"
 		allow_achievements = yes
 	}
 	option = {
-		name = "DES/VLT"
-		text = "RULE_UNIFIERS_DES/VLT"
-		desc = "RULE_UNIFIERS_DES/VLT_DESC"
+		name = "TWO/GDH/LEGIONEXT"
+		text = "RULE_UNIFIERS_TWO/GDH/LEGIONEXT"
+		desc = "RULE_UNIFIERS_TWO/GDH/LEGIONEXT_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_GDH_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_GDH_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_GDH_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GDH/TWO"
+		text = "RULE_UNIFIERS_GDH/TWO"
+		desc = "RULE_UNIFIERS_GDH/TWO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GDH/TWO/LEGIONEXT"
+		text = "RULE_UNIFIERS_GDH/TWO/LEGIONEXT"
+		desc = "RULE_UNIFIERS_GDH/TWO/LEGIONEXT_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_NAV_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_NAV_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_NAV_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NAV/RES"
+		text = "RULE_UNIFIERS_NAV/RES"
+		desc = "RULE_UNIFIERS_NAV/RES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NAV/RES/LANIUS"
+		text = "RULE_UNIFIERS_NAV/RES/LANIUS"
+		desc = "RULE_UNIFIERS_NAV/RES/LANIUS_DESC"
+		allow_achievements = yes
+	}
+
+		option = {
+		name = "NAV/LANIUS"
+		text = "RULE_UNIFIERS_NAV/LANIUS"
+		desc = "RULE_UNIFIERS_NAV/LANIUS_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_RES_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_RES_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_RES_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RES/NAV"
+		text = "RULE_UNIFIERS_RES/NAV"
+		desc = "RULE_UNIFIERS_RES/NAV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RES/NAV/LANIUS"
+		text = "RULE_UNIFIERS_RES/NAV/LANIUS"
+		desc = "RULE_UNIFIERS_RES/NAV/LANIUS_DESC"
+		allow_achievements = yes
+	}
+
+		option = {
+		name = "RES/LANIUS"
+		text = "RULE_UNIFIERS_RES/LANIUS"
+		desc = "RULE_UNIFIERS_RES/LANIUS_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_WHT_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_WHT_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_WHT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WHT/EHT"
+		text = "RULE_UNIFIERS_WHT/EHT"
+		desc = "RULE_UNIFIERS_WHT/EHT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WHT/EHT/COLORADO"
+		text = "RULE_UNIFIERS_WHT/EHT/COLORADO"
+		desc = "RULE_UNIFIERS_WHT/EHT/COLORADO_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_EHT_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_EHT_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_EHT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EHT/WHT"
+		text = "RULE_UNIFIERS_EHT/WHT"
+		desc = "RULE_UNIFIERS_EHT/WHT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EHT/WHT/COLORADO"
+		text = "RULE_UNIFIERS_EHT/WHT/COLORADO"
+		desc = "RULE_UNIFIERS_EHT/WHT/COLORADO_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_IRN_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_IRN_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_IRN_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "IRN/UTAH"
+		text = "RULE_UNIFIERS_IRN/UTAH"
+		desc = "RULE_UNIFIERS_IRN/UTAH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "IRN/LANIUS"
+		text = "RULE_UNIFIERS_IRN/LANIUS"
+		desc = "RULE_UNIFIERS_IRN/LANIUS_DESC"
+		allow_achievements = yes
+	}
+		option = {
+		name = "IRN/LANIUS/UTAH"
+		text = "RULE_UNIFIERS_IRN/LANIUS/UTAH"
+		desc = "RULE_UNIFIERS_IRN/LANIUS/UTAH_DESC"
 		allow_achievements = yes
 	}
 }

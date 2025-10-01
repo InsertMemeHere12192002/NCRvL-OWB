@@ -53,8 +53,8 @@ is_DES_expansion_target = {
 		is_core_of = TOF
 		is_core_of = SKY
 		is_core_of = VIP
-        is_core_of = DES
-        is_core_of = PSH
+		is_core_of = DES
+		is_core_of = PSH
 	}
 }
 
@@ -62,5 +62,105 @@ is_MOT_expansion_target = {
 	OR = {
 		is_core_of = MOJ
 		is_core_of = MOT
+	}
+}
+
+is_TWO_expansion_target = {
+	OR = {
+		is_core_of = TWO
+		is_core_of = COW
+		is_core_of = TON
+	}
+}
+
+is_UTAH_expansion_target = {
+	OR = {
+		is_core_of = RUB
+		is_core_of = GRA
+		is_core_of = WHT
+		is_core_of = SOR
+		is_core_of = DEA
+		is_core_of = TAR
+		is_core_of = CLK
+		is_core_of = EHT
+		is_core_of = HAM
+		is_core_of = MUR
+		is_core_of = NCN
+		is_core_of = ANO
+		is_core_of = LON
+		is_core_of = UIN
+		is_core_of = CRZ
+	}
+}
+
+is_Colorado_expansion_target = {
+	OR = {
+		is_core_of = TOB
+		is_core_of = SLE
+		is_core_of = BLC
+		is_core_of = DRY
+		is_core_of = GLW
+		is_core_of = LUM
+		is_core_of = BAG
+		is_core_of = WHD
+		is_core_of = IRN
+	}
+}
+
+is_lanius_expansion_target = {
+	OR = {
+		is_core_of = TTM
+		is_core_of = HAN
+		is_core_of = ROB
+		is_core_of = SCO
+		is_core_of = MXC
+		is_core_of = SUN
+		is_core_of = ASF
+		is_core_of = SUF
+		is_core_of = LAC
+		is_core_of = EDA
+		is_core_of = MES
+		is_core_of = EXE
+		is_core_of = PEC
+	}
+}
+
+is_texas_expansion_target = {
+	is_core_of = TAA
+	is_core_of = SHA
+	is_core_of = LUB
+	is_core_of = CWB
+	is_core_of = PAR
+	is_core_of = CHC
+	is_core_of = SCA
+	is_core_of = TLL
+	is_core_of = LNS
+	is_core_of = TBH
+	is_core_of = CMC
+	is_core_of = TLP
+	is_core_of = CHR
+	is_core_of = CHO
+	is_core_of = DSP
+	is_core_of = GAM
+}
+
+is_NAV_expansion_target = {
+	is_core_of = NAV
+	is_core_of = FOR
+	is_core_of = INR
+	is_core_of = CLJ
+}
+
+is_legion_expansion_target = {
+	OR = {
+		is_core_of = RBD
+		is_core_of = LGS
+	}
+}
+
+is_player_or_future_owner = {
+	is_controlled_by = ROOT
+	owner = {
+		is_player = yes
 	}
 }
