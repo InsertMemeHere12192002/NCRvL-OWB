@@ -383,6 +383,35 @@ Legion_IRN_unifier = {
 	}
 }
 
+Legion_CES_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_CES_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_CES_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "CES/TEXAS"
+		text = "RULE_UNIFIERS_CES/TEXAS"
+		desc = "RULE_UNIFIERS_CES/TEXAS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "CES/TWO/GDH"
+		text = "RULE_UNIFIERS_CES/TWO/GDH"
+		desc = "RULE_UNIFIERS_CES/TWO/GDH_DESC"
+		allow_achievements = yes
+	}
+		option = {
+		name = "CES/NAV/RES"
+		text = "RULE_UNIFIERS_CES/NAV/RES"
+		desc = "RULE_UNIFIERS_CES/NAV/RES_DESC"
+		allow_achievements = yes
+	}
+}
+
 canada_unifier = {
 	name = "RULE_CANADA_UNIFIER"
 	group = "RULE_GROUP_UNIFIERS"
