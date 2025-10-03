@@ -172,9 +172,9 @@ NCR_DES_unifier = {
 		allow_achievements = yes
 	}
 	option = {
-		name = "DES/VLT"
-		text = "RULE_UNIFIERS_DES/VLT"
-		desc = "RULE_UNIFIERS_DES/VLT_DESC"
+		name = "DES/NEW/OREGON"
+		text = "RULE_UNIFIERS_DES/NEW/OREGON"
+		desc = "RULE_UNIFIERS_DES/NEW/OREGON_DESC"
 		allow_achievements = yes
 	}
 }
