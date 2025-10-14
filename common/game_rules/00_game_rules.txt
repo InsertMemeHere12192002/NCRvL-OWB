@@ -154,7 +154,7 @@ NCR_VLT_unifier = {
 		desc = "RULE_UNIFIERS_VLT/NEW/OREGON_DESC"
 		allow_achievements = yes
 	}
-}
+} 
 
 NCR_DES_unifier = {
 	name = "RULE_NCR_UNIFIER"
@@ -198,6 +198,23 @@ NCR_VEG_unifier = {
 		name = "NCR/VEG"
 		text = "RULE_UNIFIERS_NCR/VEG"
 		desc = "RULE_UNIFIERS_NCR/VEG_DESC"
+		allow_achievements = yes
+	}
+}
+
+NCR_MOT_unifier = {
+	name = "RULE_NCR_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_NCR_MOT_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_MOT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NCR/MOT"
+		text = "RULE_UNIFIERS_NCR/MOT"
+		desc = "RULE_UNIFIERS_NCR/MOT_DESC"
 		allow_achievements = yes
 	}
 }

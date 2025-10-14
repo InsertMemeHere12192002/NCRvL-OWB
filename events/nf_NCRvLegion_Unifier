@@ -617,6 +617,50 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = NVL.8
+	title = NVL.8.t
+	desc = NVL.8.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = NCR
+	}
+	mean_time_to_happen = {
+		days = 10		# should trigger around start of the game
+	}
+	option = {
+		name = NVL.8.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NCR
+			has_game_rule = {
+				rule = NCR/MOT
+			}
+			#NCR annex MOT
+		}
+		hidden_effect = {
+			NCR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = MOT
+							is_core_of = MOJ
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = NCR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
 ####Legion
 country_event = {
 	id = NVL.8
@@ -1204,9 +1248,9 @@ country_event = {
 		trigger = {
 			tag = CES
 			has_game_rule = {
-				rule = CES/TEXAS
+				rule = CES/TEXAS #CES annex TEXAS
 			}
-			#IRN annex UTAH
+			
 		}
 		hidden_effect = {
 			CES = {
@@ -1262,7 +1306,7 @@ country_event = {
 		trigger = {
 			tag = CES
 			has_game_rule = {
-				rule = CES/ NAV/RES
+				rule = CES/NAV/RES
 			}
 		}
 		hidden_effect = {
