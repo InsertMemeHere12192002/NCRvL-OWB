@@ -4986,11 +4986,8 @@ focus_tree = {
 			base = 2
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = {
-						has_completed_focus = new_king
-					}
-					is_salvatore_leader = yes
+				NOT = {
+					has_completed_focus = new_king
 				}
 				NEW_has_ai_behavior_neutrality = yes
 			}

@@ -654,6 +654,17 @@ on_actions = {
 						load_oob = "unlock_supermutant_infantry"
 					}
 				}
+								if = {
+					limit = {
+						NOT = {
+							has_template_containing_unit = heavy_super_mutant_infantry
+						}
+						has_tech = super_mutant_civilization
+					}
+					hidden_effect = {
+						load_oob = "unlock_heavy_supermutant_infantry"
+					}
+				}
 				if = {
 					limit = {
 						NOT = {

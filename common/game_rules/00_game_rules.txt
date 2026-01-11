@@ -2050,30 +2050,6 @@ ATE_ai_behavior = {
 	}
 }
 
-# Ouroboros
-ORO_ai_behavior = {
-	name = "RULE_AI_BEHAVIOR_ORO"
-	group = "RULE_GROUP_AI_BEHAVIOR"
-	default = {
-		name = "DEFAULT"
-		text = "RULE_AI_BEHAVIOR_ORO_DEFAULT"
-		desc = "RULE_AI_BEHAVIOR_ORO_DEFAULT_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "HECATE"
-		text = "RULE_AI_BEHAVIOR_ORO_HECATE"
-		desc = "RULE_AI_BEHAVIOR_ORO_HECATE_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "DAE"
-		text = "RULE_AI_BEHAVIOR_ORO_DAE"
-		desc = "RULE_AI_BEHAVIOR_ORO_DAE_DESC"
-		allow_achievements = yes
-	}
-}
-
 # Pioneer Company
 COM_ai_behavior = {
 	name = "RULE_AI_BEHAVIOR_COM"
@@ -2485,6 +2461,12 @@ VLT_ai_behavior = {
 		desc = "RULE_AI_BEHAVIOR_VLT_GORDON_DESC"
 		allow_achievements = yes
 	}
+		option = {
+		name = BRAIN
+		text = "RULE_AI_BEHAVIOR_VLT_BRAIN"
+		desc = "RULE_AI_BEHAVIOR_VLT_BRAIN_DESC"
+		allow_achievements = yes
+	}
 }
 
 # White Legs
@@ -2692,6 +2674,282 @@ WHT_status = {
 		name = "BROKEN"
 		text = "RULE_MAP_SETUP_WHITE_LEGS_STATUS_BROKEN"
 		desc = "RULE_MAP_SETUP_WHITE_LEGS_STATUS_BROKEN_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Baggers
+BAG_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_BAG"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_BAG_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_BAG_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ACADEMICS"
+		text = "RULE_AI_BEHAVIOR_BAG_ACADEMICS"
+		desc = "RULE_AI_BEHAVIOR_BAG_ACADEMICS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "PEOPLE"
+		text = "RULE_AI_BEHAVIOR_BAG_PEOPLE"
+		desc = "RULE_AI_BEHAVIOR_BAG_PEOPLE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ARMY"
+		text = "RULE_AI_BEHAVIOR_BAG_ARMY"
+		desc = "RULE_AI_BEHAVIOR_BAG_ARMY_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Luminous Ones
+LUM_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_LUM"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_LUM_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_LUM_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "PATIENCE"
+		text = "RULE_AI_BEHAVIOR_LUM_PATIENCE"
+		desc = "RULE_AI_BEHAVIOR_LUM_PATIENCE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "FAITH"
+		text = "RULE_AI_BEHAVIOR_LUM_FAITH"
+		desc = "RULE_AI_BEHAVIOR_LUM_FAITH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WRATH"
+		text = "RULE_AI_BEHAVIOR_LUM_WRATH"
+		desc = "RULE_AI_BEHAVIOR_LUM_WRATH_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Withered Dogs
+WHD_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_WHD"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_WHD_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_WHD_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ZHANG"
+		text = "RULE_AI_BEHAVIOR_WHD_ZHANG"
+		desc = "RULE_AI_BEHAVIOR_WHD_ZHANG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ANGRYDOG"
+		text = "RULE_AI_BEHAVIOR_WHD_ANGRYDOG"
+		desc = "RULE_AI_BEHAVIOR_WHD_ANGRYDOG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "CHARMINGDOG"
+		text = "RULE_AI_BEHAVIOR_WHD_CHARMINGDOG"
+		desc = "RULE_AI_BEHAVIOR_WHD_CHARMINGDOG_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Black Canyon
+BLC_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_BLC"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_BLC_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_BLC_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BLACKROCK"
+		text = "RULE_AI_BEHAVIOR_BLC_BLACKROCK"
+		desc = "RULE_AI_BEHAVIOR_BLC_BLACKROCK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NCR"
+		text = "RULE_AI_BEHAVIOR_BLC_NCR"
+		desc = "RULE_AI_BEHAVIOR_BLC_NCR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "OGDEN"
+		text = "RULE_AI_BEHAVIOR_BLC_OGDEN"
+		desc = "RULE_AI_BEHAVIOR_BLC_OGDEN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "MIDNIGHT"
+		text = "RULE_AI_BEHAVIOR_BLC_MIDNIGHT"
+		desc = "RULE_AI_BEHAVIOR_BLC_MIDNIGHT_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Glowbugs
+GLW_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_GLW"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_GLW_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_GLW_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "PATCHES"
+		text = "RULE_AI_BEHAVIOR_GLW_PATCHES"
+		desc = "RULE_AI_BEHAVIOR_GLW_PATCHES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "STITCHES"
+		text = "RULE_AI_BEHAVIOR_GLW_STITCHES"
+		desc = "RULE_AI_BEHAVIOR_GLW_STITCHES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BOTH"
+		text = "RULE_AI_BEHAVIOR_GLW_BOTH"
+		desc = "RULE_AI_BEHAVIOR_GLW_BOTH_DESC"
+		allow_achievements = yes
+	}
+}
+
+# The Iron Alliance
+IRN_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_IRN"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_IRN_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_IRN_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LEGION"
+		text = "RULE_AI_BEHAVIOR_IRN_LEGION"
+		desc = "RULE_AI_BEHAVIOR_IRN_LEGION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BLACKROCK"
+		text = "RULE_AI_BEHAVIOR_IRN_BLACKROCK"
+		desc = "RULE_AI_BEHAVIOR_IRN_BLACKROCK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "REAVERS"
+		text = "RULE_AI_BEHAVIOR_IRN_REAVERS"
+		desc = "RULE_AI_BEHAVIOR_IRN_REAVERS_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Reservation
+RES_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_RES"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_RES_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_RES_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "CLARK"
+		text = "RULE_AI_BEHAVIOR_RES_CLARK"
+		desc = "RULE_AI_BEHAVIOR_RES_CLARK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LOYAL_GREEN"
+		text = "RULE_AI_BEHAVIOR_RES_LOYAL_GREEN"
+		desc = "RULE_AI_BEHAVIOR_RES_LOYAL_GREEN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "REBEL_GREEN"
+		text = "RULE_AI_BEHAVIOR_RES_REBEL_GREEN"
+		desc = "RULE_AI_BEHAVIOR_RES_REBEL_GREEN_DESC"
+		allow_achievements = yes
+	}
+}
+
+# Highland Watch
+SIE_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_SIE"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_SIE_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_SIE_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "COALITION"
+		text = "RULE_AI_BEHAVIOR_SIE_COALITION"
+		desc = "RULE_AI_BEHAVIOR_SIE_COALITION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "COWBOYS"
+		text = "RULE_AI_BEHAVIOR_SIE_COWBOYS"
+		desc = "RULE_AI_BEHAVIOR_SIE_COWBOYS_DESC"
+		allow_achievements = yes
+	}
+}
+
+# The Old Bones
+TOB_ai_behavior = {
+	name = "RULE_AI_BEHAVIOR_TOB"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_AI_BEHAVIOR_TOB_DEFAULT"
+		desc = "RULE_AI_BEHAVIOR_TOB_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "HOMESTEAD"
+		text = "RULE_AI_BEHAVIOR_TOB_HOMESTEAD"
+		desc = "RULE_AI_BEHAVIOR_TOB_HOMESTEAD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LEGION"
+		text = "RULE_AI_BEHAVIOR_TOB_LEGION"
+		desc = "RULE_AI_BEHAVIOR_TOB_LEGION_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "HUBRIS"
+		text = "RULE_AI_BEHAVIOR_TOB_HUBRIS"
+		desc = "RULE_AI_BEHAVIOR_TOB_HUBRIS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RESTING"
+		text = "RULE_AI_BEHAVIOR_TOB_RESTING"
+		desc = "RULE_AI_BEHAVIOR_TOB_RESTING_DESC"
 		allow_achievements = yes
 	}
 }
@@ -2996,7 +3254,6 @@ allow_dismantle_faction = {
 allow_take_over_faction = {
 	name = "RULE_ALLOW_TAKE_OVER_FACTION"
 	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
-	required_dlc = "Man the Guns"
 	option = {
 		name = "ALLOWED"
 		text = "RULE_OPTION_ALLOWED"
@@ -3524,6 +3781,23 @@ HOA_orcs_versus_humans = {
 	}
 }
 
+LUM_dagoth_ur = {
+	name = "RULE_EVENTS_LUM_SIXTH_HOUSE"
+	group = "RULE_GROUP_EVENTS"
+	default = {
+		name = "DISABLED"
+		text = "RULE_EVENTS_LUM_SIXTH_HOUSE_DISABLED"
+		desc = "RULE_EVENTS_LUM_SIXTH_HOUSE_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_EVENTS_LUM_SIXTH_HOUSE_ENABLED"
+		desc = "RULE_EVENTS_LUM_SIXTH_HOUSE_ENABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
 
 ############
 # GAMEPLAY #
@@ -3558,6 +3832,21 @@ Tech_advancement_gamerule = {
 		name = "ENABLED"
 		text = "RULE_OPTION_TECH_ALLOW"
 		desc = "RULE_OPTION_TECH_ALLOW_DESC"
+	}
+}
+
+Unit_research_gamerule = {
+	name = "RULE_ALLOW_UNIT_RESEARCH"
+	group = "RULE_GROUP_GAMEPLAY"
+	default = {
+		name = "DISABLED"
+		text = "RULE_OPTION_UNIT_STANDARD"
+		desc = "RULE_OPTION_UNIT_STANDARD_DESC"
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_OPTION_UNIT_ALLOW"
+		desc = "RULE_OPTION_UNIT_ALLOW_DESC"
 	}
 }
 
@@ -3852,6 +4141,29 @@ holotape_decision_game_rule = {
 	}
 }
 
+BOS_buff_gamerule = {
+	name = "RULE_BOS_BUFF"
+	group = "RULE_GROUP_MISC"
+	default = {
+		name = "DISABLED"
+		text = "RULE_MISC_BOS_BUFF_GAMERULE_DISABLED"
+		desc = "RULE_MISC_BOS_BUFF_GAMERULE_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED_TCA"
+		text = "RULE_BOS_BUFF_GAMERULE_ENABLED_TCA"
+		desc = "RULE_BOS_BUFF_GAMERULE_ENABLED_TCA_DESC"
+		allow_achievements = yes
+	}
+		option = {
+		name = "ENABLED_WBH"
+		text = "RULE_BOS_BUFF_GAMERULE_ENABLED_WBH"
+		desc = "RULE_BOS_BUFF_GAMERULE_ENABLED_WBH_DESC"
+		allow_achievements = yes
+	}
+}
+
 #####################
 # UTILITY #
 #####################
@@ -4129,6 +4441,496 @@ ALAMO_SHAKEDOWN_OUTCOME = {
 		name = "ACH"
 		text = "RULE_OUTCOMES_ALAMO_SHAKEDOWN_ACH"
 		desc = "RULE_OUTCOMES_ALAMO_SHAKEDOWN_ACH_DESC"
+		allow_achievements = yes
+	}
+}
+AMICI_SQUABBLING_OUTCOME = {
+	name = "RULE_AMICI_SQUABBLING_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "AMICI_SQUABBLING_OUTCOME_DEFAULT"
+		desc = "AMICI_SQUABBLING_OUTCOME_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RES"
+		text = "AMICI_SQUABBLING_OUTCOME_RES"
+		desc = "AMICI_SQUABBLING_OUTCOME_RES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NAV"
+		text = "AMICI_SQUABBLING_OUTCOME_NAV"
+		desc = "AMICI_SQUABBLING_OUTCOME_NAV_DESC"
+		allow_achievements = yes
+	}
+}
+
+BLOODY_ELECTORALS_OUTCOME = {
+	name = "RULE_BLOODY_ELECTORALS_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_BLOODY_ELECTORALS_DEFAULT"
+		desc = "RULE_OUTCOMES_BLOODY_ELECTORALS_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "STN"
+		text = "RULE_OUTCOMES_BLOODY_ELECTORALS_STN"
+		desc = "RULE_OUTCOMES_BLOODY_ELECTORALS_STN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DUN"
+		text = "RULE_OUTCOMES_BLOODY_ELECTORALS_DUN"
+		desc = "RULE_OUTCOMES_BLOODY_ELECTORALS_DUN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "PLT"
+		text = "RULE_OUTCOMES_BLOODY_ELECTORALS_PLT"
+		desc = "RULE_OUTCOMES_BLOODY_ELECTORALS_PLT_DESC"
+		allow_achievements = yes
+	}
+}
+
+DAKOTAS_DEATHMATCH_OUTCOME = {
+	name = "RULE_DAKOTAS_DEATHMATCH_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_DEFAULT"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "STR"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_STR"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_STR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "MRR"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_MRR"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_MRR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "HST"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_HST"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_HST_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BIS"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_BIS"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_BIS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RMT"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_RMT"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_RMT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SOH"
+		text = "DAKOTAS_DEATHMATCH_OUTCOME_SOH"
+		desc = "DAKOTAS_DEATHMATCH_OUTCOME_SOH_DESC"
+		allow_achievements = yes
+	}
+}
+
+HIGHLANDS_OUTCOME = {
+	name = "RULE_HIGHLANDS_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_HIGHLANDS_DEFAULT"
+		desc = "RULE_OUTCOMES_HIGHLANDS_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "PRO"
+		text = "RULE_OUTCOMES_HIGHLANDS_PRO"
+		desc = "RULE_OUTCOMES_HIGHLANDS_PRO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SIE"
+		text = "RULE_OUTCOMES_HIGHLANDS_SIE"
+		desc = "RULE_OUTCOMES_HIGHLANDS_SIE_DESC"
+		allow_achievements = yes
+	}
+}
+
+JACKSONS_RAID_OUTCOME = {
+	name = "RULE_JACKSONS_RAID_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_JACKSONS_RAID_OUTCOME_DEFAULT"
+		desc = "RULE_OUTCOMES_JACKSONS_RAID_OUTCOME_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BTH"
+		text = "RULE_OUTCOMES_JACKSONS_RAID_OUTCOME_BTH"
+		desc = "RULE_OUTCOMES_JACKSONS_RAID_OUTCOME_BTH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "JCK"
+		text = "RULE_OUTCOMES_JACKSONS_RAID_OUTCOME_JCK"
+		desc = "RULE_OUTCOMES_JACKSONS_RAID_OUTCOME_JCK_DESC"
+		allow_achievements = yes
+	}
+}
+
+KHAN_SETTLING_OUTCOME = {
+	name = "RULE_KHAN_SETTLING_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_KHAN_SETTLING_DEFAULT"
+		desc = "RULE_OUTCOMES_KHAN_SETTLING_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "KHA"
+		text = "RULE_OUTCOMES_KHAN_SETTLING_KHA"
+		desc = "RULE_OUTCOMES_KHAN_SETTLING_KHA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WYR"
+		text = "RULE_OUTCOMES_KHAN_SETTLING_WYR"
+		desc = "RULE_OUTCOMES_KHAN_SETTLING_WYR_DESC"
+		allow_achievements = yes
+	}
+}
+
+LOUISIANA_OUTCOME = {
+	name = "RULE_LOUISIANA_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_LOUISIANA_DEFAULT"
+		desc = "RULE_OUTCOMES_LOUISIANA_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GAM"
+		text = "RULE_OUTCOMES_LOUISIANA_GAM"
+		desc = "RULE_OUTCOMES_LOUISIANA_GAM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TPM"
+		text = "RULE_OUTCOMES_LOUISIANA_TPM"
+		desc = "RULE_OUTCOMES_LOUISIANA_TPM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BAM"
+		text = "RULE_OUTCOMES_LOUISIANA_BAM"
+		desc = "RULE_OUTCOMES_LOUISIANA_BAM_DESC"
+		allow_achievements = yes
+	}
+}
+
+NEVADA_BATTLE_ROYALE_OUTCOME = {
+	name = "RULE_NEVADA_BATTLE_ROYALE_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_DEFAULT"
+		desc = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DES"
+		text = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_DES"
+		desc = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_DES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GRD"
+		text = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_GRD"
+		desc = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_GRD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SOK"
+		text = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_SOK"
+		desc = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_SOK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TOF"
+		text = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_TOF"
+		desc = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_TOF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TVT"
+		text = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_TVT"
+		desc = "RULE_OUTCOMES_NEVADA_BATTLE_ROYALE_TVT_DESC"
+		allow_achievements = yes
+	}
+}
+
+NEW_MEXICO_MASSACRES_OUTCOME = {
+	name = "RULE_NEW_MEXICO_MASSACRES_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_DEFAULT"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LAC"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_LAC"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_LAC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EDA"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_EDA"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_EDA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "MES"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_MES"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_MES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ASF"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_ASF"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_ASF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SUF"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_SUF"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_SUF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EXE"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_EXE"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_EXE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TTM"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_TTM"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_TTM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SUN"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_SUN"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_SUN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SCO"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_SCO"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_SCO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "MXC"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_MXC"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_MXC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ROB"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_ROB"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_ROB_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "HANWDN"
+		text = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_HANWDN"
+		desc = "RULE_NEW_MEXICO_MASSACRES_OUTCOME_HANWDN_DESC"
+		allow_achievements = yes
+	}
+}
+
+OPERATION_SNOWSTORM_OUTCOME = {
+	name = "RULE_OPERATION_SNOWSTORM_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_OPERATION_SNOWSTORM_DEFAULT"
+		desc = "RULE_OUTCOMES_OPERATION_SNOWSTORM_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WBH"
+		text = "RULE_OUTCOMES_OPERATION_SNOWSTORM_WBH"
+		desc = "RULE_OUTCOMES_OPERATION_SNOWSTORM_WBH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TCA"
+		text = "RULE_OUTCOMES_OPERATION_SNOWSTORM_TCA"
+		desc = "RULE_OUTCOMES_OPERATION_SNOWSTORM_TCA_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "YAK"
+		text = "RULE_OUTCOMES_OPERATION_SNOWSTORM_YAK"
+		desc = "RULE_OUTCOMES_OPERATION_SNOWSTORM_YAK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "OLY"
+		text = "RULE_OUTCOMES_OPERATION_SNOWSTORM_OLY"
+		desc = "RULE_OUTCOMES_OPERATION_SNOWSTORM_OLY_DESC"
+		allow_achievements = yes
+	}
+}
+
+PLAGUELANDS_OUTCOME = {
+	name = "RULE_PLAGUELANDS_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_PLAGUELANDS_DEFAULT"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TLR"
+		text = "RULE_OUTCOMES_PLAGUELANDS_TLR"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_TLR_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BRE"
+		text = "RULE_OUTCOMES_PLAGUELANDS_BRE"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_BRE_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "FRN"
+		text = "RULE_OUTCOMES_PLAGUELANDS_FRN"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_FRN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RAD"
+		text = "RULE_OUTCOMES_PLAGUELANDS_RAD"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_RAD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SIY"
+		text = "RULE_OUTCOMES_PLAGUELANDS_SIY"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_SIY_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DAM"
+		text = "RULE_OUTCOMES_PLAGUELANDS_DAM"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_DAM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LAP"
+		text = "RULE_OUTCOMES_PLAGUELANDS_LAP"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_LAP_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DED"
+		text = "RULE_OUTCOMES_PLAGUELANDS_DED"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_DED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SAN"
+		text = "RULE_OUTCOMES_PLAGUELANDS_SAN"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_SAN_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "REH"
+		text = "RULE_OUTCOMES_PLAGUELANDS_REH"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_REH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "OST"
+		text = "RULE_OUTCOMES_PLAGUELANDS_OST"
+		desc = "RULE_OUTCOMES_PLAGUELANDS_OST_DESC"
+		allow_achievements = yes
+	}
+}
+
+POWDERKEG_OUTCOME = {
+	name = "RULE_POWDERKEG_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_OUTCOMES_POWDERKEG_DEFAULT"
+		desc = "RULE_OUTCOMES_POWDERKEG_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "BAG"
+		text = "RULE_OUTCOMES_POWDERKEG_BAG"
+		desc = "RULE_OUTCOMES_POWDERKEG_BAG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LUM"
+		text = "RULE_OUTCOMES_POWDERKEG_LUM"
+		desc = "RULE_OUTCOMES_POWDERKEG_LUM_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WHD"
+		text = "RULE_OUTCOMES_POWDERKEG_WHD"
+		desc = "RULE_OUTCOMES_POWDERKEG_WHD_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "IRN"
+		text = "RULE_OUTCOMES_POWDERKEG_IRN"
+		desc = "RULE_OUTCOMES_POWDERKEG_IRN_DESC"
+		allow_achievements = yes
+	}
+}
+
+REVOLTING_ROACHES_OUTCOME = {
+	name = "RULE_REVOLTING_ROACHES_OUTCOME"
+	group = "RULE_GROUP_OUTCOMES"
+	default = {
+		name = "DEFAULT"
+		text = "REVOLTING_ROACHES_OUTCOME_DEFAULT"
+		desc = "REVOLTING_ROACHES_OUTCOME_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RCK"
+		text = "REVOLTING_ROACHES_OUTCOME_RCK"
+		desc = "REVOLTING_ROACHES_OUTCOME_RCK_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "VTS"
+		text = "REVOLTING_ROACHES_OUTCOME_VTS"
+		desc = "REVOLTING_ROACHES_OUTCOME_VTS_DESC"
 		allow_achievements = yes
 	}
 }

@@ -2023,7 +2023,7 @@ technologies = {
 	war_beasts_unlock_tech = {
 		research_cost = 1.25
 
-		supply_factor = 0.1
+		supply_consumption_factor = 0.1
 		production_factory_max_efficiency_factor = 0.02
 
 		path = {
@@ -2520,6 +2520,59 @@ technologies = {
 			factor = 3
 		}
 	}
+
+	wb_swamp_monsters = {
+		research_cost = 1
+		start_year = 2281
+
+		beast_creature = {
+			river = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
+			}
+			jungle = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
+			}
+			marsh = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
+			}
+			desert = {
+				attack = -0.05
+				defence = -0.05
+				movement = -0.05
+			}
+			plains = {
+				attack = -0.05
+				defence = -0.05
+				movement = -0.05
+			}
+		}
+
+		dependencies = {
+			blocked_tech_level = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts y = @Col_10 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
 
 	gecko_support_unlock_tech = {
 		research_cost = 1.35

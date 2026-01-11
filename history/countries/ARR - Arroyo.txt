@@ -74,37 +74,7 @@ set_technology = {
 	terror_tactics = 1
 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_module_tech = 1
-		naval_armour_tech_1 = 1
-		naval_pd_module_tech_1 = 1
-		naval_communications_module_tech_1 = 1
-		naval_weapons_module_tech = 1
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-		multi_deck_construction_tech_non_mtg = 1
-		heavy_navy_hull_tech_non_mtg_1 = 1
-	}
-}
-
-set_stability = 0.6
+set_stability = 0.3
 set_war_support = 0.25
 set_research_slots = 6
 set_country_flag = is_settler_nation

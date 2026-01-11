@@ -495,6 +495,10 @@ technologies = {
 			hardness = 0.2
 			default_morale = 0.03
 		}
+			heavy_super_mutant_infantry = {
+			hardness = 0.2
+			default_morale = 0.03	
+		}
 
 		path = {
 			leads_to_tech = heavy_infantry_tech_3
@@ -549,6 +553,17 @@ technologies = {
 			}
 		}
 		motorized_heavy_infantry = {
+			soft_attack = 0.05
+			urban = {
+				attack = 0.10
+				defence = 0.10
+			}
+			fort = {
+				attack = 0.10
+				defence = 0.10
+			}
+		}
+				heavy_super_mutant_infantry = {
 			soft_attack = 0.05
 			urban = {
 				attack = 0.10
@@ -668,6 +683,19 @@ technologies = {
 			fort = {
 				attack = 0.10
 				defence = 0.10
+			}
+		}
+
+		heavy_super_mutant_infantry = {
+			breakthrough = 0.05
+			suppression_factor = 0.1
+			river = {
+				attack = 0.10
+				movement = 0.10
+			}
+			amphibious = {
+				attack = 0.10
+				movement = 0.10
 			}
 		}
 
@@ -1235,6 +1263,7 @@ technologies = {
 		path = {
 			leads_to_tech = warrior_equipment
 			research_cost_coeff = 1
+			ignore_for_layout = yes
 		}
 		on_research_complete = {
 			add_to_variable = {
@@ -3468,14 +3497,10 @@ technologies = {
 	# Horses, Cavalry
 
 	spec_ops_horses_tech = {
-		research_cost = 2.2
-
-		allow = {
-			always = no
-		}
-
+		research_cost = 6.0
 		dependencies = {
-			blocked_tech = 1
+			blocked_unit_tech = 1
+			spec_ops_equipment_tech_1 = 1
 		}
 
 		start_year = 2276

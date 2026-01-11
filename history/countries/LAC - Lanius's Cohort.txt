@@ -62,19 +62,8 @@ if = {
 		naval_support_module_tech = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		medium_navy_hull_tech_non_mtg_1 = 1
-	}
-}
 
-set_stability = 0.1 #Very low on purpose
+set_stability = 0.35 #Very low on purpose
 set_war_support = 0.65
 set_research_slots = 4
 

@@ -1,11 +1,5 @@
 NDefines.NGame.MAP_SCALE_PIXEL_TO_KM = 1.793					-- Yes, we did the math
 
-NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 35    -- Vanilla is 50. Base max efficiency for factories expressed in %.
-NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 7   -- Vanilla is 10. Base start efficiency for factories expressed in %.
-NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN = 0.9		    -- Vanilla is 1. Base efficiency factor.
-NDefines.NProduction.BASE_FACTORY_SPEED = 4 			    	-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
-NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
-NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 4 				-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
 NDefines.NCountry.MAJOR_IC_RATIO = 5                            -- difference in total factories needed to be considered major with respect to other nation
 NDefines.NCountry.MAJOR_MIN_FACTORIES = 40						-- need at least these many factories to become a major
 NDefines.NCountry.MIN_MAJOR_COUNTRIES = 3						-- MIN_MAJOR_COUNTRIES countries with most factories will be considered as major countries
@@ -75,6 +69,7 @@ NDefines.NMilitary.UNIT_DIGIN_SPEED = 0.8							-- Vanilla is 1. How "deep" you 
 NDefines.NMilitary.DIG_IN_FACTOR = 0.02                -- Vanilla is 0.02. Bonus factor for each dug-in level
 
 -- Fuel
+NDefines.NGame.OIL_RESOURCE = "energy"						-- Name of the oil resource
 NDefines.NGame.FUEL_RESOURCE = "energy"							-- resource that will give country fuel
 NDefines.NCountry.FUEL_LEASE_CONVOY_RATIO = 0.00005				-- num convoys needed per fuel land lease
 NDefines.NCountry.STARTING_FUEL_RATIO = 0.25						-- starting fuel ratio compared to max fuel for countries
@@ -84,6 +79,33 @@ NDefines.NCountry.BASE_FUEL_CAPACITY = 4000						-- base amount of fuel capacity
 NDefines.NProduction.ANNEX_FUEL_RATIO = 0.5						-- How much fuel will be transferred on annexation
 NDefines.NProduction.CAPITULATE_FUEL_RATIO = 0.5				-- How much fuel will be transferred on capitulation
 NDefines.NMilitary.FUEL_PENALTY_START_RATIO = 0.20				-- ratio of fuel in an army to start getting penalties
+
+-- Energy And Production
+NDefines.NGame.ENERGY_RESOURCE = "energy"						-- resource that will give country energy
+NDefines.NProduction.RESOURCE_TO_ENERGY_COEFFICIENT = 25.0		-- How much energy per coal produces
+
+NDefines.NProduction.ENERGY_SCALING_COST_BY_FACTORY_COUNT = 0.0 -- Scales energy cost based on the total number of factories
+NDefines.NProduction.BASE_ENERGY_COST = 1.0					-- How much energy per factory consumes
+NDefines.NProduction.POWERED_FACTORY_SPEED = 5				--Powered factory speed multiplier.
+NDefines.NProduction.POWERED_FACTORY_SPEED_MIL = 5			--Powered factory speed multiplier.
+NDefines.NProduction.POWERED_FACTORY_SPEED_NAV = 3.25		--Powered factory speed multiplier.
+
+NDefines.NProduction.BASE_FACTORY_MAX_EFFICIENCY_FACTOR = 35    -- Vanilla is 50. Base max efficiency for factories expressed in %.
+NDefines.NProduction.BASE_FACTORY_START_EFFICIENCY_FACTOR = 7   -- Vanilla is 10. Base start efficiency for factories expressed in %.
+NDefines.NProduction.BASE_FACTORY_EFFICIENCY_GAIN = 0.9		    -- Vanilla is 1. Base efficiency factor.
+NDefines.NProduction.BASE_FACTORY_SPEED = 4				    	-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
+NDefines.NProduction.BASE_FACTORY_SPEED_MIL = 4					-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
+NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 4					-- Base factory speed multiplier (how much hoi3 style IC each factory gives).
+NDefines.NProduction.MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0.0	-- The minimum number of factories we have to put on consumer goods, in percent. (0.1 in vanilla)
+
+NDefines.NAI.MIN_FACTORIES_TO_WANT_TO_IMPORT = {  -- minimum number of civilian factories the AI must have to consider importing a resource - per strategic resource. Default 0, array -should- be updated with new resources, or if the order changes.
+	0, -- water
+	0, -- energy
+	0, -- metal
+	0, -- composites
+	0, -- circuitry
+	0, -- advanced
+}
 
 --NMilitary
 NDefines.NMilitary.ARMY_FUEL_COST_MULT = 0.2 					-- fuel multiplier for all army missions

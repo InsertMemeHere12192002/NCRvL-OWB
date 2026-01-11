@@ -50,7 +50,6 @@ set_technology = {
 	weight_support_frame_pa_tech_1 = 1
 	weight_support_frame_pa_tech_2 = 1
 	wasteland_pa_tech = 1
-	super_mutant_behemoth = 1
 	bike_tech_1 = 1
 	
 	elite_army = 1
@@ -91,16 +90,6 @@ if = {
 		nautics_tech_1 = 1
 		light_navy_hull_tech_1 = 1
 		naval_invasion_tech_1 = 1
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
 	}
 }
 

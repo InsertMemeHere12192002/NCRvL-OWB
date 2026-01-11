@@ -60,18 +60,6 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-	}
-}
-
-
 create_equipment_variant = {
 	name = "Raiding Vessel"
 	type = ship_hull_light_1
@@ -91,7 +79,7 @@ create_equipment_variant = {
 	}
 }
 
-set_stability = 0.3
+set_stability = 0.45
 set_war_support = 0.5
 set_research_slots = 3
 

@@ -87,25 +87,9 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		nautics_tech_non_mtg_2 = 2
-		light_navy_hull_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_2 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		medium_navy_hull_tech_non_mtg_1 = 1
-		heavy_navy_hull_tech_non_mtg_1 = 1
-		multi_deck_construction_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_2 = 1
-	}
-}
 
-set_stability = 0.42
+
+set_stability = 0.35
 set_war_support = 0.37
 set_convoys = 220
 set_research_slots = 4
@@ -256,12 +240,6 @@ if = {
 		nationalities = { CES }
 	}
 	add_ideas = legion_training
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "La Resistance" }
-	}
-	add_ideas = legion_training_non_lar
 }
 
 create_equipment_variant = {
