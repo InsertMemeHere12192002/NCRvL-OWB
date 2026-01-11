@@ -20,28 +20,25 @@
 #			...
 #		}
 # }
-
 #####################
 # REGIONAL UNIFIERS #
 #####################
-
-
 NCR_SHI_unifier = {
 	name = "RULE_NCR_UNIFIER"
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
 		text = "RULE_UNIFIERS_NCR_SHI_DEFAULT"
-		desc = "RULE_UNIFIERS_NCR_DEFAULT_DESC"
+		desc = "RULE_UNIFIERS_NCR_SHI_DEFAULT_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = "SHI/EUR"
-		text = "RULE_SHI/EUR"
+		text = "RULE_UNIFIERS_SHI/EUR"
 		desc = "RULE_UNIFIERS_SHI/EUR_DESC"
 		allow_achievements = yes
 	}
-		option = {
+	option = {
 		name = "SHI/EUR/ARR"
 		text = "RULE_UNIFIERS_SHI/EUR/ARR"
 		desc = "RULE_UNIFIERS_SHI/EUR/ARR_DESC"
@@ -60,11 +57,11 @@ NCR_EUR_unifier = {
 	}
 	option = {
 		name = "EUR/ARR"
-		text = "RULE_EUR/ARR"
+		text = "RULE_UNIFIERS_EUR/ARR"
 		desc = "RULE_UNIFIERS_EUR/ARR_DESC"
 		allow_achievements = yes
 	}
-		option = {
+	option = {
 		name = "EUR/ARR/OREGON"
 		text = "RULE_UNIFIERS_EUR/ARR/OREGON"
 		desc = "RULE_UNIFIERS_EUR/ARR/OREGON_DESC"
@@ -77,29 +74,28 @@ NCR_ARR_unifier = {
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
-		text = "RULE_UNIFIERS_NCR_EUR_DEFAULT"
-		desc = "RULE_UNIFIERS_NCR_EUR_DEFAULT_DESC"
+		text = "RULE_UNIFIERS_NCR_ARR_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_ARR_DEFAULT_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = "ARR/EUR"
-		text = "RULE_ARR/EUR"
+		text = "RULE_UNIFIERS_ARR/EUR"
 		desc = "RULE_UNIFIERS_ARR/EUR_DESC"
 		allow_achievements = yes
 	}
-		option = {
+	option = {
 		name = "ARR/OREGON"
 		text = "RULE_UNIFIERS_ARR/OREGON"
 		desc = "RULE_UNIFIERS_ARR/OREGON_DESC"
 		allow_achievements = yes
 	}
-			option = {
+	option = {
 		name = "ARR/EUR/OREGON"
 		text = "RULE_UNIFIERS_ARR/EUR/OREGON"
 		desc = "RULE_UNIFIERS_ARR/EUR/OREGON_DESC"
 		allow_achievements = yes
 	}
-	 
 }
 
 NCR_NEW_unifier = {
@@ -107,26 +103,25 @@ NCR_NEW_unifier = {
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
-		text = "RULE_UNIFIERS_NCR_EUR_DEFAULT"
-		desc = "RULE_UNIFIERS_NCR_EUR_DEFAULT_DESC"
+		text = "RULE_UNIFIERS_NCR_NEW_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_NEW_DEFAULT_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = "NEW/DES"
-		text = "RULE_NEW/DES"
+		text = "RULE_UNIFIERS_NEW/DES"
 		desc = "RULE_UNIFIERS_NEW/DES_DESC"
 		allow_achievements = yes
 	}
-		option = {
-		name = "NEW/VLT"
-		text = "RULE_UNIFIERS_NEW/VLT"
-		desc = "RULE_UNIFIERS_NEW/VLT_DESC"
+	option = {
+		name = "NEW/DES/OREGON"
+		text = "RULE_UNIFIERS_NEW/DES/OREGON"
+		desc = "RULE_UNIFIERS_NEW/DES/OREGON_DESC"
 		allow_achievements = yes
 	}
-
-			option = {
+	option = {
 		name = "NEW/Oregon"
-		text = "RULE_UNIFIERS_NEW/Oregon"
+		text = "RULE_UNIFIERS_NEW/OREGON"
 		desc = "RULE_UNIFIERS_NEW/Oregon_DESC"
 		allow_achievements = yes
 	}
@@ -137,85 +132,301 @@ NCR_VLT_unifier = {
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
-		text = "RULE_UNIFIERS_NCR_EUR_DEFAULT"
-		desc = "RULE_UNIFIERS_NCR_EUR_DEFAULT_DESC"
+		text = "RULE_UNIFIERS_NCR_VLT_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_VLT_DEFAULT_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = "VLT/NEW"
-		text = "RULE_VLT/NEW"
+		text = "RULE_UNIFIERS_VLT/NEW"
 		desc = "RULE_UNIFIERS_VLT/NEW_DESC"
 		allow_achievements = yes
 	}
-		option = {
-		name = "VLT/Oregon"
-		text = "RULE_UNIFIERS_VLT/Oregon"
-		desc = "RULE_UNIFIERS_VLT/Oregon_DESC"
+	option = {
+		name = "VLT/OREGON"
+		text = "RULE_UNIFIERS_VLT/OREGON"
+		desc = "RULE_UNIFIERS_VLT/OREGON_DESC"
 		allow_achievements = yes
 	}
-
-			option = {
-		name = "VLT/DES"
-		text = "RULE_UNIFIERS_VLT/DES"
-		desc = "RULE_UNIFIERS_VLT/DES_DESC"
+	option = {
+		name = "VLT/NEW/OREGON"
+		text = "RULE_UNIFIERS_VLT/NEW/OREGON"
+		desc = "RULE_UNIFIERS_VLT/NEW/OREGON_DESC"
 		allow_achievements = yes
 	}
-}
+} 
 
 NCR_DES_unifier = {
 	name = "RULE_NCR_UNIFIER"
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
-		text = "RULE_UNIFIERS_NCR_EUR_DEFAULT"
-		desc = "RULE_UNIFIERS_NCR_EUR_DEFAULT_DESC"
+		text = "RULE_UNIFIERS_NCR_DES_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_DES_DEFAULT_DESC"
 		allow_achievements = yes
 	}
 	option = {
 		name = "DES/NEW"
-		text = "RULE_DES/NEW"
+		text = "RULE_UNIFIERS_DES/NEW"
 		desc = "RULE_UNIFIERS_DES/NEW_DESC"
 		allow_achievements = yes
 	}
-		option = {
-		name = "DES/VLT"
-		text = "RULE_UNIFIERS_DES/VLT"
-		desc = "RULE_UNIFIERS_DES/VLT_DESC"
+	option = {
+		name = "DES/NEW/OREGON"
+		text = "RULE_UNIFIERS_DES/NEW/OREGON"
+		desc = "RULE_UNIFIERS_DES/NEW/OREGON_DESC"
 		allow_achievements = yes
 	}
-
 }
 
-
-Legion_unifier = {
-	name = "RULE_LEGION_UNIFIER"
+NCR_VEG_unifier = {
+	name = "RULE_NCR_UNIFIER"
 	group = "RULE_GROUP_UNIFIERS"
 	default = {
 		name = "NONE"
-		text = "RULE_UNIFIERS_LEGION_DEFAULT"
-		desc = "RULE_UNIFIERS_LEGION_DEFAULT_DESC"
+		text = "RULE_UNIFIERS_NCR_VEG_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_VEG_DEFAULT_DESC"
 		allow_achievements = yes
 	}
-	option = { 
-		name = "LEGION/TWOSUN/NAVARRO/WHITELEG"
-		text = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/WHITELEG"
-		desc = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/WHITELEG_DESC"
+	option = {
+		name = "DES/VEG"
+		text = "RULE_UNIFIERS_DES/VEG"
+		desc = "RULE_UNIFIERS_DES/VEG_DESC"
 		allow_achievements = yes
 	}
-		option = { 
-		name = "LEGION/TWOSUN/NAVARRO/EIGHTIES"
-		text = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/EIGHTIES"
-		desc = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/EIGHTIES_DESC"
+	option = {
+		name = "NCR/VEG"
+		text = "RULE_UNIFIERS_NCR/VEG"
+		desc = "RULE_UNIFIERS_NCR/VEG_DESC"
 		allow_achievements = yes
 	}
-	option = { 
-		name = "LEGION/TWOSUN/NAVARRO/IRONALLIANCE"
-		text = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/IRONALLIANCE"
-		desc = "RULE_UNIFIERS_LEGION/TWOSUN/NAVARRO/IRONALLIANCE_DESC"
+}
+
+NCR_MOT_unifier = {
+	name = "RULE_NCR_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_NCR_MOT_DEFAULT"
+		desc = "RULE_UNIFIERS_NCR_MOT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NCR/MOT"
+		text = "RULE_UNIFIERS_NCR/MOT"
+		desc = "RULE_UNIFIERS_NCR/MOT_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_TWO_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_TWO_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_TWO_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TWO/GDH"
+		text = "RULE_UNIFIERS_TWO/GDH"
+		desc = "RULE_UNIFIERS_TWO/GDH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "TWO/GDH/LEGIONEXT"
+		text = "RULE_UNIFIERS_TWO/GDH/LEGIONEXT"
+		desc = "RULE_UNIFIERS_TWO/GDH/LEGIONEXT_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_GDH_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_GDH_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_GDH_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GDH/TWO"
+		text = "RULE_UNIFIERS_GDH/TWO"
+		desc = "RULE_UNIFIERS_GDH/TWO_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "GDH/TWO/LEGIONEXT"
+		text = "RULE_UNIFIERS_GDH/TWO/LEGIONEXT"
+		desc = "RULE_UNIFIERS_GDH/TWO/LEGIONEXT_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_NAV_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_NAV_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_NAV_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NAV/RES"
+		text = "RULE_UNIFIERS_NAV/RES"
+		desc = "RULE_UNIFIERS_NAV/RES_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "NAV/RES/LANIUS"
+		text = "RULE_UNIFIERS_NAV/RES/LANIUS"
+		desc = "RULE_UNIFIERS_NAV/RES/LANIUS_DESC"
 		allow_achievements = yes
 	}
 
-	
+		option = {
+		name = "NAV/LANIUS"
+		text = "RULE_UNIFIERS_NAV/LANIUS"
+		desc = "RULE_UNIFIERS_NAV/LANIUS_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_RES_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_RES_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_RES_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RES/NAV"
+		text = "RULE_UNIFIERS_RES/NAV"
+		desc = "RULE_UNIFIERS_RES/NAV_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RES/NAV/LANIUS"
+		text = "RULE_UNIFIERS_RES/NAV/LANIUS"
+		desc = "RULE_UNIFIERS_RES/NAV/LANIUS_DESC"
+		allow_achievements = yes
+	}
+
+		option = {
+		name = "RES/LANIUS"
+		text = "RULE_UNIFIERS_RES/LANIUS"
+		desc = "RULE_UNIFIERS_RES/LANIUS_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_WHT_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_WHT_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_WHT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WHT/EHT"
+		text = "RULE_UNIFIERS_WHT/EHT"
+		desc = "RULE_UNIFIERS_WHT/EHT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "WHT/EHT/COLORADO"
+		text = "RULE_UNIFIERS_WHT/EHT/COLORADO"
+		desc = "RULE_UNIFIERS_WHT/EHT/COLORADO_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_EHT_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_EHT_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_EHT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EHT/WHT"
+		text = "RULE_UNIFIERS_EHT/WHT"
+		desc = "RULE_UNIFIERS_EHT/WHT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EHT/WHT/COLORADO"
+		text = "RULE_UNIFIERS_EHT/WHT/COLORADO"
+		desc = "RULE_UNIFIERS_EHT/WHT/COLORADO_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_IRN_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_IRN_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_IRN_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "IRN/UTAH"
+		text = "RULE_UNIFIERS_IRN/UTAH"
+		desc = "RULE_UNIFIERS_IRN/UTAH_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "IRN/LANIUS"
+		text = "RULE_UNIFIERS_IRN/LANIUS"
+		desc = "RULE_UNIFIERS_IRN/LANIUS_DESC"
+		allow_achievements = yes
+	}
+		option = {
+		name = "IRN/LANIUS/UTAH"
+		text = "RULE_UNIFIERS_IRN/LANIUS/UTAH"
+		desc = "RULE_UNIFIERS_IRN/LANIUS/UTAH_DESC"
+		allow_achievements = yes
+	}
+}
+
+Legion_CES_unifier = {
+	name = "RULE_Legion_UNIFIER"
+	group = "RULE_GROUP_UNIFIERS"
+	default = {
+		name = "NONE"
+		text = "RULE_UNIFIERS_LEGION_CES_DEFAULT"
+		desc = "RULE_UNIFIERS_LEGION_CES_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "CES/TEXAS"
+		text = "RULE_UNIFIERS_CES/TEXAS"
+		desc = "RULE_UNIFIERS_CES/TEXAS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "CES/TWO/GDH"
+		text = "RULE_UNIFIERS_CES/TWO/GDH"
+		desc = "RULE_UNIFIERS_CES/TWO/GDH_DESC"
+		allow_achievements = yes
+	}
+		option = {
+		name = "CES/NAV/RES"
+		text = "RULE_UNIFIERS_CES/NAV/RES"
+		desc = "RULE_UNIFIERS_CES/NAV/RES_DESC"
+		allow_achievements = yes
+	}
 }
 
 canada_unifier = {
@@ -946,7 +1157,6 @@ montana_unifier = {
 ###############
 # AI BEHAVIOR #
 ###############
-
 # Arroyo
 ARR_ai_behavior = {
 	name = "RULE_AI_BEHAVIOR_ARR"
@@ -2246,7 +2456,7 @@ STN_ai_behavior = {
 		desc = "RULE_AI_BEHAVIOR_STN_BEYA_DESC"
 		allow_achievements = yes
 	}
-		option = {
+	option = {
 		name = "RULE_AI_BEHAVIOR_STN_DANIEL"
 		text = "RULE_AI_BEHAVIOR_STN_DANIEL"
 		desc = "RULE_AI_BEHAVIOR_STN_DANIEL_DESC"
@@ -2502,7 +2712,6 @@ WHT_ai_behavior = {
 #############
 # MAP SETUP #
 #############
-
 EHT_status = {
 	name = "RULE_MAP_SETUP_EIGHTIES_STATUS"
 	group = "RULE_GROUP_MAP_SETUP"
@@ -2578,7 +2787,6 @@ TNK_status = {
 # 		allow_achievements = yes
 # 	}
 # }
-
 NCN_status = {
 	name = "RULE_MAP_SETUP_NCN_STATUS"
 	group = "RULE_GROUP_MAP_SETUP"
@@ -2643,7 +2851,6 @@ VEG_status = {
 # 		allow_achievements = yes
 # 	}
 # }
-
 TLA_status = {
 	name = "RULE_MAP_SETUP_TLALOCAN_STATUS"
 	group = "RULE_GROUP_MAP_SETUP"
@@ -2957,11 +3164,9 @@ TOB_ai_behavior = {
 ##########################
 # COUNTRY SPECIFIC RULES #
 ##########################
-
 ##################
 # FOREIGN POLICY #
 ##################
-
 allow_wargoals = {
 	name = "RULE_ALLOW_WARGOALS"
 	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
@@ -3365,16 +3570,13 @@ change_base_diplomacy = {
 # CONVERT ACTIONS #
 ###################
 # Coups and Party Boosting not allowed in OWB. Game rules are hidden.
-
 ############
 # RESEARCH #
 ############
 # No research specific rules currently.
-
 ###############
 # EVENT RULES #
 ###############
-
 NCR_civil_war = {
 	name = "RULE_EVENTS_NCR_CIVIL_WAR"
 	group = "RULE_GROUP_EVENTS"
@@ -3420,7 +3622,7 @@ ITZ_synthetic_dawn = {
 	group = "RULE_GROUP_EVENTS"
 	option = {
 		name = "ENABLED"
-		text = "RULE_EVENTS_SYNTHETIC_DAWN_ENABLED" # Tlaloc, say hello to my little friend...
+		text = "RULE_EVENTS_SYNTHETIC_DAWN_ENABLED"		# Tlaloc, say hello to my little friend...
 		desc = "RULE_EVENTS_SYNTHETIC_DAWN_ENABLED_DESC"
 		allow_achievements = yes
 	}
@@ -3448,6 +3650,7 @@ CLK_time_lords = {
 		allow_achievements = yes
 	}
 }
+
 RCK_roach_swarm = {
 	name = "RULE_AI_BEHAVIOR_RCK"
 	group = "RULE_GROUP_EVENTS"
@@ -3475,8 +3678,8 @@ RCK_roach_swarm = {
 		desc = "RULE_EVENTS_RCK_ROACH_SWARM_SURVIVAL_DESC"
 		allow_achievements = yes
 	}
-
 }
+
 UFO_invasion = {
 	name = "RULE_EVENTS_UFO_INVASION"
 	group = "RULE_GROUP_EVENTS"
@@ -3544,6 +3747,7 @@ KHA_mad_baron = {
 		allow_achievements = yes
 	}
 }
+
 TRK_second_kemalist_revolution = {
 	name = "RULE_EVENTS_TRK_KEMALISM"
 	group = "RULE_GROUP_EVENTS"
@@ -3577,6 +3781,7 @@ HAI_admiral_dictator = {
 		allow_achievements = yes
 	}
 }
+
 CAR_kerensky_chef = {
 	name = "RULE_EVENTS_CAR_KERENSKY_CHEF"
 	group = "RULE_GROUP_EVENTS"
@@ -3593,6 +3798,7 @@ CAR_kerensky_chef = {
 		allow_achievements = yes
 	}
 }
+
 anbennar_halloween = {
 	name = "RULE_EVENTS_ANBENNAR_HALLOWEEN"
 	group = "RULE_GROUP_EVENTS"
@@ -3609,6 +3815,7 @@ anbennar_halloween = {
 		allow_achievements = yes
 	}
 }
+
 TRK_status = {
 	name = "RULE_MAP_SETUP_TRK_STATUS"
 	group = "RULE_GROUP_EVENTS"
@@ -3625,6 +3832,7 @@ TRK_status = {
 		allow_achievements = yes
 	}
 }
+
 winter_wonder_wasteland = {
 	name = "RULE_EVENTS_WINTER_WONDER_WASTELAND"
 	group = "RULE_GROUP_EVENTS"
@@ -3647,6 +3855,7 @@ winter_wonder_wasteland = {
 		allow_achievements = yes
 	}
 }
+
 SHI_emperor_norton = {
 	name = "RULE_EVENTS_SHI_EMPEROR_NORTON"
 	group = "RULE_GROUP_EVENTS"
@@ -3663,6 +3872,7 @@ SHI_emperor_norton = {
 		allow_achievements = yes
 	}
 }
+
 minecraft_april_2024 = {
 	name = "RULE_MINECRAFT_2024"
 	group = "RULE_GROUP_EVENTS"
@@ -3679,6 +3889,7 @@ minecraft_april_2024 = {
 		allow_achievements = yes
 	}
 }
+
 april_elite_unit_secret = {
 	name = "RULE_EVENTS_SPAWN_APRIL_ELITE"
 	group = "RULE_GROUP_EVENTS"
@@ -3802,7 +4013,6 @@ LUM_dagoth_ur = {
 ############
 # GAMEPLAY #
 ############
-
 caps_system_toggle = {
 	name = "RULE_CAPS_SYSTEM_TOGGLE"
 	group = "RULE_GROUP_GAMEPLAY"
@@ -3995,9 +4205,7 @@ allow_paratroopers = {
 ################
 # CONSTRUCTION #
 ################
-
 # Disabled for now due to being outdated and having no effect @Tran
-
 # maximum_fort_level = {
 # 	name = "RULE_MAXIMUM_FORT_LEVEL"
 # 	group = "RULE_GROUP_GAMEPLAY"
@@ -4062,11 +4270,9 @@ allow_paratroopers = {
 # 		allow_achievements = yes
 # 	}
 # }
-
 ##############
 # MISC SETUP #
 ##############
-
 TLA_death_scream = {
 	name = "RULE_MISC_TLA_DEATH_SCREAM"
 	group = "RULE_GROUP_MISC"
@@ -4167,7 +4373,6 @@ BOS_buff_gamerule = {
 #####################
 # UTILITY #
 #####################
-
 caps_debug_toggle = {
 	name = "RULE_CAPS_DEBUG_TOGGLE"
 	group = "RULE_GROUP_UTILITY"
@@ -4205,7 +4410,6 @@ unit_logger_rule = {
 ##############
 #WAR OUTCOMES#
 ##############
-
 # Lone Star Civil War
 HWB_REVOLT_OUTCOME = {
 	name = "RULE_HWB_REVOLT_OUTCOME"
@@ -4939,23 +5143,13 @@ REVOLTING_ROACHES_OUTCOME = {
 #########
 #SUBMODS#
 #########
-
 #####################
 # REGIONAL UNIFIERS #
 #####################
-
-
 #############
 #AI BEHAVIOR#
 #############
-
-
-
 ###########
 #MAP SETUP#
 ###########
-
-
-
-
 # vim: set ft=pdx tw=79 :
