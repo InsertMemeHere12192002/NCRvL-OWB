@@ -9,6 +9,7 @@ categories = {
 	}
 
 	ocean = {
+		naval_terrain = yes
 		#2853B0
 		color = { 40 83 176 }
 		movement_cost = 1.0

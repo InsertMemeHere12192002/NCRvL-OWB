@@ -659,8 +659,8 @@ leader_traits = {
 			org_loss_when_moving = -0.15
 			modifier_army_sub_unit_motorized_attack_factor = 0.1
 			modifier_army_sub_unit_motorized_defence_factor = 0.1
-			modifier_army_sub_unit_chariot_attack_factor = 0.1
-			modifier_army_sub_unit_chariot_defence_factor = 0.1
+			modifier_army_sub_unit_chariot_unit_attack_factor = 0.1
+			modifier_army_sub_unit_chariot_unit_defence_factor = 0.1
 		}
 
 		ai_will_do = {

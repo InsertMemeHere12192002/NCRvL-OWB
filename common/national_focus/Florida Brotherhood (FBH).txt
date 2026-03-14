@@ -1721,8 +1721,11 @@ focus_tree = {
 		x = 2
 		y = 1
 		available = {
+			OR = {
 			has_completed_focus = fbh_home_sweet_home
 			has_completed_focus = fbh_not_quite_home
+			}
+
 		}
 		prerequisite = {
 			focus = fbh_paradise_lost
