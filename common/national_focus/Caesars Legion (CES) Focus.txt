@@ -2287,9 +2287,6 @@ focus_tree = {
         }
         relative_position_id = ces_worthy_few
         completion_reward = {
-            set_technology = {
-                railway_gun = 1
-            }
             create_railway_gun = {
                 equipment = railway_gun_equipment_1
                 name = "The Raging Bull"

@@ -1475,16 +1475,16 @@ country_event = {
 		division_template = {
 			name = "Two Sun Veterans"
 			regiments = {
-				chariot = { x = 0 y = 0 }
-				chariot = { x = 0 y = 1 }
-				chariot = { x = 0 y = 2 }
-				chariot = { x = 1 y = 0 }
-				chariot = { x = 1 y = 1 }
-				chariot = { x = 1 y = 2 }
-				chariot = { x = 2 y = 0 }
-				chariot = { x = 2 y = 1 }
-				chariot = { x = 2 y = 2 }
-				chariot = { x = 3 y = 0 }
+				chariot_unit = { x = 0 y = 0 }
+				chariot_unit = { x = 0 y = 1 }
+				chariot_unit = { x = 0 y = 2 }
+				chariot_unit = { x = 1 y = 0 }
+				chariot_unit = { x = 1 y = 1 }
+				chariot_unit = { x = 1 y = 2 }
+				chariot_unit = { x = 2 y = 0 }
+				chariot_unit = { x = 2 y = 1 }
+				chariot_unit = { x = 2 y = 2 }
+				chariot_unit = { x = 3 y = 0 }
 			}
 		}
 		516 = {

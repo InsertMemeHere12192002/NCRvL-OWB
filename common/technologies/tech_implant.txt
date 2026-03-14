@@ -359,7 +359,7 @@ technologies = {
 				Implant_equipment = 25
 			}
 		}
-		chariot = {
+		chariot_unit = {
 			max_organisation = 5
 			supply_consumption = 0.03
 			need = {

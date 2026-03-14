@@ -1201,7 +1201,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1263,7 +1263,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1313,7 +1313,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1363,7 +1363,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1413,7 +1413,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1463,7 +1463,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1517,7 +1517,7 @@ technologies = {
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -2946,7 +2946,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
 			default_morale = 0.01
 			urban = {
 				attack = 0.05
@@ -3704,7 +3704,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
 			default_morale = 0.01
 			plains = {
 				attack = 0.05
@@ -4410,7 +4410,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
 			default_morale = 0.01
 			mountain = {
 				attack = 0.05
@@ -5116,7 +5116,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
 			default_morale = 0.01
 			jungle = {
 				attack = 0.05

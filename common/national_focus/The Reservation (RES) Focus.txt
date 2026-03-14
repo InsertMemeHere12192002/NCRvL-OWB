@@ -1560,9 +1560,6 @@ focus_tree = {
         relative_position_id = resg_skinwalkers_patrols
         completion_reward = {
             add_ideas = resg_stand_against_bull_idea
-            set_technology = {
-            	railway_gun = 1
-            }
 			create_railway_gun = {
 				equipment = railway_gun_equipment_1
 				name = "The Raging Bull"

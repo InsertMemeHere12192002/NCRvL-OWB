@@ -44,7 +44,7 @@ characters = {
 		}
 		country_leader = {
 			desc = CES_CAESAR_DESC
-			ideology = benevolent_dictatorship
+			ideology = divine_right
 			traits = {
 				cruel_tyrant
 				warmonger

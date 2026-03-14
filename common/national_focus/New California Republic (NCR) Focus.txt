@@ -884,9 +884,7 @@ focus_tree = {
 					}
 				}
 				add_ideas = ncr_idea_republic_reserve
-			set_technology = {
-				railway_gun = 1
-				}
+
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
 					name = "The Bear's Vengeance"
@@ -936,9 +934,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-				}
-				set_technology = {
-					railway_gun = 1
 				}
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
