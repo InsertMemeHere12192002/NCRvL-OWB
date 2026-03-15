@@ -378,6 +378,11 @@ focus_tree = {
 		prerequisite = {
 			focus = fbh_steel_resurgence
 		}
+		available = {
+			SHA = {
+				has_completed_focus = shale_purchase_weapon_schematics
+			}
+		}
 		relative_position_id = fbh_steel_resurgence
 		completion_reward = {
 			add_tech_bonus = {
@@ -468,7 +473,10 @@ focus_tree = {
 		}
 		relative_position_id = fbh_robotic_menace
 		completion_reward = {
-			set_technology = { robot_pacification_bot_tech = 1 }
+			set_technology = { 
+				robot_pacification_bot_tech = 1
+				robot_behemoth_robot_tech = 1
+		 }
 		}
 	}
 	focus = {
@@ -555,6 +563,13 @@ focus_tree = {
 		y = 1
 		prerequisite = {
 			focus = fbh_growing_storm
+		}
+		available = {
+			SHA = {
+				NOT = {
+					has_completed_focus = shale_purchase_weapon_schematics
+				}
+			}
 		}
 		relative_position_id = fbh_growing_storm
 		completion_reward = {
