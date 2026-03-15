@@ -795,6 +795,7 @@ focus_tree = {
 			set_technology = { 
 				texas_brotherhood_pa_tech = 1 
 			}
+			add_research_slot = 1
 			VLT = {
 					add_stability = -0.05
 				}
