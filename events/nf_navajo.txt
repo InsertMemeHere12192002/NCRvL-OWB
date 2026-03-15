@@ -292,15 +292,21 @@ country_event = {# Navajo ask for Chinle
 	is_triggered_only = yes
 
 	option = {
-		name = nf_navajo.10.a
-		NAV = { transfer_state = 164 }
-		164 = { add_core_of = NAV }
-		164 = {
+		name = nf_navajo_land_request.1.a
+		NAV = { transfer_state = 498 }
+		498 = { add_core_of = NAV }
+		498 = {
+			remove_core_of = CES
+			remove_claim_by = CES
+		}
+		NAV = { transfer_state = 482 }
+		482 = { add_core_of = NAV }
+		482 = {
 			remove_core_of = CES
 			remove_claim_by = CES
 		}
 		ai_chance = {
-			base = 1
+			base = 3
 		}
 		add_to_variable = { NAV_loyalty = 1 }
 		custom_effect_tooltip = NAV_good_friends_tt

@@ -1463,7 +1463,7 @@ focus_tree = {
 					bonus = 0.5
 					uses = 2
 					ahead_reduction = 1
-					category = fireteam_tech_category
+					category = support_fireteam_tech_category
 				}
 			}
 		}
