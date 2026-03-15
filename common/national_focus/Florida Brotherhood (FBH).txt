@@ -553,11 +553,6 @@ focus_tree = {
 		mutually_exclusive = { focus = fbh_lesser_devil }
 		x = 1
 		y = 1
-		available = {
-			SHA = {
-				is_ai = yes
-			}
-		}
 		prerequisite = {
 			focus = fbh_growing_storm
 		}
@@ -1197,6 +1192,10 @@ focus_tree = {
 			NCR = {
 				has_war_with = CES
 			}
+			OR = {
+				has_completed_focus = fbh_large_force
+				has_completed_focus = fbh_elite_force
+			}
 		}
 		prerequisite = {
 			focus = fbh_home_sweet_home
@@ -1435,17 +1434,20 @@ focus_tree = {
 					producer = USA
 				}
 			}
-			set_technology = {
-				fireteam_elite_weaponry_tech = 1
-			}
 			add_political_power = 50
 			#add_popularity = {
 				#ideology = people
 				#popularity = 0.1
 				#}
 				every_owned_state = {
-				set_temp_variable = { pop_add = 250 }
-				add_state_population_no_state_name = yes
+					set_temp_variable = { pop_add = 250 }
+					add_state_population_no_state_name = yes
+				}
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 2
+					ahead_reduction = 1
+					category = fireteam_tech_category
 				}
 			}
 		}
@@ -1883,7 +1885,12 @@ focus_tree = {
 		completion_reward = {
 			set_technology = {
 				mininuke_unlock_tech = 1
-				enclave_pa_unlock_tech = 1
+			}
+			add_tech_bonus = {
+				 uses = 1
+				 bonus = 0.5
+				 ahead_reduction = 2
+				 category = power_armor_tech_category
 			}
 		}
 	}

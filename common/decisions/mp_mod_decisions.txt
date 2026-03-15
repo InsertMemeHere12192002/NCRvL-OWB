@@ -100,10 +100,6 @@ MP_mod_decisions = {
 				transfer_troops = yes
 			}
 			annex_country = {
-				target = PNT
-				transfer_troops = no
-			}
-			annex_country = {
 				target = FOR
 				transfer_troops = no
 			}
@@ -286,7 +282,7 @@ MP_mod_decisions = {
 				transfer_troops = no
 			}
 			annex_country = {
-				target = YMP
+				target = SLE
 				transfer_troops = no
 			}
 			annex_country = {
@@ -294,7 +290,7 @@ MP_mod_decisions = {
 				transfer_troops = no
 			}
 			annex_country = {
-				target = DRY
+				target = BLC
 				transfer_troops = no
 			}
 			annex_country = {

@@ -32,7 +32,7 @@ ideas = {
 				army_attack_factor = 0.075
 				army_defence_factor = 0.075
 				army_org_factor = 0.05
-				send_volunteer_size = 6
+				send_volunteer_size = 4
                 send_volunteer_divisions_required = -1
 			}
 		}
@@ -43,10 +43,10 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				army_attack_factor = 0.125
-				army_defence_factor = 0.125
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
 				army_org_factor = 0.065
-				send_volunteer_size = 9
+				send_volunteer_size = 8
                 send_volunteer_divisions_required = -1
 			}
 		}
@@ -57,7 +57,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				send_volunteer_size = 16
+				send_volunteer_size = 8
                 send_volunteer_divisions_required = -1
 				heat_attrition_factor = -0.10
 				army_morale_factor = 0.10
@@ -71,7 +71,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				send_volunteer_size = 32
+				send_volunteer_size = 16
                 send_volunteer_divisions_required = -1
 				heat_attrition_factor = -0.30
 				army_morale_factor = 0.20
