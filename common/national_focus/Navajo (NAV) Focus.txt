@@ -1291,19 +1291,6 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = NAV_dinetah
-			203 = {
-				hidden_effect = {
-					set_temp_variable = { new_node_target = THIS.id }
-					set_temp_variable = { new_node_economic_development = 0.25 }
-					add_to_temp_array = { new_node_trade_array = 554 }	# Twin Mothers
-					add_to_temp_array = { new_node_trade_array = 551 }	# New Canaan
-					add_to_temp_array = { new_node_trade_array = 520 }	# Flagstaff
-					add_to_temp_array = { new_node_trade_array = 5 }	# Castra Sol Rubrum
-					set_temp_variable = { set_main_node_flag = 1 }
-				}
-				create_map_node = yes
-				#setup_state_524 = yes
-			}
 			add_political_power = 100
 		}
 	}

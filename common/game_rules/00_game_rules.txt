@@ -1157,6 +1157,7 @@ montana_unifier = {
 ###############
 # AI BEHAVIOR #
 ###############
+
 # Arroyo
 ARR_ai_behavior = {
 	name = "RULE_AI_BEHAVIOR_ARR"
@@ -2354,6 +2355,37 @@ WPG_ai_behavior = {
 		desc = "RULE_AI_BEHAVIOR_WPG_AIR_BARON_DESC"
 		allow_achievements = yes
 	}
+}
+
+# Roach King
+RCK_roach_swarm = {
+	name = RULE_AI_BEHAVIOR_RCK
+	group = RULE_GROUP_AI_BEHAVIOR
+	default = {
+		name = DEFAULT
+		text = RULE_AI_BEHAVIOR_RCK_DEFAULT
+		desc = RULE_AI_BEHAVIOR_RCK_DEFAULT_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = ROACH_KING
+		text = RULE_AI_BEHAVIOR_RCK_ROACH_KING
+		desc = RULE_AI_BEHAVIOR_RCK_ROACH_KING_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = ROACH_SWARM
+		text = RULE_AI_BEHAVIOR_RCK_ROACH_SWARM
+		desc = RULE_AI_BEHAVIOR_RCK_ROACH_SWARM_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = SURVIVAL
+		text = RULE_AI_BEHAVIOR_RCK_SURVIVAL
+		desc = RULE_AI_BEHAVIOR_RCK_SURVIVAL_DESC
+		allow_achievements = yes
+	}
+
 }
 
 # Rotpurgers
@@ -3650,36 +3682,6 @@ CLK_time_lords = {
 		allow_achievements = yes
 	}
 }
-
-RCK_roach_swarm = {
-	name = "RULE_AI_BEHAVIOR_RCK"
-	group = "RULE_GROUP_EVENTS"
-	default = {
-		name = "RANDOM"
-		text = "RULE_EVENTS_RCK_ROACH_SWARM_RANDOM"
-		desc = "RULE_EVENTS_RCK_ROACH_SWARM_RANDOM_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "GUARANTEED"
-		text = "RULE_EVENTS_RCK_ROACH_SWARM_GUARANTEED"
-		desc = "RULE_EVENTS_RCK_ROACH_SWARM_GUARANTEED_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "DISABLED"
-		text = "RULE_EVENTS_RCK_ROACH_SWARM_DISABLED"
-		desc = "RULE_EVENTS_RCK_ROACH_SWARM_DISABLED_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = "SURVIVAL"
-		text = "RULE_EVENTS_RCK_ROACH_SWARM_SURVIVAL"
-		desc = "RULE_EVENTS_RCK_ROACH_SWARM_SURVIVAL_DESC"
-		allow_achievements = yes
-	}
-}
-
 UFO_invasion = {
 	name = "RULE_EVENTS_UFO_INVASION"
 	group = "RULE_GROUP_EVENTS"
@@ -4013,6 +4015,7 @@ LUM_dagoth_ur = {
 ############
 # GAMEPLAY #
 ############
+
 caps_system_toggle = {
 	name = "RULE_CAPS_SYSTEM_TOGGLE"
 	group = "RULE_GROUP_GAMEPLAY"
@@ -4026,6 +4029,29 @@ caps_system_toggle = {
 		name = "DISABLED"
 		text = "RULE_CAPS_SYSTEM_TOGGLE_DISABLED"
 		desc = "RULE_CAPS_SYSTEM_TOGGLE_DISABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
+raid_system_toggle = {
+	name = "RULE_RAIDS_SYSTEM_TOGGLE"
+	group = "RULE_GROUP_GAMEPLAY"
+	default = {
+		name = "DEFAULT"
+		text = "RULE_RAIDS_SYSTEM_TOGGLE_DEFAULT"
+		desc = "RULE_RAIDS_SYSTEM_TOGGLE_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DISABLED"
+		text = "RULE_RAIDS_SYSTEM_TOGGLE_DISABLED"
+		desc = "RULE_RAIDS_SYSTEM_TOGGLE_DISABLED_DESC"
+		allow_achievements = yes
+	}
+		option = {
+		name = "UNRESTRICTED"
+		text = "RULE_RAIDS_SYSTEM_TOGGLE_UNRESTRICTED"
+		desc = "RULE_RAIDS_SYSTEM_TOGGLE_UNRESTRICTED_DESC"
 		allow_achievements = yes
 	}
 }

@@ -1263,7 +1263,6 @@ technologies = {
 		path = {
 			leads_to_tech = warrior_equipment
 			research_cost_coeff = 1
-			ignore_for_layout = yes
 		}
 		on_research_complete = {
 			add_to_variable = {
@@ -3816,8 +3815,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			scientific_tech_category
 		}
 
@@ -3850,8 +3847,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			scientific_tech_category
 		}
 
@@ -3887,8 +3882,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			civilized_tech_category
 		}
 
@@ -3916,8 +3909,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			civilized_tech_category
 		}
 
@@ -3935,6 +3926,10 @@ technologies = {
 	}
 
 	skater_tech = {
+		research_cost = 5.0
+		dependencies = {
+			blocked_unit_tech = 1
+		}
 		enable_subunits = {
 			skate_infantry
 		}
@@ -3943,9 +3938,6 @@ technologies = {
 			skate_equipment_1
 		}
 
-		dependencies = {
-			blocked_tech = 1
-		}
 		on_research_complete_limit = {
 			NOT = {
 				has_template_containing_unit = skate_infantry
@@ -3958,8 +3950,6 @@ technologies = {
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 
-		research_cost = 2
-		start_year = 2275
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_melee y = @Col_11 }
@@ -4002,20 +3992,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 
 	# Behemoth
 	super_mutant_behemoth = {
-		research_cost = 1.0
-
-		allow = {
-			always = no
-		}
-
+		research_cost = 6.0
 		dependencies = {
-			blocked_tech = 1
+			blocked_unit_tech = 1
 		}
 
 		folder = {
