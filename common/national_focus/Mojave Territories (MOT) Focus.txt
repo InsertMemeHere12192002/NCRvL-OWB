@@ -1996,6 +1996,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = mot_first_supply_shipment
 		completion_reward = {
+			            set_technology = { 
+                railway_gun_unlock_tech = 1
+             }
 			custom_effect_tooltip = mot_the_mojave_line_tt
 			47 = {
 				add_building_construction = {
