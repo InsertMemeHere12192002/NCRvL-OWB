@@ -2763,11 +2763,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_state_core = 404
+			add_state_core = 454
 			add_resource = {
 				type = water
 				amount = 10
-				state = 404
+				state = 454
 			}
 			add_state_core = 251
 			add_resource = {

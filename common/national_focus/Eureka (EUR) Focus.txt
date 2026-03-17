@@ -702,7 +702,7 @@ focus_tree = {
 			}
 			add_political_power = 25
 			39 = {
-				add_building_construction = {
+				add_offsite_building = {
 					type = industrial_complex
 					level = 1
 				}
@@ -1546,7 +1546,7 @@ focus_tree = {
 		relative_position_id = eur_francis_won
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_building_construction = {
+				add_offsite_building = {
 					type = industrial_complex
 					level = 3
 				}
@@ -1569,7 +1569,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_building_construction = {
+				add_offsite_building = {
 					type = arms_factory
 					level = 3
 				}
@@ -1591,7 +1591,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_building_construction = {
+				add_offsite_building = {
 					type = industrial_complex
 					level = 4
 				}
@@ -1613,7 +1613,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_building_construction = {
+				add_offsite_building = {
 					type = arms_factory
 					level = 4
 				}
@@ -1672,7 +1672,7 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_building_construction = {
+				add_offsite_building = {
 					type = arms_factory
 					level = 4
 				}

@@ -1452,7 +1452,7 @@ ideas = {
 				custom_effect_tooltip = caps_lockout_set_tt
 			}
 			modifier = {
-				caps_expense_modifier = -0.45
+				caps_expense_modifier = -0.80
 				army_attack_factor = -0.135
 				army_org_factor = -0.351
 				army_morale_factor = -0.243
@@ -1535,7 +1535,7 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			modifier = {
-				caps_expense_modifier = 0
+				caps_expense_modifier = -0.70
 				army_attack_factor = 0
 				army_org_factor = 0
 				army_morale_factor = 0
@@ -1614,7 +1614,7 @@ ideas = {
 				custom_effect_tooltip = caps_lockout_set_tt
 			}
 			modifier = {
-				caps_expense_modifier = 0.175
+				caps_expense_modifier = -0.60
 				special_forces_cap = 0.05
 				special_forces_min = 20
 				max_training = 0.05
@@ -1698,7 +1698,7 @@ ideas = {
 				custom_effect_tooltip = caps_lockout_set_tt
 			}
 			modifier = {
-				caps_expense_modifier = 0.35
+				caps_expense_modifier = -0.30
 				special_forces_cap = 0.1
 				special_forces_min = 40
 				max_training = 0.10
