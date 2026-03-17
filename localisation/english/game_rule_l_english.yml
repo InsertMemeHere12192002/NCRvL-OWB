@@ -4,7 +4,7 @@
 
   RULE_UNIFIERS_NCR_SHI_DEFAULT:0 "Default Shi State"
   RULE_UNIFIERS_NCR_SHI_DEFAULT_DESC:0 "The Shi State default state."
-  RULE_UNIFIERS_SHI/EUR:0 "The Shi annexed Eureka"
+  RULE_UNIFIERS_SHI/EUR:0"The Shi annexed Eureka"
   RULE_UNIFIERS_SHI/EUR_DESC:0 "The Shi will annex all of Eureka 1 year before war start."
   RULE_UNIFIERS_SHI/EUR/ARR:0 "Shi Annexed Eureka and Arroyo"
   RULE_UNIFIERS_SHI/EUR/ARR_DESC:0 "The Shi will annex all of Eureka and Arroyo 1 year before war start."

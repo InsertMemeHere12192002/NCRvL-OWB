@@ -2710,6 +2710,30 @@ VLT_ai_behavior = {
 		allow_achievements = yes
 	}
 }
+# Vault 37
+VTS_ai_behavior = {
+	name = RULE_AI_BEHAVIOR_VTS
+	group = RULE_GROUP_AI_BEHAVIOR
+	default = {
+		name = DEFAULT
+		text = RULE_AI_BEHAVIOR_VTS_DEFAULT
+		desc = RULE_AI_BEHAVIOR_VTS_DEFAULT_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = OVERSEER_THOMAS
+		text = RULE_AI_BEHAVIOR_VTS_THOMAS
+		desc = RULE_AI_BEHAVIOR_VTS_THOMAS_DESC
+		allow_achievements = yes
+	}
+	option = {
+		name = BROTHER_JAN
+		text = RULE_AI_BEHAVIOR_VTS_JAN
+		desc = RULE_AI_BEHAVIOR_VTS_JAN_DESC
+		allow_achievements = yes
+	}
+
+}
 
 # White Legs
 WHT_ai_behavior = {

@@ -70,18 +70,18 @@ start_first_battle_events = {
 			news_event = bhd.153			# Unique event to flavour attack everyone nom nom nom
 		}
 	}
-	else_if = {
-		# NCR has annexed MOT by Rule CES auto lose
-		limit = {
-			has_game_rule = {
-				rule = NCR/MOT
-			}
-		}
-		effect = {
-			trigger_event = bhd.7
-			trigger_event = bhd.10
-		}
-	}
+	# else_if = {
+	# 	# NCR has annexed MOT by Rule CES auto lose
+	# 	limit = {
+	# 		has_game_rule = {
+	# 			rule = NCR/MOT
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		trigger_event = bhd.7
+	# 		trigger_event = bhd.10
+	# 	}
+	# }
 	else = {
 		# Generic Case
 		event_target:dam_attacker = {

@@ -2216,7 +2216,7 @@ focus_tree = {
 			every_owned_state = {
 				add_state_modifier = {
 					modifier = { 
-						compliance_gain = 0.05 
+						compliance_gain = 0.04 
 					}
 				}
 				add_state_modifier = {
