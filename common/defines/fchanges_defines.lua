@@ -16,9 +16,15 @@ NDefines.NBuildings.INFRASTRUCTURE_RESOURCE_BONUS = 0.1 -- multiplicative resour
 NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.08   -- air global damage modifier
 NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.08   -- global damage modifier
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.2         -- effect on defense due to enemy air superiorty
-NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.025		-- Balancing value to determine the chance of ground AA hitting an attacking airplane, affecting both the effective average damage done by AA to airplanes, and the reduction of damage done by airplanes due to AA support
+NDefines.NMilitary.ANTI_AIR_TARGETTING_TO_CHANCE = 0.025
+	-- Algorithm is a * (xp / (xp + b)) (see: https://www.desmos.com/calculator/4936qnyxqp)
+	-- a = ENEMY_AIR_SUPERIORITY_DEFENSE
+	-- b = ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS
+	-- xp = anti_air ^ 1.5
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE = 0.75	       -- more AA attack will approach this amount of help (diminishing returns)
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_DEFENSE_STEEPNESS = 625 -- how quickly defense approaches the max impact diminishing returns curve
+NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.3     -- effect on speed due to enemy air superiority
 NDefines.NMilitary.ANTI_AIR_ATTACK_TO_AMOUNT = 0.004			-- Balancing value to convert equipment stat anti_air_attack to the random % value of airplanes being hit.
-NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.25    -- effect on speed due to enemy air superiority
 NDefines.NMilitary.AIR_SUPPORT_BASE = 0.15                   -- CAS bonus factor for air support modifier for land unit in combat
 NDefines.NNavy.ANTI_AIR_TARGETTING_TO_CHANCE = 0.2
 
@@ -40,7 +46,7 @@ NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.08	-- Vanilla is .003
 NDefines.NMilitary.LAND_AIR_COMBAT_MAX_PLANES_PER_ENEMY_WIDTH = 0.5    -- how many CAS/TAC can enter a combat depending on enemy width there
 NDefines.NAir.COMBAT_MAX_WINGS_AT_ONCE = 750 						-- Max amount of air wings in one combat simulation. The higher value, the quicker countries may loose their wings. It's a gameplay balance value.
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.8
-NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 0.35	-- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
+NDefines.NAir.ANTI_AIR_ATTACK_TO_DAMAGE_REDUCTION_FACTOR = 2.5	-- Balancing value to convert equipment stat anti_air_attack to the damage reduction modifier apply to incoming air attacks against units with AA.
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_CHANCE = 0.1                    -- Anti Air Gun hit chance
 NDefines.NCountry.AIR_SUPPLY_CONVERSION_SCALE = 0.1  -- Vanilla is .002. Conversion scale for planes to air supply
 
