@@ -240,7 +240,7 @@ sub_units = {
 		}
 	}
 
-	anti_armor_infantry = {
+	anti_armor_infantry = {#no used ?
 		sprite = infantry
 		map_icon_category = infantry
 
