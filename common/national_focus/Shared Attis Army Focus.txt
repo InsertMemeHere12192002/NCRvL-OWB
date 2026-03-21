@@ -3632,12 +3632,10 @@ focus_tree = {
 	focus = {
 		id = attis_crusher
 		icon = GFX_goal_mutant_supremacy
-		cost = 7
+		cost = 30
 		x = 0
 		y = 1
 		mutually_exclusive = { focus = attis_juggernaught focus = attis_shale }
-		available = {
-		}
 		prerequisite = {
 			focus = attis_3
 		}
