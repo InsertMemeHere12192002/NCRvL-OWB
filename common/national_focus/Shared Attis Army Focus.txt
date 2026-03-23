@@ -2077,12 +2077,10 @@ focus_tree = {
 			}
 			set_technology = {	
 				robotics_tech_level_scientific = 1
-				air_tech_level_scientific = 1
 				electronics_tech_level_scientific = 1
 				exploitation_tech_level_scientific = 1
 				popup = no
 			}
-			remove_ideas = aeronautics_ineptitude
 		}
 	}
 	focus = {
