@@ -1,0 +1,297 @@
+res_town_category = {
+	military_exercise_descision = {
+		visible = {
+			is_in_array = { military_newborn_array = 7 }
+		}
+		available = {
+			has_completed_focus = res_colonel_green_focus
+		}
+
+		days_remove = 1
+		days_re_enable = 50
+
+		complete_effect = {
+			army_experience = 10
+
+			if = {
+				limit = {
+					is_in_array = { civilian_newborn_array = 2 }
+					is_in_array = { civilian_newborn_array = 4 }
+
+					is_in_array = { military_newborn_array = 1 }
+					is_in_array = { military_newborn_array = 3 }
+					is_in_array = { military_newborn_array = 7 }
+
+					is_in_array = { project_newborn_array = 5 }
+					is_in_array = { project_newborn_array = 6 }
+				}
+
+				country_event = {
+					id = nf_events_green_res.1
+				}
+			}
+		}
+	}
+
+	buy_ces_slaves_decision = {
+		icon = generic_construction
+		visible = {
+			NOT = { has_war_with = CES }
+			NOT = { has_country_flag = RES_crusade_started_flag }
+		}
+		available = {
+			has_completed_focus = res_trade_ces
+			country_exists = CES
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 100 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+
+		days_remove = 30
+		days_re_enable = 120
+
+		complete_effect = {
+			set_temp_variable = { caps_to_add = -100 }
+			add_caps = yes
+		}
+		remove_effect = {
+			add_manpower = 250
+		}
+	}
+
+	buy_lac_slaves_decision = {
+		icon = generic_construction
+		visible = {
+			NOT = { has_war_with = LAC }
+			NOT = { has_country_flag = RES_crusade_started_flag }
+		}
+		available = {
+			has_completed_focus = res_trade_lac
+			country_exists = LAC
+			custom_trigger_tooltip = {
+				tooltip = buy_lac_slaves_decision_riot_gear_trigger
+				check_variable = { num_equipment@heavy_infantry_equipment_2 > 29 }
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 50 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+
+		days_remove = 15
+		days_re_enable = 65
+
+		complete_effect = {
+			set_temp_variable = { caps_to_add = -50 }
+			add_caps = yes
+			if = {
+				limit = {
+					NOT = { has_tech = heavy_infantry_tech_4 }	# This is needed for the decision's effect to show up and work correctly when the tech is not owned
+				}
+				add_equipment_to_stockpile = {
+					type = heavy_infantry_equipment_2
+					amount = -30
+					producer = USA
+				}
+			}
+			else = {
+				add_equipment_to_stockpile = {
+					type = heavy_infantry_equipment_2
+					amount = -30
+				}
+			}
+		}
+		remove_effect = {
+			add_manpower = 250
+		}
+	}
+
+	sell_drucius_decision = {
+		icon = generic_construction
+		visible = {
+			NOT = { has_country_flag = RES_crusade_started_flag }
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = sell_drucius_decision_advanced_energy_weapon_trigger
+				check_variable = { num_equipment@energy_equipment_3 > 49 }
+			}
+			country_exists = CES
+		}
+
+		days_remove = 30
+		days_re_enable = 90
+
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = energy_equipment_3
+				amount = -50
+				producer = USA
+			}
+			CES = {
+				add_equipment_to_stockpile = {
+					type = energy_equipment_3
+					amount = 50
+					producer = USA
+				}
+			}
+		}
+		remove_effect = {
+			set_temp_variable = { caps_to_add = 100 }
+			add_caps = yes
+
+			hidden_effect = {
+				# bonuses for Drucius
+				CES = {
+					CES_caius_drusus = {
+						gain_xp = 100
+					}
+				}
+			}
+		}
+	}
+
+	buy_nav_slaves_decision = {
+		icon = generic_construction
+
+		days_remove = 90
+		days_re_enable = 30
+
+		visible = {
+			NAV = {
+				NOT = { has_completed_focus = NAV_navajo_no_ghouls }
+				NOT = { has_war_with = RES }
+			}
+			NOT = { has_country_flag = RES_crusade_started_flag }
+		}
+		available = {
+			NAV = {
+				has_completed_focus = NAV_expand_demand
+			}
+			country_exists = NAV
+		}
+		modifier = {
+			local_resources_factor = -0.2
+		}
+		remove_effect = {
+			add_manpower = 150
+		}
+	}
+}
+
+res_sublevel_2 = {
+	convert_factory_to_level_2_decision = {
+		icon = generic_construction
+		available = {
+			any_owned_state = {
+				arms_factory > 0
+			}
+			has_dynamic_modifier = {
+				modifier = res_sub_level_2_dynamic_modifier
+			}
+		}
+
+		modifier = {
+			production_speed_buildings_factor = -0.1
+		}
+		days_remove = 60
+		days_re_enable = 60
+
+		complete_effect = {
+			random_owned_state = {
+				limit = { arms_factory > 0 }
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+		remove_effect = {
+			set_temp_variable = { workshops_to_add = 1 }
+			RES_add_workshops = yes
+		}
+	}
+	boost_production_slaves_level_2_decision = {
+		icon = GFX_decision_generic_civil_support
+		available = {
+			has_manpower > 100
+			has_dynamic_modifier = {
+				modifier = res_sub_level_2_dynamic_modifier
+			}
+		}
+
+		days_remove = 70
+		days_re_enable = 70
+
+		complete_effect = {
+			add_manpower = -100
+			add_to_variable = { SL2_production_modifier = 1.5 } # Base = 5
+			custom_effect_tooltip = res_increase_production_tt
+		}
+		remove_effect = {
+			add_to_variable = { SL2_production_modifier = -1.5 } # Base = 5
+		}
+	}
+}
+
+res_launch_nuke_category = {
+	res_launch_nuke_decision = {
+		icon = GFX_decision_mini_nuke
+		state_target = yes
+		on_map_mode = map_and_decisions_view
+		target_array = res_nellie_targets_array
+		available = {
+			if = {
+				limit = {
+					always = no
+					#no in our focus tree
+				}
+				RES = { has_country_flag = RES_crusade_started_flag }
+			}
+			else = {
+				OR = {
+					has_global_flag = fbhd_boulder_city_miracle_flag
+					has_global_flag = fbhd_mot_hold_dam
+					has_global_flag = fbhd_legion_overall_vic
+				}
+			}
+			FROM = {
+				CONTROLLER = {
+					has_war_with = RES
+				}
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			# hidden_effect = {
+			# 	set_country_flag = res_launched_nuke
+			# }
+			launch_nuke = {
+				state = FROM
+				use_nuke = no
+			}
+			FROM = {
+				add_dynamic_modifier = { modifier = res_nellie_dynamic_modifier }
+				damage_units = {	# CWTools - False positive? Target array is states, likely flagged due to FROM usage @tran
+					state = THIS # optional
+					limit = {
+						tag = CONTROLLER
+					}
+					org_damage = 0.9
+					str_damage = 0.75
+					ratio = yes
+					army = yes
+					navy = no
+				}
+				custom_effect_tooltip = res_nellie_unit_damage
+			}
+		}
+	}
+}

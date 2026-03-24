@@ -1,0 +1,25 @@
+
+state={
+	id=703
+	name="STATE_703"
+	provinces={
+		757 19850 19854 19856 19859 19860 19864 19870 19874
+	}
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19874 10
+		}
+		victory_points = {
+			19859 5
+		}
+		victory_points = {
+			19854 1
+		}
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

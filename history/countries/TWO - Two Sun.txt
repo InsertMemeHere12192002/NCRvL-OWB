@@ -82,19 +82,7 @@ if = {
 	}
 }
 
-if = {
-	limit = {
-		NOT = {
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_technology = {
-	basic_supply_transport_tech = 1
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
+
 
 set_fuel_ratio = 0.75
 set_stability = 0.45

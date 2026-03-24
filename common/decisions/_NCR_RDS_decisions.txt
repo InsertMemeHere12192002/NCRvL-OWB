@@ -1,0 +1,181 @@
+# ncr_civil_war_redding_support = {
+# 	rds_send_guns = {
+#         icon = GFX_decision_revolver
+# 		allowed = {
+# 			tag = RDS
+# 		}
+# 		visible = {
+# 			OR = {
+# 				has_completed_focus = ncr_red_support_calhoun
+# 				has_completed_focus = ncr_red_california_bleeding
+# 				has_completed_focus = ncr_red_support_moore
+# 			}
+# 		}
+# 		available = {
+# 			has_equipment = { infantry_equipment > 999 }
+# 		}
+# 		days_remove = 7
+# 		days_re_enable = 20
+# 		remove_effect = {
+# 		}
+# 		remove_effect = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						has_completed_focus = ncr_red_support_calhoun
+# 						has_completed_focus = ncr_rpr_support_calhoun
+# 					}
+# 				}
+# 				BON = {
+# 					country_event = ncr_red_support.1
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_completed_focus = ncr_red_california_bleeding
+# 					NOT = {
+# 						has_completed_focus = ncr_rpr_support_calhoun
+# 					}
+# 				}
+# 				BON = {
+# 					country_event = ncr_red_support.1
+# 				}
+# 				NCR = {
+# 					country_event = ncr_red_support.1
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_completed_focus = ncr_red_support_moore
+# 					NOT = {
+# 						has_completed_focus = ncr_rpr_support_calhoun
+# 					}
+# 				}
+# 				NCR = {
+# 					country_event = ncr_red_support.1
+# 				}
+# 			}
+# 		}
+#     }
+# 	rds_send_support = {
+#         icon = GFX_decision_stimpak
+# 		allowed = {
+# 			tag = RDS
+# 		}
+# 		visible = {
+# 			OR = {
+# 				has_completed_focus = ncr_red_support_calhoun
+# 				has_completed_focus = ncr_red_california_bleeding
+# 				has_completed_focus = ncr_red_support_moore
+# 			}
+# 		}
+# 		available = {
+# 			has_equipment = { support_equipment > 149 }
+# 		}
+# 		days_remove = 7
+# 		days_re_enable = 20
+# 		remove_effect = {
+# 		}
+# 		remove_effect = {
+# 			if = {
+# 				limit = {
+# 					OR = {
+# 						has_completed_focus = ncr_red_support_calhoun
+# 						has_completed_focus = ncr_rpr_support_calhoun
+# 					}
+# 				}
+# 				BON = {
+# 					country_event = ncr_red_support.5
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_completed_focus = ncr_red_california_bleeding
+# 					NOT = {
+# 						has_completed_focus = ncr_rpr_support_calhoun
+# 					}
+# 				}
+# 				BON = {
+# 					country_event = ncr_red_support.5
+# 				}
+# 				NCR = {
+# 					country_event = ncr_red_support.5
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					has_completed_focus = ncr_red_support_moore
+# 					NOT = {
+# 						has_completed_focus = ncr_rpr_support_calhoun
+# 					}
+# 				}
+# 				NCR = {
+# 					country_event = ncr_red_support.5
+# 				}
+# 			}
+# 		}
+#     }
+# 	rds_sell_high_buy_low = {
+#         icon = GFX_decision_swag_bag
+# 		allowed = {
+# 			tag = RDS
+# 		}
+# 		visible = {
+# 			OR = {
+# 				has_completed_focus = ncr_red_support_calhoun
+# 				has_completed_focus = ncr_red_california_bleeding
+# 				has_completed_focus = ncr_red_support_moore
+# 			}
+# 		}
+# 		available = {
+# 			set_temp_variable = {
+# 				caps_diff = -30
+# 			}
+# 			caps_cost_trigger = yes
+# 			has_political_power > 30
+# 			any_neighbor_country = {
+# 				has_equipment = { infantry_equipment > 449 }
+# 				NOT = { has_country_flag = ncr_red_recent_arms_sale }
+# 			}
+# 		}
+# 		days_remove = 7
+# 		days_re_enable = 20
+# 		remove_effect = {
+# 			if = {
+# 				limit = {
+# 					any_neighbor_country = {
+# 						has_equipment = { infantry_equipment > 449 }
+# 						NOT = { has_country_flag = ncr_red_recent_arms_sale }
+# 						NOT = {
+# 							OR = {
+# 								original_tag = NCR
+# 								original_tag = BON
+# 							}
+# 						}
+# 					}
+# 				}
+# 				random_neighbor_country = {
+# 					limit = {
+# 						has_equipment = { infantry_equipment > 449 }
+# 						NOT = { has_country_flag = ncr_red_recent_arms_sale }
+# 						NOT = {
+# 							OR = {
+# 								original_tag = NCR
+# 								original_tag = BON
+# 							}
+# 						}
+# 					}
+# 					set_country_flag = {
+# 						flag = ncr_red_recent_arms_sale
+# 						days = 80
+# 						value = 1
+# 					}
+# 					country_event = ncr_red_support.9
+# 				}
+# 			}
+# 			else = {
+# 				custom_effect_tooltip = rds_no_seller_tt
+# 			}
+# 		}
+#     }
+# }

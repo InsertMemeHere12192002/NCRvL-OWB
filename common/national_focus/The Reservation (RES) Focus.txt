@@ -490,7 +490,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = nf_events_res.9
-			89 = {
+			282 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -560,7 +560,7 @@ focus_tree = {
 			focus = res_smooch
 		}
 		completion_reward = {
-			89 = {
+			282 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
@@ -706,11 +706,7 @@ focus_tree = {
 			focus = res_elite
 		}
 		completion_reward = {
-			set_country_flag = res_nellie_id
-			custom_effect_tooltip = res_nuke_ability_tt
-			#set_technology = { artillery_ammo_unlock_tech = 1 }
-			#custom_effect_tooltip = res_added_nuke_tt
-			#country_event = nf_events_green_res.1
+			custom_effect_tooltip = res_added_nuke_tt
 		}
 	}
 	focus = {
@@ -851,7 +847,7 @@ focus_tree = {
 			focus = res_sub_level_2
 		}
 		completion_reward = {
-			89 = {
+			282 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = water_generator
@@ -1563,10 +1559,10 @@ focus_tree = {
         }
         relative_position_id = resg_skinwalkers_patrols
         completion_reward = {
+			            set_technology = { 
+                railway_gun_unlock_tech = 1
+             }
             add_ideas = resg_stand_against_bull_idea
-            set_technology = {
-            	railway_gun = 1
-            }
 			create_railway_gun = {
 				equipment = railway_gun_equipment_1
 				name = "The Raging Bull"

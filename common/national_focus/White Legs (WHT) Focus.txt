@@ -37,6 +37,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = wht_supermutant_invasion
 		icon = GFX_goal_WHT_supermutant
@@ -516,7 +517,7 @@ focus_tree = {
 				}
 				log = "[GetDateText]: [Root.GetName] wht_copper_mines entered"
 			}
-			326 = {
+			488 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -987,7 +988,7 @@ focus_tree = {
 	}
 	focus = {
 		id = wht_adopt_clock
-		icon = GFX_goal_generic_generic_diplomatic_focus
+		icon = GFX_goal_clk_scheldule #GFX_goal_generic_generic_diplomatic_focus
 		cost = 40
 		x = 2
 		y = 1
@@ -1071,6 +1072,10 @@ focus_tree = {
 				}
 				log = "[GetDateText]: [Root.GetName] wht_send_clock_to_flagstaff entered"
 			}
+						add_popularity = {
+				ideology = ruler
+				popularity = 0.05
+			}
 			add_tech_bonus = {
 				bonus = 0.4
 				uses = 2
@@ -1147,7 +1152,7 @@ focus_tree = {
 	}
 	focus = {
 		id = wht_tar_walking
-		icon = GFX_goal_generic_flamer_focus
+		icon = GFX_goal_tar_flag
 		cost = 40
 		x = -3
 		y = 1
@@ -1426,7 +1431,7 @@ focus_tree = {
 	focus = {
 		id = wht_eighties_negotiation
 		text = wht_eighties_negotiation_switch
-		icon = GFX_goal_generic_war_focus
+		icon = GFX_goal_TTM_Border #GFX_goal_generic_war_focus #GFX_goal_generic_generic_diplomatic_focus
 		cost = 40
 		x = -1
 		y = 1
@@ -1493,7 +1498,7 @@ focus_tree = {
 	}
 	focus = {
 		id = wht_envelop_ncn
-		icon = GFX_goal_NCN_Mormon_Book
+		icon = GFX_goal_TTM_Tribal_Vault_Girl
 		cost = 40
 		x = 2
 		y = 1
@@ -1590,9 +1595,6 @@ focus_tree = {
 									}
 									NOT = {
 										has_completed_focus = EHT_ally_mormons
-									}
-									NOT = {
-										has_completed_focus = EHT_second_nevada_road_war
 									}
 								}
 							}
@@ -2032,6 +2034,10 @@ focus_tree = {
 			add_political_power = 100
 			add_to_tech_sharing_group = legion_research_pact
 			add_manpower = 500
+						add_opinion_modifier = {
+				modifier = WHT_friend_legion
+				target = CES
+			}
 		}
 	}
 	focus = {
@@ -2254,6 +2260,7 @@ focus_tree = {
 		available = {
 		}
 		completion_reward = {
+			army_experience = 50
 			set_temp_variable = {
 				caps_to_add = 400
 			}
@@ -2317,10 +2324,10 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			set_temp_variable = {
-				caps_to_add = 200
-			}
-			add_caps = yes
+			#set_temp_variable = {
+			#	caps_to_add = 200
+			#}
+			#add_caps = yes
 		}
 	}
 	focus = {
@@ -2411,11 +2418,8 @@ focus_tree = {
 					add_idea = chems_banned
 				}
 			}
-			custom_effect_tooltip = WHT_mormons_ban_drugs_tt
-			set_temp_variable = {
-				caps_to_add = 200
-			}
-			add_caps = yes
+			#custom_effect_tooltip = WHT_mormons_ban_drugs_tt
+			add_manpower = 1200
 		}
 	}
 	focus = {

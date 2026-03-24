@@ -1,0 +1,101 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+
+default_unit_production = {
+	allowed = {
+		original_tag = VEG
+	}
+	enable = {
+		always = yes
+	}
+	abort = { always = no }
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = -13
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = security_robot
+		value = 40
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = robot
+		value = 60
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = motorized
+		value = 10
+	}
+}
+# VEG_house_send_volunteers_to_mojave = {
+# 	allowed = {
+# 		original_tag = VEG
+# 	}
+# 	enable = {
+# 		has_country_leader = {
+# 			character = VEG_mr_house
+# 			ruling_only = yes
+# 		}
+# 		has_war = no
+# 		has_idea = ncr_veg_treaty_of_new_vegas
+# 		NOT = { has_completed_focus = veg_rockthesuburbs }
+# 		NOT = { has_completed_focus = veg_secure_the_southern_mojave }
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = MOT
+# 		value = 100
+# 	}
+# }
+# Deprecated, claims removed now @Tran
+#
+# VEG_ignore_claims_if_CLK_alive = {
+# 	allowed = {
+# 		original_tag = VEG
+# 	}
+# 	enable = {
+# 		country_exists = CLK
+# 	}
+
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = ignore_claim
+# 		id = "SKY"
+# 		value = 1
+# 	}
+# }
+
+VEG_CES_threat_to_region = {
+	allowed = {
+		original_tag = VEG
+	}
+	enable = {
+		NOT = {
+			has_country_leader = {
+				character = VEG_benny	# Can join Legion
+				ruling_only = yes
+			}
+			is_ally_with = CES
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = antagonize
+		id = CES
+		value = 50
+	}
+}

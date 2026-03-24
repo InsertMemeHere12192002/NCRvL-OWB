@@ -813,16 +813,9 @@ focus_tree = {
 			focus = moj_petro_chico_military_encryption
 		}
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Waking the Tiger"
-				}
 				custom_effect_tooltip = MOJ_spears_from_the_sun_tt
 				set_country_flag = archimedes_ii
-			}
-			else = {
-				add_ideas = mojave_forgotten_weapon
-			}
+
 			MOJ = {
 				set_temp_variable = {
 					change_preperation = 25
@@ -1293,16 +1286,8 @@ focus_tree = {
 						has_completed_focus = MOJ_spears_from_the_sun
 					}
 				}
-				if = {
-					limit = {
-						has_dlc = "Waking the Tiger"
-					}
 					custom_effect_tooltip = MOJ_spears_from_the_sun_tt
 					set_country_flag = archimedes_ii
-				}
-				else = {
-					add_ideas = mojave_forgotten_weapon
-				}
 			}
 			else = {
 				417 = {
@@ -1689,9 +1674,6 @@ focus_tree = {
 		x = 0
 		y = 2
 		relative_position_id = moj_preparing_against_the_legion
-		available = {
-			owns_state = 212
-		}
 		prerequisite = {
 			focus = moj_fortifying_the_dam
 		}

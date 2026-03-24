@@ -96,7 +96,7 @@ focus_tree = {
 		}
 		bypass = {
 			MES = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = -1
@@ -119,7 +119,7 @@ focus_tree = {
 		}
 		available = {
 			MES = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 0
@@ -164,7 +164,7 @@ focus_tree = {
 		will_lead_to_war_with = ASF
 		bypass = {
 			ASF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 1
@@ -187,7 +187,7 @@ focus_tree = {
 		relative_position_id = lac_attack_the_archdiocese
 		available = {
 			ASF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 0
@@ -231,7 +231,7 @@ focus_tree = {
 		will_lead_to_war_with = EDA
 		bypass = {
 			EDA = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 3
@@ -254,7 +254,7 @@ focus_tree = {
 		}
 		available = {
 			EDA = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 0
@@ -533,7 +533,7 @@ focus_tree = {
 		}
 		bypass = {
 			EXE = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		will_lead_to_war_with = EXE
@@ -596,7 +596,7 @@ focus_tree = {
 		}
 		bypass = {
 			SUF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = -3
@@ -858,19 +858,19 @@ focus_tree = {
 		}
 		available = {
 			ASF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			SUF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			MES = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			EDA = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			EXE = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 1
@@ -927,19 +927,19 @@ focus_tree = {
 		}
 		available = {
 			ASF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			SUF = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			MES = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			EDA = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			EXE = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 1
@@ -977,6 +977,7 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
 		id = lac_lumber_mills
 		icon = GFX_goal_generic_large_scale_normal_industry_focus
@@ -1326,19 +1327,19 @@ focus_tree = {
 					}
 				}
 				SUF = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				MES = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				ASF = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				EDA = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				EXE = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 			}
 		prerequisite = {
@@ -1393,7 +1394,7 @@ focus_tree = {
 		}
 		bypass = {
 			SUN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 0
@@ -1425,16 +1426,16 @@ focus_tree = {
 		relative_position_id = lac_block_out_sun
 		available = {
 			SUN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		relative_position_id = lac_block_out_sun
 		completion_reward = {
 			every_state = {
 				limit = { is_core_of = SUN }	# Setup here is chosen over scoping into SUN to do every_core_state for tooltip purposes
-				add_compliance = 10
+				add_compliance = 20
 			}
-			565 = {
+			233 = {
 				add_core_of = LAC
 			}
 		}
@@ -1520,7 +1521,7 @@ focus_tree = {
 		bypass = {
 			OR = {
 				MXC = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				HAN = {
 					MXC = {
@@ -1563,22 +1564,23 @@ focus_tree = {
 			}
 			OR = {
 				MXC = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				HAN = {
 					MXC = {
 						all_core_land_owned_by_prev_sphere = yes
 					}
 				}
+				is_neighbor_of = HAN
 			}
 			SUN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		bypass = {
 			OR = {
 				SCO = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 				AND = {
 					is_neighbor_of = HAN
@@ -1610,7 +1612,7 @@ focus_tree = {
 		}
 		available = {
 			MXC = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = -2
@@ -1638,13 +1640,13 @@ focus_tree = {
 				is_neighbor_of = HAN
 				AND = {
 					SUN = {
-						all_core_land_owned_by_prev_sphere = yes
+						all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 					}
 					MXC = {
-						all_core_land_owned_by_prev_sphere = yes
+						all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 					}
 					SCO = {
-						all_core_land_owned_by_prev_sphere = yes
+						all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 					}
 				}
 			}
@@ -1693,20 +1695,20 @@ focus_tree = {
 				is_neighbor_of = HAN
 				AND = {
 					SUN = {
-						all_core_land_owned_by_prev_sphere = yes
+						all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 					}
 					MXC = {
-						all_core_land_owned_by_prev_sphere = yes
+						all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 					}
 					SCO = {
-						all_core_land_owned_by_prev_sphere = yes
+						all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 					}
 				}
 			}
 		}
 		bypass = {
 			HAN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		prerequisite = {
@@ -1747,7 +1749,7 @@ focus_tree = {
 		}
 		available = {
 			HAN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 0
@@ -1832,7 +1834,7 @@ focus_tree = {
 		}
 		available = {
 			HAN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 4
@@ -1851,6 +1853,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = lac_the_march_west
+		}
+		mutually_exclusive = {
+			focus = lac_triumphant_campaign
 		}
 		x = 2
 		y = 1
@@ -1887,6 +1892,71 @@ focus_tree = {
 			factor = 0
 		}
 	}
+	focus = {##keep it here so it's less stuff to remove elswhere just keep the alaways no and its fine
+		id = lac_triumphant_campaign
+		text = lac_no_strings_on_me
+		icon = GFX_goal_LAC_monster_of_the_east
+		cost = 30
+		available = {
+			has_offensive_war = no
+			is_subject = no
+			always = no
+		}
+		prerequisite = {
+			focus = lac_brought_to_heel
+		}
+		mutually_exclusive = {
+			focus = lac_the_march_west
+		}
+		mutually_exclusive = {
+			focus = lac_good_boy_puppet
+		}
+		x = 0
+		y = 1
+		relative_position_id = lac_brought_to_heel
+		completion_reward = {
+			CES = {
+				if = {
+					limit = { exists = yes }
+					news_event =  nf_lanius_ces_relations.3
+					if = {
+						limit = { LAC = { is_subject_of = PREV } }
+						set_autonomy = {
+							target = LAC
+							autonomy_state = autonomy_free
+						}
+					}
+				}
+			}
+			hidden_effect = {
+				leave_current_faction = yes
+			}
+			set_cosmetic_tag = LAC_texas
+			LAC_lanius = {
+				add_skill_level = 1
+				add_unit_leader_trait = built_to_destroy_trait
+			}
+			create_or_join_lanius_horde = yes
+			if = {
+				limit = {
+					IRN = {
+						is_caesars_legion_member = yes
+					}
+				}
+				IRN = {
+					join_lanius_horde = yes
+				}
+			}
+			swap_ruler_traits = {
+				remove = lac_no_mercy
+				add = lac_frontier_justice
+			}
+			remove_ideas = { lanius_countdown_dog_city }
+		}
+		ai_will_do = {
+			factor = 10
+		}
+	}
 	focus = {
 		id = lac_the_march_west
 		icon = GFX_goal_NCR_Damassault
@@ -1896,6 +1966,9 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = lac_good_boy_puppet
+		}
+		mutually_exclusive = {
+			focus = lac_triumphant_campaign
 		}
 		available = {
 			has_offensive_war = no
@@ -1983,7 +2056,7 @@ focus_tree = {
 		cost = 30
 		available = {
 			HAN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		prerequisite = {
@@ -2007,7 +2080,7 @@ focus_tree = {
 		cost = 30
 		available = {
 			HAN = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = -4
@@ -2041,7 +2114,7 @@ focus_tree = {
 		}
 		available = {
 			MXC = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		x = 1
@@ -2432,7 +2505,7 @@ focus_tree = {
 		cost = 30
 		available = {
 			MXC = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		prerequisite = {
@@ -2499,7 +2572,7 @@ focus_tree = {
 			OR = {
 				has_war_with = LUB
 				LUB = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 			}
 		}
@@ -2522,7 +2595,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		available = {
 			LUB = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			custom_trigger_tooltip = {
 				tooltip = doesnt_have_war_with_neighbor_tt
@@ -2538,7 +2611,7 @@ focus_tree = {
 			OR = {
 				has_war_with = LNS
 				LNS = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 			}
 		}
@@ -2563,7 +2636,7 @@ focus_tree = {
 		cost = 30
 		available = {
 			SHA = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		prerequisite = {
@@ -2585,7 +2658,7 @@ focus_tree = {
 		cost = 30
 		available = {
 			TUB = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		prerequisite = {
@@ -2608,10 +2681,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		available = {
 			LUB = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			LNS = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			ai_has_no_other_wars_or_wargoals = yes
 			custom_trigger_tooltip = {
@@ -2628,7 +2701,7 @@ focus_tree = {
 			OR = {
 				has_war_with = TBH
 				TBH = {
-					all_core_land_owned_by_prev_sphere = yes
+					all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 				}
 			}
 		}
@@ -2680,7 +2753,7 @@ focus_tree = {
 		cost = 30
 		available = {
 			ASS = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		prerequisite = {
@@ -2829,10 +2902,10 @@ focus_tree = {
 		}
 		available = {
 			BAG = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			LUM = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		relative_position_id = lac_breaking_the_boulder
@@ -2865,7 +2938,7 @@ focus_tree = {
 		}
 		available = {
 			WHD = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		relative_position_id = lac_the_conquest_of_north
@@ -2915,13 +2988,13 @@ focus_tree = {
 		}
 		available = {
 			PAR = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			SCA = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			CHC = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		relative_position_id = lac_scrapper_yard
@@ -2985,13 +3058,13 @@ focus_tree = {
 		}
 		available = {
 			CHR = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			CMC = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 			CHO = {
-				all_core_land_owned_by_prev_sphere = yes
+				all_core_land_owned_by_prev_sphere_or_legion_influence_tag = yes
 			}
 		}
 		relative_position_id = lac_gate_to_planes

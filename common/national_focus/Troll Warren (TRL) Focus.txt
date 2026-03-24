@@ -100,7 +100,6 @@ focus_tree = {
 		x = 5
 		y = 4
 		available = {
-			#NOT = { has_idea = slavery_outlawed }
 			235 = {
 				is_owned_and_controlled_by = ROOT
 			}
@@ -138,7 +137,6 @@ focus_tree = {
 		x = 2
 		y = 5
 		available = {
-			#NOT = { has_idea = slavery_outlawed }
 			506 = {
 				is_owned_and_controlled_by = ROOT
 			}
@@ -183,7 +181,6 @@ focus_tree = {
 			268 = {
 				is_owned_and_controlled_by = ROOT
 			}
-			#NOT = { has_idea = slavery_outlawed }
 		}
 		completion_reward = {
 			add_offsite_building = { type = industrial_complex level = 2 }
@@ -229,7 +226,6 @@ focus_tree = {
 			235 = {
 				is_owned_and_controlled_by = ROOT
 			}
-			#NOT = { has_idea = slavery_outlawed }
 		}
 		completion_reward = {
 			event_target:commander_beatrice = {
@@ -1321,7 +1317,6 @@ focus_tree = {
 		x = 2
 		y = 7
 		available = {
-			#NOT = { has_idea = slavery_outlawed }
 			MDT = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
@@ -1389,7 +1384,6 @@ focus_tree = {
 			437 = {
 				is_owned_and_controlled_by = ROOT
 			}
-			#NOT = { has_idea = slavery_outlawed }
 		}
 		completion_reward = {
 			add_manpower = 250
@@ -1576,9 +1570,6 @@ focus_tree = {
 		}
 		x = 7
 		y = 7
-		available = {
-			#NOT = { has_idea = slavery_outlawed }
-		}
 		ai_will_do = {
 			factor = 0.2 #Do these focuses later
 			modifier = {
@@ -2489,7 +2480,6 @@ focus_tree = {
 		x = 2
 		y = 6
 		available = {
-			#NOT = { has_idea = slavery_outlawed }
 				587 = {
 					is_owned_and_controlled_by = ROOT
 				}
@@ -2987,7 +2977,6 @@ focus_tree = {
 		x = 3
 		y = 8
 		available = {
-			#NOT = { has_idea = slavery_outlawed }
 			BDT = {
 				all_core_land_owned_by_prev_sphere = yes
 			}

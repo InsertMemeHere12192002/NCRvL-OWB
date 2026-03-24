@@ -21,6 +21,9 @@ set_technology = {
 	robotics_tech_level_tribal = 1
 	robotics_tech_level_settler = 1
 	#robotics_tech_level_scientific = 1
+	#creatures_tech_level_tribal = 1
+	#creatures_tech_level_settler = 1
+	#creatures_tech_level_scientific = 1
 	air_tech_level_tribal = 1
 	air_tech_level_settler = 1
 	#air_tech_level_scientific = 1
@@ -107,19 +110,19 @@ set_country_flag = generic_decisions_disabled
 
 add_ideas = {
 	marvels_of_vault_city
-	indentured_servitude
 	ncrsubjugation
 	outsider_law_none
 	ncr_sphere
 	currencyncrdollar
+	chems_all_substances_banned
 }
 
 
 #Gecko Power Plant Setup
 
 set_variable = { vlt_gecko_power_var = 15 }
-set_variable = { vlt_gecko_manpower_var = 0 }
-set_variable = { vlt_gecko_construction_var = 0 }
+set_variable = { vlt_gecko_manpower_var = -1 }
+set_variable = { vlt_gecko_construction_var = -1 }
 
 339 = {
 	add_dynamic_modifier = { modifier = vlt_gecko_powerplant }
@@ -161,12 +164,12 @@ recruit_character = VLT_dweller_edmund
 recruit_character = VLT_dweller_francis
 recruit_character = VLT_dweller_douglas
 recruit_character = VLT_dweller_ian
+recruit_character = VLT_dweller_adam
+recruit_character = VLT_dweller_isaiah
 recruit_character = VLT_dweller_cyril
 recruit_character = VLT_dweller_donald
 recruit_character = VLT_dweller_nigel
 recruit_character = VLT_dweller_elena
-recruit_character = VLT_dweller_isaiah
-recruit_character = VLT_dweller_adam
 
 recruit_character = VLT_joseph_williamson
 recruit_character = VLT_reuben_baxter

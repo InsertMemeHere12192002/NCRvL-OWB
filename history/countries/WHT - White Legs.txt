@@ -19,6 +19,9 @@ set_technology = {
 	#robotics_tech_level_tribal = 1
 	#robotics_tech_level_settler = 1
 	#robotics_tech_level_scientific = 1
+	creatures_tech_level_tribal = 1
+	#creatures_tech_level_settler = 1
+	#creatures_tech_level_scientific = 1
 	air_tech_level_tribal = 1
 	#air_tech_level_settler = 1
 	#air_tech_level_scientific = 1
@@ -39,11 +42,11 @@ set_technology = {
 	#electronics_tech_level_scientific = 1
 	tribal_tech_visibility_tech = 1
 	tribal_tech_access_tech = 1
-	spec_ops_equipment_tech_1 = 1
 	heavy_infantry_tech_1 = 1
 	tool_engineering = 1
 	standard_weaponry_tech = 1
 	melee_weaponry_tech_1 = 1
+	spec_ops_equipment_tech_1 = 1
 	anti_tank_equipment_tech_1 = 1
 	dog_equipment_tech_1 = 1
 	med_company_tech_1 = 1
@@ -54,6 +57,8 @@ set_technology = {
 	raider_reckless_aggression = 1
 	demolitions_weaponry_tech = 1
 	terror_tactics = 1
+	beast_tech_access_tech = 1
+	gecko_tech_access_tech = 1
 	melee_weaponry_tech_2 = 1
 	glider_tech = 1
 	cargo_plane_tech_1 = 1
@@ -85,16 +90,6 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
 set_stability = 0.4
 set_war_support = 0.4
@@ -121,7 +116,7 @@ set_popularities = {
 }
 
 add_ideas = {
-	# slavers_idea_2
+	veteran_pathfinders
 	undesirables_law_raider
 	WHT_savages
 	WHT_widespread_illiteracy
@@ -137,5 +132,5 @@ recruit_character = WHT_salt_upon_wounds
 recruit_character = WHT_balm_upon_wounds
 recruit_character = WHT_tears_in_the_rain
 
-set_country_flag = infantry_ballistic_ai
+set_country_flag = infantry_melee_ai
 # vim: set ft=pdx ts=2 sw=2 tw=79 :

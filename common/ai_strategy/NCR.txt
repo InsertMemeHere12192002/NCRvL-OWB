@@ -1,0 +1,1408 @@
+# # befriend
+# # conquer
+# # antagonize
+# # build_ship
+# # build_army
+# # unit_ratio
+# # build_building
+# # research_tech
+# # garrison
+# # protect
+# # influence
+# # contain
+# # area_priority
+# NCR_unit_production = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		always = yes
+# 	}
+# 	abort = {
+# 		always = no
+# 	}
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = infantry
+# 		value = 90
+# 	}
+# 	ai_strategy = {
+# 		type = land_xp_spend_priority
+# 		id = division_template
+# 		value = 30
+# 	}
+# 	# ai_strategy = {
+# 	# 	type = role_ratio
+# 	# 	id = garrison
+# 	# 	value = 8 #30 to 8
+# 	# }
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = mechanized
+# 		value = 20
+# 	}
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = motorized
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = armor
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = marines
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = capital_ship
+# 		value = 10
+# 	}
+
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = screen_ship
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = convoy
+# 		value = 5
+# 	}
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = fighter
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = cas
+# 		value = 15
+# 	}
+# 	ai_strategy = {
+# 		type = unit_ratio
+# 		id = strategic_bomber
+# 		value = 5
+# 	}
+# 	ai_strategy = {
+# 		type = equipment_production_factor
+# 		id = fighter
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = equipment_production_factor
+# 		id = strategic_bomber
+# 		value = 5
+# 	}
+# 	ai_strategy = {
+# 		type = equipment_production_factor
+# 		id = infantry
+# 		value = -5
+# 	}
+# }
+
+# NCR_decision_priority = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		date > 2276.1.1
+# 		OR = {
+# 			has_stability < 0.4
+# 			has_war_support < 0.4
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = pp_spend_priority
+# 		id = decision
+# 		value = 20
+# 	}
+# }
+
+# NCR_leaves_MOT_alone = {
+# 	allowed = {
+# 		OR = {
+# 			original_tag = NCR
+# 			original_tag = SHI
+# 			original_tag = BOS
+# 			original_tag = NAT
+# 			original_tag = NEW
+# 			original_tag = VLT
+# 			original_tag = ARR
+# 			original_tag = DES
+# 		}
+# 	}
+# 	enable = {
+# 		is_new_california_member = yes
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = MOT
+# 		value = -50
+# 	}
+# }
+
+# NCR_anti_armor = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		ai_wants_divisions > 5 #Decreasing the amount of motorized the AI wants
+
+# 		any_enemy_country = {
+# 			ROOT = {
+# 				estimated_intel_max_armor = {
+# 					tag = PREV
+# 					value > 25
+# 				}
+# 			}
+# 		}
+# 	}
+# 	abort = {
+# 		ai_wants_divisions < 6 #Decreasing the amount of motorized the AI wants
+# 	}
+
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = anti_armor
+# 		value = 15
+# 	}
+# }
+
+# NCR_armored_production = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		ai_wants_divisions > 24 #Decreasing the amount of tanks the AI wants
+# 	}
+# 	abort = {
+# 		ai_wants_divisions < 25 #Decreasing the amount of tanks the AI wants
+# 	}
+
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = armor
+# 		value = 5
+# 	}
+# }
+
+# NCR_highered_armored_production = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		num_of_military_factories > 109
+# 	}
+# 	abort = {
+# 		num_of_military_factories < 110
+# 	}
+
+# 	ai_strategy = {
+# 		type = role_ratio
+# 		id = armor
+# 		value = 10
+# 	}
+# }
+
+# NCR_template_design = {
+# 	allowed = {
+# 		tag = NCR
+# 	}
+# 	enable = {
+# 		date < 2277.1.1
+# 	}
+# 	abort = {
+# 		date > 2277.1.1
+# 	}
+
+# 	ai_strategy = {
+# 		type = template_prio
+# 		id = motorized
+# 		value = 50
+# 	}
+
+# 	ai_strategy = {
+# 		type = template_prio
+# 		id = infantry
+# 		value = 60
+# 	}
+# }
+
+# NCR_template_design_2 = {
+# 	allowed = {
+# 		tag = NCR
+# 	}
+# 	enable = {
+# 		date > 2277.1.1
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = template_prio
+# 		id = motorized
+# 		value = 50
+# 	}
+# 	ai_strategy = {
+# 		type = template_prio
+# 		id = armor
+# 		value = 40
+# 	}
+# 	ai_strategy = {
+# 		type = template_prio
+# 		id = infantry
+# 		value = 60
+# 	}
+# }
+# NCR_area_priority = {
+# 	allowed = {
+# 		tag = NCR
+# 	}
+# 	enable = {
+# 		always = yes
+# 	}
+# 	abort = {
+# 		always = no
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = north_california
+# 		value = 80
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = south_california
+# 		value = 120
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = arizona_sonora
+# 		value = 60
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = nevada
+# 		value = 50
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = colorado_newmexico
+# 		value = 40
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = new_vegas
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = oregon
+# 		value = 10
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = utah
+# 		value = 10
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = idaho
+# 		value = 10
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = washington_british_columbia
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = north_mexico
+# 		value = 20
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = south_mexico
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = texas
+# 		value = 1
+# 	}
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = out_of_bounds
+# 		value = 1
+# 	}
+# }
+# #NCR_ally_rangers = {
+# #	enable = {
+# #		original_tag = NCR
+# #		DES = {
+# #			NOT = { is_in_faction_with = CES }
+# #			exists = yes
+# #		}
+# #	}
+# #	abort = {
+# #		NOT = { country_exists = DES }
+# #	}
+# #
+# #	ai_strategy = {
+# #		type = befriend
+# #		id = "DES"
+# #		value = 200
+# #	}
+# #	ai_strategy = {
+# #		type = alliance
+# #		id = "DES"
+# #		value = 200
+# #	}
+# #}
+# NCR_invade_CES = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			has_war_with = CES
+# 			is_justifying_wargoal_against = CES
+# 			has_wargoal_against = CES
+# 			CES = { is_justifying_wargoal_against = NCR }
+# 			CES = { has_wargoal_against = NCR }
+# 		}
+# 	}
+# 	abort = {
+# 		OR = {
+# 			CES = { has_capitulated = yes }
+# 			CES = { exists = no }
+# 			CES = { is_puppet = yes }
+# 			is_in_faction_with = CES
+# 			NCR = { has_capitulated = yes }
+# 			NCR = { exists = no }
+# 			NCR = { is_puppet = yes }
+# 			surrender_progress > 0.5
+# 		}
+# 	}
+
+# 	ai_strategy = {
+# 		type = area_priority
+# 		id = arizona_sonora
+# 		value = 2000
+# 	}
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = CES
+# 		value = 50
+# 	}
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = TWO
+# 		value = 10
+# 	}
+# 	ai_strategy = { #Stop being so suicidally aggressive around rivers
+# 		type = front_control
+# 		state_trigger = {
+# 			is_owned_by = CES
+# 			is_coastal = yes
+# 		}
+# 		ratio = 0.5
+# 		ordertype = front
+# 		execution_type = balanced
+# 	}
+# 	ai_strategy = {
+# 		type = front_armor_score
+# 		id = CES
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "CES"
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "CES"
+# 		value = 500
+# 	}
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "CES"
+# 		value = 5000
+# 	}
+# 	ai_strategy = {
+# 		type = garrison
+# 		value = -10
+# 	}
+# }
+
+# NCR_hoover_dam_navy = { #To prevent NCR attempting to naval invade through the river north of Hoover before they've taken the Dam
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		has_war_with = CES
+# 		divisions_in_state = { state = 438 size < 1 } #If Fort hill taken, go right ahead!
+# 	}
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = naval_avoid_region
+# 		id = 79 #lower colorado
+# 		value = 600 # avoid doing missions as well
+# 	}
+# }
+
+# NCR_artillery = { #Make NCR create artillery when it researches it. Motorized used as a workaround, so this also makes the NCR keep a minimum of factories on trucks—useful for keeping them upgraded.
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		has_completed_focus = ncr_artillery_only
+# 	}
+# 	abort = {
+# 		always = no
+# 	}
+
+# 	ai_strategy = {
+# 		type = equipment_production_min_factories
+# 		id = motorized
+# 		value = 2
+# 	}
+# }
+
+# # NCR_ignore_northern_minors = { #don't sit around in the north when more important stuff is happening
+# # 	allowed = {
+# # 		original_tag = NCR
+# # 	}
+# # 	enable = {
+# # 		OR = {
+# # 			has_war_with = CES
+# # 			has_border_war = yes
+# # 		}
+# # 	}
+# # 	abort = {
+# # 		NOT = { has_war_with = CES }
+# # 		NOT = { has_border_war = yes }
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "KLA"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "DES"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "SKY"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "YKZ"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "NEW"
+# # 		value = 500
+# # 	}
+# # 	# ai_strategy = {
+# # 	# 	type = ignore
+# # 	# 	id = "GRD"
+# # 	# 	value = 500
+# # 	# }
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "FOU"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "PAC"
+# # 		value = 500
+# # 	}
+# # }
+
+# # AI should station any available troops garrisoning areas with
+# # border wars occuring for the Mojave Campaign against the
+# # Mojave BOS
+# # NCR_hostile_MOJ_mojave_campaign = {
+# # 	allowed = {
+# # 		original_tag = NCR
+# # 	}
+# # 	enable = {
+# # 		has_decision = border_conflict_initiate_incident
+# # 	}
+# # 	abort = {
+# # 		NOT = { has_decision = border_conflict_initiate_incident }
+# # 	}
+# # 	ai_strategy = {
+# # 		type = antagonize
+# # 		id = "MOJ"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = contain
+# # 		id = "MOJ"
+# # 		value = 500
+# # 	}
+# # }
+# # NCR_border_war_with_MOJ = {
+# # 	allowed = {
+# # 		original_tag = NCR
+# # 	}
+# # 	enable = {
+# # 		has_war = no
+# # 		OR = {
+# # 			has_decision = border_conflict_initiate_incident
+# # 			has_decision = escalate_incident_to_border_conflict
+# # 			has_decision = border_conflict_time_until_cancelled
+# # 			has_decision = border_conflict_escalate_to_war
+# # 			has_border_war_with = MOJ
+# # 		}
+
+# # 	}
+# # 	abort = {
+# # 		OR = {
+# # 			has_war = yes
+# # 			NOT = {
+# # 				OR = {
+# # 					has_decision = border_conflict_initiate_incident
+# # 					has_decision = escalate_incident_to_border_conflict
+# # 					has_decision = border_conflict_time_until_cancelled
+# # 					has_decision = border_conflict_escalate_to_war
+# # 					has_border_war_with = MOJ
+# # 				}
+# # 			}
+# # 		}
+# # 	}
+# # 	ai_strategy = {
+# # 		type = area_priority
+# # 		id = new_vegas
+# # 		value = 300
+# # 	}
+# # 	ai_strategy = {
+# # 		type = invade
+# # 		id = MOJ
+# # 		value = 1000
+# # 	}
+# # }
+# # instead of stacking troops on Caesar's border when other stuff is happening
+# NCR_ignore_CES_deal_with_others = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			has_war = yes
+# 			has_border_war = yes
+# 		}
+# 		NOT = { has_war_with = CES }
+# 		NOT = { has_border_war_with = CES }
+# 		NOT = { CES = { is_justifying_wargoal_against = NCR } }
+# 		NOT = { CES = { has_wargoal_against = NCR } }
+# 		date < 2278.1.1
+# 	}
+# 	abort = {
+# 		NOT = {
+# 			AND = {
+# 				OR = {
+# 					has_war = yes
+# 					has_border_war = yes
+# 				}
+# 				OR = {
+# 					NOT = { has_war_with = CES }
+# 					NOT = { has_border_war_with = CES }
+# 					NOT = { CES = { is_justifying_wargoal_against = NCR } }
+# 					NOT = { CES = { has_wargoal_against = NCR } }
+# 				}
+# 			}
+# 		}
+# 	}
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "CES"
+# 		value = 5000
+# 	}
+# }
+
+# # NCR_focus_on_invading_mojave_raiders = {
+# # 	allowed = {
+# # 		original_tag = NCR
+# # 	}
+# # 	enable = {
+# # 		OR = {
+# # 			has_war_with = MRA
+# # 			is_justifying_wargoal_against = MRA
+# # 			has_wargoal_against = MRA
+# # 		}
+# # 		NOT = { is_in_faction_with = MRA }
+# # 		NOT = { has_war_with = CES }
+# # 		CES = {
+# # 			NOT = { is_justifying_wargoal_against = NCR }
+# # 			NOT = { has_wargoal_against = NCR }
+# # 		}
+# # 		NOT = { surrender_progress > 0.1 }
+
+# # 	}
+# # 	abort = {
+# # 		OR = {
+# # 			MRA = {
+# # 				exists = no
+# # 				has_capitulated = yes
+# # 				is_in_faction_with = NCR
+# # 			}
+# # 			AND = {
+# # 				NOT = { has_war_with = MRA }
+# # 				NOT = { is_justifying_wargoal_against = MRA }
+# # 				NOT = { has_wargoal_against = MRA }
+# # 			}
+# # 			surrender_progress > 0.1
+# # 			has_war_with = CES
+# # 			CES = {
+# # 				is_justifying_wargoal_against = NCR
+# # 				has_wargoal_against = NCR
+# # 			}
+# # 		}
+# # 	}
+
+# # 	ai_strategy = {
+# # 		type = conquer
+# # 		id = "MRA"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = antagonize
+# # 		id = "MRA"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = invade
+# # 		id = "MRA"
+# # 		value = 500
+# # 	}
+# # 	ai_strategy = {
+# # 		type = ignore
+# # 		id = "CES"
+# # 		value = 5000
+# # 	}
+# # 	ai_strategy = {
+# # 		type = area_priority
+# # 		id = new_vegas
+# # 		value = 160
+# # 	}
+# # }
+
+# NCR_focus_on_invading_baja = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			has_war_with = BVC
+# 			is_justifying_wargoal_against = BVC
+# 			has_wargoal_against = BVC
+# 		}
+# 		NOT = { is_in_faction_with = BVC }
+# 		NOT = { has_war_with = CES }
+# 		# NOT = { has_war_with = MRA } # focus on Mojave first, more time sensitive
+# 		CES = {
+# 			NOT = { is_justifying_wargoal_against = NCR }
+# 			NOT = { has_wargoal_against = NCR }
+# 		}
+# 		NOT = { surrender_progress > 0.1 }
+# 	}
+# 	abort = {
+# 		OR = {
+# 			BVC = {
+# 				exists = no
+# 				has_capitulated = yes
+# 				is_in_faction_with = NCR
+# 			}
+# 			AND = {
+# 				NOT = { has_war_with = BVC }
+# 				NOT = { is_justifying_wargoal_against = BVC }
+# 				NOT = { has_wargoal_against = BVC }
+# 			}
+# 			surrender_progress > 0.1
+# 			has_war_with = CES
+# 			CES = {
+# 				is_justifying_wargoal_against = NCR
+# 				has_wargoal_against = NCR
+# 			}
+# 		}
+# 	}
+
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "BVC"
+# 		value = 500
+# 	}
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = "BVC"
+# 		value = 500
+# 	}
+# 	ai_strategy = {
+# 		type = ignore
+# 		id = "CES"
+# 		value = 5000
+# 	}
+# 	ai_strategy = {
+# 		type = invade
+# 		id = "BVC"
+# 		value = 500
+# 	}
+# }
+# NCR_murphy_rangers = {
+# 	allowed = {
+# 		original_tag = NCR
+# 		has_completed_focus = ncr_reorgranger2
+# 	}
+# 	enable = {
+# 		has_government = people
+# 	}
+# 	abort = {
+# 		NCR = {
+# 			has_country_flag = ncr_crisis
+# 		}
+# 	}
+# 	reversed = yes
+
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = "NCR"
+# 		value = 900
+# 	}
+# }
+# NCR_build_infra_civ_early = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		NOT = { has_war_with = CES }
+# 		date < 2275.6.1
+# 	}
+
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = added_military_to_civilian_factory_ratio
+# 		value = -60
+# 	}
+# }
+# NCR_build_only_civ_now_early = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		NOT = { has_war_with = CES }
+# 		date < 2277.3.1
+# 	}
+
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = building_target
+# 		id = industrial_complex
+# 		value = 110
+# 	}
+# }
+# NCR_ramp_up_mil_industry = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			date > 2277.6.1
+# 			AND = {
+# 				date > 2277.3.1
+# 				has_war = yes
+# 			}
+# 		}
+# 		date < 2281.1.1
+# 	}
+
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = added_military_to_civilian_factory_ratio
+# 		value = 40
+# 	}
+# }
+# NCR_more_mils_when_proper_law = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			has_idea = economy_moore_no_checks
+# 			has_idea = ncr_remilitarised_economy
+# 			has_idea = ncr_bear_roars
+# 			has_idea = ncr_emergency_measures
+# 			has_idea = true_man_economy
+# 		}
+# 	}
+
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = added_military_to_civilian_factory_ratio
+# 		value = 20
+# 	}
+# }
+# NCR_build_less_dockyards_please = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		always = yes
+# 	}
+# 	abort = {
+# 		always = no
+# 	}
+# 	ai_strategy = {
+# 		type = dockyard_to_military_factory_ratio
+# 		value = -90
+# 	}
+# }
+# NCR_help_mojave_territories = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		MOT = {
+# 			exists = yes
+# 			has_war = yes
+# 			is_subject_of = NCR
+# 		}
+# 		NOT = { has_war_with = CES }
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = MOT
+# 		value = 200
+# 	}
+# }
+# NCR_guard_mojave_territories = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		MOJ = {
+# 			exists = no
+# 		}
+# 		MOT = {
+# 			exists = yes
+# 			is_subject_of = NCR
+# 		}
+# 		CES = {
+# 			exists = yes
+# 		}
+# 		date > 2278.1.1
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = force_defend_ally_borders
+# 		id = "MOT"
+# 		value = 50
+# 	}
+# }
+# NCR_prepare_for_RAP = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			has_completed_focus = ncr_kimball_vindication
+# 			has_completed_focus = ncr_new_hand_on_the_tiller
+# 		}
+# 		country_exists = RAP
+# 		OR = {
+# 			NOT = {
+# 				NCR_has_ai_behavior_allgood = yes
+# 				NCR_has_ai_behavior_electoral_deadlock_allgood = yes
+# 			}
+# 			NOT = {
+# 				country_exists = MOS
+# 			}
+# 		}
+# 		NOT = { has_war = yes }
+# 	}
+# 	abort = {
+# 		OR = {
+# 			NOT = { country_exists = RAP }
+# 			has_war = yes
+# 			is_ally_with = RAP
+# 		}
+# 	}
+
+# 	ai_strategy = {
+# 		type = prepare_for_war
+# 		id = "RAP"
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "RAP"
+# 		value = 100
+# 	}
+# }
+# NCR_handle_RAP = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		has_war_with = RAP
+# 	}
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = RAP
+# 		value = 50
+# 	}
+# }
+# NCR_handle_MOS = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		has_war_with = MOS
+# 	}
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = MOS
+# 		value = 50
+# 	}
+# }
+# NCR_prepare_for_MOS = {
+# 	allowed = {
+# 		original_tag = NCR
+# 	}
+# 	enable = {
+# 		OR = {
+# 			has_completed_focus = ncr_kimball_vindication
+# 			has_completed_focus = ncr_new_hand_on_the_tiller
+# 		}
+# 		country_exists = MOS
+# 		OR = {
+# 			NCR_has_ai_behavior_allgood = yes
+# 			NCR_has_ai_behavior_electoral_deadlock_allgood = yes
+# 			NOT = {
+# 				country_exists = RAP
+# 			}
+# 		}
+# 	}
+# 	abort = {
+# 		OR = {
+# 			NOT = { country_exists = MOS }
+# 			has_war = yes
+# 		}
+# 	}
+
+# 	ai_strategy = {
+# 		type = prepare_for_war
+# 		id = "MOS"
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = conquer
+# 		id = "MOS"
+# 		value = 100
+# 	}
+# }
+# NCR_ignore_vegas = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		VEG = {
+# 			NOT = { has_completed_focus = veg_king }
+# 		}
+# 		NOT = { has_war_with = VEG }
+# 		has_non_aggression_pact_with = VEG
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = VEG
+# 		value = -200
+# 	}
+# }
+# NCR_help_reno_when_ally_path = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = NEW
+# 		NEW = {
+# 			has_completed_focus = new_renoproclamation
+# 			OR = {
+# 				NEW_has_ai_behavior_bishop = yes
+# 				NEW_has_ai_behavior_wright = yes
+# 			}
+# 		}
+# 		NOT = {
+# 			NEW = {
+# 				has_war_with = TDN
+# 			}
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = NEW
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = NEW
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = NEW
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = NEW
+# 		value = 200
+# 	}
+# }
+# NCR_help_vault_city_when_lynette = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = VLT
+# 		VLT = {
+# 			has_completed_focus = vlt_a_second_term
+# 			VLT_has_ai_behavior_lynette = yes
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = VLT
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = VLT
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = VLT
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = VLT
+# 		value = 200
+# 	}
+# }
+# NCR_help_eureka_when_portmasters_ally = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = EUR
+# 		EUR = {
+# 			has_completed_focus = eur_identifying_threats
+# 			EUR_has_ai_behavior_portmasters_ncr = yes
+# 		}
+# 		NOT = {
+# 			EUR = {
+# 				has_war_with = ARR
+# 			}
+# 			ARR = {
+# 				OR = {
+# 					ARR_has_ai_behavior_good_integrated = yes
+# 					ARR_has_ai_behavior_good_independent = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = EUR
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = EUR
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = EUR
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = EUR
+# 		value = 200
+# 	}
+# }
+# NCR_help_arroyo_when_chosen_one_good_karma = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = ARR
+# 		ARR = {
+# 			has_completed_focus = arr_chosen_one_returns
+# 			OR = {
+# 				ARR_has_ai_behavior_good_integrated = yes
+# 				ARR_has_ai_behavior_good_independent = yes
+# 			}
+# 		}
+# 		NOT = {
+# 			AND = {
+# 				ARR = {
+# 					has_war_with = EUR
+# 				}
+# 				EUR = {
+# 					EUR_has_ai_behavior_portmasters_ncr = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = ARR
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = ARR
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = ARR
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = ARR
+# 		value = 200
+# 	}
+# }
+# NCR_ignore_BOS_when_against_CES = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		has_war_with = CES
+# 		OR = {
+# 			BOS = { is_ai = yes }
+# 			NOT = { country_exists = MOT }
+# 		}
+# 	}
+# 	abort = {
+# 		OR = {
+# 			has_war_with = BOS
+# 			check_variable = { bos_tension > 60 }
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = front_unit_request
+# 		tag = BOS
+# 		value = -50
+# 	}
+# }
+# NCR_allgood_calhoun_BOS_diplomacy = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		OR = {
+# 			has_country_leader = {
+# 				character = NCR_allgood_murphy
+# 				ruling_only = yes
+# 			}
+# 			has_country_leader = {
+# 				character = BON_bill_calhoun
+# 				ruling_only = yes
+# 			}
+# 			has_completed_focus = ncr_cal_peace_in_our_times	# Calhoun can leave office later, NCR shouldn't suddenly not like BOS due to that
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = BOS
+# 		value = 50
+# 	}
+# }
+# NCR_hayes_kimball_moore_BOS_diplomacy = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		OR = {
+# 			has_country_leader = {
+# 				character = NCR_grant_c_hayes
+# 				ruling_only = yes
+# 			}
+# 			has_country_leader = {
+# 				character = NCR_aaron_kimball
+# 				ruling_only = yes
+# 			}
+# 			has_country_leader = {
+# 				character = NCR_colonel_moore
+# 				ruling_only = yes
+# 			}
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = antagonize
+# 		id = BOS
+# 		value = 50
+# 	}
+# }
+
+# NCR_help_RRG_when_both_fighting_CES = { #Note that this still takes into account diplomatic range, so an NCR that controls Baja is neccesary for the below help strategies to be possible
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = RRG
+# 		RRG = {
+# 			has_war_with = CES
+# 		}
+# 		OR = {
+# 			has_war_with = CES
+# 			date > 2279.1.1
+# 		}
+# 		surrender_progress < 0.1
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = RRG
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = RRG
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = RRG
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = RRG
+# 		value = 200
+# 	}
+# }
+# NCR_help_FFI_when_both_fighting_CES = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = FFI
+# 		FFI = {
+# 			has_war_with = CES
+# 		}
+# 		OR = {
+# 			has_war_with = CES
+# 			date > 2279.1.1
+# 		}
+# 		surrender_progress < 0.1
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = FFI
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = FFI
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = FFI
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = FFI
+# 		value = 200
+# 	}
+# }
+# NCR_help_GDH_when_both_fighting_CES = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		country_exists = GDH
+# 		GDH = {
+# 			has_war_with = CES
+# 		}
+# 		OR = {
+# 			has_war_with = CES
+# 			date > 2279.1.1
+# 		}
+# 		surrender_progress < 0.1
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = support
+# 		id = GDH
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_lend_lease_desire
+# 		id = GDH
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = send_volunteers_desire
+# 		id = GDH
+# 		value = 200
+# 	}
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = GDH
+# 		value = 200
+# 	}
+# }
+
+# NCR_naval_invade_across_colorado = {
+# 	allowed = { original_tag = NCR }
+# 	enable = {
+# 		has_war_with = CES
+# 		surrender_progress < 0.1
+# 		alliance_naval_strength_ratio > 1
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = invade
+# 		id = CES
+# 		value = 50
+# 	}
+# 	ai_strategy = {
+# 		type = invasion_unit_request
+# 		tag = CES
+# 		value = 10
+# 	}
+# 	ai_strategy = {
+# 		type = invade
+# 		id = TWO
+# 		value = 50
+# 	}
+# 	ai_strategy = {
+# 		type = invasion_unit_request
+# 		tag = TWO
+# 		value = 5
+# 	}
+# 	ai_strategy = {
+# 		type = strike_force_home_base
+# 		id = 9	# Gulf of California
+# 	}
+# }

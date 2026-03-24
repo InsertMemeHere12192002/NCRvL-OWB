@@ -2380,7 +2380,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				modifier_army_sub_unit_behemoth_factor = 0.05
+				modifier_army_sub_unit_behemoth_attack_factor = 0.05
 				modifier_army_sub_unit_behemoth_defence_factor = 0.05
 				modifier_army_sub_unit_behemoth_speed_factor = 0.05
 			}

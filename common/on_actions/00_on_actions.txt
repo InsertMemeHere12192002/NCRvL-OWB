@@ -305,16 +305,16 @@ on_actions = {
 				}
 				clear_variable = global.aztec_breakaway
 			}
-			if = {
-				limit = {
-					FROM = { original_tag = MOJ }
-					NCR = { NOT = { has_completed_focus = ncr_federalise_mot } }
-					ROOT = {
-						tag = CES
-					}
-				}
-				NCR = { news_event = ncr_crisis.5 }
-			}
+			# if = {
+			# 	limit = {
+			# 		FROM = { original_tag = MOJ }
+			# 		NCR = { NOT = { has_completed_focus = ncr_federalise_mot } }
+			# 		ROOT = {
+			# 			tag = CES
+			# 		}
+			# 	}
+			# 	NCR = { news_event = ncr_crisis.5 }
+			# }
 			if = {
 				limit = {
 					has_country_flag = set_as_major_for_war
@@ -652,6 +652,17 @@ on_actions = {
 					}
 					hidden_effect = {
 						load_oob = "unlock_supermutant_infantry"
+					}
+				}
+								if = {
+					limit = {
+						NOT = {
+							has_template_containing_unit = heavy_super_mutant_infantry
+						}
+						has_tech = super_mutant_civilization
+					}
+					hidden_effect = {
+						load_oob = "unlock_heavy_supermutant_infantry"
 					}
 				}
 				if = {

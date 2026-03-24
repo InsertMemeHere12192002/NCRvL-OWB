@@ -117,7 +117,6 @@ focus_tree = {
 			x = -6
 			y = 1
 			relative_position_id = maxson_bos_our_struggles
-			ai_will_do = { factor = 100 }
 			prerequisite = {
 				focus = maxson_bos_our_struggles
 			}
@@ -1112,7 +1111,6 @@ focus_tree = {
 		available = {
 			ai_has_no_other_wars_or_wargoals = yes
 		}
-        ai_will_do = { factor = 100 }
 		bypass = {
 			SCO = {
 				all_core_land_owned_by_prev_sphere = yes
@@ -1460,7 +1458,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = { load_OOB = mxcpeacekeepers }
-			custom_effect_tooltip = "Two units of fully equipped Enforcers will join you!"
+			custom_effect_tooltip = maxson_bos_choir_4_tt
 		}
 	}
 	focus = {
@@ -1764,10 +1762,11 @@ focus_tree = {
 			country_event = nf_maxson.24
 			add_stability = 0.10
 			army_experience = 75
-            set_province_name = {
-                id = 9015
-                name = "Denver"
-            }
+			set_province_name = {
+				id = 9015
+				name = VICTORY_POINTS_9015_USA
+			}
+			525 = { set_state_name = STATE_525_USA }
 			remove_ideas = maxson_hangdog_defeat
 		}
 	}
@@ -2191,6 +2190,11 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = maxson_bos_hangdogs_city_b2
+				available = {
+			525 = {
+				is_owned_and_controlled_by = MXC
+			}
+		}
 
 		prerequisite = {
 			focus = maxson_bos_hangdogs_city_a2
@@ -2283,7 +2287,7 @@ focus = {
 				}
 				set_province_name = {
 					id = 9013
-					name = "Vault 0"
+					name = VICTORY_POINTS_9013_MXC
 				}
 			}
 		}
@@ -2344,7 +2348,7 @@ focus = {
 				}
 			}
 		}
-			#Vault Tec Construction#
+			#Vault-Tec Construction#
 		focus = {
 			id = maxson_bos_vault4
 			icon = GFX_goal_max_vault_tec_construction
@@ -2395,7 +2399,7 @@ focus = {
 				add_political_power = 45
 			}
 		}
-			#Vault Tec Industry#
+			#Vault-Tec Industry#
 		focus = {
 			id = maxson_bos_vault6
 			icon = GFX_goal_max_vault_tec_industry
@@ -2921,7 +2925,7 @@ focus = {
 		completion_reward = {
 			puppet = EDA
 			EDA = {
-				set_cosmetic_tag = LAC_occupied
+				set_cosmetic_tag = EDA_BOS_OCCUPIED
 			}
 			custom_effect_tooltip = maxson_occupy_new_mexico
 			hidden_effect = {
@@ -2945,6 +2949,7 @@ focus = {
 					leave_faction = yes
 				}
 			}
+			country_event = nf_eda.28
 		}
 	}
 		#Free the Slaves#

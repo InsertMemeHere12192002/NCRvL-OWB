@@ -14,8 +14,8 @@ focus_tree = {
 		cost = 7
 		prerequisite = {
 		}
-		x = 14
-		y = 0
+		x = 20
+		y = 1
 		completion_reward = {
 			country_event = {
 				id = nf_gente.1
@@ -29,8 +29,9 @@ focus_tree = {
 		prerequisite = {
 			focus = gdh_people_of_the_sun
 		}
-		x = 14
+		x = 0
 		y = 1
+		relative_position_id = gdh_people_of_the_sun
 		completion_reward = {
 			country_event = {
 				id = nf_gente.2
@@ -44,8 +45,9 @@ focus_tree = {
 		prerequisite = {
 			focus = gdh_generalissimo
 		}
-		x = 14
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = gdh_generalissimo
 		completion_reward = {
 			country_event = {
 				id = nf_gente.3
@@ -67,7 +69,6 @@ focus_tree = {
 			add_political_power = 150
 		}
 	}
-
 	focus = {
 		id = gdh_bandit_contracts
 		icon = GFX_goal_NCR_Baja
@@ -111,7 +112,7 @@ focus_tree = {
 		prerequisite = {
 			focus = gdh_bandit_contracts
 		}
-		relative_position_id= gdh_bandit_contracts
+		relative_position_id = gdh_bandit_contracts
 		x = -1
 		y = 1
 		bypass = {
@@ -1092,7 +1093,7 @@ focus_tree = {
 	focus = {
 		#maybe
 		id = gdh_recruitment_benefits
-		icon = GFX_goal_generic_canister_nucleaer
+		icon = GFX_goal_generic_canister_nuclear
 		cost = 30
 		prerequisite = {
 			focus = gdh_bodyguards

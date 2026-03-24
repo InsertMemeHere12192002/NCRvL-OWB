@@ -772,7 +772,16 @@ focus_tree = {
 		y = 1
 		relative_position_id = bdt_clerical_militia
 		completion_reward = {
-			set_technology = { oregon_geckosupport = 1 }
+						set_technology = {
+				gecko_tech_access_tech = 1
+				gecko_support_unlock_tech = 1
+			}
+			hidden_effect = {
+				set_technology = {
+					creatures_tech_level_tribal = 1
+					creatures_tech_level_settler = 1
+				}
+			}
 		}
 	}
 

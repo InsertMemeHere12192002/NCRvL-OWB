@@ -1,0 +1,763 @@
+characters = {
+	FBH_mari_torni = {
+		name = BOS_MARI_TORNI_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_mari_torni
+			}
+		}
+		country_leader = {
+			desc = FBH_MARI_TORNI_DESC
+			ideology = military_government
+			traits = { isolationist decorated_hero brotherhood_scribe}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	FBH_jonathan_maxson = {
+		name = FBH_JONATHAN_MAXSON_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_jonathan
+			}
+		}
+		country_leader = {
+			desc = FBH_JONATHAN_MAXSON_DESC
+			ideology = militarist_technocracy
+			traits = { bos_maxson_heritage bos_war_hero_of_the_ncr_war bos_shellshocked }
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	FBH_arthur_maxson = {
+		name = FBH_ARTHUR_MAXSON_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_arthur
+			}
+		}
+	}
+	FBH_angharad = {
+		name = FBH_ANGHARAD_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_angharad
+			}
+		}
+		corps_commander = {
+			traits = { perceptive_trait intelligent_trait }
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
+	FBH_manawyddan = {
+		name = FBH_MANAWYDDAN_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_manawyddan
+			}
+		}
+	}
+	FBH_rhiannon = {
+		name = FBH_RHIANNON_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_rhiannon
+			}
+		}
+		country_leader = {
+			desc = FBH_RHIANNON_DESC
+			ideology = technocracy
+			traits = {
+				augment_title
+				fallout_augment_1
+				bos_the_smothering_storm
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	FBH_pryderi = {
+		name = FBH_PRYDERI_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_pryderi
+			}
+		}
+	}
+	FBH_llwyd = {
+		name = FBH_LLWYD_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_BOS_llwyd
+			}
+		}
+		country_leader = {
+			desc = FBH_LLWYD_DESC
+			ideology = town_hall_democracy
+			traits = { isolationist }
+			expire = "3000.01.01.01"
+			id = -1
+		}
+	}
+	FBH_paladin_stone = {
+		name = FBH_PALADIN_STONE_NAME
+		portraits = {
+			army = {
+				large = GFX_Portrait_BOS_cannon
+			}
+		}
+		corps_commander = {
+			traits = { bunker_kid_trait perceptive_trait lucky_trait }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 4
+			legacy_id = -1
+		}
+	}
+	FBH_advisor_contest_2 = {
+		name = FBH_advisor_contest_name_2
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic4"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = FBH_advisor_contest_advisor_2
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				air_volunteer_cap = 100
+				air_attack_factor = 0.05
+			}
+			cost = 300
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_3 = {
+		name = FBH_advisor_contest_name_3
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic1"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FBH_advisor_contest_advisor_3
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				dig_in_speed_factor = 0.1
+				org_loss_at_low_org_factor = -0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_4 = {
+		name = FBH_advisor_contest_name_4
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic5"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FBH_advisor_contest_advisor_4
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_loss_factor = -0.15
+				recon_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_5 = {
+		name = FBH_advisor_contest_name_5
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic6"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BOS_advisor_contest_advisor_5
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				max_command_power = 50
+				max_planning_factor = 0.05
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_6 = {
+		name = FBH_advisor_contest_name_6
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic2"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = FBH_advisor_contest_advisor_6
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				war_support_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_7 = {
+		name = FBH_advisor_contest_name_7
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic12"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FBH_advisor_contest_advisor_7
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				command_power_gain = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_8 = {
+		name = FBH_advisor_contest_name_8
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic8"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FBH_advisor_contest_advisor_8
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				supply_node_range = 0.1
+				army_org_factor = 0.05
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_9 = {
+		name = FBH_advisor_contest_name_9
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic7"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FBH_advisor_contest_advisor_9
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_gain_navy = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_10 = {
+		name = FBH_advisor_contest_name_10
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic14"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = FBH_advisor_contest_advisor_10
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				amphibious_invasion = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_11 = {
+		name = FBH_advisor_contest_name_11
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic19"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = FBH_advisor_contest_advisor_11
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				army_fuel_consumption_factor = -0.15
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_12 = {
+		name = FBH_advisor_contest_name_12
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic23"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = FBH_advisor_contest_advisor_12
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				army_morale_factor = 0.075
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_13 = {
+		name = FBH_advisor_contest_name_13
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic25"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = FBH_advisor_contest_advisor_13
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				heat_attrition_factor = -0.3
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_14 = {
+		name = FBH_advisor_contest_name_14
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic22"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = FBH_advisor_contest_advisor_14
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				monthly_population = 0.15
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_15 = {
+		name = FBH_advisor_contest_name_15
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic2"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = FBH_advisor_contest_advisor_15
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_16 = {
+		name = FBH_advisor_contest_name_16
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic7"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = FBH_advisor_contest_advisor_16
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_17 = {
+		name = FBH_advisor_contest_name_17
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic13"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = FBH_advisor_contest_advisor_17
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_18 = {
+		name = FBH_advisor_contest_name_18
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic20"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = FBH_advisor_contest_advisor_18
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				max_fuel_factor = 0.25
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_19 = {
+		name = FBH_advisor_contest_name_19
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic26"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = FBH_advisor_contest_advisor_19
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_20 = {
+		name = BOS_advisor_contest_name_20
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic25"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = FBH_advisor_contest_advisor_20
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				fuel_gain_factor = 0.15
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_21 = {
+		name = FBH_advisor_contest_name_21
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BOS_generic10"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = FBH_advisor_contest_advisor_21
+			ledger = civilian
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_22 = {
+		name = FBH_advisor_contest_name_22
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic24"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FBH_advisor_contest_advisor_22
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_gain_army_factor = -0.075
+				industrial_capacity_factory = 0.075
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_23 = {
+		name = FBH_advisor_contest_name_23
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic13"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FBH_advisor_contest_advisor_23
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				army_attack_factor = -0.05
+				modifier_army_sub_unit_paladin_unit_attack_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_24 = {
+		name = FBH_advisor_contest_name_24
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic11"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = FBH_advisor_contest_advisor_24
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_gain_army_factor = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_25 = {
+		name = FBH_advisor_contest_name_25
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic2"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = FBH_advisor_contest_advisor_25
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				modifier_army_sub_unit_paladin_unit_attack_factor = -0.05
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_26 = {
+		name = FBH_advisor_contest_name_26
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic17"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FBH_advisor_contest_advisor_26
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_gain_army = 0.05
+			}
+			research_bonus = {
+				industry = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_27 = {
+		name = FBH_advisor_contest_name_27
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic28"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FBH_advisor_contest_advisor_27
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_gain_army = 0.05
+			}
+			research_bonus = {
+				power_armor_tech_category = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	FBH_advisor_contest_28 = {
+		name = FBH_advisor_contest_name_28
+		portraits = {
+			army = {
+				small = "GFX_idea_BOS_generic27"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = FBH_advisor_contest_advisor_28
+			ledger = army
+			allowed = {
+				original_tag = FBH
+			}
+			modifier = {
+				experience_gain_army = 0.05
+				research_speed_factor = 0.025
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+}

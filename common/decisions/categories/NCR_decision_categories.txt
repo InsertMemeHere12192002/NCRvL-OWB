@@ -1,0 +1,141 @@
+NCR_vote_of_no_confidence = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_category_generic_crisis
+	priority = 100
+	scripted_gui = ncr_kimball_confidence_decision_gui
+}
+
+NCR_anti_corruption_campaigns = {
+	allowed = { original_tag = NCR }
+	#visible_when_empty = yes
+	priority = 30
+	visible = {
+		has_completed_focus = ncr_campaigns_against_corruption
+	}
+}
+
+NCR_presidential_declarations = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_category_generic_crisis
+	priority = 20
+}
+ncr_civil_war_decision_category = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_category_generic_crisis
+	priority = 20
+	visible = {
+		NCR = {
+			has_completed_focus = ncr_california_in_crisis
+		}
+	}
+	visible_when_empty = yes
+}
+ncr_civil_war_redding_support = {
+	allowed = { tag = RDS }
+	icon = GFX_decision_gold
+	visible_when_empty = yes
+	priority = 1500
+	visible = {
+		    always = no
+		}
+}
+ncr_presidential_election = {
+	allowed = {
+		original_tag = NCR
+	}
+	icon = GFX_decision_category_generic_crisis
+	visible_when_empty = yes
+	priority = 100
+	visible = {
+		has_country_flag = ncr_elections_gui_allowed_flag
+	}
+	# button to open election menu
+	scripted_gui = ncr_elections_decision_category_button_gui
+}
+NCR_hayes_bear_land_of_titans = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_documents_2
+	visible_when_empty = yes
+	priority = 1000
+	visible = {
+		has_completed_focus = ncr_oh_mexico
+		NOT = {
+			has_country_flag = ncr_hayes_mexico_finished
+		}
+	}
+}
+NCR_great_basin_campaign = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_documents_2
+	visible_when_empty = no
+	priority = 1000
+	visible = {
+		has_completed_focus = ncr_kimball_great_basin_campaign
+	}
+}
+NCR_investment_opportunities = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_swag_bag
+	visible_when_empty = yes
+	priority = 1000
+	visible = {
+		has_completed_focus = ncr_kimball_pay_taxes
+	}
+}
+NCR_baseballin_time = {
+	allowed = {
+		has_country_flag = ncr_league_member
+	}
+	picture = GFX_decision_cat_ncr_baseball
+	icon = GFX_decision_tv
+	visible_when_empty = yes
+	priority = 1000
+	visible = {
+		OR = {
+			has_completed_focus = ncr_baseball_league_for_allies
+			has_country_flag = ncr_league_member
+		}
+	}
+}
+NCR_protectors_of_justice = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_toy_soldier
+	visible_when_empty = yes
+	priority = 1000
+	visible = {
+		has_completed_focus = ncr_mur_injustice_anywhere
+	}
+}
+NCR_bos_crusade = {
+	allowed = { original_tag = NCR }
+	icon = GFX_decision_toy_soldier
+	visible_when_empty = yes
+	priority = 1000
+	visible = {
+		has_completed_focus = ncr_moore_bos_crusade
+	}
+}
+ncr_civil_war_calhoun_democracy = {
+	allowed = {
+		tag = BON
+	}
+	icon = GFX_decision_category_followers
+	visible_when_empty = yes
+	priority = 1500
+	visible = {
+	}
+}
+NCR_help_lloyd = {
+	allowed = {
+		original_tag = NCR
+	}
+	icon = GFX_decision_fusion_cell
+	visible_when_empty = yes
+	priority = 1500
+	visible = {
+		has_country_flag = ncr_bos_reformers_agreed
+		SRG = {
+			exists = no
+		}
+	}
+}

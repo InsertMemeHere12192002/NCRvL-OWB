@@ -1,0 +1,21 @@
+state={
+	id=1418
+	name="STATE_1418"
+	provinces={
+		19862 19863 19872 19883 19884 19893 19900
+	}
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19863 20
+		}
+		victory_points = {
+			19884 15
+		}
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -17,6 +17,7 @@ characters = {
 			expire = "3000.01.01.01"
 			id = -1
 		}
+		
 		country_leader = {
 			desc = CWB_LEADER_DESC
 			ideology = constitutional_republic
@@ -61,6 +62,60 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 2
+		}
+	}
+	CWB_allison_forrest = {
+		name = CWB_ALLISON_FORREST_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Settler_Generic_17
+			}
+		}
+		country_leader = {
+			ideology = constitutional_republic
+			traits = {
+				captain_of_industry
+			}
+			expire = "2280.1.1.12"
+			id = -1
+		}
+	}
+	CWB_ulysses_hindman = {
+		name = CWB_ULYSSES_HINDMAN_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Brotherhood_Generic_2
+				small = GFX_idea_brotherhood_Generic_2
+			}
+			army = {
+				large = GFX_Portrait_Brotherhood_Generic_2
+				small = GFX_idea_brotherhood_Generic_2
+			}
+		}
+		country_leader = {
+			ideology = technocracy
+			traits = {
+				expert_negotiator
+				fortification_engineer
+			}
+			expire = "2295.1.1.12"
+			id = -1
+		}
+	}
+	CWB_augustus_greer = {
+		name = CWB_AUGUSTUS_GREER_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Settler_Generic_1
+			}
+		}
+		country_leader = {
+			ideology = kritocracy
+			traits = {
+				war_industrialist
+			}
+			expire = "2295.1.1.12"
+			id = -1
 		}
 	}
 }

@@ -1,0 +1,1330 @@
+namespace = NVL_Unifier
+country_event = {
+	id = NVL.1
+	title = NVL.1.t
+	desc = NVL.1.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = SHI
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.1.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = SHI
+			has_game_rule = {
+				rule = SHI/EUR/ARR
+			}
+			# SHI annex Eureka and Arroyo
+		}
+		hidden_effect = {
+			SHI = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EUR
+							is_ARR_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = SHI
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.1.b		# SHI annex Eureka and Arroyo and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = SHI
+			has_game_rule = {
+				rule = SHI/EUR
+			}
+		}
+		hidden_effect = {
+			SHI = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EUR
+							is_ARR_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = SHI
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.1.c		# SHI annex Eureka
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = SHI
+			has_game_rule = {
+				rule = SHI/EUR
+			}
+		}
+		hidden_effect = {
+			SHI = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EUR
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = SHI
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.2
+	title = NVL.2.t
+	desc = NVL.2.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = EUR
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.2.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = EUR
+			has_game_rule = {
+				rule = EUR/ARR
+			}
+			# EUR annex Arroyo
+		}
+		hidden_effect = {
+			EUR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_ARR_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = EUR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.2.b		# EUR annex Arroyo and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = EUR
+			has_game_rule = {
+				rule = EUR/ARR/OREGON
+			}
+		}
+		hidden_effect = {
+			SHI = {
+				every_state = {
+					limit = {
+						OR = {
+							is_ARR_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = EUR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.3
+	title = NVL.3.t
+	desc = NVL.3.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = ARR
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.3.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ARR
+			has_game_rule = {
+				rule = ARR/EUR
+			}
+			# ARR annex Eureka
+		}
+		hidden_effect = {
+			ARR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EUR
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = ARR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.3.b		# ARR annex Eureka and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ARR
+			has_game_rule = {
+				rule = ARR/EUR/OREGON
+			}
+		}
+		hidden_effect = {
+			ARR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EUR
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = ARR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.3.c		# ARR annex Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ARR
+			has_game_rule = {
+				rule = ARR/OREGON
+			}
+		}
+		hidden_effect = {
+			ARR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = ARR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.4
+	title = NVL.4.t
+	desc = NVL.4.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = NEW
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.4.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NEW
+			has_game_rule = {
+				rule = NEW/DES
+			}
+			# NEW annex Ranger
+		}
+		hidden_effect = {
+			NEW = {
+				every_state = {
+					limit = {
+						OR = {
+							is_DES_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = NEW
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.4.b		# NEW annex Ranger and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ARR
+			has_game_rule = {
+				rule = NEW/DES/OREGON
+			}
+		}
+		hidden_effect = {
+			NEW = {
+				every_state = {
+					limit = {
+						OR = {
+							is_DES_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = NEW
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.4.c		# NEW annex Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = ARR
+			has_game_rule = {
+				rule = NEW/OREGON
+			}
+		}
+		hidden_effect = {
+			NEW = {
+				every_state = {
+					limit = {
+						OR = {
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = NEW
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.5
+	title = NVL.5.t
+	desc = NVL.5.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = VLT
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.5.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = VLT
+			has_game_rule = {
+				rule = VLT/NEW
+			}
+			#VLT annex NEW
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = VLT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.5.b		# VLT annex NEW and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = VLT
+			has_game_rule = {
+				rule = VLT/NEW/OREGON
+			}
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = VLT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.5.c		# VLT annex Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = VLT
+			has_game_rule = {
+				rule = VLT/OREGON
+			}
+		}
+		hidden_effect = {
+			NEW = {
+				every_state = {
+					limit = {
+						OR = {
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = VLT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.6
+	title = NVL.6.t
+	desc = NVL.6.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = DES
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.6.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = {
+				rule = DES/NEW
+			}
+			#DES annex NEW
+		}
+		hidden_effect = {
+			VLT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.6.b		# DES annex NEW and Oregon
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = {
+				rule = DES/NEW/OREGON
+			}
+		}
+		hidden_effect = {
+			DES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NEW_expansion_target = yes
+							is_OREGON_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.7
+	title = NVL.7.t
+	desc = NVL.7.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = DES
+		tag = NCR
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.7.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = DES
+			has_game_rule = {
+				rule = DES/VEG
+			}
+			#DES annex VEG
+		}
+		hidden_effect = {
+			DES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = VEG
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = DES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.7.b		# NCR annex VEG
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NCR
+			has_game_rule = {
+				rule = NCR/VEG
+			}
+		}
+		hidden_effect = {
+			NCR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = VEG
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = NCR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.8
+	title = NVL.8.t
+	desc = NVL.8.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = NCR
+	}
+	mean_time_to_happen = {
+		days = 10		# should trigger around start of the game
+	}
+	option = {
+		name = NVL.8.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NCR
+			has_game_rule = {
+				rule = NCR/MOT
+			}
+			#NCR annex MOT
+		}
+		hidden_effect = {
+			NCR = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = MOT
+							is_core_of = MOJ
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = NCR
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+####Legion
+country_event = {
+	id = NVL.8
+	title = NVL.8.t
+	desc = NVL.8.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = TWO
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.8.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = TWO
+			has_game_rule = {
+				rule = TWO/GDH
+			}
+			#TWO annex GDH
+		}
+		hidden_effect = {
+			TWO = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = GDH
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = TWO
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.8.b		# TWO annex GDH and Legion Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = TWO
+			has_game_rule = {
+				rule = TWO/GDH/LEGIONEXT
+			}
+		}
+		hidden_effect = {
+			TWO = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = GDH
+							is_legion_expansion_target = yes
+						}
+					}
+					transfer_state_to = TWO
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.9
+	title = NVL.9.t
+	desc = NVL.9.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = GDH
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.9.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = GDH
+			has_game_rule = {
+				rule = GDH/TWO
+			}
+			#GDH annex TWO
+		}
+		hidden_effect = {
+			GDH = {
+				every_state = {
+					limit = {
+						OR = {
+							is_TWO_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = GDH
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.9.b		# GDH annex TWO and Legion Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = GDH
+			has_game_rule = {
+				rule = GDH/TWO/LEGIONEXT
+			}
+		}
+		hidden_effect = {
+			GDH = {
+				every_state = {
+					limit = {
+						OR = {
+							is_TWO_expansion_target = yes
+							is_legion_expansion_target = yes
+						}
+					}
+					transfer_state_to = GDH
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.10
+	title = NVL.10.t
+	desc = NVL.10.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = NAV
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.10.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NAV
+			has_game_rule = {
+				rule = NAV/RES
+			}
+			#NAV annex RES
+		}
+		hidden_effect = {
+			NAV = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = RES
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = RES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.10.b		# NAV annex RES and Lanius Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NAV
+			has_game_rule = {
+				rule = NAV/RES/LANIUS
+			}
+		}
+		hidden_effect = {
+			NAV = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = RES
+							is_lanius_expansion_target = yes
+						}
+					}
+					transfer_state_to = NAV
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.10.c		# NAV annex Lanius Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = NAV
+			has_game_rule = {
+				rule = NAV/LANIUS
+			}
+		}
+		hidden_effect = {
+			NAV = {
+				every_state = {
+					limit = {
+						OR = {
+							is_lanius_expansion_target = yes
+						}
+					}
+					transfer_state_to = NAV
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.11
+	title = NVL.11.t
+	desc = NVL.11.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = RES
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.11.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = RES
+			has_game_rule = {
+				rule = RES/NAV
+			}
+			#RES annex NAV
+		}
+		hidden_effect = {
+			RES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = NAV
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = RES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.11.b		# RES annex NAV and Lanius Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = RES
+			has_game_rule = {
+				rule = RES/NAV/LANIUS
+			}
+		}
+		hidden_effect = {
+			RES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = NAV
+							is_lanius_expansion_target = yes
+						}
+					}
+					transfer_state_to = RES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.11.c		# RES annex Lanius Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = RES
+			has_game_rule = {
+				rule = RES/LANIUS
+			}
+		}
+		hidden_effect = {
+			RES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_lanius_expansion_target = yes
+						}
+					}
+					transfer_state_to = RES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.12
+	title = NVL.12.t
+	desc = NVL.12.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = WHT
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.12.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = WHT
+			has_game_rule = {
+				rule = WHT/EHT
+			}
+			#WHT annex EHT
+		}
+		hidden_effect = {
+			WHT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EHT
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = WHT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.12.b		# WHT annex EHT and Colorodo
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = WHT
+			has_game_rule = {
+				rule = WHT/EHT/COLORADO
+			}
+		}
+		hidden_effect = {
+			WHT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = EHT
+							is_Colorado_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = WHT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.13
+	title = NVL.13.t
+	desc = NVL.13.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = EHT
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.13.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = EHT
+			has_game_rule = {
+				rule = EHT/WHT
+			}
+			#EHT annex WHT
+		}
+		hidden_effect = {
+			EHT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = WHT
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = EHT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.13.b		# WHT annex EHT and Colorodo
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = EHT
+			has_game_rule = {
+				rule = EHT/WHT/COLORADO
+			}
+		}
+		hidden_effect = {
+			EHT = {
+				every_state = {
+					limit = {
+						OR = {
+							is_core_of = WHT
+							is_Colorado_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = EHT
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.14
+	title = NVL.14.t
+	desc = NVL.14.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = IRN
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.14.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = IRN
+			has_game_rule = {
+				rule = IRN/UTAH
+			}
+			#IRN annex UTAH
+		}
+		hidden_effect = {
+			IRN = {
+				every_state = {
+					limit = {
+						OR = {
+							is_UTAH_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = IRN
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.14.b		# IRN annex Lanius Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = IRN
+			has_game_rule = {
+				rule = IRN/LANIUS
+			}
+		}
+		hidden_effect = {
+			IRN = {
+				every_state = {
+					limit = {
+						OR = {
+							is_lanius_expansion_target = yes
+						}
+						##we don't check if it's belong to a player cause it's might belong to Cesar
+					}
+					transfer_state_to = IRN
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.14.c		# IRN annex Lanius and Utah Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = IRN
+			has_game_rule = {
+				rule = IRN/LANIUS/UTAH
+			}
+		}
+		hidden_effect = {
+			IRN = {
+				every_state = {
+					limit = {
+						OR = {
+							is_lanius_expansion_target = yes
+							is_UTAH_expansion_target = yes
+						}
+						##same a previous Lanius might belong to Cesar
+					}
+					transfer_state_to = IRN
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = NVL.15
+	title = NVL.15.t
+	desc = NVL.15.d
+	picture = GFX_report_event_generic
+	is_triggered_only = yes
+	trigger = {
+		tag = CES
+	}
+	mean_time_to_happen = {
+		days = 1247		# should trigger around June 2778
+	}
+	option = {
+		name = NVL.15.a
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = CES
+			has_game_rule = {
+				rule = CES/TEXAS #CES annex TEXAS
+			}
+			
+		}
+		hidden_effect = {
+			CES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_texas_expansion_target = yes
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = CES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.15.b		# CES annex south Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = CES
+			has_game_rule = {
+				rule = CES/TWO/GDH
+			}
+		}
+		hidden_effect = {
+			CES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_TWO_expansion_target = yes
+							is_core_of = GDH
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = CES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+	option = {
+		name = NVL.15.c		# CES annex north Expansion target
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			tag = CES
+			has_game_rule = {
+				rule = CES/NAV/RES
+			}
+		}
+		hidden_effect = {
+			CES = {
+				every_state = {
+					limit = {
+						OR = {
+							is_NAV_expansion_target = yes
+							is_core_of = RES
+						}
+						NOT = {
+							is_player_or_future_owner = yes
+						}
+					}
+					transfer_state_to = CES
+					add_compliance = 0.6
+				}
+			}
+		}
+	}
+}

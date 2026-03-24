@@ -58,39 +58,6 @@ set_technology = {
 	military_heritage_unlock_tech = 1
 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_weapons_module_tech = 1
-		naval_pd_module_tech_1 = 1
-		naval_hard_point_tech = 1
-		naval_armour_tech_1 = 1
-		naval_support_module_tech = 1
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-		naval_module_tech = 1
-	}
-}
-
 set_stability = 0.35
 set_war_support = 0.4
 set_research_slots = 5
@@ -154,6 +121,7 @@ add_equipment_to_stockpile = {
 	amount = 25
 }
 
+add_manpower = 400
 create_equipment_variant = {
 	name = "River Boat"
 	type = ship_hull_light_1

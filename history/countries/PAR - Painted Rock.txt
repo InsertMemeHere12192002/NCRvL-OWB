@@ -68,16 +68,6 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
 set_stability = 0.3
 set_war_support = 0.5
@@ -112,8 +102,8 @@ add_ideas = {
 
 
 recruit_character = PAR_dyed_blood
-recruit_character = PAR_the_rock
-recruit_character = PAR_the_wok
+# recruit_character = PAR_the_rock
+# recruit_character = PAR_the_wok no clue what they supposed to do and they exist only there
 
 random_character = {
 	limit = {

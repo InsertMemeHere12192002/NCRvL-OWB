@@ -69,22 +69,8 @@ if = {
 		naval_communications_module_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		medium_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-		multi_deck_construction_tech_non_mtg = 1
-		heavy_navy_hull_tech_non_mtg_1 = 1
-	}
-}
 
-set_stability = 0.4
+set_stability = 0.35
 set_war_support = 0.35
 set_research_slots = 4
 set_convoys = 50
@@ -149,7 +135,7 @@ recruit_character = GDH_gubernia_izquierda
 create_equipment_variant = {
 	name = "River Boat"
 	type = ship_hull_light_1
-	name_group = RRG_LIGHT
+	name_group = GDH_LIGHT
 	parent_version = 0
 	modules = {
 		fixed_ship_command_slot = ship_command_module_1
@@ -168,7 +154,7 @@ create_equipment_variant = {
 create_equipment_variant = {
 	name = "Destroyer"
 	type = ship_hull_medium_1
-	name_group = RRG_MEDIUM
+	name_group = GDH_MEDIUM
 	parent_version = 0
 	modules = {
 		fixed_ship_command_slot = ship_command_module_1
@@ -189,7 +175,7 @@ create_equipment_variant = {
 create_equipment_variant = {
 	name = "Heavy Ship"
 	type = ship_hull_heavy_1
-	name_group = RRG_HEAVY
+	name_group = GDH_HEAVY
 	parent_version = 0
 	modules = {
 		fixed_ship_command_slot = ship_command_module_1

@@ -595,7 +595,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		completion_reward = {
-			random_core_state = {
+			random_owned_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = industrial_complex
@@ -621,7 +621,7 @@ focus_tree = {
 			hidden_effect = {
 				country_event = nf_nevada_stockpiles.2
 			}
-			random_core_state = {
+			random_owned_state = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = arms_factory
@@ -827,7 +827,7 @@ focus_tree = {
 		x = -3
 		y = 1
 		completion_reward = {
-			random_core_state = {
+			random_owned_state = {
 				add_extra_state_shared_building_slots = 3
 				set_temp_variable = { pop_add = 1000 }
 				add_state_population = yes
@@ -1196,7 +1196,7 @@ focus_tree = {
 		x = 5
 		y = 1
 		completion_reward = {
-			random_core_state = {
+			random_owned_state = {
 				add_resource = {
 					type = metal
 					amount = 12
@@ -2124,7 +2124,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = NEVADA_RANGERS
-			create_or_join_new_california = yes
+			ask_to_join_new_california = yes
 			hidden_effect = {
 				add_ideas = {
 					ncr_sphere
@@ -2492,14 +2492,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_state_core = 171
-			add_state_core = 160
+			add_state_core = 475
 			add_state_core = 327
 			hidden_effect = { #Clearing the cores is more performant healthy here
 				every_owned_state = {
 					limit = {
 						OR = {
 							state = 171
-							state = 160
+							state = 475
 							state = 327
 						}
 					}
@@ -4256,12 +4256,12 @@ focus_tree = {
 		x = 1
 		y = 1
 		available = {
-			327 = {
+			947 = {
 				is_fully_controlled_by = ROOT
 			}
 		}
 		completion_reward = {
-			327 = {
+			947 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = industrial_complex
@@ -4351,12 +4351,12 @@ focus_tree = {
 		x = -1
 		y = 1
 		available = {
-			160 = {
+			475 = {
 				is_fully_controlled_by = ROOT
 			}
 		}
 		completion_reward = {
-			160 = {
+			475 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = arms_factory
@@ -4911,9 +4911,9 @@ focus_tree = {
 				uses = 2
 				category = naval_tech_category
 			}
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = tof_coast_of_the_salt_lake
-				bonus = 0.5
+				cost_reduction = 0.5
 				uses = 2
 				category = cat_naval_doctrine
 			}
@@ -5314,7 +5314,7 @@ focus_tree = {
 	}
 	focus = {
 		id = tof_uprooting_resistance_cells
-		icon = GFX_goal_NCN_.45_Auto_Pistol
+		icon = GFX_goal_NCN_45_Auto_Pistol
 		cost = 30
 		available = {
 			has_full_control_of_state = 213

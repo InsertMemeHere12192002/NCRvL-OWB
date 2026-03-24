@@ -1283,7 +1283,7 @@ country_event = {
 			#	keep_unit_leaders_trigger = { always = yes }
 			#}
 			add_field_marshal_role = {
-				character = UOA_lieutenant_crusher
+				character = SHA_lieutenant_crusher
 				traits = {
 					warchief_trait
 					strong_trait
@@ -1297,7 +1297,6 @@ country_event = {
 				logistics_skill = 2
 			}
 			UOA = {
-				recruit_character = UOA_keats
 				create_new_owb_country = yes
 				924 = {
 					transfer_state_to = UOA

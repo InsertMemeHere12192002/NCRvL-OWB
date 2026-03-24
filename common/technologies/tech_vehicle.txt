@@ -1915,7 +1915,7 @@ technologies = {
 			chariot_equipment_1
 		}
 		enable_subunits = {
-			chariot_unit
+			chariot
 		}
 
 		dependencies = {
@@ -1971,24 +1971,24 @@ technologies = {
 			}
 		}
 	}
-	railway_gun = {
-		enable_equipments = {
-			railway_gun_equipment_1
-		}
-		start_year = 2275
-		folder = {
-			name = fallout_vehicle_folder
-			position = { x = 4 y = 3 }
-		}
-		dependencies = {
-			blocked_tech = 1
-		}
-		categories = {
-			vehicle_tech_category
-		}
+	# railway_gun = {
+	# 	enable_equipments = {
+	# 		railway_gun_equipment_1
+	# 	}
+	# 	start_year = 2275
+	# 	folder = {
+	# 		name = fallout_vehicle_folder
+	# 		position = { x = 4 y = 3 }
+	# 	}
+	# 	dependencies = {
+	# 		blocked_tech = 1
+	# 	}
+	# 	categories = {
+	# 		vehicle_tech_category
+	# 	}
 
-		ai_will_do = {
-			factor = 0
-		}
-	}
+	# 	ai_will_do = {
+	# 		factor = 0
+	# 	}
+	# }
 }

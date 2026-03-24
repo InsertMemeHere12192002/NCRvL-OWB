@@ -33,6 +33,7 @@ technologies = {
 	@Row_rec = 20
 	@Row_log = 22
 	@Row_mai = 24
+	@Row_railway_gun = 26
 
 	support_weaponry = {
 		enable_equipments = {
@@ -4534,6 +4535,211 @@ technologies = {
 			modifier = {
 				factor = 5
 				date > "2285.1.1"
+			}
+		}
+	}
+	railway_gun_unlock_tech = {
+		enable_equipments = {
+			railway_gun_equipment_1
+		}
+
+		allow_branch = {
+			has_dlc = "No Step Back"
+		}
+
+		path = {
+			leads_to_tech = railway_gun_tech_2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			support_tech_level_tribal = 1
+		}
+
+		research_cost = 3
+		start_year = 2276
+		folder = {
+			name = fallout_support_folder
+			position = { x = @Row_railway_gun y = @Col_2 }
+		}
+
+		categories = {
+			support_tech_category
+			support_combat_tech_category
+			support_railway_gun_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 2
+				date > "2277.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2278.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2279.1.1"
+			}
+		}
+	}
+
+	railway_gun_tech_2 = {
+
+		enable_equipments = {
+			railway_gun_equipment_2
+		}
+
+		path = {
+			leads_to_tech = railway_gun_tech_3
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			support_tech_level_settler = 1
+		}
+
+		research_cost = 3
+		start_year = 2279
+		folder = {
+			name = fallout_support_folder
+			position = { x = @Row_railway_gun y = @Col_4 }
+		}
+
+		categories = {
+			support_tech_category
+			support_combat_tech_category
+			support_railway_gun_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				# is_major = yes
+				NOT = {
+					has_country_flag = robot_doctrine_ai
+					has_country_flag = super_mutant_doctrine_ai
+				}
+			}
+			modifier = {
+				factor = 5
+				num_of_military_factories > 100
+			}
+			modifier = {
+				factor = 2
+				date > "2280.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2281.1.1"
+			}
+			modifier = {
+				factor = 2
+				date > "2282.1.1"
+			}
+		}
+	}
+
+	railway_gun_tech_3 = {
+
+		enable_equipments = {
+			railway_gun_equipment_3
+		}
+
+		dependencies = {
+			support_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = railway_gun_tech_4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 3
+		start_year = 2281
+		folder = {
+			name = fallout_support_folder
+			position = { x = @Row_railway_gun y = @Col_6 }
+		}
+
+		categories = {
+			support_tech_category
+			support_combat_tech_category
+			support_railway_gun_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				date > "2281.1.1"
+			}
+			modifier = {
+				factor = 3
+				date > "2282.1.1"
+			}
+			modifier = {
+				factor = 3
+				date > "2283.1.1"
+			}
+			modifier = {
+				factor = 5
+				num_of_military_factories > 100
+			}
+		}
+	}
+
+	railway_gun_tech_4 = {
+
+		enable_equipments = {
+			railway_gun_equipment_4
+		}
+
+		dependencies = {
+			support_tech_level_scientific = 1
+		}
+
+		research_cost = 4
+		start_year = 2284
+		folder = {
+			name = fallout_support_folder
+			position = { x = @Row_railway_gun y = @Col_7 }
+		}
+
+		categories = {
+			support_tech_category
+			support_combat_tech_category
+			support_railway_gun_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				date > "2284.1.1"
+			}
+			modifier = {
+				factor = 3
+				date > "2285.1.1"
+			}
+			modifier = {
+				factor = 3
+				date > "2286.1.1"
+			}
+			modifier = {
+				factor = 5
+				num_of_military_factories > 100
 			}
 		}
 	}

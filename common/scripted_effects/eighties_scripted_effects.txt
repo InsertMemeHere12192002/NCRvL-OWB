@@ -1,0 +1,1406 @@
+
+# Seems to be a deprecated unfinished scripted effect? Archived for safety @Tran
+# thunderbird_breaks_off = {
+# 	THN = {
+#		# This seems to be accidentally included because the effect was copied from lucius breaking off from the Legion @Tran
+#		#
+# 		# country_event = nf_legion.92
+# 	}
+# 	THN = {
+# 		load_focus_tree = { tree = eht_nf keep_completed = yes }
+# 	}
+# 	THN = {
+# 		# setup_eighties_revolter = yes
+# 	}
+# 	if = {
+# 		limit = {
+# 			controls_state = 219
+# 		}
+# 		THN = {
+# 			transfer_state = 219
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			controls_state = 183
+# 		}
+# 		THN = {
+# 			transfer_state = 183
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			controls_state = 328
+# 		}
+# 		THN = {
+# 			transfer_state = 328
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			controls_state = 462
+# 		}
+# 		THN = {
+# 			transfer_state = 462
+# 		}
+# 	}
+# 	if = {
+# 		limit = {
+# 			controls_state = 485
+# 		}
+# 		THN = {
+# 			transfer_state = 485
+# 		}
+# 	}
+# }
+
+# Handles the state manipulation necessary for the spawning of Thunderbirds. Called within the main scripted effect at the bottom of this file
+transfer_eighties_states = {
+	EHT = {
+		# Prevent any exodus before we begin the state transfers
+		every_owned_state = {
+			set_state_flag = do_not_exodus
+		}
+
+		# Transfer the designated states to Thunderbirds
+		if = {
+			limit = {
+				controls_state = 530
+			}
+			THN = {
+				transfer_state = 530
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 131
+			}
+			THN = {
+				transfer_state = 131
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 170
+			}
+			THN = {
+				transfer_state = 170
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 413
+			}
+			THN = {
+				transfer_state = 413
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 341
+			}
+			THN = {
+				transfer_state = 341
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 513
+			}
+			THN = {
+				transfer_state = 513
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 478
+			}
+			THN = {
+				transfer_state = 478
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 512
+			}
+			THN = {
+				transfer_state = 512
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 567
+			}
+			THN = {
+				transfer_state = 567
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 263
+			}
+			THN = {
+				transfer_state = 263
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 375
+			}
+			THN = {
+				transfer_state = 375
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 406
+			}
+			THN = {
+				transfer_state = 406
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 73
+			}
+			THN = {
+				transfer_state = 73
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 367
+			}
+			THN = {
+				transfer_state = 367
+			}
+		}
+
+		# Transfer any owned states from these nations to Thunderbirds
+		every_owned_state = {
+			limit = {
+				OR = {
+					is_core_of = PAL
+					is_core_of = CYC
+					is_core_of = SLN
+					is_core_of = VLT
+					is_core_of = SLA
+					is_core_of = JAC
+					is_core_of = VIP
+					is_core_of = CYC
+					is_core_of = YKZ
+					is_core_of = MOD
+					is_core_of = TDN
+					is_core_of = KLA
+					is_core_of = NEW
+				}
+			}
+			THN = {
+				transfer_state = PREV
+			}
+		}
+	}
+
+	# Remove the do not exodus flag
+	every_state = {
+		limit = {
+			OR = {
+				is_owned_by = THN
+				is_owned_by = EHT
+			}
+		}
+		clr_state_flag = do_not_exodus
+	}
+
+	# Remove any claims or cores from Eighties on states now belonging to Thunderbirds
+	THN = {
+		every_owned_state = {
+			if = {
+				limit = {
+					is_core_of = EHT
+				}
+				add_core_of = THN
+				remove_core_of = EHT
+			}
+			if = {
+				limit = {
+					is_claimed_by = EHT
+				}
+				add_claim_by = THN
+				remove_claim_by = EHT
+			}
+		}
+	}
+
+	# Remove any claims or cores from Thunderbirds on states still belonging to Eighties (normally there won't be any but we need to ensure it to be safe)
+	EHT = {
+		every_owned_state = {
+			remove_core_of = THN
+			remove_claim_by = THN
+		}
+	}
+
+	# Set up the Thunderbirds capital and change the Eighties capital
+	THN = { set_capital = { state = 478 } }
+	478 = {
+		set_state_name = STATE_478_THN
+		hidden_effect = {
+			set_province_name = { id = 3358 name = VICTORY_POINTS_3358_THN }
+		}
+	}
+	EHT = {
+		set_capital = { state = 40 }
+	}
+}
+
+# Copies over Eighties's ideas to Thunderbirds. Called within the main scripted effect at the bottom of this file
+transfer_eighties_ideas = {
+	# Transfer over the generic laws
+	EHT = {
+		THN = {
+			transfer_generic_economic_law_from_prev = yes
+			transfer_generic_press_law_from_prev = yes
+			transfer_generic_trading_law_from_prev = yes
+			transfer_generic_centralization_law_from_prev = yes
+			transfer_generic_manpower_law_from_prev = yes
+			transfer_generic_outsider_law_from_prev = yes
+			transfer_generic_undesirable_law_from_prev = yes
+			transfer_generic_mutant_law_from_prev = yes
+			transfer_generic_officer_law_from_prev = yes
+			transfer_generic_training_law_from_prev = yes
+			transfer_generic_vehicle_designer_law_from_prev = yes
+			transfer_generic_navy_designer_law_from_prev = yes
+			transfer_generic_aircraft_designer_law_from_prev = yes
+		}
+	}
+
+	# Transfer over the Eighties ideas
+	if = {
+		limit = {
+			EHT = {
+				has_idea = roaring_machines
+			}
+		}
+		add_ideas = roaring_machines
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_nomadic_centralization_idea
+			}
+		}
+		add_ideas = EHT_nomadic_centralization_idea
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_nomadic
+			}
+		}
+		add_ideas = EHT_nomadic
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_nomadic2
+			}
+		}
+		add_ideas = EHT_nomadic2
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = faith_great_eighty_idea
+			}
+		}
+		add_ideas = faith_great_eighty_idea
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_great_convoy
+			}
+		}
+		add_ideas = EHT_great_convoy
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_great_convoy_better
+			}
+		}
+		add_ideas = EHT_great_convoy_better
+	}
+
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_area_51_garages
+			}
+		}
+		add_ideas = EHT_area_51_garages
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_gas_station
+			}
+		}
+		add_ideas = EHT_gas_station
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_glory_road_idea
+			}
+		}
+		add_ideas = EHT_glory_road_idea
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_skilled_cunning_craftsmen
+			}
+		}
+		add_ideas = EHT_skilled_cunning_craftsmen
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_thunderbird_dissent
+			}
+		}
+		add_ideas = EHT_thunderbird_dissent
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_ghost_warriors
+			}
+		}
+		add_ideas = EHT_ghost_warriors
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_hate_NCN
+			}
+		}
+		add_ideas = EHT_hate_NCN
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_hate_WHT
+			}
+		}
+		add_ideas = EHT_hate_WHT
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_hate_all
+			}
+		}
+		add_ideas = EHT_hate_all
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_sedentary
+			}
+		}
+		add_ideas = EHT_sedentary
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_sedentary2
+			}
+		}
+		add_ideas = EHT_sedentary2
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_zoom
+			}
+		}
+		add_ideas = EHT_zoom
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_spiritual
+			}
+		}
+		add_ideas = EHT_spiritual
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_sedentary2
+			}
+		}
+		add_ideas = EHT_sedentary2
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_warlord
+			}
+		}
+		add_ideas = EHT_warlord
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_terror_of_long_80
+			}
+		}
+		add_ideas = EHT_idea_terror_of_long_80
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_terror_of_long_801
+			}
+		}
+		add_ideas = EHT_idea_terror_of_long_801
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_terror_of_long_802
+			}
+		}
+		add_ideas = EHT_idea_terror_of_long_802
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_equipment_bonus
+			}
+		}
+		add_ideas = EHT_equipment_bonus
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_motorized_vehicle_bonus
+			}
+		}
+		add_ideas = EHT_motorized_vehicle_bonus
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_explosives_bonus
+			}
+		}
+		add_ideas = EHT_explosives_bonus
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_terror_of_long_803
+			}
+		}
+		add_ideas = EHT_idea_terror_of_long_803
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_eyes_along_roads_idea
+			}
+		}
+		add_ideas = EHT_eyes_along_roads_idea
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_nomadic_flexibillity
+			}
+		}
+		add_ideas = EHT_idea_nomadic_flexibillity
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_stable_production
+			}
+		}
+		add_ideas = EHT_idea_stable_production
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_idea_old_world_arteries
+			}
+		}
+		add_ideas = EHT_idea_old_world_arteries
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_liberation
+			}
+		}
+		add_ideas = EHT_liberation
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_the_devils_of_utah
+			}
+		}
+		add_ideas = EHT_the_devils_of_utah
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_the_sacred_garage
+			}
+		}
+		add_ideas = EHT_the_sacred_garage
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_steam_cores
+			}
+		}
+		add_ideas = EHT_steam_cores
+	}
+	### TODO
+	# if = {
+	# 	limit = {
+	# 		EHT = {
+	# 			has_idea = HEA_idea_blessing_of_steam
+	# 		}
+	# 	}
+	# 	add_ideas = HEA_idea_blessing_of_steam
+	# }
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_the_sacred_garage
+			}
+		}
+		add_ideas = EHT_the_sacred_garage
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_steam_cores
+			}
+		}
+		add_ideas = EHT_steam_cores
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_idea = EHT_the_sacred_garage2
+			}
+		}
+		add_ideas = EHT_the_sacred_garage2
+	}
+}
+
+# Unlocks any of the focuses Eighties took for Thunderbirds. Called within the main scripted effect at the bottom of this file
+setup_thunderbird_tree = {
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_nevada_road_war
+			}
+		}
+		unlock_national_focus = EHT_focus_nevada_road_war
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_utah_road_war
+			}
+		}
+		unlock_national_focus = EHT_focus_utah_road_war
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_thunderbird
+			}
+		}
+		unlock_national_focus = EHT_focus_thunderbird
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_the_oasis
+			}
+		}
+		unlock_national_focus = EHT_focus_the_oasis
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_thunderbird
+			}
+		}
+		unlock_national_focus = EHT_focus_thunderbird
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_ruby
+			}
+		}
+		unlock_national_focus = EHT_ruby
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_sedentary
+			}
+		}
+		unlock_national_focus = EHT_focus_sedentary
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_wendover_encampment
+			}
+		}
+		unlock_national_focus = EHT_focus_wendover_encampment
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_wendover_exchange
+			}
+		}
+		unlock_national_focus = EHT_focus_wendover_exchange
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_stable_production
+			}
+		}
+		unlock_national_focus = EHT_focus_stable_production
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_wendover_armoury
+			}
+		}
+		unlock_national_focus = EHT_focus_wendover_armoury
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_nomadic_centralization
+			}
+		}
+		unlock_national_focus = EHT_focus_nomadic_centralization
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_park_our_cars
+			}
+		}
+		unlock_national_focus = EHT_focus_park_our_cars
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_hit_the_gas
+			}
+		}
+		unlock_national_focus = EHT_hit_the_gas
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_wendover_battlements
+			}
+		}
+		unlock_national_focus = EHT_focus_wendover_battlements
+	}
+	# if = {
+	# 	limit = {
+	# 		EHT = {
+	# 			has_completed_focus = EHT_focus_wendover_outriders
+	# 		}
+	# 	}
+	# 	unlock_national_focus = EHT_focus_wendover_outriders
+	# }
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_windover_gas_station
+			}
+		}
+		unlock_national_focus = EHT_windover_gas_station
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_breathe_of_elders
+			}
+		}
+		unlock_national_focus = EHT_focus_breathe_of_elders
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_people_of_the_wind
+			}
+		}
+		unlock_national_focus = EHT_focus_people_of_the_wind
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_city_of_banners
+			}
+		}
+		unlock_national_focus = EHT_focus_city_of_banners
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_wisdom_of_the_new_generation
+			}
+		}
+		unlock_national_focus = EHT_focus_wisdom_of_the_new_generation
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_nomadic
+			}
+		}
+		unlock_national_focus = EHT_focus_nomadic
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_nomadic
+			}
+		}
+		unlock_national_focus = EHT_focus_nomadic
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_well_travelled_roads
+			}
+		}
+		unlock_national_focus = EHT_focus_well_travelled_roads
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_nomadic_flexibillity
+			}
+		}
+		unlock_national_focus = EHT_focus_nomadic_flexibillity
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_camp_craftsmen
+			}
+		}
+		unlock_national_focus = EHT_focus_camp_craftsmen
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_old_world_arteries
+			}
+		}
+		unlock_national_focus = EHT_focus_old_world_arteries
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_assimilation
+			}
+		}
+		unlock_national_focus = EHT_focus_assimilation
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_camp_weaponsmiths
+			}
+		}
+		unlock_national_focus = EHT_focus_camp_weaponsmiths
+	}
+	# if = {
+	# 	limit = {
+	# 		EHT = {
+	# 			has_completed_focus = EHT_thunderbird_smiths
+	# 		}
+	# 	}
+	# 	unlock_national_focus = EHT_thunderbird_smiths
+	# }
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_ghost_warriors
+			}
+		}
+		unlock_national_focus = EHT_focus_ghost_warriors
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_glory_road
+			}
+		}
+		unlock_national_focus = EHT_glory_road
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_BE_LAME
+			}
+		}
+		unlock_national_focus = EHT_BE_LAME
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_ready_to_return
+			}
+		}
+		unlock_national_focus = EHT_focus_ready_to_return
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_wisdom_of_the_new_generation
+			}
+		}
+		unlock_national_focus = EHT_focus_wisdom_of_the_new_generation
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_long_road_home
+			}
+		}
+		unlock_national_focus = EHT_long_road_home
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_our_parking_lot
+			}
+		}
+		unlock_national_focus = EHT_our_parking_lot
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_war_for_mountains
+			}
+		}
+		unlock_national_focus = EHT_focus_war_for_mountains
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_way_road_warrior
+			}
+		}
+		unlock_national_focus = EHT_way_road_warrior
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_lord_long_road
+			}
+		}
+		unlock_national_focus = EHT_lord_long_road
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_build_more_roads
+			}
+		}
+		unlock_national_focus = EHT_build_more_roads
+	}
+	# if = {
+	# 	limit = {
+	# 		EHT = {
+	# 			has_completed_focus = EHT_ripe_for_taking
+	# 		}
+	# 	}
+	# 	unlock_national_focus = EHT_ripe_for_taking
+	# }
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_ruby_promotion
+			}
+		}
+		unlock_national_focus = EHT_focus_ruby_promotion
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_grab_destiny
+			}
+		}
+		unlock_national_focus = EHT_focus_grab_destiny
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_grab_luggage
+			}
+		}
+		unlock_national_focus = EHT_grab_luggage
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_retaking_the_road
+			}
+		}
+		unlock_national_focus = EHT_retaking_the_road
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_swing_north
+			}
+		}
+		unlock_national_focus = EHT_swing_north
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_northport_promotion
+			}
+		}
+		unlock_national_focus = EHT_focus_northport_promotion
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_swing_east
+			}
+		}
+		unlock_national_focus = EHT_swing_east
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_focus_eastport_promotion
+			}
+		}
+		unlock_national_focus = EHT_focus_eastport_promotion
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_wisdom_next_generation
+			}
+		}
+		unlock_national_focus = EHT_wisdom_next_generation
+	}
+	# if = {
+	# 	limit = {
+	# 		EHT = {
+	# 			has_completed_focus = EHT_second_nevada_road_war
+	# 		}
+	# 	}
+	# 	unlock_national_focus = EHT_second_nevada_road_war
+	# }
+	if = {
+		limit = {
+			EHT = {
+				has_completed_focus = EHT_scientific_vehicles
+			}
+		}
+		unlock_national_focus = EHT_scientific_vehicles
+	}
+}
+
+# Handles effects related to specific focuses or events Eighties may have taken or encountered. Called within the main scripted effect at the bottom of this file
+setup_thunderbirds_special_effects = {
+	if = {
+		limit = {
+			# Checks if Thunderbirds didn't get at least 50% of the stockpile as a whole
+			# Variable thunderbird_stockpile_fraction is received from the scripted effect below, where this scripted effect is called
+			check_variable = { thunderbird_stockpile_fraction < 0.5 }
+		}
+		# Set the numbers up for Thunderbirds to receive a total number of plasma equipment equivalent to 50% (so 50% minus whatever percent they got already)
+		set_temp_variable = { owed_thunderbird_stockpile = 0.5 }
+		subtract_from_temp_variable = { owed_thunderbird_stockpile = thunderbird_stockpile_fraction }
+		multiply_temp_variable = { owed_thunderbird_stockpile = 400 }
+		round_temp_variable = owed_thunderbird_stockpile
+		if = {
+			limit = {
+				EHT = {
+					has_country_flag = EHT_plasma_guns
+					has_equipment = {
+						plasma_equipment_1 > owed_thunderbird_stockpile
+					}
+				}
+			}
+			EHT = {
+				send_equipment = {
+					equipment = plasma_equipment_1
+					amount = owed_thunderbird_stockpile
+					target = THN
+				}
+			}
+		}
+		# Set the numbers up for Thunderbirds to receive a total number of tank equipment equivalent to 50% (so 50% minus whatever percent they got already)
+		set_temp_variable = { owed_thunderbird_stockpile = 0.5 }
+		subtract_from_temp_variable = { owed_thunderbird_stockpile = thunderbird_stockpile_fraction }
+		multiply_temp_variable = { owed_thunderbird_stockpile = 20 }
+		round_temp_variable = owed_thunderbird_stockpile
+		if = {
+			limit = {
+				EHT = {
+					has_country_flag = EHT_stolen_vehicles
+					has_equipment = {
+						tank_equipment_3 > owed_thunderbird_stockpile
+					}
+				}
+			}
+			EHT = {
+				send_equipment = {
+					equipment = tank_equipment_3
+					amount = owed_thunderbird_stockpile
+					target = THN
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_country_flag = EHT_steam_cores
+			}
+		}
+		THN = {
+			add_ideas = EHT_steam_cores
+		}
+		EHT = {
+			remove_ideas = EHT_steam_cores
+		}
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_country_flag = EHT_raygun
+			}
+		}
+		THN = {
+			add_ideas = eighties_raygun
+		}
+		EHT = {
+			remove_ideas = eighties_raygun
+		}
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_country_flag = EHT_thunderbird_smiths
+			}
+		}
+		THN = {
+			add_offsite_building = { type = arms_factory level = 4 }
+		}
+	}
+	if = {
+		limit = {
+			EHT = {
+				has_country_flag = EHT_wendover_outriders
+			}
+		}
+		THN = {
+			load_oob = EHT_wendover_outriders
+		}
+	}
+}
+
+# For all the advisor pairs from events, Thunderbirds gets to take the other half to help give him have some custom advisors on switch
+transfer_eighties_other_advisors = {
+	EHT = {
+		if = {
+			limit = { has_country_flag = EHT_defend_our_turf }
+			random_character = {
+				limit = {
+					is_character = EHT_MAJOR_KALASHNIKOV
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_speed_key_to_victory
+				activate_advisor = EHT_major_kalishnakov_army_chief
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = EHT_speed_key_to_victory }
+			random_character = {
+				limit = {
+					is_character = EHT_FURIOSA
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_defend_our_turf
+				activate_advisor = EHT_furiosa_army_chief
+			}
+		}
+		if = {
+			limit = { has_country_flag = EHT_big_bear_flag }
+			random_character = {
+				limit = {
+					is_character = EHT_DAVISON
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_davison_flag
+				activate_advisor = EHT_davison_high_command
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = EHT_davison_flag }
+			random_character = {
+				limit = {
+					is_character = EHT_BIG_BEAR
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_big_bear_flag
+				activate_advisor = EHT_big_bear_high_command
+			}
+		}
+		if = {
+			limit = { has_country_flag = EHT_windwaker_flag }
+			random_character = {
+				limit = {
+					is_character = EHT_STONEFOOT
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_stonefoot_flag
+				activate_advisor = EHT_stonefoot_economic_advisor
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = EHT_stonefoot_flag }
+			random_character = {
+				limit = {
+					is_character = EHT_WINDWAKER
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_windwaker_flag
+				activate_advisor = EHT_windwaker_economic_advisor
+			}
+		}
+		if = {
+			limit = { has_country_flag = EHT_soldiers_grabbers }
+			random_character = {
+				limit = {
+					is_character = EHT_ADMINISTRATOR_BREEN
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_civilians_grabbers
+				activate_advisor = EHT_administrator_breen_economic_advisor
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = EHT_civilians_grabbers }
+			random_character = {
+				limit = {
+					is_character = EHT_QUEEN_OF_QUINN
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_soldiers_grabbers
+				activate_advisor = EHT_queen_of_quinn_economic_advisor
+			}
+		}
+		if = {
+			limit = { has_country_flag = EHT_little_bear_flag }
+			random_character = {
+				limit = {
+					is_character = EHT_MECHA_NICK
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_mecha_nick_flag
+				activate_advisor = EHT_mecha_nick_cultural_advisor
+			}
+		}
+		else_if = {
+			limit = { has_country_flag = EHT_mecha_nick_flag }
+			random_character = {
+				limit = {
+					is_character = EHT_LITTLE_BEAR
+				}
+				set_nationality = THN
+			}
+			THN = {
+				set_country_flag = EHT_little_bear_flag
+				activate_advisor = EHT_little_bear_cultural_advisor
+			}
+		}
+	}
+}
+
+# Called only by the event initiating the transfer. Kept here to standardize any future changes so they apply to both event options (one swaps the player to THN, other doesn't)
+spawn_thunderbirds_event_effect = {
+	hidden_effect = {
+		# Transfers Thunderbirds's designated states to them
+		transfer_eighties_states = yes
+
+		THN = {
+			create_new_owb_country = yes
+
+			# Thunderbirds load the focus tree from Eighties and complete their focus
+			load_focus_tree = { tree = eht_nf keep_completed = yes }
+			setup_thunderbird_tree = yes
+			complete_national_focus = EHT_second_nevada_road_war
+
+			# Thunderbirds get copies of all the standard ideas (some specific ones handled separately) from Eighties and the same government laws as them
+			transfer_eighties_ideas = yes
+
+			# Thunderbirds inherit the technologies that Eighties have
+			inherit_technology = EHT
+
+			# Set up politics, country flags and the cosmetic tag for Thunderbirds
+			set_country_flag = is_raider_nation
+			set_country_flag = is_utah_nation
+			set_country_flag = grand_doctrine_ai
+			set_country_flag = grand_motorized_doctrine_ai
+			set_cosmetic_tag = EHT_THN
+			set_country_flag = EHT_thunderbird_lord
+			set_politics = {
+				ruling_party = ruler
+			}
+			set_popularities = {
+				ruler = 70
+				people = 15
+				elites = 10
+				intellectuals = 5
+			}
+			set_party_name = {
+				ideology = ruler
+				long_name = EHT_fury_road_long
+				name = EHT_fury_road_short
+			}
+
+			# Transfer the Thunderbird character to THN
+			every_possible_country = {
+				limit = {
+					has_character = EHT_thunderbird
+				}
+				random_character = {
+					limit = {
+						is_character = EHT_thunderbird
+					}
+					set_nationality = THN
+				}
+			}
+			promote_character = EHT_thunderbird
+			# event_target:EHT_thunderbird_target = {
+			#     set_nationality = PREV
+			# }
+
+			# Giver Thunderbirds their unique timed idea
+			add_timed_idea = {
+				idea = EHT_thunderbird_rises
+				days = 90
+			}
+		}
+
+		# Transfer a portion of EHT's units to THN based on Thunderbird's popularity
+		EHT = {
+			add_timed_idea = {
+				idea = EHT_flagman_reorganize
+				days = 90
+			}
+			transfer_units_fraction = {
+				target = THN
+				size = party_popularity@ruler
+				stockpile_ratio = party_popularity@ruler
+				army_ratio = party_popularity@ruler
+				navy_ratio = party_popularity@ruler
+				air_ratio = party_popularity@ruler
+			}
+		}
+		# Transfer unit leaders with this ID
+		every_unit_leader = {
+			limit = {
+				has_id = 12211
+			}
+			set_nationality = THN
+		}
+
+		# Transfers opposite ends of advisor choices from 80s events to THN
+		transfer_eighties_other_advisors = yes
+
+		# Handle the specific EHT related effects now
+		set_temp_variable = { thunderbird_stockpile_fraction = EHT.party_popularity@ruler }
+		setup_thunderbirds_special_effects = yes
+
+		# Add the opinion modifier to both nations
+		EHT = {
+			add_opinion_modifier = {
+				modifier = eighties_split
+				target = THN
+			}
+		}
+		THN = {
+			add_opinion_modifier = {
+				modifier = eighties_split
+				target = EHT
+			}
+		}
+		# Copy over opinion modifiers
+		add_opinion_modifier = {
+			target = NCR
+			modifier = ncr_victor_in_road_war
+		}
+		reverse_add_opinion_modifier = {
+			target = NCR
+			modifier = eht_devils_of_utah
+		}
+		reverse_add_opinion_modifier = {
+			target = NEW
+			modifier = eht_devils_of_utah
+		}
+		reverse_add_opinion_modifier = {
+			target = VLT
+			modifier = eht_devils_of_utah
+		}
+		reverse_add_opinion_modifier = {
+			target = PAL
+			modifier = eht_devils_of_utah
+		}
+	}
+}

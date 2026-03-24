@@ -228,6 +228,8 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+						56 = {
 				add_resource = {
 					type = water
 					amount = 10

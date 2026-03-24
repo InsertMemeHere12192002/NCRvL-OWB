@@ -309,9 +309,6 @@ focus_tree = {
         prerequisite = {
             focus = CWB_goober_6
         }
-        mutually_exclusive = {
-            focus = ces_painted_rock
-        }
         available = {
             CWB = { owns_state = 868 }
         }

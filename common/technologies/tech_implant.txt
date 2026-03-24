@@ -418,7 +418,7 @@ technologies = {
 	implant_rejection_therapy_tech = {
 
 		industrial_capacity_factory = -0.02
-		medical_chem_company = {
+		category_medical_support = {
 			casualty_trickleback = 0.05
 			experience_loss_factor = -0.05
 		}
@@ -697,7 +697,7 @@ technologies = {
 	implant_medical_maintenance_tech = {
 
 		industrial_capacity_factory = -0.02
-		medical_chem_company = {
+		category_medical_support = {
 			reliability_factor = 0.05
 		}
 
@@ -1079,4 +1079,64 @@ ai_will_do = {
 	factor = 0
 }
 }
+
+implant_cybernetic_warform_tech = {
+
+		enable_subunits = {
+			cybernetic_warform
+		}
+
+		on_research_complete = {
+			custom_effect_tooltip = implant_tech_bad_idea_2
+			hidden_effect = {
+				if = {
+					limit = {
+						NOT = { has_country_leader_with_trait = bos_the_smothering_storm } #Humanity's progress wont be thwarted
+						NOT = { original_tag = TVT } #The technological utopia of Nevada! C:
+						NOT = { has_country_leader_with_trait = met_power_of_fenrir } #FENRIR preserves
+						NOT = { has_country_leader_with_trait = soh_harbinger_of_ragnarok_soothsayer_of_the_end }
+					}
+					country_event = {
+						id = implant_events.1
+						days = 15
+						random = 240
+					}
+				}
+				if = {
+					limit = {
+						has_global_flag = owb_allow_achievements_enabled_global_flag
+						NOT = { has_country_flag = achievement_unlock_warforms }
+					}
+					set_country_flag = achievement_unlock_warforms
+				}
+			}
+		}
+
+		dependencies = {
+			implant_tech_access_tech = 1
+			implant_safety_regulation_override_tech = 1
+			implant_killswitch_tech = 1
+		}
+
+		research_cost = 3
+		start_year = 2275
+
+		folder = {
+			name = fallout_tech_implant_folder
+			position = { x = @Row_14 y = @Col_5 }
+		}
+
+		categories = {
+			support_medical_tech_category
+			implant_tech
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				date > "2276.1.1"
+			}
+		}
+	}
 }

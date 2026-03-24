@@ -219,26 +219,18 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_tech = energy_weaponry_tech_1
-				}
-				set_technology = {
-					energy_weaponry_tech_2 = 1
-				}
-			}
-			else_if = {
-				limit = {
-					has_tech = energy_weaponry_tech_1
-				}
-				set_technology = {
-					energy_weaponry_tech_2 = 1
-				}
-			}
-			else_if = {
-				limit = {
 					has_tech = energy_weaponry_tech_2
 				}
 				set_technology = {
 					energy_weaponry_tech_3 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					has_tech = energy_weaponry_tech_1
+				}
+				set_technology = {
+					energy_weaponry_tech_2 = 1
 				}
 			}
 			else_if = {
@@ -674,7 +666,7 @@ focus_tree = {
 
 	focus = {
 		id = NAV_uranium_mines
-		icon = GFX_goal_generic_canister_nucleaer
+		icon = GFX_goal_generic_canister_nuclear
 		cost = 45
 		x = 1
 		y = 1
@@ -704,11 +696,6 @@ focus_tree = {
 			focus = NAV_happiness_servitude
 		}
 		completion_reward = {
-			# increase_slavery = yes
-			# set_temp_variable = {
-			# 	slaves_to_add = 0.90
-			# }
-			# add_slaves_to_nation = yes
 			91 = {
 				set_temp_variable = {
 					pop_add = 800
@@ -1097,6 +1084,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = NAV_navajo_no_ghouls
 		prerequisite = {focus = NAV_navajo_no_ghouls }
+		available = {
+			NAV  ={
+				RES = {
+					all_core_land_owned_by_prev = yes
+				}
+			}
+		}
 		completion_reward = {
 			RES = {
 				ROOT = {
@@ -1297,19 +1291,6 @@ focus_tree = {
 
 		completion_reward = {
 			set_cosmetic_tag = NAV_dinetah
-			203 = {
-				hidden_effect = {
-					set_temp_variable = { new_node_target = THIS.id }
-					set_temp_variable = { new_node_economic_development = 0.25 }
-					add_to_temp_array = { new_node_trade_array = 554 }	# Twin Mothers
-					add_to_temp_array = { new_node_trade_array = 551 }	# New Canaan
-					add_to_temp_array = { new_node_trade_array = 520 }	# Flagstaff
-					add_to_temp_array = { new_node_trade_array = 5 }	# Castra Sol Rubrum
-					set_temp_variable = { set_main_node_flag = 1 }
-				}
-				create_map_node = yes
-				#setup_state_524 = yes
-			}
 			add_political_power = 100
 		}
 	}
@@ -1322,16 +1303,16 @@ focus_tree = {
 		y = 0
 		relative_position_id = NAV_reservation_system
 		prerequisite = { focus = NAV_caesar_legion }
-		will_lead_to_war_with = PNT
-		bypass = {
-			PNT = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-		}
 		completion_reward = {
-			PNT = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev = yes
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_2_civilian_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
@@ -1350,20 +1331,10 @@ focus_tree = {
 		available = {
 			owns_state = 636
 		}
-		will_lead_to_war_with = PNT
 		completion_reward = {
-			add_political_power = 300
+			add_political_power = 200
 			add_ideas = {
 				nav_cipher_clan
-			}
-			NAV = {
-				transfer_state = 644
-			}
-			every_state = {
-				limit = {
-					is_core_of = PNT
-				}
-				add_core_of = ROOT
 			}
 		}
 	}

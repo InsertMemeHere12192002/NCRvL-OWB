@@ -78,7 +78,7 @@ sub_units = {
 		}
 	}
 
-	police_infantry = {
+	police_infantry = { #lawkeeper
 		sprite = infantry
 		map_icon_category = infantry
 
@@ -108,7 +108,7 @@ sub_units = {
 		max_organisation = 50
 		default_morale = 0.3
 		manpower = 20 # 500
-		defense = 0.2
+		defense = 0.35 #from 0.2
 		breakthrough = -0.2
 		soft_attack = -0.2
 		hard_attack = -0.2

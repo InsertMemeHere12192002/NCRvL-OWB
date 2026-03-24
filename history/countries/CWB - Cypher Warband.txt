@@ -34,28 +34,7 @@ set_technology = {
 	spec_ops_equipment_tech_1 = 1
 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
-
-set_stability = 0.3
+set_stability = 0.45
 set_war_support = 0.5
 set_research_slots = 4
 set_country_flag = is_tribal_nation
@@ -95,3 +74,6 @@ add_manpower = 1000
 
 
 recruit_character = CWB_helki_the_ripper
+recruit_character = CWB_allison_forrest
+recruit_character = CWB_ulysses_hindman
+recruit_character = CWB_augustus_greer

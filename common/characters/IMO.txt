@@ -1,23 +1,23 @@
-characters = {
-	IMO_juggernaut = {
-		name = "Juggernaut"
-		portraits = {
-			civilian = {
-				large = GFX_Portrait_Juggernaut_Animated
-			}
-		}
-		corps_commander = {
-			traits = {
-				enduring_trait
-				agile_trait
-				warchief_trait
-				fortress_buster
-			}
-			skill = 5
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 5
-		}
-	}
-}
+# characters = {
+# 	IMO_juggernaut = {
+# 		name = "Juggernaut"
+# 		portraits = {
+# 			civilian = {
+# 				large = GFX_Portrait_Juggernaut_Animated
+# 			}
+# 		}
+# 		corps_commander = {
+# 			traits = {
+# 				enduring_trait
+# 				agile_trait
+# 				warchief_trait
+# 				fortress_buster
+# 			}
+# 			skill = 5
+# 			attack_skill = 3
+# 			defense_skill = 2
+# 			planning_skill = 2
+# 			logistics_skill = 5
+# 		}
+# 	}
+# }

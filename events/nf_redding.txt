@@ -1,0 +1,878 @@
+﻿# add_namespace = ncr_red
+
+# country_event = {
+#     id = ncr_red.1
+#     title = ncr_red.1.t
+#     desc = ncr_red.1.d
+#     is_triggered_only = yes
+#     option = {
+#         name = ncr_red.1.a
+#         add_ideas = bar_workers_unrest
+# 		add_ideas = bar_sheriff_unrest
+#     }
+# }
+# #Flynn Adress
+# country_event = {
+#     id = ncr_red.5
+#     title = ncr_red.5.t
+#     desc = ncr_red.5.d
+#     is_triggered_only = yes
+# 	##Flynn remains a puppet
+#     #option = {
+#     #    name = ncr_red.5.a
+# 	#	set_country_flag = RDS_flynn_puppet_flag
+# 	#	mark_focus_tree_layout_dirty = yes
+#     #}
+# 	#Strings break free
+# 	option = {
+#         name = ncr_red.5.b
+# 		news_event = red_flynn.1
+#     }
+# }
+# #Mossman comes to Redding
+# country_event = {
+#     id = ncr_red.7
+#     title = ncr_red.7.t
+#     desc = ncr_red.7.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_desert_rangers_marching
+#     option = {
+#         name = ncr_red.7.a
+# 		NCR = {
+# 			NCR_mossman_character = {
+# 				set_nationality = RDS
+#             }
+# 		}
+# 		set_country_flag = red_mossman_lives
+#     }
+# 	option = {
+#         name = ncr_red.7.b
+# 		trigger = {
+# 			has_completed_focus = ncr_red_support_moore
+# 		}
+# 		set_country_flag = red_mossman_dies
+#     }
+# }
+# #Should Redding sent Sheriffs on frontline?
+# country_event = {
+#     id = ncr_red.8
+#     title = ncr_red.8.t
+#     desc = ncr_red.8.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_NCR_battle
+# 	#Send them - Sheriffs aren't happy
+#     option = {
+#         name = ncr_red.8.a
+# 		add_stability = -0.05
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.05
+#         }
+# 		add_ideas = bar_sending_sheriffs
+# 		rds_sheriff_unrest_up = yes
+#     }
+# 	#Not sent them - Sheriffs satisfied
+# 	option = {
+#         name = ncr_red.8.b
+# 		add_stability = 0.05
+# 		rds_sheriff_unrest_down = yes
+#     }
+# }
+# #People of Redding decide on their strategy for the future
+# country_event = {
+#     id = ncr_red.9
+#     title = ncr_red.9.t
+#     desc = ncr_red.9.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_ARR_arroyo
+# 	#Farmers - want to be annexed by Calhoun
+#     option = {
+#         name = ncr_red.9.a
+# 		set_country_flag = rds_support_farmers_flag
+#     }
+# 	#Miners - want to ally Calhoun, but remain independent
+# 	option = {
+#         name = ncr_red.9.b
+# 		set_country_flag = rds_support_miners_flag
+#     }
+# }
+# #Farmers ask to be annexed by Calhoun
+# country_event = {
+#     id = ncr_red.10
+#     title = ncr_red.10.t
+#     desc = ncr_red.10.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_autumn
+#     option = {
+#         name = ncr_red.10.a
+# 		every_state = {
+# 			limit = {
+# 				is_core_of = RDS
+# 			}
+# 			set_state_flag = do_not_exodus
+# 		}
+# 		annex_country = {
+# 			target = RDS
+# 			transfer_troops = yes
+# 		}
+# 		RDS = {
+# 			every_character = {
+# 				limit = {
+# 					is_country_leader = no
+# 				}
+# 				set_nationality = BON
+# 			}
+# 		}
+# 		every_state = {
+# 			limit = {
+# 				is_core_of = RDS
+# 			}
+# 			add_core_of = BON
+# 			set_state_flag = do_not_exodus
+# 		}
+#     }
+# }
+# #Miners join Calhoun faction
+# country_event = {
+#     id = ncr_red.11
+#     title = ncr_red.11.t
+#     desc = ncr_red.11.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_autumn
+#     option = {
+#         name = ncr_red.11.a
+# 		RDS = {
+# 			d_join_dharma_way = yes
+# 		}
+
+#     }
+# }
+# #Sheriff events
+# #Calhoun or Moore is asked to recognize Redding Independence
+# country_event = {
+#     id = ncr_red.12
+#     title = ncr_red.12.t
+#     desc = ncr_red.12.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	#Agree
+#     option = {
+#         name = ncr_red.12.a
+# 		ai_chance = {
+#             base = 10
+#         }
+# 		RDS = {
+# 			every_owned_state = {
+# 				limit = {
+# 					is_core_of = ROOT
+#                 }
+# 				remove_core_of = ROOT
+# 			}
+# 		}
+# 		set_truce = {
+# 			target = RDS
+# 			days = 720
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_country_flag = NCR_boneyard_flag
+# 			}
+# 			RDS = {
+# 				country_event = ncr_red.13
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				tag = NCR
+# 			}
+# 			RDS = {
+# 				country_event = ncr_red.14
+# 			}
+# 		}
+#     }
+# 	#No
+# 	option = {
+#         name = ncr_red.12.b
+# 		ai_chance = {
+#             base = 90
+#         }
+# 		if = {
+# 			limit = {
+# 				has_country_flag = NCR_boneyard_flag
+# 			}
+# 			NCR = {
+# 				country_event = ncr_red.12
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				tag = NCR
+# 			}
+# 			RDS = {
+# 				country_event = ncr_red.15
+# 			}
+# 		}
+#     }
+# }
+# #Calhoun Agrees
+# country_event = {
+#     id = ncr_red.13
+#     title = ncr_red.13.t
+#     desc = ncr_red.13.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_ncr_calhoun_logo
+#     option = {
+#         name = ncr_red.13.a
+# 		add_stability = 0.05
+# 		set_country_flag = rds_bon_agrees
+#     }
+# }
+# #Moore Agrees
+# country_event = {
+#     id = ncr_red.14
+#     title = ncr_red.14.t
+#     desc = ncr_red.14.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_NCR_startup
+#     option = {
+#         name = ncr_red.14.a
+# 		add_stability = 0.05
+# 		set_country_flag = rds_ncr_agrees
+#     }
+# }
+# #None Agrees
+# country_event = {
+#     id = ncr_red.15
+#     title = ncr_red.15.t
+#     desc = ncr_red.15.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_fortress
+#     option = {
+#         name = ncr_red.15.a
+# 		add_war_support = 0.1
+# 		set_country_flag = rds_none_agrees
+#     }
+# }
+# #People ask to share savings
+# country_event = {
+#     id = ncr_red.16
+#     title = ncr_red.16.t
+#     desc = ncr_red.16.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_fortress
+#     option = {
+#         name = ncr_red.16.a
+# 		add_war_support = 0.05
+# 		rds_sheriff_unrest_down = yes
+# 		rds_worker_unrest_up = yes
+# 		set_temp_variable = { caps_to_add = -50 }
+# 		add_caps = yes
+#     }
+# 	option = {
+#         name = ncr_red.16.b
+# 		add_stability = 0.05
+# 		rds_wroker_unrest_down = yes
+# 		rds_sheriff_unrest_up = yes
+# 		set_temp_variable = { caps_to_add = -50 }
+# 		add_caps = yes
+#     }
+# 	option = {
+#         name = ncr_red.16.c
+# 		add_stability = -0.05
+# 		add_war_support = -0.05
+# 		rds_worker_unrest_up = yes
+# 		rds_sheriff_unrest_up = yes
+#     }
+# }
+
+# ###FLYNN INDIVIDUALISM events
+# add_namespace = red_flynn
+# news_event = {
+# 	id = red_flynn.1
+# 	title = red_flynn.1.t
+# 	desc = red_flynn.1.d
+# 	picture = GFX_event_redding_atlas
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = red_flynn.1.a
+# 		set_country_flag = RDS_flynn_independent_flag
+# 		mark_focus_tree_layout_dirty = yes
+# 		#custom_effect_tooltip = rds_true_man_tt
+# 		hidden_effect = {
+# 			set_cosmetic_tag = RDS_Flynn
+# 			set_party_name = { ideology = elites long_name = RDS_elites_flynn_long name = RDS_elites_flynn }
+# 		}
+# 	}
+# }
+# #Breaking the strings
+# country_event = {
+# 	id = red_flynn.2
+# 	title = red_flynn.2.t
+# 	desc = red_flynn.2.d
+# 	picture = GFX_event_redding_atlas
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = red_flynn.2.a
+# 		add_ideas = bar_breaking_the_strings
+# 		remove_country_leader_trait = baron_connections
+# 		add_country_leader_trait = master_of_his_fate
+# 	}
+# }
+# #The Fate of Parasites
+# country_event = {
+# 	id = red_flynn.3
+# 	title = red_flynn.3.t
+# 	desc = red_flynn.3.d
+# 	picture = GFX_event_redding_atlas
+# 	is_triggered_only = yes
+# 	#Second chance
+# 	option = {
+# 		name = red_flynn.3.a
+# 		add_stability = -0.05
+# 		random_owned_state = {
+# 			add_extra_state_shared_building_slots = 2
+# 			add_building_construction = {
+# 				type = industrial_complex
+# 				level = 2
+# 				instant_build = yes
+# 			}
+# 		}
+# 		set_country_flag = rds_flynn_second_chance
+# 	}
+# 	#Destroy the parasites
+# 	option = {
+# 		name = red_flynn.3.b
+# 		add_stability = -0.1
+# 		random_owned_state = {
+# 			add_extra_state_shared_building_slots = 2
+# 			add_building_construction = {
+# 				type = arms_factory
+# 				level = 2
+# 				instant_build = yes
+# 			}
+# 		}
+# 		set_country_flag = rds_flynn_abuse_parasites
+# 	}
+# }
+# #True Man Society achieved
+# news_event = {
+# 	id = red_flynn.4
+# 	title = red_flynn.4.t
+# 	desc = red_flynn.4.d
+# 	picture = GFX_event_redding_atlas
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = red_flynn.4.a
+# 		set_cosmetic_tag = RDS_Flynn_True
+# 	}
+# }
+# #Flynn offers Gente a deal
+# country_event = {
+# 	id = red_flynn.5
+# 	title = red_flynn.5.t
+# 	desc = red_flynn.5.d
+# 	picture = GFX_event_redding_atlas
+# 	is_triggered_only = no
+# 	fire_only_once = yes
+# 	trigger = {
+# 		tag = RDS
+#         has_completed_focus = ncr_fln_strings_break_free
+# 		has_war_with = CES
+# 		CES = {
+# 			has_capitulated = yes
+# 		}
+# 		GDH = {
+# 			is_caesars_legion_member = yes
+# 		}
+#     }
+# 	mean_time_to_happen = {days = 1}
+
+# 	#Offer Baja for becoming a puppet
+# 	option = {
+# 		name = red_flynn.5.a
+# 		GDH = {
+# 			country_event = red_flynn.6
+# 		}
+# 	}
+# }
+# #Gente gets an event
+# country_event = {
+# 	id = red_flynn.6
+# 	title = red_flynn.6.t
+# 	desc = red_flynn.6.d
+# 	picture = GFX_event_redding_atlas
+# 	is_triggered_only = yes
+
+# 	#Gente puppet
+# 	option = {
+# 		name = red_flynn.6.a
+# 		ai_chance = {
+#             base = 80
+#         }
+# 		if = {
+# 			limit = {
+# 				any_country = {
+# 					is_big_circle_member = yes
+# 					has_war_with = GDH
+# 				}
+# 			}
+# 			white_peace = GDH
+# 		}
+# 		RDS = {
+# 			puppet = GDH
+# 			if = {
+# 				every_owned_state = {
+# 					limit = {
+# 						OR = {
+# 							is_core_of = BLP
+# 							is_core_of = BVC
+# 						}
+# 					}
+# 					transfer_state_to = GDH
+# 				}
+# 			}
+# 			else_if = {
+# 				limit = {
+# 					OR = {
+# 						BLP = {
+# 							is_puppet_of = RDS
+# 						}
+# 						BVC = {
+# 							is_puppet_of = RDS
+# 						}
+# 					}
+# 				}
+# 				GDH = {
+# 					annex_country = {
+# 						target = PREV
+# 						transfer_troops = no
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	#Gente fights till the end
+# 	option = {
+# 		name = red_flynn.6.b
+# 		ai_chance = {
+#             base = 20
+#         }
+# 		add_stability = -0.1
+# 		add_war_support = -0.1
+# 	}
+# }
+
+# add_namespace = ncr_red_riots
+# #Worker riot starts
+# country_event = {
+#     id = ncr_red_riots.1
+#     title = ncr_red_riots.1.t
+#     desc = ncr_red_riots.1.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_NCR_battle
+# 	#Send Sheriffs to negotiate
+#     #option = {
+#     #    name = ncr_red_riots.1.a
+#     #}
+# 	#Send Sheriffs to shoot the protestors
+# 	option = {
+#         name = ncr_red_riots.1.b
+# 		add_stability = -0.25
+# 		141 = {
+# 			set_temp_variable = { pop_add = -532 }
+# 			add_state_population = yes
+# 		}
+# 		hidden_effect = {
+# 			country_event = ncr_red_riots.2
+# 		}
+#     }
+# }
+# #Angry people storm barons' ranch
+# country_event = {
+#     id = ncr_red_riots.2
+#     title = ncr_red_riots.2.t
+#     desc = ncr_red_riots.2.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_NCR_battle
+# 	#Commies appear
+#     option = {
+#         name = ncr_red_riots.2.a
+# 		set_politics = {
+# 			ruling_party = people
+# 			elections_allowed = no
+# 		}
+# 		set_cosmetic_tag = RDS_People_Republic
+# 		set_country_flag = RDS_commie_tree_unlock
+# 		mark_focus_tree_layout_dirty = yes
+# 		hidden_effect = {
+# 			set_popularities = {
+# 				people = 75
+# 				elites = 0
+# 				intellectuals = 0
+# 				ruler = 25
+#             }
+# 			remove_ideas = {
+# 				bar_workers_unrest
+# 				bar_workers_unrest_2
+# 				bar_workers_unrest_3
+# 				bar_workers_unrest_4
+# 				bar_sending_sheriffs
+# 			}
+# 		}
+# 	}
+# }
+# #Sheriffs arest the barons
+# country_event = {
+#     id = ncr_red_riots.3
+#     title = ncr_red_riots.3.t
+#     desc = ncr_red_riots.3.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_NCR_battle
+# 	#Sheriffs appear
+#     option = {
+#         name = ncr_red_riots.3.a
+# 		set_politics = {
+# 			ruling_party = ruler
+# 			elections_allowed = no
+# 		}
+# 		set_cosmetic_tag = RDS_Redding_State #Ask Soviet for a flag
+# 		set_country_flag = RDS_sheriff_tree_unlock
+# 		mark_focus_tree_layout_dirty = yes
+# 		hidden_effect = {
+# 			set_popularities = {
+# 				people = 20
+# 				elites = 20
+# 				intellectuals = 0
+# 				ruler = 60
+#             }
+# 			remove_ideas = {
+# 				bar_sheriff_unrest
+# 				bar_sheriff_unrest_2
+# 				bar_sheriff_unrest_3
+# 				bar_sheriff_unrest_4
+# 				bar_sending_sheriffs
+# 			}
+# 		}
+# 	}
+# }
+
+# add_namespace = ncr_red_support
+# #Redding sents an offer to one of the sides to buy weapons from them
+# country_event = {
+#     id = ncr_red_support.1
+#     title = ncr_red_support.1.t
+#     desc = ncr_red_support.1.desc
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+# 	#Has money - buy
+#     option = {
+#         name = ncr_red_support.1.a
+# 		trigger = {
+# 			check_variable = { caps_number_display > 50 }
+# 		}
+# 		set_temp_variable = { caps_to_add = -50 }
+# 		add_caps = yes
+# 		RDS = {
+# 			country_event = ncr_red_support.2
+# 			send_equipment = {
+# 				equipment = infantry_equipment
+# 				amount = 1000
+# 				target = ROOT
+# 			}
+# 		}
+# 		ai_chance = {
+# 			base = 8
+# 		}
+#     }
+# 	#Has money - no buy
+# 	option = {
+#         name = ncr_red_support.1.b
+# 		trigger = {
+# 			check_variable = { caps_number_display > 50 }
+# 		}
+# 		add_stability = -0.03
+# 		RDS = {
+# 			country_event = ncr_red_support.4
+# 		}
+# 		ai_chance = {
+# 			base = 2
+# 		}
+#     }
+# 	#No money - take loan
+# 	option = {
+#         name = ncr_red_support.1.c
+# 		trigger = {
+# 			check_variable = { caps_number_display < 50 }
+# 			NOT = {
+# 				has_idea = bar_creditors_gib_money
+# 			}
+# 		}
+# 		add_timed_idea = {
+# 			idea = bar_creditors_gib_money
+# 			days = 50
+# 		}
+# 		RDS = {
+# 			country_event = ncr_red_support.3
+# 			send_equipment = {
+# 				equipment = infantry_equipment
+# 				amount = 1000
+# 				target = ROOT
+# 			}
+# 		}
+#     }
+# 	#No money - no deal
+# 	option = {
+#         name = ncr_red_support.1.d
+# 		trigger = {
+# 			check_variable = { caps_number_display < 50 }
+# 		}
+# 		add_stability = -0.04
+# 		RDS = {
+# 			country_event = ncr_red_support.4
+# 		}
+#     }
+# }
+# #Successful deal
+# country_event = {
+#     id = ncr_red_support.2
+#     title = ncr_red_support.2.t
+#     desc = ncr_red_support.2.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.2.a
+# 		set_temp_variable = { caps_to_add = 80 }
+#     }
+# }
+# #Loan
+# country_event = {
+#     id = ncr_red_support.3
+#     title = ncr_red_support.3.t
+#     desc = ncr_red_support.3.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.3.a
+# 		if = {
+# 			limit = {
+# 				has_idea = bar_creditors
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = bar_creditors
+# 				add_idea = bar_creditors_2
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				NOT = {
+# 					has_idea = bar_creditors
+# 				}
+# 			}
+# 			add_ideas = bar_creditors
+# 		}
+#     }
+# }
+# #No deal
+# country_event = {
+#     id = ncr_red_support.4
+#     title = ncr_red_support.4.t
+#     desc = ncr_red_support.4.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.4.a
+#     }
+# }
+
+# #Redding sents an offer to one of the sides to buy medicine from them
+# country_event = {
+#     id = ncr_red_support.5
+#     title = ncr_red_support.5.t
+#     desc = ncr_red_support.5.desc
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+# 	#Has money - buy
+#     option = {
+#         name = ncr_red_support.5.a
+# 		trigger = {
+# 			check_variable = { caps_number_display > 50 }
+# 		}
+# 		set_temp_variable = { caps_to_add = -50 }
+# 		add_caps = yes
+# 		RDS = {
+# 			country_event = ncr_red_support.6
+# 			send_equipment = {
+# 				equipment = support_equipment
+# 				amount = 150
+# 				target = ROOT
+# 			}
+# 		}
+# 		ai_chance = {
+# 			base = 8
+# 		}
+#     }
+# 	#Has money - no buy
+# 	option = {
+#         name = ncr_red_support.5.b
+# 		trigger = {
+# 			check_variable = { caps_number_display > 50 }
+# 		}
+# 		add_stability = -0.05
+# 		RDS = {
+# 			country_event = ncr_red_support.8
+# 		}
+# 		ai_chance = {
+# 			base = 2
+# 		}
+#     }
+# 	#No money - take loan
+# 	option = {
+#         name = ncr_red_support.5.c
+# 		trigger = {
+# 			check_variable = { caps_number_display < 50 }
+# 			NOT = {
+# 				has_idea = bar_creditors_gib_money
+# 			}
+# 		}
+# 		add_timed_idea = {
+# 			idea = bar_creditors_gib_money
+# 			days = 50
+# 		}
+# 		RDS = {
+# 			country_event = ncr_red_support.7
+# 			send_equipment = {
+# 				equipment = support_equipment
+# 				amount = 150
+# 				target = ROOT
+# 			}
+# 		}
+#     }
+# 	#No money - no deal
+# 	option = {
+#         name = ncr_red_support.5.d
+# 		trigger = {
+# 			check_variable = { caps_number_display < 50 }
+# 		}
+# 		add_stability = -0.05
+# 		RDS = {
+# 			country_event = ncr_red_support.8
+# 		}
+#     }
+# }
+# #Successful deal (support)
+# country_event = {
+#     id = ncr_red_support.6
+#     title = ncr_red_support.6.t
+#     desc = ncr_red_support.6.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.6.a
+# 		set_temp_variable = { caps_to_add = 80 }
+#     }
+# }
+# #Loan (support)
+# country_event = {
+#     id = ncr_red_support.7
+#     title = ncr_red_support.7.t
+#     desc = ncr_red_support.7.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.7.a
+# 		if = {
+# 			limit = {
+# 				has_idea = bar_creditors
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = bar_creditors
+# 				add_idea = bar_creditors_2
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				NOT = {
+# 					has_idea = bar_creditors
+# 				}
+# 			}
+# 			add_ideas = bar_creditors
+# 		}
+#     }
+# }
+# #No deal (support)
+# country_event = {
+#     id = ncr_red_support.8
+#     title = ncr_red_support.8.t
+#     desc = ncr_red_support.8.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.8.a
+#     }
+# }
+# #Redding offers to buy some weapons
+# country_event = {
+#     id = ncr_red_support.9
+#     title = ncr_red_support.9.t
+#     desc = ncr_red_support.9.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+# 	#Agree
+#     option = {
+#         name = ncr_red_support.9.a
+# 		add_political_power = 40
+# 		set_temp_variable = { caps_to_add = 30 }
+# 		add_caps = yes
+# 		RDS = {
+# 			country_event = ncr_red_support.10
+# 		}
+# 		ai_chance = {
+# 			base = 8
+# 		}
+#     }
+# 	#Disagree
+# 	option = {
+#         name = ncr_red_support.9.b
+# 		RDS = {
+# 			country_event = ncr_red_support.11
+# 		}
+# 		ai_chance = {
+# 			base = 2
+# 		}
+#     }
+# }
+# #Successful Deal (purchase)
+# country_event = {
+#     id = ncr_red_support.10
+#     title = ncr_red_support.10.t
+#     desc = ncr_red_support.10.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.10.a
+# 		add_political_power = -30
+# 		set_temp_variable = { caps_to_add = -30 }
+# 		add_caps = yes
+# 		PREV = {
+# 			send_equipment = {
+# 				equipment = infantry_equipment
+# 				amount = 450
+# 				target = RDS
+# 			}
+# 		}
+#     }
+# }
+# #No Deal (purchase)
+# country_event = {
+#     id = ncr_red_support.11
+#     title = ncr_red_support.11.t
+#     desc = ncr_red_support.11.d
+#     is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+#     option = {
+#         name = ncr_red_support.11.a
+#     }
+# }

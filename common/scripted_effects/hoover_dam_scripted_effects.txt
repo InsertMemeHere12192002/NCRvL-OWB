@@ -1,47 +1,89 @@
 start_first_battle_events = {
 	## Saving event targets
-	ROOT = { save_event_target_as = dam_attacker }
+	ROOT = {
+		save_event_target_as = dam_attacker
+	}
 	252 = {
-		owner = { save_event_target_as = dam_defender }
+		owner = {
+			save_event_target_as = dam_defender
+		}
 	}
 	## Global setup
 	set_global_flag = first_battle_preparing
 	## Splinter off unique chains from generic
-	if = { # Unique MOT / CES chain
+	if = {
+		# Unique MOT / CES chain
 		limit = {
-			event_target:dam_defender = { original_tag = MOT }
-			event_target:dam_attacker = { original_tag = CES }
-			MOJ = {exists = no }
+			event_target:dam_defender = {
+				original_tag = MOT
+			}
+			event_target:dam_attacker = {
+				original_tag = CES
+			}
+			MOJ = {
+				exists = no
+			}
 		}
 		event_target:dam_attacker = {
-			country_event = bhd.1 # Unique event to flavour attack on MOT
+			country_event = bhd.1			# Unique event to flavour attack on MOT
 		}
 	}
-	else_if = { # Unique MOJ / CES chain
+	else_if = {
+		# Unique MOJ / CES chain
 		limit = {
-			event_target:dam_defender = { original_tag = MOJ }
-			event_target:dam_attacker = { original_tag = CES }
-			MOT = { exists = no }
+			event_target:dam_defender = {
+				original_tag = MOJ
+			}
+			event_target:dam_attacker = {
+				original_tag = CES
+			}
+			MOT = {
+				exists = no
+			}
 		}
 		event_target:dam_attacker = {
-			country_event = bhd.50 # Unique event to flavour attack on MOJ
+			country_event = bhd.50			# Unique event to flavour attack on MOJ
 		}
 	}
-	else_if = { # if the mojave territory and chapter are fucking around, it's bad for them
+	else_if = {
+		# if the mojave territory and chapter are fucking around, it's bad for them
 		limit = {
 			OR = {
-				event_target:dam_defender = { original_tag = MOJ }
-				event_target:dam_defender = { original_tag = MOT }
+				event_target:dam_defender = {
+					original_tag = MOJ
+				}
+				event_target:dam_defender = {
+					original_tag = MOT
+				}
 			}
-			event_target:dam_attacker = { original_tag = CES }
-			MOT = { exists = yes }
-			MOJ = { exists = yes }
+			event_target:dam_attacker = {
+				original_tag = CES
+			}
+			MOT = {
+				exists = yes
+			}
+			MOJ = {
+				exists = yes
+			}
 		}
 		event_target:dam_attacker = {
-			news_event = bhd.153 # Unique event to flavour attack everyone nom nom nom
+			news_event = bhd.153			# Unique event to flavour attack everyone nom nom nom
 		}
 	}
-	else = { # Generic Case
+	# else_if = {
+	# 	# NCR has annexed MOT by Rule CES auto lose
+	# 	limit = {
+	# 		has_game_rule = {
+	# 			rule = NCR/MOT
+	# 		}
+	# 	}
+	# 	effect = {
+	# 		trigger_event = bhd.7
+	# 		trigger_event = bhd.10
+	# 	}
+	# }
+	else = {
+		# Generic Case
 		event_target:dam_attacker = {
 			declare_war_on = {
 				target = event_target:dam_defender
@@ -57,15 +99,34 @@ start_first_battle_events = {
 	}
 }
 
-fbhd_bw_hoover = { # Script to start the initial border war for Hoover Dam
+fbhd_bw_hoover = {
+	# Script to start the initial border war for Hoover Dam
 	CES = {
 		## Variable Calculation
-		set_variable = { var = border_war_attacker_modifier value = 1.2 }
-		add_to_variable = { var = border_war_attacker_modifier value = global.fbhd_hoover_attack_add }
-		multiply_variable = { var = border_war_attacker_modifier value = global.fbhd_hoover_attack_mult }
-		set_variable = { var = border_war_defender_modifier value = 0.6 }
-		add_to_variable = { var = border_war_defender_modifier value = global.fbhd_hoover_defence_add }
-		multiply_variable = { var = border_war_defender_modifier value = global.fbhd_hoover_defence_mult }
+		set_variable = {
+			var = border_war_attacker_modifier
+			value = 1.2
+		}
+		add_to_variable = {
+			var = border_war_attacker_modifier
+			value = global.fbhd_hoover_attack_add
+		}
+		multiply_variable = {
+			var = border_war_attacker_modifier
+			value = global.fbhd_hoover_attack_mult
+		}
+		set_variable = {
+			var = border_war_defender_modifier
+			value = 0.6
+		}
+		add_to_variable = {
+			var = border_war_defender_modifier
+			value = global.fbhd_hoover_defence_add
+		}
+		multiply_variable = {
+			var = border_war_defender_modifier
+			value = global.fbhd_hoover_defence_mult
+		}
 		if = {
 			limit = {
 				has_global_flag = debug_logs
@@ -86,7 +147,7 @@ fbhd_bw_hoover = { # Script to start the initial border war for Hoover Dam
 				leader_score = {
 					base = 1
 					modifier = {
-						has_id = 10008 # Malpais
+						has_id = 10008						# Malpais
 						add = 100
 					}
 				}
@@ -100,7 +161,7 @@ fbhd_bw_hoover = { # Script to start the initial border war for Hoover Dam
 				leader_score = {
 					base = 1
 					modifier = {
-						has_id = 820 # Oliver
+						has_id = 820						# Oliver
 						add = 100
 					}
 				}
@@ -131,18 +192,39 @@ fbhd_bw_hoover = { # Script to start the initial border war for Hoover Dam
 	}
 }
 
-fbhd_bw_boulder = { # Script to start the initial border war for Boulder City
+fbhd_bw_boulder = {
+	# Script to start the initial border war for Boulder City
 	CES = {
 		## Variable Calculation
-		set_variable = { border_war_attacker_modifier = 0.9 }
-		add_to_variable = { var = border_war_attacker_modifier value = var:global.fbhd_boulder_attack_add }
-		multiply_variable = { var = border_war_attacker_modifier value = var:global.fbhd_boulder_attack_mult }
-		set_variable = { border_war_defender_modifier = 1 }
-		add_to_variable = { var = border_war_defender_modifier value = var:global.fbhd_boulder_defence_add }
-		multiply_variable = { var = border_war_defender_modifier value = var:global.fbhd_boulder_defence_mult }
+		set_variable = {
+			border_war_attacker_modifier = 0.9
+		}
+		add_to_variable = {
+			var = border_war_attacker_modifier
+			value = var:global.fbhd_boulder_attack_add
+		}
+		multiply_variable = {
+			var = border_war_attacker_modifier
+			value = var:global.fbhd_boulder_attack_mult
+		}
+		set_variable = {
+			border_war_defender_modifier = 1
+		}
+		add_to_variable = {
+			var = border_war_defender_modifier
+			value = var:global.fbhd_boulder_defence_add
+		}
+		multiply_variable = {
+			var = border_war_defender_modifier
+			value = var:global.fbhd_boulder_defence_mult
+		}
 		## Contingency check that CES owns 252 (Hoover Dam)
 		if = {
-			limit = { NOT = { owns_state = 252 } }
+			limit = {
+				NOT = {
+					owns_state = 252
+				}
+			}
 			transfer_state = 252
 			log = "252 transfered to CES in fbhd_bw_boulder. Something is broken elsewhere. Report."
 		}
@@ -157,7 +239,7 @@ fbhd_bw_boulder = { # Script to start the initial border war for Boulder City
 				leader_score = {
 					base = 1
 					modifier = {
-						has_id = 10008 # Malpais
+						has_id = 10008						# Malpais
 						add = 100
 					}
 				}
@@ -172,7 +254,7 @@ fbhd_bw_boulder = { # Script to start the initial border war for Boulder City
 				leader_score = {
 					base = 1
 					modifier = {
-						has_id = 821 # Hanlon
+						has_id = 821						# Hanlon
 						add = 100
 					}
 				}
@@ -204,7 +286,7 @@ fbhd_legion_overall_vic = {
 	clr_global_flag = first_battle_ongoing
 	set_global_flag = fbhd_boulder_city_miracle_flag
 	MOT = {
-		transfer_state = 252 # Hoover Dam
+		transfer_state = 252		# Hoover Dam
 	}
 	news_event = bhd.17
 }
@@ -213,7 +295,7 @@ fbhd_boulder_city_miracle = {
 	clr_global_flag = first_battle_ongoing
 	set_global_flag = fbhd_boulder_city_miracle_flag
 	MOT = {
-		transfer_state = 252 # Hoover Dam
+		transfer_state = 252		# Hoover Dam
 	}
 	news_event = bhd.18
 }
@@ -238,34 +320,56 @@ fbhd_moj_ces_war = {
 	news_event = bhd.53
 }
 
-start_second_battle_events = { # Should be called in the scope of the nation *attacking* into Hoover Dam
+start_second_battle_events = {
+	# Should be called in the scope of the nation *attacking* into Hoover Dam
 	## Saving event targets and variables
-	ROOT = { save_event_target_as = dam_attacker }
-	252 = { owner = { save_event_target_as = dam_defender } }
+	ROOT = {
+		save_event_target_as = dam_attacker
+	}
+	252 = {
+		owner = {
+			save_event_target_as = dam_defender
+		}
+	}
 	set_global_flag = second_battle_preparing
 	## Splinter off unique chains from generic
-	if = { # Unique MOT / CES chain
+	if = {
+		# Unique MOT / CES chain
 		limit = {
-			event_target:dam_defender = { original_tag = MOT }
-			event_target:dam_attacker = { original_tag = CES }
+			event_target:dam_defender = {
+				original_tag = MOT
+			}
+			event_target:dam_attacker = {
+				original_tag = CES
+			}
 		}
 		event_target:dam_attacker = {
 			country_event = bhd.100
 		}
 	}
-	else_if = { # Unique NCR / CES chain (mostly edge-case)
+	else_if = {
+		# Unique NCR / CES chain (mostly edge-case)
 		limit = {
-			event_target:dam_defender = { original_tag = NCR }
-			event_target:dam_attacker = { original_tag = CES }
+			event_target:dam_defender = {
+				original_tag = NCR
+			}
+			event_target:dam_attacker = {
+				original_tag = CES
+			}
 		}
 		event_target:dam_attacker = {
 			country_event = bhd.150
 		}
 	}
-	else_if = { #Edge case for Legion owning dam for To the West focus.
+	else_if = {
+		#Edge case for Legion owning dam for To the West focus.
 		limit = {
-			event_target:dam_defender = { original_tag = ROOT }
-			event_target:dam_attacker = { original_tag = ROOT }
+			event_target:dam_defender = {
+				original_tag = ROOT
+			}
+			event_target:dam_attacker = {
+				original_tag = ROOT
+			}
 			ROOT = {
 				original_tag = CES
 			}
@@ -276,7 +380,8 @@ start_second_battle_events = { # Should be called in the scope of the nation *at
 			}
 		}
 	}
-	else = { # Generic Edge-Case
+	else = {
+		# Generic Edge-Case
 		event_target:dam_attacker = {
 			declare_war_on = {
 				target = event_target:dam_defender

@@ -344,9 +344,9 @@
   spec_ops_cavalry_short:0 "Riders"
   spec_ops_cavalry_desc:0 "Who knew horses were still a thing in this wasteland?"
 
-  chariot_unit:0 "Legion Chariots"
-  chariot_unit_short:0 "Chariots"
-  chariot_unit_desc:0 "Legion goes BRRRRRRRRRR"
+  chariot:0 "Legion Chariots"
+  chariot_short:0 "Chariots"
+  chariot_desc:0 "Legion goes BRRRRRRRRRR"
 
   monster_support:0 "Colorado Mutant Support"
   monster_support_desc:0 ""

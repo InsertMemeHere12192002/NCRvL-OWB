@@ -207,6 +207,9 @@ focus_tree = {
 	focus = {
 		id = mot_secure_the_west
 		icon = GFX_goal_generic_western
+		search_filters = {
+			FOCUS_FILTER_MOT_SUNBURST
+		}
 		cost = 30
 		available = {
 			NOT = {
@@ -240,6 +243,9 @@ focus_tree = {
 	focus = {
 		id = mot_solidify_military_leadership
 		icon = GFX_goal_generic_land_doctrines_focus
+		search_filters = {
+			FOCUS_FILTER_MOT_SUNBURST
+		}
 		cost = 30
 		available = {
 			NOT = {
@@ -269,6 +275,9 @@ focus_tree = {
 	focus = {
 		id = mot_protect_route_95
 		icon = GFX_goal_generic_protectron_conceptart_primm_slimm
+		search_filters = {
+			FOCUS_FILTER_MOT_SUNBURST
+		}
 		cost = 30
 		available = {
 			NOT = {
@@ -302,6 +311,9 @@ focus_tree = {
 	focus = {
 		id = mot_promote_major_moore
 		icon = GFX_goal_NCR_Weapon_Standardization
+		search_filters = {
+			FOCUS_FILTER_MOT_SUNBURST
+		}
 		available = {
 			NOT = {
 				has_country_flag = mot_crisis_in_california
@@ -1984,6 +1996,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = mot_first_supply_shipment
 		completion_reward = {
+			            set_technology = { 
+                railway_gun_unlock_tech = 1
+             }
 			custom_effect_tooltip = mot_the_mojave_line_tt
 			47 = {
 				add_building_construction = {
@@ -1998,9 +2013,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}
-			set_technology = {
-				railway_gun = 1
 			}
 			create_railway_gun = {
 				equipment = railway_gun_equipment_1

@@ -2763,11 +2763,11 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			add_state_core = 404
+			add_state_core = 454
 			add_resource = {
 				type = water
 				amount = 10
-				state = 404
+				state = 454
 			}
 			add_state_core = 251
 			add_resource = {
@@ -4986,11 +4986,8 @@ focus_tree = {
 			base = 2
 			modifier = {
 				factor = 0
-				OR = {
-					NOT = {
-						has_completed_focus = new_king
-					}
-					is_salvatore_leader = yes
+				NOT = {
+					has_completed_focus = new_king
 				}
 				NEW_has_ai_behavior_neutrality = yes
 			}

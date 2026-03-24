@@ -180,16 +180,18 @@ focus_tree = {
 		relative_position_id = eur_rapid_repair
 
 		completion_reward = {
-			create_corps_commander = {
-				name = "Scavenger #51"
-				id = 12178
-				picture = GFX_Portrait_Raider_Generic_15
-				traits = { perceptive_trait intelligent_trait }
+			add_corps_commander_role = {
+				character = EUR_scavenger_51
 				skill = 1
 				attack_skill = 3
 				defense_skill = 3
 				planning_skill = 3
 				logistics_skill = 3
+				traits = {
+					perceptive_trait
+					intelligent_trait
+				}
+				legacy_id = 12178
 			}
 			custom_effect_tooltip = eur_scavenger_51_tt
 			hidden_effect = {
@@ -388,7 +390,7 @@ focus_tree = {
 			focus = eur_pilot_training_procedures
 		}
 		available = {
-			has_air_experience > 74
+			has_air_experience > 74.99
 		}
 		relative_position_id = eur_pilot_training_procedures
 
@@ -699,12 +701,12 @@ focus_tree = {
 				exploitation_tech_level_scientific = 1
 			}
 			add_political_power = 25
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
 			39 = {
 				add_extra_state_shared_building_slots = 1
+			}
+			add_offsite_building = {
+					type = industrial_complex
+					level = 1
 			}
 		}
 	}
@@ -758,11 +760,11 @@ focus_tree = {
 		relative_position_id = eur_expedition_abroad
 
 		completion_reward = {
-			add_offsite_building = {
-				type = dockyard
-				level = 3
-			}
 			39 = {
+				add_building_construction = {
+					type = dockyard
+					level = 3
+				}
 				add_extra_state_shared_building_slots = 3
 			}
 		}
@@ -1489,12 +1491,12 @@ focus_tree = {
 		relative_position_id = eur_begin_army_reforms
 
 		completion_reward = {
+			country_lock_all_division_template = no
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 2
 				category = cat_land_doctrine
 			}
-			country_lock_all_division_template = no
 		}
 	}
 	focus = {
@@ -1543,12 +1545,12 @@ focus_tree = {
 		}
 		relative_position_id = eur_francis_won
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+			}
 			add_offsite_building = {
 					type = industrial_complex
 					level = 3
-				}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
 			}
 		}
 	}
@@ -1566,12 +1568,12 @@ focus_tree = {
 		relative_position_id = eur_francis_won
 
 		completion_reward = {
-			add_offsite_building= {
-					type = arms_factory
-					level = 3
-			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 3
+			}
+			add_offsite_building = {
+					type = arms_factory
+					level = 3
 			}
 		}
 	}
@@ -1588,12 +1590,12 @@ focus_tree = {
 		relative_position_id = eur_begin_local_development
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+			}
 			add_offsite_building = {
 					type = industrial_complex
 					level = 4
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 4
 			}
 		}
 	}
@@ -1610,12 +1612,12 @@ focus_tree = {
 		relative_position_id = eur_begin_weapons_production
 
 		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 4
+			}
 			add_offsite_building = {
 					type = arms_factory
 					level = 4
-			}
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 4
 			}
 		}
 	}
@@ -1632,10 +1634,6 @@ focus_tree = {
 		relative_position_id = eur_begin_local_development2
 
 		completion_reward = {
-			add_offsite_building = {
-				type = industrial_complex
-				level = 5
-			}
 			39 = {
 				hidden_effect = {
 					set_temp_variable = { new_node_target = THIS.id }
@@ -1651,8 +1649,13 @@ focus_tree = {
 				create_map_node = yes
 			}
 			39 = {
+
 				add_extra_state_shared_building_slots = 5
 			}
+				add_offsite_building = {
+				type = industrial_complex
+				level = 5
+				}
 		}
 	}
 	focus = {
@@ -1668,12 +1671,12 @@ focus_tree = {
 		relative_position_id = eur_begin_weapons_production2
 
 		completion_reward = {
-			add_offsite_building = {
-				type = arms_factory
-				level = 4
-			}
 			random_owned_controlled_state = {
 				add_extra_state_shared_building_slots = 4
+			}
+			add_offsite_building = {
+					type = arms_factory
+					level = 4
 			}
 			add_to_variable = { EUR_suspicion = 1 }
 			custom_effect_tooltip = eur_suspicion_increase_tt

@@ -1,0 +1,2464 @@
+﻿add_namespace = nf_vault_city
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_vault_city.1" }
+	id = nf_vault_city.1
+	title = nf_vault_city.1.t
+	desc = nf_vault_city.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.1.a
+		add_manpower = 200
+		291 = {
+			add_resource = {
+				type = water
+				amount = 4
+			}
+			add_resource = {
+				type = metal
+				amount = 3
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.1.b
+		add_manpower = 600
+		291 = {
+			add_building_construction = {
+				type = bunker
+				level = 2
+				instant_build = yes
+				province = {
+					id = 9197
+				}
+			}
+			add_building_construction = {
+				type = bunker2
+				level = 1
+				instant_build = yes
+				province = {
+					id = 9197
+				}
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.1.c
+		add_manpower = 400
+		add_ideas = early_geck
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_vault_city.2" }
+	id = nf_vault_city.2
+	title = nf_vault_city.2.t
+	desc = nf_vault_city.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.2.a
+		add_to_variable = { OldGuardParty = 1 }
+		hidden_effect = {
+			add_popularity = {
+				ideology = intellectuals
+				popularity = 0.05
+			}
+		}
+		custom_effect_tooltip = lynette_support_tt
+		activate_advisor = vlt_gordon_of_gecko_advisor
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					VLT_has_ai_behavior_maier = yes
+					VLT_has_ai_behavior_gordon = yes	# Picking Maier here, getting support for Lynette from NCR and then picking 4 of each focus = election draw
+				}
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.2.b
+		add_to_variable = { CitizenLeague = 1 }
+		hidden_effect = {
+			add_popularity = {
+				ideology = people
+				popularity = 0.05
+			}
+		}
+		custom_effect_tooltip = maier_support_tt
+		activate_advisor = vlt_gordon_of_gecko_advisor
+		add_to_variable = { mutant_hate = 1 }
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				VLT_has_ai_behavior_lynette = yes
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.2.c
+		activate_advisor = vlt_gordon_of_gecko_advisor
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				OR = {
+					VLT_has_ai_behavior_maier = yes
+					VLT_has_ai_behavior_gordon = yes	# Picking Maier here, getting support for Lynette from NCR and then picking 4 of each focus = election draw
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_vault_city.3" }
+	id = nf_vault_city.3
+	title = nf_vault_city.3.t
+	desc = nf_vault_city.3.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.3.a
+		add_ideas = vault_remnants_advisors
+		set_technology = {
+			power_armour_tech_level_tribal = 1
+			power_armour_tech_level_settler = 1
+		}
+		set_country_flag = vlt_unlock_rannor
+		effect_tooltip = {
+			add_field_marshal_role = {
+				character = VLT_chad_rannor
+				skill = 6
+				attack_skill = 4
+				defense_skill = 4
+				planning_skill = 5
+				logistics_skill = 5
+				traits = {
+					enduring_trait
+					agile_trait
+				}
+			}
+		}
+		custom_effect_tooltip = VLT_chad_rannor_stats_tt
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_vault_city.4" }
+	id = nf_vault_city.4
+	title = nf_vault_city.4.t
+	desc = nf_vault_city.4.d
+	picture = GFX_event_NCR_victory
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.4.a
+	}
+}
+
+country_event = {
+	id = nf_vault_city.5
+	title = nf_vault_city.5.t
+	desc = nf_vault_city.5.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.5.a
+		complete_national_focus = vlt_the_election_of_2275
+		clr_country_flag = vlt_selection_has_not_happened
+
+		country_event = {
+			id = nf_vault_city.6
+		}
+		# if = {
+		# 	limit = {
+		# 		check_variable = { OldGuardParty > CitizenLeague }
+		# 	}
+		# 	country_event = {
+		# 		id = nf_vault_city.6
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		check_variable = { OldGuardParty < CitizenLeague }
+		# 	}
+		# 	country_event = {
+		# 		id = nf_vault_city.7
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		check_variable = { OldGuardParty = CitizenLeague }
+		# 	}
+		# 	country_event = {
+		# 		id = nf_vault_city.8
+		# 	}
+		# }
+	}
+}
+
+country_event = {
+	id = nf_vault_city.6 # lynette wins
+	title = nf_vault_city.6.t
+	desc = nf_vault_city.6.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.6.a
+		complete_national_focus = vlt_a_second_term
+		set_politics = {
+			ruling_party = intellectuals
+		}
+		set_country_flag = vlt_lynette_win
+		set_country_flag = vlt_first_citizen_selected
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_neighbor_of = NCR
+						is_neighbor_of = VLT
+						news_is_west_tag = yes
+					}
+				}
+				news_event = { id = news_cali.17 hours = 6 random_hours = 3 }
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.7 # maier wins
+	title = nf_vault_city.7.t
+	desc = nf_vault_city.7.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.7.a
+		complete_national_focus = vlt_a_new_direction
+		set_politics = {
+			ruling_party = people
+		}
+		set_country_flag = vlt_maier_win
+		set_country_flag = vlt_first_citizen_selected
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_neighbor_of = NCR
+						is_neighbor_of = VLT
+						news_is_west_tag = yes
+					}
+				}
+				news_event = { id = news_cali.18 hours = 6 random_hours = 3 }
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.8 # draw
+	title = nf_vault_city.8.t
+	desc = nf_vault_city.8.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.8.a
+		# add_popularity = {
+		# 	ideology = elites
+		# 	popularity = 1
+		# }
+		set_politics = {
+			ruling_party = elites
+		}
+		hidden_effect = {
+			country_event = {
+				id = nf_vault_city.9
+				days = 7
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.9 # week of confusion
+	title = nf_vault_city.9.t
+	desc = nf_vault_city.9.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.9.a
+		add_stability = -0.25
+		hidden_effect = {
+			country_event = {
+				id = nf_vault_city.10
+				days = 14
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.10 # An Unexpected Development
+	title = nf_vault_city.10.t
+	desc = nf_vault_city.10.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.10.a
+		add_popularity = {
+			ideology = ruler
+			popularity = 0.25
+		}
+		hidden_effect = {
+			country_event = {
+				id = nf_vault_city.11
+				days = 14
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.11 # Something New
+	title = nf_vault_city.11.t
+	desc = nf_vault_city.11.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.11.a
+		add_popularity = {
+			ideology = ruler
+			popularity = 0.25
+		}
+		hidden_effect = {
+			country_event = {
+				id = nf_vault_city.12
+				days = 7
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.12 # An Opportunity
+	title = nf_vault_city.12.t
+	desc = nf_vault_city.12.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.12.a
+		hidden_effect = {
+			set_country_flag = cult_of_renewal_rising
+			set_country_flag = vlt_first_citizen_selected
+			set_popularities = {
+				people = 5
+				elites = 5
+				intellectuals = 5
+				ruler = 85
+			}
+			set_politics = {
+				ruling_party = ruler
+			}
+			load_focus_tree = vaultcity_gordon_nf
+			# mark_focus_tree_layout_dirty = yes
+			remove_advisor_role = {
+				character = "VLT_gordon_of_gecko"
+				slot = economic_advisor
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_neighbor_of = NCR
+						is_neighbor_of = VLT
+						news_is_west_tag = yes
+					}
+				}
+				news_event = { id = news_cali.22 hours = 6 random_hours = 3 }
+			}
+		}
+		custom_effect_tooltip = nf_vault_city.12_tt
+
+	}
+}
+
+
+news_event = {
+	id = nf_vault_city.13 # end of a term
+	title = nf_vault_city.13.t
+	desc = nf_vault_city.13.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.13.a
+	}
+}
+
+country_event = {
+	id = nf_vault_city.14 # Lynette Leaves
+	title = nf_vault_city.14.t
+	desc = nf_vault_city.14.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.14.b
+		NCR = { country_event = nf_vault_city.38 }
+	}
+	option = {
+		name = nf_vault_city.14.a
+		remove_ideas = ncrsubjugation
+		delete_unit_template_and_units = {
+			division_template = "NCR Garrison"
+			disband = yes
+		}
+		remove_opinion_modifier = {
+			target = NCR
+			modifier = vlt_ncr_garrison
+		}
+		NCR = {
+			effect_tooltip = {
+				remove_opinion_modifier = {
+					target = VLT
+					modifier = ncr_vlt_garrison
+				}
+				add_opinion_modifier = {
+					target = VLT
+					modifier = ncr_vlt_garrison_ousted
+				}
+			}
+			news_event = nf_vault_city.16
+		}
+	}
+}
+
+news_event = {
+	id = nf_vault_city.15 # Maier Leaves
+	title = nf_vault_city.15.t
+	desc = nf_vault_city.15.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.15.a
+		remove_ideas = ncrsubjugation
+		delete_unit_template_and_units = {
+			division_template = "NCR Garrison"
+			disband = yes
+		}
+		remove_opinion_modifier = {
+			target = NCR
+			modifier = vlt_ncr_garrison
+		}
+		NCR = {
+			effect_tooltip = {
+				remove_opinion_modifier = {
+					target = VLT
+					modifier = ncr_vlt_garrison
+				}
+				add_opinion_modifier = {
+					target = VLT
+					modifier = ncr_vlt_garrison_ousted
+				}
+			}
+			news_event = nf_vault_city.16
+		}
+	}
+}
+
+news_event = {
+	id = nf_vault_city.16 # Lynette Kicked Us Out!
+	title = nf_vault_city.16.t
+	desc = nf_vault_city.16.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.16.a
+		if = {
+			limit = {
+				tag = NCR
+			}
+			remove_ideas = vaultcityexpedition
+			effect_tooltip = {
+				VLT = {
+					remove_opinion_modifier = {
+						target = NCR
+						modifier = vlt_ncr_garrison
+					}
+				}
+			}
+			remove_opinion_modifier = {
+				target = VLT
+				modifier = ncr_vlt_garrison
+			}
+			add_opinion_modifier = {
+				target = VLT
+				modifier = ncr_vlt_garrison_ousted
+			}
+		}
+	}
+}
+
+
+## Lynette 20-40
+news_event = {
+	id = nf_vault_city.20 # end of a term
+	title = nf_vault_city.20.t
+	desc = nf_vault_city.20.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.20.a
+		add_political_power = 50
+		if = {
+			limit = {
+				has_idea = mutant_law_none
+			}
+			swap_ideas = {
+				remove_idea = mutant_law_none
+				add_idea = mutant_law_ghoul
+			}
+		}
+		custom_effect_tooltip = vlt_festus_advisor_token_tt
+	}
+}
+
+country_event = {
+	id = nf_vault_city.21 #Ultracite
+	title = nf_vault_city.21.t
+	desc = nf_vault_city.21.d
+	picture = GFX_event_ultracite_vein
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.21.a
+		set_temp_variable = { vlt_gecko_power_var_modify = 30 }
+		vlt_gecko_power_plant_change = yes
+	}
+	option = {
+		name = nf_vault_city.21.b
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 2
+			category = infantry_tech_category
+		}
+		set_temp_variable = { vlt_gecko_power_var_modify = 20 }
+		vlt_gecko_power_plant_change = yes
+	}
+}
+
+country_event = {
+	id = nf_vault_city.22 #Shoshone
+	title = nf_vault_city.22.t
+	desc = nf_vault_city.22.d
+	picture = GFX_event_navajo_2
+	fire_only_once = yes
+	trigger = {
+		original_tag = VLT
+		is_subject = no
+		is_faction_leader = yes
+		is_neighbor_of = SHO
+		has_war = no
+		CYC = {
+			all_core_land_owned_by_prev_sphere = yes
+		}
+		SHO = {
+			is_subject = no
+			is_in_faction = no
+			has_war = no
+		}
+		OR = {
+			SHO = {
+				is_ai = no
+			}
+			AND = {
+				date > 2280.1.1
+				BDT = {
+					OR = {
+						exists = no
+						is_subject = yes
+						NOT = { has_completed_focus = bdt_sho_war }
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nf_vault_city.22.a
+		create_wargoal = { type = puppet_wargoal_focus target = SHO }
+		add_war_support = -0.02
+		ai_chance = {
+			base = 0 #Always give Shoshone the chance to say yes or no and also get the flavor from the events
+		}
+	}
+	option = {
+		name = nf_vault_city.22.b
+		custom_effect_tooltip = nf_vault_city.22.b_tt
+		add_stability = -0.05
+		SHO = { country_event = nf_vault_city.23 }
+	}
+}
+country_event = {
+	id = nf_vault_city.23 #Shoshone
+	title = nf_vault_city.23.t
+	desc = nf_vault_city.23.d
+	picture = GFX_event_navajo_2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.23.a
+		VLT = { news_event = nf_vault_city.24 }
+	}
+	option = {
+		name = nf_vault_city.23.b
+		VLT = {news_event = nf_vault_city.25 }
+		ai_chance = {
+			base = 0 #Nevada Pact nations always accept as AI currently, so Shoshone also should never say no
+		}
+	}
+}
+
+news_event = {
+	id = nf_vault_city.24 #Shoshone Accept
+	title = nf_vault_city.24.t
+	desc = nf_vault_city.24.d
+	picture = GFX_event_navajo_2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.24.a
+		puppet = SHO
+	}
+}
+news_event = {
+	id = nf_vault_city.25 #Shoshone Refuse
+	title = nf_vault_city.25.t
+	desc = nf_vault_city.25.d
+	picture = GFX_event_navajo_2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.25.a
+		create_wargoal = { type = puppet_wargoal_focus target = SHO }
+	}
+}
+
+
+news_event = {
+	id = nf_vault_city.26 # Home Means Nevada to Me
+	title = nf_vault_city.26.t
+	desc = nf_vault_city.26.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+	major = yes
+	option = {
+		trigger = {
+			original_tag = VLT
+		}
+		name = nf_vault_city.26.a
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+	option = {
+		trigger = {
+			NOT = { original_tag = VLT }
+		}
+		name = nf_vault_city.26.b
+	}
+}
+
+
+country_event = {
+	id = nf_vault_city.27 # HSlanter
+	title = nf_vault_city.27.t
+	desc = nf_vault_city.27.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.27.a
+		VLT = { news_event = nf_vault_city.28 }
+		custom_effect_tooltip = nf_vault_city.27.a_tt
+	}
+	option = {
+		name = nf_vault_city.27.b
+		VLT = { news_event = nf_vault_city.29 }
+	}
+}
+
+
+
+news_event = {
+	id = nf_vault_city.28 #Slanter Say Yes
+	title = nf_vault_city.28.t
+	desc = nf_vault_city.28.d
+	picture = GFX_event_navajo_2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.28.a
+		puppet = SLN
+	}
+}
+news_event = {
+	id = nf_vault_city.29 #Slanter Say No
+	title = nf_vault_city.29.t
+	desc = nf_vault_city.29.d
+	picture = GFX_event_navajo_2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.29.a
+		create_wargoal = { type = puppet_wargoal_focus target = SLN }
+		add_war_support = -0.02
+	}
+}
+
+country_event = {
+	id = nf_vault_city.30 #Reno Invite
+	title = nf_vault_city.30.t
+	desc = {
+		text = nf_vault_city.30.d_w
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_christopher_wright
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = nf_vault_city.30.d_b
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mr_bishop
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = nf_vault_city.30.d_g
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mama_van_graff
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	# desc = {
+	# 	text = nf_vault_city.30.d_t_good_or_neutral
+	# 	trigger = {
+	# 		NEW = {
+	# 			has_country_leader = {
+	# 				character = NEW_thradd_the_immortal
+	# 				ruling_only = yes
+	# 			}
+	# 			NOT = {
+	# 				has_completed_focus = new_brokenrejecthumanity
+	# 			}
+	# 		}
+	# 	}
+	# }
+
+	picture = GFX_event_new_reno_3
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.30.a_w
+		NEW = { invite_to_nevada_pact = yes }
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_christopher_wright
+					ruling_only = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nf_vault_city.30.a_g
+		NEW = { invite_to_nevada_pact = yes }
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mama_van_graff
+					ruling_only = yes
+				}
+			}
+		}
+	}
+
+	option = {
+		name = nf_vault_city.30.a_b_wargoal
+		create_wargoal = { type = puppet_wargoal_focus target = NEW }
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mr_bishop
+					ruling_only = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		name = nf_vault_city.30.a_b_pact
+		NEW = { invite_to_nevada_pact = yes }
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mr_bishop
+					ruling_only = yes
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+	option = {
+		name = nf_vault_city.30.a_t_good_or_neutral
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_thradd_the_immortal
+					ruling_only = yes
+				}
+			}
+		}
+		create_wargoal = { type = puppet_wargoal_focus target = NEW }
+		ai_chance = {
+			base = 1
+		}
+	}
+	# option = {
+	# 	name = nf_vault_city.30.b_t_good_or_neutral
+	# 	trigger = {
+	# 		NEW = {
+	# 			has_country_leader = {
+	# 				character = NEW_thradd_the_immortal
+	# 				ruling_only = yes
+	# 			}
+	# 			NOT = {
+	# 				has_completed_focus = new_brokenrejecthumanity
+	# 			}
+	# 		}
+	# 	}
+	# 	NEW = { country_event = nf_vault_city.34 }
+	# 	ai_chance = {
+	# 		base = 10
+	# 	}
+	# }
+}
+
+country_event = {
+	id = nf_vault_city.32 # Vault City Arroyo Pact
+	title = nf_vault_city.32.t
+	desc = nf_vault_city.32.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.32.a
+		ARR = { add_to_tech_sharing_group = vault_city_research_pact }
+		VLT = { set_country_flag = ARR_citizenship }
+		add_ai_strategy = {
+			type = send_lend_lease_desire
+			id = VLT
+			value = 25
+		}
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = VLT
+			value = 25
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = VLT
+			value = 50
+		}
+		VLT = {
+			add_ai_strategy = {
+				type = send_lend_lease_desire
+				id = ARR
+				value = 25
+			}
+			add_ai_strategy = {
+				type = send_volunteers_desire
+				id = ARR
+				value = 25
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = ARR
+				value = 50
+			}
+		}
+		ai_chance = {
+			base = 2
+			modifier = {
+				add = 3
+				OR = {
+					ARR_has_ai_behavior_good_integrated = yes
+					ARR_has_ai_behavior_good_independent = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				VLT = { is_ai = no }
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.32.b
+		VLT = { news_event = nf_vault_city.33 }
+		add_stability = 0.05
+	}
+}
+news_event = {
+	id = nf_vault_city.33 #Arroyo Spurned Us!
+	title = nf_vault_city.33.t
+	desc = nf_vault_city.33.d
+	picture = GFX_event_ARR_arroyo
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.33.a
+		add_war_support = -0.02
+	}
+}
+country_event = {
+	id = nf_vault_city.34 # Vault City Arroyo Pact
+	title = nf_vault_city.34.t
+	desc = nf_vault_city.34.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.34.a
+		NEW = {
+			add_to_tech_sharing_group = vault_city_research_pact
+			create_or_join_nevada_pact = yes
+			set_country_flag = friendship_with_fault_city
+		}
+	}
+	option = {
+		name = nf_vault_city.34.b
+	#		VLT = { news_event = nf_vault_city.35 }
+		add_stability = 0.05
+	}
+}
+country_event = {
+	id = nf_vault_city.35 # Reno - approach from Vault City
+	title = nf_vault_city.35.t
+	desc = nf_vault_city.35.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.35.a
+		add_opinion_modifier = {
+			target = VLT
+			modifier = van_graff_trade
+		}
+		VLT = {
+			add_opinion_modifier = {
+				target = NEW
+				modifier = van_graff_trade
+			}
+		}
+		set_temp_variable = { caps_to_add = 100 }
+		add_caps = yes
+		add_tech_bonus = {
+			bonus = 0.5
+			uses = 1
+			category = energy_weaponry_tech_category
+		}
+		add_popularity = {
+			ideology = ruler
+			popularity = 0.05
+		}
+		VLT = { news_event = nf_vault_city.36 }
+		custom_effect_tooltip = nf_vault_city.35.a_tt
+
+
+	}
+	option = {
+		name = nf_vault_city.35.b
+		VLT = { news_event = nf_vault_city.37 }
+		add_stability = -0.05
+		add_equipment_to_stockpile = {
+			type = energy_equipment_1
+			amount = 100
+			producer = USA
+		}
+		add_opinion_modifier = {
+			target = VLT
+			modifier = van_graff_spurned
+		}
+		VLT = {
+			add_opinion_modifier = {
+				target = NEW
+				modifier = van_graff_spurned
+			}
+		}
+	}
+}
+news_event = {
+	id = nf_vault_city.36 # Reno said yes
+	title = nf_vault_city.36.t
+	desc = nf_vault_city.36.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.36.a
+		add_ideas = van_graffs
+		add_equipment_to_stockpile = {
+			type = energy_equipment_1
+			amount = 300
+			producer = USA
+		}
+	}
+}
+news_event = {
+	id = nf_vault_city.37 # Reno said no
+	title = nf_vault_city.37.t
+	desc = nf_vault_city.37.d
+	picture = GFX_event_new_reno2
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.37.a
+
+		291 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_vault_city.38 # NCR - Lynette Proposal
+	title = nf_vault_city.38.t
+	desc = nf_vault_city.38.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.38.a
+		swap_ideas = {
+			remove_idea = vaultcityexpedition
+			add_idea = vaultcityexpedition2
+		}
+		VLT = {
+			news_event = nf_vault_city.39
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = nf_vault_city.38.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+news_event = {
+	id = nf_vault_city.39 # NCR SAID YES
+	title = nf_vault_city.39.t
+	desc = nf_vault_city.39.d
+	picture = GFX_event_NCR_hoover_dam
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.39.a
+		swap_ideas = {
+			remove_idea = ncrsubjugation
+			add_idea = ncr_advisors
+		}
+		set_country_flag = ncr_working_with_vault_city
+	}
+}
+news_event = {
+	id = nf_vault_city.40 # Invitation to Vault City Research Pact
+	title = nf_vault_city.40.t
+	desc = nf_vault_city.40.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.40.a
+		add_to_tech_sharing_group = vault_city_research_pact
+	}
+}
+
+## Maier 50-70
+
+country_event = {
+	id = nf_vault_city.50 #Modoc Question
+	title = nf_vault_city.50.t
+	desc = nf_vault_city.50.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.50.a
+		MOD = {
+			country_event = { id = nf_vault_city.51 }
+		}
+	}
+	option = {
+		name = nf_vault_city.50.b
+		MOD = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+		swap_ideas = {
+			remove_idea = vlt_war_against_crime_idea
+			add_idea = vlt_war_against_crime_but_worse_idea
+		}
+		set_country_flag = vlt_modoc_decision_reached
+	}
+}
+
+country_event = {
+	id = nf_vault_city.51 # Modoc Question - Modocs Choice
+	title = nf_vault_city.51.t
+	desc = nf_vault_city.51.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.51.a
+		ai_chance = {
+			factor = 70
+		}
+		VLT = {
+			country_event = { id = nf_vault_city.52 }
+		}
+	}
+	option = {
+		name = nf_vault_city.51.b
+		ai_chance = {
+			factor = 30
+		}
+		VLT = {
+			country_event = { id = nf_vault_city.53 }
+		}
+		custom_effect_tooltip = event_modoc_choice_tt
+	}
+}
+
+country_event = {
+	id = nf_vault_city.52 # Modoc Question - Modocs Agrees
+	title = nf_vault_city.52.t
+	desc = nf_vault_city.52.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.52.a
+		MOD = {
+			give_military_access = VLT
+			add_opinion_modifier = {
+				target = VLT
+				modifier = vault_city_cooperation
+			}
+		}
+		add_opinion_modifier = {
+			target = MOD
+			modifier = vault_city_cooperated
+		}
+		set_country_flag = vlt_modoc_decision_coop
+		set_country_flag = vlt_modoc_decision_reached
+	}
+}
+
+country_event = {
+	id = nf_vault_city.53 # Modoc Question - Modocs Declines
+	title = nf_vault_city.53.t
+	desc = nf_vault_city.53.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.53.a
+		MOD = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+		swap_ideas = {
+			remove_idea = vlt_war_against_crime_idea
+			add_idea = vlt_war_against_crime_but_worse_idea
+		}
+		set_country_flag = vlt_modoc_decision_reached
+	}
+	option = {
+		name = nf_vault_city.53.b
+		set_country_flag = vlt_modoc_decision_reached
+	}
+}
+country_event = {
+	id = nf_vault_city.54 # send help to eastport
+	title = nf_vault_city.54.t
+	desc = nf_vault_city.54.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.54.a
+		country_event = { id = nf_vault_city.541 }
+	}
+}
+country_event = {
+	id = nf_vault_city.541 # eastport accepts
+	title = nf_vault_city.541.t
+	desc = nf_vault_city.541.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.541.a
+		VLT = {
+			give_guarantee = EAS
+		}
+		EAS = {
+			give_military_access = VLT
+			add_ideas = {
+				vlt_eas_cooperation
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.542 # eastport events - hidden timer event
+	title = nf_vault_city.542.t
+	desc = nf_vault_city.542.d
+	is_triggered_only = yes
+	hidden = yes
+
+	option = {
+		name = nf_vault_city.542.a
+		if = {
+			limit = {
+				NOT = {
+					has_country_flag = vlt_eas_events_3
+				}
+			}
+			country_event = {
+				id = nf_vault_city.542
+				days = 90
+				random_days = 10
+			}
+		}
+		if = {
+			limit = {
+				EAS = {
+					exists = yes
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = vlt_eas_events_1
+					}
+				}
+				set_country_flag = vlt_eas_events_1
+				country_event = { id = nf_vault_city.543 }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = vlt_eas_events_2
+					}
+				}
+				set_country_flag = vlt_eas_events_2
+				country_event = { id = nf_vault_city.544 }
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_country_flag = vlt_eas_events_3
+					}
+				}
+				set_country_flag = vlt_eas_events_3
+				country_event = { id = nf_vault_city.545 }
+			}
+			else = {
+				country_event = { id = nf_vault_city.546 }
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.543 # eastport events - improve infrastructure
+	title = nf_vault_city.543.t
+	desc = nf_vault_city.543.d
+	is_triggered_only = yes
+
+
+	option = {
+		name = nf_vault_city.543.a # immediate gain - less likely to join
+		367 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		567 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		set_temp_variable = { timed_construction_days = 90 }
+		timed_civil_construction_effect = yes
+	}
+	option = {
+		name = nf_vault_city.543.b
+		367 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		567 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_to_variable = { vlt_eas_opinion_of_vlt = 10 }
+		custom_effect_tooltip = vlt_eas_more_likely_to_join_tt
+	}
+}
+country_event = {
+	id = nf_vault_city.544 # eastport events - improve brewery
+	title = nf_vault_city.544.t
+	desc = nf_vault_city.544.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.544.a # immediate gain - less likely to join
+		367 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_ideas = {
+			vlt_eas_exclusive_imports
+		}
+	}
+	option = {
+		name = nf_vault_city.544.b
+		367 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_to_variable = { vlt_eas_opinion_of_vlt = 10 }
+		custom_effect_tooltip = vlt_eas_more_likely_to_join_tt
+	}
+}
+country_event = {
+	id = nf_vault_city.545 # eastport events - centralize population
+	title = nf_vault_city.545.t
+	desc = nf_vault_city.545.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.545.a # immediate gain - less likely to join
+		add_manpower = 300
+		EAS = {
+			367 = {
+				set_temp_variable = { pop_add = 7000 }
+				add_state_population_no_state_name = yes
+			}
+		}
+		367 = {
+			add_resource = {
+				type = water
+				amount = 3
+			}
+			add_resource = {
+				type = energy
+				amount = 7
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.545.b
+		367 = {
+			set_temp_variable = { pop_add = 15000 }
+			add_state_population_no_state_name = yes
+		}
+		367 = {
+			add_resource = {
+				type = water
+				amount = 3
+			}
+			add_resource = {
+				type = energy
+				amount = 7
+			}
+		}
+		add_to_variable = { vlt_eas_opinion_of_vlt = 10 }
+		custom_effect_tooltip = vlt_eas_more_likely_to_join_tt
+	}
+}
+country_event = {
+	id = nf_vault_city.546 # eastport events - anschluss the hell out of eastport
+	title = nf_vault_city.546.t
+	desc = nf_vault_city.546.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.546.a
+		EAS = {
+			country_event = { id = nf_vault_city.547 }
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.547 # eastport events - eastport anschluss answer
+	title = nf_vault_city.547.t
+	desc = nf_vault_city.547.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.547.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				add = vlt_eas_opinion_of_vlt
+			}
+		}
+		VLT = {
+			annex_country = {
+				target = EAS
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.547.b
+		ai_chance = {
+			base = 10
+			modifier = {
+				set_temp_variable = { vlt_eas_opinion_of_vlt_temp = vlt_eas_opinion_of_vlt }
+				divide_temp_variable = { vlt_eas_opinion_of_vlt_temp = 2 }
+				add = vlt_eas_opinion_of_vlt_temp
+			}
+		}
+		VLT = {
+			puppet = EAS
+		}
+	}
+	option = {
+		name = nf_vault_city.547.c
+		ai_chance = {
+			base = 10
+		}
+		VLT = { country_event = { id = nf_vault_city.5473 } }
+	}
+}
+country_event = {
+	id = nf_vault_city.5473 # eastport says no
+	title = nf_vault_city.5473.t
+	desc = nf_vault_city.5473.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.5473.a
+	}
+}
+
+country_event = {
+	id = nf_vault_city.56 # secret lab under s'lanter burrows. NOT HOOKED UP ATM. MIGHT DO SOMETHING WITH THAT LATER
+	title = nf_vault_city.56.t
+	desc = nf_vault_city.56.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.56.a
+	}
+}
+country_event = {
+	id = nf_vault_city.57 # reno leadership
+	title = nf_vault_city.57.t
+	picture = GFX_event_vault_city_council_building
+	desc = {
+		text = nf_vault_city.57.d_1
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mr_bishop
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = nf_vault_city.57.d_2
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_christopher_wright
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = nf_vault_city.57.d_3
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mama_van_graff
+					ruling_only = yes
+				}
+			}
+		}
+	}
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.57.a # if bishop is leader
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mr_bishop
+					ruling_only = yes
+				}
+			}
+		}
+		NEW = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+		NEW =  { news_event = nf_vault_city.58 }
+	}
+	option = {
+		name = nf_vault_city.57.b # if wright is leader
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_christopher_wright
+					ruling_only = yes
+				}
+			}
+		}
+		NEW = { country_event = nf_vault_city.59 }
+	}
+	option = {
+		name = nf_vault_city.57.c # if mama van graff is leader
+		trigger = {
+			NEW = {
+				has_country_leader = {
+					character = NEW_mama_van_graff
+					ruling_only = yes
+				}
+			}
+		}
+		NEW = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+		NEW = { news_event = nf_vault_city.62 }
+	}
+}
+news_event = {
+	id = nf_vault_city.58 # if bishop is leader
+	title = nf_vault_city.58.t
+	desc = nf_vault_city.58.d
+	picture = GFX_event_vault_city
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.58.a
+	}
+}
+
+country_event = {
+	id = nf_vault_city.59
+	title = nf_vault_city.59.t
+	desc = nf_vault_city.59.d
+	picture = GFX_event_new_reno_3
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.59.a
+		VLT = { news_event = nf_vault_city.60}
+		# Country is annexed into the Vault City.
+		ai_chance = {
+			# This is NOT the default response.
+			base = 0
+			# If the target has 100 opinion towards the VLT, this adds 10 to the AI
+			# weight for this option; if they have -100, it'll add -10 to the weight
+			# for this option.
+			modifier = {
+				set_temp_variable = { divided_opinion = opinion@VLT }
+				divide_temp_variable = { divided_opinion = 10 }
+				divide_temp_variable = { divided_opinion = 10 }
+				add = divided_opinion
+				always = yes
+			}
+			modifier = {
+				# Apparently this is also strength ratio actually does according to
+				# shultays.
+				set_temp_variable = { strength_comp = VLT.num_battalions }
+				divide_temp_variable = { strength_comp = num_battalions }
+				factor = strength_comp
+				always = yes
+			}
+		}
+		custom_effect_tooltip = nf_vault_city.59.a_tt
+	}
+	option = {
+		name = nf_vault_city.59.b
+		VLT = { news_event = nf_vault_city.61 }
+		ai_chance = {
+			# Telling VLT to fuck off is the default option.
+			base = 10
+			# If the target has 100 opinion towards the VLT, they will never tell them
+			# to fuck off. Otherwise it simply reduces the odds that they will say no.
+			modifier = {
+				set_temp_variable = { divided_opinion = opinion@VLT }
+				divide_temp_variable = { divided_opinion = -10 }
+				add = divided_opinion
+				always = yes
+			}
+			modifier = {
+				# Apparently this is also strength ratio actually does according to
+				# shultays.
+				set_temp_variable = { strength_comp = num_battalions }
+				divide_temp_variable = { strength_comp = VLT.num_battalions }
+				factor = strength_comp
+				always = yes
+			}
+		}
+	}
+
+}
+news_event = {
+	id = nf_vault_city.60 # Mr. Wright said yes
+	title = nf_vault_city.60.t
+	desc = nf_vault_city.60.d
+	picture = GFX_event_new_reno_3
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.60.a
+		annex_country = {
+			target = NEW
+			transfer_troops = no
+		}
+	}
+}
+news_event = {
+	id = nf_vault_city.61 # Mr. Wright said no.
+	title = nf_vault_city.61.t
+	desc = nf_vault_city.61.d
+	picture = GFX_event_new_reno_3
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.61.a
+		NEW = {
+			ROOT = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+	}
+}
+news_event = {
+	id = nf_vault_city.62 # If Van Graffs are Leaders
+	title = nf_vault_city.62.t
+	desc = nf_vault_city.62.d
+	picture = GFX_event_MOJ_close_down_van_graffs
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.62.a
+	}
+}
+
+country_event = {
+	id = nf_vault_city.63 # Slavery in the Den
+	title = nf_vault_city.63.t
+	desc = nf_vault_city.63.d
+	picture = GFX_event_den3
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.63.a
+		add_timed_idea = { idea = liberation_yay days = 500 }
+	}
+	option = {
+		name = nf_vault_city.63.b
+		add_political_power = 200
+	}
+}
+country_event = {
+	id = nf_vault_city.64 #ykz merc offer
+	title = nf_vault_city.64.t
+	desc = nf_vault_city.64.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.64.a
+		custom_effect_tooltip = nf_vault_city.64.a_tt
+		YKZ = {
+			country_event = {
+				id = nf_vault_city.65
+				days = 1
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.64.b
+		set_country_flag = vlt_has_something_against_ykz
+
+	}
+}
+country_event = {
+	id = nf_vault_city.65 #YKZ merc choice
+	title = nf_vault_city.65.t
+	desc = nf_vault_city.65.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.65.a
+		set_temp_variable = { caps_to_add = 100 }
+		add_caps = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 250
+			producer = VLT
+		}
+		diplomatic_relation = {
+			country = VLT
+			relation = non_aggression_pact
+			active = yes
+		}
+        unlock_decision_tooltip = VLT_YKZ_merc_war_on_JAC
+        unlock_decision_tooltip = VLT_YKZ_merc_war_on_VIP
+		VLT = {
+			country_event = { id = nf_vault_city.66 days = 1 }
+		}
+		hidden_effect = {
+#			country_event = {
+#				id = nf_vault_city.68
+#				days = 30
+#			}
+			VLT = {
+				set_country_flag = vlt_has_paid_off_ykz
+			}
+		}
+	}
+	option = {
+		name = nf_vault_city.65.b
+		custom_effect_tooltip = nf_vault_city.65.b_tt
+		VLT = {
+			set_country_flag = vlt_has_something_against_ykz
+			country_event = { id = nf_vault_city.67 days = 1 }
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.66 #YKZ accepts
+	title = nf_vault_city.66.t
+	desc = nf_vault_city.66.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.66.a
+		set_temp_variable = { caps_to_add = -100 }
+		add_caps = yes
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -250
+		}
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = YKZ
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.67 #YKZ rejects
+	title = nf_vault_city.67.t
+	desc = nf_vault_city.67.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.67.a
+		set_country_flag = vlt_has_something_against_ykz
+	}
+}
+#country_event = {
+#	id = nf_vault_city.68 #YKZ war against JAC
+#	title = nf_vault_city.68.t
+#	desc = nf_vault_city.68.d
+#	is_triggered_only = yes
+#	immediate = {
+#		hidden_effect = {
+#			declare_war_on = {
+#				target = JAC
+#				type = annex_everything
+#			}
+#		}
+#	}
+#	option = {
+#		name = nf_vault_city.68.a
+#	}
+#}
+#country_event = {
+#	id = nf_vault_city.69 #YKZ timer event for after JAC
+#	title = nf_vault_city.69.t
+#	desc = nf_vault_city.69.d
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = nf_vault_city.69.a
+#		country_event = {
+#			id = nf_vault_city.70
+#			days = 60
+#		}
+#	}
+#}
+#country_event = {
+#	id = nf_vault_city.70 #YKZ go to war with VIP
+#	title = nf_vault_city.70.t
+#	desc = nf_vault_city.70.d
+#	is_triggered_only = yes
+#	immediate = {
+#		hidden_effect = {
+#			declare_war_on = {
+#				target = VIP
+#				type = annex_everything
+#			}
+#		}
+#	}
+#	option = {
+#		name = nf_vault_city.70.a
+#	}
+#}
+country_event = {
+	id = nf_vault_city.71 #are the slags human?
+	title = nf_vault_city.71.t
+	desc = nf_vault_city.71.d
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.71.a
+		set_country_flag = vlt_slags_are_devo
+	}
+	option = {
+		name = nf_vault_city.71.b
+		set_country_flag = vlt_slags_are_humans
+	}
+}
+
+country_event = {
+	id = nf_vault_city.72 #protectorate event
+	title = nf_vault_city.72.t
+	desc = nf_vault_city.72.d
+	is_triggered_only = yes
+	picture = GFX_event_sub_generic_nevada_sign
+	option = {
+		name = nf_vault_city.72.a
+		set_party_name = {
+			ideology = people
+			long_name = VLT_people_pary_maier_long
+			name = VLT_people_pary_maier
+		}
+		hidden_effect = {
+			set_cosmetic_tag = VLT_maier
+		}
+		custom_effect_tooltip = vlt_how_the_east_was_won_tt
+		set_country_flag = vlt_reduced_wilds_campaign_coring_cost
+	}
+}
+
+country_event = { # maier power armor choice
+	id = nf_vault_city.73
+	title = nf_vault_city.73.t
+	desc = nf_vault_city.73.d
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.73.a
+		set_technology = {
+			power_armour_tech_level_scientific = 1
+		}
+	}
+	option = {
+		name = nf_vault_city.73.b
+		set_technology = {
+			texas_brotherhood_pa_tech = 1
+		}
+	}
+}
+
+
+## Cult of Renewal 80-90
+
+news_event =  {
+	id = nf_vault_city.18 # Gordon strengthens the garrison
+	title = nf_vault_city.18.t
+	desc = nf_vault_city.18.d
+	picture = GFX_event_vault_city_council_building
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.18.a
+		swap_ideas = {
+			remove_idea = ncrsubjugation
+			add_idea = ncrcooperation
+		}
+	}
+}
+
+
+country_event = {
+	id = nf_vault_city.80 # NCR Irregulars
+	title = nf_vault_city.80.t
+	desc = nf_vault_city.80.d
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = nf_vault_city.80.a
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "NCR Garrison"
+				disband = yes
+			}
+			load_oob = "VLT_ncr_spec_ops"
+		}
+		custom_effect_tooltip = nf_vault_city.80.a_tt
+
+	}
+	option = {
+		name = nf_vault_city.80.b
+		hidden_effect = {
+			delete_unit_template_and_units = {
+				division_template = "NCR Garrison"
+				disband = yes
+			}
+			load_oob = "VLT_ncr_infantry"
+		}
+		custom_effect_tooltip = nf_vault_city.80.b_tt
+	}
+}
+country_event = {
+	id = nf_vault_city.81
+	title = nf_vault_city.81.t
+	desc = nf_vault_city.81.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.81.a
+		set_country_flag = vlt_question_of_faith_brain
+		custom_effect_tooltip = vlt_question_of_faith_brain
+	}
+}
+country_event = {
+	id = nf_vault_city.82
+	title = nf_vault_city.82.t
+	desc = nf_vault_city.82.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.82.a
+		set_country_flag = vlt_question_of_faith_greed
+		custom_effect_tooltip = vlt_question_of_faith_greed
+	}
+}
+
+country_event = {
+	id = nf_vault_city.83
+	title = nf_vault_city.83.t
+	desc = nf_vault_city.83.d
+	picture = GFX_event_vault_city_squeak
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.83.a
+		country_event = { id = nf_vault_city.84 }
+	}
+}
+
+country_event = {
+	id = nf_vault_city.84
+	title = nf_vault_city.84.t
+	desc = nf_vault_city.84.d
+	is_triggered_only = yes
+	picture = GFX_event_vault_city_squeak
+	option = {
+		name = nf_vault_city.84.a
+		clr_country_flag = cult_of_renewal_rising
+		set_country_flag = cult_of_renewal_established
+		hidden_effect = {
+			load_focus_tree = vaultcity_renewal_nf
+		}
+		promote_character = VLT_the_brain
+		set_country_flag = vlt_brain_leads
+		custom_effect_tooltip = vlt_renewal_tree_tt
+		mark_focus_tree_layout_dirty = yes
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_neighbor_of = NCR
+						is_neighbor_of = VLT
+						news_is_west_tag = yes
+					}
+				}
+				news_event = { id = news_cali.21 hours = 6 random_hours = 3 }
+			}
+		}
+	}
+}
+news_event = {
+	id = nf_vault_city.85
+	title = nf_vault_city.85.t
+	desc = nf_vault_city.85.d
+	is_triggered_only = yes
+	picture = GFX_event_NCR_congress
+	option = {
+		name = nf_vault_city.85.a
+	}
+}
+news_event = {
+	id = nf_vault_city.86
+	title = nf_vault_city.86.t
+	desc = nf_vault_city.86.d
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.86.a
+		effect_tooltip = {
+			add_opinion_modifier = {
+				target = VLT
+				modifier = vault_city_redding_bros
+			}
+			reverse_add_opinion_modifier = {
+				target = VLT
+				modifier = vault_city_redding_bros
+			}
+			add_ideas = vlt_redding_buff_send
+			VLT = {
+				set_temp_variable = { caps_to_add = 75 }
+				add_caps = yes
+			}
+		}
+	}
+}
+
+### defunct for now. code just kept in case i may need it again
+country_event = {
+	id = nf_vault_city.99
+	title = nf_vault_city.99.t
+	desc = nf_vault_city.99.desc
+	hidden = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "reset adventure stats"
+		set_variable = { gecko_structure_health = 100 }
+		set_variable = { gecko_team_health = 50 }
+		# this is just to make the damage report scripted effect work in the initial use
+		set_variable = { gecko_structure_health_prev = gecko_structure_health }
+		set_variable = { gecko_team_health_prev = gecko_team_health }
+	}
+}
+
+
+## Gecko Textadventure 100-150
+
+country_event = {
+	id = nf_vault_city.100 # kick out the ghouls start
+	title = nf_vault_city.100.t
+	desc = nf_vault_city.100.d
+	picture = GFX_event_ending_slide_poseidon_good
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.100.a
+		custom_effect_tooltip = nf_vault_city.100_wait_tt
+		custom_effect_tooltip = nf_vault_city.100_tt
+		hidden_effect = {
+			if = {
+				limit = {
+					check_variable = { mutant_hate = 3 }
+				}
+				country_event = {
+					id = nf_vault_city.101
+					days = 3
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { mutant_hate = 2 }
+				}
+				random_list = {
+					60 = {
+						country_event = {
+							id = nf_vault_city.101
+							days = 3
+						}
+					}
+					40 = {
+						country_event = {
+							id = nf_vault_city.102
+							days = 3
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { mutant_hate = 1 }
+				}
+				random_list = {
+					50 = {
+						country_event = {
+							id = nf_vault_city.102
+							days = 3
+						}
+					}
+					50 = {
+						country_event = {
+							id = nf_vault_city.103
+							days = 3
+						}
+					}
+				}
+			}
+			else = {
+				random_list = {
+					70 = {
+						country_event = {
+							id = nf_vault_city.103
+							days = 3
+						}
+					}
+					30 = {
+						country_event = {
+							id = nf_vault_city.104
+							days = 3
+						}
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	id = nf_vault_city.101 # good for you
+	title = nf_vault_city.101.t
+	desc = nf_vault_city.101.d
+	picture = GFX_event_ending_slide_poseidon_good
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.101.a
+		set_country_flag = concluded_gecko_assault
+		set_country_flag = gecko_assault_good
+		set_temp_variable = { vlt_gecko_power_var_modify = -10 }
+		set_temp_variable = { vlt_gecko_construction_var_modify = 1 }
+		set_temp_variable = { vlt_gecko_manpower_var_modify = 0.3 }
+		vlt_gecko_power_plant_change = yes
+	}
+}
+country_event = {
+	id = nf_vault_city.102 # mediocre for you
+	title = nf_vault_city.102.t
+	desc = nf_vault_city.102.d
+	picture = GFX_event_ending_slide_poseidon_good
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.102.a
+		set_country_flag = concluded_gecko_assault
+		set_country_flag = gecko_assault_mediocre
+		set_temp_variable = { vlt_gecko_power_var_modify = -15 }
+		set_temp_variable = { vlt_gecko_construction_var_modify = 1 }
+		set_temp_variable = { vlt_gecko_manpower_var_modify = 0.3 }
+		vlt_gecko_power_plant_change = yes
+	}
+}
+country_event = {
+	id = nf_vault_city.103 # bad for you
+	title = nf_vault_city.103.t
+	desc = nf_vault_city.103.d
+	picture = GFX_event_ending_slide_poseidon_good
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.103.a
+		set_country_flag = gecko_assault_bad
+		add_ideas = vlt_gecko_conflict
+		set_temp_variable = { vlt_gecko_power_var_modify = -15 }
+		vlt_gecko_power_plant_change = yes
+	}
+}
+country_event = {
+	id = nf_vault_city.1031 # bad for you followup
+	title = nf_vault_city.1031.t
+	desc = nf_vault_city.1031.d
+	picture = GFX_event_ending_slide_poseidon_good
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.1031.a
+		remove_ideas = vlt_gecko_conflict
+		set_country_flag = vlt_unlock_braelynn
+		set_country_flag = concluded_gecko_assault
+		effect_tooltip = {
+			add_corps_commander_role = {
+				character = VLT_braelynn_christopherson
+				skill = 5
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 2
+				traits = {
+					perceptive_trait
+					agile_trait
+				}
+			}
+		}
+		custom_effect_tooltip = VLT_braelynn_christopherson_stats_tt
+	}
+}
+
+country_event = {
+	id = nf_vault_city.104 # very bad for you
+	title = nf_vault_city.104.t
+	desc = nf_vault_city.104.d
+	picture = GFX_event_ending_slide_poseidon_bad
+	is_triggered_only = yes
+	option = {
+		name = nf_vault_city.104.a
+		goto_province = 2713
+		launch_nuke = {
+			province = 2713
+			use_nuke = no
+		}
+		hidden_effect = {
+			339 = {
+				remove_dynamic_modifier = {
+					modifier = vlt_gecko_powerplant
+				}
+			}
+		}
+		add_ideas = vlt_ruins_of_gecko
+		set_country_flag = concluded_gecko_assault
+	}
+}
+
+### Renewal Events
+
+country_event = {
+	id = nf_vault_city.250 # Anomalies Bonedancers
+	title = nf_vault_city.250.t
+	desc = nf_vault_city.250.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.250.a
+		country_event = { id = nf_vault_city.251 }
+	}
+}
+country_event = {
+	id = nf_vault_city.251 # Anomalies Bonedancers 2
+	title = nf_vault_city.251.t
+	desc = nf_vault_city.251.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.251.a
+		goto_province = 12222
+		set_country_flag = bone_dancer_anomaly_timer_visible
+		custom_effect_tooltip = vlt_anomaly_decisions_tt
+	}
+}
+country_event = {
+	id = nf_vault_city.252 # Anomalies Vault City
+	title = nf_vault_city.252.t
+	desc = nf_vault_city.252.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.252.a
+		goto_province = 714
+		set_country_flag = vault_city_anomaly_timer_visible
+		custom_effect_tooltip = vlt_anomaly_decisions_tt
+	}
+}
+country_event = {
+	id = nf_vault_city.253 # The Adventures of Zomak
+	title = nf_vault_city.253.t
+	desc = nf_vault_city.253.d
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			add_advisor_role = {
+				Character = VLT_zomak
+				advisor = {
+					slot = high_command
+					cost = 50
+					idea_token = VLT_zomak_advisor
+					traits = {
+						vlt_zomak_destroyer
+					}
+				}
+				activate = yes
+			}
+		}
+	}
+
+	option = {
+		name = nf_vault_city.253.a
+		effect_tooltip = {
+			add_advisor_role = {
+				Character = VLT_zomak
+				advisor = {
+					slot = high_command
+					cost = 0
+					idea_token = VLT_zomak_advisor
+					traits = {
+					}
+				}
+			activate = yes
+			}
+		}
+		add_trait = {
+			character = VLT_zomak
+			slot = high_command
+			trait = vlt_zomak_third_eye
+		}
+		country_event = { id = nf_vault_city.254 }
+	}
+	option = {
+		name = nf_vault_city.253.b
+		effect_tooltip = {
+			add_advisor_role = {
+				Character = VLT_zomak
+				advisor = {
+					slot = high_command
+					cost = 0
+					idea_token = VLT_zomak_advisor
+					traits = {
+					}
+				}
+			activate = yes
+			}
+		}
+		add_trait = {
+			character = VLT_zomak
+			slot = high_command
+			trait = vlt_zomak_mutated_arm
+		}
+		country_event = { id = nf_vault_city.255 }
+	}
+}
+country_event = {
+	id = nf_vault_city.254 # Zomak Third Eye
+	title = nf_vault_city.254.t
+	desc = nf_vault_city.254.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.254.a
+		add_trait = {
+			character = VLT_zomak
+			slot = high_command
+			trait = vlt_zomak_degree_in_economics
+		}
+		country_event = { id = nf_vault_city.256 }
+	}
+	option = {
+		name = nf_vault_city.254.b
+		add_trait = {
+			character = VLT_zomak
+			slot = high_command
+			trait = vlt_zomak_a_weird_book
+		}
+		country_event = { id = nf_vault_city.257 }
+	}
+}
+country_event = {
+	id = nf_vault_city.255 # Zomak Mutated Arm
+	title = nf_vault_city.255.t
+	desc = nf_vault_city.255.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.255.a
+		add_trait = {
+			character = VLT_zomak
+			slot = high_command
+			trait = vlt_zomak_degree_in_economics
+		}
+		country_event = { id = nf_vault_city.256 }
+	}
+	option = {
+		name = nf_vault_city.255.b
+		add_trait = {
+			character = VLT_zomak
+			slot = high_command
+			trait = vlt_zomak_a_weird_book
+		}
+		country_event = { id = nf_vault_city.257 }
+	}
+}
+country_event = {
+	id = nf_vault_city.256 # Zomak Degree in Economics
+	title = nf_vault_city.256.t
+	desc = nf_vault_city.256.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.256.a
+	}
+}
+country_event = {
+	id = nf_vault_city.257 # Zomak A Weird Book
+	title = nf_vault_city.257.t
+	desc = nf_vault_city.257.d
+	is_triggered_only = yes
+
+	option = {
+		name = nf_vault_city.257.a
+	}
+}

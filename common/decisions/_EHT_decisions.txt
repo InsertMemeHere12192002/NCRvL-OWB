@@ -1159,7 +1159,8 @@ EHT_spawn_raiders = {
 			controls_state = 168
 		}
 		visible = {
-			has_completed_focus = EHT_raider_refugees
+			always = no
+			#focus isn't in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {
@@ -1178,7 +1179,8 @@ EHT_spawn_raiders = {
 			controls_state = 253
 		}
 		visible = {
-			has_completed_focus = EHT_raiders_across_spine
+			always = no
+			#focus isn't in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {
@@ -1197,7 +1199,8 @@ EHT_spawn_raiders = {
 			controls_state = 589
 		}
 		visible = {
-			has_completed_focus = EHT_raiders_across_spine
+			always = no
+			#focus not in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {
@@ -1216,7 +1219,8 @@ EHT_spawn_raiders = {
 			controls_state = 190
 		}
 		visible = {
-			has_completed_focus = EHT_raiders_across_spine
+			always = no
+			#focus not in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {
@@ -1235,7 +1239,8 @@ EHT_spawn_raiders = {
 			controls_state = 543
 		}
 		visible = {
-			has_completed_focus = EHT_raiders_across_spine
+			always = no
+			#focus not in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {
@@ -1254,7 +1259,8 @@ EHT_spawn_raiders = {
 			controls_state = 342
 		}
 		visible = {
-			has_completed_focus = EHT_raiders_across_spine
+			always = no
+			#focus not in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {
@@ -1273,7 +1279,8 @@ EHT_spawn_raiders = {
 			controls_state = 380
 		}
 		visible = {
-			has_completed_focus = EHT_raiders_across_spine
+			always = no
+			#focus not in our tree
 		}
 		# days_re_enable = 50
 		complete_effect = {

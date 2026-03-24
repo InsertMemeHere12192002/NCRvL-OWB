@@ -1860,7 +1860,86 @@ focus_tree = {
 	#		}
 	#	}
 	#}
-
+	focus =	{
+		id = shale_the_road_of_conquest
+		icon = GFX_goal_generic_texas2
+		cost = 30
+		x = -1
+		y = 1
+		available = {
+			date > 2276.11.01
+		}
+		prerequisite = {
+			focus = shale_fruits_of_our_labour
+		}
+		prerequisite = {
+			focus = shale_tame_the_beasts
+		}
+		bypass = {
+			LNS = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			TBH = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						has_cosmetic_tag = TEX_provisional
+					}
+				}
+				TEX = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		relative_position_id = shale_tame_the_beasts
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = TBH
+		completion_reward = {
+			hidden_effect = {
+				set_truce = {
+					target = LNS
+					days = 0
+				}
+				set_truce = {
+					target = TBH
+					days = 0
+				}
+			}
+			LNS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			TBH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						has_cosmetic_tag = TEX_provisional
+					}
+				}
+				TEX = {
+					ROOT = {
+						grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+					}
+				}
+			}
+			set_country_flag = ai_prefers_to_fight_neighbors
+			every_state = {
+				tooltip = every_texan_state
+				limit = {
+					is_texan_state = yes
+				}
+				add_claim_by = SHA
+			}
+		}
+	}
+	
 	focus =	{
 		id = shale_faith_of_the_army
 		icon = GFX_goal_NEW_rebuild_cult
@@ -1946,85 +2025,7 @@ focus_tree = {
 		}
 	}
 
-	focus =	{
-		id = shale_the_road_of_conquest
-		icon = GFX_goal_generic_texas2
-		cost = 30
-		x = -1
-		y = 1
-		available = {
-			date > 2276.11.01
-		}
-		prerequisite = {
-			focus = shale_fruits_of_our_labour
-		}
-		prerequisite = {
-			focus = shale_tame_the_beasts
-		}
-		bypass = {
-			LNS = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			TBH = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			if = {
-				limit = {
-					any_other_country = {
-						has_cosmetic_tag = TEX_provisional
-					}
-				}
-				TEX = {
-					all_core_land_owned_by_prev_sphere = yes
-				}
-			}
-		}
-		relative_position_id = shale_tame_the_beasts
-		will_lead_to_war_with = LNS
-		will_lead_to_war_with = TBH
-		completion_reward = {
-			hidden_effect = {
-				set_truce = {
-					target = LNS
-					days = 0
-				}
-				set_truce = {
-					target = TBH
-					days = 0
-				}
-			}
-			LNS = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-			TBH = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-			if = {
-				limit = {
-					any_other_country = {
-						has_cosmetic_tag = TEX_provisional
-					}
-				}
-				TEX = {
-					ROOT = {
-						grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-					}
-				}
-			}
-			set_country_flag = ai_prefers_to_fight_neighbors
-			every_state = {
-				tooltip = every_texan_state
-				limit = {
-					is_texan_state = yes
-				}
-				add_claim_by = SHA
-			}
-		}
-	}
+	
 	
 	focus = {
 		id = shale_calix_new_beginning
@@ -2076,12 +2077,10 @@ focus_tree = {
 			}
 			set_technology = {	
 				robotics_tech_level_scientific = 1
-				air_tech_level_scientific = 1
 				electronics_tech_level_scientific = 1
 				exploitation_tech_level_scientific = 1
 				popup = no
 			}
-			remove_ideas = aeronautics_ineptitude
 		}
 	}
 	focus = {
@@ -2215,7 +2214,7 @@ focus_tree = {
 			every_owned_state = {
 				add_state_modifier = {
 					modifier = { 
-						compliance_gain = 0.05 
+						compliance_gain = 0.04 
 					}
 				}
 				add_state_modifier = {
@@ -3238,9 +3237,8 @@ focus_tree = {
 		relative_position_id = imo_the_battlewagon
 		completion_reward = {
 			add_research_slot = 1
-			add_ideas = {
-				idea = imo_industrial_fervor
-			}
+			add_ideas =  imo_industrial_fervor
+
 		}
 	}
 
@@ -3319,37 +3317,6 @@ focus_tree = {
 			add_ideas = imo_slimmed_chasis
 		}
 	}
-
-	focus = {
-		id = imo_unification_wars
-		icon = GFX_goal_attis_army
-		cost = 30
-		x = 0
-		y = 3
-		allow_branch = {
-			original_tag = IMO
-		}
-		available = {
-			SHA = {
-				has_completed_focus = shale_unite_the_army
-			}
-		}
-		relative_position_id = imo_flames_of_the_forge
-		bypass = {
-			UOA = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			SHA = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-		}
-		#will_lead_to_war_with = SHA
-		#will_lead_to_war_with = UOA
-		#will_lead_to_war_with = EDN
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
 	focus = {
 		id = imo_ach_tbh_puppet
 		icon = GFX_goal_TBH_two_coins
@@ -3407,6 +3374,116 @@ focus_tree = {
 			}
 		}
 	}
+	focus =	{
+		id = imo_the_road_of_conquest
+		icon = GFX_goal_generic_texas2
+		cost = 30
+
+		available = {
+			date > 2277.1.01
+		}
+		prerequisite = {
+			focus = imo_ach_tbh_puppet
+		}
+		relative_position_id = imo_ach_tbh_puppet
+		x = 0
+		y = 1
+		bypass = {
+			LNS = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			TBH = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						has_cosmetic_tag = TEX_provisional
+					}
+				}
+				TEX = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		will_lead_to_war_with = LNS
+		will_lead_to_war_with = TBH
+		completion_reward = {
+			hidden_effect = {
+				set_truce = {
+					target = LNS
+					days = 0
+				}
+				set_truce = {
+					target = TBH
+					days = 0
+				}
+			}
+			LNS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			TBH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+			if = {
+				limit = {
+					any_other_country = {
+						has_cosmetic_tag = TEX_provisional
+					}
+				}
+				TEX = {
+					ROOT = {
+						grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+					}
+				}
+			}
+			set_country_flag = ai_prefers_to_fight_neighbors
+			every_state = {
+				tooltip = every_texan_state
+				limit = {
+					is_texan_state = yes
+				}
+				add_claim_by = IMO
+			}
+		}
+	}
+
+	focus = {
+		id = imo_unification_wars
+		icon = GFX_goal_attis_army
+		cost = 30
+		x = 0
+		y = 1
+		allow_branch = {
+			original_tag = IMO
+		}
+		available = {
+			SHA = {
+				has_completed_focus = imo_the_road_of_conquest
+			}
+		}
+		relative_position_id = imo_the_road_of_conquest
+		bypass = {
+			UOA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			SHA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		#will_lead_to_war_with = SHA
+		#will_lead_to_war_with = UOA
+		#will_lead_to_war_with = EDN
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	
 
 	focus = {
 		id = imo_fort_stockton
@@ -3548,93 +3625,15 @@ focus_tree = {
 	#		}
 	#	}
 	#}
-	focus =	{
-		id = imo_the_road_of_conquest
-		icon = GFX_goal_generic_texas2
-		cost = 30
-		x = 0
-		y = 0
-		available = {
-			date > 2277.1.01
-		}
-		prerequisite = {
-			focus = imo_ach_tbh_puppet
-		}
-		relative_id = imo_ach_tbh_puppet
-		bypass = {
-			LNS = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			TBH = {
-				all_core_land_owned_by_prev_sphere = yes
-			}
-			if = {
-				limit = {
-					any_other_country = {
-						has_cosmetic_tag = TEX_provisional
-					}
-				}
-				TEX = {
-					all_core_land_owned_by_prev_sphere = yes
-				}
-			}
-		}
-		relative_position_id = imo_unification_wars
-		will_lead_to_war_with = LNS
-		will_lead_to_war_with = TBH
-		completion_reward = {
-			hidden_effect = {
-				set_truce = {
-					target = LNS
-					days = 0
-				}
-				set_truce = {
-					target = TBH
-					days = 0
-				}
-			}
-			LNS = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-			TBH = {
-				ROOT = {
-					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-				}
-			}
-			if = {
-				limit = {
-					any_other_country = {
-						has_cosmetic_tag = TEX_provisional
-					}
-				}
-				TEX = {
-					ROOT = {
-						grant_wargoals_on_core_states_of_prev_force_ai_war = yes
-					}
-				}
-			}
-			set_country_flag = ai_prefers_to_fight_neighbors
-			every_state = {
-				tooltip = every_texan_state
-				limit = {
-					is_texan_state = yes
-				}
-				add_claim_by = IMO
-			}
-		}
-	}
+	
 		### Crushers army
 	focus = {
 		id = attis_crusher
 		icon = GFX_goal_mutant_supremacy
-		cost = 7
+		cost = 30
 		x = 0
 		y = 1
 		mutually_exclusive = { focus = attis_juggernaught focus = attis_shale }
-		available = {
-		}
 		prerequisite = {
 			focus = attis_3
 		}
@@ -3643,7 +3642,7 @@ focus_tree = {
 			set_cosmetic_tag = SHA_crusher
 			retire_country_leader = yes
 			add_country_leader_role = {
-				character = UOA_lieutenant_crusher
+				character = SHA_lieutenant_crusher
 				promote_leader = yes
 				country_leader = {
 					desc = UOA_LIEUTENTANT_CRUSHER_DESC

@@ -310,9 +310,9 @@ focus_tree = {
         prerequisite = {
             focus = PAR_goober_6
         }
-        mutually_exclusive = {
-            focus = ces_painted_rock
-        }
+        # mutually_exclusive = {
+        #     focus = ces_painted_rock
+        # }
         available = {
             PAR = { owns_state = 868 }
         }

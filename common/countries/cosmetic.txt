@@ -1216,7 +1216,7 @@ GDH_costa = {
 }
 
 CES_malpais_legion = {
-	color = rgb { 200 40 85 ) }
+	color = rgb { 200 40 85 }
 	color_ui = rgb { 200 40 85 }
 }
 CES_lucius_legion = {
@@ -2036,4 +2036,8 @@ HVR_liberty = {
 COM_PIO = {
 	color = rgb { 51 101 55 }
 	color_ui = rgb { 51 101 55 }
+}
+FBH = {
+	color = rgb { 227 154 66 }
+	color_ui = rgb { 227 154 66}
 }

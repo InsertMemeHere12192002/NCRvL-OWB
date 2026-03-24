@@ -32,3 +32,17 @@ NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 24					-- how many divisions 
 NDefines.NMilitary.DIVISION_SIZE_FOR_XP = 4								-- how many battalions should a division have to count as a full divisions when calculating XP stuff
 NDefines.NMilitary.FIELD_MARSHAL_DIVISIONS_CAP = 24						-- how many divisions a field marshall is limited to. 0 = inf, < 0 = blocked
 NDefines.NMilitary.FIELD_MARSHAL_ARMIES_CAP = 5							-- how many armies a field marshall is limited to. 0 = inf, < 0 = blocked
+
+-- Field Officers --
+NDefines.NMilitary.VPS_FOR_HISTORY_ENTRY = 3					-- Minimum VPs required to receive an entry in divisional history
+NDefines.NMilitary.VPS_FOR_HIGH_HISTORY_ENTRY = 8				-- VPs required for high-level history entry
+NDefines.NMilitary.ENTRIES_TO_CHECK_FOR_DUPLICATE = 2			-- Max number of history entries to check back to see if we're being awarded the same entry
+NDefines.NMilitary.COST_INCREASE_PER_ACTIVE_MEDAL = 0.25		-- Additional cost factor per active medal
+NDefines.NMilitary.MAX_ENTRY_ELISION_COUNT = 4					-- If we do the same type of thing consecutively, each entry will stack locations up to this number
+NDefines.NMilitary.GENERATE_AI_DIV_COMMAND_HISTORY_ENTRIES = true	--Should we generate history entries for the AI (may cause savegame bloat)
+NDefines.NMilitary.FIELD_EXPERIENCE_ON_DIVISION_MULT = 1	-- Multiply field experience gained by this, when applying to divisional commander
+NDefines.NMilitary.MAX_FIELD_EXPERIENCE_ON_DIVISION = 8000	-- Max experience that can be gained on divisional commanders
+NDefines.NMilitary.FIELD_EXPERIENCE_ON_DIVISION_PER_MEDAL_MULT = 0.1	--Multiply officer field experience gain by this * number of division medals on application
+NDefines.NMilitary.HISTORY_OPERATION_RANDOM_MAX = 24			-- max random int to roll when determining whether to grant an awardable entry for operations. 1/N chances.
+NDefines.NMilitary.CASUALTY_COUNT_FOR_HISTORY_ENTRY = 750	-- number of received casualties to receive a history entry (one only)
+NDefines.NMilitary.FIELD_OFFICER_PROMOTION_PENALTY = 0.25		--Amount of division experience lost when promoting a commander (reduced by modifiers)

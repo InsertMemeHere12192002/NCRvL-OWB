@@ -1,0 +1,578 @@
+﻿add_namespace = nf_fbh
+
+
+# The White Legs Petition
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.1" }
+	id = nf_fbh.1
+	title = nf_fbh.1.t
+	desc = nf_fbh.1.d
+	picture = GFX_event_CES_whitelegs
+
+	is_triggered_only = yes
+
+	# Ally
+	option = {
+		name = nf_fbh.1.a
+		1410 = {
+			if = {
+				limit = {
+					is_valid_state_for_4_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	# Refuse
+	option = {
+		name = nf_fbh.1.b
+		1410 = {
+			if = {
+				limit = {
+					is_valid_state_for_2_civilian_factories = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.2" }
+	id = nf_fbh.2
+	title = nf_fbh.2.t
+	desc = nf_fbh.2.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	# mutants join tribe
+	option = {
+		name = nf_fbh.2.a
+		add_ideas = fbh_long_march
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.3" }
+	id = nf_fbh.3
+	title = nf_fbh.3.t
+	desc = nf_fbh.3.d
+	picture = GFX_event_CES_whitelegs
+
+	is_triggered_only = yes
+
+	# Guns
+	option = {
+		name = nf_fbh.3.a
+		FBH_jonathan_maxson = {
+			retire = yes
+		}
+			add_country_leader_role = {
+				character = "FBH_angharad"
+				country_leader = {
+					ideology = militarist_technocracy
+					expire="3000.01.01.01"
+					traits = {
+						bos_war_hero_of_the_ncr_war
+					}
+				}
+				promote_leader = yes
+			}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.4" }
+	id = nf_fbh.4
+	title = nf_fbh.4.t
+	desc = nf_fbh.4.d
+	picture = GFX_event_CES_whitelegs
+
+	is_triggered_only = yes
+
+	# Guns
+	option = {
+		name = nf_fbh.4.a
+		swap_ideas = {
+			remove_idea = fbh_long_march
+			add_idea = fbh_long_march_2
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.5" }
+	id = nf_fbh.5
+	title = nf_fbh.5.t
+	desc = nf_fbh.5.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.5.a
+		add_popularity = { ideology = elites popularity = 0.6 }
+	}
+	
+	option = {
+		name = nf_fbh.5.b
+		add_popularity = { ideology = people popularity = 0.6 }
+	}
+	
+	option = {
+		name = nf_fbh.5.c
+		add_popularity = { ideology = intellectuals popularity = 0.6 }
+	}
+	
+	option = {
+		name = nf_fbh.5.d
+		add_popularity = { ideology = ruler popularity = 0.6 }
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.6" }
+	id = nf_fbh.6
+	title = nf_fbh.6.t
+	desc = nf_fbh.6.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {  ## offer loot
+		name = nf_fbh.6.a
+		add_popularity = { ideology = elites popularity = 0.2 }
+		add_popularity = { ideology = people popularity = -0.2 }
+	}
+	
+	option = { ####
+		name = nf_fbh.6.b
+		add_popularity = { ideology = intellectuals popularity = 0.2 }
+		add_popularity = { ideology = people popularity = -0.2 }
+	}
+		
+	option = {
+		name = nf_fbh.6.c
+		add_popularity = { ideology = ruler popularity = 0.2 }	
+		add_popularity = { ideology = people popularity = -0.2 }
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.7" }
+	id = nf_fbh.7
+	title = nf_fbh.7.t
+	desc = nf_fbh.7.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.7.a
+		add_research_slot = 1
+
+	}
+	option = {
+		name = nf_fbh.7.b
+		1410 = {
+			add_resource = {
+				type = energy 
+				amount = 40
+			}
+			add_resource = {
+				type = water
+				amount = 40
+			}
+		}
+		add_manpower = 1000
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.8" }
+	id = nf_fbh.8
+	title = nf_fbh.8.t
+	desc = nf_fbh.8.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.8.a
+		if  = {
+			limit = {
+				intellectuals > party_popularity@elites
+				intellectuals > party_popularity@ruler
+				intellectuals > party_popularity@people
+			}
+			set_politics = {
+				ruling_party = intellectuals
+				elections_allowed = no
+			}
+		}
+		else_if  = {
+			limit = {
+				elites > party_popularity@intellectuals
+				elites > party_popularity@ruler
+				elites > party_popularity@people
+			}
+			set_politics = {
+				ruling_party = elites
+				elections_allowed = no
+			}
+		}
+		else_if = {
+			limit = {
+				ruler > party_popularity@elites
+				ruler > party_popularity@intellectuals
+				ruler > party_popularity@people
+			}
+			set_politics = {
+				ruling_party = ruler
+				elections_allowed = no
+			}
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.9" }
+	id = nf_fbh.9
+	title = nf_fbh.9.t
+	desc = nf_fbh.9.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.9.a
+		set_technology = {
+			electronic_engineering = 1
+			electronic_engineering_1 = 1
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.10" }
+	id = nf_fbh.10
+	title = nf_fbh.10.t
+	desc = nf_fbh.10.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.10.a
+		set_temp_variable = { caps_to_add = 150 }
+		add_caps = yes 
+	}
+	option = {
+		name = nf_fbh.10.b
+		add_political_power = 100
+		
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.11" }
+	id = nf_fbh.11
+	title = nf_fbh.11.t
+	desc = nf_fbh.11.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.11.a
+		set_temp_variable = { caps_to_add = 150 }
+		add_caps = yes
+	}
+	
+	option = {
+		name = nf_fbh.11.b
+		add_political_power = 100
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.12" }
+	id = nf_fbh.12
+	title = nf_fbh.12.t
+	desc = nf_fbh.12.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.12.a
+		set_temp_variable = { caps_to_add = -75 }
+		add_caps = yes
+		add_manpower = 750
+		add_stability = 0.05
+		CES = {	 
+			set_temp_variable = { caps_to_add = 75 }
+			add_caps = yes
+			add_manpower = -750
+		}
+	}
+	
+	option = {
+		name = nf_fbh.12.b
+		set_temp_variable = { caps_to_add = -150 }
+		add_caps = yes
+		add_manpower = 1250
+		add_stability = 0.1
+		CES = {	 
+			set_temp_variable = { caps_to_add = 150 }
+			add_caps = yes
+			add_manpower = -1250
+		}
+	}
+	
+	option = {
+		name = nf_fbh.12.a
+		add_stability = -0.1
+
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.13" }
+	id = nf_fbh.13
+	title = nf_fbh.13.t
+	desc = nf_fbh.13.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.13.a
+        add_to_variable = { geck_count = 1 }
+		add_stability = 0.1
+		FBH = {
+			add_stability = -0.1
+		}
+	}
+	option = {
+		name = nf_fbh.13.b
+		FBH = {
+			add_stability = 0.1
+			add_to_variable = { geck_count = 1 }
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.15 #Legion Puppet" }
+	id = nf_fbh.15 #Legion Puppet
+	title = nf_fbh.15.t
+	desc = nf_fbh.15.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.15.a
+		set_technology = {
+			settled_civilization = 1
+		}
+		add_tech_bonus = {
+			uses = 1
+			bonus = 1
+			ahead_reduction = 1
+			category = power_armor_tech_category
+		}
+		IRN = {
+			add_tech_bonus = {
+			uses = 2
+			bonus = 0.25
+			category = power_armor_tech_category
+			}
+		}
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.16 #Legion Puppet" }
+	id = nf_fbh.16 #Legion Puppet
+	title = nf_fbh.16.t
+	desc = nf_fbh.16.d
+	picture = GFX_event_ulysses
+	fire_only_once = yes
+	option = {
+		name = nf_fbh.16.a
+		add_manpower = -100
+		CES = {
+			add_manpower = -50
+		}
+		RES = {
+			add_manpower = 150
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.17  ##Betray the Eighties" }
+	id = nf_fbh.17  ##Betray the Eighties
+	title = nf_fbh.17.t
+	desc = nf_fbh.17.d
+	picture = GFX_event_car_2
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.17.a
+		NCR = {
+			add_to_faction = FBH
+			add_ai_strategy = {
+				type = alliance
+				id = "FBH"
+				value = 500
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "NCR"
+			value = 500
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.18  ##Women Protestors" }
+	id = nf_fbh.18  ##Women Protestors
+	title = nf_fbh.18.t
+	desc = nf_fbh.18.d
+	picture = GFX_event_generic_ruins_2
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.18.a
+		CES = {
+			add_to_faction = FBH
+			add_ai_strategy = {
+				type = alliance
+				id = "FBH"
+				value = 500
+			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "CES"
+			value = 500
+		}
+
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.19  ##Women Protestors" }
+	id = nf_fbh.19  ##Women Protestors
+	title = nf_fbh.19.t
+	desc = nf_fbh.19.d
+	picture = GFX_event_NCN_new_canaan
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.19.a
+		MOT = {
+				division_template = {
+					name = "Brotherhood Paladins" #CW Tools - False positive? Wiki says that "name" is correct here and not "division name"
+					is_locked = no
+						priority = 2
+						template_counter = 0
+						regiments = {
+						Paladin_unit = { x = 0 y = 0 }
+						Paladin_unit = { x = 0 y = 1 }
+						Paladin_unit = { x = 1 y = 0 }
+						Paladin_unit = { x = 1 y = 1 }
+						Paladin_demo_unit = { x = 2 y = 0 }
+						Paladin_fireteam_unit = { x = 2 y = 1 }
+						Paladin_demo_unit = { x = 0 y = 2 }
+						Paladin_fireteam_unit = { x = 1 y = 2 }
+					}
+					support = {
+						knight_support_unit = { x = 0 y = 0 }
+						knight_support_unit = { x = 0 y = 1 }
+						scribe_support_unit = { x = 0 y = 2 }
+						scribe_support_unit = { x = 0 y = 3 }
+					}
+				}
+			random_owned_controlled_state = {
+				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
+					owner = MOT
+				}
+				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
+					owner = MOT
+				}
+				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
+					owner = MOT
+				}
+			}
+		}
+
+	}
+}
+
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.20  ## White Leg Poetry" }
+	id = nf_fbh.20  ## White Leg Poetry
+	title = nf_fbh.20.t
+	desc = nf_fbh.20.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.20.a
+		add_stability = 0.10
+		add_equipment_to_stockpile = {
+			type = power_armor_equipment_5
+			amount = 100
+			producer = USA
+		}
+	}
+	
+	option = {
+		name = nf_fbh.20.b
+		add_stability = -0.1
+		add_equipment_to_stockpile = {
+			type = power_armor_equipment_5
+			amount = 500
+			producer = USA
+		}
+	}
+}
+country_event = {
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_fbh.21" }
+	id = nf_fbh.21
+	title = nf_fbh.21.t
+	desc = nf_fbh.21.d
+	picture = GFX_event_CES_whitelegs
+	is_triggered_only = yes
+	option = {
+		name = nf_fbh.21.a
+		IRN = {
+				division_template = {
+					name = "Brotherhood Paladins" #CW Tools - False positive? Wiki says that "name" is correct here and not "division name"
+					is_locked = no
+						priority = 2
+						template_counter = 0
+						regiments = {
+						Paladin_unit = { x = 0 y = 0 }
+						Paladin_unit = { x = 0 y = 1 }
+						Paladin_unit = { x = 1 y = 0 }
+						Paladin_unit = { x = 1 y = 1 }
+						Paladin_demo_unit = { x = 2 y = 0 }
+						Paladin_fireteam_unit = { x = 2 y = 1 }
+						Paladin_demo_unit = { x = 0 y = 2 }
+						Paladin_fireteam_unit = { x = 1 y = 2 }
+					}
+					support = {
+						knight_support_unit = { x = 0 y = 0 }
+						knight_support_unit = { x = 0 y = 1 }
+						scribe_support_unit = { x = 0 y = 2 }
+						scribe_support_unit = { x = 0 y = 3 }
+					}
+				}
+			random_owned_controlled_state = {
+				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
+					owner = IRN
+				}
+				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
+					owner = IRN
+				}
+				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
+					owner = IRN
+				}
+			}
+		}
+
+	}
+}
+

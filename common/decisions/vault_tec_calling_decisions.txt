@@ -1,0 +1,1181 @@
+# vault_tec_calling_category = {
+# 	#Vault Decisions
+# 	vault_3 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			380 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_3_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_3 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.1
+# 			set_country_flag = delved_into_vault_3
+# 			set_global_flag = vault_3_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_3 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_6 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			351 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_6_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_6 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.2
+# 			add_manpower = -300
+# 			set_country_flag = delved_into_vault_6
+# 			set_global_flag = vault_6_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_6 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	# vault_8 = {
+# 	# 	icon = GFX_decision_vault_tec
+# 	# 	cost = 25
+# 	# 	fire_only_once = yes
+# 	# 	ai_will_do = {
+# 	# 		factor = 45
+# 	# 	}
+# 	# 	available = {
+# 	# 		NOT = {
+# 	# 			TAG = VLT
+# 	# 		}
+# 	# 		is_vault_tec_nation = yes
+# 	# 		291 = {
+# 	# 			OWNER = {
+# 	# 				OR = {
+# 	# 					original_tag = ROOT
+# 	# 					AND = {
+# 	# 						is_subject_of = ROOT
+# 	# 						NOT = { is_vault_tec_nation = yes }
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 		}
+# 	# 		NOT = { has_global_flag = vault_8_surveyed_global_flag }
+# 	# 	}
+# 	# 	visible = {
+# 	# 		NOT = {
+# 	# 			TAG = VLT
+# 	# 		}
+# 	# 	}
+# 	# 	complete_effect = {
+# 	# 		if = {
+# 	# 			limit = { has_global_flag = debug_logs }
+# 	# 			log = "[GetDateText]: [Root.GetName] vault_8 (decision) complete entered"
+# 	# 		}
+# 	# 		country_event = nf_vault_tec.20
+# 	# 		if = {
+# 	# 			limit = {
+# 	# 				291 = {
+# 	# 					OWNER = {
+# 	# 						OR = {
+# 	# 							original_tag = ROOT
+# 	# 							is_subject_of = ROOT
+# 	# 						}
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 			291 = {
+# 	# 				set_state_name = STATE_291_VAULT
+# 	# 				hidden_effect = {
+# 	# 					set_province_name = {
+# 	# 						id = 9197
+# 	# 						name = VICTORY_POINTS_9197_VAULT
+# 	# 					}
+# 	# 				}
+# 	# 			}
+# 	# 		}
+# 	# 		set_country_flag = explored_into_vault_8
+# 	# 		set_global_flag = vault_8_surveyed_global_flag
+# 	# 		if = {
+# 	# 			limit = {
+# 	# 				game_rules_allow_achievements = yes
+# 	# 				is_ai = no
+# 	# 			}
+# 	# 			add_to_variable = { global.vault_surveys_completed = 1 }
+# 	# 			if = {
+# 	# 				limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 	# 				set_country_flag = achievement_vault_surveys_flag
+# 	# 			}
+# 	# 		}
+# 	# 		if = {
+# 	# 			limit = { has_global_flag = debug_logs }
+# 	# 			log = "[GetDateText]: [Root.GetName] vault_8 (decision) complete exited"
+# 	# 		}
+# 	# 	}
+# 	# }
+
+# 	vault_9 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			1042 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_9_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_9 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.22
+# 			set_country_flag = delved_into_vault_9
+# 			set_global_flag = vault_9_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_9 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_13 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			151 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_13_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_13 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.3
+# 			set_country_flag = delved_into_vault_13
+# 			set_global_flag = vault_13_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_13 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_15 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			253 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_15_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_15 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.4
+# 			if = {
+# 				limit = {
+# 					253 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				253 = {
+# 					set_state_name = STATE_253_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 8814
+# 							name = VICTORY_POINTS_8814_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_15
+# 			set_global_flag = vault_15_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_15 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_19 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			313 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_19_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_19 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.5
+# 			if = {
+# 				limit = {
+# 					313 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				313 = {
+# 					set_state_name = STATE_313_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 8849
+# 							name = VICTORY_POINTS_8849_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_19
+# 			set_global_flag = vault_19_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_19 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_21 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			211 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_21_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_21 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.6
+# 			if = {
+# 				limit = {
+# 					211 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				211 = {
+# 					set_state_name = STATE_211_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 3179
+# 							name = VICTORY_POINTS_3179_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_21
+# 			set_global_flag = vault_21_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_21 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_22 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			344 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_22_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_22 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.7
+# 			if = {
+# 				limit = {
+# 					344 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				344 = {
+# 					set_state_name = STATE_344_VAULT
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_22
+# 			set_global_flag = vault_22_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_22 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_24 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			NOT = {
+# 				TAG = CLK
+# 			}
+# 			is_vault_tec_nation = yes
+# 			496 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_24_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = {
+# 				TAG = CLK
+# 			}
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_24 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.16
+# 			set_country_flag = delved_into_vault_24
+# 			set_global_flag = vault_24_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_24 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+
+# 	vault_29 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			554 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_29_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = {
+# 				original_tag = TTM
+# 			}
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_29 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.11
+# 			if = {
+# 				limit = {
+# 					554 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				554 = {
+# 					set_state_name = STATE_554_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 5583
+# 							name = VICTORY_POINTS_5583_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_29
+# 			set_global_flag = vault_29_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_22 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+
+# 	vault_34 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			NOT = { has_global_flag = vault_34 }
+# 			is_vault_tec_nation = yes
+# 			NOT = { original_tag = BOO }
+# 			154 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_34_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = { original_tag = BOO }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_34 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.8
+# 			if = {
+# 				limit = {
+# 					154 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				154 = {
+# 					set_state_name = STATE_154_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 8856
+# 							name = VICTORY_POINTS_8856_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_global_flag = vault_34
+# 			set_country_flag = delved_into_vault_34
+# 			set_global_flag = vault_34_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_34 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# 	vault_37 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			NOT = {
+# 				TAG = VTS
+# 			}
+# 			1201 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_37_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = {
+# 				TAG = VTS
+# 			}
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_37 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.19
+# 			if = {
+# 				limit = {
+# 					1201 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				1201 = {
+# 					set_state_name = STATE_1201_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 13255
+# 							name = VICTORY_POINTS_13255_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_37
+# 			set_global_flag = vault_37_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_37 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# 	vault_70 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			551 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_70_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_70 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.9
+# 			if = {
+# 				limit = {
+# 					551 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				551 = {
+# 					set_state_name = STATE_551_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 6536
+# 							name = VICTORY_POINTS_6536_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_70
+# 			set_global_flag = vault_70_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_70 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# 	vault_107 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			NOT = {
+# 				TAG = VSH
+# 			}
+# 			1271 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_107_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = {
+# 				TAG = VSH
+# 			}
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_107 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.15
+# 			if = {
+# 				limit = {
+# 					1271 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				1271 = {
+# 					set_state_name = STATE_1271_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 13713
+# 							name = VICTORY_POINTS_13713_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_107
+# 			set_global_flag = vault_107_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_107 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# 	vault_corporate = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			NOT = {
+# 				TAG = EXE
+# 			}
+# 			677 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_corporate_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = {
+# 				TAG = EXE
+# 			}
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_corporate (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.21
+# 			if = {
+# 				limit = {
+# 					677 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				677 = {
+# 					set_state_name = STATE_677_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 5615
+# 							name = VICTORY_POINTS_5615_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_corporate
+# 			set_global_flag = vault_corporate_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_corporate (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# 	vault_redmond = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			1110 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_redmond_surveyed_global_flag }
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_redmond (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.20
+# 			if = {
+# 				limit = {
+# 					1110 = {
+# 						OWNER = {
+# 							OR = {
+# 								original_tag = ROOT
+# 								is_subject_of = ROOT
+# 							}
+# 						}
+# 					}
+# 				}
+# 				1110 = {
+# 					set_state_name = STATE_1110_VAULT
+# 					hidden_effect = {
+# 						set_province_name = {
+# 							id = 12892
+# 							name = VICTORY_POINTS_12892_VAULT
+# 						}
+# 					}
+# 				}
+# 			}
+# 			set_country_flag = delved_into_vault_redmond
+# 			set_global_flag = vault_redmond_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_redmond (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# 	vault_27 = {
+# 		icon = GFX_decision_vault_tec
+# 		cost = 25
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 45
+# 		}
+# 		available = {
+# 			is_vault_tec_nation = yes
+# 			532 = {
+# 				OWNER = {
+# 					OR = {
+# 						original_tag = ROOT
+# 						AND = {
+# 							is_subject_of = ROOT
+# 							NOT = { is_vault_tec_nation = yes }
+# 						}
+# 					}
+# 				}
+# 			}
+# 			NOT = { has_global_flag = vault_27_surveyed_global_flag }
+# 		}
+# 		visible = {
+# 			NOT = {
+# 				TAG = VLS
+# 			}
+# 		}
+# 		complete_effect = {
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_27 (decision) complete entered"
+# 			}
+# 			country_event = nf_vault_tec.23
+# 			set_country_flag = delved_into_vault_27
+# 			set_global_flag = vault_27_surveyed_global_flag
+# 			if = {
+# 				limit = {
+# 					game_rules_allow_achievements = yes
+# 					is_ai = no
+# 				}
+# 				add_to_variable = { global.vault_surveys_completed = 1 }
+# 				if = {
+# 					limit = { check_variable = { global.vault_surveys_completed > 9 } }
+# 					set_country_flag = achievement_vault_surveys_flag
+# 				}
+# 			}
+# 			add_to_variable = { personal_vault_surveys_completed = 1 }
+# 			if = {
+# 				limit = { has_global_flag = debug_logs }
+# 				log = "[GetDateText]: [Root.GetName] vault_27 (decision) complete exited"
+# 			}
+# 		}
+# 	}
+# }

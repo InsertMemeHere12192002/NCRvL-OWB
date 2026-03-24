@@ -495,6 +495,10 @@ technologies = {
 			hardness = 0.2
 			default_morale = 0.03
 		}
+			heavy_super_mutant_infantry = {
+			hardness = 0.2
+			default_morale = 0.03	
+		}
 
 		path = {
 			leads_to_tech = heavy_infantry_tech_3
@@ -549,6 +553,17 @@ technologies = {
 			}
 		}
 		motorized_heavy_infantry = {
+			soft_attack = 0.05
+			urban = {
+				attack = 0.10
+				defence = 0.10
+			}
+			fort = {
+				attack = 0.10
+				defence = 0.10
+			}
+		}
+				heavy_super_mutant_infantry = {
 			soft_attack = 0.05
 			urban = {
 				attack = 0.10
@@ -668,6 +683,19 @@ technologies = {
 			fort = {
 				attack = 0.10
 				defence = 0.10
+			}
+		}
+
+		heavy_super_mutant_infantry = {
+			breakthrough = 0.05
+			suppression_factor = 0.1
+			river = {
+				attack = 0.10
+				movement = 0.10
+			}
+			amphibious = {
+				attack = 0.10
+				movement = 0.10
 			}
 		}
 
@@ -3161,7 +3189,7 @@ technologies = {
 			}
 		}
 		path = {
-			leads_to_tech = c_t51b_pa_tech
+			leads_to_tech = jetpacks_pa_tech
 			research_cost_coeff = 1
 		}
 
@@ -3210,7 +3238,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = t51b_pa_tech
+			leads_to_tech = t60_pa_tech
 			research_cost_coeff = 1
 		}
 
@@ -3249,7 +3277,7 @@ technologies = {
 		}
 	}
 
-	t51b_pa_tech = {
+	t60_pa_tech = {
 
 		enable_equipments = {
 			power_armor_equipment_4
@@ -3268,7 +3296,7 @@ technologies = {
 			}
 		}
 		path = {
-			leads_to_tech = c_t51b_pa_tech
+			leads_to_tech = jetpacks_pa_tech
 			research_cost_coeff = 1
 		}
 
@@ -3307,26 +3335,77 @@ technologies = {
 		}
 	}
 
-	c_t51b_pa_tech = {
+	# c_t51b_pa_tech = {
 
-		enable_equipments = {
-			power_armor_equipment_4_light
+	# 	enable_equipments = {
+	# 		power_armor_equipment_4_light
+	# 	}
+	# 	on_research_complete = {
+	# 		if = {
+	# 			limit = {
+	# 				has_game_rule = {
+	# 					rule = unit_logger_rule
+	# 					option = ENABLED
+	# 				}
+	# 			}
+	# 			add_to_array = {
+	# 				researched_techs = 226
+	# 			}
+	# 		}
+	# # 	}
+	# 	path = {
+	# 		leads_to_tech = h_t51b_pa_tech
+	# 		research_cost_coeff = 1
+	# 	}
+
+	# 	research_cost = 2.2
+	# 	xp_research_type = army
+	# 	xp_boost_cost = 35
+	# 	xp_research_bonus = 0.3
+
+	# 	start_year = 2285
+	# 	folder = {
+	# 		name = fallout_infantry_folder
+	# 		position = { x = @Row_specopsmiddle y = @Col_10 }
+	# 	}
+
+	# 	dependencies = {
+	# 		power_armour_tech_level_scientific = 1
+	# 		c_t45d_pa_tech = 1
+	# 		t51b_pa_tech = 1
+	# 	}
+
+	# 	categories = {
+	# 		infantry_tech_category
+	# 		power_armor_tech_category
+	# 		scientific_tech_category
+	# 	}
+
+	# 	ai_will_do = {
+	# 		factor = 1
+
+	# 		modifier = {
+	# 			factor = 5
+	# 			has_country_flag = power_armor_doctrine_ai
+	# 		}
+	# 		modifier = {
+	# 			factor = 10
+	# 			date > "2288.1.1"
+	# 		}
+	# 	}
+	# }
+	jetpacks_pa_tech = {
+
+		category_power_armour = {
+			maximum_speed = 0.05
+			breakthrough = 0.1
 		}
-		on_research_complete = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = unit_logger_rule
-						option = ENABLED
-					}
-				}
-				add_to_array = {
-					researched_techs = 226
-				}
-			}
+		power_armour_support = {
+			breakthrough = 0.1
 		}
+
 		path = {
-			leads_to_tech = h_t51b_pa_tech
+			leads_to_tech = t51b_pa_tech
 			research_cost_coeff = 1
 		}
 
@@ -3344,13 +3423,7 @@ technologies = {
 		dependencies = {
 			power_armour_tech_level_scientific = 1
 			c_t45d_pa_tech = 1
-			t51b_pa_tech = 1
-		}
-
-		categories = {
-			infantry_tech_category
-			power_armor_tech_category
-			scientific_tech_category
+			t60_pa_tech = 1
 		}
 
 		ai_will_do = {
@@ -3362,12 +3435,12 @@ technologies = {
 			}
 			modifier = {
 				factor = 10
-				date > "2288.1.1"
+				date > "2286.1.1"
 			}
 		}
 	}
 
-	h_t51b_pa_tech = {
+	t51b_pa_tech = {
 
 		enable_equipments = {
 			power_armor_equipment_5
@@ -3423,14 +3496,10 @@ technologies = {
 	# Horses, Cavalry
 
 	spec_ops_horses_tech = {
-		research_cost = 2.2
-
-		allow = {
-			always = no
-		}
-
+		research_cost = 6.0
 		dependencies = {
-			blocked_tech = 1
+			blocked_unit_tech = 1
+			spec_ops_equipment_tech_1 = 1
 		}
 
 		start_year = 2276
@@ -3698,7 +3767,7 @@ technologies = {
 
 		folder = {
 			name = fallout_infantry_folder
-			position = { x = @Row_specops y = @Col_13 }
+			position = { x = @Row_specops y = @Col_11 }
 		}
 
 		categories = {
@@ -3746,8 +3815,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			scientific_tech_category
 		}
 
@@ -3780,8 +3847,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			scientific_tech_category
 		}
 
@@ -3791,166 +3856,6 @@ technologies = {
 				factor = 50
 				date > "2287.1.1"
 			}
-		}
-	}
-
-	mirelurk_infantry_unlock_tech = {
-		research_cost = 1.0
-
-		allow = {
-			always = no
-		}
-
-		dependencies = {
-			blocked_tech = 1
-		}
-
-		folder = {
-			name = fallout_infantry_folder
-			position = { x = @Row_heavyinf y = @Col_12 }
-		}
-
-		enable_equipments = {
-			mirelurk_equipment_1
-		}
-
-		enable_subunits = {
-			mirelurk_infantry
-		}
-
-		sub_technologies = {
-			mirelurk_upgrade_tech_1
-			mirelurk_upgrade_tech_2
-			mirelurk_upgrade_tech_3
-		}
-
-		categories = {
-		}
-
-		ai_will_do = {
-			factor = 0
-		}
-	}
-
-	mirelurk_upgrade_tech_1 = {
-
-		mirelurk_infantry = {
-			soft_attack = 0.2
-			hard_attack = 0.2
-			breakthrough = 0.1
-			defense = 0.1
-		}
-
-		research_cost = 2
-		start_year = 2277
-
-		categories = {
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 20
-				date > "2277.1.1"
-			}
-			modifier = {
-				factor = 0
-				NOT = { tag = MLT}
-			}
-		}
-	}
-
-	mirelurk_upgrade_tech_2 = {
-
-		mirelurk_infantry = {
-			soft_attack = 0.2
-			hard_attack = 0.2
-			breakthrough = 0.12
-			defense = 0.12
-		}
-
-		research_cost = 2
-		start_year = 2281
-
-		categories = {
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 20
-				date > "2281.1.1"
-			}
-			modifier = {
-				factor = 0
-				NOT = { tag = MLT}
-			}
-		}
-	}
-
-	mirelurk_upgrade_tech_3 = {
-
-		mirelurk_infantry = {
-			soft_attack = 0.2
-			hard_attack = 0.2
-			breakthrough = 0.15
-			defense = 0.15
-		}
-
-		research_cost = 2
-		start_year = 2283
-
-		categories = {
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 20
-				date > "2283.1.1"
-			}
-			modifier = {
-				factor = 0
-				NOT = { tag = MLT}
-			}
-		}
-	}
-
-	molerat_infantry_unlock_tech = {
-		research_cost = 1.0
-
-		allow = {
-			always = no
-		}
-
-		dependencies = {
-			blocked_tech = 1
-		}
-
-		folder = {
-			name = fallout_infantry_folder
-			position = { x = @Row_melee y = @Col_12 }
-		}
-
-		enable_equipments = {
-			molerat_equipment_1
-		}
-
-		enable_subunits = {
-			molerat_infantry
-		}
-
-		sub_technologies = {
-			molerat_upgrade_tech_1
-			molerat_upgrade_tech_2
-			molerat_upgrade_tech_3
-		}
-
-		categories = {
-		}
-
-		ai_will_do = {
-			factor = 0
 		}
 	}
 
@@ -3977,8 +3882,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			civilized_tech_category
 		}
 
@@ -3994,28 +3897,39 @@ technologies = {
 		}
 
 		dependencies = {
-			blocked_tech = 1
+			midwest_pa_unlock_tech = 1
+			simple_servo_tech = 1
 		}
 
 		research_cost = 2
-		start_year = 2280
+		start_year = 2278
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_12 }
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			civilized_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
+			modifier = {
+				factor = 5
+				has_country_flag = power_armor_doctrine_ai
+			}
+			modifier = {
+				factor = 10
+				date > "2278.1.1"
+			}
 		}
 	}
 
 	skater_tech = {
+		research_cost = 5.0
+		dependencies = {
+			blocked_unit_tech = 1
+		}
 		enable_subunits = {
 			skate_infantry
 		}
@@ -4024,9 +3938,6 @@ technologies = {
 			skate_equipment_1
 		}
 
-		dependencies = {
-			blocked_tech = 1
-		}
 		on_research_complete_limit = {
 			NOT = {
 				has_template_containing_unit = skate_infantry
@@ -4039,11 +3950,9 @@ technologies = {
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 
-		research_cost = 2
-		start_year = 2275
 		folder = {
 			name = fallout_infantry_folder
-			position = { x = @Row_specops y = @Col_11 }
+			position = { x = @Row_melee y = @Col_11 }
 		}
 
 		path = {
@@ -4074,7 +3983,7 @@ technologies = {
 		start_year = 2279
 		folder = {
 			name = fallout_infantry_folder
-			position = { x = @Row_specops y = @Col_12 }
+			position = { x = @Row_melee y = @Col_12 }
 		}
 
 		categories = {
@@ -4083,20 +3992,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 
 	# Behemoth
 	super_mutant_behemoth = {
-		research_cost = 1.0
-
-		allow = {
-			always = no
-		}
-
+		research_cost = 6.0
 		dependencies = {
-			blocked_tech = 1
+			blocked_unit_tech = 1
 		}
 
 		folder = {
@@ -4216,38 +4120,6 @@ technologies = {
 				factor = 10
 				date > "2279.1.1"
 			}
-		}
-	}
-
-	radroach_infantry_unlock_tech = {
-		research_cost = 1.0
-
-		allow = {
-			always = no
-		}
-
-		dependencies = {
-			blocked_tech = 1
-		}
-
-		folder = {
-			name = fallout_infantry_folder
-			position = { x = @Row_melee y = @Col_11 }
-		}
-
-		enable_equipments = {
-			radroach_equipment_1
-		}
-
-		enable_subunits = {
-			radroach_infantry
-		}
-
-		categories = {
-		}
-
-		ai_will_do = {
-			factor = 0
 		}
 	}
 

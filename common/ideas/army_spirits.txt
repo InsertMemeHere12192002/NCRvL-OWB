@@ -1,0 +1,1671 @@
+ideas = {
+	academy_spirit = {
+		bold_attack_spirit = {
+			ledger = army
+			modifier = {
+				custom_modifier_tooltip = bold_attack_spirit_tt
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		tenacious_defense_spirit = {
+			ledger = army
+			modifier = {
+				custom_modifier_tooltip = tenacious_defense_spirit_tt
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		meticulous_preparation_spirit = {
+			ledger = army
+			modifier = {
+				custom_modifier_tooltip = meticulous_preparation_spirit_tt
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		elected_officials_spirit = {
+			ledger = army
+			visible = {
+				has_government = people
+			}
+			modifier = {
+				army_leader_start_level = 1
+				army_leader_start_defense_level = 2
+				army_intel_to_others = 25.0
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		the_smart_should_lead_spirit = {
+			ledger = army
+			visible = {
+				has_government = intellectuals
+			}
+			modifier = {
+				army_leader_cost_factor = 0.75
+				army_leader_start_level = 1
+				army_leader_start_logistics_level = 1
+				army_leader_start_planning_level = 1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		power_through_nepotism_spirit = {
+			ledger = army
+			visible = {
+				has_government = elites
+			}
+			modifier = {
+				military_leader_cost_factor = -0.5
+				party_popularity_stability_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		right_hand_men_spirit = {
+			ledger = army
+			visible = {
+				has_government = ruler
+			}
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+				army_leader_cost_factor = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		machine_learning_artificial_intelligence_spirit = {
+			ledger = army
+			visible = {
+				has_tech = automated_warfare
+			}
+			modifier = {
+				experience_gain_army_factor = 0.05
+				terrain_trait_xp_gain_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		academy_officers_spirit = {
+			ledger = army
+			visible = {
+				has_tech = elite_army
+			}
+			modifier = {
+				army_leader_cost_factor = 0.5
+				army_leader_start_level = 1
+				army_leader_start_planning_level = 2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		strategy_book_knowhow_spirit = {
+			ledger = army
+			visible = {
+				has_tech = grand_army
+			}
+			modifier = {
+				terrain_trait_xp_gain_factor = 0.1
+				army_leader_start_level = 1
+				army_leader_start_logistics_level = 2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		veteran_warrior_leadership_spirit = {
+			ledger = army
+			visible = {
+				has_tech = terror_tactics
+			}
+			modifier = {
+				# wounded_chance_factor = 0.2	# Doesn't work outside Unit Leader scope @Tran
+				planning_speed = -0.1
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		thinking_outside_the_box_spirit = {
+			ledger = army
+			visible = {
+				has_tech = outsider_warfare_doctrine
+			}
+			modifier = {
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		logic_coprocessors_spirit = {
+			ledger = army
+			visible = {
+				has_tech = implant_tech_visibility_tech
+			}
+			modifier = {
+				army_leader_cost_factor = 1
+				army_leader_start_level = 1
+				army_leader_start_planning_level = 4
+				encryption_factor = 0.1
+				decryption_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		doped_and_happy_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_raider_nation
+			}
+			modifier = {
+				# These do not work outside unit leader scope @Tran
+				# sickness_chance = -0.1
+				# wounded_chance_factor = -0.1
+				army_morale_factor = 0.05
+				army_leader_start_attack_level = 2
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+	}
+
+	army_spirit = {
+		popular_officers_spirit = {
+			ledger = army
+			modifier = {
+				political_power_factor = 0.05
+				command_power_gain_mult = 0.1
+				military_leader_cost_factor = 0.1
+				# reassignment_duration_factor = 0.25	# Does not work in country scope
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		give_everyone_guns_spirit = {
+			ledger = army
+			modifier = {
+				conscription_factor = 0.05
+				experience_gain_army_factor = -0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		mercenary_assistance_spirit = {
+			ledger = army
+			modifier = {
+				caps_expense_modifier = 0.1
+				planning_speed = 0.05
+				max_planning = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		night_training_spirit = {
+			ledger = army
+			modifier = {
+				land_night_attack = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		trained_militias_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_settler_nation
+			}
+			modifier = {
+				training_time_army_factor = -0.05
+				max_training = 0.05
+				minimum_training_level = -0.05
+				army_core_defence_factor = 0.025
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		guerrilla_warfare_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_raider_nation
+			}
+			modifier = {
+				# These do not work outside unit leader scope @Tran
+				# fortification_damage = 0.1
+				# fortification_collateral_chance = 0.1
+				breakthrough_factor = 0.05
+				dig_in_speed_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		spiritual_guidance_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_tribal_nation
+			}
+			modifier = {
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				surrender_limit = 0.1
+				supply_combat_penalties_on_core_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		old_world_knowledge_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_ghoul_nation
+			}
+			modifier = {
+				command_abilities_cost_factor = -0.20
+				command_power_gain = 0.1
+				planning_speed = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		automated_defenses_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_robotic_nation
+			}
+			modifier = {
+				army_defence_factor = 0.05
+				production_speed_bunker_factor = 0.05
+				production_speed_bunker2_factor = 0.05
+				production_speed_anti_air_building_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		inherent_strength_spirit = {
+			ledger = army
+			visible = { has_country_flag = is_super_mutant_nation }
+			modifier = {
+				pocket_penalty = -0.1
+				army_attack_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		military_council_spirit = {
+			ledger = army
+			visible = {
+				has_government = people
+			}
+			modifier = {
+				command_power_gain = 0.1
+				experience_gain_army = 0.05
+				army_leader_start_planning_level = 1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		ballistics_textbooks_spirit = {
+			ledger = army
+			modifier = {
+				railway_gun_bombardment_factor = 0.1
+				static_anti_air_hit_chance_factor = 0.2
+			}
+			equipment_bonus = {
+				fireteam_equipment = {
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						has_tech = support_tech_level_settler
+					}
+				}
+			}
+		}
+		research_and_development_teams_spirit = {
+			ledger = army
+			visible = {
+				has_government = intellectuals
+			}
+			modifier = {
+				research_speed_factor = 0.05
+				caps_income_modifier = -0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		military_first_spirit = {
+			ledger = army
+			visible = {
+				has_government = elites
+			}
+			modifier = {
+				political_power_factor = -0.1
+				army_org = 2
+				army_morale_factor = 0.05
+				caps_expense_modifier = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		absolute_rule_spirit = {
+			ledger = army
+			visible = {
+				has_government = ruler
+			}
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		natural_order_spirit = {
+			ledger = army
+			visible = {
+				has_tech = creatures_tech_level_tribal
+			}
+			modifier = {
+				heat_attrition_factor = -0.2
+				winter_attrition_factor = -0.2
+				terrain_trait_xp_gain_factor = 0.15
+				recon_factor = 0.10
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		mechanical_might_spirit = {
+			visible = {
+				has_tech = automated_warfare
+			}
+			ledger = army
+			modifier = {
+				planning_speed = -0.3
+				max_planning = -0.1
+				modifier_army_sub_unit_category_robots_attack_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		steel_before_flesh_spirit = {
+			visible = {
+				has_tech = elite_army
+			}
+			ledger = army
+			modifier = {
+				army_defence_factor = 0.025
+				army_speed_factor = -0.05
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					armor_value = 0.05
+					hardness = 0.05
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				spec_ops_equipment = {
+					armor_value = 0.1
+					hardness = 0.1
+					instant = yes
+				}
+			}
+			equipment_bonus = {
+				heavy_infantry_equipment = {
+					armor_value = 0.1
+					hardness = 0.1
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		old_school_tactics_spirit = {
+			visible = {
+				has_tech = grand_army
+			}
+			ledger = army
+			modifier = {
+				planning_speed = 0.05
+				max_planning = 0.025
+				land_reinforce_rate = 0.02
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		men_over_bullets_spirit = {
+			ledger = army
+			visible = {
+				has_tech = terror_tactics
+			}
+			modifier = {
+				equipment_capture_factor = 0.05
+				experience_gain_infantry_combat_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		mean_green_fighting_machines_spirit = {
+			ledger = army
+			visible = {
+				has_tech = outsider_warfare_doctrine
+			}
+			modifier = {
+				attrition = -0.1
+				army_attack_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		warriors_of_mars_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = CES
+					original_tag = LAC
+					original_tag = BLK
+					original_tag = PLS
+					has_completed_focus = WHT_our_new_master
+					has_completed_focus = EHT_ally_caesar
+				}
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				experience_loss_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		the_way_of_the_canaanite_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = NCN
+					has_completed_focus = EHT_ally_mormons
+					has_completed_focus = WHT_laws
+				}
+			}
+			modifier = {
+				dig_in_speed_factor = 0.05
+				max_dig_in_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					soft_attack = 0.05
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		gas_gas_gas_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = TWO
+					original_tag = EHT
+					original_tag = IMO
+					original_tag = LOI
+					has_completed_focus = bdt_road_warriors_of_the_eighty_four
+				}
+			}
+			modifier = {
+				army_defence_factor = -0.05
+				army_fuel_consumption_factor = 0.1
+				org_loss_when_moving = -0.05
+				army_speed_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		do_you_like_my_car_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = TWO
+					original_tag = EHT
+					original_tag = IMO
+					original_tag = LOI
+					has_completed_focus = bdt_road_warriors_of_the_eighty_four
+				}
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = 0.1
+					defense = 0.05
+					breakthrough = 0.05
+					ap_attack = 0.05
+					fuel_consumption = -0.05
+					armor_value = 0.05
+					hardness = 0.05
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		rangers_lead_the_way_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = NCR
+					original_tag = MOT
+					original_tag = NAT
+					original_tag = BAG
+					has_completed_focus = new_stateofreno
+					has_completed_focus = vlt_ncr_rejoin
+					has_completed_focus = shi_ncr_friendship
+					has_completed_focus = des_vargas_join_ncr
+				}
+			}
+			modifier = {
+				special_forces_training_time_factor = 0.2
+				special_forces_cap = 0.01
+				special_forces_min = 10
+				special_forces_attack_factor = 0.05
+				special_forces_defence_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		red_army_legacy_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = BGR
+					original_tag = LOI
+					original_tag = STC
+				}
+			}
+			modifier = {
+				planning_speed = 0.1
+				army_org_regain = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		chop_jobs_spirit = {
+			ledger = army
+			visible = {
+				has_tech = implant_tech_visibility_tech
+			}
+			modifier = {
+				training_time_army_factor = -0.05
+			}
+			equipment_bonus = {
+				implant_equipment = {
+					build_cost_ic = -0.15
+					soft_attack = -0.1
+					hard_attack = -0.1
+					defense = -0.1
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		superiority_of_metal_spirit = {
+			ledger = army
+			visible = {
+				has_tech = implant_tech_visibility_tech
+			}
+			modifier = {
+				army_strength_factor = 0.1
+			}
+			equipment_bonus = {
+				implant_equipment = {
+					build_cost_ic = 0.15
+					soft_attack = 0.1
+					hard_attack = 0.1
+					ap_attack = 0.1
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		maxsons_honor_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = BOS
+					original_tag = MXC
+					original_tag = ACH
+					original_tag = MOJ
+					original_tag = GRD
+					has_completed_focus = rrg_brotherhood_interference
+				}
+			}
+			modifier = {
+				max_dig_in_factor = -0.05
+				max_planning = -0.05
+				planning_speed = 0.05
+				modifier_army_sub_unit_category_power_armour_attack_factor = 0.05
+				modifier_army_sub_unit_category_power_armour_speed_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		wasteland_knights_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = TBH
+					original_tag = MNC
+					original_tag = SOH
+					original_tag = WBH
+					original_tag = EDN
+					has_completed_focus = rrg_brotherhood_influence
+					has_completed_focus = shi_bay_control
+					has_completed_focus = tca_victory_in_the_north
+				}
+			}
+			modifier = {
+				modifier_army_sub_unit_infantry_speed_factor = -0.05
+				modifier_army_sub_unit_infantry_attack_factor = -0.05
+				modifier_army_sub_unit_infantry_defence_factor = -0.05
+				modifier_army_sub_unit_category_power_armour_attack_factor = 0.05
+				modifier_army_sub_unit_category_power_armour_defence_factor = 0.05
+				modifier_army_sub_unit_category_power_armour_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		choir_practice_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = RRG
+					original_tag = ARM
+				}
+			}
+			modifier = {
+				army_org_factor = 0.05
+				resistance_target = -0.05
+				resistance_target_on_our_occupied_states = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		vault_tec_calling_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = ARR
+					original_tag = VLT
+					original_tag = VLS
+					original_tag = VTS
+					original_tag = TTM
+					original_tag = EXE
+					original_tag = CLK
+					original_tag = TLR
+				}
+			}
+			modifier = {
+				army_speed_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = 0.05
+				planning_speed = 0.05
+				max_dig_in_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		yoga_practice_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = BTH
+					original_tag = DRA
+				}
+			}
+			modifier = {
+				modifier_army_sub_unit_infantry_speed_factor = 0.15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		we_need_to_cook_spirit = {
+			ledger = army
+			visible = {
+				original_tag = TDN
+			}
+			modifier = {
+				army_org_factor = -0.1
+				army_attack_factor = 0.05
+				breakthrough_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		earn_the_right_to_work_spirit = {
+			ledger = army
+			visible = {
+				original_tag = TAA
+			}
+			modifier = {
+				breakthrough_factor = 0.075
+				supply_consumption_factor = -0.025
+				attrition = -0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		proper_heritage_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = CHR
+					original_tag = CHO
+					original_tag = CMC
+					original_tag = NIT
+					original_tag = STR
+				}
+			}
+			modifier = {
+				unit_spec_ops_cavalry_design_cost_factor = -0.4
+				cavalry_attack_factor = 0.05
+				army_org_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+	}
+
+	division_command_spirit = {
+		fast_battleplan_organizers_spirit = {
+			ledger = army
+			modifier = {
+				planning_speed = 0.1
+				# choose_preferred_tactics_cost = -15	# Since preferred tactics are not currently implemented, I'm replacing this with another effect for now @Tran
+				command_abilities_cost_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		experienced_scout_platoon_spirit = {
+			ledger = army
+			modifier = {
+				org_loss_when_moving = -0.10
+				intel_from_combat_factor = 0.2
+				recon_factor = 0.10
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		rushed_training_programs_spirit = {
+			ledger = army
+			modifier = {
+				training_time_army_factor = -0.1
+				minimum_training_level = -0.1
+				experience_gain_army_unit_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		fight_for_freedom_spirit = {
+			ledger = army
+			modifier = {
+				supply_combat_penalties_on_core_factor = -0.1
+				pocket_penalty = -0.1
+				army_core_attack_factor = 0.025
+				army_core_defence_factor = 0.025
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		organized_supply_lines_spirit = {
+			ledger = army
+			visible = {
+				has_government = people
+			}
+			modifier = {
+				army_speed_factor = 0.05
+				supply_consumption_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		gifted_field_commanders_spirit = {
+			ledger = army
+			visible = {
+				has_government = intellectuals
+			}
+			modifier = {
+				initiative_factor = 0.025
+				max_planning = 0.05
+				coordination_bonus = 0.025
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		only_the_strong_survive_spirit = {
+			ledger = army
+			visible = {
+				has_government = elites
+			}
+			modifier = {
+				army_strength_factor = 0.1
+				army_attack_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		crush_their_defenses_spirit = {
+			ledger = army
+			visible = {
+				has_government = ruler
+			}
+			modifier = {
+				org_loss_at_low_org_factor = -0.15
+				breakthrough_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		assembly_line_frontline_spirit = {
+			visible = {
+				has_tech = automated_warfare
+			}
+			modifier = {
+				industrial_capacity_factory = 0.025
+				coordination_bonus = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		well_trained_reserves_spirit = {
+			ledger = army
+			visible = {
+				has_tech = elite_army
+			}
+			modifier = {
+				breakthrough_factor = 0.05
+				experience_loss_factor = -0.15
+				training_time_army_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		barricades_and_outposts_spirit = {
+			ledger = army
+			visible = {
+				has_tech = grand_army
+			}
+			modifier = {
+				max_dig_in_factor = 0.1
+				dig_in_speed_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		supply_route_ambushes_spirit = {
+			ledger = army
+			visible = {
+				has_tech = terror_tactics
+			}
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.1
+				resistance_growth_on_our_occupied_states = 0.1
+				resistance_damage_to_garrison_on_our_occupied_states = 0.1
+				resistance_decay_on_our_occupied_states = -0.1
+				convoy_raiding_efficiency_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		monstrous_horrors_beyond_comprehension_spirit = {
+			ledger = army
+			visible = {
+				has_tech = outsider_warfare_doctrine
+			}
+			modifier = {
+				resistance_target = -0.05
+				resistance_damage_to_garrison = -0.1
+				resistance_decay = 0.1
+				resistance_growth = -0.1
+				resistance_garrison_penetration_chance = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		primal_instincts_spirit = {
+			ledger = army
+			visible = {
+				has_tech = creatures_tech_level_tribal
+			}
+			modifier = {
+				army_speed_factor = 0.1
+				army_attack_factor = 0.05
+				initiative_factor = 0.05
+				research_speed_factor = -0.05
+				fuel_gain_factor = -0.15
+				army_intel_to_others = -15
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		sit_and_wait_spirit = {
+			ledger = army
+			visible = {
+				original_tag = MOT
+			}
+			modifier = {
+				max_planning = 0.05
+				max_dig_in = 2
+				army_speed_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		veni_vidi_vici_spirit = {
+			ledger = army
+			visible = {
+				OR = {
+					original_tag = CES
+					original_tag = LAC
+				}
+			}
+			modifier = {
+				army_org_factor = 0.075
+				army_speed_factor = 0.05
+				army_defence_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		soviet_outriders_spirit = {
+			ledger = army
+			visible = {
+				original_tag = LOI
+			}
+			modifier = {
+				army_armor_speed_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.1
+				winter_attrition = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		iron_within_iron_without_spirit = {
+			ledger = army
+			visible = {
+				original_tag = IRN
+			}
+			modifier = {
+				experience_loss_factor = 0.15
+				# wounded_chance_factor = 0.1	# Does not work outside unit leader scope @Tran
+				modifier_army_sub_unit_category_power_armour_attack_factor = 0.05
+				modifier_army_sub_unit_category_power_armour_defence_factor = 0.05
+				modifier_army_sub_unit_category_power_armour_speed_factor = 0.05
+			}
+			equipment_bonus = {
+				power_armor_equipment = {
+					armor_value = 0.05
+					hardness = 0.05
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		feral_horde_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_ghoul_nation
+			}
+			available = {
+				has_idea = ghoul_feral_ones
+			}
+			modifier = {
+				experience_loss_factor = 0.15
+				max_training = -0.1
+				army_attack_factor = 0.05
+				breakthrough_factor = 0.05
+				weekly_manpower = 10
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		drunken_raids_spirit = {
+			ledger = army
+			visible = {
+				original_tag = YKZ
+			}
+			modifier = {
+				army_attack_factor = 0.1
+				org_loss_when_moving = 0.1
+				experience_gain_army_factor = -0.1
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		words_of_wisdom_spirit = {
+			ledger = army
+			visible = {
+				original_tag = BVC
+			}
+			modifier = {
+				army_defence_factor = -0.03
+				attrition = -0.12
+				max_planning = 0.03
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		underground_dwellers_spirit = {
+			ledger = army
+			visible = {
+				original_tag = DED
+			}
+			modifier = {
+				supply_combat_penalties_on_core_factor = -0.3
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		demo_derby_spirit = {
+			ledger = army
+			visible = {
+				original_tag = ASS
+			}
+			modifier = {
+				experience_gain_army_unit_factor = -0.1
+				modifier_army_sub_unit_demolitions_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_skate_infantry_attack_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		scorpion_sting_spirit = {
+			ledger = army
+			visible = {
+				original_tag = SCO
+			}
+			modifier = {
+				army_org_factor = 0.025
+				training_time_factor = 0.1
+				army_attack_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		hottest_brew_ever_spirit = {
+			ledger = army
+			visible = {
+				has_completed_focus = ROT_jacobia
+			}
+			modifier = {
+				army_speed_factor = 0.05
+				army_morale_factor = 0.05
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+		i_want_to_set_the_world_on_fire_spirit = {
+			ledger = army
+			visible = {
+				has_country_flag = is_raider_nation
+			}
+			modifier = {
+			}
+			equipment_bonus = {
+				demolitions_equipment = {
+					soft_attack = 0.1
+					hard_attack = 0.1
+					reliability = -0.1
+					instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+			}
+		}
+	}
+}

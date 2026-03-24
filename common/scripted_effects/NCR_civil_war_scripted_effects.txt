@@ -1,0 +1,1050 @@
+setup_ncr_revolter = {
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_founding_myth
+			}
+		}
+		unlock_national_focus = ncr_founding_myth
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_tandis_legacy
+			}
+		}
+		unlock_national_focus = ncr_tandis_legacy
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_time_erodes_beauty
+			}
+		}
+		unlock_national_focus = ncr_time_erodes_beauty
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_early_sotu
+			}
+		}
+		unlock_national_focus = ncr_early_sotu
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_democracy_and_despotism
+			}
+		}
+		unlock_national_focus = ncr_democracy_and_despotism
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_deploy_troopers_to_hub
+			}
+		}
+		unlock_national_focus = ncr_deploy_troopers_to_hub
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_public_library
+			}
+		}
+		unlock_national_focus = ncr_public_library
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_raid_gang_hqs
+			}
+		}
+		unlock_national_focus = ncr_raid_gang_hqs
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_water_merchant_contracts
+			}
+		}
+		unlock_national_focus = ncr_water_merchant_contracts
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_urban_warfare_lessons
+			}
+		}
+		unlock_national_focus = ncr_urban_warfare_lessons
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_hub_redevelopment_act
+			}
+		}
+		unlock_national_focus = ncr_hub_redevelopment_act
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_permanent_hub_advisors
+			}
+		}
+		unlock_national_focus = ncr_permanent_hub_advisors
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_cultivate_national_guard
+			}
+		}
+		unlock_national_focus = ncr_cultivate_national_guard
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_mitches_manufactories
+			}
+		}
+		unlock_national_focus = ncr_mitches_manufactories
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_refurbish_bazaar
+			}
+		}
+		unlock_national_focus = ncr_refurbish_bazaar
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_vault_city_trade
+			}
+		}
+		unlock_national_focus = ncr_vault_city_trade
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_buster_emporium
+			}
+		}
+		unlock_national_focus = ncr_buster_emporium
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_powerplant1
+			}
+		}
+		unlock_national_focus = ncr_powerplant1
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_capitalfund1
+			}
+		}
+		unlock_national_focus = ncr_capitalfund1
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_capital_forts
+			}
+		}
+		unlock_national_focus = ncr_capital_forts
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_dep_of_railroads
+			}
+		}
+		unlock_national_focus = ncr_dep_of_railroads
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_support_redding_focus
+			}
+		}
+		unlock_national_focus = ncr_support_redding_focus
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_ranger_hq
+			}
+		}
+		unlock_national_focus = ncr_ranger_hq
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_mojave_affair
+			}
+		}
+		unlock_national_focus = ncr_mojave_affair
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_bolster_mojave_deps
+			}
+		}
+		unlock_national_focus = ncr_bolster_mojave_deps
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_send_direct_aid
+			}
+		}
+		unlock_national_focus = ncr_send_direct_aid
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_research_for_expeditions
+			}
+		}
+		unlock_national_focus = ncr_research_for_expeditions
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_advertise_to_people
+			}
+		}
+		unlock_national_focus = ncr_advertise_to_people
+	}
+	# if = {
+	# 	limit = {
+	# 		NCR = {
+	# 			has_completed_focus = ncr_federalise_mot
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ncr_federalise_mot
+	# }
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_lost_not_forgotten
+			}
+		}
+		unlock_national_focus = ncr_lost_not_forgotten
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_lessons_from_desert
+			}
+		}
+		unlock_national_focus = ncr_lessons_from_desert
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_retool_rangers
+			}
+		}
+		unlock_national_focus = ncr_retool_rangers
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_reorganise_mojave_remnants
+			}
+		}
+		unlock_national_focus = ncr_reorganise_mojave_remnants
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_welcome_mojave_commanders
+			}
+		}
+		unlock_national_focus = ncr_welcome_mojave_commanders
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_motion_of_no_confidence
+			}
+		}
+		unlock_national_focus = ncr_motion_of_no_confidence
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_support_kimball
+			}
+		}
+		unlock_national_focus = ncr_support_kimball
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_roll_back_corrupt_protections
+			}
+		}
+		unlock_national_focus = ncr_roll_back_corrupt_protections
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_stoke_militarism
+			}
+		}
+		unlock_national_focus = ncr_stoke_militarism
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_shut_down_maxson_probe
+			}
+		}
+		unlock_national_focus = ncr_shut_down_maxson_probe
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_downplay_baja_failures
+			}
+		}
+		unlock_national_focus = ncr_downplay_baja_failures
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_exaggerate_mojave_success
+			}
+		}
+		unlock_national_focus = ncr_exaggerate_mojave_success
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_support_hayes
+			}
+		}
+		unlock_national_focus = ncr_support_hayes
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_judiciary_act
+			}
+		}
+		unlock_national_focus = ncr_judiciary_act
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_schooling
+			}
+		}
+		unlock_national_focus = ncr_schooling
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_baseball_leagues
+			}
+		}
+		unlock_national_focus = ncr_baseball_leagues
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_tariffs
+			}
+		}
+		unlock_national_focus = ncr_tariffs
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_war_on_redding
+			}
+		}
+		unlock_national_focus = ncr_war_on_redding
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_support_allgood
+			}
+		}
+		unlock_national_focus = ncr_support_allgood
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_expose_blatant_corruption
+			}
+		}
+		unlock_national_focus = ncr_expose_blatant_corruption
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_denounce_kimball_rhetoric
+			}
+		}
+		unlock_national_focus = ncr_denounce_kimball_rhetoric
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_focus_on_maxson
+			}
+		}
+		unlock_national_focus = ncr_focus_on_maxson
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_boneyard_success_story
+			}
+		}
+		unlock_national_focus = ncr_boneyard_success_story
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_produce_concrete_evidence
+			}
+		}
+		unlock_national_focus = ncr_produce_concrete_evidence
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_kimball_vindication
+			}
+		}
+		unlock_national_focus = ncr_kimball_vindication
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_new_hand_on_the_tiller
+			}
+		}
+		unlock_national_focus = ncr_new_hand_on_the_tiller
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_developtheeasternroute
+			}
+		}
+		unlock_national_focus = ncr_developtheeasternroute
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_fundcrimsoncaravan
+			}
+		}
+		unlock_national_focus = ncr_fundcrimsoncaravan
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_brahmin_economic_investments
+			}
+		}
+		unlock_national_focus = ncr_brahmin_economic_investments
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_ask_for_the_sierra_army_depot
+			}
+		}
+		unlock_national_focus = ncr_ask_for_the_sierra_army_depot
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_spear_chop_shop
+			}
+		}
+		unlock_national_focus = ncr_spear_chop_shop
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_pressure_arroyo
+			}
+		}
+		unlock_national_focus = ncr_pressure_arroyo
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_secrets_of_navarro
+			}
+		}
+		unlock_national_focus = ncr_secrets_of_navarro
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rapid_expansion
+			}
+		}
+		unlock_national_focus = ncr_rapid_expansion
+	}
+	# if = {
+	# 	limit = {
+	# 		NCR = {
+	# 			has_completed_focus = ncr_shi_business
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ncr_shi_business
+	# }
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rapidsettlement
+			}
+		}
+		unlock_national_focus = ncr_rapidsettlement
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rapidsettlement
+			}
+		}
+		unlock_national_focus = ncr_rapidsettlement
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rapid_boat
+			}
+		}
+		unlock_national_focus = ncr_rapid_boat
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_southern_fleet
+			}
+		}
+		unlock_national_focus = ncr_southern_fleet
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_deep_ocean_warfare
+			}
+		}
+		unlock_national_focus = ncr_deep_ocean_warfare
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_naval_extensions
+			}
+		}
+		unlock_national_focus = ncr_naval_extensions
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_setting_sun_navies_rule
+			}
+		}
+		unlock_national_focus = ncr_setting_sun_navies_rule
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_forceful_empire
+			}
+		}
+		unlock_national_focus = ncr_forceful_empire
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_baja_blues
+			}
+		}
+		unlock_national_focus = ncr_baja_blues
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_conquer_baja
+			}
+		}
+		unlock_national_focus = ncr_conquer_baja
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_exploit_navarro
+			}
+		}
+		unlock_national_focus = ncr_exploit_navarro
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_frontier_tamed
+			}
+		}
+		unlock_national_focus = ncr_frontier_tamed
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_baja_annexation
+			}
+		}
+		unlock_national_focus = ncr_baja_annexation
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = baja_spoils
+			}
+		}
+		unlock_national_focus = baja_spoils
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_lift_small_business_restrictions
+			}
+		}
+		unlock_national_focus = ncr_lift_small_business_restrictions
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_stockmen_association_promises
+			}
+		}
+		unlock_national_focus = ncr_stockmen_association_promises
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_peace_and_power
+			}
+		}
+		unlock_national_focus = ncr_peace_and_power
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_expose_van_graffs
+			}
+		}
+		unlock_national_focus = ncr_expose_van_graffs
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_the_northern_shield
+			}
+		}
+		unlock_national_focus = ncr_the_northern_shield
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_brotherhood_diplomacy
+			}
+		}
+		unlock_national_focus = ncr_brotherhood_diplomacy
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rural_revitalisation_act
+			}
+		}
+		unlock_national_focus = ncr_rural_revitalisation_act
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_campaigns_against_corruption
+			}
+		}
+		unlock_national_focus = ncr_campaigns_against_corruption
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_tackle_consumerism
+			}
+		}
+		unlock_national_focus = ncr_tackle_consumerism
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_urban_industry_hubs
+			}
+		}
+		unlock_national_focus = ncr_urban_industry_hubs
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_slumbering_giant_waking
+			}
+		}
+		unlock_national_focus = ncr_slumbering_giant_waking
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_agri_research
+			}
+		}
+		unlock_national_focus = ncr_agri_research
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_inject_liquidity
+			}
+		}
+		unlock_national_focus = ncr_inject_liquidity
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_open_door
+			}
+		}
+		unlock_national_focus = ncr_open_door
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_epa
+			}
+		}
+		unlock_national_focus = ncr_epa
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_gammacore
+			}
+		}
+		unlock_national_focus = ncr_gammacore
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_reorgranger1
+			}
+		}
+		unlock_national_focus = ncr_reorgranger1
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_reorgranger2
+			}
+		}
+		unlock_national_focus = ncr_reorgranger2
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_baja_trade_agreement
+			}
+		}
+		unlock_national_focus = ncr_baja_trade_agreement
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_baja_republic
+			}
+		}
+		unlock_national_focus = ncr_baja_republic
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_bearsroar
+			}
+		}
+		unlock_national_focus = ncr_bearsroar
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_standardarms
+			}
+		}
+		unlock_national_focus = ncr_standardarms
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_grdeals
+			}
+		}
+		unlock_national_focus = ncr_grdeals
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_grliscense
+			}
+		}
+		unlock_national_focus = ncr_grliscense
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_blast
+			}
+		}
+		unlock_national_focus = ncr_blast
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_artillery_only
+			}
+		}
+		unlock_national_focus = ncr_artillery_only
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_jim
+			}
+		}
+		unlock_national_focus = ncr_jim
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_drills
+			}
+		}
+		unlock_national_focus = ncr_drills
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_march
+			}
+		}
+		unlock_national_focus = ncr_march
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_draft
+			}
+		}
+		unlock_national_focus = ncr_draft
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_draft2
+			}
+		}
+		unlock_national_focus = ncr_draft2
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_power_armor_approach
+			}
+		}
+		unlock_national_focus = ncr_power_armor_approach
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_scavenge_old_army_base
+			}
+		}
+		unlock_national_focus = ncr_scavenge_old_army_base
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_lessons_from_brotherhood
+			}
+		}
+		unlock_national_focus = ncr_lessons_from_brotherhood
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_masters_of_our_fate
+			}
+		}
+		unlock_national_focus = ncr_masters_of_our_fate
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_olivers_pet_project
+			}
+		}
+		unlock_national_focus = ncr_olivers_pet_project
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rangergenmossman
+			}
+		}
+		unlock_national_focus = ncr_rangergenmossman
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rangercore
+			}
+		}
+		unlock_national_focus = ncr_rangercore
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rangerlead
+			}
+		}
+		unlock_national_focus = ncr_rangerlead
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rangercanopeners
+			}
+		}
+		unlock_national_focus = ncr_rangercanopeners
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_rangers_true_seth
+			}
+		}
+		unlock_national_focus = ncr_rangers_true_seth
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_electoral_deadlock
+			}
+		}
+		unlock_national_focus = ncr_electoral_deadlock
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_lame_duck_address
+			}
+		}
+		unlock_national_focus = ncr_lame_duck_address
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_declare_state_of_emergency
+			}
+		}
+		unlock_national_focus = ncr_declare_state_of_emergency
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_recall_federal_troopers
+			}
+		}
+		unlock_national_focus = ncr_recall_federal_troopers
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_murder_most_foul
+			}
+		}
+		unlock_national_focus = ncr_murder_most_foul
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_ctte_for_national_security
+			}
+		}
+		unlock_national_focus = ncr_ctte_for_national_security
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_congress_fire
+			}
+		}
+		unlock_national_focus = ncr_congress_fire
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_operation_nightwatch
+			}
+		}
+		unlock_national_focus = ncr_operation_nightwatch
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_suspend_constitution
+			}
+		}
+		unlock_national_focus = ncr_suspend_constitution
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_declare_martial_law
+			}
+		}
+		unlock_national_focus = ncr_declare_martial_law
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_dissolution_of_the_union
+			}
+		}
+		unlock_national_focus = ncr_dissolution_of_the_union
+	}
+	if = {
+		limit = {
+			NCR = {
+				has_completed_focus = ncr_california_in_crisis
+			}
+		}
+		unlock_national_focus = ncr_california_in_crisis
+	}
+}

@@ -59,7 +59,7 @@ characters = {
 			logistics_skill = 5
 		}
 	}
-	UOA_lieutenant_crusher = {
+	SHA_lieutenant_crusher = {
 		name = UOA_LIEUTENANT_CRUSHER_NAME
 		portraits = {
 			civilian = {

@@ -658,11 +658,6 @@ focus_tree = {
 		}
 		relative_position_id = mdt_mesmerize_the_cave_trolls
 		completion_reward = {
-			# if = {
-			# 	limit = { NOT = { has_idea = slavery_outlawed } }
-			# 	add_to_variable= { slave_number_display = 5 }
-			# 	custom_effect_tooltip = add_5k_slaves
-			# }
 			# else = {
 				add_political_power = 300
 			# }
@@ -1146,7 +1141,16 @@ focus_tree = {
 		relative_position_id = mdt_necromancers_of_the_wastes
 		completion_reward = {
 			custom_effect_tooltip = mdt_gecko_warriors
-			set_technology = { oregon_geckosupport = 1 }
+						set_technology = {
+				gecko_tech_access_tech = 1
+				gecko_support_unlock_tech = 1
+			}
+			hidden_effect = {
+				set_technology = {
+					creatures_tech_level_tribal = 1
+					creatures_tech_level_settler = 1
+				}
+			}
 		}
 	}
 

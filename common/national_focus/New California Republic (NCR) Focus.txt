@@ -855,6 +855,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			            set_technology = { 
+                railway_gun_unlock_tech = 1
+             }
 			effect_tooltip = { news_event = ncr_crisis.5 }
 			# Used to raise economy law to Awakening Giant, otherwise no change
 			# if = {
@@ -884,9 +887,7 @@ focus_tree = {
 					}
 				}
 				add_ideas = ncr_idea_republic_reserve
-			set_technology = {
-				railway_gun = 1
-				}
+
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
 					name = "The Bear's Vengeance"
@@ -936,9 +937,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-				}
-				set_technology = {
-					railway_gun = 1
 				}
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
@@ -6459,7 +6457,7 @@ focus = {
 		icon = GFX_goal_NCR_Calhoun_Expansion_Ballot_Box
 		cost = 30
 		available = {
-			has_completed_focus = ncr_true_synthesis
+			has_completed_focus = ncr_cal_new_canaan
 		}
 		prerequisite = {
 			focus = ncr_cal_new_canaan

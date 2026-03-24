@@ -1,0 +1,2327 @@
+setup_house_rebellion = {
+	if = {
+		limit = {
+			has_idea = consigs
+		}
+		remove_ideas = consigs
+	}
+	if = {
+		limit = {
+			has_idea = consigs2
+		}
+		remove_ideas = consigs2
+	}
+	if = {
+		limit = {
+			has_idea = consigs3
+		}
+		remove_ideas = consigs3
+	}
+	if = {
+		limit = {
+			has_idea = false_khaganate
+		}
+		remove_ideas = false_khaganate
+	}
+	if = {
+		limit = {
+			has_idea = false_khaganate2
+		}
+		remove_ideas = false_khaganate2
+	}
+	if = {
+		limit = {
+			has_idea = false_khaganate3
+		}
+		remove_ideas = false_khaganate3
+	}
+	if = {
+		limit = {
+			has_idea = potentialcoup
+		}
+		remove_ideas = potentialcoup
+	}
+	if = {
+		limit = {
+			has_idea = theking
+		}
+		remove_ideas = theking
+	}
+	if = {
+		limit = {
+			has_idea = freesidesupport
+		}
+		remove_ideas = freesidesupport
+	}
+	if = {
+		limit = {
+			has_idea = thejoker
+		}
+		remove_ideas = thejoker
+	}
+	if = {
+		limit = {
+			has_idea = emilyortal
+		}
+		remove_ideas = emilyortal
+	}
+	if = {
+		limit = {
+			has_idea = threefamilies
+		}
+		remove_ideas = threefamilies
+	}
+	if = {
+		limit = {
+			has_idea = repaiddebt
+		}
+		remove_ideas = repaiddebt
+	}
+	if = {
+		limit = {
+			has_idea = narcissism
+		}
+		remove_ideas = narcissism
+	}
+	if = {
+		limit = {
+			has_idea = threefamilies2
+		}
+		remove_ideas = threefamilies2
+	}
+	if = {
+		limit = {
+			has_idea = cultofpersonality
+		}
+		remove_ideas = cultofpersonality
+	}
+	if = {
+		limit = {
+			has_idea = followeradvisors
+		}
+		remove_ideas = followeradvisors
+	}
+	if = {
+		limit = {
+			has_idea = unifiedvegas
+		}
+		remove_ideas = unifiedvegas
+	}
+	if = {
+		limit = {
+			has_idea = middleclassclientele
+		}
+		remove_ideas = middleclassclientele
+	}
+	if = {
+		limit = {
+			has_idea = wealthyclientele2
+		}
+		remove_ideas = wealthyclientele2
+	}
+	if = {
+		limit = {
+			has_idea = middleclassclientele2
+		}
+		remove_ideas = middleclassclientele2
+	}
+	if = {
+		limit = {
+			has_idea = whitegloves3
+		}
+		remove_ideas = whitegloves3
+	}
+	if = {
+		limit = {
+			has_idea = kings
+		}
+		remove_ideas = kings
+	}
+	if = {
+		limit = {
+			has_idea = unstableOS
+		}
+		remove_ideas = unstableOS
+		add_ideas = stableOS
+	}
+	add_ideas = robotics_genius
+	add_ideas = ncr_veg_treaty_of_new_vegas
+	unlock_national_focus = veg_judgement
+	unlock_national_focus = veg_software
+	unlock_national_focus = veg_families
+	unlock_national_focus = veg_newvegas
+	unlock_national_focus = veg_ultraluxe
+	complete_national_focus = veg_whitegloves
+	complete_national_focus = veg_wealthycontacts
+	complete_national_focus = veg_abandon
+	unlock_national_focus = veg_gomorrah
+	complete_national_focus = veg_omertas
+	complete_national_focus = veg_addiction
+	complete_national_focus = veg_mobsters
+	unlock_national_focus = veg_tops
+	complete_national_focus = veg_chairmen
+	complete_national_focus = veg_arms
+	complete_national_focus = veg_newdeal
+	complete_national_focus = veg_lucky38
+	complete_national_focus = veg_oldauthority
+}
+
+setup_aztlan_revolter = {
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_liberator
+			}
+		}
+		unlock_national_focus = ate_liberator
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_legislator
+			}
+		}
+		unlock_national_focus = ate_legislator
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_lost
+			}
+		}
+		unlock_national_focus = ate_lost
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_gathering_at_xochicalo
+			}
+		}
+		unlock_national_focus = ate_gathering_at_xochicalo
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_lords_of_war
+			}
+		}
+		unlock_national_focus = ate_lords_of_war
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_lords_of_trade
+			}
+		}
+		unlock_national_focus = ate_lords_of_trade
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_lord_of_the_sea
+			}
+		}
+		unlock_national_focus = ate_lord_of_the_sea
+	}
+	if = {
+		limit = {
+			ATE = {
+				has_completed_focus = ate_an_omen_of_destruction
+			}
+		}
+		unlock_national_focus = ate_an_omen_of_destruction
+	}
+}
+
+setup_legion_revolter = {
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_expedition_to_blackfoot
+			}
+		}
+		unlock_national_focus = ces_expedition_to_blackfoot
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_death_in_the_canyons
+			}
+		}
+		unlock_national_focus = ces_death_in_the_canyons
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_the_malpais_legate
+			}
+		}
+		unlock_national_focus = ces_the_malpais_legate
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_caesar_son_of_mars
+			}
+		}
+		unlock_national_focus = ces_caesar_son_of_mars
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_new_judea
+			}
+		}
+		unlock_national_focus = ces_new_judea
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_white_legs_accept
+			}
+		}
+		unlock_national_focus = ces_white_legs_accept
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_white_legs_refuse
+			}
+		}
+		unlock_national_focus = ces_white_legs_refuse
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_white_legs_guns
+			}
+		}
+		unlock_national_focus = ces_white_legs_guns
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_eighties
+			}
+		}
+		unlock_national_focus = ces_eighties
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_eighties
+			}
+		}
+		unlock_national_focus = ces_eighties
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_weapons_of_war
+			}
+		}
+		unlock_national_focus = ces_weapons_of_war
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_graham_execution
+			}
+		}
+		unlock_national_focus = ces_graham_execution
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_new_auxilliary
+			}
+		}
+		unlock_national_focus = ces_new_auxilliary
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_new_cohort
+			}
+		}
+		unlock_national_focus = ces_new_cohort
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legionary_utah
+			}
+		}
+		unlock_national_focus = ces_legionary_utah
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_flagstaff_line
+			}
+		}
+		unlock_national_focus = ces_flagstaff_line
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_rail
+			}
+		}
+		unlock_national_focus = ces_navajo_rail
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_regional_rail
+			}
+		}
+		unlock_national_focus = ces_regional_rail
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_economic_specialization
+			}
+		}
+		unlock_national_focus = ces_economic_specialization
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_veterans_revolt
+			}
+		}
+		unlock_national_focus = ces_veterans_revolt
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_markets
+			}
+		}
+		unlock_national_focus = ces_navajo_markets
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_exemptions
+			}
+		}
+		unlock_national_focus = ces_navajo_exemptions
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_industrial_integration
+			}
+		}
+		unlock_national_focus = ces_navajo_industrial_integration
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_scheme
+			}
+		}
+		unlock_national_focus = ces_navajo_scheme
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_way_of_the_land
+			}
+		}
+		unlock_national_focus = ces_way_of_the_land
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hopi_housing_expansions
+			}
+		}
+		unlock_national_focus = ces_hopi_housing_expansions
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_masaaw_construction
+			}
+		}
+		unlock_national_focus = ces_masaaw_construction
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hopi_tithe
+			}
+		}
+		unlock_national_focus = ces_hopi_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_nnp_restoration
+			}
+		}
+		unlock_national_focus = ces_nnp_restoration
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_widow_rock_restoration
+			}
+		}
+		unlock_national_focus = ces_widow_rock_restoration
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_tithe
+			}
+		}
+		unlock_national_focus = ces_navajo_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_north_phoenix_development
+			}
+		}
+		unlock_national_focus = ces_north_phoenix_development
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_dock_development
+			}
+		}
+		unlock_national_focus = ces_dock_development
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_phoenix_reborn
+			}
+		}
+		unlock_national_focus = ces_phoenix_reborn
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_flagstaff_development_scheme
+			}
+		}
+		unlock_national_focus = ces_flagstaff_development_scheme
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_true_capital
+			}
+		}
+		unlock_national_focus = ces_true_capital
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legionary_corps
+			}
+		}
+		unlock_national_focus = ces_legionary_corps
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hire_dale_barton
+			}
+		}
+		unlock_national_focus = ces_hire_dale_barton
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_scavenger_tithe
+			}
+		}
+		unlock_national_focus = ces_scavenger_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_guillermo_rossi
+			}
+		}
+		unlock_national_focus = ces_guillermo_rossi
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_sun_rail
+			}
+		}
+		unlock_national_focus = ces_two_sun_rail
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_sun_markets
+			}
+		}
+		unlock_national_focus = ces_two_sun_markets
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_sun_exemptions
+			}
+		}
+		unlock_national_focus = ces_two_sun_exemptions
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_turn_the_other_cheek
+			}
+		}
+		unlock_national_focus = ces_turn_the_other_cheek
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_sun_scheme
+			}
+		}
+		unlock_national_focus = ces_two_sun_scheme
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_garage_caches
+			}
+		}
+		unlock_national_focus = ces_garage_caches
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_temple_sr
+			}
+		}
+		unlock_national_focus = ces_temple_sr
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_temple_sr
+			}
+		}
+		unlock_national_focus = ces_temple_sr
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_speedway
+			}
+		}
+		unlock_national_focus = ces_speedway
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_speedway_toll
+			}
+		}
+		unlock_national_focus = ces_speedway_toll
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_temple_cannonball
+			}
+		}
+		unlock_national_focus = ces_temple_cannonball
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_gateway_south
+			}
+		}
+		unlock_national_focus = ces_gateway_south
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_oval_tithe
+			}
+		}
+		unlock_national_focus = ces_oval_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_south_phoenix_development
+			}
+		}
+		unlock_national_focus = ces_south_phoenix_development
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legionary_naval_academy
+			}
+		}
+		unlock_national_focus = ces_legionary_naval_academy
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_state_legion
+			}
+		}
+		unlock_national_focus = ces_state_legion
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_rebirth_triplex
+			}
+		}
+		unlock_national_focus = ces_rebirth_triplex
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_rebirth_triplex
+			}
+		}
+		unlock_national_focus = ces_rebirth_triplex
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_forge_flagstaff
+			}
+		}
+		unlock_national_focus = ces_forge_flagstaff
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_rebirth_principes_doctrine
+			}
+		}
+		unlock_national_focus = ces_rebirth_principes_doctrine
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_worthy_few
+			}
+		}
+		unlock_national_focus = ces_worthy_few
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_unending_legions
+			}
+		}
+		unlock_national_focus = ces_unending_legions
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_plan_flagstaff
+			}
+		}
+		unlock_national_focus = ces_plan_flagstaff
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_ever_evolving
+			}
+		}
+		unlock_national_focus = ces_ever_evolving
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_pathfinders
+			}
+		}
+		unlock_national_focus = ces_navajo_pathfinders
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_warchief_guidance
+			}
+		}
+		unlock_national_focus = ces_warchief_guidance
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_warchief_guidance
+			}
+		}
+		unlock_national_focus = ces_warchief_guidance
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hashkeh
+			}
+		}
+		unlock_national_focus = ces_hashkeh
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_navajo_castra
+			}
+		}
+		unlock_national_focus = ces_navajo_castra
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_skinwalker_integration
+			}
+		}
+		unlock_national_focus = ces_skinwalker_integration
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_the_roman_skinwalkers
+			}
+		}
+		unlock_national_focus = ces_the_roman_skinwalkers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_great_chamber
+			}
+		}
+		unlock_national_focus = ces_great_chamber
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_return_chariots
+			}
+		}
+		unlock_national_focus = ces_return_chariots
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legionary_charioteers
+			}
+		}
+		unlock_national_focus = ces_legionary_charioteers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_ride_will_faster
+			}
+		}
+		unlock_national_focus = ces_ride_will_faster
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_sun_colosseum
+			}
+		}
+		unlock_national_focus = ces_two_sun_colosseum
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legend_cannonball
+			}
+		}
+		unlock_national_focus = ces_legend_cannonball
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vulpes_leads
+			}
+		}
+		unlock_national_focus = ces_vulpes_leads
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vulpes_leads
+			}
+		}
+		unlock_national_focus = ces_vulpes_leads
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vulpes_victorious
+			}
+		}
+		unlock_national_focus = ces_vulpes_victorious
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_amnesty_elderly
+			}
+		}
+		unlock_national_focus = ces_amnesty_elderly
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_fifteen_year_decree
+			}
+		}
+		unlock_national_focus = ces_fifteen_year_decree
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_amnesty_weak
+			}
+		}
+		unlock_national_focus = ces_amnesty_weak
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_amnesty_weak
+			}
+		}
+		unlock_national_focus = ces_amnesty_weak
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_mercy_decree
+			}
+		}
+		unlock_national_focus = ces_mercy_decree
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_libertas
+			}
+		}
+		unlock_national_focus = ces_libertas
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_aurelius_wins
+			}
+		}
+		unlock_national_focus = ces_aurelius_wins
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_imperial_road_network
+			}
+		}
+		unlock_national_focus = ces_imperial_road_network
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_road_north
+			}
+		}
+		unlock_national_focus = ces_road_north
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_grognak
+			}
+		}
+		unlock_national_focus = ces_grognak
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_imperial_roads
+			}
+		}
+		unlock_national_focus = ces_imperial_roads
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_legalize_chems
+			}
+		}
+		unlock_national_focus = CES_legalize_chems
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_road_security
+			}
+		}
+		unlock_national_focus = CES_road_security
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_coloniae
+			}
+		}
+		unlock_national_focus = CES_coloniae
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_castellum
+			}
+		}
+		unlock_national_focus = CES_castellum
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_exploitation_tech
+			}
+		}
+		unlock_national_focus = CES_exploitation_tech
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_guns_can_be_built
+			}
+		}
+		unlock_national_focus = CES_guns_can_be_built
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_golden_empire
+			}
+		}
+		unlock_national_focus = CES_golden_empire
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_construction_tech
+			}
+		}
+		unlock_national_focus = CES_construction_tech
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_civilian_development
+			}
+		}
+		unlock_national_focus = CES_civilian_development
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_boring_lucius
+			}
+		}
+		unlock_national_focus = ces_boring_lucius
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_malpais_legate_prevails
+			}
+		}
+		unlock_national_focus = ces_malpais_legate_prevails
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_tax_arizona
+			}
+		}
+		unlock_national_focus = ces_tax_arizona
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_servus_non_habet
+			}
+		}
+		unlock_national_focus = ces_servus_non_habet
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_never_friends
+			}
+		}
+		unlock_national_focus = ces_never_friends
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_northern_push
+			}
+		}
+		unlock_national_focus = ces_northern_push
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_northern_bastion
+			}
+		}
+		unlock_national_focus = ces_northern_bastion
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_eastern_bastion
+			}
+		}
+		unlock_national_focus = ces_eastern_bastion
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_southern_bastion
+			}
+		}
+		unlock_national_focus = ces_southern_bastion
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_honestas_industria_prudentia
+			}
+		}
+		unlock_national_focus = ces_honestas_industria_prudentia
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_southern_tithe
+			}
+		}
+		unlock_national_focus = ces_southern_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_northern_tithe
+			}
+		}
+		unlock_national_focus = ces_northern_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_western_tithe
+			}
+		}
+		unlock_national_focus = ces_western_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_eastern_tithe
+			}
+		}
+		unlock_national_focus = ces_eastern_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_decimation
+			}
+		}
+		unlock_national_focus = ces_decimation
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_fortress_legion
+			}
+		}
+		unlock_national_focus = ces_fortress_legion
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_southern_tithe
+			}
+		}
+		unlock_national_focus = ces_southern_tithe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_fortify_the_fort
+			}
+		}
+		unlock_national_focus = ces_fortify_the_fort
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_good_followers
+			}
+		}
+		unlock_national_focus = ces_good_followers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_tribal_customs
+			}
+		}
+		unlock_national_focus = ces_tribal_customs
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_that_happy_day
+			}
+		}
+		unlock_national_focus = ces_that_happy_day
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_lucius_wall
+			}
+		}
+		unlock_national_focus = ces_lucius_wall
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_cult_of_mars
+			}
+		}
+		unlock_national_focus = ces_cult_of_mars
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_perpetual_war
+			}
+		}
+		unlock_national_focus = ces_perpetual_war
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_infantry_weapons
+			}
+		}
+		unlock_national_focus = ces_infantry_weapons
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_advanced_resources
+			}
+		}
+		unlock_national_focus = ces_advanced_resources
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_tank_weapons
+			}
+		}
+		unlock_national_focus = ces_tank_weapons
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_secrets_of_carthage
+			}
+		}
+		unlock_national_focus = ces_secrets_of_carthage
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_census
+			}
+		}
+		unlock_national_focus = ces_census
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_currency
+			}
+		}
+		unlock_national_focus = ces_currency
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_imperial_arms
+			}
+		}
+		unlock_national_focus = ces_imperial_arms
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_wastelander_economy
+			}
+		}
+		unlock_national_focus = ces_wastelander_economy
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_empires_monuments
+			}
+		}
+		unlock_national_focus = ces_empires_monuments
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_running_empire
+			}
+		}
+		unlock_national_focus = ces_running_empire
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_eternal_empire
+			}
+		}
+		unlock_national_focus = ces_eternal_empire
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_caesar_lives
+			}
+		}
+		unlock_national_focus = ces_caesar_lives
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_thesis1
+			}
+		}
+		unlock_national_focus = ces_thesis1
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_justice
+			}
+		}
+		unlock_national_focus = ces_justice
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_respect_women
+			}
+		}
+		unlock_national_focus = ces_respect_women
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_honeyed_words
+			}
+		}
+		unlock_national_focus = ces_honeyed_words
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_the_academy
+			}
+		}
+		unlock_national_focus = ces_the_academy
+	}
+
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_respublica
+			}
+		}
+		unlock_national_focus = ces_respublica
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_dam_start
+			}
+		}
+		unlock_national_focus = ces_dam_start
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_map_dam
+			}
+		}
+		unlock_national_focus = ces_map_dam
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_broken_boulder
+			}
+		}
+		unlock_national_focus = ces_broken_boulder
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_brotherhood_steal
+			}
+		}
+		unlock_national_focus = ces_brotherhood_steal
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_unfair_advantage
+			}
+		}
+		unlock_national_focus = ces_unfair_advantage
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_colorado_blues
+			}
+		}
+		unlock_national_focus = ces_colorado_blues
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_raider_rumble
+			}
+		}
+		unlock_national_focus = ces_legate_glory
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_broken_boulder
+			}
+		}
+		unlock_national_focus = ces_legate_glory
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vulpes_dam
+			}
+		}
+		unlock_national_focus = ces_vulpes_dam
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_brotherhood_steal
+			}
+		}
+		unlock_national_focus = ces_brotherhood_steal
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hoover_dam_battle
+			}
+		}
+		unlock_national_focus = ces_hoover_dam_battle
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_south_ho
+			}
+		}
+		unlock_national_focus = ces_south_ho
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_ranchers
+			}
+		}
+		unlock_national_focus = ces_ranchers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_surplus
+			}
+		}
+		unlock_national_focus = ces_surplus
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_resources
+			}
+		}
+		unlock_national_focus = ces_resources
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_grainmakers
+			}
+		}
+		unlock_national_focus = ces_grainmakers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hoover_dam_battle
+			}
+		}
+		unlock_national_focus = ces_hoover_dam_battle
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_cores_granjas
+			}
+		}
+		unlock_national_focus = ces_cores_granjas
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_resources_granjas
+			}
+		}
+		unlock_national_focus = ces_resources_granjas
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_launchpad
+			}
+		}
+		unlock_national_focus = ces_launchpad
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_outsiders_gente
+			}
+		}
+		unlock_national_focus = ces_outsiders_gente
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarius_investigation
+			}
+		}
+		unlock_national_focus = ces_frumentarius_investigation
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legionaries_loan
+			}
+		}
+		unlock_national_focus = ces_legionaries_loan
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_loyal_tribe
+			}
+		}
+		unlock_national_focus = ces_loyal_tribe
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_nas
+			}
+		}
+		unlock_national_focus = ces_two_nas
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_two_motorized
+			}
+		}
+		unlock_national_focus = ces_two_motorized
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_cowboy_country
+			}
+		}
+		unlock_national_focus = ces_cowboy_country
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_upgrade_port
+			}
+		}
+		unlock_national_focus = ces_upgrade_port
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_gloria_execeritus
+			}
+		}
+		unlock_national_focus = ces_gloria_execeritus
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legionary_training
+			}
+		}
+		unlock_national_focus = ces_legionary_training
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_support_company_bonus
+			}
+		}
+		unlock_national_focus = ces_support_company_bonus
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legion_glory_focus
+			}
+		}
+		unlock_national_focus = ces_legion_glory_focus
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_decanus_glory
+			}
+		}
+		unlock_national_focus = ces_decanus_glory
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_centurion_glory
+			}
+		}
+		unlock_national_focus = ces_centurion_glory
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_auxiliaries
+			}
+		}
+		unlock_national_focus = ces_auxiliaries
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_integrate_auxiliaires
+			}
+		}
+		unlock_national_focus = ces_integrate_auxiliaires
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_lessons_of_haskhesh
+			}
+		}
+		unlock_national_focus = ces_lessons_of_haskhesh
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_modern_cataphracts
+			}
+		}
+		unlock_national_focus = ces_modern_cataphracts
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_modern_cataphracts
+			}
+		}
+		unlock_national_focus = ces_modern_cataphracts
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_auxiliary_supremacy
+			}
+		}
+		unlock_national_focus = ces_auxiliary_supremacy
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vulpes_legions
+			}
+		}
+		unlock_national_focus = ces_vulpes_legions
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarii_guide
+			}
+		}
+		unlock_national_focus = ces_frumentarii_guide
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarii_infiltrators
+			}
+		}
+		unlock_national_focus = ces_frumentarii_infiltrators
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarii_drillmasters
+			}
+		}
+		unlock_national_focus = ces_frumentarii_drillmasters
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarii_generals
+			}
+		}
+		unlock_national_focus = ces_frumentarii_generals
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vulpes_desert
+			}
+		}
+		unlock_national_focus = ces_vulpes_desert
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_canis_latrans
+			}
+		}
+		unlock_national_focus = ces_canis_latrans
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarii_supreme
+			}
+		}
+		unlock_national_focus = ces_frumentarii_supreme
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_frumentarii_officers
+			}
+		}
+		unlock_national_focus = ces_frumentarii_officers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_of_spear
+			}
+		}
+		unlock_national_focus = ces_of_spear
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_aurelians_methods
+			}
+		}
+		unlock_national_focus = ces_aurelians_methods
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_mercenary_advisors
+			}
+		}
+		unlock_national_focus = CES_mercenary_advisors
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_urban_legionaries
+			}
+		}
+		unlock_national_focus = CES_urban_legionaries
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_reign_of_fire
+			}
+		}
+		unlock_national_focus = ces_reign_of_fire
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_phoenix_standard
+			}
+		}
+		unlock_national_focus = ces_phoenix_standard
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_modern_triarii
+			}
+		}
+		unlock_national_focus = ces_modern_triarii
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hammer_of_mars
+			}
+		}
+		unlock_national_focus = ces_hammer_of_mars
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_cult_vulcan
+			}
+		}
+		unlock_national_focus = ces_cult_vulcan
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_vulcan_chariots
+			}
+		}
+		unlock_national_focus = CES_vulcan_chariots
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_cataphracts
+			}
+		}
+		unlock_national_focus = CES_cataphracts
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_vulcan_foundry
+			}
+		}
+		unlock_national_focus = CES_vulcan_foundry
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_secrets_dome
+			}
+		}
+		unlock_national_focus = CES_secrets_dome
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_vulcan_legion
+			}
+		}
+		unlock_national_focus = CES_vulcan_legion
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_armoured_cohorts
+			}
+		}
+		unlock_national_focus = CES_armoured_cohorts
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_cult_vulcan
+			}
+		}
+		unlock_national_focus = ces_cult_vulcan
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_vulcans_other_foundry
+			}
+		}
+		unlock_national_focus = CES_vulcans_other_foundry
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_helios_one_vulcan
+			}
+		}
+		unlock_national_focus = CES_helios_one_vulcan
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_advanced_guns_baby
+			}
+		}
+		unlock_national_focus = CES_advanced_guns_baby
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_fire_or_mercy
+			}
+		}
+		unlock_national_focus = CES_fire_or_mercy
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_legionary_inger
+			}
+		}
+		unlock_national_focus = CES_legionary_inger
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_inger_funding
+			}
+		}
+		unlock_national_focus = CES_inger_funding
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_legionary_accept_tribal_differences
+			}
+		}
+		unlock_national_focus = CES_legionary_accept_tribal_differences
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_women_of_rome
+			}
+		}
+		unlock_national_focus = CES_women_of_rome
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_horns_moroni
+			}
+		}
+		unlock_national_focus = CES_horns_moroni
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_legionary_surge
+			}
+		}
+		unlock_national_focus = CES_legionary_surge
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_angry_lord
+			}
+		}
+		unlock_national_focus = CES_angry_lord
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_legionary_support
+			}
+		}
+		unlock_national_focus = CES_legionary_support
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_fire_fuel
+			}
+		}
+		unlock_national_focus = CES_fire_fuel
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_purifiers
+			}
+		}
+		unlock_national_focus = CES_purifiers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_this_was_a_triumph
+			}
+		}
+		unlock_national_focus = ces_this_was_a_triumph
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_huff_and_puff
+			}
+		}
+		unlock_national_focus = ces_huff_and_puff
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = CES_legionary_accept_tribal_differences
+			}
+		}
+		unlock_national_focus = CES_legionary_accept_tribal_differences
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_uneasy_peace
+			}
+		}
+		unlock_national_focus = ces_uneasy_peace
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_great_exchange
+			}
+		}
+		unlock_national_focus = ces_great_exchange
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_to_the_victors
+			}
+		}
+		unlock_national_focus = ces_to_the_victors
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_go_the_spoils
+			}
+		}
+		unlock_national_focus = ces_go_the_spoils
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_ave_boomers
+			}
+		}
+		unlock_national_focus = ces_ave_boomers
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_ncr_won_dam
+			}
+		}
+		unlock_national_focus = ces_ncr_won_dam
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_long_war
+			}
+		}
+		unlock_national_focus = ces_long_war
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_infiltrate_ncr
+			}
+		}
+		unlock_national_focus = ces_infiltrate_ncr
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_searchlight_raid
+			}
+		}
+		unlock_national_focus = ces_searchlight_raid
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_decimation_stayed
+			}
+		}
+		unlock_national_focus = ces_decimation_stayed
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_legate_honor
+			}
+		}
+		unlock_national_focus = ces_legate_honor
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_second_legate
+			}
+		}
+		unlock_national_focus = ces_second_legate
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_river_wars
+			}
+		}
+		unlock_national_focus = ces_river_wars
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_burned_man
+			}
+		}
+		unlock_national_focus = ces_burned_man
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_new_generation
+			}
+		}
+		unlock_national_focus = ces_new_generation
+	}
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_into_utah
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_into_utah
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_the_frontier
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_the_frontier
+	# }
+
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_burn_witch
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_burn_witch
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_utah_conquer
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_utah_conquer
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_assimilate_resistance
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_assimilate_resistance
+	# }
+
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_down_mexico_way
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_down_mexico_way
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_tame_rio
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_tame_rio
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_ancient_veins
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_ancient_veins
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_core_gloria
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_core_gloria
+	# }
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_kill_titans
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_kill_titans
+	# }
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_attack_ncr
+			}
+		}
+		unlock_national_focus = ces_attack_ncr
+	}
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_hold_crossings
+			}
+		}
+		unlock_national_focus = ces_hold_crossings
+	}
+	# if = {
+	# 	limit = {
+	# 		CES = {
+	# 			has_completed_focus = ces_assimilate_resistance
+	# 		}
+	# 	}
+	# 	unlock_national_focus = ces_assimilate_resistance
+	# }
+
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_crush_brotherhood
+			}
+		}
+		unlock_national_focus = ces_crush_brotherhood
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_vegas_sucks
+			}
+		}
+		unlock_national_focus = ces_vegas_sucks
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_triumph
+			}
+		}
+		unlock_national_focus = ces_triumph
+	}
+	if = {
+		limit = {
+			CES = {
+				has_completed_focus = ces_every_tool
+			}
+		}
+		unlock_national_focus = ces_every_tool
+	}
+}

@@ -73,17 +73,6 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
 set_stability = 0.3
 set_war_support = 0.55
@@ -149,7 +138,6 @@ set_popularities = {
 1034 = { add_claim_by = IRN }
 487 = { add_claim_by = IRN }
 
-set_country_flag = slavery_allowed
 set_country_flag = extra_power_armour_flag_ai
 set_country_flag = power_armor_doctrine_ai
 set_country_flag = elite_doctrine_ai
@@ -158,7 +146,6 @@ set_country_flag = ignore_div_limiter_before_2280
 add_ideas = {
 	irn_mercenaries
 	irn_ironknights
-	slavers_idea_2
 	petty_gang_conscription
 	undesirables_law_raider
 	training_law_wasteland

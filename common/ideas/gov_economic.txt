@@ -852,6 +852,240 @@ ideas = {
 				}
 			}
 		}
+		bag_sphere = {
+			allowed = {
+				use_generic_trade_laws = yes
+			}
+			visible = {
+				NOT = {
+					has_war_with = BAG
+				}
+				BAG = { exists = yes }
+				OR = {
+					is_neighbor_of = BAG
+					any_neighbor_country = {
+						has_idea = bag_sphere
+					}
+				}
+				OR = {
+					NOT = {
+						original_tag = LAC
+						is_in_faction_with = LAC
+					}
+					is_subject_of = BAG
+				}
+			}
+			available = {
+				BAG = {
+					OR = {
+						exists = yes
+						#NOT = {
+						#	has_country_flag = ncr_crisis
+						#}
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			on_add = {
+				swap_ideas = {
+					remove_idea = currencygenericcap
+					add_idea = currencyncrdollar
+				}
+
+			}
+			on_remove = {
+				swap_ideas = {
+					remove_idea = currencyncrdollar
+					add_idea = currencygenericcap
+				}
+			}
+			modifier = {
+				min_export = 0.45
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 20.0
+				army_intel_to_others = 10.0
+				caps_country_trade_modifier = 0.20
+				caps_flat_income_modifier = 3
+			}
+			targeted_modifier = {
+                tag = BAG
+                cic_to_target_factor = 0.05
+                mic_to_target_factor = 0.05
+                extra_trade_to_target_factor = 0.3
+                trade_cost_for_target_factor = -0.2
+            }
+			allowed_to_remove = {
+				OR = {
+					BAG = {
+						OR = {
+							exists = no
+							#has_country_flag = ncr_crisis
+						}
+					}
+					has_war_with = BAG
+				}
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = no
+					check_variable = {
+						resource@metal > 5
+					}
+					check_variable = {
+						resource@circuitry > 5
+					}
+					check_variable = {
+						resource@energy > 5
+					}
+					check_variable = {
+						resource@advanced > 5
+					}
+					add = 100
+				}
+			}
+		}
+		bag_sphere2 = {
+			allowed = {
+				use_generic_trade_laws = yes
+			}
+			visible = {
+				has_country_flag = BAG_customs_union
+				NOT = {
+					has_war_with = BAG
+				}
+				BAG = { exists = yes }
+				OR = {
+					NOT = {
+						original_tag = LAC
+						is_in_faction_with = LAC
+					}
+					is_subject_of = BAG
+				}
+			}
+			available = {
+				BAG = {
+					OR = {
+						exists = yes
+						#NOT = {
+						#	has_country_flag = ncr_crisis
+						#}
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			on_add = {
+				swap_ideas = {
+					remove_idea = currencygenericcap
+					add_idea = currencyncrdollar
+				}
+
+			}
+			on_remove = {
+				swap_ideas = {
+					remove_idea = currencyncrdollar
+					add_idea = currencygenericcap
+				}
+			}
+			modifier = {
+				min_export = 0.55
+				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
+				production_speed_buildings_factor = 0.14
+				research_speed_factor = 0.08
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 20.0
+				army_intel_to_others = 10.0
+				caps_country_trade_modifier = 0.15
+				caps_flat_income_modifier = 4
+			}
+			targeted_modifier = {
+                tag = BAG
+                cic_to_target_factor = 0.15
+                mic_to_target_factor = 0.15
+                extra_trade_to_target_factor = 0.5
+                trade_cost_for_target_factor = -0.2
+            }
+			allowed_to_remove = {
+				has_war_with = BAG
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_war = no
+					check_variable = {
+						resource@metal > 5
+					}
+					check_variable = {
+						resource@circuitry > 5
+					}
+					check_variable = {
+						resource@energy > 5
+					}
+					check_variable = {
+						resource@advanced > 5
+					}
+					add = 100
+				}
+			}
+		}
+
+		enc_collapsed_economy = {
+			picture = great_depression
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			visible = {
+				original_tag = EUR
+				has_country_flag = western_enclave
+			}
+			modifier = {
+				consumer_goods_expected_value = 0.40
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+			}
+
+			allowed_to_remove = {
+				has_stability > 0.30
+				#has_completed_focus = enc_federal_reserve
+			}
+			cancel_if_invalid = no
+		}
+		enc_disorganized_economy = {
+			picture = enc_idea_economy_disorganized
+			allowed = {
+				always = no
+			}
+			visible = {
+				original_tag = EUR
+				has_country_flag = western_enclave
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_industrial_complex_factor = -0.25
+				production_speed_arms_factory_factor = -0.25
+				conversion_cost_civ_to_mil_factor = 0.25
+				conversion_cost_mil_to_civ_factor = 0.25
+			}
+
+			allowed_to_remove = {
+				# always = no
+			}
+			cancel_if_invalid = no
+		}
 		three_rivers_economy = {
 			picture = economy_flannel
 			available = {
@@ -1027,6 +1261,48 @@ ideas = {
 				caps_flat_income_modifier = 9
 				#caps country_trade_modifier = 0.30
 			}
+						cancel_if_invalid = no
+		}
+			currencycomputerchip = {
+			picture = gov_idea_computerchip
+			#cost = 150
+			removal_cost = -1
+			# NOTE FOR CHANGING THESE MODIFIERS: The Caps GUI uses manual localisation with a tooltip to tell players the modifiers of their currency on hover
+			# If you change any of these numbers, you NEED to also update currencycomputerchip_info for players to know what the true effects of the currency are
+			modifier = {
+				stability_factor = 0.02
+				trade_opinion_factor = -0.06
+				max_fuel_factor = 0.05
+				caps_flat_income_modifier = 6
+				#caps country_trade_modifier = 0.30
+			}
+			cancel_if_invalid = no
+		}
+		currencybawlsguarana = {
+			picture = gov_idea_bawlsguarana
+			#cost = 150
+			removal_cost = -1
+			# NOTE FOR CHANGING THESE MODIFIERS: The Caps GUI uses manual localisation with a tooltip to tell players the modifiers of their currency on hover
+			# If you change any of these numbers, you NEED to also update currencybawlsguarana_info for players to know what the true effects of the currency are
+			modifier = {
+				caps_flat_income_modifier = 14
+				war_support_factor = 0.1
+				caps_expense_modifier = 0.05
+				trade_opinion_factor = 0.1
+				#caps_country_trade_modifier = 0.30
+			}
+			cancel_if_invalid = no
+		}
+		currencychargecard = {
+			picture = gov_idea_caps
+			#cost = 150
+			removal_cost = -1
+			# NOTE FOR CHANGING THESE MODIFIERS: The Caps GUI uses manual localisation with a tooltip to tell players the modifiers of their currency on hover
+			# If you change any of these numbers, you NEED to also update currencytexdollar_info for players to know what the true effects of the currency are
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				caps_flat_income_modifier = 12
+			}
 
 			cancel_if_invalid = no
 		}
@@ -1176,7 +1452,7 @@ ideas = {
 				custom_effect_tooltip = caps_lockout_set_tt
 			}
 			modifier = {
-				caps_expense_modifier = -0.45
+				caps_expense_modifier = -0.80
 				army_attack_factor = -0.135
 				army_org_factor = -0.351
 				army_morale_factor = -0.243
@@ -1259,7 +1535,7 @@ ideas = {
 			}
 			cancel_if_invalid = no
 			modifier = {
-				caps_expense_modifier = 0
+				caps_expense_modifier = -0.70
 				army_attack_factor = 0
 				army_org_factor = 0
 				army_morale_factor = 0
@@ -1338,7 +1614,7 @@ ideas = {
 				custom_effect_tooltip = caps_lockout_set_tt
 			}
 			modifier = {
-				caps_expense_modifier = 0.175
+				caps_expense_modifier = -0.60
 				special_forces_cap = 0.05
 				special_forces_min = 20
 				max_training = 0.05
@@ -1422,7 +1698,7 @@ ideas = {
 				custom_effect_tooltip = caps_lockout_set_tt
 			}
 			modifier = {
-				caps_expense_modifier = 0.35
+				caps_expense_modifier = -0.30
 				special_forces_cap = 0.1
 				special_forces_min = 40
 				max_training = 0.10
@@ -1556,6 +1832,22 @@ ideas = {
 				caps_expense_modifier = 0.05
 				caps_flat_income_modifier = 4.0
 				special_forces_min = 10
+			}
+			ai_will_do = {
+				base = 1
+			}
+			cancel_if_invalid = no
+		}
+				URA_wages_law = {
+			picture = gov_idea_bottle_cap
+			allowed = {
+				original_tag = URA
+			}
+			removal_cost = -1
+			cost = 0
+			modifier = {
+				caps_income_modifier = -0.75
+				caps_expense_modifier = -0.95
 			}
 			ai_will_do = {
 				base = 1

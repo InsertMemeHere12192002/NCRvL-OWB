@@ -1216,7 +1216,7 @@ ideas = {
 			}
 		}
 		consensus = {
-			picture = chc_posessed_protect
+			picture = chc_possessed_protect
 
 			allowed = {
 				always = no

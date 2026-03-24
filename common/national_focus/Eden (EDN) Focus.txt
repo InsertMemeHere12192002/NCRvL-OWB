@@ -704,7 +704,7 @@ focus_tree = {
 		id = EDN_increased_research_funding
 		icon = GFX_goal_edn_science
 		cost = 60
-		x = -3
+		x = -1
 		y = 1
 		prerequisite = {
 			focus = EDN_geck_restored
@@ -1014,7 +1014,7 @@ focus_tree = {
 		completion_reward = {
 			set_technology = {
 				power_armour_tech_level_scientific = 1
-				midwest_pa_tech = 1
+				midwest_pa_unlock_tech = 1
 			}
 		}
 		ai_will_do = {

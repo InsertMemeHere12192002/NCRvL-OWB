@@ -1,0 +1,49 @@
+SHI_infiltration_category = {
+	icon = GFX_decision_papers
+	priority = 55
+	allowed = {
+		tag = SHI
+	}
+	visible = {
+	}
+}
+SHI_mandate_over_california = {
+	icon = GFX_decision_category_generic_pantheon
+	priority = 100000
+	allowed = {
+		tag = SHI
+	}
+	visible = {
+		NOT = {
+			OR = {
+				#has_completed_focus = shi_contact_lost_hills
+				has_completed_focus = shi_ncr_friendship
+			}
+		}
+	}
+}
+SHI_ncr_wp_category = {
+	icon = GFX_decision_category_generic_crisis
+	priority = 100
+	allowed = {
+		tag = SHI
+		NOT = {has_global_flag = SHI_emperor_norton_enabled_global_flag}
+	}
+	visible = {
+		NCR = {
+			has_war_with = SHI
+		}
+	}
+}
+#BOS aid
+SHI_bos_smuggling_category = {
+	icon = GFX_decision_t51_vb_armor
+	priority = 50
+	allowed = {
+		tag = BOS
+		#has_country_flag = shi_bos_smuggling	#NOTE#maybe this caused problems?
+	}
+	visible = {
+		has_country_flag = shi_bos_smuggling
+	}
+}

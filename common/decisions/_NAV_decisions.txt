@@ -1,0 +1,159 @@
+####################################
+# Navajo Decisions                 #
+# Scripted by Zusk        :3       #
+####################################
+
+#Slightly insane, but Navajo will almost never get to this point as the AI, so this is mostly a player toy.
+
+
+#These used to be baked into the focus tree. This led to border gore.
+#Now they are here!
+CES_a_friend_of_the_legion = {
+	NAV_request_1 = {
+		fire_only_once = yes
+		fixed_random_seed = no
+
+		days_remove = 80
+		cost = 50
+
+		ai_will_do = {
+			factor = 12000
+		}
+        allowed = {
+            original_tag = NAV
+        }
+		visible = {
+            is_in_faction_with = CES
+		}
+        available = {
+            has_completed_focus = NAV_legion_training
+			NOT = {
+				has_truce_with = CES
+			}
+        }
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 498
+				state = 482
+			}
+		}
+        cancel_trigger = {
+            NOT = {
+                is_in_faction_with = CES
+            }
+        }
+
+		remove_effect = {
+			CES = {
+				country_event = nf_navajo_land_request.1
+			}
+			custom_effect_tooltip = NAV_territory_tt
+			set_truce = {
+				target = CES
+				days = 90
+			}
+		}
+	}
+	NAV_request_2 = {
+		fire_only_once = yes
+		fixed_random_seed = no
+
+		days_remove = 80
+		cost = 50
+
+		ai_will_do = {
+			factor = 12000
+		}
+        allowed = {
+            original_tag = NAV
+        }
+		visible = {
+            is_in_faction_with = CES
+		}
+        available = {
+            has_completed_focus = NAV_legion_training
+			NOT = {
+				has_truce_with = CES
+			}
+			owns_state = 498
+			owns_state = 482
+        }
+
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 439
+				state = 244
+			}
+		}
+        cancel_trigger = {
+            NOT = {
+                is_in_faction_with = CES
+            }
+        }
+
+		remove_effect = {
+			CES = {
+				country_event = nf_navajo_land_request.2
+			}
+			custom_effect_tooltip = NAV_territory_tt
+			set_truce = {
+				target = CES
+				days = 90
+			}
+		}
+	}
+	NAV_request_3 = {
+		fire_only_once = yes
+		fixed_random_seed = no
+
+		days_remove = 80
+		cost = 50
+
+		ai_will_do = {
+			factor = 12000
+		}
+        allowed = {
+            original_tag = NAV
+        }
+		visible = {
+            is_in_faction_with = CES
+		}
+        available = {
+            has_completed_focus = NAV_legion_training
+			NOT = {
+				has_truce_with = CES
+			}
+			owns_state = 498
+			owns_state = 482
+			owns_state = 439
+			owns_state = 244
+        }
+
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 124
+				state = 144
+				state = 608
+			}
+		}
+        cancel_trigger = {
+            NOT = {
+                is_in_faction_with = CES
+            }
+        }
+
+		remove_effect = {
+			CES = {
+				country_event = nf_navajo_land_request.3
+			}
+			custom_effect_tooltip = NAV_territory_tt
+			set_truce = {
+				target = CES
+				days = 90
+			}
+		}
+	}
+}

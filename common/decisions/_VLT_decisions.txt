@@ -1,0 +1,671 @@
+vlt_nevada_pact_decision_category = {
+	invite_to_vault_university = {
+		target_array = allies
+		target_root_trigger = {
+			has_completed_focus = vlt_nevada_pact_baby
+		}
+		visible = {
+			FROM = {
+				exists = yes
+				is_in_faction_with = VLT
+				is_nevada_pact_member = yes
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 10 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				add_timed_idea = {
+					idea = vault_school
+					days = 300
+				}
+				set_country_flag = vlt_scholarship
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				check_variable = {
+					caps_number_display > 800
+				}
+				add = 1
+			}
+		}
+	}
+	vlt_electrify_capital = {
+		target_array = allies
+		target_root_trigger = {
+			has_completed_focus = vlt_nevada_pact_baby
+		}
+		visible = {
+			FROM = {
+				exists = yes
+				is_in_faction_with = VLT
+				is_nevada_pact_member = yes
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 10 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+					}
+					add_resource = {
+						type = energy
+						amount = 7
+					}
+				}
+				set_country_flag = vlt_electrification
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				check_variable = {
+					caps_number_display > 800
+				}
+				add = 1
+			}
+		}
+	}
+	vlt_irrigation_system = {
+		target_array = allies
+		target_root_trigger = {
+			has_completed_focus = vlt_nevada_pact_baby
+		}
+		visible = {
+			FROM = {
+				exists = yes
+				is_in_faction_with = VLT
+				is_nevada_pact_member = yes
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 10 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				every_owned_state = {
+					limit = {
+						is_capital = yes
+					}
+					add_resource = {
+						type = water
+						amount = 7
+					}
+				}
+				set_country_flag = vlt_irrigatoin_system
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				check_variable = {
+					caps_number_display > 800
+				}
+				add = 1
+			}
+		}
+	}
+	vlt_modernization = {
+		target_array = allies
+		target_root_trigger = {
+			has_completed_focus = vlt_nevada_pact_baby
+		}
+		visible = {
+			FROM = {
+				exists = yes
+				is_in_faction_with = VLT
+				is_nevada_pact_member = yes
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 10 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		available = {
+			FROM = {
+				has_country_flag = vlt_irrigatoin_system
+				has_country_flag = vlt_electrification
+				has_country_flag = vlt_scholarship
+			}
+		}
+		fire_only_once = yes
+		complete_effect = {
+			FROM = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = exploitation_tech_level_settler
+						}
+					}
+					set_technology = {  exploitation_tech_level_settler = 1 }
+				}
+				else_if = {
+					limit = {
+						has_tech = exploitation_tech_level_settler
+					}
+					set_technology = { exploitation_tech_level_scientific = 1 }
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_tech = tools_tech_level_settler
+						}
+					}
+					set_technology = {  tools_tech_level_settler = 1 }
+				}
+				else_if = {
+					limit = {
+						has_tech = tools_tech_level_settler
+					}
+					set_technology = { tools_tech_level_scientific = 1 }
+				}
+			}
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				check_variable = {
+					caps_number_display > 800
+				}
+				add = 1
+			}
+		}
+	}
+}
+vlt_magistrates_cat = {
+	vlt_assign_consul_for_elko = {
+		allowed = { tag = VLT }
+		ai_will_do = { factor = 10 }
+		fire_only_once = yes
+		available = {
+			PAL = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_elko_magistrate_assigned
+		}
+		visible = {
+			PAL = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_elko_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { elko_magistrate = 1 }
+			clr_country_flag = vlt_no_elko_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_elko = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			PAL = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_elko_magistrate_assigned
+		}
+		visible = {
+			PAL = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_elko_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { elko_magistrate = 2 }
+			clr_country_flag = vlt_no_elko_magistrate_assigned
+		}
+	}
+	vlt_assign_consul_for_paradise_valley = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			CYC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_paradise_valley_magistrate_assigned
+		}
+		visible = {
+			CYC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_paradise_valley_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { paradise_valley_magistrate = 1 }
+			clr_country_flag = vlt_no_paradise_valley_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_paradise_valley = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			CYC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_paradise_valley_magistrate_assigned
+		}
+		visible = {
+			CYC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_paradise_valley_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { paradise_valley_magistrate = 2 }
+			clr_country_flag = vlt_no_paradise_valley_magistrate_assigned
+		}
+	}
+	vlt_assign_consul_for_burrows = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			SLN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_burrows_magistrate_assigned
+		}
+		visible = {
+			SLN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_burrows_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { burrows_magistrate = 1 }
+			clr_country_flag = vlt_no_burrows_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_burrows = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			SLN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_burrows_magistrate_assigned
+		}
+		visible = {
+			SLN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_burrows_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { burrows_magistrate = 2 }
+			clr_country_flag = vlt_no_burrows_magistrate_assigned
+		}
+	}
+	vlt_assign_consul_for_eastport = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			OR = {
+				EAS = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+				EAS = {
+					exists = yes
+					has_idea = vlt_eas_cooperation
+				}
+			}
+			has_country_flag = vlt_no_eastport_magistrate_assigned
+		}
+		visible = {
+			OR = {
+				EAS = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+				EAS = {
+					exists = yes
+					has_idea = vlt_eas_cooperation
+				}
+			}
+			has_country_flag = vlt_no_eastport_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { eastport_magistrate = 1 }
+			clr_country_flag = vlt_no_eastport_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_eastport = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			OR = {
+				EAS = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+				EAS = {
+					exists = yes
+					has_idea = vlt_eas_cooperation
+				}
+			}
+			has_country_flag = vlt_no_eastport_magistrate_assigned
+		}
+		visible = {
+			OR = {
+				EAS = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+				EAS = {
+					exists = yes
+					has_idea = vlt_eas_cooperation
+				}
+			}
+			has_country_flag = vlt_no_eastport_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { eastport_magistrate = 2 }
+			clr_country_flag = vlt_no_eastport_magistrate_assigned
+		}
+	}
+	vlt_assign_consul_for_reno = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			NEW = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_reno_magistrate_assigned
+		}
+		visible = {
+			NEW = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_reno_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { reno_magistrate = 1 }
+			clr_country_flag = vlt_no_reno_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_reno = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			NEW = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_reno_magistrate_assigned
+		}
+		visible = {
+			NEW = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_reno_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { reno_magistrate = 2 }
+			clr_country_flag = vlt_no_reno_magistrate_assigned
+		}
+	}
+	vlt_assign_consul_for_mineral_county = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			YKZ = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_mineral_county_magistrate_assigned
+		}
+		visible = {
+			YKZ = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_mineral_county_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { mineral_county_magistrate = 1 }
+			clr_country_flag = vlt_no_mineral_county_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_mineral_county = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			YKZ = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_mineral_county_magistrate_assigned
+		}
+		visible = {
+			YKZ = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = vlt_no_mineral_county_magistrate_assigned
+		}
+		complete_effect = {
+			set_variable = { mineral_county_magistrate = 2 }
+			clr_country_flag = vlt_no_mineral_county_magistrate_assigned
+		}
+	}
+	vlt_assign_consul_for_modoc = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			OR = {
+				has_country_flag = vlt_modoc_decision_coop
+				AND = {
+					MOD = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					has_country_flag = vlt_no_modoc_magistrate_assigned
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = vlt_modoc_decision_coop
+				AND = {
+					MOD = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					has_country_flag = vlt_no_modoc_magistrate_assigned
+				}
+			}
+		}
+		complete_effect = {
+			set_variable = { modoc_magistrate = 1 }
+			clr_country_flag = vlt_no_modoc_magistrate_assigned
+		}
+	}
+	vlt_assign_outworlder_for_modoc = {
+		ai_will_do = { factor = 10 }
+		allowed = { tag = VLT }
+		fire_only_once = yes
+		available = {
+			OR = {
+				has_country_flag = vlt_modoc_decision_coop
+				AND = {
+					MOD = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					has_country_flag = vlt_no_modoc_magistrate_assigned
+				}
+			}
+		}
+		visible = {
+			OR = {
+				has_country_flag = vlt_modoc_decision_coop
+				AND = {
+					MOD = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					has_country_flag = vlt_no_modoc_magistrate_assigned
+				}
+			}
+		}
+		complete_effect = {
+			set_variable = { modoc_magistrate = 2 }
+			clr_country_flag = vlt_no_modoc_magistrate_assigned
+		}
+	}
+}
+
+vlt_spatial_anomalies_cat = {
+	bone_dancer_anomaly_timer = {
+		allowed = {
+			original_tag = VLT
+		}
+		activation = {
+			has_country_flag = bone_dancer_anomaly_timer_visible
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 60
+		timeout_effect = {
+			set_country_flag = vlt_bonedancers_anomaly_open
+			custom_effect_tooltip = bone_dancer_anomaly_timer_tt
+		}
+	}
+	vault_city_anomaly_timer = {
+		allowed = {
+			original_tag = VLT
+		}
+		activation = {
+			has_country_flag = vault_city_anomaly_timer_visible
+		}
+		available = {
+			always = no
+		}
+		is_good = yes
+		days_mission_timeout = 60
+		timeout_effect = {
+			set_country_flag = vlt_vaultcity_anomaly_open
+			custom_effect_tooltip = vault_city_anomaly_timer_tt
+		}
+	}
+	teleport_troops_bonedancers = {
+		allowed = {
+			original_tag = VLT
+		}
+		visible = {
+			OR = {
+				has_country_flag = vlt_bonedancers_anomaly_open
+				has_country_flag = vlt_anomalies_permanent
+			}
+		}
+		available = {
+			OR = {
+				has_country_flag = vlt_bonedancers_anomaly_open
+				has_country_flag = vlt_anomalies_permanent
+			}
+		}
+		days_re_enable = 5
+		complete_effect = {
+			343 = {
+				teleport_armies = {
+					limit = {
+						original_tag = VLT
+					}
+					to_state = 889
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = vlt_anomalies_permanent
+					}
+				}
+				clr_country_flag = vlt_bonedancers_anomaly_open
+				activate_decision = bone_dancer_anomaly_timer
+			}
+		}
+	}
+	show_other_side_bonedancers = {
+		allowed = {
+			original_tag = VLT
+		}
+		visible = {
+			has_country_flag = vlt_bonedancers_anomaly_open
+		}
+		complete_effect = {
+			goto_province = 12222
+		}
+	}
+	teleport_troops_vault_city = {
+		allowed = {
+			original_tag = VLT
+		}
+		visible = {
+			OR = {
+				has_country_flag = vlt_vaultcity_anomaly_open
+				has_country_flag = vlt_anomalies_permanent
+			}
+		}
+		available = {
+			OR = {
+				has_country_flag = vlt_vaultcity_anomaly_open
+				has_country_flag = vlt_anomalies_permanent
+			}
+		}
+		days_re_enable = 5
+		complete_effect = {
+			261 = {
+				teleport_armies = {
+					limit = {
+						original_tag = VLT
+					}
+					to_state = 783
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = vlt_anomalies_permanent
+					}
+				}
+				clr_country_flag = vlt_vaultcity_anomaly_open
+				activate_decision = vault_city_anomaly_timer
+			}
+		}
+	}
+	show_other_side_vault_city = {
+		allowed = {
+			original_tag = VLT
+		}
+		visible = {
+			has_country_flag = vlt_vaultcity_anomaly_open
+		}
+		complete_effect = {
+			goto_province = 714
+		}
+	}
+}

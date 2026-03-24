@@ -48,15 +48,11 @@ script_enum_equipment_category = {
 	naval_bomber
 	missile
 	emplacement_gun_ammo
-	ballistic_missile
-	nuclear_missile
-	sam_missile
 	suicide
 	scout_plane
 	maritime_patrol_plane
 	air_transport
 	carrier
-	missile_launcher
 	support
 	amphibious
 	anti_air
@@ -65,18 +61,17 @@ script_enum_equipment_category = {
 	rocket
 	flame
 	land_cruiser
-	emplacement_gun_ammo
 	ballistic_missile
 	nuclear_missile
 	sam_missile
 	missile_launcher
+	support_ship
 }
 
 script_enum_equipment_bonus_type = {
 	## Air
 	fighter_equipment
 	air_chaff_equipment
-
 	fighter
 	cas
 	tactical_bomber
@@ -85,30 +80,25 @@ script_enum_equipment_bonus_type = {
 	spotter_plane_equipment
 	cas_equipment
 	cas_equipment
-
 	## Land
 	infantry_equipment
 	support_equipment
 	anti_tank_equipment
 	anti_air_equipment
 	artillery
-
 	motorized_equipment
-
 	armor
-
 	## Sea
 	ship_hull_light
 	ship_hull_heavy
 	ship_hull_super_heavy
 	ship_hull_super_heavy_1
-
 	convoy
 	submarine
 	screen_ship
 	carrier
 	capital_ship
-
+	support_ship
 	## OWB equipment
 	security_robot_equipment
 	combat_robot_equipment
@@ -129,7 +119,6 @@ script_enum_equipment_bonus_type = {
 	chariot_equipment
 	infantry
 	mechanized
-	radroach_equipment
 	super_heavy_robot_equipment
 	car_fighter_equipment
 	hev_fighter_equipment
@@ -144,18 +133,24 @@ script_enum_equipment_bonus_type = {
 	ship_hull_medium
 	cnc_robot_equipment
 	behemoth_equipment
-	mirelurk_equipment
+	burrowing_beast_equipment
+	amphibious_beast_equipment
+	insect_equipment
+	deathclaw_equipment
+	deathclaw_special_equipment
+	feral_ghoul_equipment
+	beast_creature_equipment
+	gecko_creature_equipment
 	skate_equipment
 	ground_blimp_equipment
 	cheap_blimp_equipment
 	long_strategic_bomber_equipment
 	nav_strategic_bomber_equipment
-
-	train
 	railway_gun_equipment
-	railway_gun_equipment_1
+	train
 	floating_harbor
 	floating_harbor_equipment
+	floating_harbor_equipment_1
 	railway_gun
 	armor
 	motorized
@@ -184,14 +179,12 @@ script_enum_equipment_bonus_type = {
 	anti_tank
 	rocket
 	flame
-
 	land_cruiser
 	emplacement_gun_ammo
 	ballistic_missile
 	nuclear_missile
 	sam_missile
 	missile_launcher
-
 	blimp_equipment_1
 	air_blimp_equipment_1
 	ground_blimp_equipment_1
@@ -340,12 +333,8 @@ script_enum_equipment_bonus_type = {
 	gauss_equipment_2
 	plasma_equipment_1
 	plasma_equipment_2
-	mirelurk_equipment_1
-	molerat_equipment
-	molerat_equipment_1
 	monster_equipment
 	gehenna_molech_equipment
-	radroach_equipment_1
 	power_armor_equipment_0
 	power_armor_equipment_1
 	power_armor_equipment_2
@@ -385,7 +374,6 @@ script_enum_equipment_bonus_type = {
 	dun_robot_equipment
 	dun_robot_equipment_1
 	convoy_1
-	floating_harbor_equipment_1
 	ship_hull_heavy_1
 	ship_hull_heavy_2
 	ship_hull_heavy_3
@@ -414,28 +402,70 @@ script_enum_equipment_bonus_type = {
 	drug_equipment_coffee_2
 	supply_equipment
 	supply_equipment_1
-
+	amphibious_beast_equipment_1
+	amphibious_beast_equipment_2
+	amphibious_beast_equipment_armor
+	amphibious_beast_equipment_king
+	beast_creature_equipment_1
+	beast_creature_equipment_2
+	beast_creature_equipment_heavy
+	beast_creature_equipment_dusky
+	beast_creature_equipment_stalker
+	beast_creature_equipment_cloaked
+	gecko_creature_equipment_1
+	gecko_creature_equipment_2
+	gecko_creature_equipment_fire
+	gecko_creature_equipment_green
+	burrowing_beast_equipment_1
+	burrowing_beast_equipment_2
+	burrowing_beast_equipment_glowing
+	burrowing_beast_equipment_brood
+	deathclaw_equipment_1
+	deathclaw_equipment_2
+	deathclaw_equipment_3
+	deathclaw_special_equipment_1
+	deathclaw_special_equipment_2
+	feral_ghoul_equipment_1
+	feral_ghoul_equipment_2
+	feral_ghoul_equipment_armored
+	feral_ghoul_equipment_glowing
+	insect_equipment_1
+	insect_equipment_2
+	insect_equipment_3
+	railway_gun_equipment_1
+	railway_gun_equipment_2
+	railway_gun_equipment_3
+	railway_gun_equipment_4
+	ballistic_missile_equipment
+	ballistic_missile_equipment_1
+	ballistic_missile_equipment_2
+	ballistic_missile_equipment_3
+	nuclear_missile_equipment
+	nuclear_missile_equipment_1
+	nuclear_missile_equipment_2
+	explosive_ammo_equipment
+	explosive_ammo_equipment_1
+	
 }
 
 script_enum_equipment_stat = {
 	#Viktors note for modders and future CDs: If you want to use a stat in the MIOs it has to be in the equipment category itself, not on the battalion level. So stuff like defense works because its contained within the equipment, but stuff like recon will not work because its owned by the battalion. Adding stuff like recon will not throw an error, but it will _not_ work. Moving stats to the equipment level from the bat-level might fix this if you are brave enough, but it is very risk and might break other stuff. Ive commented what is currently on the battalion level below and should not be used with MIOs.
-
-	default_morale 					#Cannot be used with MIOS
+	default_morale	#Cannot be used with MIOS
 	defense
 	breakthrough
 	hardness
 	soft_attack
 	hard_attack
-	recon 							#Cannot be used with MIOS
-	entrenchment					# ONLY works for tanks with dozer blades, NOT infantry
-	initiative 						#Cannot be used with MIOS
-	casualty_trickleback 			#Cannot be used with MIOS
-	supply_consumption_factor 		#Cannot be used with MIOS
-	supply_consumption 				#Cannot be used with MIOS
-	suppression 					#Cannot be used with MIOS
-	suppression_factor 				#Cannot be used with MIOS
-	experience_loss_factor 			#Cannot be used with MIOS
-	equipment_capture_factor 		#Cannot be used with MIOS
+	recon	#Cannot be used with MIOS
+	entrenchment	# ONLY works for tanks with dozer blades, NOT infantry
+	initiative	#Cannot be used with MIOS
+	casualty_trickleback	#Cannot be used with MIOS
+	supply_consumption_factor	#Cannot be used with MIOS
+	supply_consumption	#Cannot be used with MIOS
+	suppression	#Cannot be used with MIOS
+	suppression_factor	#Cannot be used with MIOS
+	experience_loss_factor	#Cannot be used with MIOS
+	equipment_capture_factor	#Cannot be used with MIOS
 	recovery
 	additional_collateral_damage
 	fuel_capacity
@@ -473,26 +503,29 @@ script_enum_equipment_stat = {
 	naval_strike_targetting
 	air_ground_attack
 	air_visibility_factor
-	railway_gun_attack 			#Cannot be used with MIOS
-	railway_gun_attack_range_index_in_define # This cannot be used with MIOs or equipment_bonus - only in equipment definition
+	railway_gun_attack	#Cannot be used with MIOS
+	railway_gun_attack_range_index_in_define	# This cannot be used with MIOs or equipment_bonus - only in equipment definition
 	railway_gun_annex_ratio
 	railway_gun_hours_between_redistribution
-	max_organisation			#Cannot be used with MIOS
-	max_strength				##Cannot be used with MIOS
+	max_organisation	#Cannot be used with MIOS
+	max_strength	##Cannot be used with MIOS
 	maximum_speed
 	armor_value
 	ap_attack
 	reliability
 	reliability_factor
 	weight
-	thrust 						#DLC Only be careful and avoid unless needed
+	thrust	#DLC Only be careful and avoid unless needed
 	fuel_consumption
 	fuel_consumption_factor
 	strategic_attack
 	carrier_size
-	acclimatization_hot_climate_gain_factor			#Cannot be used with MIOS
-	acclimatization_cold_climate_gain_factor		#Cannot be used with MIOS
-	night_penalty				#Cannot be used with MIOS
+	submarine_carrier_size
+	carrier_surface_detection
+	carrier_sub_detection
+	acclimatization_hot_climate_gain_factor	#Cannot be used with MIOS
+	acclimatization_cold_climate_gain_factor	#Cannot be used with MIOS
+	night_penalty	#Cannot be used with MIOS
 	build_cost_ic
 	naval_weather_penalty_factor
 }

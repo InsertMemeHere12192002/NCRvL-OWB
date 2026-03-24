@@ -1,0 +1,32 @@
+
+state={
+	id=1407
+	name="STATE_1407"
+
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19774 1
+		}
+		victory_points = {
+			19765 5
+		}
+		victory_points = {
+			19942 1
+		}
+		buildings = {
+			infrastructure = 9
+			arms_factory = 1
+			industrial_complex = 4
+		}
+	}
+
+	provinces={
+		19764 19765 19766 19768 19769 19770 19774 19775 19913 19930 19931 19939 19942 19952 19953 19954 19955 19959 19960
+	}
+	manpower=15000
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

@@ -22,6 +22,9 @@ set_technology = {
 	#robotics_tech_level_tribal = 1
 	#robotics_tech_level_settler = 1
 	#robotics_tech_level_scientific = 1
+	creatures_tech_level_tribal = 1
+	creatures_tech_level_settler = 1
+	#creatures_tech_level_scientific = 1
 	air_tech_level_tribal = 1
 	air_tech_level_settler = 1
 	#air_tech_level_scientific = 1
@@ -86,16 +89,6 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
 set_stability = 0.5
 set_war_support = 0.45
@@ -112,7 +105,7 @@ set_country_flag = is_arizona_nation
 set_country_flag = no_generic_advisor
 set_country_flag = no_generic_chief
 set_country_flag = no_generic_high_command
-add_manpower = 200		# Need to be deliberate about manpower balance as it's an important resource @Tran
+add_manpower = 2000
 
 ### Ideas
 add_ideas = {

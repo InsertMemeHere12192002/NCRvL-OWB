@@ -49,7 +49,7 @@ set_technology = {
 	fireteam_weaponry_tech = 1
 	bike_tech_1 = 1
 	raider_reckless_aggression = 1
-	molerat_infantry_unlock_tech = 1
+	burrowing_beast_unlock_tech = 1
 	spec_ops_equipment_tech_1 = 1
 }
 
@@ -64,19 +64,8 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
-set_stability = 0.33
+set_stability = 0.4
 set_war_support = 0.46
 set_research_slots = 3
 #set_country_flag = is_raider_nation

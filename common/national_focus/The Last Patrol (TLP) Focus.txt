@@ -210,7 +210,7 @@ focus_tree = {
 
 		completion_reward = {
 			navy_experience = 15
-			615 = {
+			616 = {
 				if = {
 					limit = {
 						is_valid_state_for_2_dockyards = yes
@@ -367,6 +367,9 @@ focus_tree = {
 		completion_reward = {
 			add_country_leader_trait = oklahoma_patriot
 			add_political_power = 100
+				set_technology = {
+				ghoul_paratrooper_tech = 1
+			}
 		}
 	}
 	focus = {
@@ -384,6 +387,7 @@ focus_tree = {
 
 		completion_reward = {
 			615 = {
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -770,7 +774,7 @@ focus_tree = {
 	}
 	focus = {
 		id = tlp_loyalists_among_the_smoothskins
-		icon = GFX_goal_generic_regular_firearms_focus
+		icon = GFX_goal_toc_warden3
 		cost = 60
 		x = 2
 		y = 1
@@ -800,7 +804,7 @@ focus_tree = {
 	}
 	focus = {
 		id = tlp_andrews_boys
-		icon = GFX_goal_NEW_american_pmc
+		icon = GFX_goal_toc_warden2
 		cost = 60
 		x = 1
 		y = 1

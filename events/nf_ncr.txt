@@ -2468,7 +2468,7 @@ country_event = { # There Was Only Ever One
 					}
 				}
 				add_field_marshal_role = {
-					character = NCR_moore
+					character = NCR_colonel_moore
 					traits = {
 						enduring_trait
 						agile_trait

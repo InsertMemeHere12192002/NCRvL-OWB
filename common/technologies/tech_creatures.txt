@@ -1,0 +1,2926 @@
+technologies = {
+
+	@Col_1 = 8
+	@Col_2 = 11
+	@Col_3 = 14
+	@Col_4 = 17
+	@Col_5 = 20
+	@Col_6 = 23
+	@Col_7 = 26
+	@Col_8 = 29
+	@Col_9 = 32
+
+	@Col_10 = 35
+	@Col_11 = 38
+	@Col_12 = 41
+	@Col_13 = 44
+	@Col_14 = 47
+	@Col_15 = 50
+
+	@Row_burrowing = 1
+	@Row_burrowing_glowing = 0
+	@Row_burrowing_brood = 2
+	@Row_insects = 5
+	@Row_amphibious = 9
+	@Row_amphibious_armor = 8
+	@Row_amphibious_king = 10
+	@Row_deathclaw = 13
+	@Row_deathclaw_top = 12
+	@Row_deathclaw_bottom = 14
+	@Row_ferals = 17
+	@Row_ferals_armor = 16
+	@Row_ferals_glowing = 18
+	@Row_beasts_start = 23
+	@Row_beasts = 21
+	@Row_beasts_heavy = 20
+	@Row_beasts_stalker = 22
+	@Row_geckos = 26
+	@Row_geckos_fire = 25
+	@Row_geckos_green = 27
+
+	#-------------------------------
+	# Creatures
+	#-------------------------------
+
+	burrowing_beast_unlock_tech = {
+		research_cost = 1.8
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			burrowing_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = burrowing_beast_upgrade_tech_1
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing y = @Col_1 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = burrowing_beast_creature
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_burrowing_beast_creature"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_equipments = {
+			burrowing_beast_equipment_1
+		}
+
+		enable_subunits = {
+			burrowing_beast_creature
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	bb_chitin_plating = {
+		research_cost = 1
+
+		burrowing_beast_creature = {
+			hardness = 1.0
+			armor_value = 6.0
+			defense = -0.1
+		}
+
+		dependencies = {
+			blocked_tech_level = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing_glowing y = @Col_10 }
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	burrowing_beast_upgrade_tech_1 = {
+		research_cost = 1.8
+		start_year = 2277
+
+		burrowing_beast_creature = {
+			ap_attack  = 0.1
+			soft_attack  = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			burrowing_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = burrowing_beast_intermediate_form
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing y = @Col_2 }
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	burrowing_beast_intermediate_form = {
+		research_cost = 1.8
+		start_year = 2279
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = burrowing_beast_upgrade_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing y = @Col_4 }
+		}
+
+		enable_equipments = {
+			burrowing_beast_equipment_2
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	burrowing_beast_upgrade_tech_2 = {
+		research_cost = 1.8
+		start_year = 2280
+
+		burrowing_beast_creature = {
+			entrenchment = 0.25
+			hills = {
+				defence = 0.05
+				attack = 0.05
+			}
+			mountain = {
+				defence = 0.05
+				attack = 0.05
+			}
+			acclimatization_cold_climate_gain_factor = 0.25
+			acclimatization_hot_climate_gain_factor = 0.25
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = burrowing_beast_glowing_form
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = burrowing_beast_brood_form
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	burrowing_beast_glowing_form = {
+		research_cost = 1.8
+		start_year = 2282
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		XOR = {
+			burrowing_beast_brood_form
+		}
+
+		path = {
+			leads_to_tech = burrowing_beast_upgrade_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing_glowing y = @Col_7 }
+		}
+
+		enable_equipments = {
+			burrowing_beast_equipment_glowing
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = burrowing_beast_brood_form
+			}
+		}
+	}
+
+	burrowing_beast_upgrade_tech_3 = {
+		research_cost = 1.8
+		start_year = 2283
+
+		burrowing_beast_creature = {
+			max_strength = 1.0
+			default_morale = 0.03
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing_glowing y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	burrowing_beast_brood_form = {
+		research_cost = 1.8
+		start_year = 2282
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		XOR = {
+			burrowing_beast_glowing_form
+		}
+
+		path = {
+			leads_to_tech = burrowing_beast_upgrade_tech_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing_brood y = @Col_7 }
+		}
+
+		enable_equipments = {
+			burrowing_beast_equipment_brood
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = burrowing_beast_glowing_form
+			}
+		}
+	}
+
+	burrowing_beast_upgrade_tech_4 = {
+		research_cost = 1.8
+		start_year = 2283
+
+		burrowing_beast_creature = {
+			max_organisation = 3
+			casualty_trickleback = 0.005
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_burrowing_brood y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			burrowers_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	insect_creature_unlock_tech = {
+		research_cost = 1.8
+
+		path = {
+			leads_to_tech = insect_beast_upgrade_tech_1
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			insect_tech_access_tech = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_insects y = @Col_1 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = insect_creature
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_insect_creature"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_equipments = {
+			insect_equipment_1
+		}
+
+		enable_subunits = {
+			insect_creature
+		}
+
+		categories = {
+			creatures_tech_category
+			insect_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	insect_beast_upgrade_tech_1 = {
+		research_cost = 1.7
+		start_year = 2277
+
+		insect_creature = {
+			breakthrough = 0.05
+			maximum_speed = 0.1
+		}
+
+		fireteam_support = {
+			battalion_mult = {
+				category = category_insects
+				max_organisation = 0.05
+			}
+		}
+		demolitions_support = {
+			battalion_mult = {
+				category = category_insects
+				max_organisation = 0.05
+			}
+		}
+		anti_tank_company = {
+			battalion_mult = {
+				category = category_insects
+				max_organisation = 0.05
+			}
+		}
+		anti_air_support = {
+			battalion_mult = {
+				category = category_insects
+				max_organisation = 0.05
+			}
+		}
+		power_armour_support = {
+			battalion_mult = {
+				category = category_insects
+				max_organisation = 0.05
+			}
+		}
+
+		path = {
+			leads_to_tech = insects_intermediate_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_insects y = @Col_2 }
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			insect_tech_access_tech = 1
+		}
+
+		categories = {
+			creatures_tech_category
+			insect_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	insects_intermediate_tech = {
+		research_cost = 1.8
+		start_year = 2279
+
+		path = {
+			leads_to_tech = insect_beast_upgrade_tech_2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_insects y = @Col_4 }
+		}
+
+		enable_equipments = {
+			insect_equipment_2
+		}
+
+		categories = {
+			creatures_tech_category
+			insect_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	insect_beast_upgrade_tech_2 = {
+		research_cost = 1.7
+		start_year = 2280
+
+		insect_creature = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+		}
+
+		recon_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		motorized_recon_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		logistics_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		motorized_logistics_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		maintenance_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		motorized_maintenance_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		medical_chem_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		motorized_medical_chem_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+		dog_company = {
+			battalion_mult = {
+				category = category_insects
+				default_morale = 0.08
+			}
+		}
+
+		path = {
+			leads_to_tech = insects_giant_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_insects y = @Col_5 }
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		categories = {
+			creatures_tech_category
+			insect_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	insects_giant_tech = {
+		research_cost = 1.8
+		start_year = 2281
+
+		path = {
+			leads_to_tech = insect_beast_upgrade_tech_3
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_insects y = @Col_7 }
+		}
+
+		enable_equipments = {
+			insect_equipment_3
+		}
+
+		categories = {
+			creatures_tech_category
+			insect_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	insect_beast_upgrade_tech_3 = {
+		research_cost = 1.7
+		start_year = 2282
+
+		insect_creature = {
+			default_morale = 0.05
+			max_strength = 1.0
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_insects y = @Col_8 }
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		categories = {
+			creatures_tech_category
+			insect_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	amphibious_beast_unlock_tech = {
+		research_cost = 2.0
+
+		path = {
+			leads_to_tech = amphibious_beast_upgrade_tech_1
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			amphibious_tech_access_tech = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious y = @Col_1 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = amphibious_beast_creature
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_amphibious_beast_creature"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_equipments = {
+			amphibious_beast_equipment_1
+		}
+
+		enable_subunits = {
+			amphibious_beast_creature
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	amphibious_beast_upgrade_tech_1 = {
+		research_cost = 1.8
+		start_year = 2277
+
+		amphibious_beast_creature = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = amphibious_beast_intermediate_form
+			research_cost_coeff = 1
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			tribal_tech_category
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious y = @Col_2 }
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			amphibious_tech_access_tech = 1
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	amphibious_beast_intermediate_form = {
+		research_cost = 1.8
+		start_year = 2279
+
+		path = {
+			leads_to_tech = amphibious_beast_upgrade_tech_2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious y = @Col_4 }
+		}
+
+		enable_equipments = {
+			amphibious_beast_equipment_2
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	amphibious_beast_upgrade_tech_2 = {
+		research_cost = 1.8
+		start_year = 2280
+
+		amphibious_beast_creature = {
+			hard_attack = 0.05
+			defense = 0.05
+		}
+
+		path = {
+			leads_to_tech = amphibious_beast_armor_form
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = amphibious_beast_king_form
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	amphibious_beast_armor_form = {
+		research_cost = 1.8
+		start_year = 2282
+
+		XOR = {
+			amphibious_beast_king_form
+		}
+
+		path = {
+			leads_to_tech = amphibious_beast_upgrade_tech_3
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious_armor y = @Col_7 }
+		}
+
+		enable_equipments = {
+			amphibious_beast_equipment_armor
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = amphibious_beast_king_form
+			}
+		}
+	}
+
+	amphibious_beast_upgrade_tech_3 = {
+		research_cost = 1.8
+		start_year = 2283
+
+		amphibious_beast_creature = {
+			max_strength = 1.0
+			armor_value = 0.1
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			scientific_tech_category
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious_armor y = @Col_8 }
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	amphibious_beast_king_form = {
+		research_cost = 1.8
+		start_year = 2282
+
+		XOR = {
+			amphibious_beast_armor_form
+		}
+
+		path = {
+			leads_to_tech = amphibious_beast_upgrade_tech_4
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious_king y = @Col_7 }
+		}
+
+		enable_equipments = {
+			amphibious_beast_equipment_king
+		}
+		amphibious_beast_creature = {
+			river = {
+				attack = 0.05
+				defence = 0.05
+				movement = 0.1
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+			max_organisation = 10
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = amphibious_beast_armor_form
+			}
+		}
+	}
+
+	amphibious_beast_upgrade_tech_4 = {
+		research_cost = 1.8
+		start_year = 2283
+
+		amphibious_beast_creature = {
+			default_morale = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_amphibious_king y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			amphibious_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_unlock_tech = {
+		research_cost = 3.0
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			deathclaw_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_upgrade_top_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = deathclaw_upgrade_bottom_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = deathclaw_infantry_unlock_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = deathclaw_special_forces_unlock_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw y = @Col_1 }
+		}
+
+		enable_equipments = {
+			deathclaw_equipment_1
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_infantry_unlock_tech = {
+		research_cost = 3.0
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			deathclaw_civilization_access_tech = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = 11 y = @Col_1 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = deathclaw_creature
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_deathclaw_creature"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_subunits = {
+			deathclaw_creature
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_upgrade_top_1 = {
+		research_cost = 1.9
+		start_year = 2276
+
+		category_deathclaws = {
+			soft_attack = 0.05
+			defense = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			deathclaw_tech_access_tech = 1
+		}
+
+		XOR = {
+			deathclaw_upgrade_bottom_1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_creature_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_top y = @Col_2 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = deathclaw_upgrade_bottom_1
+			}
+		}
+	}
+
+	deathclaw_upgrade_bottom_1 = {
+		research_cost = 1.9
+		start_year = 2276
+
+		category_deathclaws = {
+			hard_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			deathclaw_tech_access_tech = 1
+		}
+
+		XOR = {
+			deathclaw_upgrade_top_1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_creature_tech_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_bottom y = @Col_2 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = deathclaw_upgrade_top_1
+			}
+		}
+	}
+
+	deathclaw_creature_tech_2 = {
+		research_cost = 3.1
+		start_year = 2278
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_upgrade_top_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = deathclaw_upgrade_bottom_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw y = @Col_4 }
+		}
+
+		enable_equipments = {
+			deathclaw_equipment_2
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_upgrade_top_2 = {
+		research_cost = 3.0
+		start_year = 2279
+
+		category_deathclaws = {
+			soft_attack = 0.05
+			ap_attack = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		XOR = {
+			deathclaw_upgrade_bottom_2
+		}
+
+		path = {
+			leads_to_tech = deathclaw_upgrade_top_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_top y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = deathclaw_upgrade_bottom_2
+			}
+		}
+	}
+
+	deathclaw_upgrade_top_3 = {
+		research_cost = 3.0
+		start_year = 2280
+
+		category_deathclaws = {
+			maximum_speed = 0.1
+		}
+		deathclaw_creature = {
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		deathclaw_special_forces = {
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_creature_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_top y = @Col_6 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_upgrade_bottom_2 = {
+		research_cost = 3.0
+		start_year = 2279
+
+		category_deathclaws = {
+			default_morale = 0.03
+			armor_value = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		XOR = {
+			deathclaw_upgrade_top_2
+		}
+
+		path = {
+			leads_to_tech = deathclaw_upgrade_bottom_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_bottom y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = deathclaw_upgrade_top_2
+			}
+		}
+	}
+
+	deathclaw_upgrade_bottom_3 = {
+		research_cost = 3.0
+		start_year = 2280
+
+		category_deathclaws = {
+			acclimatization_cold_climate_gain_factor = 0.4
+			acclimatization_hot_climate_gain_factor = 0.4
+		}
+		deathclaw_creature = {
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		deathclaw_special_forces = {
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_creature_tech_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_bottom y = @Col_6 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_creature_tech_3 = {
+		research_cost = 3.0
+		start_year = 2282
+
+		deathclaw_creature = {
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			fort = {
+				attack = 0.05
+				defence = 0.05
+			}
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			radiation = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		deathclaw_special_forces = {
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			fort = {
+				attack = 0.05
+				defence = 0.05
+			}
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			radiation = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		path = {
+			leads_to_tech = deathclaw_upgrade_top_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = deathclaw_upgrade_bottom_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw y = @Col_7 }
+		}
+
+		enable_equipments = {
+			deathclaw_equipment_3
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_upgrade_top_4 = {
+		research_cost = 3.0
+		start_year = 2283
+
+		category_deathclaws = {
+			defense = 0.05
+			breakthrough = 0.05
+			recon = 0.2
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		XOR = {
+			deathclaw_upgrade_bottom_4
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_top y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = deathclaw_upgrade_bottom_4
+			}
+		}
+	}
+
+	deathclaw_upgrade_bottom_4 = {
+		research_cost = 3.0
+		start_year = 2283
+
+		category_deathclaws = {
+			soft_attack = 0.05
+			hard_attack = 0.05
+			hardness = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		XOR = {
+			deathclaw_upgrade_top_4
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_deathclaw_bottom y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = deathclaw_upgrade_top_4
+			}
+		}
+	}
+
+	deathclaw_special_forces_unlock_tech = {
+		research_cost = 3.0
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+			deathclaw_alphas_access_tech = 1
+		}
+
+		sub_technologies = {
+			deathclaw_special_forces_tech_1
+			deathclaw_special_forces_tech_2
+			deathclaw_special_forces_tech_3
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = 15 y = @Col_1 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = deathclaw_special_forces
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_deathclaw_special_forces"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_equipments = {
+			deathclaw_special_equipment_1
+		}
+
+		enable_subunits = {
+			deathclaw_special_forces
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	deathclaw_special_forces_tech_1 = {
+		deathclaw_special_forces = {
+			defense = 0.2
+			maximum_speed = 0.1
+			recon = 0.2
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+		}
+
+		research_cost = 3.0
+		start_year = 2276
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				date > "2276.1.1"
+			}
+			modifier = {
+				factor = 10
+				date > "2277.1.1"
+			}
+		}
+	}
+
+	deathclaw_special_forces_tech_2 = {
+		deathclaw_special_forces = {
+			soft_attack = 0.1
+			default_morale = 0.05
+			armor_value = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		research_cost = 3.0
+		start_year = 2279
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				date > "2279.1.1"
+			}
+			modifier = {
+				factor = 10
+				date > "2281.1.1"
+			}
+		}
+	}
+
+	deathclaw_special_forces_tech_3 = {
+
+		enable_equipments = {
+			deathclaw_special_equipment_2
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		research_cost = 3.0
+		start_year = 2282
+
+		categories = {
+			creatures_tech_category
+			deathclaw_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5
+				date > "2282.1.1"
+			}
+			modifier = {
+				factor = 10
+				date > "2284.1.1"
+			}
+		}
+	}
+
+
+	feral_ghouls_unlock_tech = {
+		research_cost = 1.5
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			feral_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = feral_ghouls_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals y = @Col_1 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = feral_ghoul
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_feral_ghoul"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_equipments = {
+			feral_ghoul_equipment_1
+		}
+
+		enable_subunits = {
+			feral_ghoul
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	feral_ghouls_upgrade_1 = {
+		research_cost = 1.8
+		start_year = 2277
+
+		feral_ghoul = {
+			soft_attack = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			feral_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = feral_ghouls_intermediate_form
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals y = @Col_2 }
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	feral_ghouls_intermediate_form = {
+		research_cost = 1.8
+		start_year = 2279
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = feral_ghouls_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals y = @Col_4 }
+		}
+
+		enable_equipments = {
+			feral_ghoul_equipment_2
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	feral_ghouls_upgrade_2 = {
+		research_cost = 1.8
+		start_year = 2280
+
+		feral_ghoul = {
+			acclimatization_cold_climate_gain_factor = 0.3
+			acclimatization_hot_climate_gain_factor = 0.3
+			default_morale = 0.03
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = feral_ghouls_armored_form
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = feral_ghouls_glowing_form
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	feral_ghouls_armored_form = {
+		research_cost = 1.8
+		start_year = 2282
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		XOR = {
+			feral_ghouls_glowing_form
+		}
+
+		path = {
+			leads_to_tech = feral_ghouls_upgrade_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals_armor y = @Col_7 }
+		}
+
+		enable_equipments = {
+			feral_ghoul_equipment_armored
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = feral_ghouls_glowing_form
+			}
+		}
+	}
+
+	feral_ghouls_upgrade_3 = {
+		research_cost = 1.8
+		start_year = 2283
+
+		feral_ghoul = {
+			max_strength = 1.0
+			max_organisation = 3
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals_armor y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	feral_ghouls_glowing_form = {
+		research_cost = 1.8
+		start_year = 2282
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		XOR = {
+			feral_ghouls_armored_form
+		}
+
+		path = {
+			leads_to_tech = feral_ghouls_upgrade_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals_glowing y = @Col_7 }
+		}
+
+		enable_equipments = {
+			feral_ghoul_equipment_glowing
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = feral_ghouls_armored_form
+			}
+		}
+	}
+
+	feral_ghouls_upgrade_4 = {
+		research_cost = 1.8
+		start_year = 2283
+
+		feral_ghoul = {
+			default_morale = 0.05
+			casualty_trickleback = 0.01
+			experience_loss_factor = -0.01
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_ferals_glowing y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			feral_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_unlock_tech = {
+		research_cost = 1.25
+
+		supply_consumption_factor = 0.1
+		production_factory_max_efficiency_factor = 0.02
+
+		path = {
+			leads_to_tech = war_beasts_first_form_tech
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = gecko_support_unlock_tech
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			beast_tech_access_tech = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_start y = @Col_1 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_first_form_tech = {
+		research_cost = 1.3
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			beast_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts y = @Col_2 }
+		}
+
+		on_research_complete_limit = {
+			NOT = {
+				has_template_containing_unit = beast_creature
+			}
+		}
+		on_research_complete = {
+			hidden_effect = {
+				load_oob = "unlock_beast_creature"
+			}
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+
+		enable_equipments = {
+			beast_creature_equipment_1
+		}
+
+		enable_subunits = {
+			beast_creature
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_upgrade_1 = {
+		research_cost = 1.4
+		start_year = 2276
+
+		beast_creature = {
+			defense = 0.1
+			soft_attack = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			beast_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_intermediate_form_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts y = @Col_3 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_intermediate_form_tech = {
+		research_cost = 1.5
+		start_year = 2277
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts y = @Col_4 }
+		}
+
+		enable_equipments = {
+			beast_creature_equipment_2
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_upgrade_2 = {
+		research_cost = 1.4
+		start_year = 2278
+
+		beast_creature = {
+			breakthrough = 0.1
+			hard_attack = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_heavy_form_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = war_beasts_stalker_form_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_heavy_form_tech = {
+		research_cost = 1.5
+		start_year = 2279
+
+		beast_creature = {
+			forest = {
+				attack = 0.1
+				defence = 0.1
+			}
+			river = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		XOR = {
+			war_beasts_stalker_form_tech
+		}
+
+		path = {
+			leads_to_tech = war_beasts_upgrade_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_heavy y = @Col_6 }
+		}
+
+		enable_equipments = {
+			beast_creature_equipment_heavy
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = war_beasts_stalker_form_tech
+			}
+		}
+	}
+
+	war_beasts_upgrade_3 = {
+		research_cost = 1.4
+		start_year = 2280
+
+		beast_creature = {
+			max_strength = 1.0
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_upgrade_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_heavy y = @Col_7 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_upgrade_4 = {
+		research_cost = 1.4
+		start_year = 2281
+
+		beast_creature = {
+			max_organisation = 5
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_dusky_form_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_heavy y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_dusky_form_tech = {
+		research_cost = 1.6
+		start_year = 2283
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_heavy y = @Col_9 }
+		}
+
+		enable_equipments = {
+			beast_creature_equipment_dusky
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_stalker_form_tech = {
+		research_cost = 1.5
+		start_year = 2279
+
+		beast_creature = {
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		XOR = {
+			war_beasts_heavy_form_tech
+		}
+
+		path = {
+			leads_to_tech = war_beasts_upgrade_5
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_stalker y = @Col_6 }
+		}
+
+		enable_equipments = {
+			beast_creature_equipment_stalker
+		}
+
+		sub_technologies = {
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = war_beasts_heavy_form_tech
+			}
+		}
+	}
+
+	war_beasts_upgrade_5 = {
+		research_cost = 1.4
+		start_year = 2280
+
+		land_night_attack = 0.05
+		beast_creature = {
+			maximum_speed = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_upgrade_6
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_stalker y = @Col_7 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_upgrade_6 = {
+		research_cost = 1.4
+		start_year = 2281
+
+		beast_creature = {
+			default_morale = 0.05
+			supply_consumption = -0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		path = {
+			leads_to_tech = war_beasts_cloaked_form_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_stalker y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	war_beasts_cloaked_form_tech = {
+		research_cost = 1.6
+		start_year = 2283
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts_stalker y = @Col_9 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		enable_equipments = {
+			beast_creature_equipment_cloaked
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	wb_swamp_monsters = {
+		research_cost = 1
+		start_year = 2281
+
+		beast_creature = {
+			river = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
+			}
+			jungle = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
+			}
+			marsh = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.1
+			}
+			desert = {
+				attack = -0.05
+				defence = -0.05
+				movement = -0.05
+			}
+			plains = {
+				attack = -0.05
+				defence = -0.05
+				movement = -0.05
+			}
+		}
+
+		dependencies = {
+			blocked_tech_level = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_beasts y = @Col_10 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+
+	gecko_support_unlock_tech = {
+		research_cost = 1.35
+		start_year = 2276
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			gecko_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = gecko_support_upgrade_1
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos y = @Col_2 }
+		}
+
+		enable_equipments = {
+			gecko_creature_equipment_1
+		}
+
+		enable_subunits = {
+			gecko_support_company
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	gecko_support_upgrade_1 = {
+		research_cost = 1.35
+		start_year = 2277
+
+		gecko_support_company = {
+			hard_attack = 0.05
+			soft_attack = 0.05
+			breakthrough = 0.1
+		}
+
+		dependencies = {
+			creatures_tech_level_tribal = 1
+			gecko_tech_access_tech = 1
+		}
+
+		path = {
+			leads_to_tech = gecko_support_golden_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos y = @Col_3 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	gecko_support_golden_tech = {
+		research_cost = 1.35
+		start_year = 2278
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = gecko_support_upgrade_2
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos y = @Col_4 }
+		}
+
+		enable_equipments = {
+			gecko_creature_equipment_2
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		gecko_support_company = {
+			amphibious = {
+				attack = 0.1
+				defence = 0.05
+			}
+			river = {
+				attack = 0.1
+				defence = 0.05
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	gecko_support_upgrade_2 = {
+		research_cost = 1.35
+		start_year = 2279
+
+		gecko_support_company = {
+			reliability = 0.05
+		}
+
+		category_leg_infantry = {
+			soft_attack = 0.05
+			breakthrough = 0.05
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		path = {
+			leads_to_tech = gecko_support_fire_tech
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = gecko_support_green_tech
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos y = @Col_5 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	gecko_support_fire_tech = {
+		research_cost = 1.35
+		start_year = 2280
+
+		gecko_support_company = {
+			hills = {
+				attack = 0.1
+				defence = 0.05
+			}
+			mountain = {
+				attack = 0.1
+				defence = 0.05
+			}
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+			}
+			fort = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		XOR = {
+			gecko_support_green_tech
+		}
+
+		path = {
+			leads_to_tech = gecko_support_upgrade_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos_fire y = @Col_6 }
+		}
+
+		enable_equipments = {
+			gecko_creature_equipment_fire
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = gecko_support_green_tech
+			}
+		}
+	}
+
+	gecko_support_green_tech = {
+		research_cost = 1.35
+		start_year = 2280
+
+		gecko_support_company = {
+			forest = {
+				attack = 0.1
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.1
+				defence = 0.05
+			}
+			jungle = {
+				attack = 0.1
+				defence = 0.05
+			}
+			plains = {
+				attack = 0.05
+			}
+			fort = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+
+		dependencies = {
+			creatures_tech_level_settler = 1
+		}
+
+		XOR = {
+			gecko_support_fire_tech
+		}
+
+		path = {
+			leads_to_tech = gecko_support_upgrade_3
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos_green y = @Col_6 }
+		}
+
+		enable_equipments = {
+			gecko_creature_equipment_green
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_researching_technology = gecko_support_fire_tech
+			}
+		}
+	}
+
+	gecko_support_upgrade_3 = {
+		research_cost = 1.35
+		start_year = 2282
+
+		gecko_support_company = {
+			max_organisation = 2
+			max_strength = 2
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		path = {
+			leads_to_tech = gecko_support_upgrade_4
+			research_cost_coeff = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos y = @Col_7 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	gecko_support_upgrade_4 = {
+		research_cost = 1.35
+		start_year = 2283
+
+		gecko_support_company = {
+			hard_attack = 0.12
+			soft_attack = 0.12
+		}
+
+		dependencies = {
+			creatures_tech_level_scientific = 1
+		}
+
+		folder = {
+			name = fallout_tech_creatures_folder
+			position = { x = @Row_geckos y = @Col_8 }
+		}
+
+		categories = {
+			creatures_tech_category
+			beasts_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+}

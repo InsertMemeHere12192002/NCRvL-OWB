@@ -1,0 +1,62 @@
+EHT_nomadic_decisions = {
+	allowed = { tag = EHT }
+	icon = generic_propaganda
+	visible = {
+		has_completed_focus = EHT_focus_nomadic
+	}
+	priority = 50
+}
+EHT_sedentary_decisions = {
+	allowed = { tag = EHT }
+	icon = generic_propaganda
+	visible = {
+		has_completed_focus = EHT_focus_sedentary
+	}
+	priority = 50
+}
+
+EHT_raid_mormons = {
+	allowed = { tag = EHT }
+	icon = generic_propaganda
+	visible = {
+		always = no
+		#alway hidden
+	}
+	priority = 50
+}
+EHT_raid_whitelegs = {
+	allowed = { tag = EHT }
+	icon = generic_propaganda
+	visible = {
+		always = no
+		#alway hidden
+	}
+	priority = 50
+}
+
+EHT_spawn_raiders = {
+	icon = generic_propaganda
+	visible = {
+		OR = {
+			tag = EHT
+			tag = THN
+		}
+	}
+
+	priority = 50
+}
+
+
+EHT_hero_quest = {
+	icon = generic_propaganda
+	allowed = {
+		original_tag = EHT
+	}
+	visible_when_empty = yes
+	visible = {
+		tag = EHT
+		has_country_flag = thunderbird_quest
+	}
+
+	priority = 100
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=1406
+	name="STATE_1406"
+	
+	resources = {
+		metal = 7
+	}
+
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19783 1
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		19767 19771 19776 19777 19781 19783 19788 19790 19950 19956
+	}
+	manpower=300
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -62,19 +62,8 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
-set_stability = 0.2
+set_stability = 0.45
 set_war_support = 0.55
 set_research_slots = 3
 set_country_flag = is_raider_nation

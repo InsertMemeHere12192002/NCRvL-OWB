@@ -1,0 +1,1757 @@
+hangdogs_decisions = {
+	HAN_sundogs_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_war = no
+			has_completed_focus = han_sharper_teeth
+		}
+		visible = {
+			tag = HAN
+			has_country_flag = warden_revolt
+			LAC = {
+				OR = {
+					is_subject = yes
+					exists = no
+				}
+			}
+			NOT = {
+				SUN = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 10
+		days_remove = 30
+		modifier = {
+		}
+		remove_effect = {
+			SUN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_wolf_queen_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			OR = {
+				has_idea = sun_lupas_assistance
+				AND = {
+					SUN = {
+						all_core_land_owned_by_prev_sphere = yes
+					}
+					LAC = {
+						OR = {
+							is_subject = yes
+							exists = no
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			tag = HAN
+			has_country_flag = warden_revolt
+			OR = {
+				has_idea = sun_lupas_assistance
+				SUN = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = sun_lupas_assistance
+				}
+				country_event = nf_han.9 #Lupa is already here
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_country_flag = HAN_sundogs_razed
+						SUN = {
+							has_idea = sun_exiled_the_moon
+						}
+					}
+				}
+				country_event = nf_han.10 #Lupa fled or was exiled
+            }
+            else = {
+				country_event = nf_han.11 #Lupa never left
+            }
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_sundogs_integrate_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_country_flag = HAN_Lupa
+		}
+		visible = {
+			tag = HAN
+			has_country_flag = warden_revolt
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+		cost = 60
+		days_remove = 60
+		remove_effect = {
+			SUN = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			if = {
+				limit = {
+					has_country_flag = HAN_sundogs_razed
+				}
+				country_event = nf_han.12 #Sun Dogs slaughtered
+            }
+            else = {
+				country_event = nf_han.13 # Sun Dogs survived
+            }
+		}
+	}
+	HAN_new_mexico_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_war = no
+			has_completed_focus = han_sharper_teeth
+		}
+		visible = {
+			tag = HAN
+			LAC = {
+				OR = {
+					is_subject = yes
+					exists = no
+				}
+			}
+			has_country_flag = HAN_Lupa
+			NOT = {
+				LAC = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 60
+		days_remove = 90
+		modifier = {
+		}
+		remove_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 15
+						region = 45
+						region = 47
+					}
+				}
+				add_claim_by = HAN
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_legion_tactics_decision = {
+		icon = GFX_decision_book
+		fire_only_once = yes
+		available = {
+			has_completed_focus = han_temp_1a
+		}
+		visible = {
+			has_country_flag = HAN_Lupa
+			owns_state = 5
+		}
+		cost = 30
+		days_remove = 60
+		modifier = {
+			research_speed_factor = -0.10
+		}
+		remove_effect = {
+			country_event = nf_han.14
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_legion_officers_decision = {
+		icon = GFX_decision_book
+		fire_only_once = yes
+		available = {
+			has_completed_focus = han_old_dogs
+			has_tech = legion_vexillarius_tech
+		}
+		visible = {
+			has_country_flag = HAN_Lupa
+			owns_state = 5
+		}
+		cost = 30
+		days_remove = 60
+		modifier = {
+			research_speed_factor = -0.20
+		}
+		remove_effect = {
+			country_event = nf_han.15
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_legion_frumentarii_decision = {
+		icon = GFX_decision_book
+		fire_only_once = yes
+		available = {
+			has_completed_focus = han_new_tricks
+			has_tech = legion_vexillarius_tech
+		}
+		visible = {
+			has_country_flag = HAN_Lupa
+			owns_state = 5
+		}
+		cost = 30
+		days_remove = 60
+		modifier = {
+			research_speed_factor = -0.20
+		}
+		remove_effect = {
+			country_event = nf_han.16
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	# HAN_lupine_legion_decision = {
+	# 	icon = GFX_decision_gold
+	# 	fire_only_once = yes
+	# 	available = {
+	# 		has_completed_focus = han_run_texas
+	# 		CES = {
+	# 			all_core_land_owned_by_prev_sphere = yes
+	# 		}
+	# 		has_tech = legion_frumentarii_officers_tech
+	# 		has_tech = legion_centurions_tech
+	# 		has_tech = legion_frumentarii_officers_tech
+	# 	}
+	# 	visible = {
+	# 		has_country_flag = HAN_Lupa
+	# 		has_completed_focus = han_run_texas
+	# 	}
+	# 	cost = 60
+	# 	days_remove = 60
+	# 	modifier = {
+	# 		research_speed_factor = -0.20
+	# 	}
+	# 	remove_effect = {
+	# 		country_event = nf_han.17
+	# 	}
+	# 	ai_will_do = {
+	# 		base = 500
+	# 	}
+	# }
+	HAN_only_one_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_war = no
+		}
+		visible = {
+			tag = HAN
+			owns_state = 5
+			has_country_flag = warden_revolt
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOT = {
+				WHD = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			WHD = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_no_squatters_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_war = no
+		}
+		visible = {
+			tag = HAN
+			owns_state = 5
+			has_country_flag = warden_revolt
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOT = {
+				BAG = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			BAG = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_iron_rivals_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_war = no
+			has_tech = weight_support_frame_pa_tech_1
+			LAC = {
+				OR = {
+					is_subject = yes
+					exists = no
+				}
+			}
+		}
+		visible = {
+			tag = HAN
+			owns_state = 5
+			has_country_flag = warden_revolt
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOT = {
+				IRN = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			IRN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_red_mountain_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_war = no
+			BAG = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			WHD = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			IRN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		visible = {
+			tag = HAN
+			owns_state = 5
+			has_country_flag = warden_revolt
+			BAG = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOT = {
+				LUM = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 60
+		days_remove = 60
+		remove_effect = {
+			LUM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 0
+				OR = {
+					ai_has_other_wars_or_wargoals = yes
+					date < 2281.1.1
+					country_exists = LAC
+				}
+			}
+		}
+	}
+	HAN_march_on_boulder_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_country_flag = HAN_Lupa
+			has_war = no
+		}
+		visible = {
+			tag = HAN
+			owns_state = 5
+			has_country_flag = warden_revolt
+			LUM = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOT = {
+				BLC = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+				GLW = {
+					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+		}
+		cost = 60
+		days_remove = 60
+		remove_effect = {
+			GLW = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 0
+				OR = {
+					ai_has_other_wars_or_wargoals = yes
+					date < 2281.1.1
+					country_exists = LAC
+				}
+			}
+		}
+	}
+	HAN_dog_bond_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_tech = dog_tech_2
+			has_completed_focus = han_temp_3a
+		}
+		visible = {
+			tag = HAN
+			has_country_flag = warden_revolt
+		}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		cost = 60
+		days_remove = 60
+		remove_effect = {
+			set_technology = {
+				mansbestfriend = 1
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_Boulder_Dome_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_completed_focus = han_temp_3a
+			has_completed_focus = han_greatest_alphas
+			has_tech = dog_tech_3
+			any_allied_country = {
+				owns_state = 568
+			}
+		}
+		visible = {
+			tag = HAN
+			has_country_flag = warden_revolt
+			any_allied_country = {
+				owns_state = 568
+			}
+		}
+		modifier = {
+			civilian_factory_use = 12
+			research_speed_factor = -0.20
+		}
+		cost = 60
+		days_remove = 60
+		remove_effect = {
+			country_event = nf_han.18
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+	HAN_dog_armor_decision = {
+		icon = GFX_decision_pipegun_2
+		fire_only_once = yes
+		available = {
+			has_tech = dog_tech_3
+			has_completed_focus = han_greatest_alphas
+		}
+		visible = {
+			tag = HAN
+			has_tech = dog_tech_3
+			has_country_flag = warden_revolt
+		}
+		modifier = {
+			civilian_factory_use = 12
+			research_speed_factor = -0.20
+		}
+		cost = 60
+		days_remove = 90
+		remove_effect = {
+			set_technology = {
+				warden_doggos_tech = 1
+			}
+		}
+		ai_will_do = {
+			base = 500
+		}
+	}
+}
+
+warden_decisions = {
+	WDN_deputize_decision = {
+		icon = GFX_decision_vault_helmet
+		fire_only_once = yes
+		available = {
+			has_war = no
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			set_technology = {
+				ncr_privatepolice = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_mesmetron_decision = {
+		icon = GFX_decision_vault_helmet
+		fire_only_once = yes
+		available = {
+			has_tech = ncr_privatepolice
+		}
+		visible = {
+			has_tech = ncr_privatepolice
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			set_technology = {
+				oregon_mesmetronfieldequipment = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_riot_control_decision = {
+		icon = GFX_decision_vault_helmet
+		fire_only_once = yes
+		available = {
+			has_tech = heavy_infantry_tech_2
+			has_tech = ncr_privatepolice
+		}
+		visible = {
+			has_tech = ncr_privatepolice
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			add_ideas = wdn_riot_control_idea
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_police_dogs_decision = {
+		icon = GFX_decision_vault_helmet
+		fire_only_once = yes
+		available = {
+			has_tech = dog_tech_1
+			has_tech = ncr_privatepolice
+		}
+		visible = {
+			has_tech = ncr_privatepolice
+		}
+		cost = 30
+		days_remove = 30
+		modifier = {
+		}
+		remove_effect = {
+			set_technology = {
+				mansbestfriend = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_expeditionary_force_decision = {
+		icon = GFX_decision_army_helmet
+		fire_only_once = yes
+		available = {
+			has_tech = ncr_privatepolice
+		}
+		visible = {
+			has_tech = ncr_privatepolice
+		}
+		cost = 30
+		days_remove = 30
+		remove_effect = {
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = wdn_expeditionary_force
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	WDN_bizaare_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		available = {
+			owns_state = 412
+			NOT = { country_exists = MXC }
+		}
+		cost = 40
+		days_remove = 40
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		remove_effect = {
+			add_ideas = WDN_bizaare_market
+			hidden_effect = {
+				MXC = { remove_ideas = bizaare_market }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_maxson_rehab_decision = {
+		icon = GFX_decision_t51_vb_helm
+		fire_only_once = yes
+		available = {
+			AND = {
+				OR = {
+					owns_state = 412
+					ROB = { owns_state = 412 }
+				}
+				NOT = { country_exists = MXC }
+			}
+		}
+		cost = 60
+		days_remove = 60
+
+		modifier = {
+			research_speed_factor = -0.10
+		}
+		remove_effect = {
+			set_country_flag = WDN_brotherhood_tamed
+			add_ideas = wdn_brotherhood_recruits
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_maxson_integrate_decision = {
+		icon = GFX_decision_t51_vb_helm
+		fire_only_once = yes
+		available = {
+			has_tech = oregon_mesmetronfieldequipment
+			has_country_flag = WDN_brotherhood_tamed
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 90
+		days_remove = 90
+
+		modifier = {
+			political_power_factor = -0.1
+			stability_weekly = -0.01
+		}
+		remove_effect = {
+			country_event = nf_wdn.110
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_armored_police_decision = {
+		icon = plasma
+		fire_only_once = yes
+		available = {
+			NOT = { country_exists = MXC }
+			has_country_flag = WDN_brotherhood_tamed
+			owns_state = 460
+			has_idea = wdn_riot_control_idea
+		}
+		visible = {
+			has_idea = wdn_riot_control_idea
+		}
+		cost = 90
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 4
+			research_speed_factor = -0.10
+		}
+		remove_effect = {
+			set_technology = {
+				power_armour_tech_level_tribal = 1
+				texas_brotherhood_pa_tech = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_swat_decision = {
+		icon = plasma
+		fire_only_once = yes
+		available = {
+			has_tech = heavy_infantry_tech_4
+			has_tech = ballistic_fibre_tech
+			has_idea = wdn_riot_control_idea
+		}
+		visible = {
+			has_idea = wdn_riot_control_idea
+		}
+		cost = 60
+		days_remove = 60
+		modifier = {
+			research_speed_factor = -0.20
+			civilian_factory_use = 8
+		}
+		remove_effect = {
+			set_technology = {
+				special_forces_tech_level_scientific = 1
+				infantry_tech_level_scientific = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_canine_army_decision = {
+		icon = plasma
+		fire_only_once = yes
+		available = {
+			has_tech = motorisation_vehicle_tech
+			has_tech = heavy_infantry_tech_4
+			has_tech = ballistic_fibre_tech
+			has_tech = dog_tech_2
+			has_tech = mansbestfriend
+			has_idea = wdn_riot_control_idea
+			has_tech = support_tech_level_scientific
+		}
+		visible = {
+			has_idea = wdn_riot_control_idea
+		}
+		cost = 120
+		days_remove = 120
+
+		remove_effect = {
+			set_technology = {
+				warden_doggos_tech = 1
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	WDN_robocop_decision = {
+		icon = plasma
+		fire_only_once = yes
+		available = {
+			has_tech = support_tech_level_scientific
+			has_tech = med_company_tech_4
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 90
+		days_remove = 90
+		modifier = {
+			research_speed_factor = -0.60
+			civilian_factory_use = 8
+		}
+		remove_effect = {
+			add_ideas = wdn_robocops
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_police_car_decision = {
+		icon = GFX_decision_atomic_V8
+		fire_only_once = yes
+		available = {
+			has_tech = fuel_booster_vehicle_tech
+			has_tech = boarding_ramps_vehicle_tech
+			has_tech = heavy_infantry_tech_2
+			has_tech = ncr_privatepolice
+		}
+		cost = 90
+		days_remove = 90
+
+		modifier = {
+			research_speed_factor = -0.20
+			civilian_factory_use = 4
+		}
+		remove_effect = {
+			set_technology = {
+				light_motorized_equipment_vehicle_tech_3 = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_swat_car_decision = {
+		icon = GFX_decision_atomic_V8
+		fire_only_once = yes
+		available = {
+			has_tech = light_motorized_equipment_vehicle_tech_3
+			has_tech = heavy_infantry_tech_4
+			has_tech = special_forces_tech_level_scientific
+		}
+		visible = {
+			has_tech = light_motorized_equipment_vehicle_tech_3
+		}
+		cost = 90
+		days_remove = 120
+
+		modifier = {
+			research_speed_factor = -0.30
+			civilian_factory_use = 12
+		}
+		remove_effect = {
+			set_technology = {
+				light_motorized_equipment_vehicle_tech_4 = 1
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_finish_car_decision = {
+		icon = GFX_decision_atomic_V8
+		fire_only_once = yes
+		available = {
+			has_tech = light_motorized_equipment_vehicle_tech_4
+		}
+		visible = {
+			has_tech = light_motorized_equipment_vehicle_tech_4
+		}
+		cost = 60
+		days_remove = 60
+
+		modifier = {
+			research_speed_factor = -0.20
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			set_technology = {
+				Compartmentalization_vehicle_tech = 1
+				solar_power_vehicle_tech = 1
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+	}
+	WDN_zax_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			owns_state = 550
+			has_tech = electronics_tech_level_scientific
+			has_tech = electronic_engineering_3
+		}
+		cost = 60
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			country_event = nf_wdn.100
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_boulder_dome_decision = {
+		icon = GFX_decision_medical
+		fire_only_once = yes
+		available = {
+			NOT = { country_exists = TTM }
+			owns_state = 568
+			has_country_flag = warden_computation_flag
+			NOT = { has_country_flag = zax_in_progress }
+		}
+		visible = {
+			has_country_flag = warden_computation_flag
+		}
+		cost = 75 #The AI is very bad at saving up pp for these decisions
+		days_remove = 90
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		remove_effect = {
+			country_event = nf_wdn.101
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	WDN_paradise_decision = {
+		icon = GFX_decision_geck
+		fire_only_once = yes
+		available = {
+			NOT = { country_exists = TTM }
+			owns_state = 38
+			has_country_flag = warden_computation_flag
+			NOT = { has_country_flag = zax_in_progress }
+			has_tech = robot_command_equipment_tech_3
+		}
+		visible = {
+			has_country_flag = warden_computation_flag
+		}
+		cost = 75
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 8
+			monthly_population = -0.10
+			research_speed_factor = -0.20
+		}
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		remove_effect = {
+			country_event = nf_wdn.102
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_penitentiary_decision = {
+		icon = GFX_decision_papers
+		fire_only_once = yes
+		available = {
+			NOT = { country_exists = TTM }
+			owns_state = 572
+			has_country_flag = warden_computation_flag
+			NOT = { has_country_flag = zax_in_progress }
+		}
+		visible = {
+			has_country_flag = warden_computation_flag
+		}
+		cost = 75
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		remove_effect = {
+			country_event = nf_wdn.103
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_cheyenne_mountain_decision = {
+		icon = GFX_decision_vertibird
+		fire_only_once = yes
+		available = {
+			owns_state = 460
+			has_country_flag = warden_computation_flag
+			NOT = { has_country_flag = zax_in_progress }
+			has_tech = communication_engineering_4
+			has_tech = improved_decimetric_radar
+		}
+		visible = {
+			has_country_flag = warden_computation_flag
+		}
+		cost = 75
+		days_remove = 90
+
+		modifier = {
+			civilian_factory_use = 18
+		}
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		remove_effect = {
+			country_event = nf_wdn.109
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_vault_27_decision = {
+		icon = GFX_decision_vault_tec
+		fire_only_once = yes
+		available = {
+			owns_state = 532
+			has_country_flag = warden_computation_flag
+			NOT = { has_country_flag = zax_in_progress }
+		}
+		visible = {
+			has_country_flag = warden_computation_flag
+		}
+		cost = 60
+		days_remove = 60
+
+		modifier = {
+			research_speed_factor = -0.10
+		}
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		remove_effect = {
+			country_event = nf_wdn.105
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_doki_decision = {
+		icon = GFX_decision_pet_rock
+		fire_only_once = yes
+		available = {
+			is_in_faction_with = ROB
+			is_faction_leader = yes
+			has_tech = communication_engineering_5
+			has_country_flag = WDN_argos_found
+			NOT = { has_country_flag = zax_in_progress }
+		}
+		visible = {
+			has_country_flag = warden_computation_flag
+		}
+		cost = 60
+		days_remove = 60
+
+		modifier = {
+			research_speed_factor = -0.20
+		}
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		remove_effect = {
+			country_event = nf_wdn.107
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_restore_denver_decision = {
+		icon = GFX_decision_hard_hat
+		fire_only_once = yes
+		available = {
+			has_tech = construction_industry_tech_4
+			owns_state = 568
+		}
+		cost = 30
+		days_remove = 30
+
+		modifier = {
+			civilian_factory_use = 6
+		}
+		complete_effect = {
+		}
+		remove_effect = {
+			country_event = nf_wdn.114
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_restore_tibbets_decision = {
+		icon = GFX_decision_minning_helmet
+		fire_only_once = yes
+		available = {
+			owns_state = 572
+			has_tech = vault_industry_tech
+			has_tech = construction_industry_tech_5
+			has_tech = electronic_engineering_7
+			NOT = { has_country_flag = zax_in_progress }
+		}
+		visible = {
+			has_country_flag = wdn_tibbets_found
+		}
+		cost = 75
+		days_remove = 360
+
+		modifier = {
+			civilian_factory_use = 12
+		}
+		complete_effect = {
+			set_country_flag = zax_in_progress
+		}
+		remove_effect = {
+			country_event = nf_wdn.106
+			clr_country_flag = zax_in_progress
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_new_colossus_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = WDN_new_colossus_tooltip
+				check_variable = {
+					var = wdn_computational_power
+					value = 100
+					compare = greater_than_or_equals
+				}
+			}
+		}
+		visible = {
+			has_country_flag = wdn_tibbets_found
+		}
+		cost = 100
+		days_remove = 180
+
+		remove_effect = {
+			country_event = nf_wdn.108
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	WDN_press_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			has_country_flag = wdn_colossus_lives_tt
+			has_idea = wdn_surveillance_state
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 30
+		days_remove = 30
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+			add_ideas = wdn_panopticon
+			wdn_colossus_improve = yes
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_patrol_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			has_country_flag = wdn_colossus_lives_tt
+			has_idea = hansquashrebels_2
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 30
+		days_remove = 30
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+			wdn_colossus_improve = yes
+			swap_ideas = {
+				add_idea = hansquashrebels_1
+				remove_idea = hansquashrebels_2
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_prison_reform_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			has_country_flag = wdn_colossus_lives_tt
+			has_idea = hanrootoutdissent_2
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 30
+		days_remove = 30
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+			wdn_colossus_improve = yes
+			swap_ideas = {
+				add_idea = hanrootoutdissent_1
+				remove_idea = hanrootoutdissent_2
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_money_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			has_country_flag = colorado_formed
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 30
+		days_remove = 30
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+			wdn_colossus_improve = yes
+			country_event = nf_wdn.121
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_political_freedom_decision = {
+		icon = GFX_decision_terminal
+		fire_only_once = yes
+		available = {
+			has_idea = wdn_new_colossus_idea_5
+		}
+		visible = {
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 30
+		days_remove = 60
+
+		modifier = {
+			political_power_factor = -0.1
+		}
+		remove_effect = {
+			wdn_colossus_improve = yes
+			country_event = nf_wdn.122
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+}
+defense_network_decisions = {
+	WDN_restore_FBI_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			EDA = { exists = no }
+			EDA = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		visible = {
+			NOT = {
+				has_country_flag = warden_eda_flag
+			}
+		}
+		cost = 100
+		complete_effect = {
+			custom_effect_tooltip = WDN_fbi_restoration_tt
+			set_country_flag = warden_eda_flag
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = yes
+			}
+			EDA = {
+				add_ai_strategy = {
+					type = alliance
+					id = WDN
+					value = 300
+				}
+				set_politics = {
+					ruling_party = people
+				}
+				invite_to_denver_defense_network = yes
+				if = {
+					limit = {
+						has_dlc = "La Resistance"
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency = yes
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						region = 15
+						region = 45
+						region = 47
+					}
+				}
+				add_claim_by = EDA
+				EDA = { transfer_state = PREV }
+			}
+			if = {
+				limit = {
+					ROB = { is_in_faction_with = WDN }
+				}
+				ROB = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								region = 15
+								region = 45
+								region = 47
+							}
+						}
+						add_claim_by = EDA
+						EDA = { transfer_state = PREV }
+					}
+				}
+			}
+			if = {
+				limit = {
+					EDA = {
+						is_subject = no
+					}
+				}
+				puppet = EDA
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_invite_blue_rose_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			EDA = {
+				exists = yes
+				borders_denver_defense_network = yes
+			}
+			NOT = { SUN = { exists = yes } }
+			NOT = { is_in_faction_with = EDA }
+		}
+		visible = {
+			NOT = {
+				has_country_flag = warden_eda_flag
+			}
+		}
+		cost = 30
+		complete_effect = {
+			custom_effect_tooltip = WDN_fbi_invite_tt
+			set_country_flag = warden_eda_flag
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = { name = "Federal Bureau of Investigation" icon = "GFX_intelligence_agency_logo_generic_7" }
+			}
+			EDA = {
+				invite_to_denver_defense_network = yes
+				add_ai_strategy = {
+					type = alliance
+					id = WDN
+					value = 300
+				}
+			}
+			every_owned_state = {
+				limit = {
+					OR = {
+						region = 15
+						region = 45
+						region = 47
+					}
+				}
+				add_claim_by = EDA
+				EDA = { transfer_state = PREV }
+			}
+			IF = {
+				limit = {
+					ROB = { is_in_faction_with = WDN }
+				}
+				ROB = {
+					every_owned_state = {
+						limit = {
+							OR = {
+								region = 15
+								region = 45
+								region = 47
+							}
+						}
+						add_claim_by = EDA
+						EDA = { transfer_state = PREV }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_paint_the_rock_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			PAR = {
+				borders_denver_defense_network = yes
+			}
+			date > 2277.1.1
+			has_war = no
+		}
+		visible = {
+			PAR = {
+				exists = yes
+			}
+		}
+		cost = 30
+		war_with_on_remove = PAR
+		days_remove = 30
+		remove_effect = {
+			declare_war_on = {
+				target = PAR
+				type = annex_everything
+			}
+		}
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 0
+				OR = {
+					ai_has_other_wars_or_wargoals = yes
+					date < 2281.1.1
+					country_exists = LAC
+				}
+			}
+		}
+	}
+	WDN_sunset_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			SUN = {
+				borders_denver_defense_network = yes
+			}
+			date > 2277.1.1
+			has_war = no
+		}
+		visible = {
+			SUN = {
+				exists = yes
+			}
+		}
+		cost = 30
+		days_remove = 30
+		war_with_on_remove  = SUN
+		remove_effect = {
+			declare_war_on = {
+				target = SUN
+				type = annex_everything
+			}
+			every_owned_state = {
+				limit = { OR = {state = 366 state = 233 state = 565 } }
+				add_claim_by = WDN
+			}
+		}
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 0
+				OR = {
+					ai_has_other_wars_or_wargoals = yes
+					date < 2281.1.1
+					country_exists = LAC
+				}
+			}
+		}
+	}
+	WDN_support_patrol_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			TLP = {
+				borders_denver_defense_network = yes
+			}
+			PAR = {
+				exists = no
+			}
+			OR = {
+				owns_state = 571
+				ROB = {
+					AND = {
+						owns_state = 571
+						is_in_faction_with = WDN
+					}
+				}
+			}
+		}
+		visible = {
+			TLP = {
+				exists = yes
+			}
+		}
+		cost = 30
+		complete_effect = {
+			custom_effect_tooltip = WDN_patrol_support_tt
+			set_country_flag = warden_patrol_tt
+			WDN = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 571
+							state = 891
+							state = 938
+						}
+					}
+					add_core_of = TLP
+					TLP = { transfer_state = PREV }
+				}
+			}
+			ROB = {
+				every_owned_state = {
+					limit = {
+						OR = {
+							state = 571
+							state = 891
+							state = 938
+						}
+					}
+					add_core_of = TLP
+					TLP = { transfer_state = PREV }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_invite_patrol_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = WDN_oklahoma_tt
+				TLP = {
+					borders_denver_defense_network = yes
+				has_cosmetic_tag = state_oklahoma
+				}
+			}
+			has_country_flag = warden_eda_flag
+			has_country_flag = warden_patrol_tt
+		}
+		visible = {
+			TLP = {
+				exists = yes
+			}
+		}
+		cost = 30
+		complete_effect = {
+			set_country_flag = warden_patrol_flag
+			TLP = {
+				country_event = nf_wdn.115
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+	WDN_invite_RAD_decision = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			RAD = {
+				borders_denver_defense_network = yes
+			}
+			has_country_flag = warden_eda_flag
+		}
+		visible = {
+			RAD = {
+				exists = yes
+			}
+		}
+		cost = 30
+		complete_effect = {
+			set_country_flag = warden_patrol_flag
+			RAD = {
+				country_event = nf_wdn.118
+			}
+		}
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 0
+				OR = {
+					ai_has_other_wars_or_wargoals = yes
+					date < 2281.1.1
+					country_exists = LAC
+				}
+			}
+		}
+	}
+	WDN_blue_rose_expansion = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			date > 2281.7.4
+			has_country_flag = warden_eda_flag
+		}
+		visible = {
+			has_country_flag = warden_eda_flag
+		}
+		cost = 30
+		complete_effect = {
+			every_state = {
+				limit = { OR = { state = 248 state = 275 state = 88 state = 633 state = 442 state = 563 state = 411 state = 632 state = 501 state = 522 state = 538 state = 244 state = 282 state = 634 state = 648 state = 482 state = 392 state = 269 state = 91 state = 203} }
+				add_claim_by = EDA
+			}
+			WDN = {
+				create_wargoal = {
+					target = CES
+					type = annex_everything
+				}
+			}
+		}
+		ai_will_do = {
+			base = 500
+			modifier = {
+				factor = 0
+				OR = {
+					ai_has_other_wars_or_wargoals = yes
+					date < 2285.1.1 #This decision is crazy, later than the others.
+					country_exists = LAC
+				}
+			}
+		}
+	}
+	WDN_DIA = {
+		icon = GFX_decision_security_cam
+		fire_only_once = yes
+		allowed = {
+			tag = WDN
+		}
+		available = {
+			date > 2281.7.4
+			has_country_flag = wdn_colossus_lives_tt
+			EDA = {
+				is_in_faction_with = WDN
+			}
+		}
+		visible = {
+			has_country_flag = warden_eda_flag
+			has_country_flag = wdn_colossus_lives_tt
+		}
+		cost = 30
+		complete_effect = {
+			EDA = {
+				country_event = nf_eda.21
+			}
+		}
+		ai_will_do = {
+			factor = 150
+		}
+	}
+}

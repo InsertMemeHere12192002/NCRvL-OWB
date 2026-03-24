@@ -1,4 +1,4 @@
-﻿#capital = 361
+#capital = 361
 
 set_research_slots = 10
 set_stability = 1
@@ -148,8 +148,8 @@ set_technology = {
 	c_t45d_pa_tech = 1
 	high_pressure_hydraulics_tech = 1
 	t51b_pa_tech = 1
-	c_t51b_pa_tech = 1
-	h_t51b_pa_tech = 1
+	# c_t51b_pa_tech = 1
+	# h_t51b_pa_tech = 1
 	gauss_weaponry_1 = 1
 	gauss_weaponry_2 = 1
 	plasma_weaponry_1 = 1
@@ -332,8 +332,8 @@ set_technology = {
 	skater_tech = 1
     rocket_skater_tech = 1
     texas_brotherhood_pa_tech = 1
-    mirelurk_infantry_unlock_tech = 1
-    molerat_infantry_unlock_tech = 1
+    amphibious_beast_unlock_tech = 1
+    burrowing_beast_unlock_tech = 1
 	spec_ops_horses_tech = 1
 	spec_ops_horses_tech_2 = 1
 	spec_ops_horses_tech_3 = 1

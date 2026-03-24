@@ -21,7 +21,8 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
+							
 						}
 					}
 					OR = {
@@ -57,7 +58,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -93,7 +94,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -138,7 +139,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -174,7 +175,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -210,7 +211,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -255,7 +256,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -294,7 +295,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -383,7 +384,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -418,7 +419,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -453,7 +454,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -488,7 +489,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -523,7 +524,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -558,7 +559,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -593,7 +594,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -638,7 +639,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -682,7 +683,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -727,7 +728,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {
@@ -772,7 +773,7 @@ every_possible_country = {
 					limit = {
 						OR = {
 							original_tag = NEW
-							orginal_tag = VEG
+							original_tag = VEG
 						}
 					}
 					OR = {

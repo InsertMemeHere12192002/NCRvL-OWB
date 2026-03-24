@@ -1,0 +1,53 @@
+# SHA_strategy_plan = {
+# 	name = "SHA default"
+# 	desc = "Prio"
+
+# 	enable = {
+# 		original_tag = SHA
+# 	}
+# 	abort = {}
+
+# 	ai_national_focuses = {
+# 		#For now, lets let RNG choose their first few focuses
+
+# 		#Always do this backup focus before others, ensure that there is very little time that Ironmongers isn't protected by Shale if RRG/TAA get greedy
+# 		shale_defending_against_the_monster
+
+# 		sha_taking_a_piece_of_the_pie
+# 		shale_the_road_of_conquest
+# 		shale_the_path_of_glory
+
+# 		shale_conquering_carbon
+# 		shale_revive_the_raider_matrons
+# 		shale_sell_off_the_spoils_of_war
+
+# 		shale_put_the_kibosh_on_los
+# 		shale_puppet_the_church_of_the_lost
+# 		shale_sanctify_the_city
+
+# 		shale_the_secret_vault_ruins
+# 		shale_automated_training_holograms
+# 		shale_partial_supply_recovery
+# 		shale_an_unfortunate_reunion
+
+# 		shale_striking_eden
+# 		shale_fruits_of_our_labour
+# 		shale_tame_the_beasts
+
+# 		shale_unite_the_army
+
+# 		shale_ethos_of_the_army
+# 		shale_mysteries_of_the_spores
+# 		shale_ancient_techniques_of_the_ironmongers
+# 		shale_the_dreams_of_unity
+
+# 		shale_planning_against_the_paladins
+# 		shale_encrypted_information
+# 		shale_bobbleheads_galore
+
+# 		shale_attis_era_training
+# 		shale_the_attis_born
+# 		shale_purchase_fev
+# 		shale_purchase_weapon_schematics
+# 	}
+# }

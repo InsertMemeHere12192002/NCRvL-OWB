@@ -1,0 +1,344 @@
+SHI_infiltration_category = {
+	SHI_infiltration_focus = {
+		fire_only_once = no
+		days_remove = 30
+		icon = GFX_decision_pistol_suppressed
+		ai_will_do = {
+			factor = 0
+		}
+		allowed = {
+			has_dlc = "La Resistance"
+		}
+		cost = 25
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 35 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		available = {
+			NOT = {
+				has_idea = shi_expert_infiltrators
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				set_temp_variable = { caps_to_add = -35 }
+				add_caps = yes
+			}
+		}
+		remove_effect = {
+			add_timed_idea = {
+				idea = shi_expert_infiltrators
+				days = 100
+			}
+		}
+	}
+}
+
+SHI_mandate_over_california = {
+	SHI_establish_mandate = {
+		fire_only_once = no
+		#days_remove = 30
+		icon = GFX_decision_teapot
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			always = no
+			#no in our focus tree
+		}
+		visible = {
+			NOT = {
+				has_completed_focus = shi_ncr_friendship
+				has_cosmetic_tag = SHI_Closed_Fist
+			}
+		}
+		complete_effect = {
+			set_cosmetic_tag = SHI_Closed_Fist
+			every_owned_state = {
+				limit = {
+					is_core_of = NCR
+				}
+				add_compliance = 20
+			}
+		}
+		remove_effect = {
+		}
+	}
+	SHI_dragon_call = { #Fallback decision if the Dragon wouldn't want to come home by himself, so the player will not softlock himself out from the Elite path
+		fire_only_once = yes
+		icon = GFX_decision_teapot
+		ai_will_do = {
+			factor = 100
+		}
+		visible = {
+			NOT = {
+				has_character = SHI_dragon
+				NVS = { has_war = yes }
+			}
+		}
+		complete_effect = {
+			NVS = {
+				remove_country_leader_role = {
+					character = SHI_dragon
+					ideology = meritocracy
+				}
+				SHI_dragon = {
+					set_nationality = SHI
+				}
+			}
+
+			#SHI = {
+			#	add_country_leader_role = {
+			#		character = SHI_dragon
+			#		promote_leader = yes
+			#		country_leader = {
+			#			desc = SHI_dragon_desc
+			#			ideology = survivalism
+			#			expire = "3000.01.01.01"
+			#			id = -1
+			#			traits = { local_patriot }
+			#		}
+			#	}
+			#}
+		}
+	}
+}
+
+SHI_ncr_wp_category = {
+	SHI_wp_focus = {
+		fire_only_once = yes
+		days_remove = 180
+		icon = decision_deagle
+		cost = 100
+		ai_will_do = {
+			base = 1000
+		}
+		available = {
+			SHI = {
+				has_war = yes
+				surrender_progress < 0.1
+				NOT = {
+					custom_trigger_tooltip = {
+						tooltip = shi_ncr_nwp_tt
+						has_global_flag = shi_ncr_wp	#NOTE# I think this will replace flag check text with tooltip localize
+					}
+					has_government = intellectuals
+				}
+			}
+			OR = {
+				any_country = {	#NOTE# 'every_country' is not usable to decisions
+					has_war_with = NCR
+					NOT = { tag = SHI }
+				}
+				AND = {
+					NOT = {
+						OR = {
+							548 = {is_controlled_by = NCR }
+							548 = {is_controlled_by = NAT }		#NOTE# after previous failure, this should be fine
+						}
+					}
+					NCR = {
+						NOT = {
+							controls_state = 312	#NOTE#	why doesn't this show?
+						}
+					}
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				country_event = nf_shi.19
+			}
+			#add_political_power = -100
+		}
+		remove_effect = {
+			country_event = nf_shi.21
+		}
+	}
+}
+
+SHI_bos_smuggling_category = {
+	SHI_bos_pa = {
+		fire_only_once = yes
+		icon = GFX_decision_t51
+		days_remove = 1
+		cost = 50
+		ai_will_do = {
+			base = 12
+			modifier = {
+				factor = 55
+				has_equipment = {
+					power_armor_equipment > 500
+				}
+			}
+		}
+		available = {
+			has_equipment = {
+				power_armor_equipment > 500
+			}
+			SHI = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				clr_country_flag = shi_bos_smuggling	#NOTE# hope this removes the flag
+			}
+			#add_political_power = -50
+			send_equipment = {
+				type = power_armor_equipment	#NOTE# this is correct form
+				amount = 500
+				target = SHI
+			}
+		}
+		remove_effect = {
+			SHI = {
+				country_event = nf_shi.24
+				add_tech_bonus = {
+					bonus = 0.6
+					ahead_reduction = 1.1
+					uses = 4
+					category = power_armor_tech_category
+				}
+			}
+		}
+	}
+	SHI_bos_lg = {
+		fire_only_once = yes
+		icon = GFX_decision_battery
+		days_remove = 1
+		ai_will_do = {
+			base = 12
+			modifier = {
+				factor = 50
+				has_equipment = {
+					infantry_equipment > 500
+				}
+			}
+		}
+		available = {
+			SHI = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 499
+			}
+			has_political_power > 49
+		}
+		custom_cost_text = 500_inf_50_pp
+		complete_effect = {
+			hidden_effect = {
+				clr_country_flag = shi_bos_smuggling
+				add_political_power = -50
+			}
+			send_equipment = {
+				type = infantry_equipment	#NOTE# this is correct form
+				amount = 500
+				target = SHI
+			}
+		}
+		remove_effect = {
+			SHI = {
+				add_tech_bonus = {
+					bonus = 0.4
+					uses = 4
+					category = energy_weaponry_tech_category
+				}
+				country_event = nf_shi.24
+			}
+		}
+
+	}
+	SHI_bos_mp = {
+		fire_only_once = yes
+		icon = GFX_decision_backpack
+		days_remove = 1
+		cost = 50
+		ai_will_do = {
+			base = 12
+			modifier = {
+				factor = 10
+				has_manpower > 100
+			}
+			modifier = {
+				factor = 2
+				has_manpower > 200
+			}
+		}
+		available = {
+			SHI = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		custom_cost_trigger = {
+			has_manpower > 99
+			has_political_power > 49
+		}
+		custom_cost_text = 100_mp_50_pp
+		complete_effect = {
+			hidden_effect = {
+				clr_country_flag = shi_bos_smuggling
+				add_manpower = -100
+				add_political_power = -50
+			}
+		}
+		remove_effect = {
+			SHI = {
+				add_manpower = 75
+				add_tech_bonus = {
+					bonus = 0.5
+					uses = 3
+					category = cat_land_doctrine
+				}
+				country_event = nf_shi.24
+			}
+		}
+	}
+	SHI_bos_cp = {
+		fire_only_once = yes
+		icon = GFX_decision_single_bottlecap
+		days_remove = 1
+		available = {
+			set_temp_variable = { caps_diff = -50 }
+			caps_cost_trigger = yes
+			SHI = {
+				exists = yes
+				is_puppet = no
+			}
+		}
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = 50 }
+			check_variable = {
+				caps_number_display > temp_cap_cost
+			}
+		}
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0.25
+				has_political_power > 10
+			}
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+		complete_effect = {
+			set_temp_variable = { caps_to_add = -50 }
+			add_caps = yes
+			hidden_effect = {
+				clr_country_flag = shi_bos_smuggling
+			}
+		}
+		remove_effect = {
+			SHI = {
+				country_event = nf_shi.25
+			}
+		}
+	}
+}

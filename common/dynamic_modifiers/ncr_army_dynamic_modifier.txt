@@ -78,7 +78,6 @@ ncr_army_dynamic_modifier = {
 	max_planning_factor = ncr_max_planning_factor
 	planning_speed = ncr_planning_speed
 	army_defence_factor = ncr_army_defence_factor
-	army_attack_factor = ncr_army_attack_factor
 	army_core_defence_factor = ncr_army_core_defence_factor
 	resistance_growth_on_our_occupied_states = ncr_resistance_growth
 	breakthrough_factor = ncr_breakthrough_factor

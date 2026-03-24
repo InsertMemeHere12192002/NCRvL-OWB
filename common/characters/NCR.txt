@@ -1049,18 +1049,7 @@ characters = {
 			}
 		}
 	}
-	NCR_moore = {
-		name = NCR_MOORE_NAME
-		gender = female
-		portraits = {
-			army = {
-				large = GFX_Portrait_NCR_moore
-			}
-			civilian = {
-				large = GFX_Portrait_NCR_moore
-			}
-		}
-	}
+
 	NCR_lieutenant_lloyd_groves = {
 		name = NCR_LLOYD_GROVES_NAME
 		portraits = {

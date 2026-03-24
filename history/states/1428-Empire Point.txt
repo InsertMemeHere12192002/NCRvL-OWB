@@ -12,7 +12,7 @@ state = {
 		owner = TBH
 		add_core_of = TBH
 		victory_points = {
-			16440 2
+			16438 2
 		}
 		buildings = {
 			infrastructure = 3
@@ -23,7 +23,7 @@ state = {
 		}
 	}
 
-	provinces = {
-		16440 16438 16439 16437 16436 11748 16446 16448
+	provinces={
+		11748 16436 16437 16438 16439 16446 16448
 	}
 }

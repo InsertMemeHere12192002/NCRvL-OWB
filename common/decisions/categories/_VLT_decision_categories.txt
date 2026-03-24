@@ -1,0 +1,44 @@
+vlt_nevada_pact_decision_category = {
+	icon = GFX_decision_category_vault_tec_calling
+	allowed = {
+		original_tag = VLT
+	}
+	visible_when_empty = no
+	priority = {
+		base = 100
+	}
+}
+vlt_magistrates_cat = {
+	icon = GFX_decision_category_vault_tec_calling
+	allowed = {
+		original_tag = VLT
+	}
+	visible = {
+		always = no
+	}
+	visible_when_empty = no
+	priority = {
+		base = 90
+	}
+}
+vlt_gecko_stuff_cat = {
+	icon = GFX_decision_category_vault_tec_calling
+	allowed = {
+		original_tag = VLT
+	}
+	visible_when_empty = no
+	priority = {
+		base = 100
+	}
+}
+
+vlt_spatial_anomalies_cat = {
+	icon = GFX_decision_category_vault_tec_calling
+	allowed = {
+		original_tag = VLT
+	}
+	visible_when_empty = no
+	priority = {
+		base = 100
+	}
+}

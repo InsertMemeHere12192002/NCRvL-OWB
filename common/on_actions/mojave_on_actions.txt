@@ -1,0 +1,231 @@
+on_actions = {
+	# on_declare_war = {
+	# 	effect = {
+	# 		if = {
+	# 			limit = {
+	# 				OR = {
+	# 					original_tag = CES
+	# 					original_tag = VEG
+	# 				}
+	# 			}
+	# 			# if = {
+	# 			# 	limit = {
+	# 			# 		FROM = {
+	# 			# 			has_completed_focus = mot_live_and_let_live
+	# 			# 		}
+	# 			# 	}
+	# 			# 	FROM = {
+	# 			# 		add_timed_idea = { idea = mot_uprising days = 60 }
+	# 			# 	}
+	# 			# }
+	# 		}
+	# 		if = {
+	# 			limit = {
+	# 				original_tag = VEG
+	# 				has_country_leader = {
+	# 					character = VEG_mr_house
+	# 				}
+	# 				has_completed_focus = veg_chairmen
+	# 			}
+	# 			if = {
+	# 				limit = {
+	# 					FROM = {
+	# 						has_completed_focus = mot_an_offer
+	# 					}
+	# 				}
+	# 				VEG = { news_event = nf_mot.26 }
+	# 			}
+	# 		}
+	# 	}
+	# }
+	on_peaceconference_ended = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = MOT }
+					ROOT = {
+						tag = MOJ
+					}
+				}
+				MOT = {
+					every_state = {
+						limit = {
+							OR = {
+								is_owned_by = MOJ
+								is_owned_by = MOT
+							}
+							OR = {
+								state = 552
+								state = 47
+								state = 67
+								state = 137
+								state = 613
+								state = 252
+								state = 620
+								state = 106
+								state = 380
+								state = 500
+								state = 940
+								state = 106
+							}
+						}
+						remove_core_of = MOT
+						remove_claim_by = MOT
+						MOJ = { transfer_state = PREV }
+					}
+					every_state = {
+						limit = {
+							OR = {
+								is_owned_by = MOJ
+								is_owned_by = MOT
+							}
+							NOT = {
+								state = 552
+								state = 47
+								state = 67
+								state = 137
+								state = 613
+								state = 252
+								state = 46
+								state = 417
+								state = 573
+								state = 620
+								state = 500
+								state = 380
+								state = 940
+								state = 106
+							}
+						}
+						remove_core_of = MOT
+						remove_claim_by = MOT
+						set_state_flag = outer_mojave
+						random_country = {
+							limit = {
+								owns_state = 236 #Barstow state owner, usually NCR.
+							}
+							transfer_state = PREV
+						}
+						NCR = {
+							complete_national_focus = ncr_lost_not_forgotten
+						}
+					}
+					random_country = {
+						limit = {
+							owns_state = 236 #Barstow state owner, usually NCR.
+							NOT = { tag = MOJ }
+						}
+						country_event = nf_mojave_brotherhood.5
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = MOS
+					}
+					ROOT = {
+						original_tag = NCR
+					}
+				}
+				if = {
+					limit = {
+						MOT = {
+							any_owned_state = {
+								is_core_of = MOS
+							}
+						}
+					}
+					MOT = {
+						every_owned_state = {
+							limit = {
+								is_core_of = MOS
+							}
+							NCR = {
+								transfer_state = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = MOT }
+					FROM = { tag = MOJ }
+				}
+				MOT = {
+					#every_character = {
+					#	set_nationality = NCR
+					#}
+					every_unit_leader = {
+						set_nationality = NCR
+					}
+					every_navy_leader = {
+						set_nationality = NCR
+					}
+				}
+			}
+		}
+	}
+	on_annex = {
+		effect = {
+			# if = {
+			# 	limit = {
+			# 		FROM = {
+			# 			tag = MOT
+			# 			has_completed_focus = mot_a_secret_most_profound
+			# 		}
+			# 		ROOT = {
+			# 			tag = VEG
+			# 			is_house_leader = yes
+			# 			NOT = { has_completed_focus = veg_platinumchip }
+			# 			NOT = { has_completed_focus = veg_vault }
+			# 		}
+			# 	}
+			# 	VEG = { news_event = { id = nf_mojave.33 days = 2 } }
+			# }
+			if = {
+				limit = {
+					ROOT = {
+						has_dlc = "La Resistance"
+						owns_state = 380
+						has_country_flag = moj_ops_1
+					}
+				}
+				ROOT = {
+					add_tech_bonus = {
+						bonus = 0.5
+						uses = 1
+						category = air_tech_category
+					}
+					clr_country_flag = moj_ops_1
+					set_country_flag = moj_ops_2
+					country_event = {
+						id = nf_mojave_brotherhood.41
+						days = 2
+					}
+				}
+			}
+		}
+	}
+
+	#ROOT is winner, FROM gets annexed.
+	on_annex = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { original_tag = MOJ }
+				}
+				CIP = {
+					country_event = {
+						id = nf_cipher.13
+						days = 180
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,331 @@
+# befriend
+# conquer
+# antagonize
+# build_ship
+# build_army
+# unit_ratio
+# build_building
+# research_tech
+# garrison
+# protect
+# influence
+# contain
+# area_priority
+NEW_ignore_NCR = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		should_ignore_ncr = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = NCR
+		value = -800
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = "NCR"
+		value = 8000
+	}
+}
+NEW_we_need_to_hold_off_thunderbirds = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		has_war_with = THN
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = diplo_action_desire
+		id = TDN
+		target = military_access
+		value = 200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = MOD
+		target = military_access
+		value = 200
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SLA
+		target = military_access
+		value = 200
+	}
+}
+NEW_no_double_war_TDN = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		OR = {
+			has_war_with = YKZ
+			has_war_with = JAC
+			has_war_with = SLA
+		}
+	}
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = TDN
+		value = -999
+	}
+}
+NEW_no_double_war_KLA = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		OR = {
+			has_war_with = MOD
+			has_war_with = YKZ
+			has_war_with = JAC
+			has_war_with = SLA
+		}
+	}
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = KLA
+		value = -999
+	}
+	ai_strategy = {
+		type = ignore
+		id = KLA
+		value = 8000
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = KLA
+		value = 8000
+	}
+}
+NEW_no_double_war_YKZ = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		OR = {
+			has_war_with = MOD
+			has_war_with = TDN
+			has_war_with = SLA
+			has_war_with = KLA
+		}
+	}
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = YKZ
+		value = -999
+	}
+	ai_strategy = {
+		type = ignore
+		id = YKZ
+		value = 8000
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = YKZ
+		value = 8000
+	}
+}
+NEW_no_double_war_JAC = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		OR = {
+			has_war_with = MOD
+			has_war_with = TDN
+			has_war_with = SLA
+			has_war_with = KLA
+		}
+	}
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = JAC
+		value = -999
+	}
+	ai_strategy = {
+		type = ignore
+		id = JAC
+		value = 8000
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = JAC
+		value = 8000
+	}
+}
+NEW_no_double_war_MOD = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		OR = {
+			#has_war_with = TDN
+			has_war_with = YKZ
+			has_war_with = KLA
+			has_war_with = JAC
+		}
+	}
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = MOD
+		value = -999
+	}
+	ai_strategy = {
+		type = ignore
+		id = MOD
+		value = 8000
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = MOD
+		value = 8000
+	}
+}
+NEW_no_double_war_SLA = {
+	allowed = {
+		original_tag = NEW
+	}
+	enable = {
+		OR = {
+			has_war_with = TDN
+			has_war_with = YKZ
+			has_war_with = KLA
+			has_war_with = JAC
+		}
+	}
+	abort = {
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = declare_war
+		id = SLA
+		value = -999
+	}
+	ai_strategy = {
+		type = ignore
+		id = SLA
+		value = 8000
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = SLA
+		value = 8000
+	}
+}
+#Ensures Reno will join the NCR instead of trying to and having the focus cancel part of the way through due to declaring a war for its Nevada claims
+# NEW_join_NCR_before_war = {
+# 	allowed = {
+# 		NOT = { original_tag = NEW }
+# 	}
+# 	enable = {
+# 		is_neighbor_of = NEW
+# 	}
+# 	enable_reverse = {
+# 		NEW = {
+# 			OR = {
+# 				NEW_has_ai_behavior_bishop = yes
+# 				NEW_has_ai_behavior_wright = yes
+# 			}
+# 			NOT = { has_completed_focus = new_stateofreno }
+# 			has_completed_focus = new_nevada
+# 		}
+# 	}
+# 	abort = {
+# 	}
+# 	reversed = yes
+# 	abort_when_not_enabled = yes
+
+# 	ai_strategy = {
+# 		type = ignore_claim
+# 		id = NEW
+# 		value = 1
+# 	}
+# }
+NEW_help_NCR_when_ally_path = {
+	allowed = { original_tag = NEW }
+	enable = {
+		OR = {
+			NEW_has_ai_behavior_bishop = yes
+			NEW_has_ai_behavior_wright = yes
+			is_ally_with = NCR
+		}
+		country_exists = NCR
+		NCR = {
+			NOT = {
+				has_war_with = NEW
+				has_wargoal_against = NEW
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = support
+		id = NCR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = NCR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NCR
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = NCR
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = MOT
+		value = 50
+	}
+	ai_strategy = {
+		type = send_lend_lease_desire
+		id = MOT
+		value = 50
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MOT
+		value = 50
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

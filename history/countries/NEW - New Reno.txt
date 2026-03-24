@@ -77,7 +77,6 @@ set_popularities = {
 add_ideas = {
 	NEW_a_city_of_sin
 	chems_legalised
-	# slavers_idea_2
 	ncr_sphere
 	currencyncrdollar
 }

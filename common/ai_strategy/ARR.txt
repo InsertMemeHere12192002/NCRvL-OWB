@@ -1,0 +1,206 @@
+ARR_exerting_influence_pp_priority = {
+	allowed = {
+		original_tag = ARR
+	}
+	enable = {
+		has_idea = arr_exerting_influence
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = pp_spend_amount
+		id = idea
+		value = -10
+	}
+	ai_strategy = {
+		type = pp_spend_amount
+		id = decision
+		value = 50
+	}
+	ai_strategy = {
+		type = pp_spend_priority
+		id = decision
+		value = 50
+	}
+}
+
+ARR_prepare_for_UMB = {
+	allowed = {
+		original_tag = ARR
+	}
+	enable = {
+		UMB = {
+			exists = yes
+			NOT = { is_ally_with = ARR }
+		}
+	}
+	abort = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "UMB"
+		value = 100
+	}
+}
+
+ARR_prepare_for_MXS = {
+	allowed = {
+		original_tag = ARR
+	}
+	enable = {
+		has_country_flag = ARR_max_sec_started
+		MXS = {
+			exists = yes
+			NOT = { is_ally_with = ARR }
+		}
+	}
+	abort = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "MXS"
+		value = 100
+	}
+}
+
+ARR_prepare_for_PAC = {
+	allowed = {
+		original_tag = ARR
+	}
+	enable = {
+		has_country_flag = ARR_max_sec_started
+		PAC = {
+			exists = yes
+			NOT = { is_ally_with = ARR }
+		}
+	}
+	abort = {
+		any_neighbor_country = {
+			NOT = { original_tag = MXS }
+			has_war_with = ARR
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "PAC"
+		value = 25
+	}
+}
+
+ARR_prepare_for_EUR = {
+	allowed = {
+		original_tag = ARR
+	}
+	enable = {
+		has_country_flag = eureka_insecure
+	}
+	abort = {
+		has_war = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = "EUR"
+		value = 100
+	}
+}
+
+ARR_NCR_ally_defend_legion = {
+	allowed = {
+		original_tag = ARR
+	}
+	enable = {
+		is_ally_with = NCR
+		NCR = {
+			OR = {
+				has_war_with = CES
+				is_justifying_wargoal_against = CES
+				has_wargoal_against = CES
+				CES = { is_justifying_wargoal_against = NCR }
+				CES = { has_wargoal_against = NCR }
+			}
+		}
+		NOT = { any_neighbor_country = { has_war_with = ARR } }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = NCR
+		value = 50
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = MOT
+		value = 50
+	}
+}
+
+ARR_send_volunteers_NCR_when_ally_path = {
+	allowed = { original_tag = ARR }
+	enable = {
+		OR = {
+			ARR_has_ai_behavior_good_integrated = yes
+			ARR_has_ai_behavior_good_independent = yes
+			is_ally_with = NCR
+		}
+		country_exists = NCR
+		NCR = {
+			NOT = {
+				has_wargoal_against = ARR
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = NCR
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = NCR
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = MOT
+		value = 50
+	}
+}
+
+# ARR_minor_friends = {
+# 	allowed = {
+# 		OR = {
+# 			original_tag = KLA
+# 			original_tag = MOD
+# 			original_tag = SLA
+# 		}
+# 	}
+# 	enable = {
+# 		NOT = {
+# 			has_war_with = ARR
+# 			ARR = { has_completed_focus = arr_thunderbird }
+# 		}
+# 	}
+# 	abort_when_not_enabled = yes
+# 	ai_strategy = {
+# 		type = befriend
+# 		id = ARR
+# 		value = 100
+# 	}
+# 	ai_strategy = {
+# 		type = support
+# 		id = ARR
+# 		value = 50
+# 	}
+# }

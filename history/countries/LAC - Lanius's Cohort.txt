@@ -62,19 +62,8 @@ if = {
 		naval_support_module_tech = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		medium_navy_hull_tech_non_mtg_1 = 1
-	}
-}
 
-set_stability = 0.1 #Very low on purpose
+set_stability = 0.35 #Very low on purpose
 set_war_support = 0.65
 set_research_slots = 4
 
@@ -92,7 +81,6 @@ set_popularities = {
 
 set_variable = { never_return_stolen_territory = 1 }
 
-set_country_flag = slavery_allowed
 set_country_flag = manpower_laws_hidden
 set_country_flag = slave_society
 set_country_flag = bans_drugs
@@ -112,7 +100,6 @@ add_ideas = {
 	national_spirit_rejection_of_automation
 	lac_beast_of_the_east
 	lac_mustering_cohort
-	# slavers_idea_2
 	tribal_recruitment
 	undesirables_law_petty
 	partial_economic_mobilisation

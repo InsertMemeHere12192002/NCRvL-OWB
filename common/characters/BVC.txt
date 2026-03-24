@@ -100,4 +100,38 @@ characters = {
 			id = -1
 		}
 	}
+	BVC_porfirio_almonte = {
+		name = BVC_PORFIRIO_ALMONTE_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Raider_Generic_10
+			}
+		}
+		country_leader = {
+			ideology = militarist_oligarchy
+			traits = {
+				compassionate_gentleman
+				well_liked_leader
+			}
+			expire = "2284.1.1.12"
+			id = -1
+		}
+	}
+		BVC_melchor_huerta = {
+		name = BVC_MELCHOR_HUERTA_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Raider_Generic_3
+			}
+		}
+		country_leader = {
+			ideology = theodemocracy
+			traits = {
+				captain_of_industry
+				paranoid
+			}
+			expire = "2284.1.1.12"
+			id = -1
+		}
+	}
 }

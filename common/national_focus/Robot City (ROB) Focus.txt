@@ -398,6 +398,9 @@ focus_tree = {
 			}
 		}
 		relative_position_id = rob_waitasecond
+				ai_will_do = {
+			base = 1000
+		}
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -446,7 +449,7 @@ focus_tree = {
 	}
 	focus = {
 		id = rob_claimjumping
-		icon = GFX_goal_generic_canister_nucleaer
+		icon = GFX_goal_generic_canister_nuclear
 		cost = 30
 		x = 1
 		y = 1
@@ -827,7 +830,10 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_maudeeconomy entered"
 			}
-			add_ideas = ROB_maude
+			swap_ideas = {
+				remove_idea = ROB_city_of_vagrants
+				add_idea = ROB_maude
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_maudeeconomy exited"
@@ -852,7 +858,10 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_sargesway entered"
 			}
-			add_ideas = ROB_sarge
+			swap_ideas = {
+				remove_idea = ROB_city_of_vagrants
+				add_idea = ROB_sarge
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_sargesway exited"
@@ -1266,6 +1275,9 @@ focus_tree = {
 			focus = rob_production1
 		}
 		relative_position_id = rob_supportupgrades
+				available = {
+			has_tech = robot_command_equipment_tech_2
+		}
 		completion_reward = {
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -1441,6 +1453,10 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] rob_every_man_a_representative entered"
 			}
 			add_ideas = ROB_presidente
+						add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_every_man_a_representative exited"
@@ -1456,6 +1472,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_war = no
+			is_in_faction = no
 			borders_texan_economic_union = yes
 		}
 		prerequisite = {
@@ -1467,10 +1484,11 @@ focus_tree = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_consumption_is_good entered"
 			}
-			add_offsite_building = {
-				type = industrial_complex
-				level = 3
-			}
+			#Moved these to another focus - Zusk
+			#add_offsite_building = {
+			#	type = industrial_complex
+			#	level = 3
+			#}
 			if = {
 				limit = { NOT = { is_in_faction = yes } }
 				ask_to_join_texan_economic_union = yes
@@ -1497,6 +1515,10 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] rob_all_hail_president entered"
 			}
 			add_ideas = ROB_representation
+						add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] rob_all_hail_president exited"

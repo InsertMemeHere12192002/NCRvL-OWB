@@ -395,11 +395,12 @@ formable_nations = {
 			set_country_flag = sok_arroyo_formed
 			set_variable = { global.sok_arroyo = THIS }
 			set_capital = {state = 337 }
+			add_state_core = 337
 			set_cosmetic_tag = ARR
 			custom_effect_tooltip = sok_form_arroyo_name_change_tt
 			hidden_effect = {
 				set_country_leader_name = {
-					name = "The Chosen One"
+					name = SOK_KAGA_CHOSEN_ONE_NAME
 				}
 			}
 			swap_ruler_traits = {
@@ -1782,9 +1783,6 @@ formable_nations = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = STN_competitive_goverment_tt
-				NOR = {
-					all_core_land_owned_by_prev_sphere = yes
-				}
 				STA = {
 					all_core_land_owned_by_prev_sphere = yes
 				}
