@@ -717,14 +717,12 @@ country_event = {
 	}
 }
 
-country_event = {
+news_event = {
 	id = nf_whitelegs.33
 	title = nf_whitelegs.33.t
 	desc = nf_whitelegs.33.d
 	picture = GFX_event_zion
 	is_triggered_only = yes
-	fire_only_once = yes
-
 	option = {
 		name = nf_whitelegs.33.a
 

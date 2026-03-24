@@ -303,8 +303,7 @@ characters = {
 				}
 				available = {
 					OR = {
-						is_caesar_leader = yes
-						is_vulpes_leader = yes
+						original_tag = CES
 						tag = TWO
 					}
 					not_already_hired_except_as = high_command
@@ -328,8 +327,7 @@ characters = {
 				}
 				available = {
 					OR = {
-						is_caesar_leader = yes
-						is_vulpes_leader = yes
+						original_tag = CES
 						tag = TWO
 					}
 					not_already_hired_except_as = cultural_advisor
@@ -391,8 +389,7 @@ characters = {
 				}
 				available = {
 					OR = {
-						is_caesar_leader = yes
-						is_vulpes_leader = yes
+						original_tag = CES
 						tag = TWO
 					}
 					not_already_hired_except_as = high_command
@@ -416,8 +413,7 @@ characters = {
 				}
 				available = {
 					OR = {
-						is_caesar_leader = yes
-						is_vulpes_leader = yes
+						original_tag = CES
 						tag = TWO
 					}
 					not_already_hired_except_as = cultural_advisor

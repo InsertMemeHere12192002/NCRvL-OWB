@@ -151,6 +151,8 @@ add_ideas = {
 	knighlty_armaments
 	fbh_long_range_comms
 	fbh_peace_in_our_time
+	fbh_aeronautics_ineptitude
+	fbh_lag_reducer
 }
 
 add_opinion_modifier = { target = SHA modifier = boshatesmutants }
@@ -161,6 +163,7 @@ recruit_character = FBH_angharad
 recruit_character = FBH_rhiannon
 recruit_character = FBH_llwyd
 recruit_character = FBH_mari_torni
+recruit_character = FBH_paladin_leadcolt
 
 recruit_character = FBH_paladin_stone
 

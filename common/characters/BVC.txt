@@ -100,6 +100,23 @@ characters = {
 			id = -1
 		}
 	}
+	BVC_romulo_robles = {
+		name = BVC_ROMULO_ROBLES_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Raider_Generic_5
+			}
+		}
+		country_leader = {
+			ideology = meritocracy
+			traits = {
+				war_industrialist
+				political_workhorse
+			}
+			expire = "2292.1.1.12"
+			id = -1
+		}
+	}
 	BVC_porfirio_almonte = {
 		name = BVC_PORFIRIO_ALMONTE_NAME
 		portraits = {

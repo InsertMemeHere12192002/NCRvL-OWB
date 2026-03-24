@@ -26,9 +26,8 @@ focus_tree = {
 				}
 				log = "[GetDateText]: [Root.GetName] wht_bombs_origins entered"
 			}
-			country_event = {
-				id = nf_whitelegs.1
-			}
+			country_event = nf_whitelegs.1
+
 			if = {
 				limit = {
 					has_global_flag = debug_logs
@@ -55,9 +54,7 @@ focus_tree = {
 				}
 				log = "[GetDateText]: [Root.GetName] wht_supermutant_invasion entered"
 			}
-			country_event = {
-				id = nf_whitelegs.2
-			}
+			country_event = nf_whitelegs.2
 			if = {
 				limit = {
 					has_global_flag = debug_logs
@@ -83,9 +80,8 @@ focus_tree = {
 				}
 				log = "[GetDateText]: [Root.GetName] wht_winds_change entered"
 			}
-			country_event = {
-				id = nf_whitelegs.3
-			}
+			country_event = nf_whitelegs.3
+
 			if = {
 				limit = {
 					has_global_flag = debug_logs
@@ -335,9 +331,9 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] wht_slave_raiding entered"
 			}
 			add_political_power = 80
-				CES = {country_event = nf_whitelegs.33}
-				RES = {country_event = nf_whitelegs.33}
-				NAV = {country_event = nf_whitelegs.33}
+				CES = {news_event = nf_whitelegs.33}
+				RES = {news_event = nf_whitelegs.33}
+				NAV = {news_event = nf_whitelegs.33}
 			if = {
 				limit = { NCN = { exists = yes } }
 				NCN = {
@@ -571,12 +567,12 @@ focus_tree = {
 		id = wht_welcome_traders
 		icon = GFX_goal_generic_communcation_focus
 		cost = 40
+		x = 0
+		y = 1
 		prerequisite = {
 			focus = wht_mormon_slaves
 		}
 		relative_position_id = wht_mormon_slaves
-		x = 0
-		y = 1
 		completion_reward = {
 			if = {
 				limit = {
@@ -786,6 +782,12 @@ focus_tree = {
 				log = "[GetDateText]: [Root.GetName] wht_god_sky entered"
 			}
 			add_ideas = god_of_sky
+			if = {
+				limit = {
+					has_global_flag = debug_logs
+				}
+				log = "[GetDateText]: [Root.GetName] wht_god_sky exited"
+			}
 		}
 	}
 	focus = {
@@ -2190,9 +2192,7 @@ focus_tree = {
 				ideology = ruler
 				popularity = 0.05
 			}
-			country_event = {
-				id = nf_whitelegs.15
-			}
+			country_event =  nf_whitelegs.15
 		}
 	}
 	focus = {
