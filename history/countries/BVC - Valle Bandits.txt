@@ -102,5 +102,5 @@ reverse_add_opinion_modifier = {
 
 recruit_character = BVC_guarez_moya
 recruit_character = BVC_pancho_villa
-recruit_character = BVC_romulo_robles
+#recruit_character = BVC_romulo_robles
 recruit_character = BVC_porfirio_almonte

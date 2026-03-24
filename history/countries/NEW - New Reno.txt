@@ -122,4 +122,4 @@ recruit_character = NEW_kieva_nanjimi
 recruit_character = NEW_mockingbird
 recruit_character = NEW_jean_baptise
 recruit_character = NEW_big_shot_bob
-recruit_character = NEW_ferath
+#recruit_character = NEW_ferath

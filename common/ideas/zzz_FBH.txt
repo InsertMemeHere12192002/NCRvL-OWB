@@ -417,5 +417,21 @@ ideas = {
 				cant_be_justified_on = 1
 			}
 		}
+		
+				fbh_lag_reducer = {
+
+			picture=generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -3
+				conscription_factor = -30
+			}
+		}
 	}
 }

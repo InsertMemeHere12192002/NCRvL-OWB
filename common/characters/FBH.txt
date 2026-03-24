@@ -121,6 +121,33 @@ characters = {
 			legacy_id = -1
 		}
 	}
+	FBH_paladin_leadcolt = {
+		name = FBH_PALADIN_LEADCOLT_NAME
+		portraits = {
+			army = {
+				large = GFX_Portrait_VLT_chad
+			}
+		}
+		corps_commander = {
+			traits = { 
+				bunker_kid_trait 
+				perceptive_trait 
+				lucky_trait
+				commando_trait
+				enduring_trait
+				agile_trait
+				urban_assault_specialist
+				fortress_buster
+				paratrooper
+			} 
+			skill = 4
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = -1
+		}
+	}
 	FBH_advisor_contest_2 = {
 		name = FBH_advisor_contest_name_2
 		portraits = {

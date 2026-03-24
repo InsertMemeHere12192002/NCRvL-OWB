@@ -22,6 +22,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			country_event = nf_fbh.1
+			remove_ideas = fbh_lag_reducer
 		}
 	}
 	focus = {
@@ -1771,7 +1772,6 @@ focus_tree = {
 		relative_position_id = fbh_canaveral_airbase
 		completion_reward = {
 			air_experience = -200
-			add_ideas = fbh_aeronautics_ineptitude
 			set_technology = {
 				strat_bomber_tech_2 = 1
 			}
@@ -1948,15 +1948,15 @@ focus_tree = {
 					}
 				}
 			random_owned_controlled_state = {
-				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+				create_unit = { 
 					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
 					owner = MOT
 				}
-				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+				create_unit = { 
 					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
 					owner = MOT
 				}
-				create_unit = { #CW Tools - False positive? "name = \"Infantry Division\" is the correct format given by the wiki.
+				create_unit = { 
 					division = "name = \"Paladin\" division_template = \"Brotherhood Paladins\" start_experience_factor = 0.75 start_equipment_factor = 1 force_equipment_variants = { ballistic_equipment_3 = { owner = \"USA\" } power_armor_equipment_3 = { owner = \"USA\" } flamer_demolitions_equipment_3 = { owner = \"USA\" } }"
 					owner = MOT
 					}
@@ -2130,7 +2130,7 @@ focus_tree = {
 			IRN = {
 				country_event = nf_fbh.21
 			}
-			else = {
+			else_if = {
 				limit = {
 					has_completed_focus = fbh_ad_victoriam
 				}
