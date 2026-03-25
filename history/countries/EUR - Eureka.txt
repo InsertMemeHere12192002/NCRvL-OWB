@@ -46,6 +46,7 @@ set_technology = {
 	spec_ops_equipment_tech_1 = 1
 	spec_ops_equipment_tech_2 = 1
 	vehicles_tech_level_settler = 1
+	robotics_tech_level_tribal = 1
 	stripped_pa_tech = 1
 	weight_support_frame_pa_tech_1 = 1
 	weight_support_frame_pa_tech_2 = 1

@@ -46,7 +46,7 @@ equipments = {
 
 		# Defensive Abilities
 		defense = 14 # base was 10
-		breakthrough = 2
+		breakthrough = 3
 		hardness = 0
 		armor_value = 0
 		maximum_speed = 4.5
@@ -93,7 +93,7 @@ equipments = {
 
 		# Defensive Abilities
 		defense = 17.5 #base was 12
-		breakthrough = 3.5
+		breakthrough = 4.5
 		maximum_speed = 4.5
 
 		# Offensive Abilities
@@ -179,7 +179,7 @@ equipments = {
 
 		# Defensive Abilities
 		defense = 19.5 # base was 14
-		breakthrough = 5
+		breakthrough = 6
 		maximum_speed = 4.5
 
 		# Offensive Abilities
@@ -260,7 +260,7 @@ equipments = {
 
 		# Defensive Abilities
 		defense = 24 #was 17
-		breakthrough = 7
+		breakthrough = 8
 		maximum_speed = 4.5
 
 		# Offensive Abilities

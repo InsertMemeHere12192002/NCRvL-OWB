@@ -1214,7 +1214,19 @@ focus_tree = {
 					}
 				}
 				hidden_effect = {
+						set_technology = {
+							robot_makeshift_automatons_tech = 1
+							robot_fission_batteries_tech = 1
+							robot_protectron_equipment_tech_1 = 1
+							robot_command_equipment_tech_1 = 1
+							robot_armour_hardening_tech = 1
+							robot_lifter_equipment_tech = 1
+							robot_miniature_thruster_tech = 1
+							robotics_tech_level_tribal = 1
+						}
 						remove_ideas = SHA_attis_sucessor
+						remove_ideas = aeronautics_ineptitude
+						add_ideas = ground_based_artificial_intelligence
 						set_cosmetic_tag = SHA_calix
 						retire_country_leader = yes
 						add_country_leader_role = {
@@ -1229,7 +1241,7 @@ focus_tree = {
 								expire = "2294.1.1.12"
 								id = -1
 							}
-						}	
+						}
 					mark_focus_tree_layout_dirty = yes
 				}
 			}
@@ -1502,10 +1514,7 @@ focus_tree = {
 		}
 		relative_position_id = shale_an_unfortunate_reunion
 		completion_reward = {
-			custom_effect_tooltip = new_advisor_tt
-			effect_tooltip = {
-				add_ideas = SHA_battlemasta_high_command
-			}
+			add_research_slot = 1
 		}
 	}
 	focus =	{
@@ -2068,15 +2077,9 @@ focus_tree = {
 		}
 		relative_position_id = shale_the_secret_vault_ruins
 		completion_reward = {
-			hidden_effect = {
-				set_technology = {	
-					robotics_tech_level_tribal = 1
-					robotics_tech_level_settler = 1
-					popup = no
-				}
-			}
 			set_technology = {	
-				robotics_tech_level_scientific = 1
+				robotics_tech_level_settler = 1
+				habitation_tech_level_settler = 1
 				electronics_tech_level_scientific = 1
 				exploitation_tech_level_scientific = 1
 				popup = no
@@ -2775,6 +2778,7 @@ focus_tree = {
 		relative_position_id = attis_3
 		completion_reward = {
 			set_cosmetic_tag = SHA_mogger
+			add_ideas = imo_mastersmiths
 			retire_country_leader = yes
 			add_country_leader_role = {
 				character = IMO_juggernaut
@@ -3640,6 +3644,8 @@ focus_tree = {
 		relative_position_id = attis_3
 		completion_reward = {	
 			set_cosmetic_tag = SHA_crusher
+			add_ideas = uoa_fev_volunteers
+			add_ideas = large_cockpit_requirements
 			retire_country_leader = yes
 			add_country_leader_role = {
 				character = SHA_lieutenant_crusher
@@ -4092,6 +4098,7 @@ focus_tree = {
 		relative_position_id = attis_crusher
 		completion_reward = {
 			add_stability = 0.1
+			add_research_slot = 1
 			remove_ideas = cru_crush_idea
 		}
 	}

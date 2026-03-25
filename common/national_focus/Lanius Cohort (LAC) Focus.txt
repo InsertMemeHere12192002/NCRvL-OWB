@@ -1847,7 +1847,7 @@ focus_tree = {
 	focus = {
 		id = lac_good_boy_puppet
 		icon = GFX_goal_lac_old_helm
-		cost = 60
+		cost = 7
 		prerequisite = {
 			focus = lac_brought_to_heel
 		}
@@ -2797,12 +2797,16 @@ focus_tree = {
 				remove_idea = lac_cohort_of_east_2
 				add_idea = lac_cohort_of_east_3
 			}
-			every_state = {
-				tooltip = every_texan_state
+			every_owned_state = {
 				limit = {
 					is_texan_state = yes
 				}
-				add_claim_by = LAC
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
@@ -2920,6 +2924,7 @@ focus_tree = {
 				limit = {
 					is_colorado_state = yes
 				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = infrastructure
 					level = 1

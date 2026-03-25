@@ -175,18 +175,8 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				has_completed_focus = shale_planning_against_the_paladins
-			}
-			on_add = {
-				ROOT = {
-					add_ideas = battlemasta_trait
-				}
-			}
-			on_remove = {
-				ROOT = {
-					remove_ideas = battlemasta_trait
-				}
+			traits = {
+				warren_hunter
 			}
 			ai_will_do = {
 				factor = 10
@@ -210,18 +200,8 @@ characters = {
 			allowed = {
 				original_tag = SHA
 			}
-			available = {
-				has_completed_focus = shale_defending_against_the_monster
-			}
-			on_add = {
-				ROOT = {
-					add_ideas = thumbface_trait
-				}
-			}
-			on_remove = {
-				ROOT = {
-					remove_ideas = thumbface_trait
-				}
+			traits = {
+				warren_healer
 			}
 			ai_will_do = {
 				factor = 10

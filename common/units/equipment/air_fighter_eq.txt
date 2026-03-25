@@ -48,7 +48,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 22
+		build_cost_ic = 75
 		resources = {
 		}
 
@@ -105,7 +105,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 60
+		build_cost_ic = 210
 		resources = {
 		}
 
@@ -161,7 +161,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 60
+		build_cost_ic = 210
 		resources = {
 		}
 
@@ -217,7 +217,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 60
+		build_cost_ic = 210
 		resources = {
 		}
 
@@ -261,7 +261,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 35
+		build_cost_ic = 120
 		resources = {
 			metal = 2
 			water = 1
@@ -296,7 +296,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 45
+		build_cost_ic = 155
 		resources = {
 			metal = 2
 			circuitry = 1
@@ -333,7 +333,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 55
+		build_cost_ic = 190
 		resources = {
 			composites = 2
 			circuitry = 1
@@ -370,7 +370,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 65
+		build_cost_ic = 225
 		resources = {
 			composites = 2
 			advanced = 1
@@ -408,7 +408,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 99
+		build_cost_ic = 165
 		resources = {
 			metal = 2
 			circuitry = 1
@@ -447,7 +447,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 121
+		build_cost_ic = 200
 		resources = {
 			composites = 2
 			circuitry = 1
@@ -486,7 +486,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 143
+		build_cost_ic = 235
 		resources = {
 			composites = 2
 			advanced = 1
@@ -522,7 +522,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 99
+		build_cost_ic = 165
 		resources = {
 			metal = 2
 			circuitry = 1
@@ -559,7 +559,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 121
+		build_cost_ic = 200
 		resources = {
 			composites = 2
 			circuitry = 1
@@ -596,7 +596,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 143
+		build_cost_ic = 235
 		resources = {
 			composites = 2
 			advanced = 1
@@ -632,7 +632,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 99
+		build_cost_ic = 165
 		resources = {
 			metal = 2
 			circuitry = 1
@@ -668,7 +668,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 121
+		build_cost_ic = 200
 		resources = {
 			composites = 2
 			circuitry = 1
@@ -705,7 +705,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 143
+		build_cost_ic = 235
 		resources = {
 			composites = 2
 			advanced = 1
@@ -743,7 +743,7 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 8
 
-		build_cost_ic = 80
+		build_cost_ic = 270
 		resources = {
 			composites = 2
 			advanced = 2

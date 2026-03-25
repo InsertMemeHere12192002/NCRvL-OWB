@@ -23,7 +23,7 @@ equipments = {
 		# Defensive Abilities
 		hardness = 0.15
 		armor_value = 4
-		breakthrough = 2
+		breakthrough = 3
 		defense = 4.5
 		ap_attack = 10
 
@@ -42,7 +42,7 @@ equipments = {
 
 		maximum_speed = 4.5
 
-		breakthrough = 4
+		breakthrough = 5
 		defense = 3
 		hardness = 0.15
 		armor_value = 4
@@ -67,7 +67,7 @@ equipments = {
 
 		maximum_speed = 5
 
-		breakthrough = 6
+		breakthrough = 7
 		defense = 4.5
 		hardness = 0.2
 		armor_value = 7
@@ -93,7 +93,7 @@ equipments = {
 
 		maximum_speed = 5.5
 
-		breakthrough = 8
+		breakthrough = 9
 		defense = 6
 		hardness = 0.25
 		armor_value = 10
@@ -120,7 +120,7 @@ equipments = {
 
 		maximum_speed = 6
 
-		breakthrough = 10
+		breakthrough = 11
 		defense = 7.5
 		hardness = 0.30
 		armor_value = 13
@@ -148,7 +148,7 @@ equipments = {
 
 		maximum_speed = 6.5
 
-		breakthrough = 12
+		breakthrough = 13
 		defense = 9
 		hardness = 0.35
 		armor_value = 16
@@ -180,7 +180,7 @@ equipments = {
 
 		maximum_speed = 6.5
 
-		breakthrough = 14
+		breakthrough = 15
 		defense = 10.5
 		hardness = 0.45
 		armor_value = 25

@@ -789,7 +789,7 @@ technologies = {
 
 	generalized_industry_tech_3 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -839,7 +839,7 @@ technologies = {
 
 	generalized_industry_tech_4 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -886,7 +886,7 @@ technologies = {
 
 	generalized_industry_tech_5 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -933,7 +933,7 @@ technologies = {
 
 	generalized_industry_tech_6 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -980,7 +980,7 @@ technologies = {
 
 	generalized_industry_tech_7 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -1123,7 +1123,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_3 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1172,7 +1172,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_4 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1218,7 +1218,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_5 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1264,7 +1264,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_6 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1310,7 +1310,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_7 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 

@@ -117,8 +117,8 @@ BRT = {
 }
 
 BVC = {
-	color = rgb { 174 161 11 }
-	color_ui = rgb { 174 161 11 }
+	color = rgb { 0 104 71 }
+	color_ui = rgb { 0 104 71 }
 }
 
 BJS = {

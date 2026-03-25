@@ -71,13 +71,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
-			custom_effect_tooltip = air_tech_production_cost_tt
-			hidden_effect = {
-				add_ideas = tech_air_production_nerf_idea
-			}
-		}
-
 		research_cost = 1
 		start_year = 2275
 		folder = {

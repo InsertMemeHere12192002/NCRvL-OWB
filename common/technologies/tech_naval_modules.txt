@@ -285,7 +285,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2274
+		start_year = 2273
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -331,7 +331,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2275
+		start_year = 2274
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -415,7 +415,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -466,7 +466,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -508,7 +508,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -559,7 +559,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -601,7 +601,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2281
+		start_year = 2280
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -633,7 +633,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2282
+		start_year = 2281
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -871,7 +871,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2275
+		start_year = 2274
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -913,7 +913,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -968,7 +968,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1023,7 +1023,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1065,7 +1065,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1120,7 +1120,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1157,7 +1157,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2282
+		start_year = 2281
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1242,7 +1242,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1301,7 +1301,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1360,7 +1360,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1402,7 +1402,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1461,7 +1461,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1498,7 +1498,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2282
+		start_year = 2281
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1583,7 +1583,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1638,7 +1638,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1693,7 +1693,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1735,7 +1735,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1790,7 +1790,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1827,7 +1827,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2282
+		start_year = 2281
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1912,7 +1912,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -1967,7 +1967,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2022,7 +2022,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2064,7 +2064,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2119,7 +2119,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2156,7 +2156,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2282
+		start_year = 2281
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2242,7 +2242,7 @@ technologies = {
 		#}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2431,7 +2431,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 
 		folder = {
 			name = fallout_naval_modules_folder
@@ -2470,7 +2470,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 
 		folder = {
 			name = fallout_naval_modules_folder
@@ -2500,7 +2500,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2281
+		start_year = 2280
 
 		folder = {
 			name = fallout_naval_modules_folder
@@ -2587,7 +2587,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2628,7 +2628,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2669,7 +2669,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2705,7 +2705,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2281
+		start_year = 2280
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2793,7 +2793,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2834,7 +2834,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2875,7 +2875,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2911,7 +2911,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -2999,7 +2999,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3038,7 +3038,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2277
+		start_year = 2276
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3077,7 +3077,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3118,7 +3118,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2279
+		start_year = 2278
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3165,7 +3165,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3201,7 +3201,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2281
+		start_year = 2280
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3438,7 +3438,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2276
+		start_year = 2275
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3477,7 +3477,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2278
+		start_year = 2277
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3516,7 +3516,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2280
+		start_year = 2279
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3
@@ -3555,7 +3555,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 2282
+		start_year = 2281
 		xp_research_type = navy
 		xp_boost_cost = 25
 		xp_research_bonus = 0.3

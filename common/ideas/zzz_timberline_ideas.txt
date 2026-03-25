@@ -4,32 +4,33 @@ ideas = {
 			picture = TIM_patch_scouting_heritage
 			removal_cost = -1
 			modifier = {
-				attrition = -0.10
-				recon_factor = 0.10
-				special_forces_cap = 0.1
-				special_forces_attack_factor = 0.1
-				special_forces_defence_factor = 0.1
-				special_forces_min = 60 #special_forces_cap = 0.15
-				required_garrison_factor = -0.25
-                resistance_damage_to_garrison = -0.25
-				people_acceptance = 15
-				exodus_national_appeal = 0.25
+				attrition = -0.2
+				recon_factor = 0.2
+				special_forces_cap = 0.2
+				special_forces_attack_factor = 0.2
+				special_forces_defence_factor = 0.2
+				special_forces_min = 120 #special_forces_cap = 0.15
+				required_garrison_factor = -0.5
+                resistance_damage_to_garrison = -0.5
+				people_acceptance = 30
+				exodus_national_appeal = 0.5
 			}
 		}
 		TIM_leave_no_trace = {
 			picture = TIM_patch_forestry
 			removal_cost = -1
 			modifier = {
-				local_resources_factor = 0.2
-				min_export = -0.1
-				production_lack_of_resource_penalty_factor = -0.1
-				country_resource_metal = 10
-				country_resource_water = 10
+				cas_damage_reduction = 0.5
+				local_resources_factor = 0.4
+				min_export = -0.2
+				production_lack_of_resource_penalty_factor = -0.2
+				country_resource_metal = 20
+				country_resource_water = 20
 			}
 			research_bonus = {
-				robotics_tech_category = -0.5
-				energy_weaponry_tech_category = -0.5
-				power_armor_tech_category = -0.5
+				robotics_tech_category = -1
+				energy_weaponry_tech_category = -1
+				power_armor_tech_category = -1
 			}
 		}
 	}

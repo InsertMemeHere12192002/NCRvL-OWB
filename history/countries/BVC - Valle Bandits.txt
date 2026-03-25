@@ -69,6 +69,19 @@ set_popularities = {
 	ruler = 100
 }
 
+add_offsite_building = {
+    type = industrial_complex
+	level = 10
+}
+add_offsite_building = {
+    type = arms_factory
+	level = 10
+}
+add_offsite_building = {
+    type = dockyard
+	level = 10
+}
+
 set_country_flag = is_north_mexican_nation
 
 set_country_flag = no_generic_chief

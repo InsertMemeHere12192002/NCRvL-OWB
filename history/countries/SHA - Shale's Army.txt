@@ -109,6 +109,14 @@ add_ideas = {
 	mutant_wages_law
 	normies_law_none
 }
+add_timed_idea = {
+    idea = attis_manpower_penalty
+    days = 2191
+}
+add_timed_idea = {
+    idea = attis_industry_penalty
+    days = 1461
+}
 
 set_truce = {
 	target = TBH
@@ -135,9 +143,7 @@ recruit_character = SHA_battlemasta
 recruit_character = SHA_thumbface
 recruit_character = SHA_calix
 recruit_character = SHA_calix_normal
-
 recruit_character = SHA_lieutenant_crusher
-
 
 random_character = {
 	limit = {

@@ -1,7 +1,7 @@
 ideas = {
 	country = {
         cwb_luddite_crusade = {
-            picture = cwb_luddite_crusade
+            picture = apocalypse_now
             allowed = {
                 original_tag = CWB
             }

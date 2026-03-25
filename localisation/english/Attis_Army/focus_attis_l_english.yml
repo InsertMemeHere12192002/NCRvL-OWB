@@ -263,7 +263,7 @@
   imo_improved_shielding:0 "Improved Shielding"
   imo_improved_shielding_desc:0 "More plates! More! More! MORE!"
 
-  imo_slimmed_chasis:0 "Slimmed Chasis"
+  imo_slimmed_chasis:0 "Slimmed Chassis"
   imo_slimmed_chasis_desc:0 "Just a few plates is good too though. Don't want to go too slow."
 
   imo_ach_tbh_puppet:0 "A Fun Challenge"
@@ -423,7 +423,7 @@
   shale_calix_new_ideas:0 "Open The Alamo"
   shale_calix_new_ideas_desc:0 "San Antonio has many underground bunkers the mutants were unable to crack open. With CALIX's hacking skills that shouldn't be an issue."
   
-  shale_calix_new_beginning:0 "500 More Miles of Ciruits"
+  shale_calix_new_beginning:0 "500 More Miles of Circuits"
   shale_calix_new_beginning_desc:0 "Unlike silly humans, CALIX can always grow smarter and more powerful."
 
   shale_calix_new_eco:0 "Adding Brackets"
