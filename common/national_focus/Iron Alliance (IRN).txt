@@ -1,0 +1,2201 @@
+﻿###############################################################################
+###                Shared Colorado Focus Tree                                 ###
+### by Zusk                                                                    ###
+### Ciphers by Iron                                                            ###
+### Sleepers by Silver                                                         ###
+###############################################################################
+### IRN-only trimmed version
+focus_tree = {
+	id = colorado_nf
+	country = {
+		base = 0
+		modifier = {
+			OR = {
+				original_tag = IRN
+			}
+			add = 50
+		}
+	}
+	default = no
+	focus = {
+		id = colorado_1
+		icon = {
+			value = GFX_goal_colorado_flag
+		}
+		dynamic = yes
+		cost = 7
+		x = 11
+		y = 1
+		completion_reward = {
+			country_event = nf_raider.0
+		}
+	}
+	focus = {
+		id = colorado_2
+		icon = {
+			value = GFX_goal_colorado_climbing
+		}
+		dynamic = yes
+		cost = 7
+		prerequisite = {
+			focus = colorado_1
+		}
+		relative_position_id = colorado_1
+		x = 0
+		y = 1
+		completion_reward = {
+			country_event = nf_raider.1
+		}
+	}
+	focus = {
+		id = colorado_3
+		icon = {
+			value = GFX_goal_colorado_rocky_mountain
+		}
+		dynamic = yes
+		cost = 7
+		prerequisite = {
+			focus = colorado_2
+		}
+		relative_position_id = colorado_2
+		x = 0
+		y = 1
+		completion_reward = {
+			country_event = nf_raider.2
+			set_country_flag = unlocked_all_available_generic_focus_branches
+		}
+	}
+	#Iron Alliance
+	#5.1: Zusk.
+	focus = {
+		id = irn_focus
+		icon = GFX_KHA_focus_camp_workshops
+		cost = 60
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = colorado_3
+		}
+		allow_branch = {
+			original_tag = IRN
+		}
+		relative_position_id = colorado_3
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_political_power = 100
+			IRN_bulleteater = {
+				add_attack = 1
+			}
+			add_manpower = 500
+			add_ideas = slave_labour1
+		}
+	}
+	focus = {
+		id = irn_plaguelands_1
+		icon = GFX_goal_brahmin_cart
+		cost = 60
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = irn_focus
+		}
+		relative_position_id = irn_focus
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				modifier = oro_they_want_to_attack_us
+				target = DED
+			}
+			custom_effect_tooltip = bth_add_field_medics_tt
+			hidden_effect = {
+				set_technology = {
+					khan_field_medics_tech = 1
+					popup = no
+				}
+			}
+		}
+	}
+	focus = {
+		id = irn_plaguelands_2
+		icon = GFX_goal_generics_vault_tec_equipment
+		cost = 60
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = irn_plaguelands_1
+		}
+		relative_position_id = irn_plaguelands_1
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 100
+			}
+			add_caps = yes
+			TLR = {
+				set_temp_variable = {
+					caps_to_add = 100
+				}
+				add_caps = yes
+			}
+			custom_effect_tooltip = oregon_cannibal_new_line
+			add_opinion_modifier = {
+				modifier = oro_eagle_rock_deal
+				target = TLR
+			}
+			TLR = {
+				add_opinion_modifier = {
+					modifier = oro_eagle_rock_deal
+					target = IRN
+				}
+			}
+			IRN_bulleteater = {
+				add_planning = 1
+			}
+		}
+	}
+	focus = {
+		id = irn_new_sterling_1
+		icon = GFX_goal_max_signs_of_battle
+		cost = 60
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = irn_focus
+		}
+		relative_position_id = irn_focus
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			430 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { development_to_add = 1 }
+				add_development_to_node = yes
+			}
+		}
+	}
+	focus = {
+		id = irn_new_sterling_2
+		icon = GFX_goal_generic_power_armour_raider_3
+		cost = 60
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = irn_new_sterling_1
+		}
+		relative_position_id = irn_new_sterling_1
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_stability = 0.05
+			430 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_temp_variable = { development_to_add = 1 }
+				add_development_to_node = yes
+			}
+			IRN_bulleteater = {
+				add_defense = 1
+			}
+		}
+	}
+	focus = {
+		id = irn_houndlands_1
+		icon = GFX_bares_his_teeth
+		cost = 60
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = irn_focus
+		}
+		relative_position_id = irn_focus
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+				modifier = oro_they_want_to_attack_us
+				target = LUM
+			}
+			add_opinion_modifier = {
+				modifier = oro_they_want_to_attack_us
+				target = BAG
+			}
+			add_opinion_modifier = {
+				modifier = oro_they_want_to_attack_us
+				target = WHD
+			}
+			add_opinion_modifier = {
+				modifier = oro_they_want_to_attack_us
+				target = HAN
+			}
+			add_war_support = 0.05
+			add_manpower = 500
+		}
+	}
+	focus = {
+		id = irn_houndlands_2
+		icon = GFX_goal_BAG_Coleridge
+		cost = 60
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = irn_houndlands_1
+		}
+		relative_position_id = irn_houndlands_1
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 200
+				producer = BAG
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 200
+				producer = NCR
+			}
+			custom_effect_tooltip = oregon_cannibal_new_line
+			set_temp_variable = {
+				caps_to_add = 100
+			}
+			add_caps = yes
+			BAG = {
+				set_temp_variable = {
+					caps_to_add = 100
+				}
+				add_caps = yes
+			}
+			IRN_bulleteater = {
+				add_planning = 1
+			}
+		}
+	}
+	focus = {
+		id = irn_livewires_1
+		icon = GFX_goal_TTM_Cyborg
+		cost = 60
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = irn_focus
+		}
+		relative_position_id = irn_focus
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_equipment_to_stockpile = {
+				type = ballistic_equipment_1
+				amount = 200
+				producer = USA
+			}
+		}
+	}
+	focus = {
+		id = irn_livewires_2
+		icon = GFX_goal_TTM_3
+		cost = 60
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = irn_livewires_1
+		}
+		relative_position_id = irn_livewires_1
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			IRN_bulleteater = {
+				add_logistics = 1
+			}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_resource = {
+					type = metal
+					amount = 10
+				}
+			}
+		}
+	}
+	focus = {
+		id = irn_deal_with_new_epsilon
+		icon = GFX_goal_bos_flag_bmw
+		cost = 60
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = irn_focus
+		}
+		prerequisite = {
+			focus = irn_livewires_2
+		}
+		relative_position_id = irn_livewires_2
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = power_armor_tech_category
+				ahead_reduction = 1
+			}
+			set_temp_variable = {
+				caps_to_add = 100
+			}
+			add_ideas = raider_power_armour_familiarity
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = irn_blackrock_federation
+		icon = GFX_goal_focus_battery_mesa_verde
+		cost = 60
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = irn_deal_with_new_epsilon
+		}
+		relative_position_id = irn_deal_with_new_epsilon
+		will_lead_to_war_with = BLC
+		will_lead_to_war_with = GLW
+		completion_reward = {
+			BLC = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			create_wargoal = {
+				type = annex_everything
+				target = GLW
+			}
+			add_war_support = 0.10
+		}
+		#Wait for LAC to border us if we have legion influence, 50/50 on if we join either if so.
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_country_leader_with_trait = legion_influence
+				LAC = {
+					exists = yes
+					NOT = {
+						is_neighbor_of = IRN
+					}
+					has_active_mission = lanius_countdown_dog_city
+				}
+			}
+		}
+	}
+	focus = {
+		id = irn_powderkeg
+		icon = GFX_goal_focus_powderkeg
+		cost = 60 #Kind of long because its not timegated for the player
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = irn_new_sterling_2
+		}
+		prerequisite = {
+			focus = irn_houndlands_2
+		}
+		available = {
+			#Players really dislike date triggers.
+			if = {
+				limit = {
+					IRN = {
+						is_ai = yes
+					}
+				}
+				date > 2276.1.1
+			}
+			has_army_manpower = {
+				size > 2999
+			}
+		}
+		relative_position_id = irn_new_sterling_2
+		#Instead of timegating this for the player, just make the AI do it when they should.
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 1000
+				# The AI will take this action if:
+				# - The current date is after January 1, 2281
+				# OR
+				# - The date is after January 1, 2278 *and* at least 2 Houndlands nations are dead,
+				#     unless Lanius (LAC) borders the country, in which case the 2278 timegate is ignored.
+				OR = {
+					date > 2281.1.1
+					AND = {
+						# If Lanius borders us, skip the 2278 date requirement
+						OR = {
+							date > 2278.1.1
+							is_neighbor_of = LAC
+						}
+						# Count how many Houndlands countries are dead (must be at least 2)
+						count_triggers = {
+							amount = 2
+							NOT = { country_exists = BAG }  # Baggers
+							NOT = { country_exists = LUM }  # Luminous Ones
+							NOT = { country_exists = WHD }  # Withered Dogs
+						}
+					}
+				}
+			}
+			#Don't do this until HAN/WDN are dealt with!
+			modifier = {
+				factor = 0
+				OR = {
+					country_exists = HAN
+					country_exists = WDN
+				}
+			}
+		}
+		#GLW purposefully excluded from this wargoal, they are just kind of chill ghouls.
+		completion_reward = {
+			custom_effect_tooltip = irn_powderkeg_tt
+			#'every country' + limit doesn't work with countries that don't exist, have to scope to individual countries here.
+			#Base idea with this is that this region gets messy, lets ensure that wars happen and limit border gore.
+			hidden_effect = {
+				BLC = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				BCR = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				YMP = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				PNT = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				TTM = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				TOB = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				ORO = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				GLW = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				WHD = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				LUM = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+				BAG = {
+					set_variable = { dont_return_stolen_territory@IRN = 1 }
+				}
+			}
+		}
+	}
+	focus = {
+		id = irn_help_the_legion
+		icon = GFX_goal_CES_blacksmith
+		cost = 60
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = irn_houndlands_2
+		}
+		prerequisite = {
+			focus = irn_focus
+		}
+		relative_position_id = irn_houndlands_2
+		available = {
+			LAC = {
+				has_completed_focus = lac_hire_iron_alliance
+			}
+			has_country_leader_with_trait = legion_influence
+			at_peace_with_caesars_legion = yes
+		}
+		ai_will_do = {
+			base = 100
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = CES
+						is_in_faction_with = CES
+					}
+				}
+				add_equipment_to_stockpile = {
+					type = infantry_equipment_1
+					amount = 100
+					producer = IRN
+				}
+			}
+			custom_effect_tooltip = oregon_cannibal_new_line
+			add_opinion_modifier = {
+				modifier = oro_eagle_rock_deal
+				target = CES
+			}
+			add_opinion_modifier = {
+				modifier = oro_eagle_rock_deal
+				target = LAC
+			}
+			CES = {
+				add_opinion_modifier = {
+					modifier = oro_eagle_rock_deal
+					target = IRN
+				}
+			}
+			LAC = {
+				add_opinion_modifier = {
+					modifier = oro_eagle_rock_deal
+					target = IRN
+				}
+			}
+		}
+	}
+	focus = {
+		id = irn_iron_legion
+		icon = GFX_goal_TTM_Legion_Diplomacy
+		cost = 60
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = irn_help_the_legion
+		}
+		relative_position_id = irn_help_the_legion
+		available = {
+			WHD = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			BAG = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LUM = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			NOT = {
+				has_country_leader_with_trait = isolationist
+			}
+			has_country_leader_with_trait = legion_influence
+			or = {
+				borders_caesars_legion = yes
+				borders_lanius_horde = yes
+			}
+			is_subject = no
+			is_in_faction = no
+			at_peace_with_caesars_legion = yes
+		}
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				OR = {
+					country_exists = HAN
+					country_exists = WDN
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					LAC = {
+						has_completed_focus = lac_triumphant_campaign
+						is_faction_leader = yes
+					}
+				}
+				ask_to_join_lanius_horde = yes
+			}
+			else = {
+				ask_to_join_caesars_legion = yes
+			}
+		}
+	}
+	focus = {
+		id = irn_platte_trade_league
+		icon = GFX_goal_generic_contraptions_girl
+		cost = 60
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = irn_deal_with_new_epsilon
+		}
+		relative_position_id = irn_deal_with_new_epsilon
+		will_lead_to_war_with = DRY
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = DRY
+			}
+			add_war_support = 0.10
+		}
+		ai_will_do = {
+			base = 100
+		}
+	}
+	focus = {
+		id = irn_our_own_path
+		icon = GFX_goal_BRK_great_beyond
+		cost = 60
+		x = 0
+		y = 2
+		prerequisite = {
+			focus = irn_plaguelands_2
+		}
+		available = {
+			WHD = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			BAG = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LUM = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			OR = {
+				TTM = {
+					owns_state = 38
+				}
+				NOT = {
+					country_exists = TTM
+				}
+			}
+			ai_has_no_other_wars_or_wargoals = yes
+		}
+		relative_position_id = irn_plaguelands_2
+		will_lead_to_war_with = TOB
+		will_lead_to_war_with = TTM
+		completion_reward = {
+			TOB = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			if = {
+				limit = {
+					38 = {
+						is_owned_by = TTM
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TTM
+				}
+			}
+		}
+	}
+	#################
+	### Left Side ###
+	#################
+	focus = {
+		id = colorado_left_opener
+		icon = GFX_goal_colorado_plateau
+		cost = 30
+		prerequisite = {
+			focus = colorado_3
+		}
+		relative_position_id = colorado_3
+		x = -7
+		y = 1
+		offset = {
+			x = -2
+			trigger = {
+				original_tag = IRN
+			}
+		}
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_ideas = colorado_resources
+		}
+	}
+	focus = {
+		id = colorado_caps_1
+		icon = GFX_goal_colorado_nuka
+		cost = 30
+		prerequisite = {
+			focus = colorado_left_opener
+		}
+		relative_position_id = colorado_left_opener
+		x = -3
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 50
+			}
+			add_caps = yes
+			add_political_power = 100
+		}
+	}
+	focus = {
+		id = colorado_manpower
+		icon = GFX_goal_TTM_cooking_Vault_Girl
+		cost = 30
+		prerequisite = {
+			focus = colorado_caps_1
+		}
+		relative_position_id = colorado_caps_1
+		x = 1
+		y = 1
+		completion_reward = {
+			add_manpower = 1500
+		}
+	}
+	focus = {
+		id = colorado_manpower_dos
+		icon = GFX_goal_TTM_sneaking_Vault_Girl
+		cost = 30
+		prerequisite = {
+			focus = colorado_caps_1
+		}
+		relative_position_id = colorado_caps_1
+		x = -1
+		y = 1
+		completion_reward = {
+			add_command_power = 40
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.5
+				uses = 2
+				category = support_non_combat_tech_category
+			}
+		}
+	}
+	focus = {
+		id = colorado_caps_2
+		icon = GFX_goal_generic_nuka_girl
+		cost = 30
+		prerequisite = {
+			focus = colorado_manpower_dos
+		}
+		relative_position_id = colorado_manpower_dos
+		x = 0
+		y = 1
+		completion_reward = {
+			set_temp_variable = {
+				caps_to_add = 250
+			}
+			add_caps = yes
+		}
+	}
+	focus = {
+		id = colorado_industrial_power
+		icon = GFX_goal_TTM_Tribal_Vault_Girl
+		cost = 30
+		prerequisite = {
+			focus = colorado_manpower
+		}
+		relative_position_id = colorado_manpower
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.5
+				uses = 1
+				category = extraction_category
+			}
+		}
+	}
+	focus = {
+		id = colorado_waterways
+		icon = GFX_goal_colorado_pure_water
+		cost = 30
+		prerequisite = {
+			focus = colorado_left_opener
+		}
+		relative_position_id = colorado_left_opener
+		x = 0
+		y = 1
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+			}
+		}
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = water
+					amount = 8
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_factory_1
+		icon = GFX_goal_TTM_Recycling
+		cost = 30
+		prerequisite = {
+			focus = colorado_waterways
+			focus = colorado_caps_1
+			focus = colorado_escapes
+		}
+		relative_position_id = colorado_left_opener
+		x = 0
+		y = 2
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_valid_state_for_2_civilian_factories = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_plants
+		icon = GFX_goal_TTM_Fruit
+		cost = 30
+		prerequisite = {
+			focus = colorado_factory_1
+		}
+		relative_position_id = colorado_factory_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.75
+				uses = 1
+				category = agriculture_tech
+			}
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_civilian_factory = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_escapes
+		icon = GFX_goal_colorado_refugees
+		cost = 30
+		prerequisite = {
+			focus = colorado_left_opener
+		}
+		relative_position_id = colorado_left_opener
+		x = 3
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = metal
+					amount = 5
+				}
+				add_resource = {
+					type = circuitry
+					amount = 3
+				}
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.3
+				uses = 1
+				category = industry
+			}
+		}
+	}
+	focus = {
+		id = colorado_power
+		icon = GFX_goal_TIM_patch_energy
+		cost = 30
+		prerequisite = {
+			focus = colorado_escapes
+		}
+		relative_position_id = colorado_escapes
+		x = -1
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_valid_state_for_civilian_factory = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_offsite_building = {
+				type = electricity_generator
+				level = 2
+			}
+		}
+	}
+	focus = {
+		id = colorado_tools
+		icon = GFX_goal_TIM_patch_geocaching
+		cost = 30
+		prerequisite = {
+			focus = colorado_escapes
+		}
+		relative_position_id = colorado_escapes
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.3
+				uses = 2
+				category = tool_tech
+			}
+			add_offsite_building = {
+				type = metal_generator
+				level = 2
+			}
+		}
+	}
+	focus = {
+		id = colorado_comp
+		icon = GFX_goal_TIM_patch_climbing
+		cost = 30
+		prerequisite = {
+			focus = colorado_power
+		}
+		relative_position_id = colorado_power
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = composites
+					amount = 3
+				}
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.5
+				ahead_reduction = 1
+				uses = 1
+				category = building_tech
+			}
+		}
+	}
+	focus = {
+		id = colorado_electronics
+		icon = GFX_goal_TIM_patch_medicine
+		cost = 30
+		prerequisite = {
+			focus = colorado_tools
+		}
+		relative_position_id = colorado_tools
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = advanced
+					amount = 3
+				}
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.75
+				ahead_reduction = 1
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+	focus = {
+		id = colorado_research
+		icon = GFX_goal_colorado_secrets
+		cost = 30
+		prerequisite = {
+			focus = colorado_plants
+		}
+		prerequisite = {
+			focus = colorado_caps_2
+			focus = colorado_industrial_power
+		}
+		prerequisite = {
+			focus = colorado_comp
+			focus = colorado_electronics
+		}
+		relative_position_id = colorado_plants
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.15
+			swap_ideas = {
+				remove_idea = colorado_resources
+				add_idea = colorado_resources_upgrade
+			}
+			add_ideas = caps_raider_nf_idea_2
+
+		}
+	}
+	#####################
+	### Research Side ###
+	#####################
+	focus = {
+		id = colorado_research_1
+		icon = GFX_goal_colorado_farming
+		cost = 30
+		prerequisite = {
+			focus = colorado_3
+		}
+		relative_position_id = colorado_left_opener
+		x = -7
+		y = 0
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = water
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_research_mutual_1
+		icon = GFX_goal_generic_water
+		cost = 30
+		prerequisite = {
+			focus = colorado_research_1
+		}
+		mutually_exclusive = {
+			focus = colorado_research_mutual_2
+			focus = colorado_research_mutual_3
+		}
+		relative_position_id = colorado_research_1
+		x = -2
+		y = 1
+		completion_reward = {
+			add_stability = 0.1
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = water
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_research_mutual_2
+		icon = GFX_goal_TIM_patch_composite_materials
+		cost = 30
+		prerequisite = {
+			focus = colorado_research_1
+		}
+		mutually_exclusive = {
+			focus = colorado_research_mutual_1
+			focus = colorado_research_mutual_3
+		}
+		relative_position_id = colorado_research_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = composites
+					amount = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_research_mutual_3
+		icon = GFX_goal_BOS_forbidden_weapons
+		cost = 30
+		prerequisite = {
+			focus = colorado_research_1
+		}
+		mutually_exclusive = {
+			focus = colorado_research_mutual_2
+			focus = colorado_research_mutual_1
+		}
+		relative_position_id = colorado_research_1
+		x = 2
+		y = 1
+		completion_reward = {
+			add_war_support = 0.1
+			random_owned_state = {
+				limit = {
+					is_impassable = no
+				}
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_support_tech
+		icon = GFX_goal_generic_shotgun_double_barrel
+		cost = 30
+		prerequisite = {
+			focus = colorado_research_mutual_1
+			focus = colorado_research_mutual_2
+			focus = colorado_research_mutual_3
+		}
+		relative_position_id = colorado_research_mutual_2
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.2
+				uses = 1
+				category = support_demolitions_tech_category
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.2
+				uses = 1
+				category = support_fireteam_tech_category
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.2
+				uses = 1
+				category = support_anti_tank_tech_category
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.2
+				uses = 1
+				category = support_anti_air_tech_category
+			}
+		}
+	}
+	focus = {
+		id = colorado_research_slot_uwu
+		icon = GFX_goal_colorado_hillbilly_science
+		cost = 30
+		prerequisite = {
+			focus = colorado_support_tech
+		}
+		prerequisite = {
+			focus = colorado_vehicle_tech
+		}
+		relative_position_id = colorado_support_tech
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 1
+				uses = 1
+				category = industry
+			}
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 1
+				uses = 1
+				category = extraction_category
+			}
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = colorado_vehicle_tech
+		icon = GFX_goal_generic_nice_car
+		cost = 30
+		prerequisite = {
+			focus = colorado_research_mutual_1
+			focus = colorado_research_mutual_2
+			focus = colorado_research_mutual_3
+		}
+		relative_position_id = colorado_research_mutual_2
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 0.6
+				uses = 1
+				category = vehicle_tech_category
+			}
+		}
+	}
+	#focus = {
+	#	id = colorado_vault_9
+	#	icon = GFX_goal_vault_9
+	#	cost = 30
+	#	allow_branch = {
+	#		OR = {
+	#			original_tag = SIE
+	#			original_tag = PRO
+	#			original_tag = WYR
+	#		}
+	#	}
+	#	available = {
+	#		if = {
+	#			limit = {
+	#				original_tag = SIE
+	#			}
+	#			PRO = {
+	#				exists = no
+	#			}
+	#			WYR = {
+	#				exists = no
+	#			}
+	#		}
+	#		else_if = {
+	#			limit = {
+	#				original_tag = PRO
+	#			}
+	#			SIE = {
+	#				exists = no
+	#			}
+	#			WYR = {
+	#				exists = no
+	#			}
+	#		}
+	#		else_if = {
+	#			limit = {
+	#				original_tag = WYR
+	#			}
+	#			SIE = {
+	#				exists = no
+	#			}
+	#			PRO = {
+	#				exists = no
+	#			}
+	#		}
+	#	}
+	#	prerequisite = {
+	#		focus = colorado_research_slot_uwu
+	#	}
+	#	relative_position_id = colorado_research_slot_uwu
+	#	x = 0
+	#	y = 1
+	#	completion_reward = {
+	#		country_event = nf_wyr.2
+	#	}
+	#}
+	##################
+	### Right Side ###
+	##################
+	focus = {
+		id = colorado_right_opener
+		icon = GFX_goal_colorado_flaming
+		cost = 30
+		prerequisite = {
+			focus = colorado_3
+		}
+		relative_position_id = colorado_3
+		x = 6
+		y = 1
+		offset = {
+			x = 1
+			trigger = {
+				original_tag = IRN
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_tech_bonus = {
+				name = wyoming_assymetry
+				bonus = 1
+				uses = 1
+				category = cat_land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = colorado_army_exp
+		icon = GFX_goal_generic_holy_shit_its_wendigos
+		cost = 30
+		prerequisite = {
+			focus = colorado_right_opener
+		}
+		relative_position_id = colorado_right_opener
+		x = -2
+		y = 1
+		completion_reward = {
+			army_experience = 50
+		}
+	}
+	focus = {
+		id = colorado_war_support
+		icon = GFX_goal_poseidon_poster
+		cost = 30
+		prerequisite = {
+			focus = colorado_right_opener
+		}
+		relative_position_id = colorado_right_opener
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.05
+			random_unit_leader = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_attack = 1
+				add_defense = 1
+			}
+		}
+	}
+	focus = {
+		id = colorado_planning
+		icon = GFX_KHA_focus_planning
+		cost = 30
+		prerequisite = {
+			focus = colorado_war_support
+		}
+		relative_position_id = colorado_war_support
+		x = 0
+		y = 1
+		completion_reward = {
+			army_experience = 10
+			random_unit_leader = {
+				limit = {
+					is_army_leader = yes
+				}
+				add_planning = 2
+				add_logistics = 2
+			}
+		}
+	}
+	focus = {
+		id = colorado_right_assymmetry
+		icon = GFX_goal_tribal_generic
+		cost = 30
+		prerequisite = {
+			focus = colorado_right_opener
+		}
+		relative_position_id = colorado_right_opener
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = wyoming_assymetry
+				bonus = 0.3
+				uses = 2
+				category = cat_land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = colorado_arms_fact_1
+		icon = GFX_goal_GDH_golden_gun
+		cost = 30
+		available = {
+			any_owned_state = {
+				is_capital = no
+				is_impassable = no
+			}
+		}
+		prerequisite = {
+			focus = colorado_army_exp
+		}
+		relative_position_id = colorado_army_exp
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_arms_fact_2
+		icon = GFX_goal_wyoming_arms_fact_2
+		cost = 30
+		available = {
+			any_owned_state = {
+				is_capital = no
+				is_impassable = no
+			}
+		}
+		prerequisite = {
+			focus = colorado_right_assymmetry
+		}
+		relative_position_id = colorado_right_assymmetry
+		x = 0
+		y = 1
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					NOT = {
+						is_capital = yes
+					}
+					is_valid_state_for_2_arms_factories = yes
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_big_iron
+		icon = GFX_goal_colorado_gun_and_guy
+		cost = 30
+		prerequisite = {
+			focus = colorado_planning
+		}
+		relative_position_id = colorado_planning
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = tech_bonus_tree_tt
+				bonus = 1
+				uses = 1
+				ahead_reduction = 1
+				category = infantry_weapons_tech_category
+			}
+		}
+	}
+	focus = {
+		id = colorado_homeland_idea
+		icon = GFX_goal_NCR_Aradeshfort
+		cost = 30
+		prerequisite = {
+			focus = colorado_planning
+		}
+		relative_position_id = colorado_planning
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = colorado_homeland_doctrine
+		}
+	}
+	focus = {
+		id = colorado_cute_idea
+		icon = GFX_goal_colorado_friendly_cowboy
+		cost = 30
+		prerequisite = {
+			focus = colorado_homeland_idea
+		}
+		relative_position_id = colorado_homeland_idea
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = colorado_defense
+		}
+	}
+	focus = {
+		id = colorado_training_idea
+		icon = GFX_goal_commie_soldier
+		cost = 30
+		prerequisite = {
+			focus = colorado_planning
+		}
+		relative_position_id = colorado_planning
+		x = 2
+		y = 1
+		completion_reward = {
+			add_ideas = colorado_training
+		}
+	}
+	focus = {
+		id = colorado_expansion_idea
+		icon = GFX_goal_colorado_beyond_fence
+		cost = 30
+		prerequisite = {
+			focus = colorado_training_idea
+		}
+		relative_position_id = colorado_training_idea
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = colorado_expansion_doctrine
+		}
+	}
+	focus = {
+		id = colorado_idea_coalesce
+		icon = GFX_goal_colorado_welcome
+		cost = 30
+		prerequisite = {
+			focus = colorado_cute_idea
+		}
+		prerequisite = {
+			focus = colorado_expansion_idea
+		}
+		relative_position_id = colorado_planning
+		x = 0
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = wyoming_idea_tt
+			hidden_effect = {
+				remove_ideas = colorado_homeland_doctrine
+				remove_ideas = colorado_defense
+				remove_ideas = colorado_expansion_doctrine
+				remove_ideas = colorado_training
+				add_ideas = colorado_idea_coalescence
+			}
+		}
+	}
+	#########################
+	## 'Sightseeing' Branch #
+	#########################
+	focus = {
+		id = colorado_sightseeing
+		icon = GFX_goal_colorado_post_card
+		cost = 30
+		prerequisite = {
+			focus = colorado_3
+		}
+		relative_position_id = colorado_right_opener
+		x = 16
+		y = 0
+		completion_reward = {
+			add_ideas = colorado_sightseers_idea
+		}
+	}
+	focus = {
+		id = colorado_boulder_dome
+		icon = GFX_goal_generic_boulder_dome
+		cost = 30
+		available = {
+			has_political_power > 25
+			owns_state = 568
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = -1
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			568 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 6
+				add_resource = {
+					type = advanced
+					amount = 4
+				}
+				add_resource = {
+					type = composites
+					amount = 6
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_paradise
+		icon = GFX_goal_TTM_Nursery
+		cost = 30
+		available = {
+			has_political_power > 25
+			owns_state = 38
+			NOT = {
+				country_exists = TTM
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = -5
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			38 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 6
+				add_resource = {
+					type = water
+					amount = 8
+				}
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_vault_29
+		icon = GFX_goal_TTM_Vault_29
+		cost = 30
+		available = {
+			has_political_power > 50
+			TTM = {
+				exists = no
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = -4
+		y = 1
+		completion_reward = {
+			add_political_power = -50
+			554 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = water
+					amount = 4
+				}
+				add_resource = {
+					type = advanced
+					amount = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_the_big_top
+		icon = GFX_goal_TTM_BLC_Flag
+		cost = 30
+		available = {
+			has_political_power > 25
+			owns_state = 572
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = -3
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			572 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 6
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+				add_resource = {
+					type = advanced
+					amount = 6
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_ouroboros
+		icon = GFX_goal_ORO_Pyramid
+		cost = 30
+		available = {
+			has_political_power > 25
+			owns_state = 90
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 3
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			90 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 6
+				add_resource = {
+					type = composites
+					amount = 4
+				}
+				add_resource = {
+					type = advanced
+					amount = 6
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_circle_junction
+		icon = GFX_goal_hvr_holy_tithings
+		cost = 30
+		available = {
+			has_political_power > 50
+			INR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = -6
+		y = 1
+		completion_reward = {
+			add_political_power = -50
+			630 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = metal
+					amount = 6
+				}
+				add_resource = {
+					type = water
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_denver
+		icon = GFX_han_generic
+		cost = 30
+		available = {
+			has_political_power > 150
+			HAN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = -150
+			525 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 10
+				add_resource = {
+					type = advanced
+					amount = 4
+				}
+				add_resource = {
+					type = energy
+					amount = 10
+				}
+				IRN = {
+					add_tech_bonus = {
+						category = support_dog_tech_category
+						bonus = 0.5
+						uses = 2
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_vault_0
+		icon = GFX_goal_max_signs_of_battle
+		cost = 30
+		available = {
+			has_political_power > 25
+			owns_state = 1032
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 1
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			1032 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 6
+				add_resource = {
+					type = advanced
+					amount = 4
+				}
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_senator_petersons_bunker
+		icon = GFX_goal_max_site_b
+		cost = 30
+		available = {
+			has_political_power > 50
+			MXC = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 2
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						412 = {
+							is_core_of = OWNER
+						}
+					}
+				}
+				add_political_power = -50
+			}
+			412 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = advanced
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_robot_city
+		icon = GFX_partytime
+		cost = 30
+		available = {
+			has_political_power > 50
+			ROB = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = -2
+		y = 1
+		completion_reward = {
+			add_political_power = -50
+			524 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+				add_resource = {
+					type = water
+					amount = 6
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_mesa_verde
+		icon = GFX_goal_cip_series
+		cost = 30
+		available = {
+						has_political_power > 50
+
+			NAV = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 4
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						636 = {
+							is_core_of = OWNER
+						}
+					}
+				}
+				add_political_power = -50
+			}
+			636 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = advanced
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_new_sterling
+		icon = GFX_goal_generic_power_armour_raider_3
+		cost = 30
+		available = {
+			has_political_power > 25
+			owns_state = 430
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 5
+		y = 2
+		completion_reward = {
+			add_political_power = -25
+			430 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 6
+				add_resource = {
+					type = composites
+					amount = 4
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_broke_wheel
+		icon = GFX_goal_PLS_Sun_Dogs
+		cost = 30
+		available = {
+						has_political_power > 50
+
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		prerequisite = {
+			focus = colorado_sightseeing
+		}
+		relative_position_id = colorado_sightseeing
+		x = 6
+		y = 1
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						366 = {
+							is_core_of = OWNER
+						}
+					}
+				}
+				add_political_power = -50
+			}
+			366 = {
+				if = {
+					limit = {
+						NOT = {
+							is_core_of = OWNER
+						}
+					}
+					add_core_of = OWNER
+				}
+				add_extra_state_shared_building_slots = 4
+				add_resource = {
+					type = metal
+					amount = 4
+				}
+			}
+		}
+	}
+	focus = {
+		id = colorado_seen_all_sights
+		icon = GFX_goal_colorado_colorado_state
+		cost = 30
+		prerequisite = { focus = colorado_paradise }
+		prerequisite = { focus = colorado_the_big_top }
+		prerequisite = { focus = colorado_boulder_dome }
+		prerequisite = { focus = colorado_vault_0 }
+		prerequisite = { focus = colorado_ouroboros }
+		prerequisite = { focus = colorado_new_sterling }
+		relative_position_id = colorado_sightseeing
+		x = 0
+		y = 3
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = colorado_sightseers_idea
+				add_idea = colorado_sightseers_idea_2
+			}
+			add_ideas = raider_new_age_weaponry
+		}
+	}
+	shared_focus = doped_soldiers
+	shared_focus = new_leadership
+}

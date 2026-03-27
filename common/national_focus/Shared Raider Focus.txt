@@ -81,8 +81,20 @@ shared_focus = {
 	cost = 50
 	x = 3
 	y = 3
+		offset = {
+		y = 5
+		x = 31
+		trigger = {
+			original_tag = IRN
+		}
+	}
 	available = {
-		has_country_flag = unlocked_all_available_generic_focus_branches
+		OR = {
+			has_country_flag = unlocked_all_available_generic_focus_branches
+			IRN = {
+				has_completed_focus = colorado_3
+			}
+		}
 	}
 	available_if_capitulated = yes
 	completion_reward = {
@@ -1412,8 +1424,20 @@ shared_focus = {
 	cost = 50
 	x = 25
 	y = 3
+	offset = {
+		y = 1
+		x = -1
+		trigger = {
+			original_tag = IRN
+		}
+	}
 	available = {
-		has_country_flag = unlocked_all_available_generic_focus_branches
+		OR = {
+			has_country_flag = unlocked_all_available_generic_focus_branches
+			IRN = {
+				has_completed_focus = colorado_3
+			}
+		}
 	}
 	available_if_capitulated = yes
 	completion_reward = {
