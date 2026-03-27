@@ -1,0 +1,30 @@
+state = {
+	id = 217
+	name = "STATE_217"
+	manpower = 8400
+	state_category = city
+
+	resources = {
+		metal = 8
+		water = 1
+		circuitry = 2
+		composites = 1
+	}
+
+	history = {
+		owner = DRY
+		add_core_of = DRY
+		victory_points = {
+			2205 5
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces = {
+		2205 2581 3089 6835 9049 9047 12458 12459
+	}
+}

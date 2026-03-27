@@ -1923,7 +1923,7 @@ technologies = {
 		}
 		on_research_complete_limit = {
 			NOT = {
-				has_template_containing_unit = chariot
+				has_template_containing_unit = chariot_unit
 			}
 		}
 		on_research_complete = {

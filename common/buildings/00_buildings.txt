@@ -38,6 +38,7 @@ arms_factory = {
 		shares_slots = yes
 		state_max = 30
 	}
+
 	show_modifier = yes
 	country_modifiers = {
 		modifiers = {
@@ -252,6 +253,7 @@ mega_gun_emplacement = {
 	#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
 }
 
+
 rocket_site = {
 	hide_if_missing_tech = yes
 	show_on_map = 1
@@ -270,6 +272,52 @@ rocket_site = {
 		exclusive_with = mega_gun_emplacement
 	}
 }
+
+naval_supply_hub = {
+		show_on_map = 1
+		base_cost = 12500
+		icon_frame = 24
+		disabled_in_dmz = yes
+		naval_supply_hub = yes
+		infrastructure_construction_effect = yes
+		only_costal = yes
+		tags = { naval_buildings_tag }
+		building_prerequisite = {
+			building_dependency = {
+				building = naval_base
+				level = 5
+			}
+		}
+		level_cap = {
+			province_max = 1
+		}
+	}
+
+	naval_headquarters = {
+		dlc_allowed = { has_dlc = "No Compromise, No Surrender" }
+		show_on_map = 1
+		base_cost = 10000
+		per_controlled_building_extra_cost = 5000
+		icon_frame = 25
+		value = 1
+		naval_headquarter = yes
+		disabled_in_dmz = yes
+		infrastructure_construction_effect = yes
+		only_costal = yes
+		tags = { naval_buildings_tag }
+		building_prerequisite = {
+			building_dependency = {
+				building = naval_base
+				level = 5
+			}
+		}
+		level_cap = {
+			province_max = 1
+		}
+		modules = {
+			naval_leader_module
+		}
+	}
 
 # Resource Buildings
 metal_generator = {
@@ -363,7 +411,6 @@ circuitry_generator = {
 	}
 }
 }
-
 
 spawn_points = {
 nuclear_reactor_spawn = {

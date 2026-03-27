@@ -38,3 +38,10 @@ NDefines.NMilitary.BASE_COMBAT_WIDTH = 120					-- base combat width
 NDefines.NMilitary.ADDITIONAL_COMBAT_WIDTH = 40	
 
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 40
+
+--Ahead of time penalties
+NDefines.NTechnology.BASE_YEAR_AHEAD_PENALTY_FACTOR = 2.5 --base is 2
+NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.125             -- Veteran stats per xp level
+
+--License Nerf
+NDefines.NProduction.LICENSE_EQUIPMENT_BASE_SPEED = -0.35 -- base speed of licensed production, multiplied by tech and other modifiers

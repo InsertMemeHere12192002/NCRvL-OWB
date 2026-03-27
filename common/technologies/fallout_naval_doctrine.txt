@@ -29,7 +29,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 0 }
 		}
 
@@ -48,6 +48,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -100,7 +104,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 2 }
 		}
 
@@ -119,6 +123,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -149,7 +157,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 4 }
 		}
 
@@ -168,6 +176,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -198,7 +210,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 6 }
 		}
 
@@ -217,6 +229,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -248,7 +264,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 8 }
 		}
 
@@ -267,6 +283,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -299,7 +319,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 10 }
 		}
 
@@ -318,6 +338,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -342,7 +366,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 0 y = 12 }
 		}
 
@@ -361,6 +385,10 @@ technologies = {
 				factor = 2
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -394,7 +422,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 2 }
 		}
 
@@ -426,6 +454,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_medium_hull_tech_category = 1.0
@@ -452,7 +484,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 4 }
 		}
 
@@ -483,6 +515,10 @@ technologies = {
 				NOT = { has_country_flag = concentrated_navy_doctrine_ai }
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -516,7 +552,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 6 }
 		}
 
@@ -548,6 +584,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_medium_hull_tech_category = 1.0
@@ -578,7 +618,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 8 }
 		}
 
@@ -609,6 +649,10 @@ technologies = {
 				NOT = { has_country_flag = concentrated_navy_doctrine_ai }
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -641,7 +685,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 10 }
 		}
 
@@ -673,6 +717,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_medium_hull_tech_category = 1.0
@@ -701,7 +749,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 12 }
 		}
 
@@ -733,6 +781,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_medium_hull_tech_category = 1.0
@@ -761,7 +813,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 14 }
 		}
 
@@ -793,6 +845,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_medium_hull_tech_category = 1.0
@@ -814,7 +870,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = -2 y = 16 }
 		}
 
@@ -846,12 +902,16 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_medium_hull_tech_category = 1.0
 			naval_heavy_hull_tech_category = 1.0
 			naval_carrier_hull_tech_category = 1.0
-			naval_super_carrier_hull_tech_category = 1.0
+			#naval_super_carrier_hull_tech_category = 1.0
 		}
 	}
 
@@ -880,7 +940,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 2 }
 		}
 
@@ -912,6 +972,11 @@ technologies = {
 			}
 		}
 
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_light_hull_tech_category = 1.0
@@ -942,7 +1007,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 4 }
 		}
 
@@ -974,6 +1039,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_light_hull_tech_category = 1.0
@@ -1002,7 +1071,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 6 }
 		}
 
@@ -1034,6 +1103,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_light_hull_tech_category = 1.0
@@ -1064,7 +1137,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 8 }
 		}
 
@@ -1096,6 +1169,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_light_hull_tech_category = 1.0
@@ -1124,7 +1201,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 10 }
 		}
 
@@ -1156,6 +1233,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_light_hull_tech_category = 1.0
@@ -1186,7 +1267,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 12 }
 		}
 
@@ -1217,6 +1298,10 @@ technologies = {
 				NOT = { has_country_flag = dispersed_navy_doctrine_ai }
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
@@ -1249,7 +1334,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 14 }
 		}
 
@@ -1281,6 +1366,10 @@ technologies = {
 			}
 		}
 
+		on_research_complete = {
+       		navy_experience = -50
+    	}
+
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5
 			naval_light_hull_tech_category = 1.0
@@ -1306,7 +1395,7 @@ technologies = {
 		}
 
 		folder = {
-			name = naval_doctrine_folder
+			name = fallout_naval_doctrine_folder
 			position = { x = 2 y = 16 }
 		}
 
@@ -1337,6 +1426,10 @@ technologies = {
 				NOT = { has_country_flag = dispersed_navy_doctrine_ai }
 			}
 		}
+
+		on_research_complete = {
+       		navy_experience = -50
+    	}
 
 		ai_research_weights = {
 			cat_naval_doctrine = -0.5

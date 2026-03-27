@@ -174,30 +174,34 @@ country_event = {
 		name = nf_vault_city.5.a
 		complete_national_focus = vlt_the_election_of_2275
 		clr_country_flag = vlt_selection_has_not_happened
-		if = {
-			limit = {
-				check_variable = { OldGuardParty > CitizenLeague }
-			}
-			country_event = {
-				id = nf_vault_city.6
-			}
+
+		country_event = {
+			id = nf_vault_city.6
 		}
-		else_if = {
-			limit = {
-				check_variable = { OldGuardParty < CitizenLeague }
-			}
-			country_event = {
-				id = nf_vault_city.7
-			}
-		}
-		else_if = {
-			limit = {
-				check_variable = { OldGuardParty = CitizenLeague }
-			}
-			country_event = {
-				id = nf_vault_city.8
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		check_variable = { OldGuardParty > CitizenLeague }
+		# 	}
+		# 	country_event = {
+		# 		id = nf_vault_city.6
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		check_variable = { OldGuardParty < CitizenLeague }
+		# 	}
+		# 	country_event = {
+		# 		id = nf_vault_city.7
+		# 	}
+		# }
+		# else_if = {
+		# 	limit = {
+		# 		check_variable = { OldGuardParty = CitizenLeague }
+		# 	}
+		# 	country_event = {
+		# 		id = nf_vault_city.8
+		# 	}
+		# }
 	}
 }
 

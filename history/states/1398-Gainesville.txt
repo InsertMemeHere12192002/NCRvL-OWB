@@ -1,0 +1,28 @@
+state={
+	id=1398
+	name="STATE_1398"
+	provinces={
+		19710 19714 19716 19721 19725 19728 19731 19734 19738 19740 19742 19743 19744 19745 19746 19748 19749 19750 19752 19753 19754 19755 19756 19727
+	}
+	
+	resources = {
+		water = 7
+	}
+
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19745 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

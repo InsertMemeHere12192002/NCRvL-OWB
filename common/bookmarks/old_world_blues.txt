@@ -34,18 +34,16 @@ bookmarks = {
 				ces_triumph
 			}
 		}
-		"BOS" = {
-			history = "BOS_OWB_DESC"
-			ideology = intellectuals
+		"FBH" = {
+			history = "FBH_OWB_DESC"
+			ideology = elites
 			ideas = {
-				bos_underground_hangars
-				bos_army_confusion_4
-				bos_civilian_distrust
+				fbh_steel_aura
 			}
 			focuses = {
-				bos_nf_learning_from_the_ncr_bos_war
-				bos_nf_taking_back_california
-				bos_nf_purpose_fulfilled
+				fbh_power_rangers
+				fbh_paladin_supremacy
+				fbh_like_us
 			}
 		}
 		"NEW" = {
@@ -113,30 +111,30 @@ bookmarks = {
 		# 		EHT_focus_utah_road_war_second
 		# 	}
 		# }
-		"TVT" = {
+		"NAV" = {
 			minor = yes
-			history = "TVT_OWB_DESC"			#Made last minute for release. Can be changed
-			ideology = people
-			ideas = {
-				tvt_the_people_of_tomorrow
-			}
-			focuses = {
-				tvt_sandmans_stranglehold
-				tvt_opening_up
-				tvt_utopias_reach
-			}
-		}
-		"SOK" = {
-			minor = yes
-			history = "SOK_OWB_DESC"			#Made last minute for release. Can be changed
+			history = "NAV_OWB_DESC"			#Made last minute for release. Can be changed
 			ideology = ruler
 			ideas = {
-				SOK_tis_but_a_scratch
+				CES_nav_loyalty
 			}
 			focuses = {
-				sok_unique
-				sok_sln
-				sok_arr
+				NAV_silversmiths
+				NAV_rainbow_arrows
+				NAV_indian_outlaw
+			}
+		}
+		"IRN" = {
+			minor = yes
+			history = "IRN_OWB_DESC"			#Made last minute for release. Can be changed
+			ideology = ruler
+			ideas = {
+				irn_ironknights
+			}
+			focuses = {
+				irn_new_sterling_1
+				irn_new_sterling_2
+				irn_houndlands_1
 			}
 		}
 		"DES" = {
@@ -152,32 +150,30 @@ bookmarks = {
 				des_vargas_wins
 			}
 		}
-		"TOF" = {
+		"TWO" = {
 			minor = yes
-			history = "TOF_OWB_DESC"
-			ideology = elites
+			history = "TWO_OWB_DESC"
+			ideology = ruler
 			ideas = {
-				TOF_powder_gangers
+				two_worship_of_nas
 			}
 			focuses = {
-				tof_heading_to_jericho
-				tof_city_318
-				tof_the_walls_of_jericho_fell
+				two_sun_caesar_rule
+				two_tombstone_garages
+				two_race_start
 			}
 		}
-		"GRD" = {
+		"GDH" = {
 			minor = yes
-			history = "GRD_OWB_DESC"
-			ideology = intellectuals
+			history = "GDH_OWB_DESC"
+			ideology = ruler
 			ideas = {
-				bunkerblues
-				GRD_worshiping_technology
-				brotherhood_chaotic_conflicts
+				GDH_the_generalismos_arsenal
 			}
 			focuses = {
-				grd_unique
-				grd_tvt_deep_integration
-				grd_guardians_of_the_world_hole
+				gdh_open_for_business
+				gdh_generalissimo
+				gdh_guns_for_guarez
 			}
 		}
 		"MOT" = {
@@ -195,18 +191,17 @@ bookmarks = {
 				mot_the_great_debate
 			}
 		}
-		"MOJ" = {
+		"RES" = {
 			minor = yes
-			history = "MOJ_OWB_DESC"
+			history = "RES_OWB_DESC"
 			ideology = intellectuals
 			ideas = {
-				bunkerblues
-				MOJ_elijah_determination
+				res_ammo_idea
 			}
 			focuses = {
-				MOJ_spears_from_the_sun
-				MOJ_the_mojave_drive_inn
-				moj_the_gala_event
+				res_nuclear_nellie
+				resg_master_of_aeronautics
+				resg_us_pilots
 			}
 		}
 		"EUR" = {

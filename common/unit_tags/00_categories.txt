@@ -2,6 +2,7 @@ sub_unit_categories = {
 	category_army
 	category_front_line
 	category_demolitions
+	category_anti_armor
 	category_fireteams
 	category_robots
 	category_front_line_robots

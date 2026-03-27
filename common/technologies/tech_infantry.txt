@@ -495,6 +495,10 @@ technologies = {
 			hardness = 0.2
 			default_morale = 0.03
 		}
+			heavy_super_mutant_infantry = {
+			hardness = 0.2
+			default_morale = 0.03	
+		}
 
 		path = {
 			leads_to_tech = heavy_infantry_tech_3
@@ -549,6 +553,17 @@ technologies = {
 			}
 		}
 		motorized_heavy_infantry = {
+			soft_attack = 0.05
+			urban = {
+				attack = 0.10
+				defence = 0.10
+			}
+			fort = {
+				attack = 0.10
+				defence = 0.10
+			}
+		}
+				heavy_super_mutant_infantry = {
 			soft_attack = 0.05
 			urban = {
 				attack = 0.10
@@ -668,6 +683,19 @@ technologies = {
 			fort = {
 				attack = 0.10
 				defence = 0.10
+			}
+		}
+
+		heavy_super_mutant_infantry = {
+			breakthrough = 0.05
+			suppression_factor = 0.1
+			river = {
+				attack = 0.10
+				movement = 0.10
+			}
+			amphibious = {
+				attack = 0.10
+				movement = 0.10
 			}
 		}
 
@@ -2115,7 +2143,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2277
+		start_year = 2276
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_2 }
@@ -2187,7 +2215,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2278
+		start_year = 2277
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_3 }
@@ -2254,7 +2282,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2279
+		start_year = 2278
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_4 }
@@ -2318,7 +2346,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2280
+		start_year = 2279
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_5 }
@@ -2390,7 +2418,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2281
+		start_year = 2280
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_6 }
@@ -2457,7 +2485,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2282
+		start_year = 2281
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_7 }
@@ -2519,7 +2547,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2284
+		start_year = 2282
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_9 }
@@ -2567,7 +2595,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2281
+		start_year = 2280
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specopsmiddle y = @Col_6 }
@@ -2616,7 +2644,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2282
+		start_year = 2281
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specopsmiddle y = @Col_7 }
@@ -2750,7 +2778,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2277
+		start_year = 2276
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_2 }
@@ -2805,7 +2833,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2278
+		start_year = 2277
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_3 }
@@ -2886,7 +2914,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2279
+		start_year = 2278
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_4 }
@@ -2937,7 +2965,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2280
+		start_year = 2279
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_5 }
@@ -3000,7 +3028,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2281
+		start_year = 2280
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_6 }
@@ -3049,7 +3077,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2282
+		start_year = 2281
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_7 }
@@ -3112,7 +3140,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2283
+		start_year = 2281
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_8 }
@@ -3170,7 +3198,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2284
+		start_year = 2281
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specopsmiddle y = @Col_8 }
@@ -3219,7 +3247,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2284
+		start_year = 2282
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_9 }
@@ -3277,7 +3305,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2285
+		start_year = 2283
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_power y = @Col_10 }
@@ -3386,7 +3414,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2285
+		start_year = 2283
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specopsmiddle y = @Col_10 }
@@ -3435,7 +3463,7 @@ technologies = {
 		xp_boost_cost = 35
 		xp_research_bonus = 0.3
 
-		start_year = 2286
+		start_year = 2284
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_specops y = @Col_10 }
@@ -3468,14 +3496,10 @@ technologies = {
 	# Horses, Cavalry
 
 	spec_ops_horses_tech = {
-		research_cost = 2.2
-
-		allow = {
-			always = no
-		}
-
+		research_cost = 6.0
 		dependencies = {
-			blocked_tech = 1
+			blocked_unit_tech = 1
+			spec_ops_equipment_tech_1 = 1
 		}
 
 		start_year = 2276
@@ -3791,8 +3815,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			scientific_tech_category
 		}
 
@@ -3825,8 +3847,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			scientific_tech_category
 		}
 
@@ -3862,8 +3882,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			civilized_tech_category
 		}
 
@@ -3891,8 +3909,6 @@ technologies = {
 		}
 
 		categories = {
-			infantry_tech_category
-			power_armor_tech_category
 			civilized_tech_category
 		}
 
@@ -3910,6 +3926,10 @@ technologies = {
 	}
 
 	skater_tech = {
+		research_cost = 5.0
+		dependencies = {
+			blocked_unit_tech = 1
+		}
 		enable_subunits = {
 			skate_infantry
 		}
@@ -3918,9 +3938,6 @@ technologies = {
 			skate_equipment_1
 		}
 
-		dependencies = {
-			blocked_tech = 1
-		}
 		on_research_complete_limit = {
 			NOT = {
 				has_template_containing_unit = skate_infantry
@@ -3933,8 +3950,6 @@ technologies = {
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 
-		research_cost = 2
-		start_year = 2275
 		folder = {
 			name = fallout_infantry_folder
 			position = { x = @Row_melee y = @Col_11 }
@@ -3977,20 +3992,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 
 	# Behemoth
 	super_mutant_behemoth = {
-		research_cost = 1.0
-
-		allow = {
-			always = no
-		}
-
+		research_cost = 6.0
 		dependencies = {
-			blocked_tech = 1
+			blocked_unit_tech = 1
 		}
 
 		folder = {

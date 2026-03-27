@@ -1,7 +1,7 @@
 ideas = {
 	country = {
 		attis_industry_texas_to_ces = {
-			picture = generic_legion_flag
+			picture = kha_idea_legion_trade
 			removal_cost = -1
 			allowed_civil_war = {
 				always = yes
@@ -14,6 +14,32 @@ ideas = {
                 mic_to_target_factor = 0.25
                 cic_to_target_factor = 0.25
             }
+		}
+		attis_industry_penalty = {
+			picture = generic_fucked_economy
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = -0.1
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.2
+				global_building_slots_factor = -0.2
+				local_resources_factor = -0.2
+			}
+		}
+		attis_manpower_penalty = {
+			picture = generic_nuclear_aftermath
+			removal_cost = -1
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = -0.01
+				conscription_factor = -0.5
+				monthly_population = -0.75
+			}
 		}
 		texas_industry_suffer_0 = {
 			picture = salvaged_military_industry
@@ -479,8 +505,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				army_attack_factor = 0.05
-				army_org_factor = -0.05
+				army_attack_factor = 0.1
 				country_resource_energy = 5
 				country_resource_circuitry = 5
 				country_resource_water = 5
@@ -496,7 +521,7 @@ ideas = {
 			}
 			modifier = {
 				supply_consumption_factor = -0.2
-				industrial_capacity_factory = -0.05
+				attrition = -0.1
 				country_resource_energy = 5
 				country_resource_circuitry = 5
 				country_resource_water = 5
@@ -512,7 +537,7 @@ ideas = {
 			}
 			modifier = {
 				army_defence_factor = 0.1
-				army_org_factor = -0.05
+				cas_damage_reduction = 0.1
 				country_resource_energy = 5
 				country_resource_circuitry = 5
 				country_resource_water = 5
@@ -528,7 +553,7 @@ ideas = {
 			}
 			modifier = {
 				army_org_regain = 0.2
-				army_org_factor = -0.05
+				army_speed_factor = 0.1
 				country_resource_energy = 5
 				country_resource_circuitry = 5
 				country_resource_water = 5
@@ -681,6 +706,7 @@ ideas = {
 			}
 			modifier = {
 				recon_factor = 1
+				army_speed_factor = 0.3
 			}
 		}
 		cru_nightkin_assemble_idea = {

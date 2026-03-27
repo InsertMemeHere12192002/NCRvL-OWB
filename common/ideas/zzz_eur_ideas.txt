@@ -237,8 +237,9 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				army_org_factor = 0.1
+				army_org_factor = 0.15
 				army_defence_factor = 0.1
+				army_attack_factor = 0.1
 				conscription_factor = 0.1
 				army_fuel_consumption_factor = -0.15
 			}
@@ -248,12 +249,13 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				army_org_factor = 0.1
-				army_defence_factor = 0.1
+				army_org_factor = 0.2
+				army_defence_factor = 0.15
+				army_attack_factor = 0.15
 				conscription_factor = 0.15
-				land_reinforce_rate = 0.05
-				army_morale_factor = 0.3
-				army_fuel_consumption_factor = -0.15
+				land_reinforce_rate = 0.1
+				army_morale_factor = 0.5
+				army_fuel_consumption_factor = -0.3
 			}
 		}
 		eur_inexperienced_pilots = {

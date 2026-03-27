@@ -1,10 +1,11 @@
-version="1.0"
+version="2.0"
 tags={
-	"Balance"
+    "Balance"
 }
 dependencies={
-	"Old World Blues"
+    "Old World Blues"
 }
-name="Dev OWB Official NCR versus Caesar's Legion submod"
-supported_version="1.15.**"
-remote_file_id="3357289857"
+name="OWB Official NCR versus Caesar's Legion submod"
+supported_version="1.17.**"
+path=""
+remote_file_id="3010015443"

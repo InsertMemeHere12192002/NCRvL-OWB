@@ -1,42 +1,84 @@
-﻿units = {
+﻿division_template = {
+	name = "White Leg Warband"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		demolitions_infantry = { x = 2 y = 2 }
+		demolitions_infantry = { x = 3 y = 2 }
+		demolitions_infantry = { x = 3 y = 0 }
+		demolitions_infantry = { x = 3 y = 1 }
+	}
+	support = {
+		demolitions_support = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "White Leg Armored Warband"
+	regiments = {
+		heavy_infantry = { x = 0 y = 0 }
+		heavy_infantry = { x = 0 y = 1 }
+		heavy_infantry = { x = 0 y = 2 }
+		heavy_infantry = { x = 2 y = 0 }
+		heavy_infantry = { x = 2 y = 1 }
+		heavy_infantry = { x = 1 y = 0 }
+		heavy_infantry = { x = 1 y = 1 }
+		heavy_infantry = { x = 1 y = 2 }
+		heavy_infantry = { x = 3 y = 0 }
+		heavy_infantry = { x = 3 y = 1 }
+	}
+	support = {
+		dog_company = { x = 0 y = 0 }
+		demolitions_support = { x = 1 y = 0 }
+	}
+}
+
+
+units = {
 	division = {
 		name = "Deathclaw Hunter Warband"
-		location = 8549
+		location = 8859
 		division_template = "White Leg Warband"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Salt-Upon-Fries' Warband"
-		location = 3412
+		location = 6365
 		division_template = "White Leg Warband"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Tears-In-The-Rain's Warband"
-		location = 6363
+		location = 2639
 		division_template = "White Leg Armored Warband"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Frisco City Warband"
-		location = 1532
+		location = 6374
 		division_template = "White Leg Warband"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "St. George Warband"
-		location = 1008
+		location = 6381
 		division_template = "White Leg Warband"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0
 	}
 	division = {
 		name = "Cedar City Warband"
-		location = 6370
+		location = 6363
 		division_template = "White Leg Warband"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1.0

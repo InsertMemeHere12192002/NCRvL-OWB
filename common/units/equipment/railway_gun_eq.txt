@@ -20,6 +20,8 @@ equipments = {
 
 		#Offensive Abilities
 		railway_gun_attack = 45
+		railway_gun_attack_range_index_in_define = 0
+		railway_gun_hours_between_redistribution = 36
 		
 		manpower = 1000
 	}
@@ -35,6 +37,9 @@ equipments = {
 		can_license = no
 
 		build_cost_ic = 1000.0
+		railway_gun_attack = 45
+		railway_gun_attack_range_index_in_define = 0
+		railway_gun_hours_between_redistribution = 36
 		resources = {
 			metal = 1
 		}		
@@ -100,7 +105,7 @@ equipments = {
 		year = 2283
 
 		archetype = railway_gun_equipment
-		parent = railway_gun_equipment_2
+		parent = railway_gun_equipment_3
 		priority = 50
 		visual_level = 0
 		active = no
@@ -124,4 +129,5 @@ equipments = {
 			composites = 4
 		}
 	}
+	
 }

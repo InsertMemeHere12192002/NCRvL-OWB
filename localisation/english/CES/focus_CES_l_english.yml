@@ -406,6 +406,7 @@
   ces_foundries_of_mars_desc:0 "In ancient times, armies were carried forward atop steeds of steel and Iron. Who is to say that we should not follow suit? The machine cults in our territories should be reorganized into proper mechanical plants, producing machines of war in the name of Mars!"
 
   ces_hammer_of_mars:0 "Hammer of Mars"
+    ces_hammer_of_mars_desc:0 "Has a conquerer ever secured a greater prize than this? Certainly, but it is unlikely any have ever been so viscerally satisfying. The enemies of the legion will have to run very far to get beyond our reach now."
 
   ces_legion_reborn:0 "Legion Reborn"
   ces_legion_reborn_desc:0 "Power armour is a great and powerful thing, yet it is iconic for other warriors in the wasteland. Our greatest blacksmiths work to forge a new frame for our elite warriors, the armour that shall carry us into the future. Segmentata Power Armour."
@@ -499,6 +500,9 @@
   ces_guillermo_rossi:0 "Recruit the Rossi Family"
   ces_guillermo_rossi_desc:0 "The House of Rossi controls New Mexico's copper mines. We can woo them to join our service."
   ces_guillermo_rossi_tt:0 "Unlocks §YGuillermo Rossi§! as an economic advisor."
+    ces_trajan_tt:0 "Unlocks §YPrimus Trajan§! as an economic advisor."
+  ces_magnus_tt:0 "Unlocks §YForgemaster Magnus§! as an cultural advisor."
+  ces_hadrian_tt:0 "Unlocks §YHadrian§! as an theorist."
   ces_navajo_exemptions:0 "Grant the Navajo Exemptions"
   ces_navajo_exemptions_desc:0 "We can exempt the Navajo from some of their tribute demands in exchange for greater loyalty.  Hurray!"
   ces_two_sun_exemptions:0 "Exemptions for Two Sun"
@@ -680,6 +684,7 @@
   ces_eastern_tithe:0 "The Abominable Easterners"
   ces_eastern_tithe_desc: "He who justifies the wicked and he who condemns the righteous are both alike an abomination to the Lord."
   ces_decimation:0 "Decimate The Wicked"
+    ces_decimation_desc:0 "It is a challenge to work His will and minister to the needs of an empire at the same time, but He gives us strength. Even the wicked slowly but surely provide us the means to one day destroy them, as their wealth becomes ours and we grow stronger by the day."
   ces_decimation_tt:0 "remember caps stuff"
   ces_servus_non_habet:0 "A Slave Has No Personhood"
   ces_servus_non_habet_desc:0 "A has no personality. He does not own his body; he has no ancestors, no name, no cognomen, no goods of his own. He is entirely a tool of [CES.GetName]."
@@ -938,7 +943,11 @@
   ces_assimilate_resistance_desc:0 "Some of Utah's tribals, like so many of the Wasteland, reject the Legion's rule at first. But they can serve in the Legion, or as a whetstone to sharpen our swords. One way or another, we will rule Utah."
   ces_im_super_cool:0 "The Master of the World"
   ces_im_super_cool_desc:0 "With the fall of New California, the Wasteland cannot stand against Caesar. Now is the time to make the Wasteland follow the bull!"
+ces_lac_wargoal:0 "The Coward of the East"
+  ces_lac_wargoal_desc:0 "With California secured, we can finally turn east to deal with the traitor Lanius and his pathetic excuse for a Legion. Let us show them the true way of Mars!"
   assimilate_resistance_tt:0 "\nCoring costs in Utah will be reduced by 25%."
+  ces_lac_reward:0 "A Reward for Loyalty"
+  ces_lac_reward_desc:0 "With the conquest of the West finished, we can reward those who stood by us in our hour of need. Let us grant Lanius the right to act as the undisputed master of the East. Noone but the mighty Caesar and Mars will stand above him!"
   ces_down_mexico_way:0 "To Slay the Titans"
   ces_down_mexico_way_desc:0 "When Mars became king of the gods, he overthrow his father and a race of dying monsters called Titans. Let us profit from that example."
   ces_tame_rio:0 "Taming the Rio"
@@ -951,6 +960,8 @@
   ces_kill_titans_desc:0 "The mad gods of Mexico threaten all the Wasteland. We will prove once and for all that human flesh and bone is stronger than any machine."
   ces_attack_ncr:0 "To the West"
   ces_attack_ncr_desc:0 "Great Caesar's dream will be fufilled, and we will bring the glory of the Legion to the masses of New California. In time, the survivors will thank us."
+   ces_attack_ncr2:0 "The Conquest of New California"
+  ces_attack_ncr2_desc:0 "The Mojave has fallen and yet the Profligates are still too cowardly or disorganized to even meet us in battle. Let us finish the job and take the rest of New California for ourselves!"
   ces_hold_crossings:0 "Hold the Crossings"
   ces_hold_crossings_desc:0 "We shall fortify the other ends of the Colorado, and ensure the Legion is not pushed back across."
   ces_hold_crossings_tt:0 "We will gain §G2§! levels of §Youtposts§! on §Yevery victory point§! of §O[613.GetName]§!, §O[137.GetName]§! and §O[67.GetName]§!.\n\n"
@@ -1089,3 +1100,7 @@
   west_legion_east_legion_cant_call:0 "§RThe West and East Legion do not assist each other.§!"
 
   CES_caius_legion:0 "Legion of Pluto"
+  
+  #State modifiers
+  ces_the_old_battlefield:0 "The Old Battlefield"
+  ces_the_old_battlefield_desc:0 "The Blackfoot lands were the cradle of the Legion, the first hunting ground where the disparate tribes were broken, reforged, and molded into something far greater—and far deadlier. Here, Caesar first raised his crimson banner, and it was in these bloodied canyons and rugged plains that the Legion's unyielding discipline was born. Every rock, every dust-blown ridge tells a story of conquest, of tribals crushed under the relentless march of the Legion's steel-clad sandals. As the Legion grew and stretched its hand across the wastes, the Blackfoot lands remained its iron spine, a bastion that could never be allowed to fall.\nMany sought to test the Legion here, believing the old battlegrounds of its birth would be its undoing. They were wrong. The Legion had left more than just stories in its wake—fortifications, battle-scarred trenches, and hidden caches of wargear still litter the land, a grim testament to the countless sieges and last stands fought here. Every would-be conqueror found themselves ensnared in the same brutal lessons that had shaped the Legion long ago. To this day, the Blackfoot lands stand as one of the Legion's most defensible holdings, a land where warriors are baptized in fire and the walls are built not just of stone, but of the bones of those who failed to break them."

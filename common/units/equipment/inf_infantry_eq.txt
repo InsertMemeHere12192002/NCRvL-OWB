@@ -24,7 +24,7 @@ equipments = {
 		build_cost_ic = 1
 
 		# Defensive Abilities
-		defense = 11
+		defense = 14.5 # base was 11
 		breakthrough = 1
 		maximum_speed = 4
 
@@ -45,8 +45,8 @@ equipments = {
 		reliability = 0.85
 
 		# Defensive Abilities
-		defense = 10
-		breakthrough = 2
+		defense = 14 # base was 10
+		breakthrough = 3
 		hardness = 0
 		armor_value = 0
 		maximum_speed = 4.5
@@ -92,8 +92,8 @@ equipments = {
 		reliability = 0.9
 
 		# Defensive Abilities
-		defense = 12
-		breakthrough = 3.5
+		defense = 17.5 #base was 12
+		breakthrough = 4.5
 		maximum_speed = 4.5
 
 		# Offensive Abilities
@@ -118,7 +118,7 @@ equipments = {
 		visual_level = 3
 
 		# Defensive Abilities
-		defense = 15
+		defense = 21 #base was 15
 		breakthrough = 2
 
 		# Offensive Abilities
@@ -144,7 +144,7 @@ equipments = {
 		reliability = 0.80
 
 		# Defensive Abilities
-		defense = 14
+		defense = 19.5 # base was 14
 		breakthrough = 2
 		hardness = 0
 		armor_value = 0
@@ -178,8 +178,8 @@ equipments = {
 		reliability = 0.95
 
 		# Defensive Abilities
-		defense = 14
-		breakthrough = 5
+		defense = 19.5 # base was 14
+		breakthrough = 6
 		maximum_speed = 4.5
 
 		# Offensive Abilities
@@ -204,7 +204,7 @@ equipments = {
 		visual_level = 5
 
 		#Defensive Abilities
-		defense = 18
+		defense = 25 #base was 18
 		breakthrough = 3
 
 		#Offensive Abilities
@@ -230,7 +230,7 @@ equipments = {
 		reliability = 0.80
 
 		# Defensive Abilities
-		defense = 15
+		defense = 21 # was 15
 		breakthrough = 2.5
 
 		# Offensive Abilities
@@ -259,8 +259,8 @@ equipments = {
 		reliability = 1
 
 		# Defensive Abilities
-		defense = 17
-		breakthrough = 7
+		defense = 24 #was 17
+		breakthrough = 8
 		maximum_speed = 4.5
 
 		# Offensive Abilities
@@ -287,7 +287,7 @@ equipments = {
 		visual_level = 8
 
 		#Defensive Abilities
-		defense = 21
+		defense = 29.5 #base was 21
 		breakthrough = 4
 
 		#Offensive Abilities
@@ -313,7 +313,7 @@ equipments = {
 		reliability = 0.80
 
 		# Defensive Abilities
-		defense = 19
+		defense = 26.5 # was 19
 		breakthrough = 3
 
 		# Offensive Abilities
@@ -339,7 +339,7 @@ equipments = {
 		visual_level = 9
 
 		#Defensive Abilities
-		defense = 23
+		defense = 32 #base was 23
 		breakthrough = 4.5
 
 		#Offensive Abilities
@@ -365,7 +365,7 @@ equipments = {
 		reliability = 0.80
 
 		# Defensive Abilities
-		defense = 20
+		defense = 28 # was 20
 		breakthrough = 3.5
 
 		# Offensive Abilities
@@ -391,7 +391,7 @@ equipments = {
 		visual_level = 13
 
 		# Defensive Abilities
-		defense = 21
+		defense = 29.5 # was 21 
 		breakthrough = 5
 		hardness = 0
 		armor_value = 0
@@ -424,7 +424,7 @@ equipments = {
 		visual_level = 14
 
 		# Defensive Abilities
-		defense = 23
+		defense = 32 # base was 23
 		breakthrough = 6
 		hardness = 0
 		armor_value = 0
@@ -458,7 +458,7 @@ equipments = {
 		reliability = 0.8
 
 		# Defensive Abilities
-		defense = 18
+		defense = 25 # was 18
 		breakthrough = 3.5
 		hardness = 0
 		armor_value = 0
@@ -491,7 +491,7 @@ equipments = {
 		visual_level = 16
 
 		# Defensive Abilities
-		defense = 19
+		defense = 26.5 # base was 19
 		breakthrough = 4
 		hardness = 0
 		armor_value = 0

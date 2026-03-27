@@ -1,0 +1,232 @@
+﻿capital = 1410
+
+oob = "FBH_2275"
+
+set_technology = {
+	basic_supply_transport_tech = 1
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	#special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	power_armour_tech_level_tribal = 1
+	power_armour_tech_level_settler = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	#air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	electronics_tech_level_scientific = 1
+	tool_engineering = 1
+	standard_weaponry_tech = 1
+	support_weaponry = 1
+	demolitions_weaponry_tech = 1
+	fireteam_weaponry_tech = 1
+	anti_tank_equipment_tech_1 = 1
+	recon_company_tech_1 = 1
+	stripped_pa_tech = 1
+	weight_support_frame_pa_tech_1 = 1
+	weight_support_frame_pa_tech_2 = 1
+	wasteland_pa_tech = 1
+	bike_tech_1 = 1
+	
+	elite_army = 1
+	infantry_perk_tech_1 = 1
+	infantry_perk_tech_2 = 1
+	special_forces_perk_tech_1 = 1
+	special_forces_perk_tech_2 = 1
+
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	ballistic_weaponry_tech_1 = 1
+
+	energy_weaponry_tech_1 = 1
+
+	spec_ops_equipment_tech_1 = 1
+	#spec_ops_equipment_tech_2 = 1
+
+	stripped_pa_tech = 1
+	weight_support_frame_pa_tech_1 = 1
+	weight_support_frame_pa_tech_2 = 1
+	wasteland_pa_tech = 1
+
+	robot_makeshift_automatons_tech = 1
+	robot_fission_batteries_tech = 1
+
+	underground_industry_tech = 1
+	electronic_engineering = 1
+	heavy_infantry_tech_1 = 1
+
+	implant_tech_visibility_tech = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		nautics_tech_1 = 1
+		light_navy_hull_tech_1 = 1
+		naval_invasion_tech_1 = 1
+	}
+}
+
+add_manpower = 3250
+set_stability = 0.6
+set_war_support = 0.5
+set_research_slots = 4
+
+set_politics = {
+	ruling_party = elites
+	elections_allowed = no
+}
+
+add_ideas = {
+
+}
+
+set_popularities = {
+	people = 5
+	elites = 55
+	intellectuals = 25
+	ruler = 15
+}
+
+set_country_flag = is_midwestern_brotherhood_nation
+set_country_flag = is_brotherhood_nation_proper
+set_country_flag = is_brotherhood_nation
+set_country_flag = generic_decisions_disabled
+set_country_flag = no_mutants_allowed
+set_country_flag = bans_drugs
+
+
+set_country_flag = elite_doctrine_ai
+set_country_flag = power_armor_doctrine_ai
+set_country_flag = infantry_energy_ai
+
+set_politics = {
+	ruling_party = elites
+	last_election = "2274.12.30"
+	election_frequency = 12
+	elections_allowed = yes
+}
+
+set_variable = { FBH_election_months = 12 } #Should always equal election duration
+
+set_rule = { can_send_volunteers = no }
+
+add_ideas = {
+	paladins
+	officer_law_military_academy
+	training_law_military_academy
+	military_indoctrination_press
+	initiates
+	selective_outsider_recruitment_law
+	gaben_economy_law
+	isolationist_trade_law
+	military_indoctrination_press
+	centralization_brotherhood_minimum
+	knighlty_armaments
+	fbh_long_range_comms
+	fbh_peace_in_our_time
+	fbh_aeronautics_ineptitude
+	fbh_lag_reducer
+}
+
+add_opinion_modifier = { target = SHA modifier = boshatesmutants }
+
+recruit_character = FBH_jonathan_maxson
+recruit_character = FBH_arthur_maxson
+recruit_character = FBH_angharad
+recruit_character = FBH_rhiannon
+recruit_character = FBH_llwyd
+recruit_character = FBH_mari_torni
+recruit_character = FBH_paladin_leadcolt
+
+recruit_character = FBH_paladin_stone
+
+recruit_character = FBH_advisor_contest_2
+recruit_character = FBH_advisor_contest_3
+recruit_character = FBH_advisor_contest_4
+recruit_character = FBH_advisor_contest_5
+recruit_character = FBH_advisor_contest_6
+recruit_character = FBH_advisor_contest_7
+recruit_character = FBH_advisor_contest_8
+recruit_character = FBH_advisor_contest_9
+recruit_character = FBH_advisor_contest_10
+recruit_character = FBH_advisor_contest_11
+recruit_character = FBH_advisor_contest_12
+recruit_character = FBH_advisor_contest_13
+recruit_character = FBH_advisor_contest_14
+recruit_character = FBH_advisor_contest_15
+recruit_character = FBH_advisor_contest_16
+recruit_character = FBH_advisor_contest_17
+recruit_character = FBH_advisor_contest_18
+recruit_character = FBH_advisor_contest_19
+recruit_character = FBH_advisor_contest_20
+recruit_character = FBH_advisor_contest_21
+recruit_character = FBH_advisor_contest_22
+recruit_character = FBH_advisor_contest_23
+recruit_character = FBH_advisor_contest_24
+recruit_character = FBH_advisor_contest_25
+recruit_character = FBH_advisor_contest_26
+recruit_character = FBH_advisor_contest_27
+recruit_character = FBH_advisor_contest_28
+
+add_equipment_to_stockpile = {
+	type = energy_equipment_1
+	amount = 500
+	producer = FBH
+}
+add_equipment_to_stockpile = {
+	type = power_armor_equipment_1
+	amount = 100
+	producer = FBH
+}
+add_equipment_to_stockpile = {
+	type = anti_tank_equipment_1
+	amount = 50
+	producer = FBH
+}
+add_equipment_to_stockpile = {
+	type = fireteam_equipment_1
+	amount = 50
+	producer = FBH
+}
+add_equipment_to_stockpile = {
+	type = demolitions_equipment_1
+	amount = 50
+	producer = FBH
+}
+add_equipment_to_stockpile = {
+	type = support_equipment_1
+	amount = 50
+	producer = FBH
+}
+add_equipment_to_stockpile = {
+	type = supply_equipment_1
+	amount = 50
+	producer = FBH
+}

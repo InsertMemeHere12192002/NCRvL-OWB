@@ -36,6 +36,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -63,7 +66,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_1 y = @Col_infantry }
 		}
 
@@ -77,7 +80,14 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 2
+			modifier = {
+				factor = 20
+				OR = {
+					has_tech = grand_army
+					has_tech = terror_tactics
+				}
+			}
 			modifier = {
 				factor = 0
 				original_tag = TBH
@@ -93,6 +103,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -120,7 +133,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_2 y = @Col_infantry }
 		}
 
@@ -134,7 +147,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -142,6 +155,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -169,7 +185,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_3 y = @Col_infantry }
 		}
 
@@ -183,7 +199,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -191,6 +207,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -218,7 +237,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_4 y = @Col_infantry }
 		}
 
@@ -232,7 +251,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -240,6 +259,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -267,7 +289,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_5 y = @Col_infantry }
 		}
 
@@ -281,7 +303,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -289,6 +311,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -316,7 +341,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_6 y = @Col_infantry }
 		}
 
@@ -330,14 +355,17 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
 	infantry_perk_tech_7 = {
 
 		xp_research_type = army
-		xp_unlock_cost = 75
+		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -370,7 +398,7 @@ technologies = {
 		#}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_7 y = @Col_infantry }
 		}
 
@@ -379,7 +407,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -387,6 +415,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -396,6 +427,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -407,6 +440,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -420,7 +455,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_1 y = @Col_special_forces }
 		}
 
@@ -434,7 +469,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 2
+			modifier = {
+				factor = 20
+				has_tech = elite_army
+			}
 			modifier = {
 				factor = 0
 				original_tag = TBH
@@ -450,6 +489,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -459,6 +501,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -470,6 +514,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -483,7 +529,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_2 y = @Col_special_forces }
 		}
 
@@ -497,7 +543,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -505,6 +551,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -514,6 +563,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -525,6 +576,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -538,7 +591,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_3 y = @Col_special_forces }
 		}
 
@@ -552,7 +605,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -560,6 +613,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -569,6 +625,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -580,6 +638,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -593,7 +653,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_4 y = @Col_special_forces }
 		}
 
@@ -607,7 +667,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -615,6 +675,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -624,6 +687,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -635,6 +700,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -648,7 +715,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_5 y = @Col_special_forces }
 		}
 
@@ -662,7 +729,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -670,6 +737,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -679,6 +749,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -690,6 +762,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -703,7 +777,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_6 y = @Col_special_forces }
 		}
 
@@ -717,14 +791,17 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
 	special_forces_perk_tech_7 = {
 
 		xp_research_type = army
-		xp_unlock_cost = 75
+		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -734,6 +811,8 @@ technologies = {
 			unit_spec_ops_design_cost_factor = -0.1
 			unit_spec_ops_cavalry_design_cost_factor = -0.1
 			unit_ghoul_paratrooper_design_cost_factor = -0.1
+			unit_super_mutant_nightkin_infantry_design_cost_factor = -0.1
+			unit_behemoth_design_cost_factor = -0.1
 			unit_alamo_defenders_design_cost_factor = -0.1
 			unit_paladin_unit_design_cost_factor = -0.1
 			unit_Paladin_fireteam_unit_design_cost_factor = -0.1
@@ -745,6 +824,8 @@ technologies = {
 			experience_gain_spec_ops_combat_factor = 0.03
 			experience_gain_spec_ops_cavalry_combat_factor = 0.03
 			experience_gain_ghoul_paratrooper_combat_factor = 0.03
+			experience_gain_super_mutant_nightkin_infantry_combat_factor = 0.03
+			experience_gain_behemoth_combat_factor = 0.03
 			experience_gain_alamo_defenders_combat_factor = 0.03
 			experience_gain_paladin_unit_combat_factor = 0.03
 			experience_gain_Paladin_fireteam_unit_combat_factor = 0.03
@@ -764,7 +845,7 @@ technologies = {
 		#}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_7 y = @Col_special_forces }
 		}
 
@@ -773,7 +854,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -781,6 +862,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -800,7 +884,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_1 y = @Col_robot }
 		}
 
@@ -814,7 +898,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 1
+			modifier = {
+				factor = 40
+				has_tech = automated_warfare
+			}
 			modifier = {
 				factor = 0
 				original_tag = TBH
@@ -830,6 +918,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -849,7 +940,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_2 y = @Col_robot }
 		}
 
@@ -863,7 +954,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -871,6 +962,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -890,7 +984,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_3 y = @Col_robot }
 		}
 
@@ -904,7 +998,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -912,6 +1006,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -931,7 +1028,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_4 y = @Col_robot }
 		}
 
@@ -945,7 +1042,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -953,6 +1050,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -972,7 +1072,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_5 y = @Col_robot }
 		}
 
@@ -986,7 +1086,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -994,6 +1094,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1013,7 +1116,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_6 y = @Col_robot }
 		}
 
@@ -1027,14 +1130,17 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
 	robot_perk_tech_7 = {
 
 		xp_research_type = army
-		xp_unlock_cost = 75
+		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1059,7 +1165,7 @@ technologies = {
 		#}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_7 y = @Col_robot }
 		}
 
@@ -1068,7 +1174,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -1076,6 +1182,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1085,14 +1194,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1101,7 +1210,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_1 y = @Col_vehicle }
 		}
 
@@ -1115,7 +1224,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 1
+			modifier = {
+				factor = 20
+				has_tech = mechanized_offensive_doctrine
+			}
 			modifier = {
 				factor = 0
 				original_tag = TBH
@@ -1131,6 +1244,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1140,14 +1256,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1156,7 +1272,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_2 y = @Col_vehicle }
 		}
 
@@ -1170,7 +1286,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -1178,6 +1294,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1187,14 +1306,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1203,7 +1322,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_3 y = @Col_vehicle }
 		}
 
@@ -1217,7 +1336,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -1225,6 +1344,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1234,14 +1356,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1250,7 +1372,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_4 y = @Col_vehicle }
 		}
 
@@ -1264,7 +1386,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -1272,6 +1394,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1281,14 +1406,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1297,7 +1422,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_5 y = @Col_vehicle }
 		}
 
@@ -1311,7 +1436,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -1319,6 +1444,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1328,14 +1456,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1344,7 +1472,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_6 y = @Col_vehicle }
 		}
 
@@ -1358,14 +1486,17 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
 	vehicle_perk_tech_7 = {
 
 		xp_research_type = army
-		xp_unlock_cost = 75
+		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		#enable_subunits = {
@@ -1379,14 +1510,14 @@ technologies = {
 			unit_motorized_demoteam_design_cost_factor = -0.1
 			unit_cybernetic_warform_design_cost_factor = -0.1
 			unit_tank_design_cost_factor = -0.1
-			unit_chariot_design_cost_factor = -0.1
+			unit_chariot_unit_design_cost_factor = -0.1
 			experience_gain_motorized_combat_factor = 0.03
 			experience_gain_motorized_heavy_infantry_combat_factor = 0.03
 			experience_gain_motorized_fireteam_combat_factor = 0.03
 			experience_gain_motorized_demoteam_combat_factor = 0.03
 			experience_gain_cybernetic_warform_combat_factor = 0.03
 			experience_gain_tank_combat_factor = 0.03
-			experience_gain_chariot_combat_factor = 0.03
+			experience_gain_chariot_unit_combat_factor = 0.03
 		}
 		custom_modifier_tooltip = vehicle_perk_tech_modifier_tt
 
@@ -1396,7 +1527,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_7 y = @Col_vehicle }
 		}
 
@@ -1405,7 +1536,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 2
+			base = 10
 		}
 	}
 
@@ -1413,13 +1544,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1430,8 +1566,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_1 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_1 y = @Col_mutant }
 		}
 
 		path = {
@@ -1464,13 +1600,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1481,8 +1622,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_2 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_2 y = @Col_mutant }
 		}
 
 		path = {
@@ -1503,13 +1644,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1520,8 +1666,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_3 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_3 y = @Col_mutant }
 		}
 
 		path = {
@@ -1542,13 +1688,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1559,8 +1710,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_4 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_4 y = @Col_mutant }
 		}
 
 		path = {
@@ -1581,13 +1732,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1598,8 +1754,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_5 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_5 y = @Col_mutant }
 		}
 
 		path = {
@@ -1620,13 +1776,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1637,8 +1798,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_6 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_6 y = @Col_mutant }
 		}
 
 		path = {
@@ -1659,13 +1820,18 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
 			unit_super_mutant_infantry_design_cost_factor = -0.1
+			unit_heavy_super_mutant_infantry_design_cost_factor = -0.1
 			unit_super_mutant_aux_infantry_design_cost_factor = -0.1
 			unit_faerie_infantry_design_cost_factor = -0.1
 			experience_gain_super_mutant_infantry_combat_factor = 0.03
+			experience_gain_heavy_super_mutant_infantry_combat_factor = 0.03
 			experience_gain_super_mutant_aux_infantry_combat_factor = 0.03
 			experience_gain_faerie_infantry_combat_factor = 0.03
 		}
@@ -1681,8 +1847,8 @@ technologies = {
 		#}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_7 y = @Col_tactics }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_7 y = @Col_mutant }
 		}
 
 		categories = {
@@ -1698,6 +1864,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1723,8 +1892,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_1 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_1 y = @Col_creature }
 		}
 
 		path = {
@@ -1759,6 +1928,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 25
+		on_research_complete = {
+        	army_experience = -25
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1784,8 +1956,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_2 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_2 y = @Col_creature }
 		}
 
 		path = {
@@ -1806,6 +1978,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1831,8 +2006,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_3 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_3 y = @Col_creature }
 		}
 
 		path = {
@@ -1853,6 +2028,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1878,8 +2056,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_4 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_4 y = @Col_creature }
 		}
 
 		path = {
@@ -1900,6 +2078,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1925,8 +2106,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_5 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_5 y = @Col_creature }
 		}
 
 		path = {
@@ -1947,6 +2128,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 75
+		on_research_complete = {
+        	army_experience = -75
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -1972,8 +2156,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_6 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_6 y = @Col_creature }
 		}
 
 		path = {
@@ -1994,6 +2178,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		hidden_modifier = {
@@ -2024,8 +2211,8 @@ technologies = {
 		#}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_7 y = @Col_tactics2 }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_7 y = @Col_creature }
 		}
 
 		categories = {
@@ -2037,7 +2224,7 @@ technologies = {
 		}
 	}
 
-		##TERRAIN AND SF PERKS
+	##TERRAIN AND SF PERKS
 	tactics_doctrine_tech = {
 
 		experience_gain_army_factor = 0.1
@@ -2045,10 +2232,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_middle y = @Col_tactics_start }
 		}
 
@@ -2068,7 +2258,7 @@ technologies = {
 			leads_to_tech = terrain_mountain_tech_4
 			research_cost_coeff = 1
 		}
-				path = {
+		path = {
 			leads_to_tech = terrain_mountain_tech_5
 			research_cost_coeff = 1
 		}
@@ -2092,7 +2282,7 @@ technologies = {
 			leads_to_tech = terrain_harsh_tech_4
 			research_cost_coeff = 1
 		}
-				path = {
+		path = {
 			leads_to_tech = terrain_harsh_tech_5
 			research_cost_coeff = 1
 		}
@@ -2116,7 +2306,7 @@ technologies = {
 			leads_to_tech = terrain_plains_tech_4
 			research_cost_coeff = 1
 		}
-				path = {
+		path = {
 			leads_to_tech = terrain_plains_tech_5
 			research_cost_coeff = 1
 		}
@@ -2140,7 +2330,7 @@ technologies = {
 			leads_to_tech = terrain_jungle_tech_4
 			research_cost_coeff = 1
 		}
-				path = {
+		path = {
 			leads_to_tech = terrain_jungle_tech_5
 			research_cost_coeff = 1
 		}
@@ -2440,6 +2630,36 @@ technologies = {
 				defence = 0.05
 			}
 		}
+		super_mutant_nightkin_infantry = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		behemoth = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
 		crusader_unit = {
 			default_morale = 0.01
 			urban = {
@@ -2455,7 +2675,52 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_nightkin_infantry = {
+		alamo_defenders = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		paladin_unit = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_fireteam_unit = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_demo_unit = {
 			default_morale = 0.01
 			urban = {
 				attack = 0.05
@@ -2475,10 +2740,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_special_forces }
 		}
 
@@ -2570,10 +2838,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_robot }
 		}
 
@@ -2675,7 +2946,22 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		cybernetic_warform = {
 			default_morale = 0.01
 			urban = {
 				attack = 0.05
@@ -2695,10 +2981,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_vehicle }
 		}
 
@@ -2734,7 +3023,22 @@ technologies = {
 				attack = 0.05
 				defence = 0.05
 			}
-			radiation = {
+			amphibious = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		heavy_super_mutant_infantry = {
+			default_morale = 0.01
+			urban = {
+				attack = 0.05
+				defence = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				defence = 0.05
+			}
+			amphibious = {
 				attack = 0.05
 				defence = 0.05
 			}
@@ -2774,10 +3078,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_mutant }
 		}
 
@@ -2913,10 +3220,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_creature }
 		}
 
@@ -2942,7 +3252,6 @@ technologies = {
 	}
 
 	terrain_plains_tech = {
-
 		infantry = {
 			default_morale = 0.01
 			plains = {
@@ -2998,7 +3307,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_infantry = {
+		fake_intel_unit = {
 			default_morale = 0.01
 			plains = {
 				attack = 0.05
@@ -3009,9 +3318,9 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_aux_infantry = {
+		gary_unit = {
 			default_morale = 0.01
-			plains = {
+				plains = {
 				attack = 0.05
 				defence = 0.05
 			}
@@ -3045,12 +3354,15 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		XOR = { terrain_jungle_tech terrain_mountain_tech terrain_harsh_tech }
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_infantry }
 		}
 
@@ -3076,7 +3388,6 @@ technologies = {
 	}
 
 	terrain_plains_tech_2 = {
-
 		spec_ops = {
 			default_morale = 0.01
 			plains = {
@@ -3143,6 +3454,28 @@ technologies = {
 				defence = 0.05
 			}
 		}
+		super_mutant_nightkin_infantry = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		behemoth = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
 		crusader_unit = {
 			default_morale = 0.01
 			plains = {
@@ -3154,7 +3487,40 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_nightkin_infantry = {
+		alamo_defenders = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		paladin_unit = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_fireteam_unit = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_demo_unit = {
 			default_morale = 0.01
 			plains = {
 				attack = 0.05
@@ -3170,10 +3536,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_special_forces }
 		}
 
@@ -3199,7 +3568,6 @@ technologies = {
 	}
 
 	terrain_plains_tech_3 = {
-
 		combat_robot = {
 			default_morale = 0.01
 			plains = {
@@ -3249,10 +3617,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_robot }
 		}
 
@@ -3278,7 +3649,6 @@ technologies = {
 	}
 
 	terrain_plains_tech_4 = {
-
 		motorized = {
 			default_morale = 0.01
 			plains = {
@@ -3334,7 +3704,18 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		cybernetic_warform = {
 			default_morale = 0.01
 			plains = {
 				attack = 0.05
@@ -3350,10 +3731,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_vehicle }
 		}
 
@@ -3377,8 +3761,20 @@ technologies = {
 			}
 		}
 	}
+
 	terrain_plains_tech_5 = {
 		super_mutant_infantry = {
+			default_morale = 0.01
+			plains = {
+				attack = 0.05
+				defence = 0.05
+			}
+			desert = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		heavy_super_mutant_infantry = {
 			default_morale = 0.01
 			plains = {
 				attack = 0.05
@@ -3416,10 +3812,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_mutant }
 		}
 
@@ -3523,14 +3922,17 @@ technologies = {
 			}
 		}
 
-		XOR = { terrain_jungle_tech_4 terrain_mountain_tech_6 terrain_harsh_tech_6 }
+		XOR = { terrain_jungle_tech_6 terrain_mountain_tech_6 terrain_harsh_tech_6 }
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_creature }
 		}
 
@@ -3556,7 +3958,6 @@ technologies = {
 	}
 
 	terrain_mountain_tech = {
-
 		infantry = {
 			default_morale = 0.01
 			mountain = {
@@ -3612,7 +4013,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_infantry = {
+		fake_intel_unit = {
 			default_morale = 0.01
 			mountain = {
 				attack = 0.05
@@ -3623,7 +4024,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_aux_infantry = {
+		gary_unit = {
 			default_morale = 0.01
 			mountain = {
 				attack = 0.05
@@ -3659,12 +4060,15 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		XOR = { terrain_harsh_tech terrain_plains_tech terrain_jungle_tech }
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_infantry }
 		}
 
@@ -3690,7 +4094,6 @@ technologies = {
 	}
 
 	terrain_mountain_tech_2 = {
-
 		spec_ops = {
 			default_morale = 0.01
 			mountain = {
@@ -3757,6 +4160,28 @@ technologies = {
 				defence = 0.05
 			}
 		}
+		super_mutant_nightkin_infantry = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		behemoth = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
 		crusader_unit = {
 			default_morale = 0.01
 			mountain = {
@@ -3768,7 +4193,40 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_nightkin_infantry = {
+		alamo_defenders = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		paladin_unit = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_fireteam_unit = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_demo_unit = {
 			default_morale = 0.01
 			mountain = {
 				attack = 0.05
@@ -3784,10 +4242,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_special_forces }
 		}
 
@@ -3813,7 +4274,6 @@ technologies = {
 	}
 
 	terrain_mountain_tech_3 = {
-
 		combat_robot = {
 			default_morale = 0.01
 			mountain = {
@@ -3863,10 +4323,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_robot }
 		}
 
@@ -3892,7 +4355,6 @@ technologies = {
 	}
 
 	terrain_mountain_tech_4 = {
-
 		motorized = {
 			default_morale = 0.01
 			mountain = {
@@ -3948,7 +4410,18 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		cybernetic_warform = {
 			default_morale = 0.01
 			mountain = {
 				attack = 0.05
@@ -3964,10 +4437,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_vehicle }
 		}
 
@@ -3994,6 +4470,17 @@ technologies = {
 
 	terrain_mountain_tech_5 = {
 		super_mutant_infantry = {
+			default_morale = 0.01
+			mountain = {
+				attack = 0.05
+				defence = 0.05
+			}
+			hills = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		heavy_super_mutant_infantry = {
 			default_morale = 0.01
 			mountain = {
 				attack = 0.05
@@ -4031,10 +4518,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_mutant }
 		}
 
@@ -4142,10 +4632,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_creature }
 		}
 
@@ -4171,7 +4664,6 @@ technologies = {
 	}
 
 	terrain_jungle_tech = {
-
 		infantry = {
 			default_morale = 0.01
 			jungle = {
@@ -4227,7 +4719,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_infantry = {
+		fake_intel_unit = {
 			default_morale = 0.01
 			jungle = {
 				attack = 0.05
@@ -4238,7 +4730,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_aux_infantry = {
+		gary_unit = {
 			default_morale = 0.01
 			jungle = {
 				attack = 0.05
@@ -4274,12 +4766,15 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		XOR = { terrain_plains_tech terrain_mountain_tech terrain_harsh_tech }
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_infantry }
 		}
 
@@ -4305,7 +4800,6 @@ technologies = {
 	}
 
 	terrain_jungle_tech_2 = {
-
 		spec_ops = {
 			default_morale = 0.01
 			jungle = {
@@ -4372,6 +4866,28 @@ technologies = {
 				defence = 0.05
 			}
 		}
+		super_mutant_nightkin_infantry = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		behemoth = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
 		crusader_unit = {
 			default_morale = 0.01
 			jungle = {
@@ -4383,7 +4899,40 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_nightkin_infantry = {
+		alamo_defenders = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		paladin_unit = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_fireteam_unit = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		Paladin_demo_unit = {
 			default_morale = 0.01
 			jungle = {
 				attack = 0.05
@@ -4399,10 +4948,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_special_forces }
 		}
 
@@ -4428,7 +4980,6 @@ technologies = {
 	}
 
 	terrain_jungle_tech_3 = {
-
 		combat_robot = {
 			default_morale = 0.01
 			jungle = {
@@ -4478,10 +5029,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_robot }
 		}
 
@@ -4507,7 +5061,6 @@ technologies = {
 	}
 
 	terrain_jungle_tech_4 = {
-
 		motorized = {
 			default_morale = 0.01
 			jungle = {
@@ -4563,7 +5116,18 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		chariot = {
+		chariot_unit = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		cybernetic_warform = {
 			default_morale = 0.01
 			jungle = {
 				attack = 0.05
@@ -4579,10 +5143,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_vehicle }
 		}
 
@@ -4609,6 +5176,17 @@ technologies = {
 
 	terrain_jungle_tech_5 = {
 		super_mutant_infantry = {
+			default_morale = 0.01
+			jungle = {
+				attack = 0.05
+				defence = 0.05
+			}
+			forest = {
+				attack = 0.05
+				defence = 0.05
+			}
+		}
+		heavy_super_mutant_infantry = {
 			default_morale = 0.01
 			jungle = {
 				attack = 0.05
@@ -4646,10 +5224,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_mutant }
 		}
 
@@ -4757,10 +5338,13 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_creature }
 		}
 
@@ -4792,6 +5376,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -4812,8 +5399,8 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
-			position = { x = @Row_tactics_middle y = @Col_vehicle }
+			name = fallout_perks_doctrine_folder
+			position = { x = @Row_tactics_middle y = @Col_creature }
 		}
 
 		categories = {
@@ -4845,6 +5432,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -4858,7 +5448,7 @@ technologies = {
 
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_tactics }
 		}
 
@@ -4891,6 +5481,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -4904,7 +5497,7 @@ technologies = {
 
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_tactics }
 		}
 
@@ -4939,6 +5532,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -4952,7 +5548,7 @@ technologies = {
 
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_2 y = @Col_tactics }
 		}
 
@@ -4988,6 +5584,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -5001,7 +5600,7 @@ technologies = {
 
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_tactics }
 		}
 
@@ -5030,7 +5629,7 @@ technologies = {
 		category_light_special_forces = {
 			max_organisation = 5
 		}
-				super_mutant_nightkin_infantry = {
+		super_mutant_nightkin_infantry = {
 			max_organisation = 5
 		}
 		deathclaw_special_forces = {
@@ -5041,6 +5640,9 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -5049,7 +5651,7 @@ technologies = {
 		}
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_1 y = @Col_tactics2 }
 		}
 
@@ -5075,11 +5677,17 @@ technologies = {
 		category_power_armour = {
 			max_organisation = 5
 		}
+		behemoth = {
+			max_organisation = 5
+		}
 
 		xor = { tactics_spec_ops_light_tech }
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		path = {
@@ -5089,7 +5697,7 @@ technologies = {
 
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_right_1 y = @Col_tactics2 }
 		}
 
@@ -5112,7 +5720,7 @@ technologies = {
 
 	tactics_spec_ops_elite_tech = {
 
-		special_forces_cap = 0.1
+		special_forces_cap = 0.05
 		category_special_forces = {
 			soft_attack = 0.05
 			hard_attack = 0.05
@@ -5120,11 +5728,14 @@ technologies = {
 		}
 
 		xp_research_type = army
-		xp_unlock_cost = 75
+		xp_unlock_cost = 100
+		on_research_complete = {
+        	army_experience = -100
+    	}
 		doctrine = yes
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_middle y = @Col_tactics3 }
 		}
 

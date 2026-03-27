@@ -1,0 +1,32 @@
+state={
+	id=1412
+	name="STATE_1412"
+	provinces={
+		19873 19879 19881 19890 19891 19896 19897 19898
+	}
+	
+	resources = {
+		metal = 3
+		water = 10
+		energy = 2
+		circuitry = 1
+		advanced = 1
+	}
+
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19881 15
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

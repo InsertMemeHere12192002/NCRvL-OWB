@@ -1285,6 +1285,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = mot_3_4_turbines_tt
+			add_ideas = mot_oliv_waiting_is_good_actually
 			252 = {
 				for_each_loop = {
 					array = dam_turbine_primary
@@ -1332,6 +1333,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			custom_effect_tooltip = mot_form_up_the_heavy_corp
+			add_ideas = ncr_crushed_brotherhood
 			hidden_effect = {
 				division_template = {
 					name = "NCR Heavy Corps"
@@ -1383,7 +1385,7 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				category = cat_land_doctrine
-				uses = 2
+				uses = 3
 				bonus = 0.8
 			}
 		}
@@ -1996,6 +1998,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = mot_first_supply_shipment
 		completion_reward = {
+			            set_technology = { 
+                railway_gun_unlock_tech = 1
+             }
 			custom_effect_tooltip = mot_the_mojave_line_tt
 			47 = {
 				add_building_construction = {
@@ -2010,9 +2015,6 @@ focus_tree = {
 					level = 2
 					instant_build = yes
 				}
-			}
-			set_technology = {
-				railway_gun = 1
 			}
 			create_railway_gun = {
 				equipment = railway_gun_equipment_1
@@ -2285,6 +2287,20 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			set_technology = {
+				special_forces_tech_level_scientific = 1
+				infantry_tech_level_scientific = 1
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = spec_force_tech_category
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = infantry_tech_category
+			}
 			custom_effect_tooltip = mot_promote_chief_hanlon_tt
 			add_to_variable = {
 				var = mot_gov_op
@@ -2345,6 +2361,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_country_leader_trait = political_workhorse
+			set_technology = {
+				power_armour_tech_level_scientific = 1
+				support_tech_level_scientific = 1
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = power_armor_tech_category
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 3
+				category = support_tech_category
+			}
 		}
 	}
 

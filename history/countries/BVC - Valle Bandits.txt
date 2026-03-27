@@ -51,40 +51,7 @@ set_technology = {
 	terror_tactics = 1
 }
 
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		medium_navy_hull_tech_2 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_weapons_module_tech = 1
-		naval_pd_module_tech_1 = 1
-		naval_hard_point_tech = 1
-		naval_armour_tech_1 = 1
-		naval_support_module_tech = 1
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
-
-set_stability = 0.4
+set_stability = 0.3
 set_war_support = 0.5
 set_research_slots = 4
 #set_country_flag = is_raider_nation
@@ -100,6 +67,19 @@ set_popularities = {
 	elites = 0
 	intellectuals = 0
 	ruler = 100
+}
+
+add_offsite_building = {
+    type = industrial_complex
+	level = 10
+}
+add_offsite_building = {
+    type = arms_factory
+	level = 10
+}
+add_offsite_building = {
+    type = dockyard
+	level = 10
 }
 
 set_country_flag = is_north_mexican_nation
@@ -135,5 +115,5 @@ reverse_add_opinion_modifier = {
 
 recruit_character = BVC_guarez_moya
 recruit_character = BVC_pancho_villa
-recruit_character = BVC_romulo_robles
+#recruit_character = BVC_romulo_robles
 recruit_character = BVC_porfirio_almonte

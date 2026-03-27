@@ -1,0 +1,28 @@
+state={
+	id=1414
+	name="STATE_1414"
+	provinces={
+		19907 19910 19912 19916 19922 19924 19926
+	}
+	
+	resources = {
+		water = 2
+	}
+
+	history={
+		owner = FBH
+		add_core_of = FBH
+		victory_points = {
+			19916 2
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+	}
+	
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

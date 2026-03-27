@@ -1,0 +1,211 @@
+ideas = {
+	country = {
+		navajoilandgas = {
+			picture = generic_light_bulb
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+		navajo_wind_farm = {
+			picture = generic_light_bulb
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				consumer_goods_expected_value = -0.05
+			}
+		}
+		three_sisters = {
+			picture = generic_flexible_foreign_policy2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.05
+				MONTHLY_POPULATION = 0.05
+				local_resources_factor = 0.1
+			}
+		}
+		CES_nav_loyalty = {
+			picture = generic_flexible_foreign_policy2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 40 #special_forces_cap = 0.05
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.05
+			}
+		}
+		medicine_men = {
+			picture = ast_naval_auxiliary_patrol
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_leader_start_level = 1
+				experience_gain_army = 0.05
+			}
+		}
+		NAV_insurgencies_idea = {
+			picture = generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.1
+				conscription = 0.01
+			}
+		}
+		yak_refugees = {
+			picture = generic_infantry_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				infantry = {
+					hard_attack = 0.2
+					instant = yes
+				}
+			}
+			modifier = {
+				special_forces_min = 80 #special_forces_cap = 0.1
+				special_forces_cap = 0.1
+			}
+		}
+		NAV_cipher_clan = {
+			picture = generic_infantry_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+		NAV_medicine_man = {
+			picture = caesars_legacy_2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				army_speed_factor = 0.1
+				attrition = -0.15
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					soft_attack = 0.05
+				}
+			}
+		}
+		NAV_skinwalkers_idea = {
+			picture = caesars_legacy_2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				special_forces_min = 120 #special_forces_cap = 0.3
+				special_forces_cap = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		NAV_textile_industry = {
+			picture = KHA_crisom_caravan_trade
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.06
+				production_speed_infrastructure_factor = 0.05
+				trade_opinion_factor = 0.1
+				min_export = 0.05
+			}
+		}
+		NAV_wanamingo_idea = {
+			picture = KHA_crisom_caravan_trade
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+				attrition = -0.05
+				army_org_factor = 0.1
+			}
+		}
+		navajo_silversmith_companies = {
+			picture = company_navajo_silversmiths
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.02
+				caps_income_modifier = 0.05
+			}
+		}
+		NAV_slave_payments_RES = {			# Timed idea added to RES through events
+			picture = brk_slavery
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				caps_flat_income_modifier = -5
+			}
+		}
+	}
+}

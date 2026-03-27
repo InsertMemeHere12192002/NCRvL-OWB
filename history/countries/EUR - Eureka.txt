@@ -46,6 +46,7 @@ set_technology = {
 	spec_ops_equipment_tech_1 = 1
 	spec_ops_equipment_tech_2 = 1
 	vehicles_tech_level_settler = 1
+	robotics_tech_level_tribal = 1
 	stripped_pa_tech = 1
 	weight_support_frame_pa_tech_1 = 1
 	weight_support_frame_pa_tech_2 = 1
@@ -56,39 +57,6 @@ set_technology = {
 	pre_agriculture_industry_tech = 1
 	elite_army = 1
 	military_heritage_unlock_tech = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_weapons_module_tech = 1
-		naval_pd_module_tech_1 = 1
-		naval_hard_point_tech = 1
-		naval_armour_tech_1 = 1
-		naval_support_module_tech = 1
-	}
-}
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-		naval_module_tech = 1
-	}
 }
 
 set_stability = 0.35

@@ -38,21 +38,29 @@ ideas = {
             removal_cost = -1
         }
         aeronautics_ineptitude = {
-            picture = generic_atom
+            picture = generic_glider
             allowed = {
                 always = no
             }
             modifier = {
-                air_doctrine_cost_factor = 0.15
-                experience_gain_air_factor = -0.15
+                air_doctrine_cost_factor = 0.2
+                experience_gain_air_factor = -0.2
             }
             equipment_bonus = {
                 fighter_equipment = {
-                    build_cost_ic = 0.33
+                    build_cost_ic = 0.75
                     instant = yes
                 }
                 cas_equipment = {
-                    build_cost_ic = 0.33
+                    build_cost_ic = 0.75
+                    instant = yes
+                }
+                strategic_bomber = {
+                    build_cost_ic = 0.75
+                    instant = yes
+                }
+                blimp_equipment = {
+                    build_cost_ic = 0.75
                     instant = yes
                 }
             }
@@ -60,11 +68,113 @@ ideas = {
                 always = yes
             }
             research_bonus = {
-                air_tech_category = -0.25
+                air_tech_category = -0.30
+                cat_automated_warfare = -0.30
+            }
+            removal_cost = -1
+        }
+        large_cockpit_requirements = {
+            picture = repconn_rocket
+            allowed = {
+                always = no
+            }
+            modifier = {
+                air_doctrine_cost_factor = 0.1
+                experience_gain_air_factor = -0.1
+            }
+            equipment_bonus = {
+                fighter_equipment = {
+                    build_cost_ic = 0.50
+                    instant = yes
+                }
+                cas_equipment = {
+                    build_cost_ic = 0.50
+                    instant = yes
+                }
+                strategic_bomber = {
+                    build_cost_ic = 0.25
+                    instant = yes
+                }
+                blimp_equipment = {
+                    build_cost_ic = 0.25
+                    instant = yes
+                }
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            research_bonus = {
+                air_tech_category = -0.1
                 cat_automated_warfare = -0.25
             }
             removal_cost = -1
         }
+        ground_based_artificial_intelligence = {
+            picture = generic_control_robots
+            allowed = {
+                always = no
+            }
+            modifier = {
+                air_doctrine_cost_factor = 0.5
+                experience_gain_air_factor = -0.5
+            }
+            equipment_bonus = {
+                fighter_equipment = {
+                    build_cost_ic = 1
+                    instant = yes
+                }
+                cas_equipment = {
+                    build_cost_ic = 1
+                    instant = yes
+                }
+                strategic_bomber = {
+                    build_cost_ic = 1
+                    instant = yes
+                }
+                blimp_equipment = {
+                    build_cost_ic = 1
+                    instant = yes
+                }
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            research_bonus = {
+                air_tech_category = -0.5
+                cat_automated_warfare = 0.25
+                robotics_tech_category = 0.25
+                electronics = 0.25
+            }
+            removal_cost = -1
+        }
+        fbh_aeronautics_ineptitude = {
+            picture = generic_atom
+            allowed = {
+                always = no
+            }
+            equipment_bonus = {
+                fighter_equipment = {
+                    build_cost_ic = 0.66
+                    instant = yes
+                }
+                cas_equipment = {
+                    build_cost_ic = 0.66
+                    instant = yes
+                }
+				strategic_bomber = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            research_bonus = {
+                cat_automated_warfare = -0.90
+            }
+            removal_cost = -1
+        }
+        
         sun_victors_against_pallus = {
             picture = pantheon_lon
             removal_cost = -1
@@ -1431,14 +1541,14 @@ ideas = {
                 always = yes
             }
             modifier = {
-                caps_flat_income_modifier = 12
-                consumer_goods_expected_value = -0.05
-                army_speed_factor = 0.05
-                army_defence_factor = 0.05
-                army_attack_factor = 0.10
-                conscription = 0.02
-                max_planning = 0.1
-                attrition = -0.2
+                caps_flat_income_modifier = 25
+                consumer_goods_expected_value = -0.1
+                army_speed_factor = 0.1
+                army_defence_factor = 0.2
+                army_attack_factor = 0.2
+                conscription = 0.05
+                max_planning = 0.2
+                attrition = -0.4
             }
         }
         blp_procurement_specialists = {
@@ -1450,11 +1560,14 @@ ideas = {
                 always = yes
             }
             modifier = {
-                local_resources_factor = 0.1
-                trade_opinion_factor = 0.25
+                production_speed_buildings_factor = 0.1
+                production_speed_arms_factory_factor = 0.1
+                production_speed_dockyard_factor = 0.1
+                local_resources_factor = 0.2
+                trade_opinion_factor = 0.5
             }
             research_bonus = {
-                extraction_category = 0.05
+                extraction_category = 0.1
             }
         }
         bvc_expert_smugglers = {
@@ -1466,12 +1579,23 @@ ideas = {
                 always = yes
             }
             modifier = {
-                recon_factor = 0.1
-                army_core_defence_factor = 0.05
+                industrial_capacity_factory = 0.1
+                industrial_capacity_dockyard = 0.1
+                recon_factor = 0.2
+                army_core_defence_factor = 0.1
+                army_core_attack_factor = 0.1
             }
             equipment_bonus = {
                 infantry_equipment = {
-                    build_cost_ic = -0.05
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                motorized_equipment = {
+                    build_cost_ic = -0.1
+                    instant = yes
+                }
+                tank_equipment = {
+                    build_cost_ic = -0.1
                     instant = yes
                 }
             }

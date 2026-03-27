@@ -61,24 +61,13 @@ if = {
 		naval_invasion_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		naval_invasion_tech_non_mtg_1 = 1
-	}
-}
 
 add_ideas = {
 	mrr_recovering_from_four_fathers_raids
 	mrr_what_we_owe
 }
 
-set_stability = 0.4
+set_stability = 0.3
 set_war_support = 0.4
 set_research_slots = 3
 

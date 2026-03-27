@@ -855,6 +855,9 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			            set_technology = { 
+                railway_gun_unlock_tech = 1
+             }
 			effect_tooltip = { news_event = ncr_crisis.5 }
 			# Used to raise economy law to Awakening Giant, otherwise no change
 			# if = {
@@ -884,9 +887,7 @@ focus_tree = {
 					}
 				}
 				add_ideas = ncr_idea_republic_reserve
-			set_technology = {
-				railway_gun = 1
-				}
+
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
 					name = "The Bear's Vengeance"
@@ -936,9 +937,6 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
-				}
-				set_technology = {
-					railway_gun = 1
 				}
 				create_railway_gun = {
 					equipment = railway_gun_equipment_1
@@ -2604,12 +2602,6 @@ focus = {
 
 		x = -2
 		y = 1
-		mutually_exclusive = {
-			focus = ncr_professional_good_army
-		}
-		mutually_exclusive = {
-			focus = ncr_army_not_militias
-		}
 		relative_position_id = ncr_the_grand_army
 		completion_reward = {
 			#add_ideas = ncr_dana_point_academy_idea
@@ -2632,12 +2624,6 @@ focus = {
 		prerequisite = { focus = ncr_the_grand_army }
 		x = 0
 		y = 1
-		mutually_exclusive = {
-			focus = ncr_state_armories
-		}
-		mutually_exclusive = {
-			focus = ncr_army_not_militias
-		}
 		relative_position_id = ncr_the_grand_army
 		completion_reward = {
 			add_to_variable = { ncr_army_command_power = 20 }
@@ -2655,12 +2641,6 @@ focus = {
 		prerequisite = { focus = ncr_the_grand_army }
 		x = 2
 		y = 1
-		mutually_exclusive = {
-			focus = ncr_professional_good_army
-		}
-		mutually_exclusive = {
-			focus = ncr_state_armories
-		}
 		relative_position_id = ncr_the_grand_army
 		completion_reward = {
 			add_to_variable = { ncr_training_time_factor = -0.10 }
@@ -4424,10 +4404,6 @@ focus = {
 		cost = 15
 		x = 2
 		y = 1
-		mutually_exclusive = {
-			focus = boneyard_gun_runners3
-			focus = boneyard_gun_runners2
-		}
 
 		relative_position_id = boneyard_guns_start
 		prerequisite = { focus = boneyard_guns_start }
@@ -4470,10 +4446,6 @@ focus = {
 		x = -2
 		y = 1
 		relative_position_id = boneyard_guns_start
-		mutually_exclusive = {
-			focus = boneyard_gun_runners
-			focus = boneyard_gun_runners3
-		}
 
 		prerequisite = { focus = boneyard_guns_start }
 		completion_reward = {
@@ -4488,10 +4460,6 @@ focus = {
 		x = 0
 		y = 1
 		relative_position_id = boneyard_guns_start
-		mutually_exclusive = {
-			focus = boneyard_gun_runners
-			focus = boneyard_gun_runners2
-		}
 
 		prerequisite = { focus = boneyard_guns_start }
 		completion_reward = {
@@ -5753,6 +5721,46 @@ focus = {
 		}
 		relative_position_id = ncr_state_department
 		completion_reward = {
+			ARR = {
+				add_offsite_building = {
+    				type = industrial_complex
+					level = 10
+				}
+				add_offsite_building = {
+    				type = arms_factory
+					level = 10
+				}
+			}
+			VLT = {
+				add_offsite_building = {
+    				type = industrial_complex
+					level = 10
+				}
+				add_offsite_building = {
+    				type = arms_factory
+					level = 10
+				}
+			}
+			NEW = {
+				add_offsite_building = {
+    				type = industrial_complex
+					level = 10
+				}
+				add_offsite_building = {
+    				type = arms_factory
+					level = 10
+				}
+			}
+			EUR = {
+				add_offsite_building = {
+    				type = industrial_complex
+					level = 10
+				}
+				add_offsite_building = {
+    				type = arms_factory
+					level = 10
+				}
+			}
 			TIM = {
 				create_or_join_new_california = yes
 				hidden_effect = {

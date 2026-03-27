@@ -1,0 +1,437 @@
+ideas = {
+
+	country = {
+		fbh_cheap_armour = {
+
+			picture = ncr_ranger_idea
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.15
+					instant = yes
+				}
+			}
+		}
+		fbh_elite_force = {
+			picture = vengeful
+
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+				army_org_factor = 0.05
+				send_volunteer_size = 4
+                send_volunteer_divisions_required = -1
+			}
+		}
+		fbh_elite_force_2 = {
+			picture = vengeful
+
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.25
+				army_defence_factor = 0.25
+				army_org_factor = 0.065
+				send_volunteer_size = 8
+                send_volunteer_divisions_required = -1
+			}
+		}
+		fbh_large_force = {
+			picture = vengeful
+
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_size = 8
+                send_volunteer_divisions_required = -1
+				heat_attrition_factor = -0.10
+				army_morale_factor = 0.10
+				supply_consumption_factor = -0.05
+			}
+		}
+		fbh_large_force_2 = {
+			picture = vengeful
+
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				send_volunteer_size = 16
+                send_volunteer_divisions_required = -1
+				heat_attrition_factor = -0.30
+				army_morale_factor = 0.20
+				supply_consumption_factor = -0.15
+			}
+		}
+		fbh_walking_tank = {
+			picture = vengeful
+
+			allowed = {
+			}
+			removal_cost = -1
+			equipment_bonus = {
+				power_armor_equipment = {
+					defense = 0.05
+					hardness = 0.10
+					reliability = 0.10
+					instant = yes
+				}
+			}
+		}
+		fbh_training_army = {
+			picture = vengeful
+
+			allowed = {
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.05
+			}
+		}
+		fbh_ignorant_fools = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				global_building_slots_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		
+		fbh_knights_all_around = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.01
+			}
+		}
+		
+		fbh_forge_sharing = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		
+		fbh_shining_example_of_floridian_technocracy = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 14
+			}
+		}
+		
+		fbh_construction_bots = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		fbh_long_range_comms = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				diplomacy_distance = 15000
+			}
+		}
+		
+		fbh_steel_aura = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				power_armor_equipment = {
+					hardness = 0.1
+					soft_attack = 0.05
+					hard_attack = 0.05
+				}
+			}
+		}
+		
+		fbh_over_there = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_size = 6
+			}
+		}
+		
+		fbh_ad_victoriam = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				army_morale_factor = 0.05
+				army_org_factor = 0.05
+				weekly_manpower = 15
+				stability_weekly = 0.002
+				war_support_weekly = 0.002
+			}
+		}
+		
+		fbh_running_gun_blues = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.1
+				dig_in_speed_factor = 0.1
+			}
+		}
+		
+		fbh_navajo_metalworks = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				power_armor_equipment = {
+					build_cost_ic = -0.025
+				}
+				combat_robot_equipment = {
+					build_cost_ic = -0.05
+				}
+				support_robot_equipment = {
+					build_cost_ic = -0.05
+				}
+			}
+		}
+		
+		fbh_clanker_army = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				combat_robot_equipment = {
+					build_cost_ic = -0.1
+				}
+				support_robot_equipment = {
+					build_cost_ic = -0.1
+				}
+			}
+		}
+		
+		fbh_long_march = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.35
+			}
+		}
+		
+		fbh_long_march_2 = {
+
+			picture = generic_morale_bonus
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.35
+				war_support_factor = -0.3
+			}
+		}
+
+		fbh_peace_in_our_time = {
+
+			picture=generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				cant_justify_on_countries = 1
+				cant_be_justified_on = 1
+			}
+		}
+		
+				fbh_lag_reducer = {
+
+			picture=generic_morale_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -3
+				conscription_factor = -30
+			}
+		}
+	}
+}

@@ -114,7 +114,7 @@ equipments = {
 		naval_speed = 6
 		reliability = 0.7
 
-		naval_range = 2100 #base is 900
+		naval_range = 3100 #base is 900
 
 		max_strength = 100 #base is 52
 
@@ -307,7 +307,7 @@ equipments = {
 		surface_detection = 24
 		surface_visibility = 32
 		reliability = 0.75
-		naval_range = 2400 #base is 1200
+		naval_range = 3400 #base is 1200
 		max_strength = 100 #base is 78
 		armor_value = 6 #base is 2 from previous
 
@@ -406,7 +406,7 @@ equipments = {
 		surface_detection = 28
 		surface_visibility = 27
 		reliability = 0.8
-		naval_range = 2600 #base is 1400
+		naval_range = 3600 #base is 1400
 		max_strength = 150 #base is 104
 		armor_value = 7 #base is 4
 
@@ -507,7 +507,7 @@ equipments = {
 		surface_detection = 32
 		surface_visibility = 23
 		reliability = 0.85
-		naval_range = 3000 #base is 1800
+		naval_range = 4000 #base is 1800
 		max_strength = 175 #base is 130
 		armor_value = 9 #base is 4
 
@@ -609,7 +609,7 @@ equipments = {
 		surface_detection = 36
 		surface_visibility = 18
 		reliability = 0.9
-		naval_range = 3200 #base is 2000
+		naval_range = 4200 #base is 2000
 		max_strength = 200 #base is 153
 		armor_value = 11 #base is 4
 

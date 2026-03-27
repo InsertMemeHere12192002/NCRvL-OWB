@@ -39,6 +39,7 @@ set_technology = {
 	electronics_tech_level_tribal = 1
 	electronics_tech_level_settler = 1
 	electronics_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
 	standard_weaponry_tech = 1
 	ballistic_weaponry_tech_1 = 1
 	tribal_civilization = 1
@@ -55,12 +56,25 @@ set_technology = {
 	resource_generator_water_tech_1 = 1
 	resource_generator_power_tech_1 = 1
 	resource_generator_metal_tech_1 = 1
+	demolitions_weaponry_tech = 1
+	explosive_demolitions_weaponry_tech_2 = 1
+	fireteam_weaponry_tech = 1
+	ballistic_fireteam_weaponry_tech_2 = 1
+	unit_training_tech_1 = 1
+	melee_weaponry_tech_1 = 1
+	unit_training_tech_2 = 1
+	unit_training_tech_3 = 1
+	warrior_equipment = 1
 	high_fighter_unlock_tech = 1
 	anti_tank_equipment_tech_1 = 1
 	spec_ops_equipment_tech_1 = 1
 	support_weaponry = 1
 	recon_company_tech_1 = 1
+	spec_ops_equipment_tech_2 = 1
+	hardening_armour_tech = 1
 	stripped_pa_tech = 1
+	weight_support_frame_pa_tech_1 = 1
+	weight_support_frame_pa_tech_2 = 1
 	glider_tech = 1
 	elite_army = 1
 	pragmatic_aviation_doctrine = 1
@@ -92,26 +106,11 @@ if = {
 		naval_subsurface_module_tech_1 = 1
 	}
 }
-if = {
-	limit = {
-		NOT = { has_dlc = "Man the Guns" }
-	}
-	set_technology = {
-		nautics_tech_non_mtg_1 = 1
-		nautics_tech_non_mtg_2 = 1
-		light_navy_hull_tech_non_mtg_1 = 1
-		waterproof_sealing_tech_non_mtg = 1
-		medium_navy_hull_tech_non_mtg_1 = 1
-		naval_invasion_tech_non_mtg_1 = 1
-		multi_deck_construction_tech_non_mtg = 1
-		heavy_navy_hull_tech_non_mtg_1 = 1
-	}
-}
 
 set_stability = 0.65
 set_war_support = 0.3
 set_convoys = 25
-set_research_slots = 5
+set_research_slots = 6
 set_country_flag = is_settler_nation
 set_country_flag = has_unique_manpower_law
 set_country_flag = is_chinese_nation
@@ -177,6 +176,19 @@ create_equipment_variant = {
 	}
 }
 
+add_offsite_building = {
+    type = industrial_complex
+	level = 15
+}
+add_offsite_building = {
+    type = arms_factory
+	level = 15
+}
+add_offsite_building = {
+    type = dockyard
+	level = 15
+}
+
 create_equipment_variant = {
 	name = "Destroyer"
 	type = ship_hull_medium_1
@@ -202,3 +214,5 @@ set_party_name = { ideology = people  name = "Vagrants"  long_name = "Vagrants" 
 set_party_name = { ideology = ruler  name = "The Crane School" long_name = "The Crane Clique" }
 set_party_name = { ideology = elites  name = "The Dragon School" long_name = "The Dragon School" }
 set_party_name = { ideology = intellectuals  name = "Brotherhood Sympathizers" long_name = "Brotherhood Sympathizers" }
+
+add_manpower = 2250

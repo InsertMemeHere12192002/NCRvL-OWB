@@ -1,0 +1,145 @@
+﻿division_template = {
+	name = "Brotherhood Patrol"
+	regiments = {
+		heavy_infantry = { x = 0 y = 0 }
+		heavy_infantry = { x = 0 y = 1 }
+		heavy_infantry = { x = 1 y = 0 }
+		heavy_infantry = { x = 1 y = 1 }
+		heavy_infantry = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Lost Hills Combat Armour Detachment"
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Lost Hills Power Armour Detachment"
+	regiments = {
+		power_armour = { x = 0 y = 0 }
+		power_armour = { x = 0 y = 1 }
+		power_armour = { x = 0 y = 2 }
+		power_armour = { x = 1 y = 0 }
+		power_armour = { x = 1 y = 1 }
+		power_armour = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "Steel Legion"
+		location = 3418
+		division_template = "Lost Hills Power Armour Detachment"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "1st Initiates"
+		location = 3418
+		division_template = "Lost Hills Combat Armour Detachment"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "2nd Initiates"
+		location = 3418
+		division_template = "Lost Hills Combat Armour Detachment"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+		name = "3rd Initiates"
+		location = 3418
+		division_template = "Lost Hills Combat Armour Detachment"
+		start_experience_factor = 1.0
+		start_equipment_factor = 1.0
+	}
+	division = {
+        name = "Navarro Knights"
+        location = 3418
+        division_template = "Lost Hills Power Armour Detachment"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+    }
+    division = {
+        name = "Navarro Initiates"
+        location = 3418
+        division_template = "Lost Hills Combat Armour Detachment"
+        start_experience_factor = 1.0
+        start_equipment_factor = 1.0
+    }
+}
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = energy_equipment_1
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = power_armor_equipment_1
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = anti_tank_equipment_1
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = fireteam_equipment_1
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = demolitions_equipment_1
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = spec_ops_equipment_2
+			creator = "BOS"
+		}
+		requested_factories = 1
+		progress = 0.75
+		efficiency = 100
+	}
+}
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

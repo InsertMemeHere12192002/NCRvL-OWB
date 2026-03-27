@@ -1232,4 +1232,15 @@ characters = {
 			logistics_skill = 2
 		}
 	}
+		BON_bill_calhoun = {
+		name = BON_BILL_CALHOUN_NAME
+		portraits = {
+			army = {
+				large = GFX_Portrait_NCR_calhoun_follower
+			}
+			civilian = {
+				large = GFX_Portrait_NCR_calhoun_follower
+			}
+		}
+	}
 }
