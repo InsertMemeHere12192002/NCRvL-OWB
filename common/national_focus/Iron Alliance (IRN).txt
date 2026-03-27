@@ -24,7 +24,7 @@ focus_tree = {
 		}
 		dynamic = yes
 		cost = 7
-		x = 13
+		x = 11
 		y = 1
 		completion_reward = {
 			country_event = nf_raider.0
@@ -89,6 +89,7 @@ focus_tree = {
 				add_attack = 1
 			}
 			add_manpower = 500
+			add_ideas = slave_labour1
 		}
 	}
 	focus = {
@@ -264,12 +265,12 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
-				amount = 80
+				amount = 200
 				producer = BAG
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
-				amount = 20
+				amount = 200
 				producer = NCR
 			}
 			custom_effect_tooltip = oregon_cannibal_new_line
@@ -369,13 +370,14 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				bonus = 0.5
-				uses = 1
+				uses = 2
 				category = power_armor_tech_category
 				ahead_reduction = 1
 			}
 			set_temp_variable = {
 				caps_to_add = 100
 			}
+			add_ideas = raider_power_armour_familiarity
 			add_caps = yes
 		}
 	}
@@ -389,17 +391,15 @@ focus_tree = {
 			focus = irn_deal_with_new_epsilon
 		}
 		relative_position_id = irn_deal_with_new_epsilon
-		available = {
-			NOT = {
-				has_country_leader_with_trait = isolationist
-			}
-			borders_blackrock_federation = yes
-			is_subject = no
-			is_in_faction = no
-			at_peace_with_blackrock_federation = yes
-		}
+		will_lead_to_war_with = BLC
+		will_lead_to_war_with = GLW
 		completion_reward = {
-			ask_to_join_blackrock_federation = yes
+			BLC = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			create_wargoal = {
+				type = annex_everything
+				target = GLW
+			}
+			add_war_support = 0.10
 		}
 		#Wait for LAC to border us if we have legion influence, 50/50 on if we join either if so.
 		ai_will_do = {
@@ -420,7 +420,7 @@ focus_tree = {
 	focus = {
 		id = irn_powderkeg
 		icon = GFX_goal_focus_powderkeg
-		cost = 100 #Kind of long because its not timegated for the player
+		cost = 60 #Kind of long because its not timegated for the player
 		x = -1
 		y = 1
 		prerequisite = {
@@ -650,17 +650,13 @@ focus_tree = {
 			focus = irn_deal_with_new_epsilon
 		}
 		relative_position_id = irn_deal_with_new_epsilon
-		available = {
-			NOT = {
-				has_country_leader_with_trait = isolationist
-			}
-			borders_platte_trade_league = yes
-			is_subject = no
-			is_in_faction = no
-			at_peace_with_platte_trade_league = yes
-		}
+		will_lead_to_war_with = DRY
 		completion_reward = {
-			ask_to_join_platte_trade_league = yes
+			create_wargoal = {
+				type = annex_everything
+				target = DRY
+			}
+			add_war_support = 0.10
 		}
 		ai_will_do = {
 			base = 100
@@ -685,34 +681,31 @@ focus_tree = {
 			LUM = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
+			OR = {
+				TTM = {
+					owns_state = 38
+				}
+				NOT = {
+					country_exists = TTM
+				}
+			}
 			ai_has_no_other_wars_or_wargoals = yes
-			is_in_faction = no
 		}
 		relative_position_id = irn_plaguelands_2
-		ai_will_do = {
-			base = 25
-			modifier = {
-				factor = 0
-				OR = {
-					has_country_flag = IRN_ai_behavior_BLACKROCK
-					has_country_flag = IRN_ai_behavior_LEGION
-					has_country_flag = IRN_ai_behavior_Platte
-				}
-				date < 2281.01.01
-			}
-		}
-		will_lead_to_war_with = GLC
-		will_lead_to_war_with = TLR
+		will_lead_to_war_with = TOB
+		will_lead_to_war_with = TTM
 		completion_reward = {
-			TLR = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
-			GLC = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
-			custom_effect_tooltip = {
-				localization_key = ROOT_CHANGE_TRAIT
-				CHANGE = GAIN
-				TRAIT = isolationist
-			}
-			hidden_effect = {
-				add_country_leader_trait = isolationist
+			TOB = { ROOT = { grant_wargoals_on_core_states_of_prev_force_ai_war = yes } }
+			if = {
+				limit = {
+					38 = {
+						is_owned_by = TTM
+					}
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = TTM
+				}
 			}
 		}
 	}
@@ -1095,6 +1088,8 @@ focus_tree = {
 				remove_idea = colorado_resources
 				add_idea = colorado_resources_upgrade
 			}
+			add_ideas = caps_raider_nf_idea_2
+
 		}
 	}
 	#####################
@@ -1270,6 +1265,7 @@ focus_tree = {
 				uses = 1
 				category = extraction_category
 			}
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -1620,321 +1616,6 @@ focus_tree = {
 		}
 	}
 	#########################
-	### Naval // Air Side ###
-	#########################
-	focus = {
-		id = colorado_consolidated
-		icon = GFX_goal_colorado_sea_and_air
-		cost = 30
-		prerequisite = {
-			focus = colorado_3
-		}
-		relative_position_id = colorado_right_opener
-		x = 9
-		y = 0
-		completion_reward = {
-			army_experience = 50
-		}
-	}
-	focus = {
-		id = colorado_air_base
-		icon = GFX_goal_colorado_air_tower
-		cost = 30
-		available = {
-			has_tech = glider_tech
-		}
-		prerequisite = {
-			focus = colorado_consolidated
-		}
-		mutually_exclusive = { focus = colorado_naval_base }
-		relative_position_id = colorado_consolidated
-		x = -3
-		y = 1
-		completion_reward = {
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = power_armor_tech_category
-				ahead_reduction = 2
-			}
-		}
-	}
-	focus = {
-		id = colorado_air_1
-		icon = GFX_goal_generic_airbases_focus
-		cost = 30
-		prerequisite = {
-			focus = colorado_air_base
-		}
-		relative_position_id = colorado_air_base
-		x = -2
-		y = 1
-		completion_reward = {
-			add_tech_bonus = {
-				name = tech_bonus_tree_tt
-				bonus = 0.5
-				uses = 2
-				category = air_tech_category
-			}
-		}
-	}
-	focus = {
-		id = colorado_air_2
-		icon = GFX_goal_generic_airship_1
-		cost = 30
-		prerequisite = {
-			focus = colorado_air_base
-		}
-		relative_position_id = colorado_air_base
-		x = 2
-		y = 1
-		completion_reward = {
-			add_equipment_to_stockpile = {
-				type = fighter_equipment_2
-				amount = 50
-				producer = USA
-			}
-		}
-	}
-	focus = {
-		id = colorado_air_3
-		icon = GFX_goal_generic_vehicle_plane
-		cost = 30
-		prerequisite = {
-			focus = colorado_air_base
-		}
-		relative_position_id = colorado_air_base
-		x = 0
-		y = 1
-		completion_reward = {
-			air_experience = 50
-		}
-	}
-	focus = {
-		id = colorado_air_4
-		icon = GFX_goal_generic_airplane
-		cost = 30
-		prerequisite = {
-			focus = colorado_air_3
-		}
-		relative_position_id = colorado_air_3
-		x = -1
-		y = 1
-		completion_reward = {
-			add_ideas = colorado_air_hands
-		}
-	}
-	focus = {
-		id = colorado_air_5
-		icon = GFX_goal_commie_plane
-		cost = 30
-		prerequisite = {
-			focus = colorado_air_3
-		}
-		relative_position_id = colorado_air_3
-		x = 1
-		y = 1
-		completion_reward = {
-			add_ideas = colorado_night_skies
-		}
-	}
-	focus = {
-		id = colorado_naval_base
-		icon = GFX_goal_colorado_sea_trade
-		cost = 30
-		available = {
-			any_owned_state = {
-				is_coastal = yes
-			}
-		}
-		prerequisite = {
-			focus = colorado_consolidated
-		}
-		mutually_exclusive = { focus = colorado_air_base }
-		relative_position_id = colorado_consolidated
-		x = 3
-		y = 1
-		completion_reward = {
-			random_owned_state = {
-				limit = {
-					is_valid_state_for_3_dockyards = yes
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = naval_base
-					level = 1
-					instant_build = yes
-					province = {
-						all_provinces = yes
-						limit_to_coastal = yes
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = colorado_navy_1
-		icon = GFX_goal_generic_boat_boat
-		cost = 30
-		prerequisite = {
-			focus = colorado_naval_base
-		}
-		relative_position_id = colorado_naval_base
-		x = -2
-		y = 1
-		completion_reward = {
-			set_temp_variable = {
-				caps_to_add = 75
-			}
-			add_caps = yes
-			random_owned_state = {
-				limit = {
-					is_coastal = yes
-					is_impassable = no
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = dockyard
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = colorado_navy_2
-		icon = GFX_goal_generic_boat_canoe
-		cost = 30
-		prerequisite = {
-			focus = colorado_naval_base
-		}
-		relative_position_id = colorado_naval_base
-		x = 2
-		y = 1
-		completion_reward = {
-			custom_effect_tooltip = wyoming_spawn_fleet_tt
-			hidden_effect = {
-				ROOT = {
-					create_equipment_variant = {
-						name = "River Boat"
-						type = ship_hull_light_1
-						parent_version = 0
-					}
-					create_ship = {
-						type = ship_hull_light_1
-						equipment_variant = "River Boat"
-						creator = ROOT
-						name = "WS Wilson"
-					}
-					create_ship = {
-						type = ship_hull_light_1
-						equipment_variant = "River Boat"
-						creator = ROOT
-						name = "WS Pickett"
-					}
-					create_ship = {
-						type = ship_hull_light_1
-						equipment_variant = "River Boat"
-						creator = ROOT
-						name = "WS Colcord"
-					}
-				}
-			}
-			add_tech_bonus = {
-				name = tech_bonus_tree_tt
-				category = naval_tech_category
-				bonus = 0.5
-				uses = 2
-			}
-		}
-	}
-	focus = {
-		id = colorado_navy_3
-		icon = GFX_goal_TIM_patch_small-boat_sailing
-		cost = 30
-		prerequisite = {
-			focus = colorado_naval_base
-		}
-		relative_position_id = colorado_naval_base
-		x = 0
-		y = 1
-		completion_reward = {
-			add_tech_bonus = {
-				name = tech_bonus_tree_tt
-				bonus = 0.75
-				uses = 2
-				category = naval_invasion_tech_category
-			}
-		}
-	}
-	focus = {
-		id = colorado_navy_4
-		icon = GFX_goal_generic_boat_speed_boat
-		cost = 30
-		prerequisite = {
-			focus = colorado_navy_3
-		}
-		relative_position_id = colorado_navy_3
-		x = -1
-		y = 1
-		completion_reward = {
-			add_ideas = colorado_building_boats
-		}
-	}
-	focus = {
-		id = colorado_navy_5
-		icon = GFX_goal_generic_boat_sailboat_small
-		cost = 30
-		prerequisite = {
-			focus = colorado_navy_3
-		}
-		relative_position_id = colorado_navy_3
-		x = 1
-		y = 1
-		completion_reward = {
-			#add_doctrine_cost_reduction = {
-			#	cost_reduction = 0.25
-			#	uses = 4
-			#	category = cat_naval_doctrine
-			#}
-			navy_experience = 50
-		}
-	}
-	focus = {
-		id = colorado_master_of_rivers_and_rain
-		icon = GFX_goal_colorado_battle_god
-		cost = 30
-		prerequisite = {
-			focus = colorado_air_4
-		}
-		prerequisite = {
-			focus = colorado_air_5
-		}
-		prerequisite = {
-			focus = colorado_navy_4
-		}
-		prerequisite = {
-			focus = colorado_navy_5
-		}
-		relative_position_id = colorado_air_5
-		x = 2
-		y = 1
-		completion_reward = {
-			air_experience = 100
-			navy_experience = 100
-		}
-	}
-	#########################
 	## 'Sightseeing' Branch #
 	#########################
 	focus = {
@@ -1944,8 +1625,8 @@ focus_tree = {
 		prerequisite = {
 			focus = colorado_3
 		}
-		relative_position_id = colorado_consolidated
-		x = 13
+		relative_position_id = colorado_right_opener
+		x = 16
 		y = 0
 		completion_reward = {
 			add_ideas = colorado_sightseers_idea
@@ -1956,7 +1637,7 @@ focus_tree = {
 		icon = GFX_goal_generic_boulder_dome
 		cost = 30
 		available = {
-			has_political_power > 50
+			has_political_power > 25
 			owns_state = 568
 		}
 		prerequisite = {
@@ -1966,7 +1647,7 @@ focus_tree = {
 		x = -1
 		y = 2
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = -25
 			568 = {
 				if = {
 					limit = {
@@ -1997,7 +1678,7 @@ focus_tree = {
 		icon = GFX_goal_TTM_Nursery
 		cost = 30
 		available = {
-			has_political_power > 50
+			has_political_power > 25
 			owns_state = 38
 			NOT = {
 				country_exists = TTM
@@ -2010,7 +1691,7 @@ focus_tree = {
 		x = -5
 		y = 2
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = -25
 			38 = {
 				if = {
 					limit = {
@@ -2041,7 +1722,7 @@ focus_tree = {
 		icon = GFX_goal_TTM_Vault_29
 		cost = 30
 		available = {
-			has_political_power > 100
+			has_political_power > 50
 			TTM = {
 				exists = no
 				all_core_land_owned_by_prev_sphere = yes
@@ -2054,7 +1735,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		completion_reward = {
-			add_political_power = -100
+			add_political_power = -50
 			554 = {
 				if = {
 					limit = {
@@ -2064,7 +1745,7 @@ focus_tree = {
 					}
 					add_core_of = OWNER
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_resource = {
 					type = water
 					amount = 4
@@ -2081,7 +1762,7 @@ focus_tree = {
 		icon = GFX_goal_TTM_BLC_Flag
 		cost = 30
 		available = {
-			has_political_power > 50
+			has_political_power > 25
 			owns_state = 572
 		}
 		prerequisite = {
@@ -2091,7 +1772,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = -25
 			572 = {
 				if = {
 					limit = {
@@ -2122,7 +1803,7 @@ focus_tree = {
 		icon = GFX_goal_ORO_Pyramid
 		cost = 30
 		available = {
-			has_political_power > 50
+			has_political_power > 25
 			owns_state = 90
 		}
 		prerequisite = {
@@ -2132,7 +1813,7 @@ focus_tree = {
 		x = 3
 		y = 2
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = -25
 			90 = {
 				if = {
 					limit = {
@@ -2163,7 +1844,7 @@ focus_tree = {
 		icon = GFX_goal_hvr_holy_tithings
 		cost = 30
 		available = {
-			has_political_power > 100
+			has_political_power > 50
 			INR = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
@@ -2175,7 +1856,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		completion_reward = {
-			add_political_power = -100
+			add_political_power = -50
 			630 = {
 				if = {
 					limit = {
@@ -2185,7 +1866,7 @@ focus_tree = {
 					}
 					add_core_of = OWNER
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_resource = {
 					type = metal
 					amount = 6
@@ -2248,7 +1929,7 @@ focus_tree = {
 		icon = GFX_goal_max_signs_of_battle
 		cost = 30
 		available = {
-			has_political_power > 50
+			has_political_power > 25
 			owns_state = 1032
 		}
 		prerequisite = {
@@ -2258,7 +1939,7 @@ focus_tree = {
 		x = 1
 		y = 2
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = -25
 			1032 = {
 				if = {
 					limit = {
@@ -2289,8 +1970,8 @@ focus_tree = {
 		icon = GFX_goal_max_site_b
 		cost = 30
 		available = {
-			has_political_power > 100
-			MAX = {
+			has_political_power > 50
+			MXC = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
 		}
@@ -2305,20 +1986,20 @@ focus_tree = {
 				limit = {
 					NOT = {
 						412 = {
-							is_core_of = ROOT
+							is_core_of = OWNER
 						}
 					}
 				}
-				add_political_power = -100
+				add_political_power = -50
 			}
 			412 = {
 				if = {
 					limit = {
 						NOT = {
-							is_core_of = PREV
+							is_core_of = OWNER
 						}
 					}
-					add_core_of = PREV
+					add_core_of = OWNER
 				}
 				add_extra_state_shared_building_slots = 4
 				add_resource = {
@@ -2333,7 +2014,7 @@ focus_tree = {
 		icon = GFX_partytime
 		cost = 30
 		available = {
-			has_political_power > 100
+			has_political_power > 50
 			ROB = {
 				all_core_land_owned_by_prev_sphere = yes
 			}
@@ -2345,7 +2026,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
-			add_political_power = -100
+			add_political_power = -50
 			524 = {
 				if = {
 					limit = {
@@ -2355,7 +2036,7 @@ focus_tree = {
 					}
 					add_core_of = OWNER
 				}
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 4
 				add_resource = {
 					type = metal
 					amount = 4
@@ -2372,17 +2053,11 @@ focus_tree = {
 		icon = GFX_goal_cip_series
 		cost = 30
 		available = {
-			if = {
-				limit = {
-					NOT = {
-						636 = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				has_political_power > 100
+						has_political_power > 50
+
+			NAV = {
+				all_core_land_owned_by_prev_sphere = yes
 			}
-			owns_state = 636
 		}
 		prerequisite = {
 			focus = colorado_sightseeing
@@ -2395,20 +2070,20 @@ focus_tree = {
 				limit = {
 					NOT = {
 						636 = {
-							is_core_of = ROOT
+							is_core_of = OWNER
 						}
 					}
 				}
-				add_political_power = -100
+				add_political_power = -50
 			}
 			636 = {
 				if = {
 					limit = {
 						NOT = {
-							is_core_of = PREV
+							is_core_of = OWNER
 						}
 					}
-					add_core_of = PREV
+					add_core_of = OWNER
 				}
 				add_extra_state_shared_building_slots = 4
 				add_resource = {
@@ -2423,7 +2098,7 @@ focus_tree = {
 		icon = GFX_goal_generic_power_armour_raider_3
 		cost = 30
 		available = {
-			has_political_power > 50
+			has_political_power > 25
 			owns_state = 430
 		}
 		prerequisite = {
@@ -2433,7 +2108,7 @@ focus_tree = {
 		x = 5
 		y = 2
 		completion_reward = {
-			add_political_power = -50
+			add_political_power = -25
 			430 = {
 				if = {
 					limit = {
@@ -2460,17 +2135,11 @@ focus_tree = {
 		icon = GFX_goal_PLS_Sun_Dogs
 		cost = 30
 		available = {
-			if = {
-				limit = {
-					NOT = {
-						366 = {
-							is_core_of = ROOT
-						}
-					}
-				}
-				has_political_power > 50
+						has_political_power > 50
+
+			SUN = {
+				all_core_land_owned_by_prev_sphere = yes
 			}
-			owns_state = 366
 		}
 		prerequisite = {
 			focus = colorado_sightseeing
@@ -2483,7 +2152,7 @@ focus_tree = {
 				limit = {
 					NOT = {
 						366 = {
-							is_core_of = ROOT
+							is_core_of = OWNER
 						}
 					}
 				}
@@ -2493,10 +2162,10 @@ focus_tree = {
 				if = {
 					limit = {
 						NOT = {
-							is_core_of = PREV
+							is_core_of = OWNER
 						}
 					}
-					add_core_of = PREV
+					add_core_of = OWNER
 				}
 				add_extra_state_shared_building_slots = 4
 				add_resource = {
@@ -2524,6 +2193,9 @@ focus_tree = {
 				remove_idea = colorado_sightseers_idea
 				add_idea = colorado_sightseers_idea_2
 			}
+			add_ideas = raider_new_age_weaponry
 		}
 	}
+	shared_focus = doped_soldiers
+	shared_focus = new_leadership
 }
