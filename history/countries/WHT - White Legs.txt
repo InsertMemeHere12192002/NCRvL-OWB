@@ -133,9 +133,9 @@ add_ideas = {
 	outsider_law_volunteers
 	partial_economic_mobilisation
 }
-hidden_effect = {
-	add_ideas = tech_air_production_nerf_idea
-}
+# hidden_effect = {
+# 	add_ideas = tech_air_production_nerf_idea
+# }
 set_variable = { never_return_stolen_territory = 1 }
 
 recruit_character = WHT_salt_upon_wounds

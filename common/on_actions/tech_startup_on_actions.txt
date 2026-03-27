@@ -1,0 +1,32 @@
+# On research complete blocks in technologies do not apply if the tech is added via history. This file is needed to remedy that.
+# Currently, for efficiency, only basic techs for agriculture are included as no nations start with more upon this file's creation and most likely none ever will
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				limit = {
+					has_tech = pre_agriculture_industry_tech
+				}
+				add_manpower = 250
+			}
+			every_country = {
+				limit = {
+					has_tech = agriculture_industry_tech_1
+				}
+				add_manpower = 500
+			}
+			every_country = {
+				limit = {
+					has_tech = agriculture_industry_tech_2
+				}
+				add_manpower = 500
+			}
+			# every_country = {
+			# 	limit = {
+			# 		has_tech = glider_tech
+			# 	}
+			# 	add_ideas = tech_air_production_nerf_idea
+			# }
+		}
+	}
+}
