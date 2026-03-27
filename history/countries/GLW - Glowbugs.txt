@@ -1,0 +1,123 @@
+﻿capital = 568
+oob = "GLW_2275"
+
+set_technology = {
+	basic_supply_transport_tech = 1
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	#infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	#support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	#power_armour_tech_level_settler = 1
+	#power_armour_tech_level_scientific = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	creatures_tech_level_tribal = 1
+	creatures_tech_level_settler = 1
+	#creatures_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	#air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	#naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	#habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	#electronics_tech_level_scientific = 1
+	#
+	ghoul_civilization = 1
+	feral_ghouls_unlock_tech = 1
+	feral_tech_access_tech = 1
+	tool_engineering = 1
+	basic_industry_tech = 1
+	pre_construction_industry_tech = 1
+	extraction_industry_tech_1 = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	support_weaponry = 1
+	demolitions_weaponry_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+}
+
+set_stability = 0.4
+set_war_support = 0.2
+set_convoys = 50
+set_research_slots = 3
+
+#set_country_flag = is_settler_nation
+set_country_flag = is_ghoul_nation
+set_country_flag = unique_advisor_set
+set_country_flag = grand_doctrine_ai
+set_country_flag = grand_infantry_doctrine_ai
+set_country_flag = is_colorado_newmexico_nation
+
+set_country_flag = grand_doctrine_ai
+set_country_flag = grand_infantry_doctrine_ai
+
+#We are scardeycats and Patches doesn't want to fight pointless wars!
+set_variable = { always_return_stolen_territory = 1 }
+
+set_politics = {
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 25
+	elites = 10
+	intellectuals = 0
+	ruler = 65
+}
+
+recruit_character = GLW_PATCHES
+recruit_character = GLW_STITCHES
+recruit_character = GLW_COUPLE
+recruit_character = GLW_FRECKLES
+recruit_character = GLW_JOB
+#
+recruit_character = GLW_BRIGHT
+recruit_character = GLW_HERTZ
+recruit_character = GLW_DIRTY_HARRY
+recruit_character = GLW_WHITE_BARON
+recruit_character = GLW_SHEPARD
+recruit_character = GLW_CAPTAIN_COLLINS
+recruit_character = GLW_MORGEN
+recruit_character = GLW_PROFESSOR_CROSS
+recruit_character = GLW_STINNES
+recruit_character = GLW_SCHMIDT
+recruit_character = GLW_SMILEY
+#The Refugees
+recruit_character = GLW_BELGIAN
+recruit_character = GLW_NILEAF
+recruit_character = GLW_WAGNER
+recruit_character = GLW_STEED
+recruit_character = GLW_RUSSIAN
+recruit_character = GLW_NIX
+recruit_character = GLW_XUE_WEI
+#Dummy
+recruit_character = GLW_JACKSON #Iron Mercenary;Unit Leader
+recruit_character = GLW_DIRTMAN #Wild Wasteland Rule;Unit Leader
+
+add_ideas = {
+	normies_law_allowed
+	glw_scavengers_of_boulder
+}

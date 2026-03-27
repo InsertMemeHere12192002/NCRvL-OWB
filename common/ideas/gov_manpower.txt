@@ -1447,7 +1447,7 @@ ideas = {
 				naval_light_hull_tech_category = 0.2
 			}
 			modifier = {
-				conscription = 0.2
+				conscription = 0.15
 				special_forces_cap = 0.1
 				stability_factor = 0.2
 			}

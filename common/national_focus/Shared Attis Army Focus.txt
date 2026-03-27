@@ -3655,6 +3655,7 @@ focus_tree = {
 					ideology = warlordship
 					traits = {
 						paranoid
+						silent_workhorse
 					}
 					expire = "3000.01.01.01"
 					id = -1

@@ -1,0 +1,236 @@
+﻿capital = 572
+oob = "BLC_2275"
+set_naval_oob = "BLC_2275_naval"
+
+set_technology = {
+	basic_supply_transport_tech = 1
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	#infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	#support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	#special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	#power_armour_tech_level_settler = 1
+	#power_armour_tech_level_scientific = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	#robotics_tech_level_tribal = 1
+	#robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	#air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	#naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	#habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	#exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	#electronics_tech_level_settler = 1
+	#electronics_tech_level_scientific = 1
+	tribal_tech_visibility_tech = 1
+	#tribal_tech_access_tech = 1
+	#
+	tool_engineering = 1
+	basic_industry_tech = 1
+	heavy_infantry_tech_1 = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	spec_ops_equipment_tech_1 = 1
+	support_weaponry = 1
+	fireteam_weaponry_tech = 1
+	anti_tank_equipment_tech_1 = 1
+	demolitions_weaponry_tech = 1
+	med_company_tech_1 = 1
+	recon_company_tech_1  = 1
+	logistics_company_tech_1 = 1
+	#Ahead of time by a bit due to locked templates
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	medium_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+	#naval_module_tech = 1
+	#naval_armour_tech_1 = 1
+	#naval_pd_module_tech_1 = 1
+	#naval_communications_module_tech_1 = 1
+	#naval_weapons_module_tech = 1
+}
+
+#set_country_flag = is_settler_nation
+set_country_flag = has_unique_manpower_law
+set_country_flag = has_unique_economic_laws
+set_country_flag = caps_market_prevented
+set_country_flag = unique_advisor_set
+set_country_flag = grand_doctrine_ai
+set_country_flag = grand_infantry_doctrine_ai
+set_country_flag = is_colorado_newmexico_nation
+
+set_stability = 0.22
+set_war_support = 0.18
+set_convoys = 12
+set_research_slots = 3
+
+#BLC cant give up territory due to their unique civil war mechanics. Breaks their tree.
+set_variable = { never_return_stolen_territory = 1 }
+
+#38 = {
+#	add_dynamic_modifier = {
+#		modifier = paradise_state_modifier
+#	}
+#}
+
+add_ideas = {
+	undesirables_law_raider
+	blc_isolated_economy
+	closed_economy
+	chems_banned
+	centralization_settler_minimum
+}
+
+#BLC = {
+#	GLW = {
+#		become_puppet_of_prev = yes
+#	}
+#}
+
+set_truce = {
+	target = HAN
+	days = 730
+}
+
+add_opinion_modifier = {
+	target = HAN
+	modifier = col_local_rivalry
+}
+
+reverse_add_opinion_modifier = {
+	target = HAN
+	modifier = col_local_rivalry
+}
+
+set_truce = {
+	target = ORO
+	days = 730
+}
+
+add_opinion_modifier = {
+	target = ORO
+	modifier = col_local_rivalry
+}
+
+reverse_add_opinion_modifier = {
+	target = ORO
+	modifier = col_local_rivalry
+}
+
+set_politics = {
+	ruling_party = people
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 30
+	elites = 25
+	intellectuals = 25
+	ruler = 20
+}
+
+#Leaders
+recruit_character = BLC_battery
+recruit_character = BLC_warded
+recruit_character = BLC_bearhard
+recruit_character = BLC_mcbride
+#Military Units and Advisors
+recruit_character = BLC_quick_asp
+recruit_character = BLC_preston_miklovich
+recruit_character = BLC_koda
+recruit_character = BLC_fishgarth
+recruit_character = BLC_lift
+recruit_character = BLC_varga
+recruit_character = BLC_wrothwright
+recruit_character = BLC_inkhouse
+recruit_character = BLC_zenith_of_criag
+recruit_character = BLC_thoreau
+recruit_character = BLC_ryan_mitchell
+recruit_character = BLC_anson
+recruit_character = BLC_hugh_jest
+recruit_character = BLC_damien_etto
+#recruit_character = BLC_blackjack
+#Advisors
+recruit_character = BLC_jamison
+recruit_character = BLC_giordanos
+recruit_character = BLC_simon_krieger
+recruit_character = BLC_ivan
+recruit_character = BLC_little_circle
+recruit_character = BLC_phil
+recruit_character = BLC_sparky
+#
+recruit_character = BLC_marissa
+recruit_character = BLC_esther
+recruit_character = BLC_delshay
+recruit_character = BLC_southwick
+recruit_character = BLC_saddleburn
+recruit_character = BLC_lane
+recruit_character = BLC_semmelweis
+recruit_character = BLC_songbird
+recruit_character = BLC_mcgraw
+recruit_character = BLC_lady_veil
+#Dummy characters
+recruit_character = BLC_warden_jackson
+recruit_character = BLC_deputy_fischer
+#Actives
+activate_advisor = BLC_WARDED_CULTURAL_ADVISOR
+activate_advisor = BLC_BEARHARD_ECONOMIC_ADVISOR
+activate_advisor = BLC_MCBRIDE_ARMY_CHIEF
+
+create_equipment_variant = {
+	name = "Fishing Boat"
+	type = ship_hull_light_1
+	name_group = BLC_LIGHT
+	parent_version = 0
+	modules = {
+		fixed_ship_command_slot = ship_command_module_1
+		fixed_ship_engine_slot = light_ship_oars_module
+		fixed_ship_battery_slot = ship_light_mounted_gun_module
+		# fixed_ship_battery_slot_1 = ship_light_mounted_gun_module
+		fixed_ship_detection_slot = empty
+		# fixed_ship_detection_slot_1 = empty
+		fixed_ship_point_defense_slot = empty
+		mid_1_custom_slot = light_ship_oars_module
+		rear_1_custom_slot = empty
+		rear_2_custom_slot = ship_light_mounted_gun_module
+	}
+}
+
+create_equipment_variant = {
+	name = "River Patrol"
+	type = ship_hull_medium_1
+	name_group = BLC_MEDIUM
+	parent_version = 0
+	modules = {
+		fixed_ship_command_slot = ship_command_module_1
+		fixed_ship_engine_slot = medium_ship_oars_module
+		fixed_ship_battery_slot = ship_medium_mounted_gun_module
+		# fixed_ship_battery_slot_1 = ship_medium_mounted_gun_module
+		fixed_ship_detection_slot = empty
+		# fixed_ship_detection_slot_1 = empty
+		fixed_ship_armour_slot = empty
+		fixed_ship_point_defense_slot = ship_light_mounted_gun_module
+		# fixed_ship_point_defense_slot_1 = ship_light_mounted_gun_module
+		mid_1_custom_slot = medium_ship_oars_module
+		rear_1_custom_slot = empty
+		rear_2_custom_slot = ship_medium_mounted_gun_module
+	}
+}

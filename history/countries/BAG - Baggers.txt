@@ -1,0 +1,124 @@
+﻿capital = 453
+oob = "BAG_2275"
+set_technology = {
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	#infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	#support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	power_armour_tech_level_tribal = 1
+	power_armour_tech_level_settler = 1
+	#power_armour_tech_level_scientific = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	electronics_tech_level_scientific = 1
+	#
+	basic_supply_transport_tech = 1
+	tool_engineering = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	spec_ops_equipment_tech_1 = 1
+	support_weaponry = 1
+	fireteam_weaponry_tech = 1
+	recon_company_tech_1 = 1
+	bike_tech_1 = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+}
+
+set_stability = 0.6
+set_war_support = 0.25
+set_research_slots = 3
+set_country_flag = unique_advisor_set
+set_country_flag = is_ncr_nation
+#set_country_flag = is_settler_nation
+set_country_flag = is_colorado_newmexico_nation
+set_country_flag = grand_doctrine_ai
+set_country_flag = grand_infantry_doctrine_ai
+activate_mission = coloradan_powderkeg_mission
+set_politics = {
+	ruling_party = intellectuals
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 10
+	elites = 5
+	intellectuals = 45
+	ruler = 40
+}
+
+recruit_character = BAG_GODDARD
+recruit_character = BAG_COLERIDGE
+recruit_character = BAG_AGNES
+recruit_character = BAG_LARSEN
+#
+recruit_character = BAG_PRASAD
+recruit_character = BAG_PEOPLES
+recruit_character = BAG_PHILIP
+recruit_character = BAG_LUSH
+recruit_character = BAG_DIANNE
+recruit_character = BAG_GALETSKI
+recruit_character = BAG_STILLER
+recruit_character = BAG_DAVIDSON
+recruit_character = BAG_PIERCE
+recruit_character = BAG_BRIGGS
+recruit_character = BAG_LEANDER
+recruit_character = BAG_SOR
+recruit_character = BAG_BAJAR
+recruit_character = BAG_MARIANO
+#
+#recruit_character = BAG_BAROSS #Moved to start at RDS
+recruit_character = BAG_WAHL
+recruit_character = BAG_JIM
+recruit_character = BAG_MOREHOUSE
+recruit_character = BAG_DONALD
+recruit_character = BAG_NINA
+#
+recruit_character = BAG_MORRIS
+recruit_character = BAG_ROCHE
+recruit_character = BAG_FLEMING
+recruit_character = BAG_JAMES
+recruit_character = BAG_PAUL
+recruit_character = BAG_MENO
+#
+recruit_character = BAG_ELI#Dummy;Focus
+recruit_character = BAG_MATHIAS#Dummy;Advisor Replacement
+recruit_character = BAG_WELDING#Dummay;Advisor Replacement
+recruit_character = BAG_MARTINEZ
+recruit_character = BAG_SMITH
+recruit_character = BAG_ZADANOWITZ
+recruit_character = BAG_ALEXANDER
+recruit_character = BAG_ZAX#Dummy;Dialogue
+add_ideas = {
+	funded_militia_conscription
+	low_economic_mobilisation
+	outsider_law_none
+	undesirables_law_none
+}

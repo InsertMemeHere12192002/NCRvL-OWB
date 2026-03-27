@@ -1,0 +1,104 @@
+﻿capital = 405
+oob = "WHD_2275"
+
+set_technology = {
+	basic_supply_transport_tech = 1
+	infantry_tech_level_tribal = 1
+	infantry_tech_level_settler = 1
+	#infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	support_tech_level_settler = 1
+	#support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	power_armour_tech_level_tribal = 1
+	#power_armour_tech_level_settler = 1
+	#power_armour_tech_level_scientific = 1
+	vehicles_tech_level_tribal = 1
+	vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	robotics_tech_level_tribal = 1
+	robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	creatures_tech_level_tribal = 1
+	creatures_tech_level_settler = 1
+	#creatures_tech_level_scientific = 1
+	air_tech_level_tribal = 1
+	air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	habitation_tech_level_settler = 1
+	#habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	electronics_tech_level_settler = 1
+	#electronics_tech_level_scientific = 1
+	tool_engineering = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	support_weaponry = 1
+	demolitions_weaponry_tech = 1
+	fireteam_weaponry_tech = 1
+	bike_tech_1 = 1
+	ghoul_civilization = 1
+	dog_infantry_tech = 1
+	feral_ghouls_unlock_tech = 1
+	feral_tech_access_tech = 1
+	spec_ops_equipment_tech_1 = 1
+	heavy_infantry_tech_1 = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+}
+
+set_stability = 0.5
+set_war_support = 0.2
+set_convoys = 50
+set_research_slots = 4
+set_country_flag = is_ghoul_nation
+set_country_flag = is_settler_nation
+set_country_flag = grand_doctrine_ai
+set_country_flag = grand_infantry_doctrine_ai
+set_country_flag = is_colorado_newmexico_nation
+
+activate_mission = coloradan_powderkeg_mission
+
+set_politics = {
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+set_power_balance = {
+    id = WHD_power_balance
+    left_side = WHD_power_balance_communist_side
+    right_side = WHD_power_balance_ruler_side
+}
+
+set_popularities = {
+	people = 25
+	elites = 10
+	intellectuals = 0
+	ruler = 65
+}
+
+add_ideas = {
+	whd_chinese_remnants
+	WHD_the_hangdogs_will_be_put_down
+}
+
+add_opinion_modifier = { target = HAN modifier = whd_hang_the_dogs }
+
+recruit_character = WHD_old_dog
+recruit_character = WHD_elkanah_stevenson
+recruit_character = WHD_adam_johnson
+recruit_character = WHD_zhang_wei
+recruit_character = WHD_ELI
