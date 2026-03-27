@@ -147,9 +147,9 @@ add_ideas = {
 	ncr_sphere
 	currencyncrdollar
 }
-hidden_effect = {
-	add_ideas = tech_air_production_nerf_idea
-}
+# hidden_effect = {
+# 	add_ideas = tech_air_production_nerf_idea
+# }
 if = {
 	limit = {
 		has_dlc = "La Resistance"

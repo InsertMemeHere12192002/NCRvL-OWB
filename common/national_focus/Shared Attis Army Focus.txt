@@ -3784,15 +3784,13 @@ focus_tree = {
 		relative_position_id = attis_crusher
 		completion_reward = {
 			#load_oob = "UOA_Cruher_help"
-			924 = {
+			920 = {
 				create_unit = {
-					division = "name = \"Odessa's shadows\" division_template = \"Nightkins\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
-					prioritize_location = 11584
+					division = "name = \"Odessa's shadows\" division_template = \"Nightkin Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
 					owner = ROOT
 				}
 				create_unit = {
-					division = "name = \"Ozona's ghosts\" division_template = \"Nightkins\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
-					prioritize_location = 11584
+					division = "name = \"Ozona's ghosts\" division_template = \"Nightkin Division\" start_experience_factor = 0.8 start_equipment_factor = 1.0"
 					owner = ROOT
 				}
 			}

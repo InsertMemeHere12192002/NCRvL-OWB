@@ -103,9 +103,9 @@ add_ideas = {
 	navajo_silversmith_companies
 	partial_economic_mobilisation
 }
-hidden_effect = {
-	add_ideas = tech_air_production_nerf_idea
-}
+# hidden_effect = {
+# 	add_ideas = tech_air_production_nerf_idea
+# }
 recruit_character = NAV_chief_hashkeh_naabaah
 recruit_character = NAV_niyol_tsinajinnie
 recruit_character = NAV_dighin_sani
