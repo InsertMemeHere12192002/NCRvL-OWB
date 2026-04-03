@@ -482,7 +482,7 @@ focus_tree = {
 			focus = two_race_invitations
 		}
 		bypass = {
-			IMO = { exists = no }
+			SHA = { exists = no }
 		}
 		completion_reward = {
 			custom_effect_tooltip = two_invite_imo
@@ -500,10 +500,10 @@ focus_tree = {
 			focus = two_race_invitations_imo
 		}
 		bypass = {
-			IMO = { exists = no }
+			SHA = { exists = no }
 		}
 		available = {
-			IMO = {
+			SHA = {
 				has_country_flag = great_race_participant
 			}
 		}

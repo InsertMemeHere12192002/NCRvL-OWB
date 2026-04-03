@@ -91,7 +91,7 @@ technologies = {
 			scavtool_engineering_1
 		}
 
-		production_factory_max_efficiency_factor = 0.07
+		production_factory_max_efficiency_factor = 0.06
 		production_factory_efficiency_gain_factor = 0.025
 		industrial_capacity_dockyard = 0.05
 
@@ -151,7 +151,7 @@ technologies = {
 	# Basic Tools
 	maketool_engineering_2 = {
 
-		production_factory_max_efficiency_factor = 0.07
+		production_factory_max_efficiency_factor = 0.06
 		production_factory_efficiency_gain_factor = 0.025
 		industrial_capacity_dockyard = 0.05
 
@@ -214,7 +214,7 @@ technologies = {
 	# Manufactured Tools
 	maketool_engineering_3 = {
 
-		production_factory_max_efficiency_factor = 0.07
+		production_factory_max_efficiency_factor = 0.06
 		production_factory_efficiency_gain_factor = 0.025
 		industrial_capacity_dockyard = 0.05
 
@@ -280,7 +280,7 @@ technologies = {
 	# Refined Tools
 	maketool_engineering_4 = {
 
-		production_factory_max_efficiency_factor = 0.07
+		production_factory_max_efficiency_factor = 0.06
 		production_factory_efficiency_gain_factor = 0.025
 		industrial_capacity_dockyard = 0.05
 
@@ -343,7 +343,7 @@ technologies = {
 	# Advanced Tools
 	maketool_engineering_5 = {
 
-		production_factory_max_efficiency_factor = 0.07
+		production_factory_max_efficiency_factor = 0.06
 		production_factory_efficiency_gain_factor = 0.025
 		industrial_capacity_dockyard = 0.05
 
@@ -461,7 +461,7 @@ technologies = {
 			maketool_engineering_1
 		}
 
-		production_factory_max_efficiency_factor = 0.09
+		production_factory_max_efficiency_factor = 0.08
 		production_factory_start_efficiency_factor = 0.03
 		industrial_capacity_dockyard = 0.05
 
@@ -521,7 +521,7 @@ technologies = {
 	# Tracking Dogs
 	scavtool_engineering_2 = {
 
-		production_factory_max_efficiency_factor = 0.09
+		production_factory_max_efficiency_factor = 0.08
 		production_factory_start_efficiency_factor = 0.03
 		industrial_capacity_dockyard = 0.05
 
@@ -584,7 +584,7 @@ technologies = {
 	# Search Patterns
 	scavtool_engineering_3 = {
 
-		production_factory_max_efficiency_factor = 0.09
+		production_factory_max_efficiency_factor = 0.08
 		production_factory_start_efficiency_factor = 0.03
 		industrial_capacity_dockyard = 0.05
 
@@ -685,7 +685,7 @@ technologies = {
 
 	generalized_industry_tech_1 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -743,7 +743,7 @@ technologies = {
 
 	generalized_industry_tech_2 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.05
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -933,7 +933,7 @@ technologies = {
 
 	generalized_industry_tech_6 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.1
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -980,7 +980,7 @@ technologies = {
 
 	generalized_industry_tech_7 = {
 		global_building_slots_factor = 0.15
-		industrial_capacity_factory = 0.05
+		industrial_capacity_factory = 0.1
 		conscription_factor = 0.02
 		industrial_capacity_dockyard = 0.06
 
@@ -1021,7 +1021,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_1 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1078,7 +1078,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_2 = {
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.1
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1264,7 +1264,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_6 = {
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.15
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 
@@ -1310,7 +1310,7 @@ technologies = {
 	}
 
 	specialized_industry_tech_7 = {
-		industrial_capacity_factory = 0.1
+		industrial_capacity_factory = 0.15
 		global_building_slots_factor = 0.1
 		industrial_capacity_dockyard = 0.1
 

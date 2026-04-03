@@ -1,0 +1,530 @@
+ideas = {
+	country = {
+		roaring_machines_eht = {
+			picture = generic_armor
+
+			allowed = {
+				is_raider_nation_allowed_block = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					maximum_speed = 0.15
+					reliability_factor = 0.1
+					breakthrough = 0.1
+					armor_value = 0.1
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier = {
+				modifier_army_sub_unit_tank_speed_factor = 0.1
+				modifier_army_sub_unit_motorized_attack_factor = 0.05
+			}
+		}
+		EHT_nomadic_centralization_idea = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.25
+				stability_factor = 0.1
+			}
+		}
+		EHT_nomadic = {
+			picture = two_cars
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				conscription_factor = 0.15
+				training_time_factor = 0.10
+				exodus_occupier_appeal = 0.10
+				custom_modifier_tooltip = EHT_nomadic_tt
+			}
+		}
+		EHT_nomadic2 = {
+			picture = two_cars
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				conscription_factor = 0.15
+				training_time_factor = 0.10
+				exodus_occupier_appeal = 0.10
+				non_core_manpower = 0.08
+				custom_modifier_tooltip = EHT_nomadic2_tt
+			}
+		}
+
+
+		eighties_raygun = {
+			picture = generic_deathray
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.02
+				army_armor_attack_factor = 0.10
+			}
+		}
+		faith_great_eighty_idea = {
+			picture = generic_vehicle_wanderer_bike_pre
+			modifier = {
+				motorized_attack_factor = 0.1
+				motorized_defence_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EHT_great_convoy = {
+			picture = generic_compass
+			removal_cost = -1
+			modifier = {
+				army_core_attack_factor = 0.05
+				modifier_army_sub_unit_motorized_defence_factor = 0.07
+				modifier_army_sub_unit_motorized_attack_factor = 0.07
+			}
+		}
+		EHT_great_convoy_better = {
+			picture = generic_compass
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				modifier_army_sub_unit_motorized_defence_factor = 0.07
+				modifier_army_sub_unit_motorized_attack_factor = 0.07
+				org_loss_when_moving = -0.15
+			}
+		}
+		EHT_area_51_garages = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					reliability = 0.10
+					instant = yes
+				}
+			}
+		}
+
+		EHT_gas_station = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				max_fuel_factor = 0.10
+			}
+		}
+		EHT_glory_road_idea = {
+			picture = generic_raids2
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				army_morale_factor = 0.05
+				war_support_factor = 0.05
+				production_speed_buildings_factor = -0.05
+				conscription_factor = 0.15
+				training_time_factor = 0.10
+				exodus_occupier_appeal = 0.10
+				non_core_manpower = 0.08
+				custom_modifier_tooltip = EHT_nomadic2_tt
+			}
+		}
+		EHT_skilled_cunning_craftsmen = {
+			picture = generic_radio_pack
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				non_core_manpower = 0.08
+				local_resources_factor = 0.10
+				custom_modifier_tooltip = EHT_EHT_skilled_cunning_craftsmen_tt
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					reliability = 0.10
+					instant = yes
+				}
+			}
+		}
+		EHT_thunderbird_dissent = {
+			picture = generic_service_rifle
+			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_motorized_attack_factor = 0.075
+				modifier_army_sub_unit_motorized_speed_factor = 0.075
+				ruler_drift = 0.02
+			}
+
+		}
+
+
+
+		EHT_ghost_warriors = {
+			picture = KHA_avenge_bitter_springs
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+		EHT_hate_NCN = {
+			picture = generic_bible
+			removal_cost = -1
+			targeted_modifier = {
+				tag = NCN
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		EHT_hate_WHT = {
+			picture = flockgoggles
+			removal_cost = -1
+			targeted_modifier = {
+				tag = WHT
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		EHT_hate_all = {
+			picture = KHA_avenge_bitter_springs
+			removal_cost = -1
+			targeted_modifier = {
+				tag = HAM
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = CLK
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = TAR
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = CRZ
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = DEA
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = UIN
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		EHT_sedentary = {
+			picture = generic_food_good
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		EHT_sedentary2 = {
+			picture = generic_food_good
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.03
+				stability_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				global_building_slots_factor = 0.10
+			}
+		}
+		EHT_zoom= {
+			picture = generic_food_good
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				global_building_slots_factor = 0.10 ### TODO was local, check if intended to be global
+			}
+		}
+		EHT_spiritual = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		EHT_warlord = {
+			picture = generic_raids
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.10
+			}
+		}
+		EHT_idea_terror_of_long_80 = {
+			picture = KHA_iron_steeds
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+				political_power_factor = 0.05
+				resistance_damage_to_garrison = -0.10
+				army_attack_factor = 0.1
+				motorized_attack_factor = 0.1
+				army_speed_factor = 0.1
+				max_fuel_factor = 0.2
+				fuel_gain_factor_from_states = 0.2
+				fuel_gain_factor = 0.2
+			}
+		}
+		EHT_idea_terror_of_long_801 = {
+			picture = KHA_iron_steeds
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+				political_power_factor = 0.05
+				resistance_damage_to_garrison = -0.10
+				research_speed_factor = 0.05
+				army_attack_factor = 0.1
+				motorized_attack_factor = 0.1
+				army_speed_factor = 0.1
+				max_fuel_factor = 0.25
+				fuel_gain_factor_from_states = 0.25
+				fuel_gain_factor = 0.25
+			}
+			# equipment_bonus = {
+			# 	motorized_equipment = {
+			# 		build_cost_ic = -0.05
+			# 		instant = yes
+			# 	}
+			# }
+		}
+		EHT_idea_terror_of_long_802 = {
+			picture = KHA_iron_steeds
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+				political_power_factor = 0.05
+				resistance_damage_to_garrison = -0.10
+				army_attack_factor = 0.1
+				motorized_attack_factor = 0.1
+				army_speed_factor = 0.1
+				max_fuel_factor = 0.2
+				fuel_gain_factor_from_states = 0.2
+				fuel_gain_factor = 0.2
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					breakthrough = 0.1
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+		EHT_idea_terror_of_long_803 = {
+			picture = brk_slavery_3
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.10
+				political_power_factor = 0.10
+				resistance_damage_to_garrison = -0.20
+				conscription = 0.02
+				army_attack_factor = 0.1
+				motorized_attack_factor = 0.1
+				army_speed_factor = 0.1
+				max_fuel_factor = 0.2
+				fuel_gain_factor_from_states = 0.2
+				fuel_gain_factor = 0.2
+			}
+		}
+		EHT_equipment_bonus = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		EHT_motorized_vehicle_bonus = {
+			picture = KHA_a_new_silk_road
+			removal_cost = -1
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		EHT_explosives_bonus = {
+			picture = generic_flamer
+			removal_cost = -1
+			equipment_bonus = {
+				demolitions_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+		}
+		EHT_eyes_along_roads_idea = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				decryption = 0.50
+
+			}
+		}
+
+		EHT_idea_stable_production = {
+			picture = generic_morale_bonus
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+		EHT_idea_nomadic_flexibillity = {
+			picture = KHA_a_new_silk_road
+			removal_cost = -1
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.3
+				max_fuel_factor = 0.15
+				army_fuel_consumption_factor = -0.3
+			}
+		}
+
+		EHT_idea_old_world_arteries = {
+			picture = KHA_iron_steeds
+			removal_cost = -1
+			modifier = {
+				production_speed_infrastructure_factor = 0.20
+			}
+		}
+
+		EHT_liberation = {
+			picture = KHA_iron_steeds
+			removal_cost = -1
+			modifier = {
+				weekly_manpower = 20
+				stability_weekly = 0.005
+				industrial_capacity_factory = 0.2
+				army_morale_factor = 0.10
+				MONTHLY_POPULATION = 0.25
+			}
+		}
+
+		EHT_the_devils_of_utah = {
+			picture = warband_without_a_home
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				trade_opinion_factor = -0.1
+			}
+		}
+		EHT_the_devils_of_utah_2 = {
+			name = EHT_the_devils_of_utah
+			picture = warband_without_a_home
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.05
+				caps_raider_self_bonus = 0.05
+				equipment_capture = 0.05
+				production_speed_buildings_factor = -0.05
+				trade_opinion_factor = -0.1
+			}
+		}
+		EHT_the_sacred_garage = {
+			picture = generic_nuka_truck
+			removal_cost = -1
+			modifier = {
+				country_resource_energy = 5
+				country_resource_circuitry = 5
+				production_lack_of_resource_penalty_factor = -0.1
+			}
+			research_bonus = {
+				vehicle_tech_category = 0.1
+			}
+		}
+		EHT_steam_cores = {
+			picture = HEA_idea_blessing_of_steam
+			removal_cost = -1
+			modifier = {
+				country_resource_energy = 15
+			}
+		}
+		EHT_the_sacred_garage2 = {
+			picture = generic_nuka_truck
+			removal_cost = -1
+			modifier = {
+				country_resource_energy = 12
+				country_resource_circuitry = 12
+				production_lack_of_resource_penalty_factor = -0.15
+			}
+			research_bonus = {
+				vehicle_tech_category = 0.1
+			}
+		}
+		EHT_thunderbird_rises = {	# Timed idea for 90 days
+			picture = generic_vehicle_winterized_army_truck
+			on_add = {
+				set_country_flag = EHT_force_deploy_ai_flag
+			}
+			on_remove = {
+				clr_country_flag = EHT_force_deploy_ai_flag
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.5
+				political_power_gain = 0.25
+				weekly_manpower = 25
+				training_time_factor = -0.5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		EHT_flagman_reorganize = {	# Timed idea for 90 days
+			picture = generic_vehicle_winterized_army_truck
+			on_add = {
+				set_country_flag = EHT_force_deploy_ai_flag
+			}
+			on_remove = {
+				clr_country_flag = EHT_force_deploy_ai_flag
+			}
+			modifier = {
+				production_factory_start_efficiency_factor = 0.5
+				political_power_gain = 0.25
+				weekly_manpower = 25
+				training_time_factor = -0.5
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		EHT_gold_hills_market = {
+			picture = generic_caps
+			removal_cost = -1
+			modifier = {
+				caps_flat_income_modifier = 15
+			}
+		}
+		EHT_revving_up = {
+			picture = two_motors
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = 0.15
+				fuel_gain_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.3
+			}
+		}
+	}
+}

@@ -1864,6 +1864,11 @@ pathfinders = {
 			breakthrough = 0.05
 			defense = 0.05
 		}
+		power_armour = {
+			max_organisation = 2.5
+			breakthrough = 0.025
+			defense = 0.025
+		}
 	}
 
 	ncr_rangercore_tech = {
@@ -1883,6 +1888,10 @@ pathfinders = {
 		spec_ops = {
 			soft_attack = 0.1
 			defense = 0.1
+		}
+		power_armour = {
+			soft_attack = 0.05
+			defense = 0.05
 		}
 	}
 
@@ -1924,6 +1933,9 @@ pathfinders = {
 		spec_ops = {
 			recon = 0.5
 		}
+		power_armour = {
+			recon = 0.25
+		}
 	}
 
 	ncr_rangercanopeners_tech = {
@@ -1942,6 +1954,9 @@ pathfinders = {
 
 		spec_ops = {
 			hard_attack = 0.25
+		}
+		power_armour = {
+			hard_attack = 0.125
 		}
 	}
 
@@ -1963,6 +1978,11 @@ pathfinders = {
 			soft_attack = 0.05
 			hard_attack = 0.05
 			defense = 0.05
+		}
+		power_armour = {
+			soft_attack = 0.025
+			hard_attack = 0.025
+			defense = 0.025
 		}
 	}
 

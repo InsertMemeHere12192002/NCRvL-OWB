@@ -1,0 +1,703 @@
+great_race_variables = {
+	# Skills
+	set_variable = { TWO.great_race_skill_tech = 0}
+	set_variable = { TWO.great_race_skill_race = 0}
+
+	set_variable = { IMO.great_race_skill_tech = 0}
+	set_variable = { IMO.great_race_skill_race = 0}
+
+	set_variable = { EHT.great_race_skill_tech = 0}
+	set_variable = { EHT.great_race_skill_race = 0}
+
+	set_variable = { GDH.great_race_skill_tech = 0}
+	set_variable = { GDH.great_race_skill_race = 0}
+
+	set_variable = { NEW.great_race_skill_tech = 0}
+	set_variable = { NEW.great_race_skill_race = 0}
+
+	# Training cost
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = EHT
+				original_tag = SHA
+				original_tag = GDH
+				original_tag = NEW
+				original_tag = TWO
+			}
+		}
+		set_variable = { great_race_motorized_cost = -100 }
+		set_variable = { great_race_motorized_cost_icon = 99 }
+		set_variable = { great_race_caps_cost = 100 }
+	}
+}
+
+great_race_add_mech = {
+	add_to_variable = { great_race_skill_tech = race_mech }
+	clear_variable = race_mech
+	hidden_effect = {
+		great_race_ideas_check = yes
+	}
+}
+
+great_race_add_skill = {
+	add_to_variable = { great_race_skill_race = race_skill }
+	clear_variable = race_skill
+	hidden_effect = {
+		great_race_ideas_check = yes
+	}
+}
+
+great_race_trip_variables = {
+	set_variable = { TWO.wyatt = 0 }
+	set_variable = { TWO.wyatt_speed = 0 }
+	set_variable = { TWO.wyatt_time = 7 }
+	set_variable = { TWO.display = 0 }
+}
+
+great_race_trip_initializing_eht = {
+	#EHT
+
+	clear_array = great_race_two
+	set_variable = { TWO.wyatt = 0 }
+	set_variable = { TWO.finish = 478 }
+
+	add_to_array = { great_race_two = 516 }
+	add_to_array = { great_race_two = 207 }
+	add_to_array = { great_race_two = 519 }
+	add_to_array = { great_race_two = 518 }
+	add_to_array = { great_race_two = 349 }
+	add_to_array = { great_race_two = 596 }
+	add_to_array = { great_race_two = 130 }
+	add_to_array = { great_race_two = 553 }
+	add_to_array = { great_race_two = 359 }
+	add_to_array = { great_race_two = 106 }
+	add_to_array = { great_race_two = 12 }
+	add_to_array = { great_race_two = 72 }
+	add_to_array = { great_race_two = 326 }
+	add_to_array = { great_race_two = 581 }
+	add_to_array = { great_race_two = 309 }
+	add_to_array = { great_race_two = 40 }
+	add_to_array = { great_race_two = 478 }
+}
+
+great_race_trip_initializing_new = {
+	#NEW
+
+	clear_array = great_race_two
+	set_variable = { TWO.wyatt = 0 }
+	set_variable = { TWO.finish = 285 }
+
+	add_to_array = { great_race_two = 516 }
+	add_to_array = { great_race_two = 207 }
+	add_to_array = { great_race_two = 519 }
+	add_to_array = { great_race_two = 518 }
+	add_to_array = { great_race_two = 349 }
+	add_to_array = { great_race_two = 596 }
+	add_to_array = { great_race_two = 130 }
+	add_to_array = { great_race_two = 553 }
+	add_to_array = { great_race_two = 67 }
+	add_to_array = { great_race_two = 47 }
+	add_to_array = { great_race_two = 552 }
+	add_to_array = { great_race_two = 13 }
+	add_to_array = { great_race_two = 592 }
+	add_to_array = { great_race_two = 329 }
+	add_to_array = { great_race_two = 187 }
+	add_to_array = { great_race_two = 371 }
+	add_to_array = { great_race_two = 476 }
+	add_to_array = { great_race_two = 327 }
+	add_to_array = { great_race_two = 284 }
+	add_to_array = { great_race_two = 184 }
+	add_to_array = { great_race_two = 285 }
+
+}
+
+great_race_trip_initializing_gdh = {
+	#GDH
+
+	clear_array = great_race_two
+	set_variable = { TWO.wyatt = 0 }
+	set_variable = { TWO.finish = 471 }
+
+	add_to_array = { great_race_two = 516 }
+	add_to_array = { great_race_two = 588 }
+	add_to_array = { great_race_two = 477 }
+	add_to_array = { great_race_two = 471 }
+}
+
+great_race_trip_initializing_imo = {
+	#IMO
+
+	clear_array = great_race_two
+	set_variable = { TWO.wyatt = 0 }
+	set_variable = { TWO.finish = 907 }
+
+	add_to_array = { great_race_two = 516 }
+	add_to_array = { great_race_two = 62 }
+	add_to_array = { great_race_two = 247 }
+	add_to_array = { great_race_two = 35 }
+	add_to_array = { great_race_two = 289 }
+	add_to_array = { great_race_two = 442 }
+	add_to_array = { great_race_two = 563 }
+	add_to_array = { great_race_two = 522 } # city
+	add_to_array = { great_race_two = 5 } # city
+	add_to_array = { great_race_two = 152 }
+	add_to_array = { great_race_two = 215 }
+	add_to_array = { great_race_two = 566 }
+	add_to_array = { great_race_two = 537 }
+	add_to_array = { great_race_two = 930 }
+	add_to_array = { great_race_two = 934 }
+	add_to_array = { great_race_two = 936 } # eden
+	add_to_array = { great_race_two = 678 }
+	add_to_array = { great_race_two = 920 }
+	add_to_array = { great_race_two = 919 }
+	add_to_array = { great_race_two = 918 }
+	add_to_array = { great_race_two = 907 }
+}
+
+great_race_wyatt_calculate = {
+	set_temp_variable = { delete = TWO.wyatt }
+	add_to_temp_variable = { delete = 1 }
+	var:great_race_two^wyatt = {
+		set_temp_variable = { inf = infrastructure_level }
+		set_temp_variable = { con = owner }
+	}
+	set_temp_variable = { k1 = great_race_two^TWO:wyatt }
+	set_temp_variable = { k2 = great_race_two^delete }
+	var:k1 = {
+		set_temp_variable = { s = distance_to@var:k2 }
+	}
+	set_variable = { TWO.display = great_race_two^TWO.wyatt }
+	if = {
+		limit = {
+			OR = {
+				CES = {
+					controls_state = var:con
+				}
+				LAC = {
+					controls_state = var:con
+				}
+				TWO = {
+					controls_state = var:con
+				}
+				NAV = { # navajo
+					controls_state = var:con
+				}
+			}
+		}
+		set_temp_variable = { ally = 1.5 }
+	}
+	else = {
+		set_temp_variable = { ally = 0.8 }
+	}
+	set_variable = { TWO.wyatt_speed = 10 }
+	multiply_temp_variable = { inf = 2 }
+	add_to_variable = { TWO.wyatt_speed = inf }
+	multiply_variable = { TWO.wyatt_speed = ally }
+	set_variable = { TWO.wyatt_time = s }
+	divide_variable = { TWO.wyatt_time = TWO.wyatt_speed?1 }
+	add_to_variable = { TWO.wyatt = 1 }
+	if = {
+		limit = {
+			check_variable = { TWO.finish = great_race_two^TWO.wyatt }
+		}
+		set_variable = { TWO.wyatt = 0 } # magic teleportation to Two Sun
+		set_variable = { TWO.display = 0 }
+		var:finish = {
+			owner = {
+				if = {
+					limit = {
+						OR = {
+							original_tag = EHT
+							original_tag = SHA
+							original_tag = NEW
+							original_tag = GDH
+						}
+					}
+					country_event = {
+						id = nf_two.91
+					}
+				}
+				else = {
+				}
+			}
+		}
+		TWO = {
+			clr_country_flag = wyatt_en_route
+		}
+	}
+	else = {
+		activate_mission = riding
+	}
+}
+
+great_race_trip_go = {
+	great_race_wyatt_calculate = yes
+}
+
+launch_great_race = {
+	set_variable = { global.two_race_total_skill = 0 }
+	set_global_flag = great_race_started
+
+	set_variable = { EHT.two_skill = EHT.great_race_skill_tech }
+	add_to_variable = { EHT.two_skill = EHT.great_race_skill_race }
+
+	add_to_variable = { global.two_race_total_skill = EHT.two_skill }
+
+	set_variable = { IMO.two_skill = IMO.great_race_skill_tech }
+	add_to_variable = { IMO.two_skill = IMO.great_race_skill_race }
+
+	add_to_variable = { global.two_race_total_skill = IMO.two_skill }
+
+	set_variable = { GDH.two_skill = GDH.great_race_skill_tech }
+	add_to_variable = { GDH.two_skill = GDH.great_race_skill_race }
+
+	add_to_variable = { global.two_race_total_skill = GDH.two_skill }
+
+	set_variable = { NEW.two_skill = NEW.great_race_skill_tech }
+	add_to_variable = { NEW.two_skill = NEW.great_race_skill_race }
+
+	add_to_variable = { global.two_race_total_skill = NEW.two_skill }
+
+	set_variable = { TWO.two_skill = TWO.great_race_skill_tech }
+	add_to_variable = { TWO.two_skill = TWO.great_race_skill_race }
+
+	add_to_variable = { global.two_race_total_skill = TWO.two_skill }
+
+
+	set_variable = { global.two_race_average_skill = global.two_race_total_skill }
+	divide_variable = { global.two_race_average_skill =  4 }
+
+	set_variable = { global.two_race_time = 0 }
+
+	great_race_race = yes
+}
+
+great_race_race = {
+	every_country = {
+		limit = {
+			OR = {
+				original_tag = EHT
+				original_tag = SHA
+				original_tag = GDH
+				original_tag = NEW
+				original_tag = TWO
+			}
+			NOT = { has_country_flag = left_great_race }
+		}
+		clr_country_flag = great_race_forward
+		clr_country_flag = great_race_middle
+		clr_country_flag = great_race_backwards
+		if = {
+			limit = {
+				check_variable = { two_skill < global.two_race_average_skill }
+			}
+			set_temp_variable = { diff = global.two_race_average_skill }
+			subtract_from_temp_variable = { diff = two_skill }
+		}
+		else = {
+			set_temp_variable = { diff = 5 }
+		}
+
+		random_list = {
+			var:two_skill = { # forward
+				add_to_variable = { two_race_forward = 2 }
+				set_country_flag = great_race_forward
+			}
+			var:global.two_race_average_skill = { # average
+				add_to_variable = { two_race_forward = 1 }
+				set_country_flag = great_race_middle
+			}
+			var:diff = { # backwards
+				add_to_variable = { two_race_backwards = 1 }
+				subtract_from_variable = { two_race_forward = 1 }
+				set_country_flag = great_race_backwards
+			}
+		}
+	}
+	add_to_variable = { global.two_race_time = 1 }
+
+	if = {
+		limit = {
+			check_variable = { global.two_race_time < 6 }
+		}
+		TWO = {
+			country_event = {
+				id = nf_two.105
+				days = 8
+			}
+		}
+		great_race_calculate_forward = yes
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = EHT
+					original_tag = SHA
+					original_tag = GDH
+					original_tag = NEW
+					original_tag = TWO
+				}
+			}
+			country_event = {
+				id = nf_two.101
+				days = 7
+			}
+		}
+	}
+	else = {
+		news_event = {
+			id = nf_two.102
+			days = 7
+		}
+	}
+}
+
+great_race_calculate_forward = {
+	clear_array = global.great_race_score_temp
+	add_to_array = { global.great_race_score_temp = EHT.two_race_forward }
+	add_to_array = { global.great_race_score_temp = IMO.two_race_forward }
+	add_to_array = { global.great_race_score_temp = GDH.two_race_forward }
+	add_to_array = { global.great_race_score_temp = NEW.two_race_forward }
+	add_to_array = { global.great_race_score_temp = TWO.two_race_forward }
+	find_highest_in_array = {
+		array = global.great_race_score_temp
+		index = z1
+	}
+	set_variable = { global.great_race_score_temp^z1 = -100 }
+	set_variable = { global.race_original_tag1 = z1 }
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag1 = 0 }
+		}
+		set_variable = { global.race_original_tag1 = EHT }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag1 = 1 }
+		}
+		set_variable = { global.race_original_tag1 = SHA }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag1 = 2 }
+		}
+		set_variable = { global.race_original_tag1 = GDH }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag1 = 3 }
+		}
+		set_variable = { global.race_original_tag1 = NEW }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag1 = 4 }
+		}
+		set_variable = { global.race_original_tag1 = TWO }
+	}
+
+	find_highest_in_array = {
+		array = global.great_race_score_temp
+		index = z2
+	}
+	set_variable = { global.great_race_score_temp^z2 = -100 }
+	set_variable = { global.race_original_tag2 = z2 }
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag2 = 0 }
+		}
+		set_variable = { global.race_original_tag2 = EHT }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag2 = 1 }
+		}
+		set_variable = { global.race_original_tag2 = SHA }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag2 = 2 }
+		}
+		set_variable = { global.race_original_tag2 = GDH }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag2 = 3 }
+		}
+		set_variable = { global.race_original_tag2 = NEW }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag2 = 4 }
+		}
+		set_variable = { global.race_original_tag2 = TWO }
+	}
+
+	find_highest_in_array = {
+		array = global.great_race_score_temp
+		index = z3
+	}
+	set_variable = { global.great_race_score_temp^z3 = -100 }
+	set_variable = { global.race_original_tag3 = z3 }
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag3 = 0 }
+		}
+		set_variable = { global.race_original_tag3 = EHT }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag3 = 1 }
+		}
+		set_variable = { global.race_original_tag3 = SHA }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag3 = 2 }
+		}
+		set_variable = { global.race_original_tag3 = GDH }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag3 = 3 }
+		}
+		set_variable = { global.race_original_tag3 = NEW }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag3 = 4 }
+		}
+		set_variable = { global.race_original_tag3 = TWO }
+	}
+
+	find_highest_in_array = {
+		array = global.great_race_score_temp
+		index = z4
+	}
+	set_variable = { global.great_race_score_temp^z4 = -100 }
+	set_variable = { global.race_original_tag4 = z4 }
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag4 = 0 }
+		}
+		set_variable = { global.race_original_tag4 = EHT }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag4 = 1 }
+		}
+		set_variable = { global.race_original_tag4 = SHA }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag4 = 2 }
+		}
+		set_variable = { global.race_original_tag4 = GDH }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag4 = 3 }
+		}
+		set_variable = { global.race_original_tag4 = NEW }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag4 = 4 }
+		}
+		set_variable = { global.race_original_tag4 = TWO }
+	}
+
+	find_highest_in_array = {
+		array = global.great_race_score_temp
+		index = z5
+	}
+	set_variable = { global.great_race_score_temp^z5 = -100 }
+	set_variable = { global.race_original_tag5 = z5 }
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag5 = 0 }
+		}
+		set_variable = { global.race_original_tag5 = EHT }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag5 = 1 }
+		}
+		set_variable = { global.race_original_tag5 = SHA }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag5 = 2 }
+		}
+		set_variable = { global.race_original_tag5 = GDH }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag5 = 3 }
+		}
+		set_variable = { global.race_original_tag5 = NEW }
+	}
+	if = {
+		limit = {
+			check_variable = { global.race_original_tag5 = 4 }
+		}
+		set_variable = { global.race_original_tag5 = TWO }
+	}
+}
+great_race_calculate_winner = { # get_var global.great_race_score^
+	clear_array = global.great_race_score_temp
+	add_to_array = { global.great_race_score = EHT.two_race_forward }
+	add_to_array = { global.great_race_score = IMO.two_race_forward }
+	add_to_array = { global.great_race_score = GDH.two_race_forward }
+	add_to_array = { global.great_race_score = NEW.two_race_forward }
+	add_to_array = { global.great_race_score = TWO.two_race_forward }
+
+	find_highest_in_array = {
+		array = global.great_race_score
+		index = z
+	}
+	set_variable = { global.great_race_winner = z }
+	if = {
+		limit = {
+			check_variable = { global.great_race_winner = 0 }
+		}
+		set_variable = { global.great_race_winner = EHT }
+	}
+	if = {
+		limit = {
+			check_variable = { global.great_race_winner = 1 }
+		}
+		set_variable = { global.great_race_winner = SHA }
+	}
+	if = {
+		limit = {
+			check_variable = { global.great_race_winner = 2 }
+		}
+		set_variable = { global.great_race_winner = GDH }
+	}
+	if = {
+		limit = {
+			check_variable = { global.great_race_winner = 3 }
+		}
+		set_variable = { global.great_race_winner = NEW }
+	}
+	if = {
+		limit = {
+			check_variable = { global.great_race_winner = 4 }
+		}
+		set_variable = { global.great_race_winner = TWO }
+	}
+
+	var:global.great_race_winner = {
+		add_ideas = two_great_race_winner_idea
+	}
+	TWO = {
+		complete_national_focus = two_race_finish_line
+	}
+}
+
+great_race_ideas_check = {
+	set_temp_variable = { skill = great_race_skill_tech }
+	add_to_temp_variable = { skill = great_race_skill_race }
+
+	if = {
+		limit = {
+			check_variable = { great_race_skill_race < 30 }
+		}
+		set_temp_variable = { a = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { great_race_skill_race > 29 }
+			check_variable = { great_race_skill_race < 50 }
+		}
+		set_temp_variable = { a = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { great_race_skill_race > 49 }
+			check_variable = { great_race_skill_race < 100 }
+		}
+		set_temp_variable = { a = 2 }
+	}
+	if = {
+		limit = {
+			check_variable = { great_race_skill_race > 99 }
+		}
+		set_temp_variable = { a = 3 }
+	}
+
+
+	if = {
+		limit = {
+			check_variable = { great_race_skill_tech < 30 }
+		}
+		add_to_temp_variable = { a = 0 }
+	}
+	if = {
+		limit = {
+			check_variable = { great_race_skill_tech > 29 }
+			check_variable = { great_race_skill_tech < 50 }
+		}
+		add_to_temp_variable = { a = 1 }
+	}
+	if = {
+		limit = {
+			check_variable = { great_race_skill_tech > 49 }
+			check_variable = { great_race_skill_tech < 100 }
+		}
+		add_to_temp_variable = { a = 2 }
+	}
+	if = {
+		limit = {
+			check_variable = { great_race_skill_tech > 99 }
+		}
+		add_to_temp_variable = { a = 3 }
+	}
+
+	remove_ideas = {
+		two_preparation_idea_1
+		two_preparation_idea_2
+		two_preparation_idea_3
+		two_preparation_idea_4
+		two_preparation_idea_5
+		two_preparation_idea_6
+	}
+
+	if = {
+		limit = {
+			check_variable = { a = 1 }
+		}
+		add_ideas = two_preparation_idea_1
+	}
+	if = {
+		limit = {
+			check_variable = { a = 2 }
+		}
+		add_ideas = two_preparation_idea_2
+	}
+	if = {
+		limit = {
+			check_variable = { a = 3 }
+		}
+		add_ideas = two_preparation_idea_3
+	}
+	if = {
+		limit = {
+			check_variable = { a = 4 }
+		}
+		add_ideas = two_preparation_idea_4
+	}
+	if = {
+		limit = {
+			check_variable = { a = 5 }
+		}
+		add_ideas = two_preparation_idea_5
+	}
+	if = {
+		limit = {
+			check_variable = { a = 6 }
+		}
+		add_ideas = two_preparation_idea_6
+	}
+}

@@ -19,6 +19,52 @@ ideas = {
 				support_combat_tech_category = 0.05
 			}
 		}
+		gente_arms_industry = {
+			picture = gdh_weapons
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				fireteam_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			research_bonus = {
+				infantry_weapons_tech_category = 0.15
+				ballistic_weaponry_tech_category = 0.15
+				support_combat_tech_category = 0.15
+			}
+		}
+		gente_mercenary_contractors = {
+			picture = COM_army_nation
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				naval_invasion_penalty = -0.1
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+				air_superiority_bonus_in_combat = 0.1
+			}
+		}
 		gdh_baja_contracts = {
 			picture = generic_caps
 			removal_cost = -1

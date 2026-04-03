@@ -8557,6 +8557,9 @@ focus = {
 				remove_idea = ncr_brotherhood_really_really_angry
 				add_idea = ncr_crushed_brotherhood
 			}
+			set_technology = {
+				ncr_shocktroopers_tech = 1
+			}
 			add_tech_bonus = {
 				name = power_armor_tech
 				bonus = 2

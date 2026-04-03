@@ -1,5 +1,5 @@
-﻿capital = 866
-#oob = "BVC_2275"
+﻿capital = 217
+oob = "DRY_2275"
 
 set_technology = {
 	basic_supply_transport_tech = 1
@@ -12,7 +12,8 @@ set_technology = {
 	special_forces_tech_level_tribal = 1
 	special_forces_tech_level_settler = 1
 	#special_forces_tech_level_scientific = 1
-	#power_armour_tech_level_settler = 1
+	power_armour_tech_level_tribal = 1
+	power_armour_tech_level_settler = 1
 	#power_armour_tech_level_scientific = 1
 	vehicles_tech_level_tribal = 1
 	vehicles_tech_level_settler = 1
@@ -47,15 +48,22 @@ set_technology = {
 	demolitions_weaponry_tech = 1
 	fireteam_weaponry_tech = 1
 	bike_tech_1 = 1
-	raider_reckless_aggression = 1
-	terror_tactics = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
 }
 
-set_stability = 0.3
-set_war_support = 0.5
+set_stability = 0.6
+set_war_support = 0.15
+set_convoys = 50
 set_research_slots = 4
-#set_country_flag = is_raider_nation
-set_country_flag = is_california_nation
+set_country_flag = is_raider_nation
+set_country_flag = is_colorado_newmexico_nation
+
+add_ideas = {
+	undesirables_law_raider
+	northern_colorado_famine
+}
 
 set_politics = {
 	ruling_party = ruler
@@ -63,57 +71,13 @@ set_politics = {
 }
 
 set_popularities = {
-	people = 0
+	people = 40
 	elites = 0
 	intellectuals = 0
-	ruler = 100
+	ruler = 60
 }
 
-add_offsite_building = {
-    type = industrial_complex
-	level = 5
-}
-add_offsite_building = {
-    type = arms_factory
-	level = 5
-}
-add_offsite_building = {
-    type = dockyard
-	level = 5
-}
-
-set_country_flag = is_north_mexican_nation
-
-set_country_flag = no_generic_chief
-set_country_flag = no_generic_political_advisors
-set_country_flag = no_generic_high_command
-set_country_flag = no_generic_theorists
-set_country_flag = no_generic_advisor
-set_country_flag = give_raider_generic_political_advisors
-set_country_flag = give_raider_generic_high_command
-set_country_flag = give_raider_generic_theorists
-set_country_flag = give_raider_generic_chiefs
-
-add_ideas = {
-	# slavers_idea_1
-	baja_banditos_united
-	baja_motors
-	bvc_expert_smugglers
-	blp_procurement_specialists
-	undesirables_law_raider
-}
-set_country_flag = slavery_allowed
-
-add_opinion_modifier = {
-	target = BLP
-	modifier = baja_bandito_brothers
-}
-reverse_add_opinion_modifier = {
-	target = NCR
-	modifier = baja_smugglers
-}
-
-recruit_character = BVC_guarez_moya
-recruit_character = BVC_pancho_villa
-#recruit_character = BVC_romulo_robles
-recruit_character = BVC_porfirio_almonte
+recruit_character = DRY_john_caveman_lynch
+recruit_character = DRY_charles_smith
+recruit_character = DRY_jesse_bradley
+recruit_character = DRY_jonathan_cooper

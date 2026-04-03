@@ -107,6 +107,8 @@ add_ideas = {
 	GDH_the_generalismos_arsenal
 	free_trade
 	partial_economic_mobilisation
+	gente_arms_industry
+	gente_mercenary_contractors
 }
 
 recruit_character = GDH_generalissimo_vialla

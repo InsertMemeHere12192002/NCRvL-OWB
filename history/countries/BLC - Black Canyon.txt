@@ -97,6 +97,7 @@ add_ideas = {
 	closed_economy
 	chems_banned
 	centralization_settler_minimum
+	northern_colorado_famine
 }
 
 #BLC = {

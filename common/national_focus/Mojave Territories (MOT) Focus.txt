@@ -2362,6 +2362,7 @@ focus_tree = {
 		completion_reward = {
 			add_country_leader_trait = political_workhorse
 			set_technology = {
+				ncr_shocktroopers_tech = 1
 				power_armour_tech_level_scientific = 1
 				support_tech_level_scientific = 1
 			}

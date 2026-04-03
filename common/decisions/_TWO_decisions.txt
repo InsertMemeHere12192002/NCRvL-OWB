@@ -1,0 +1,518 @@
+two_great_race_building = {
+	race_tracks = {
+		icon = generic_construction
+		cost = 100
+
+		modifier = {
+			production_speed_infrastructure_factor = 0.3
+			fuel_gain_factor = -0.5
+			industry_free_repair_factor = -1.0
+		}
+
+		days_remove = 100
+		days_re_enable = 100
+
+		ai_will_do = {
+			base = 50
+		}
+
+		remove_effect = {
+			#
+		}
+	}
+}
+
+two_great_race_preparations = {
+	practice_race_1 = {
+		# add_equipment 1000 motorbike_equipment_1
+		#icon =
+
+		days_remove = 60
+		days_re_enable = 100
+
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+				add = 50
+				has_equipment = {
+					motorized_equipment > 200
+				}
+			}
+		}
+
+		custom_cost_trigger = {
+			set_temp_variable = { motorized_equipment_display = 1 }
+			add_to_temp_variable = { motorized_equipment_display = great_race_motorized_cost_icon }
+			has_equipment = { motorized_equipment > great_race_motorized_cost_icon }
+		}
+		custom_cost_text = motorized_cost
+
+		complete_effect = {
+			add_to_variable = {
+				var = ROOT.great_race_motorized_cost_icon
+				value = 50
+			}
+			subtract_from_variable = {
+				var = ROOT.great_race_motorized_cost
+				value = 50
+			}
+			add_equipment_to_stockpile = {
+				type = motorized_equipment
+				amount = ROOT.great_race_motorized_cost
+			}
+
+		}
+		remove_effect = {
+			set_variable = { race_skill = 10 }
+			great_race_add_skill = yes
+		}
+	}
+
+	practice_race_2 = {
+		icon = generic_army_support
+
+		days_remove = 100
+		days_re_enable = 100
+
+		custom_cost_trigger = {
+			has_army_experience > 30
+		}
+		custom_cost_text = army_xp_more_than_30
+
+		complete_effect = {
+			hidden_effect = {
+				army_experience = -30
+			}
+		}
+
+		modifier = {
+			army_attack_factor = -0.2
+			army_defence_factor = -0.2
+			command_power_gain = -1.0
+		}
+
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+				add = 50
+				has_army_experience > 50
+			}
+
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+
+		complete_effect = {
+			#
+		}
+		remove_effect = {
+			set_variable = { race_skill = 10 }
+			great_race_add_skill = yes
+		}
+	}
+
+	technological_advancement = {
+		icon = GFX_decision_terminal
+
+		days_remove = 120
+		days_re_enable = 150
+
+		modifier = {
+			research_speed_factor = -0.15
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+
+		remove_effect = {
+			set_variable = { race_mech = 10 }
+			great_race_add_mech = yes
+		}
+	}
+
+	chop_shops = {
+		icon = GFX_decision_single_cap
+
+		days_remove = 60
+		days_re_enable = 100
+
+		custom_cost_trigger = {
+			set_temp_variable = { temp_cap_cost = great_race_caps_cost }
+			custom_caps_cost_trigger = yes
+		}
+		custom_cost_text = "caps_decisions_cost_text"
+
+		ai_will_do = {
+			base = 1
+
+			modifier = {
+				add = 50
+				num_of_civilian_factories > 10
+			}
+		}
+
+		#available = {
+		#	set_temp_variable = {
+		#		caps_diff = ROOT.great_race_caps_cost
+		#	}
+		#	caps_cost_trigger = yes
+		#}
+
+
+		complete_effect = {
+			set_temp_variable = { caps_to_subtract = great_race_caps_cost }
+			subtract_caps = yes
+
+			add_to_variable = {
+				var = great_race_caps_cost
+				value = 50
+			}
+		}
+
+		remove_effect = {
+			set_variable = { race_mech = 10 }
+			great_race_add_mech = yes
+		}
+	}
+
+	open_boxes_in_two = {
+		icon = generic_construction
+
+		days_remove = 120
+		fire_only_once = yes
+
+		visible = {
+			NOT = {
+				tag = TWO
+			}
+			TWO = {
+				has_completed_focus = two_boxes
+			}
+		}
+		available = {
+			num_of_civilian_factories_available_for_projects > 1
+		}
+
+		ai_will_do = {
+			base = 0
+
+			modifier = {
+				add = 50
+				has_army_experience > 50
+			}
+		}
+
+		modifier = {
+			civilian_factory_use = 2
+		}
+
+		complete_effect = {
+			set_variable = { race_mech = 30 }
+			great_race_add_mech = yes
+			516 = {
+				if = {
+					limit = {
+						is_valid_state_for_arms_factory = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+great_race_trip = {
+
+	riding = {
+		icon = GFX_decision_single_cap
+		priority = 100
+
+		available = { hidden_trigger = { always = no } }
+		allowed = { always = yes }
+		activation = { always = no }
+
+		#cancel_trigger = {
+		#	NOT = { has_country_flag = wyatt_en_route }
+		#}
+
+		days_mission_timeout = TWO.wyatt_time
+
+		fixed_random_seed = no
+		is_good = yes
+
+		timeout_effect = {
+			great_race_wyatt_calculate = yes
+		}
+	}
+
+	#wyatt_place = {
+	#	icon = GFX_decision_single_cap
+	#	priority = 100
+	#
+	#	state_target = yes
+	#
+	#	#highlight_state_targets = { state = TWO.display }
+	#
+	#	available = { hidden_trigger = { always = no } }
+	#	allowed = { always = yes }
+	#
+	#	on_map_mode = map_only
+	#}
+
+	send_to_eht = {
+		icon = infiltrate_state
+
+		days_remove = 1
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 50
+		}
+
+		visible = {
+			NOT = { has_country_flag = wyatt_en_route }
+			EHT = { exists = yes }
+		}
+
+		available = {
+			has_completed_focus = two_race_invitations_80
+		}
+
+		complete_effect = {
+			great_race_trip_initializing_eht = yes
+			great_race_trip_go = yes
+			set_country_flag = wyatt_en_route
+		}
+	}
+
+	send_to_new = {
+		icon = infiltrate_state
+
+		days_remove = 1
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 50
+		}
+
+		visible = {
+			NOT = { has_country_flag = wyatt_en_route }
+			NEW = { exists = yes }
+		}
+
+		available = {
+			has_completed_focus = two_race_invitations_new
+		}
+
+		complete_effect = {
+			great_race_trip_initializing_new = yes
+			great_race_trip_go = yes
+			set_country_flag = wyatt_en_route
+		}
+	}
+
+	send_to_gdh = {
+		icon = infiltrate_state
+
+		days_remove = 1
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 50
+		}
+
+		visible = {
+			NOT = { has_country_flag = wyatt_en_route }
+			GDH = { exists = yes }
+		}
+
+		available = {
+			has_completed_focus = two_race_invitations_gdh
+		}
+
+		complete_effect = {
+			great_race_trip_initializing_gdh = yes
+			great_race_trip_go = yes
+			set_country_flag = wyatt_en_route
+		}
+	}
+
+	send_to_imo = {
+		icon = infiltrate_state
+
+		days_remove = 1
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 50
+		}
+
+		visible = {
+			NOT = { has_country_flag = wyatt_en_route }
+			SHA = { exists = yes }
+		}
+
+		available = {
+			has_completed_focus = two_race_invitations_imo
+		}
+
+		complete_effect = {
+			great_race_trip_initializing_imo = yes
+			great_race_trip_go = yes
+			set_country_flag = wyatt_en_route
+		}
+	}
+
+	invitations_timeout = {
+		#icon =
+		priority = 100
+
+		available = {
+			has_completed_focus = two_invitations_end
+		}
+
+		allowed = { always = yes }
+		activation = { always = no }
+
+		days_mission_timeout = 548
+
+		fixed_random_seed = no
+		is_good = no
+
+		timeout_effect = {
+			if = {
+				limit = { is_ai = no }
+				add_war_support = -0.4
+				add_stability = -0.4
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						original_tag = EHT
+						original_tag = GDH
+						original_tag = NEW
+						original_tag = SHA
+					}
+					set_country_flag = great_race_participant
+				}
+			}
+		}
+		complete_effect = {
+			add_political_power = 50
+		}
+	}
+}
+
+debug = {
+	focuses = {
+		days_remove = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			complete_national_focus = two_arizona_rangers
+			complete_national_focus = two_rule_cow
+			complete_national_focus = two_cores_cow
+		}
+	}
+	cosmetic_tag = {
+		days_remove = 0
+		fire_only_once = yes
+
+		complete_effect = {
+			complete_national_focus = two_gente_cores
+			annex_country = {
+				target = COW
+				transfer_troops = no
+			}
+			annex_country = {
+				target = TON
+				transfer_troops = no
+			}
+			annex_country = {
+				target = GDH
+				transfer_troops = no
+			}
+		}
+	}
+	ideas = {
+		days_remove = 0
+		fire_only_once = yes
+
+		available = {}
+
+		complete_effect = {
+			add_ideas = {
+				two_tucson_sci
+				two_tucson_road
+				two_tucson_arms
+				two_worship_of_nas
+				two_demon_priest
+				two_demon_mechanic
+				two_demon_racer
+				two_masters_of_the_motor
+				two_ton_secrets_idea
+				two_remnants_of_rangers
+				two_gen_3_sun_pact
+				two_slave_trade_idea
+				two_supply_idea
+				two_motorized_production_1
+				two_motorized_production_3
+				two_tank_stats
+				two_factories_idea
+				two_great_race_prep_idea
+				two_chop_shop_idea
+				two_invitations_gdh_idea
+				two_invitations_new_idea
+				two_invitations_imo_idea
+				two_invitations_eht_idea
+				two_invitations_idea
+				two_preparation_idea_1
+				two_great_race_winner_idea
+				two_tracks_idea
+			}
+		}
+	}
+	setup_race = {
+		fire_only_once = yes
+		complete_effect = {
+			complete_national_focus = two_race_start
+			complete_national_focus = two_race_invitations_80
+			complete_national_focus = two_race_invitations_imo
+			complete_national_focus = two_race_invitations_new
+			complete_national_focus = two_race_invitations_gdh
+			complete_national_focus = two_race_invitations
+		}
+	}
+	race_variables = {
+		fire_only_once = yes
+		complete_effect = {
+			set_variable = { TWO.great_race_skill_tech = 80 }
+			set_variable = { EHT.great_race_skill_tech = 70 }
+			set_variable = { GDH.great_race_skill_tech = 30 }
+			set_variable = { IMO.great_race_skill_tech = 40 }
+			set_variable = { NEW.great_race_skill_tech = 20 }
+		}
+	}
+	launch_race = {
+		fire_only_once = yes
+		complete_effect = {
+			launch_great_race = yes
+		}
+	}
+	calcus = {
+		days_re_enable = 0
+		complete_effect = {
+			great_race_race = yes
+		}
+	}
+}

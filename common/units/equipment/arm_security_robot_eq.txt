@@ -61,8 +61,8 @@ equipments = {
 		reliability = 0.85
 
 		#Defensive Abilities
-		defense = 19
-		breakthrough = 11
+		defense = 20
+		breakthrough = 12
 		hardness = 0.55
 		armor_value = 40
 		suppression = 1.5
@@ -70,15 +70,15 @@ equipments = {
 		fuel_consumption = 0.4
 
 		#Offensive Abilities
-		soft_attack = 13
-		hard_attack = 13
+		soft_attack = 14
+		hard_attack = 14
 		ap_attack = 35
-		air_attack = 5
+		air_attack = 6
 
 		#Space taken in convoy
 		lend_lease_cost = 10
 
-		build_cost_ic = 21
+		build_cost_ic = 20
 		resources = {
 			metal = 2
 			composites = 1

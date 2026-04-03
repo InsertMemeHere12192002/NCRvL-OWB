@@ -37,6 +37,70 @@ ideas = {
             }
             removal_cost = -1
         }
+        northern_colorado_famine = {
+            picture = generic_food_bad
+            allowed = {
+                always = no
+            }
+            modifier = {
+                industrial_capacity_factory = -0.2
+                army_org_factor = -0.2
+                army_attack_factor = -0.2
+                army_defence_factor = -0.2
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            removal_cost = -1
+        }
+        northern_colorado_famine_averted = {
+            picture = generic_food_good
+            allowed = {
+                always = no
+            }
+            modifier = {
+                industrial_capacity_factory = 0.1
+                army_org_factor = 0.1
+                army_attack_factor = 0.1
+                army_defence_factor = 0.1
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            removal_cost = -1
+        }
+        northern_colorado_famine = {
+            picture = generic_food_bad
+            allowed = {
+                always = no
+            }
+            modifier = {
+                industrial_capacity_factory = -0.2
+                army_org_factor = -0.2
+                army_attack_factor = -0.2
+                army_defence_factor = -0.2
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            removal_cost = -1
+        }
+        fertile_lands = {
+            picture = aztlan_land_distribution
+            allowed = {
+                always = no
+            }
+            modifier = {
+                industrial_capacity_factory = 0.1
+                production_speed_buildings_factor = 0.1
+                production_speed_industrial_complex_factor = 0.1
+                consumer_goods_factor = -0.05
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            removal_cost = -1
+        }
         aeronautics_ineptitude = {
             picture = generic_glider
             allowed = {

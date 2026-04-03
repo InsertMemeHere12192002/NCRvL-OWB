@@ -3451,7 +3451,7 @@ focus_tree = {
 				limit = {
 					is_texan_state = yes
 				}
-				add_claim_by = IMO
+				add_claim_by = SHA
 			}
 		}
 	}

@@ -121,4 +121,5 @@ add_ideas = {
 	low_economic_mobilisation
 	outsider_law_none
 	undesirables_law_none
+	northern_colorado_famine
 }

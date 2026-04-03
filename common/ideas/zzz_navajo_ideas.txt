@@ -195,7 +195,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_expected_value = -0.02
+				consumer_goods_expected_value = -0.05
 				caps_income_modifier = 0.05
 			}
 		}

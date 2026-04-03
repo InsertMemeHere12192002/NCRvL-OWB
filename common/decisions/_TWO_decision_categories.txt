@@ -1,0 +1,57 @@
+two_great_race_building = {
+	allowed = {
+		tag = TWO
+	}
+	visible = {
+		has_completed_focus = two_race_start
+	}
+	priority = 110 # caps are 90
+	#picture =
+}
+
+two_great_race_preparations = {
+	allowed = {
+		OR = {
+			original_tag = EHT
+			original_tag = SHA
+			original_tag = NEW
+			original_tag = GDH
+			original_tag = TWO
+		}
+	}
+	visible = {
+		has_country_flag = great_race_participant
+		NOT = {
+			OR = {
+				has_country_flag = great_race_dont_show
+				has_global_flag = great_race_started
+				has_global_flag = great_race_finished
+			}
+		}
+	}
+	visible_when_empty = yes
+	priority = 100
+	#picture =
+}
+
+great_race_trip = {
+	#picture =
+	allowed = {
+		tag = TWO
+	}
+	visible = {
+		has_completed_focus = two_race_invitations
+	}
+	visible_when_empty = no
+	priority = 120
+}
+
+debug = {
+	priority = 1000
+	allowed = {
+		always = yes
+	}
+	visible = {
+		has_country_flag = debug
+	}
+}

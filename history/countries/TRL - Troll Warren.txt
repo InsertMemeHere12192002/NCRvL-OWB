@@ -1,0 +1,137 @@
+﻿capital = 235
+oob = "TRL_2275"
+
+set_technology = {
+	basic_supply_transport_tech = 1
+	infantry_tech_level_tribal = 1
+	#infantry_tech_level_settler = 1
+	#infantry_tech_level_scientific = 1
+	support_tech_level_tribal = 1
+	#support_tech_level_settler = 1
+	#support_tech_level_scientific = 1
+	special_forces_tech_level_tribal = 1
+	#special_forces_tech_level_settler = 1
+	#special_forces_tech_level_scientific = 1
+	#power_armour_tech_level_settler = 1
+	#power_armour_tech_level_scientific = 1
+	#vehicles_tech_level_tribal = 1
+	#vehicles_tech_level_settler = 1
+	#vehicles_tech_level_scientific = 1
+	#robotics_tech_level_tribal = 1
+	#robotics_tech_level_settler = 1
+	#robotics_tech_level_scientific = 1
+	#air_tech_level_tribal = 1
+	#air_tech_level_settler = 1
+	#air_tech_level_scientific = 1
+	naval_tech_level_tribal = 1
+	#naval_tech_level_settler = 1
+	#naval_tech_level_scientific = 1
+	tools_tech_level_tribal = 1
+	#tools_tech_level_settler = 1
+	#tools_tech_level_scientific = 1
+	habitation_tech_level_tribal = 1
+	#habitation_tech_level_settler = 1
+	#habitation_tech_level_scientific = 1
+	exploitation_tech_level_tribal = 1
+	#exploitation_tech_level_settler = 1
+	#exploitation_tech_level_scientific = 1
+	electronics_tech_level_tribal = 1
+	#electronics_tech_level_settler = 1
+	#electronics_tech_level_scientific = 1
+	tool_engineering = 1
+	standard_weaponry_tech = 1
+	melee_weaponry_tech_1 = 1
+	pre_construction_industry_tech = 1
+	basic_industry_tech = 1
+	support_weaponry = 1
+	super_mutant_civilization = 1
+	super_mutant_behemoth = 1
+	super_mutant_nightkin_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+}
+
+#Purposefully extremely low, as to encourage them to gain lots of stability with their focus tree
+set_stability = 0.12
+set_war_support = 0.62
+set_research_slots = 3
+
+set_country_flag = army_wages_disabled
+set_country_flag = is_super_mutant_nation
+set_country_flag = is_followers_black_listed_nation
+set_country_flag = has_unique_manpower_law
+set_country_flag = is_oregon_nation
+set_country_flag = super_mutant_doctrine_ai
+
+
+
+set_politics = {
+	ruling_party = ruler
+	elections_allowed = no
+}
+
+set_popularities = {
+	people = 20
+	elites = 20
+	intellectuals = 20
+	ruler = 40
+}
+
+set_country_flag = dont_give_super_mutant_generic_high_command
+set_country_flag = dont_give_super_mutant_generic_chiefs
+
+add_ideas = {
+	closed_economy
+	war_economy
+	trl_cave_trolls
+	normies_law_none
+	trl_warband_without_a_home
+	officer_law_mutant_instinct
+	fertile_lands
+}
+
+add_opinion_modifier = { target = WBH modifier = mutantshatebos }
+
+recruit_character = TRL_the_first
+recruit_character = TRL_beatrice
+recruit_character = TRL_pittman
+recruit_character = TRL_bonesnarl
+recruit_character = TRL_scurge
+recruit_character = TRL_marro
+recruit_character = VAR_varina
+recruit_character = TRL_doctor
+recruit_character = TRL_ice_jaw
+recruit_character = TRL_peon_tusk_hell
+recruit_character = TRL_monster_in_the_woods
+recruit_character = TRL_shepard
+recruit_character = TRL_mother
+recruit_character = TRL_captain_crabeater
+recruit_character = TRL_stomper_the_stupid
+recruit_character = TRL_foo_pig_the_friendly
+recruit_character = TRL_selfish_sally
+recruit_character = TRL_conehead_the_cowardly
+recruit_character = TRL_wave_breaker
+recruit_character = VAR_skeleton
+recruit_character = VAR_skeleton_gun
+
+set_variable = { never_return_stolen_territory = 1 }
+
+#random_character = { #Not supported feature anymore
+#	limit = {
+#		is_character = TRL_the_first
+#	}
+#	save_global_event_target_as = TRL_the_first_target
+#}
+
+2275.1.1 = {
+	#Increase this to increase the amount of time before Troll Warren can start declaring war on other nations, and the time it takes WBH to get their war goals against Troll Warren
+	set_variable = { trl_time_days_for_war = 75 }
+	add_offsite_building = { type = industrial_complex level = 1 }
+	add_offsite_building = { type = arms_factory level = 1 }
+	#These down there are suprisingly still works, so I'm not gonna touch them
+	every_unit_leader = { if = { limit = { has_trait = intelligent_trait } save_global_event_target_as = commander_beatrice } }
+	every_unit_leader = { if = { limit = { has_trait = lucky_trait } save_global_event_target_as = commander_bonesnarl } }
+	every_unit_leader = { if = { limit = { has_trait = agile_trait } save_global_event_target_as = commander_pittman } }
+}
+create_or_join_masters_new_army = yes

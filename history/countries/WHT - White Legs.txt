@@ -20,8 +20,8 @@ set_technology = {
 	#robotics_tech_level_settler = 1
 	#robotics_tech_level_scientific = 1
 	creatures_tech_level_tribal = 1
-	#creatures_tech_level_settler = 1
-	#creatures_tech_level_scientific = 1
+	creatures_tech_level_settler = 1
+	creatures_tech_level_scientific = 1
 	air_tech_level_tribal = 1
 	#air_tech_level_settler = 1
 	#air_tech_level_scientific = 1
@@ -63,6 +63,10 @@ set_technology = {
 	glider_tech = 1
 	cargo_plane_tech_1 = 1
 	elaborate_disruption_doctrine = 1
+	deathclaw_tech_access_tech = 1
+	deathclaw_civilization_access_tech = 1
+	deathclaw_alphas_access_tech = 1
+	gecko_tech_access_tech = 1
 }
 
 354 = { add_claim_by = WHT }
@@ -116,6 +120,7 @@ set_popularities = {
 }
 
 add_ideas = {
+	tribal_nation
 	veteran_pathfinders
 	undesirables_law_raider
 	WHT_savages

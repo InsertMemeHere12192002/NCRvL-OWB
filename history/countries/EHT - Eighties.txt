@@ -58,7 +58,7 @@ set_technology = {
 	grand_army = 1
 }
 
-set_stability = 0.3
+set_stability = 0.5
 set_war_support = 0.65
 set_convoys = 10
 set_research_slots = 3
@@ -92,7 +92,8 @@ set_country_flag = grand_motorized_doctrine_ai
 set_variable = { never_return_stolen_territory = 1 }
 
 add_ideas = {
-	roaring_machines
+	tribal_nation
+	roaring_machines_eht
 	EHT_idea_terror_of_long_80
 	raider_bands
 	undesirables_law_raider

@@ -192,6 +192,7 @@ set_variable = { arr_nagor_years = 0 }
 
 # CGS - Our desired economy type is Trade Hub Tariffs
 add_ideas = {
+	tribal_nation
 	ncr_sphere
 	currencyncrdollar
 	ARR_legacy_of_the_dweller

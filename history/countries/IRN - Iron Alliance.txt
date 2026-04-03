@@ -153,6 +153,11 @@ add_ideas = {
 	tot_economic_mobilisation #They have trouble getting factories to field more then 1 div of PA without this. Nerf when we give IRN real expansion targets
 }
 
+add_timed_idea = {
+    idea = northern_colorado_famine_averted
+    days = 731
+}
+
 recruit_character = IRN_bulleteater
 
 add_manpower = 500

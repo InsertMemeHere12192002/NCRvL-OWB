@@ -87,7 +87,7 @@ add_ideas = {
 	outsider_law_none
 	political_effort_state_press
 	normies_law_none
-	lum_singular_faith
+	northern_colorado_famine
 }
 
 recruit_character = LUM_the_great_glowing_one

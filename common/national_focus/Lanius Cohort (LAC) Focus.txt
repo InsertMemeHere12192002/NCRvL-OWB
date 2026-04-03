@@ -1866,6 +1866,9 @@ focus_tree = {
 		available = {
 			is_caesars_legion_member = yes
 			country_exists = CES
+			SHA = {
+				is_ai = yes
+			}
 		}
 		select_effect = {
 			remove_mission = lanius_countdown_dog_city

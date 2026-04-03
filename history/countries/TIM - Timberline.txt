@@ -12,6 +12,9 @@ set_technology = {
 	special_forces_tech_level_tribal = 1
 	special_forces_tech_level_settler = 1
 	special_forces_tech_level_scientific = 1
+	creatures_tech_level_tribal = 1
+	creatures_tech_level_settler = 1
+	creatures_tech_level_scientific = 1
 	#power_armour_tech_level_settler = 1
 	#power_armour_tech_level_scientific = 1
 	vehicles_tech_level_tribal = 1
@@ -52,6 +55,9 @@ set_technology = {
 	terror_tactics = 1
 	super_mutant_behemoth = 1
 	bike_tech_1 = 1
+	beast_tech_access_tech = 1
+	amphibious_tech_access_tech = 1
+	gecko_tech_access_tech = 1
 }
 
 if = {
@@ -69,10 +75,6 @@ recruit_character = TIM_bear_bunyan
 
 add_to_tech_sharing_group = timberline_research_pact
 
-set_truce = {
-	target = WBH
-	days = 1825
-}
 add_manpower = 1000
 set_stability = 0.45
 set_war_support = 0.15
@@ -116,9 +118,23 @@ set_politics = {
 298 = { add_claim_by = TIM }
 343 = { add_claim_by = TIM }
 
+add_offsite_building = {
+    type = industrial_complex
+	level = 5
+}
+add_offsite_building = {
+    type = arms_factory
+	level = 5
+}
+add_offsite_building = {
+    type = dockyard
+	level = 5
+}
+
 add_ideas = {
 	TIM_scouting_heritage
 	TIM_leave_no_trace
+	fertile_lands
 }
 
 set_popularities = {

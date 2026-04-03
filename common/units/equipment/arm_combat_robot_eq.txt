@@ -57,23 +57,23 @@
 		reliability = 0.85
 
 		#Defensive Abilities
-		defense = 12
-		breakthrough = 16
+		defense = 13
+		breakthrough = 17
 		hardness = 0.7
 		armor_value = 35
 
 		fuel_consumption = 0.6
 
 		#Offensive Abilities
-		soft_attack = 16
-		hard_attack = 14
+		soft_attack = 17
+		hard_attack = 15
 		ap_attack = 25
-		air_attack = 3
+		air_attack = 4
 
 		#Space taken in convoy
 		lend_lease_cost = 10
 
-		build_cost_ic = 15
+		build_cost_ic = 14
 		resources = {
 			metal = 3
 			circuitry = 2
@@ -93,23 +93,23 @@
 		reliability = 0.85
 
 		#Defensive Abilities
-		defense = 14
-		breakthrough = 19
+		defense = 15
+		breakthrough = 20
 		hardness = 0.75
 		armor_value = 45
 
 		fuel_consumption = 0.7
 
 		#Offensive Abilities
-		soft_attack = 19
-		hard_attack = 16
+		soft_attack = 20
+		hard_attack = 17
 		ap_attack = 30
-		air_attack = 6.5
+		air_attack = 7.5
 
 		#Space taken in convoy
 		lend_lease_cost = 10
 
-		build_cost_ic = 20
+		build_cost_ic = 19
 		resources = {
 			metal = 3
 			composites = 1
@@ -130,23 +130,23 @@
 		reliability = 0.85
 
 		#Defensive Abilities
-		defense = 15
-		breakthrough = 22
+		defense = 16
+		breakthrough = 23
 		hardness = 0.8
 		armor_value = 55
 
 		fuel_consumption = 0.8
 
 		#Offensive Abilities
-		soft_attack = 22
-		hard_attack = 18
+		soft_attack = 23
+		hard_attack = 19
 		ap_attack = 35
-		air_attack = 9
+		air_attack = 10
 
 		#Space taken in convoy
 		lend_lease_cost = 10
 
-		build_cost_ic = 26
+		build_cost_ic = 25
 		resources = {
 			metal = 3
 			composites = 2
@@ -167,23 +167,23 @@
 		reliability = 0.85
 
 		#Defensive Abilities
-		defense = 10
-		breakthrough = 19
+		defense = 11
+		breakthrough = 20
 		hardness = 0.35
 		armor_value = 25
 
 		fuel_consumption = 2
 
 		#Offensive Abilities
-		soft_attack = 20
-		hard_attack = 10
+		soft_attack = 21
+		hard_attack = 11
 		ap_attack = 15
-		air_attack = 10
+		air_attack = 11
 
 		#Space taken in convoy
 		lend_lease_cost = 10
 
-		build_cost_ic = 11
+		build_cost_ic = 10
 		resources = {
 			composites = 4
 			advanced = 4

@@ -77,12 +77,6 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_power_balance = {
-    id = WHD_power_balance
-    left_side = WHD_power_balance_communist_side
-    right_side = WHD_power_balance_ruler_side
-}
-
 set_popularities = {
 	people = 25
 	elites = 10
@@ -91,8 +85,7 @@ set_popularities = {
 }
 
 add_ideas = {
-	whd_chinese_remnants
-	WHD_the_hangdogs_will_be_put_down
+	northern_colorado_famine
 }
 
 add_opinion_modifier = { target = HAN modifier = whd_hang_the_dogs }

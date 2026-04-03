@@ -142,12 +142,12 @@ focus_tree = {
 			add_war_support = -0.1
 			add_tech_bonus = {
 				bonus = 1
-				uses = 3
+				uses = 4
 				category = industry_specialisation_category
 			}
 			add_tech_bonus = {
 				bonus = 1
-				uses = 3
+				uses = 4
 				category = construction_category
 			}
 			if = {
@@ -518,12 +518,12 @@ focus_tree = {
 			add_war_support = 0.1
 			add_tech_bonus = {
 				bonus = 1
-				uses = 3
+				uses = 4
 				category = infantry_tech_category
 			}
 			add_tech_bonus = {
 				bonus = 1
-				uses = 3
+				uses = 4
 				category = support_tech_category
 			}
 			if = {
@@ -977,11 +977,11 @@ focus_tree = {
 			army_experience = 100
 			add_offsite_building = {
 				type = industrial_complex
-				level = 5
+				level = 15
 			}
 			add_offsite_building = {
 				type = arms_factory
-				level = 5
+				level = 15
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }

@@ -119,5 +119,5 @@ recruit_character = GLW_DIRTMAN #Wild Wasteland Rule;Unit Leader
 
 add_ideas = {
 	normies_law_allowed
-	glw_scavengers_of_boulder
+	northern_colorado_famine
 }
