@@ -3848,5 +3848,21 @@ whd_dragoon_tech =	{
 			max_organisation = 10
 		}
 	}
+	
+		woo_power_armored_horses = { # Yes this is broken af. No, I'm not taking criticism. - Orwich <3
+		research_cost = 1.0
+		
+		dependencies = {
+			blocked_tech = 1
+		}
+		
+		allow = { always = no }
+		
+		spec_ops_cavalry = {
+			need = {
+				power_armor_equipment = 25
+			}
+		}
+	}
 
 }
