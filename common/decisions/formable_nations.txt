@@ -1105,58 +1105,6 @@ formable_nations = {
 			}
 		}
 	}
-	form_arizona_rangers = {
-		allowed = {
-			tag = COW
-		}
-		available = {
-			controls_state = 520
-			controls_state = 518
-			controls_state = 519
-			controls_state = 516
-		}
-
-		highlight_states = {
-			highlight_states_trigger = {
-				OR = {
-					state = 520
-					state = 518
-					state = 519
-					state = 516
-				}
-			}
-		}
-
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 200
-		}
-
-		complete_effect = {
-			set_cosmetic_tag = ARZ_rangers
-			hidden_effect = {
-				every_state = {
-					limit = { is_arizona_state = yes }
-					add_claim_by = ROOT
-				}
-			}
-			add_state_core = 520
-			add_state_core = 518
-			add_state_core = 519
-			add_state_core = 516
-			set_capital = { state = 519 }
-			custom_effect_tooltip = form_arizona_rangers_tt
-			set_technology = {
-				infantry_tech_level_scientific = 1
-				special_forces_tech_level_scientific = 1
-			}
-			swap_ideas = {
-				remove_idea = cow_remnants_of_rangers
-				add_idea = cow_reformed_corps
-			}
-		}
-	}
 	form_hookers = {
 		allowed = {
 			tag = RHO

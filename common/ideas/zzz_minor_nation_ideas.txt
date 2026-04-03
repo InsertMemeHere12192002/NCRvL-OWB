@@ -69,22 +69,6 @@ ideas = {
             }
             removal_cost = -1
         }
-        northern_colorado_famine = {
-            picture = generic_food_bad
-            allowed = {
-                always = no
-            }
-            modifier = {
-                industrial_capacity_factory = -0.2
-                army_org_factor = -0.2
-                army_attack_factor = -0.2
-                army_defence_factor = -0.2
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            removal_cost = -1
-        }
         fertile_lands = {
             picture = aztlan_land_distribution
             allowed = {
@@ -1402,60 +1386,6 @@ ideas = {
         ######
         # COW
         ######
-        cow_remnants_of_rangers = {
-            picture = COW_arizona_ranger
-            allowed = {
-                always = no
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                special_forces_training_time_factor = -0.15
-                special_forces_attack_factor = 0.05
-                special_forces_defence_factor = 0.05
-                special_forces_min = 40
-                special_forces_cap = 0.05
-
-            }
-        }
-        cow_reformed_corps = {
-            picture = COW_arizona_ranger
-            allowed = {
-                always = no
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            modifier = {
-                war_support_factor = 0.05
-                special_forces_training_time_factor = -0.2
-                special_forces_attack_factor = 0.1
-                special_forces_defence_factor = 0.1
-                special_forces_min = 100
-                special_forces_cap = 0.1
-            }
-        }
-        cow_bastion_of_liberty = {
-            picture = generic_democratic_drift_bonus
-            allowed = {
-                always = no
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            targeted_modifier = {
-                tag = CES
-                attack_bonus_against = 0.05
-                defense_bonus_against = 0.05
-            }
-            modifier = {
-                exodus_national_appeal = 0.15
-                conscription_factor = 0.1
-                stability_factor = 0.1
-                army_leader_start_defense_level = 1
-            }
-        }
         cow_legion_resistance = {
         picture = legion_crucifixion
             allowed = {

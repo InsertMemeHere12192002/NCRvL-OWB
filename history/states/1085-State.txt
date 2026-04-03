@@ -14,8 +14,8 @@ state={
 			industrial_complex = 2
 		}
 	}
-	provinces={
-		13079 13083 13099 13094 13090 13080
+	provinces = {
+		13065 13068 13070 13079 13080 13083 13090 13094 13099
 	}
 	manpower = 5500
 	state_category = town

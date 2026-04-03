@@ -35,8 +35,9 @@ technologies = {
 	@Row_tex = 27
 	@Row_mex = 29
 	@Row_khans = 31
-	@Row_other = 33
-	@Row_other_2 = 35
+	@Row_tohono = 33
+	@Row_other = 35
+	@Row_other_2 = 37
 
 	
 	dog_infantry_tech = {
@@ -3313,6 +3314,108 @@ ballistic_missile_unlock_tech = {
 		}
 		research_cost = 1
 	}
+
+	tohono_fedaykin_tech = {
+		research_cost = 1.0
+
+		dependencies = {
+			blocked_tech = 1
+		}
+
+		folder = {
+			name = fallout_focus_tree_folder
+			position = { x = @Row_tohono y = @Col_1 }
+		}
+
+		allow = { always = no }
+
+		infantry = {
+			desert = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.2
+			}
+		}
+		militia = {
+			desert = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.2
+			}
+		}
+		spec_ops = {
+			desert = {
+				attack = 0.1
+				defence = 0.1
+				movement = 0.2
+			}
+		}
+	}
+
+	tohono_ranger_armourers = {
+		research_cost = 1.0
+
+		dependencies = {
+			blocked_tech = 1
+		}
+
+		folder = {
+			name = fallout_focus_tree_folder
+			position = { x = @Row_tohono y = @Col_2 }
+		}
+
+		allow = { always = no }
+
+		tohono_rangers = {
+			hard_attack = 0.03
+			reliability = 0.05
+			hardness = 0.05
+			supply_consumption = -0.05
+		}
+	}
+
+	tohono_ranger_comms = {
+		research_cost = 1.0
+
+		dependencies = {
+			blocked_tech = 1
+		}
+
+		folder = {
+			name = fallout_focus_tree_folder
+			position = { x = @Row_tohono y = @Col_3 }
+		}
+
+		allow = { always = no }
+
+		tohono_rangers = {
+			initiative = 0.01
+			recon = 0.2
+			suppression_factor = 0.1
+		}
+	}
+
+	tohono_ranger_support = {
+		research_cost = 1.0
+
+		dependencies = {
+			blocked_tech = 1
+		}
+
+		folder = {
+			name = fallout_focus_tree_folder
+			position = { x = @Row_tohono y = @Col_4 }
+		}
+
+		allow = { always = no }
+
+		tohono_rangers = {
+			soft_attack = 0.03
+			casualty_trickleback = 0.02
+			experience_loss_factor = -0.02
+		}
+	}
+
 	###############################################
 	# Misc Unique Tech
 	###############################################
