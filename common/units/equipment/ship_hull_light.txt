@@ -105,6 +105,7 @@ equipments = {
 		}
 
 		manpower = 3
+		naval_dominance_factor = 10
 	}
 
 	ship_hull_light_1 = {
@@ -249,6 +250,7 @@ equipments = {
 			}
 
 		manpower = 6
+		naval_dominance_factor = 15
 	}
 
 	ship_hull_light_3 = {
@@ -337,6 +339,7 @@ equipments = {
 			}
 
 		manpower = 9
+		naval_dominance_factor = 20
 	}
 
 	ship_hull_light_4 = {
@@ -436,6 +439,7 @@ equipments = {
 			}
 
 		manpower = 12
+		naval_dominance_factor = 25
 	}
 
 	ship_hull_light_5 = {
@@ -537,5 +541,6 @@ equipments = {
 			}
 
 		manpower = 15
+		naval_dominance_factor = 30
 	}
 }

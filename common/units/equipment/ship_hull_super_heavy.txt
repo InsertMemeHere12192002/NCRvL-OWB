@@ -134,6 +134,7 @@ equipments = {
 		}
 
 		manpower = 90
+		naval_dominance_factor = 500
 	}
 
 	ship_hull_super_heavy_1 = {
@@ -143,6 +144,7 @@ equipments = {
 		priority = 2000
 
 		module_slots = inherit
+		naval_dominance_factor = 500
 	}
 
 	ship_hull_super_heavy_brk_palace = {
@@ -180,5 +182,7 @@ equipments = {
 			metal = 6
 			water = 4
 		}
+
+			naval_dominance_factor = 500
 	}
 }

@@ -9,8 +9,9 @@ technologies = {
 	@Col_7 = 26
 	@Col_8 = 29
 	@Col_9 = 32
-	@Col_10 = 37
-	@Col_11 = 40
+	@Col_10 = 33
+	@Col_11 = 36
+	@Col_12 = 39
 
 	@Row_0 = 0
 	@Row_1 = 2
@@ -51,12 +52,14 @@ technologies = {
 			leads_to_tech = light_navy_hull_tech_1
 			research_cost_coeff = 1
 		}
-
 		path = {
-			leads_to_tech = nautics_tech_2
+			leads_to_tech = medium_navy_hull_tech_1
 			research_cost_coeff = 1
 		}
-
+				path = {
+			leads_to_tech = heavy_navy_hull_tech_1
+			research_cost_coeff = 1
+		}
 		path = {
 			leads_to_tech = naval_invasion_tech_1
 			research_cost_coeff = 1
@@ -90,166 +93,21 @@ technologies = {
 
 	}
 
-	nautics_tech_2 = {
-
-		enable_equipment_modules = {
-			light_ship_sail_module
-			medium_ship_sail_module
-			heavy_ship_sail_module
-			super_heavy_ship_sail_module
-		}
-
-		path = {
-			leads_to_tech = nautics_tech_3
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.2
-		start_year = 2276
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_0 y = @Col_2 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_engine_module_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	nautics_tech_3 = {
-
-		enable_equipment_modules = {
-			light_ship_paddle_module
-			medium_ship_paddle_module
-			heavy_ship_paddle_module
-			super_heavy_ship_paddle_module
-		}
-
-		path = {
-			leads_to_tech = nautics_tech_4
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_settler = 1
-		}
-
-		research_cost = 1.2
-		start_year = 2278
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_0 y = @Col_4 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_engine_module_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	nautics_tech_4 = {
-
-		enable_equipment_modules = {
-			light_ship_propeller_module
-			medium_ship_propeller_module
-			heavy_ship_propeller_module
-			super_heavy_ship_propeller_module
-		}
-
-		path = {
-			leads_to_tech = nautics_tech_5
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_settler = 1
-		}
-
-		research_cost = 1.2
-		start_year = 2280
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_0 y = @Col_6 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_engine_module_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	nautics_tech_5 = {
-
-		enable_equipment_modules = {
-			light_ship_hydrojet_module
-			medium_ship_hydrojet_module
-			heavy_ship_hydrojet_module
-			super_heavy_ship_hydrojet_module
-		}
-
-		research_cost = 1.2
-		start_year = 2282
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_0 y = @Col_8 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_engine_module_tech_category
-			scientific_tech_category
-		}
-
-		dependencies = {
-			naval_tech_level_scientific = 1
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
 
 	light_navy_hull_tech_1 = {
 
 		enable_equipments = {
 			ship_hull_light_1
 		}
-
-		path = {
-			leads_to_tech = light_navy_hull_tech_2
-			research_cost_coeff = 1
+			enable_equipment_modules = {
+			light_ship_oars_module
+			ship_light_mounted_gun_module
+			ship_command_module_1
+			ship_pd_module_1
 		}
 
 		path = {
-			leads_to_tech = waterproof_sealing_tech
+			leads_to_tech = light_navy_hull_tech_2
 			research_cost_coeff = 1
 		}
 
@@ -274,6 +132,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1.25
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
@@ -283,14 +149,12 @@ technologies = {
 		enable_equipments = {
 			ship_hull_light_2
 		}
-
-		path = {
-			leads_to_tech = light_navy_hull_tech_3
-			research_cost_coeff = 1
+		enable_equipment_modules = {
+			light_ship_sail_module
 		}
 
 		path = {
-			leads_to_tech = outrigger_tech
+			leads_to_tech = light_navy_hull_tech_3
 			research_cost_coeff = 1
 		}
 
@@ -303,7 +167,7 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_1 y = @Col_3 }
+			position = { x = @Row_1 y = @Col_2 }
 		}
 
 		categories = {
@@ -314,7 +178,15 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
@@ -323,6 +195,9 @@ technologies = {
 
 		enable_equipments = {
 			ship_hull_light_3
+		}
+				enable_equipment_modules = {
+			light_ship_paddle_module
 		}
 
 		path = {
@@ -344,6 +219,53 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
+			position = { x = @Row_1 y = @Col_4 }
+		}
+
+		categories = {
+			naval_tech_category
+			naval_hull_tech_category
+			naval_light_hull_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
+
+	}
+
+	light_navy_hull_tech_4 = {
+
+		enable_equipments = {
+			ship_hull_light_4
+		}
+		enable_equipment_modules = {
+			light_ship_propeller_module
+		}
+
+		path = {
+			leads_to_tech = light_navy_hull_tech_5
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			naval_tech_level_settler = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2280
+
+		folder = {
+			name = fallout_naval_folder
 			position = { x = @Row_1 y = @Col_5 }
 		}
 
@@ -355,33 +277,35 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 0.5
-		}
+			factor = 1
 
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
 	}
 
-	light_navy_hull_tech_4 = {
+	light_navy_hull_tech_5 = {
 
 		enable_equipments = {
-			ship_hull_light_4
+			ship_hull_light_5
 		}
 
-		path = {
-			leads_to_tech = light_navy_hull_tech_5
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = naval_manuals_tech
-			research_cost_coeff = 1
+		enable_equipment_modules = {
+			light_ship_torpedoes_module
+			light_ship_hydrojet_module
 		}
 
 		dependencies = {
-			naval_tech_level_settler = 1
+			naval_tech_level_scientific = 1
 		}
 
 		research_cost = 1.5
-		start_year = 2280
+		start_year = 2282
 
 		folder = {
 			name = fallout_naval_folder
@@ -392,59 +316,19 @@ technologies = {
 			naval_tech_category
 			naval_hull_tech_category
 			naval_light_hull_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-	}
-
-	light_navy_hull_tech_5 = {
-
-		enable_equipments = {
-			ship_hull_light_5
-		}
-
-		light_ship_unit = {
-			torpedo_attack = 0.2
-		}
-		medium_ship_screen_unit = {
-			torpedo_attack = 0.2
-		}
-		heavy_ship_unit = {
-			torpedo_attack = 0.2
-		}
-		super_heavy_ship_unit = {
-			torpedo_attack = 0.2
-		}
-
-		path = {
-			leads_to_tech = naval_secondary_engines_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_scientific = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2282
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_1 y = @Col_9 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_light_hull_tech_category
 			scientific_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
+
+			modifier = {
+				factor = 4
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
@@ -454,428 +338,15 @@ technologies = {
 		enable_equipments = {
 			ship_hull_medium_1
 		}
+				enable_equipment_modules = {
+			medium_ship_oars_module
+			ship_medium_mounted_gun_module
+			ship_command_module_1
+			ship_pd_module_1
+		}
 
 		path = {
 			leads_to_tech = medium_navy_hull_tech_2
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = multi_deck_construction_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2275
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_3 y = @Col_1 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_medium_hull_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 1.25
-		}
-
-	}
-
-	medium_navy_hull_tech_2 = {
-
-		enable_equipments = {
-			ship_hull_medium_2
-		}
-
-		path = {
-			leads_to_tech = medium_navy_hull_tech_3
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = outrigger_tech
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = proper_rigging_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2277
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_3 y = @Col_3 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_medium_hull_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	medium_navy_hull_tech_3 = {
-
-		enable_equipments = {
-			ship_hull_medium_3
-		}
-
-		path = {
-			leads_to_tech = medium_navy_hull_tech_4
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = metal_bows_tech
-			research_cost_coeff = 1
-		}
-
-		#path = {
-		#	leads_to_tech = grappling_harpoon_tech
-		#	research_cost_coeff = 1
-		#}
-
-		dependencies = {
-			naval_tech_level_settler = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2279
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_3 y = @Col_5 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_medium_hull_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	medium_navy_hull_tech_4 = {
-
-		enable_equipments = {
-			ship_hull_medium_4
-		}
-
-		path = {
-			leads_to_tech = medium_navy_hull_tech_5
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = naval_manuals_tech
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = naval_armor_reinforcement_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_settler = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2281
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_3 y = @Col_7 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_medium_hull_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	medium_navy_hull_tech_5 = {
-
-		enable_equipments = {
-			ship_hull_medium_5
-		}
-
-		path = {
-			leads_to_tech = naval_emergency_sealing_tech
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = naval_secondary_engines_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_scientific = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2283
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_3 y = @Col_9 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_medium_hull_tech_category
-			scientific_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	heavy_navy_hull_tech_1 = {
-
-		enable_equipments = {
-			ship_hull_heavy_1
-		}
-
-		path = {
-			leads_to_tech = heavy_navy_hull_tech_2
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2276
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_5 y = @Col_1 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_heavy_hull_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 1.25
-		}
-
-	}
-
-	heavy_navy_hull_tech_2 = {
-
-		enable_equipments = {
-			ship_hull_heavy_2
-		}
-
-		path = {
-			leads_to_tech = heavy_navy_hull_tech_3
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = proper_rigging_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2278
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_5 y = @Col_3 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_heavy_hull_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	heavy_navy_hull_tech_3 = {
-
-		enable_equipments = {
-			ship_hull_heavy_3
-		}
-
-		path = {
-			leads_to_tech = heavy_navy_hull_tech_4
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = metal_bows_tech
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = naval_wonders_of_the_past_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_settler = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2280
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_5 y = @Col_5 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_heavy_hull_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	heavy_navy_hull_tech_4 = {
-
-		enable_equipments = {
-			ship_hull_heavy_4
-		}
-
-		path = {
-			leads_to_tech = heavy_navy_hull_tech_5
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = naval_armor_reinforcement_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_settler = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2282
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_5 y = @Col_7 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_heavy_hull_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	heavy_navy_hull_tech_5 = {
-
-		enable_equipments = {
-			ship_hull_heavy_5
-		}
-
-		path = {
-			leads_to_tech = naval_emergency_sealing_tech
-			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_scientific = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2284
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_5 y = @Col_9 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			naval_heavy_hull_tech_category
-			scientific_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	waterproof_sealing_tech = {
-
-		critical_receive_chance = -0.1
-		naval_critical_effect_factor = -0.1
-
-		path = {
-			leads_to_tech = medium_navy_hull_tech_1
 			research_cost_coeff = 1
 		}
 
@@ -894,91 +365,36 @@ technologies = {
 		categories = {
 			naval_tech_category
 			naval_hull_tech_category
+			naval_medium_hull_tech_category
 			tribal_tech_category
 		}
 
 		ai_will_do = {
 			factor = 1.25
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
 
-	multi_deck_construction_tech = {
+	medium_navy_hull_tech_2 = {
 
-		category_capital_ship = {
-			max_strength = 0.05
-			reliability = 0.02
+		enable_equipments = {
+			ship_hull_medium_2
+		}
+		enable_equipment_modules = {
+			medium_ship_sail_module
 		}
 
 		path = {
-			leads_to_tech = heavy_navy_hull_tech_1
+			leads_to_tech = medium_navy_hull_tech_3
 			research_cost_coeff = 1
-		}
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		research_cost = 1.5
-		start_year = 2275
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_4 y = @Col_1 }
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 1.25
-		}
-
-	}
-
-	outrigger_tech = {
-
-		light_ship_unit = {
-			max_strength = 0.1
-		}
-
-		research_cost = 1.5
-		start_year = 2276
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_2 y = @Col_3 }
-		}
-
-		dependencies = {
-			naval_tech_level_tribal = 1
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			tribal_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	proper_rigging_tech = {
-
-		category_screen_ship = {
-			naval_speed = 0.05
-		}
-		category_capital_ship = {
-			naval_speed = 0.05
-		}
-		category_carrier_ship = {
-			naval_speed = 0.05
 		}
 
 		dependencies = {
@@ -990,40 +406,52 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_4 y = @Col_3 }
+			position = { x = @Row_2 y = @Col_2 }
 		}
 
 		categories = {
 			naval_tech_category
 			naval_hull_tech_category
+			naval_medium_hull_tech_category
 			tribal_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
 
+	medium_navy_hull_tech_3 = {
+
+		enable_equipments = {
+			ship_hull_medium_3
+		}
+		enable_equipment_modules = {
+			medium_ship_paddle_module
+		}
+
+		path = {
+			leads_to_tech = medium_navy_hull_tech_4
+			research_cost_coeff = 1
+		}
 
 
-	metal_bows_tech = {
-
-		category_screen_ship = {
-			armor_value = 0.05
-			reliability = 0.02
-		}
-		category_capital_ship = {
-			armor_value = 0.05
-			reliability = 0.02
-		}
-		category_carrier_ship = {
-			armor_value = 0.05
-			reliability = 0.02
-		}
+		#path = {
+		#	leads_to_tech = grappling_harpoon_tech
+		#	research_cost_coeff = 1
+		#}
 
 		dependencies = {
-			naval_tech_level_tribal = 1
+			naval_tech_level_settler = 1
 		}
 
 		research_cost = 1.5
@@ -1031,64 +459,46 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_4 y = @Col_5 }
-		}
-
-		dependencies = {
-			naval_tech_level_settler = 1
+			position = { x = @Row_2 y = @Col_4 }
 		}
 
 		categories = {
 			naval_tech_category
 			naval_hull_tech_category
+			naval_medium_hull_tech_category
 			civilized_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
 
-	naval_manuals_tech = {
+	medium_navy_hull_tech_4 = {
 
-		critical_receive_chance = -0.1
-		naval_critical_effect_factor = -0.1
+		enable_equipments = {
+			ship_hull_medium_4
+		}
+				enable_equipment_modules = {
+			medium_ship_propeller_module
+		}
 
-		research_cost = 1.5
-		start_year = 2280
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_2 y = @Col_7 }
+		path = {
+			leads_to_tech = medium_navy_hull_tech_5
+			research_cost_coeff = 1
 		}
 
 		dependencies = {
 			naval_tech_level_settler = 1
-		}
-
-		categories = {
-			naval_tech_category
-			naval_hull_tech_category
-			civilized_tech_category
-		}
-
-		ai_will_do = {
-			factor = 0.5
-		}
-
-	}
-
-	naval_armor_reinforcement_tech = {
-
-		category_screen_ship = {
-			armor_value = 0.1
-		}
-		category_capital_ship = {
-			armor_value = 0.1
-		}
-		category_carrier_ship = {
-			armor_value = 0.1
 		}
 
 		research_cost = 1.5
@@ -1096,35 +506,240 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_4 y = @Col_7 }
+			position = { x = @Row_2 y = @Col_5 }
+		}
+
+		categories = {
+			naval_tech_category
+			naval_hull_tech_category
+			naval_medium_hull_tech_category
+			civilized_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
+
+	}
+
+	medium_navy_hull_tech_5 = {
+
+		enable_equipments = {
+			ship_hull_medium_5
+		}
+		enable_equipment_modules = {
+			medium_ship_hydrojet_module
+		}
+
+		dependencies = {
+			naval_tech_level_scientific = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2283
+
+		folder = {
+			name = fallout_naval_folder
+			position = { x = @Row_2 y = @Col_7 }
+		}
+
+		categories = {
+			naval_tech_category
+			naval_hull_tech_category
+			naval_medium_hull_tech_category
+			scientific_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 5
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
+
+	}
+
+	heavy_navy_hull_tech_1 = {
+
+		enable_equipments = {
+			ship_hull_heavy_1
+		}
+				enable_equipment_modules = {
+			heavy_ship_oars_module
+			ship_heavy_mounted_gun_module
+			ship_command_module_1
+			ship_pd_module_1
+		}
+
+		path = {
+			leads_to_tech = heavy_navy_hull_tech_2
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			naval_tech_level_tribal = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2276
+
+		folder = {
+			name = fallout_naval_folder
+			position = { x = @Row_3 y = @Col_1 }
+		}
+
+		categories = {
+			naval_tech_category
+			naval_hull_tech_category
+			naval_heavy_hull_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
+
+	}
+
+	heavy_navy_hull_tech_2 = {
+
+		enable_equipments = {
+			ship_hull_heavy_2
+		}
+				enable_equipment_modules = {
+			heavy_ship_sail_module
+			super_heavy_ship_sail_module
+		}
+
+		path = {
+			leads_to_tech = heavy_navy_hull_tech_3
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			naval_tech_level_tribal = 1
+		}
+
+		research_cost = 1.5
+		start_year = 2278
+
+		folder = {
+			name = fallout_naval_folder
+			position = { x = @Row_3 y = @Col_2 }
+		}
+
+		categories = {
+			naval_tech_category
+			naval_hull_tech_category
+			naval_heavy_hull_tech_category
+			tribal_tech_category
+		}
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 3
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
+
+	}
+
+	heavy_navy_hull_tech_3 = {
+
+		enable_equipments = {
+			ship_hull_heavy_3
+		}
+			enable_equipment_modules = {
+			heavy_ship_paddle_module
+			super_heavy_ship_paddle_module
+		}
+
+		path = {
+			leads_to_tech = heavy_navy_hull_tech_4
+			research_cost_coeff = 1
 		}
 
 		dependencies = {
 			naval_tech_level_settler = 1
 		}
 
+		research_cost = 1.5
+		start_year = 2280
+
+		folder = {
+			name = fallout_naval_folder
+			position = { x = @Row_3 y = @Col_4 }
+		}
+
 		categories = {
-			naval_armour_module_tech_category
+			naval_tech_category
 			naval_hull_tech_category
+			naval_heavy_hull_tech_category
 			civilized_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
+
+			modifier = {
+				factor = 3
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
 
-	naval_secondary_engines_tech = {
+	heavy_navy_hull_tech_4 = {
 
-		category_screen_ship = {
-			naval_speed = 0.05
+		enable_equipments = {
+			ship_hull_heavy_4
 		}
-		category_capital_ship = {
-			naval_speed = 0.05
+				enable_equipment_modules = {
+			heavy_ship_propeller_module
+			super_heavy_ship_propeller_module
 		}
-		category_carrier_ship = {
-			naval_speed = 0.05
+
+		path = {
+			leads_to_tech = heavy_navy_hull_tech_5
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = naval_wonders_of_the_past_tech
+			research_cost_coeff = 1
+		}
+
+		dependencies = {
+			naval_tech_level_settler = 1
 		}
 
 		research_cost = 1.5
@@ -1132,53 +747,73 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_2 y = @Col_9 }
-		}
-
-		dependencies = {
-			naval_tech_level_scientific = 1
+			position = { x = @Row_3 y = @Col_5 }
 		}
 
 		categories = {
 			naval_tech_category
-			naval_engine_module_tech_category
 			naval_hull_tech_category
-			scientific_tech_category
+			naval_heavy_hull_tech_category
+			civilized_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
+
+			modifier = {
+				factor = 2
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
 		}
 
 	}
 
-	naval_emergency_sealing_tech = {
+	heavy_navy_hull_tech_5 = {
 
-		critical_receive_chance = -0.1
-		naval_critical_effect_factor = -0.1
-
-		research_cost = 1.5
-		start_year = 2283
-
-		folder = {
-			name = fallout_naval_folder
-			position = { x = @Row_4 y = @Col_9 }
+		enable_equipments = {
+			ship_hull_heavy_5
+		}
+		enable_equipment_modules = {
+			heavy_ship_hydrojet_module
+		}
+		path = {
+			#leads_to_tech = naval_emergency_sealing_tech
+			research_cost_coeff = 1
 		}
 
 		dependencies = {
 			naval_tech_level_scientific = 1
 		}
 
+		research_cost = 1.5
+		start_year = 2282
+
+		folder = {
+			name = fallout_naval_folder
+			position = { x = @Row_3 y = @Col_7 }
+		}
+
 		categories = {
 			naval_tech_category
 			naval_hull_tech_category
+			naval_heavy_hull_tech_category
 			scientific_tech_category
 		}
 
 		ai_will_do = {
-			factor = 0.5
-		}
+			factor = 1
 
+			modifier = {
+				factor = 2
+				is_naval_tag = yes
+			}
+		}
+		ai_research_weights = {
+			naval_equipment = 1.2
+		}
 	}
 
 	naval_wonders_of_the_past_tech = {
@@ -1203,7 +838,7 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_6 y = @Col_5 }
+			position = { x = @Row_4 y = @Col_5 }
 		}
 
 		dependencies = {
@@ -1227,13 +862,16 @@ technologies = {
 		enable_equipments = {
 			ship_hull_super_heavy_1
 		}
+				enable_equipment_modules = {
+			super_heavy_ship_hydrojet_module
+		}
 
 		research_cost = 1.5
 		start_year = 2282
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_6 y = @Col_6 }
+			position = { x = @Row_4 y = @Col_7 }
 		}
 
 		dependencies = {
@@ -1259,7 +897,10 @@ technologies = {
 		amphibious_invasion = 0.1
 		amphibious_invasion_defence = 0.1
 		naval_invasion_penalty = -0.1
-		naval_invasion_capacity = 10
+		naval_invasion_prep_days = -10
+		naval_invasion_capacity = 2
+		naval_invasion_division_cap = 10
+		naval_invasion_plan_cap = 2
 
 		path = {
 			leads_to_tech = naval_invasion_tech_2
@@ -1275,7 +916,7 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_7 y = @Col_1 }
+			position = { x = @Row_5 y = @Col_1 }
 		}
 
 		categories = {
@@ -1287,6 +928,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.5
+			modifier = {
+				is_naval_tag = yes
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
 		}
 
 	}
@@ -1296,8 +945,11 @@ technologies = {
 		invasion_preparation = -0.1
 		amphibious_invasion = 0.1
 		amphibious_invasion_defence = 0.1
+		naval_invasion_prep_days = -10
 		naval_invasion_penalty = -0.1
-		naval_invasion_capacity = 10
+		naval_invasion_capacity = 2
+		naval_invasion_division_cap = 10
+		naval_invasion_plan_cap = 2
 
 		path = {
 			leads_to_tech = naval_invasion_tech_3
@@ -1309,7 +961,7 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_7 y = @Col_3 }
+			position = { x = @Row_5 y = @Col_3 }
 		}
 
 		categories = {
@@ -1321,6 +973,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.5
+			modifier = {
+				is_naval_tag = yes
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
 		}
 
 	}
@@ -1330,8 +990,11 @@ technologies = {
 		invasion_preparation = -0.1
 		amphibious_invasion = 0.1
 		amphibious_invasion_defence = 0.1
+		naval_invasion_prep_days = -10
 		naval_invasion_penalty = -0.1
-		naval_invasion_capacity = 10
+		naval_invasion_capacity = 2
+		naval_invasion_division_cap = 10
+		naval_invasion_plan_cap = 2
 
 		path = {
 			leads_to_tech = naval_invasion_tech_4
@@ -1347,7 +1010,7 @@ technologies = {
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_7 y = @Col_5 }
+			position = { x = @Row_5 y = @Col_4 }
 		}
 
 		categories = {
@@ -1359,6 +1022,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.5
+			modifier = {
+				is_naval_tag = yes
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
 		}
 
 	}
@@ -1368,15 +1039,18 @@ technologies = {
 		invasion_preparation = -0.1
 		amphibious_invasion = 0.1
 		amphibious_invasion_defence = 0.1
+				naval_invasion_prep_days = -10
 		naval_invasion_penalty = -0.1
-		naval_invasion_capacity = 10
+		naval_invasion_capacity = 2
+		naval_invasion_division_cap = 10
+		naval_invasion_plan_cap = 2
 
 		research_cost = 1.2
 		start_year = 2280
 
 		folder = {
 			name = fallout_naval_folder
-			position = { x = @Row_7 y = @Col_7 }
+			position = { x = @Row_5 y = @Col_6 }
 		}
 
 		dependencies = {
@@ -1392,6 +1066,14 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.5
+			modifier = {
+				is_naval_tag = yes
+				factor = 2
+			}
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
 		}
 
 	}
@@ -1411,7 +1093,6 @@ technologies = {
 			always = no
 		}
 
-		research_cost = 1.5
 		start_year = 2270
 
 		folder = {
@@ -1420,6 +1101,7 @@ technologies = {
 		}
 
 		categories = {
+			naval_medium_hull_tech_category
 		}
 
 		ai_will_do = {
@@ -1442,7 +1124,6 @@ technologies = {
 			blocked_tech = 1
 		}
 
-		research_cost = 1.5
 		start_year = 2275
 
 		folder = {
