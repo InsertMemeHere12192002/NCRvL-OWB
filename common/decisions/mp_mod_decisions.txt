@@ -491,22 +491,19 @@ MP_mod_decisions = {
 			}
 		}
 	}
-	legion_annex_white_legs = {
+legion_annex_white_legs = {
 		visible = {
 			or = {
-				original_tag = CES
 				original_tag = EHT
 			}
 		}
 		allowed = {
 			or = {
-				original_tag = CES
 				original_tag = EHT
 			}
 		}
 		available = {
 			is_ai = no
-			date > 2278.7.1
 			WHT = { is_ai = yes }
 		}
 		ai_will_do = {
@@ -518,67 +515,27 @@ MP_mod_decisions = {
 				target = WHT
 				transfer_troops = yes
 			}
-			annex_country = {
-				target = SOR
-				transfer_troops = no
-			}
-			annex_country = {
-				target = TAR
-				transfer_troops = no
-			}
-			annex_country = {
-				target = DEA
-				transfer_troops = no
-			}
-			annex_country = {
-				target = CRZ
-				transfer_troops = no
-			}
-			annex_country = {
-				target = UIN
-				transfer_troops = no
-			}
-			annex_country = {
-				target = NCN
-				transfer_troops = no
-			}
-			annex_country = {
-				target = LON
-				transfer_troops = no
-			}
-			annex_country = {
-				target = CLK
-				transfer_troops = no
-			}
-			annex_country = {
-				target = ANO
-				transfer_troops = no
-			}
 			every_state = {
 				limit = {
 					is_core_of = WHT
 				}
-				add_compliance = 50
-				add_resistance_target = -20
+				add_core_of = EHT
 			}
 		}
 	}
-	legion_annex_eighties = {
+legion_annex_eighties = {
 		visible = {
 			or = {
-				original_tag = CES
 				original_tag = WHT
 			}
 		}
 		allowed = {
 			or = {
-				original_tag = CES
 				original_tag = WHT
 			}
 		}
 		available = {
 			is_ai = no
-			date > 2278.7.1
 			EHT = { is_ai = yes }
 		}
 		ai_will_do = {
@@ -590,32 +547,11 @@ MP_mod_decisions = {
 				target = EHT
 				transfer_troops = yes
 			}
-			annex_country = {
-				target = RUB
-				transfer_troops = no
-			}
-			annex_country = {
-				target = RIP
-				transfer_troops = no
-			}
-			annex_country = {
-				target = EAS
-				transfer_troops = no
-			}
-			annex_country = {
-				target = HAM
-				transfer_troops = no
-			}
-			annex_country = {
-				target = MUR
-				transfer_troops = no
-			}
 			every_state = {
 				limit = {
 					is_core_of = EHT
 				}
-				add_compliance = 50
-				add_resistance_target = -20
+				add_core_of = WHT
 			}
 		}
 	}
