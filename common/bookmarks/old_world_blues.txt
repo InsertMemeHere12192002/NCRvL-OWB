@@ -132,9 +132,7 @@ bookmarks = {
 				irn_ironknights
 			}
 			focuses = {
-				irn_new_sterling_1
-				irn_new_sterling_2
-				irn_houndlands_1
+
 			}
 		}
 		"DES" = {

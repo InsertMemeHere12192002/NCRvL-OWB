@@ -1,0 +1,712 @@
+ideas = {
+	undesirables_recruitment_laws = {
+		law = yes
+		# Generic
+		undesirables_law_none = {
+			allowed = {
+				is_raider_nation_allowed_block = no
+				use_generic_undesirable_laws = yes
+			}
+			visible = {
+				if = {
+					limit = {
+						original_tag = BAG
+					}
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 5
+			picture = law_undesirables_guy
+			modifier = {
+				army_org_factor = 0.04
+				conscription_factor = -0.1
+				resistance_target = -0.04
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		undesirables_law_petty = {
+			allowed = {
+				is_raider_nation_allowed_block = no
+				use_generic_undesirable_laws = yes
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = {
+						has_government = people
+					}
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						original_tag = BAG
+					}
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 4
+			picture = law_undesirables_caps
+			modifier = {
+				conscription_factor = -0.07
+				stability_factor = -0.02
+				war_support_factor = 0.02
+				army_attack_factor = 0.02
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		undesirables_law_homicidal = {
+			allowed = {
+				is_raider_nation_allowed_block = no
+				use_generic_undesirable_laws = yes
+				NOT = {
+					original_tag = TBH
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = {
+						has_government = people
+					}
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						original_tag = BAG
+					}
+				}
+			}
+			# Moved to allowed for better CPU efficiency @Tran
+			# visible = {
+			# 	NOT = { original_tag = TBH }
+			# }
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = law_undesirables_cut_throat
+			modifier = {
+				conscription_factor = -0.03
+				stability_factor = -0.04
+				war_support_factor = 0.04
+				army_org_factor = -0.04
+				resistance_target = 0.02
+				army_attack_factor = 0.04
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		undesirables_law_raider = {
+			allowed = {
+				use_generic_undesirable_laws = yes
+				NOT = {
+					original_tag = TBH
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = NCN
+					}
+					NOT = {
+						has_government = people
+					}
+				}
+			}
+			visible = {
+				if = {
+					limit = {
+						original_tag = BAG
+					}
+				}
+			}
+			# Moved to allowed for better CPU efficiency @Tran
+			# visible = {
+			# 	NOT = { original_tag = TBH }
+			# }
+			cost = 100
+			removal_cost = -1
+			level = 2
+			picture = law_undesirables_raider
+			modifier = {
+				stability_factor = -0.06
+				war_support_factor = 0.06
+				army_org_factor = -0.08
+				resistance_target = 0.04
+				army_attack_factor = 0.06
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+
+		# TNK
+		tnk_no_labrats = {
+			picture = no_labrats
+			cost = 150
+			removal_cost = -1
+			level = 6
+			allowed = {
+				original_tag = TNK
+			}
+			modifier = {
+				resistance_damage_to_garrison = 0.5
+				foreign_subversive_activites = 0.25
+				war_stability_factor = 0.4
+			}
+			default = no
+			cancel_if_invalid = no
+		}
+		# BLC
+		blc_undesirables_law_raider_compromise = {
+			allowed = {
+				OR = {
+					original_tag = BLC
+					original_tag = BCR
+				}
+			}
+			available = {
+				always = no
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = law_undesirables_raider
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				army_attack_factor = 0.1
+				resistance_target = 0.05
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		# BAG
+		bag_undesirables_law_volunteer = {
+			allowed = {
+				original_tag = BAG
+				# has_unique_undesirable_law = yes
+			}
+			available = {
+				NOT = {
+					has_idea = mutant_law_none
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 5
+			picture = undesirables_law_exclusion
+			modifier = {
+				stability_factor = 0.03
+				resistance_target = -0.03
+				conscription_factor = -0.05
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+			default = yes
+		}
+		bag_undesirables_law_limited = {
+			allowed = {
+				original_tag = BAG
+				# has_unique_undesirable_law = yes
+			}
+			available = {
+				NOT = {
+					has_idea = mutant_law_none
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 4
+			picture = undesirables_law_limited
+			modifier = {
+				conscription_factor = 0.03
+				stability_factor = -0.03
+				compliance_growth = 0.03
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		bag_undesirables_law_seperate_battalions = {
+			allowed = {
+				original_tag = BAG
+				# has_unique_undesirable_law = yes
+			}
+			available = {
+				NOT = {
+					has_idea = mutant_law_none
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = undesirables_law_seperate_battalions
+			modifier = {
+				conscription_factor = 0.05
+				stability_factor = -0.05
+				supply_consumption_factor = -0.03
+				army_org_factor = -0.03
+				compliance_growth = 0.05
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		bag_undesirables_law_mixed_battalions = {
+			allowed = {
+				original_tag = BAG
+				# has_unique_undesirable_law = yes
+			}
+			available = {
+				NOT = {
+					has_idea = mutant_law_none
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			picture = undesirables_law_mixed_battalions
+			modifier = {
+				conscription_factor = 0.07
+				stability_factor = -0.07
+				supply_consumption_factor = -0.05
+				army_org_factor = -0.05
+				compliance_growth = 0.07
+			}
+			ai_will_do = {
+				factor = 0
+			}
+			cancel_if_invalid = no
+		}
+		bag_undesirables_law_equal_species = {
+			allowed = {
+				original_tag = BAG
+				# has_unique_undesirable_law = yes
+			}
+			available = {
+				NOT = {
+					has_idea = mutant_law_none
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = undesirables_law_equal_species
+			modifier = {
+				conscription_factor = 0.1
+				stability_factor = -0.05
+				supply_consumption_factor = -0.05
+				army_org_factor = -0.025
+				compliance_growth = 0.1
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	mutant_recruitment_laws = {
+		law = yes
+		# Generic
+		normies_law_allowed = {
+			allowed = {
+				OR = {
+					is_super_mutant_nation_allowed_block = yes
+					is_ghoul_nation_allowed_block = yes
+				}
+			}
+			visible = {
+				# Redundant, both are already covered by the allowed block above @Tran
+				# use_generic_mutant_recruitment_laws = yes
+				# OR = {
+				# is_super_mutant_nation = yes
+				# is_ghoul_nation = yes
+				# }
+				if = {
+					limit = {
+						original_tag = VLT
+					}
+					is_ghoul_nation = yes
+				}
+				else_if = {
+					limit = {
+						original_tag = NEW
+					}
+					is_super_mutant_nation = yes
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			picture = normies_allowed
+			modifier = {
+				stability_factor = -0.05
+				conscription_factor = 0.05
+			}
+			ai_will_do = {
+				base = 0.1
+				modifier = {
+					factor = 100
+					original_tag = JCT
+					has_government = people
+				}
+			}
+			default = yes
+		}
+		normies_law_none = {
+			allowed = {
+				OR = {
+					is_super_mutant_nation_allowed_block = yes
+					is_ghoul_nation_allowed_block = yes
+				}
+			}
+			visible = {
+				# Redundant, both are already covered by the allowed block above @Tran
+				# use_generic_mutant_recruitment_laws = yes
+				# OR = {
+				# is_super_mutant_nation = yes
+				# is_ghoul_nation = yes
+				# }
+				if = {
+					limit = {
+						original_tag = VLT
+					}
+					is_ghoul_nation = yes
+				}
+				else_if = {
+					limit = {
+						original_tag = NEW
+					}
+					is_super_mutant_nation = yes
+				}
+			}
+			cost = 300
+			removal_cost = -1
+			picture = no_normies
+			modifier = {
+				army_org_factor = 0.05
+				conscription_factor = -0.1
+			}
+			ai_will_do = {
+				base = 1
+				modifier = {
+					factor = 0
+					original_tag = JCT
+					has_government = people
+				}
+			}
+		}
+		mutant_law_none = {
+			allowed = {
+				OR = {
+					NOT = {
+						is_super_mutant_nation_allowed_block = yes
+						is_ghoul_nation_allowed_block = yes
+					}
+					original_tag = VLT
+					original_tag = NEW
+				}
+			}
+			#Redundant, already covered by the allowed block above @Tran
+			visible = {
+				#is_not_super_mutant_nation = yes
+				#is_not_ghoul_nation = yes
+				if = {
+					limit = {
+						original_tag = VLT
+					}
+					is_ghoul_nation = no
+				}
+				else_if = {
+					limit = {
+						original_tag = NEW
+					}
+					is_super_mutant_nation = no
+				}
+			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						original_tag = TNK
+					}
+					always = no
+				}
+				else_if = {
+					limit = {
+						original_tag = WBH
+					}
+					NOT = {
+						has_completed_focus = WBH_eradicate_the_mutants
+					}
+				}
+				else_if = {
+					limit = {
+						original_tag = BAG
+					}
+					custom_trigger_tooltip = {
+						tooltip = "TEST"
+						NOT = {
+							OR = {
+								has_idea = bag_undesirables_law_limited
+								has_idea = bag_undesirables_law_volunteer
+								has_idea = bag_undesirables_law_seperate_battalions
+								has_idea = bag_undesirables_law_mixed_battalions
+								has_idea = bag_undesirables_law_equal_species
+							}
+						}
+					}
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 3
+			picture = outsider_untrusting
+			modifier = {
+				army_org_factor = 0.03
+				army_morale_factor = 0.03
+				conscription_factor = -0.03
+			}
+			ai_will_do = {
+				factor = 1
+			}
+			default = yes
+		}
+		mutant_law_ghoul = {
+			allowed = {
+				OR = {
+					NOT = {
+						is_super_mutant_nation_allowed_block = yes
+						is_ghoul_nation_allowed_block = yes
+					}
+					original_tag = VLT
+					original_tag = NEW
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = ROT
+					}
+					NOT = {
+						has_idea = rot_eternal_quest
+					}
+				}
+			}
+			visible = {
+				#Redundant, already covered by the allowed block above @Tran
+				#is_not_super_mutant_nation = yes
+				#is_not_ghoul_nation = yes
+				if = {
+					limit = {
+						OR = {
+							original_tag = BOS
+							original_tag = ACH
+						}
+					}
+					NOT = {
+						has_country_flag = no_mutants_allowed
+					}
+				}
+				else_if = {
+					limit = {
+						original_tag = VLT
+					}
+					is_ghoul_nation = no
+				}
+				else_if = {
+					limit = {
+						original_tag = NEW
+					}
+					is_super_mutant_nation = no
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			picture = outsider_ghoul
+			modifier = {
+				supply_consumption_factor = -0.04
+				attrition = -0.04
+				army_morale_factor = -0.03
+				army_org_factor = -0.03
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		mutant_law_super = {
+			allowed = {
+				OR = {
+					NOT = {
+						is_super_mutant_nation_allowed_block = yes
+						is_ghoul_nation_allowed_block = yes
+					}
+					original_tag = VLT
+					original_tag = NEW
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = ROT
+					}
+					NOT = {
+						has_idea = rot_eternal_quest
+					}
+				}
+			}
+			visible = {
+				#Redundant, already covered by the allowed block above @Tran
+				#is_not_super_mutant_nation = yes
+				#is_not_ghoul_nation = yes
+				if = {
+					limit = {
+						OR = {
+							original_tag = BOS
+							original_tag = ACH
+						}
+					}
+					NOT = {
+						has_country_flag = no_mutants_allowed
+					}
+				}
+				else_if = {
+					limit = {
+						original_tag = VLT
+					}
+					is_ghoul_nation = no
+				}
+				else_if = {
+					limit = {
+						original_tag = NEW
+					}
+					is_super_mutant_nation = no
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 2
+			picture = outsider_mutant
+			modifier = {
+				supply_consumption_factor = -0.08
+				attrition = -0.08
+				army_morale_factor = -0.06
+				army_org_factor = -0.06
+				conscription_factor = 0.03
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		mutant_law_both = {
+			allowed = {
+				OR = {
+					NOT = {
+						is_super_mutant_nation_allowed_block = yes
+						is_ghoul_nation_allowed_block = yes
+					}
+					original_tag = VLT
+					original_tag = NEW
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = ROT
+					}
+					NOT = {
+						has_idea = rot_eternal_quest
+					}
+				}
+			}
+			visible = {
+				#Redundant, already covered by the allowed block above @Tran
+				#is_not_super_mutant_nation = yes
+				#is_not_ghoul_nation = yes
+				if = {
+					limit = {
+						OR = {
+							original_tag = BOS
+							original_tag = ACH
+						}
+					}
+					NOT = {
+						has_country_flag = no_mutants_allowed
+					}
+				}
+				else_if = {
+					limit = {
+						original_tag = VLT
+					}
+					is_ghoul_nation = no
+				}
+				else_if = {
+					limit = {
+						original_tag = NEW
+					}
+					is_super_mutant_nation = no
+				}
+			}
+			cost = 100
+			removal_cost = -1
+			level = 1
+			picture = outsider_mutant-ghoul
+			modifier = {
+				supply_consumption_factor = -0.12
+				attrition = -0.12
+				army_morale_factor = -0.09
+				army_org_factor = -0.09
+				conscription_factor = 0.06
+			}
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+		# BAG
+		mutant_law_desegregation = {
+			allowed = {
+				original_tag = BAG
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 0
+			picture = outsider_bag_mutant-ghoul
+			modifier = {
+				supply_consumption_factor = -0.15
+				attrition = -0.15
+				army_morale_factor = -0.05
+				army_org_factor = -0.05
+				conscription_factor = 0.1
+			}
+			ai_will_do = {
+				factor = 0.1
+			}
+		}
+	}
+}
+
+# vim: set ft=pdx ts=2 sw=2 tw=79 :

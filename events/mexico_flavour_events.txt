@@ -1,0 +1,1119 @@
+﻿#skip was here
+#daniel was here
+add_namespace = mexicoflavour
+news_event = {
+	#day of the dead
+	id = mexicoflavour.1
+	title = mexicoflavour.1.t
+	desc = mexicoflavour.1.d
+	picture = GFX_event_rrg_town
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.1
+				days = 730
+			}
+		}
+	}
+	option = {
+		#generic response
+		name = mexicoflavour.1.a
+		trigger = {
+			NOT = {
+				tag = TLA
+				tag = ARM
+				tag = ZAP
+				tag = MOC
+				#tag =
+			}
+		}
+		add_political_power = 10
+	}
+	option = {
+		#ai response
+		name = mexicoflavour.1.b
+		trigger = {
+			OR = {
+				tag = TLA
+				tag = ARM
+				tag = ZAP
+				tag = MOC
+				#tag =
+			}
+		}
+	}
+}
+
+news_event = {
+	#tlaloc's thanksgiving
+	id = mexicoflavour.2
+	title = mexicoflavour.2.t
+	desc = mexicoflavour.2.d
+	#picture = GFX_event_generic_settlement_3
+	is_triggered_only = yes
+	trigger = {
+		country_exists = TLA
+		NOT = {
+			has_war_with = TLA
+		}
+		OR = {
+			has_idea = tla_protectors_guarantee
+			tag = ARM
+			tag = TLA
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.2
+				days = 730
+			}
+		}
+	}
+	option = {
+		#uh thanks
+		name = mexicoflavour.2.a
+		trigger = {
+			NOT = {
+				tag = TLA
+				tag = ARM
+			}
+		}
+		add_stability = 0.01
+	}
+	option = {
+		#happy dad robot
+		name = mexicoflavour.2.b
+		trigger = {
+			tag = TLA
+		}
+		add_political_power = 15
+	}
+	option = {
+		#thank u dad robot
+		name = mexicoflavour.2.c
+		trigger = {
+			tag = ARM
+		}
+		add_political_power = 1
+	}
+}
+
+news_event = {
+	#apocalypse remembrance for ghoul nations
+	id = mexicoflavour.3
+	title = mexicoflavour.3.t
+	desc = mexicoflavour.3.d
+	picture = GFX_event_generic_nuclear_explosion
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.3
+				days = 730
+			}
+		}
+	}
+	option = {
+		#ghoul nations only
+		name = mexicoflavour.3.a
+		add_stability = 0.01
+	}
+}
+
+news_event = {
+	#drought/rainy
+	id = mexicoflavour.4
+	title = mexicoflavour.4.t
+	desc = mexicoflavour.4.d
+	picture = GFX_event_sub_generic_wasteland_river
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.4
+				days = 730
+			}
+			clr_country_flag = mexico_dry_season
+			clr_country_flag = mexico_rainy_season
+			random_list = {
+				50 = {
+					#rainy
+					set_country_flag = mexico_rainy_season
+					add_to_variable = {
+						mexico_season = 1
+					}
+					modifier = {
+						check_variable = {
+							mexico_season < 0
+						}
+						factor = 1.3
+					}
+				}
+				50 = {
+					#dry
+					set_country_flag = mexico_dry_season
+					subtract_from_variable = {
+						mexico_season = 1
+					}
+					modifier = {
+						check_variable = {
+							mexico_season > 0
+						}
+						factor = 1.3
+					}
+				}
+			}
+		}
+	}
+	option = {
+		#rainy season
+		name = mexicoflavour.4.a
+		trigger = {
+			has_country_flag = mexico_rainy_season
+		}
+		add_political_power = 5
+	}
+	option = {
+		#dry season
+		name = mexicoflavour.4.b
+		trigger = {
+			has_country_flag = mexico_dry_season
+		}
+		add_political_power = -5
+	}
+}
+
+news_event = {
+	#easter
+	id = mexicoflavour.5
+	title = mexicoflavour.5.t
+	desc = mexicoflavour.5.d
+	picture = GFX_event_generic_settlement_2
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.5
+				days = 730
+			}
+		}
+	}
+	option = {
+		#only celebrated by ate/tvr/tdt/lgs
+		name = mexicoflavour.5.a
+		add_political_power = 10
+	}
+}
+
+news_event = {
+	#old world blues day
+	id = mexicoflavour.6
+	title = mexicoflavour.6.t
+	desc = mexicoflavour.6.d
+	picture = GFX_event_mexico_city_ruins
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.6
+				days = 730
+			}
+		}
+	}
+	option = {
+		#celebrated by nations with pre-war connections (rrg/grh/tdt/etc
+		name = mexicoflavour.6.a
+		add_political_power = 10
+	}
+}
+
+news_event = {
+	#anniversary of the american occupation
+	id = mexicoflavour.7
+	title = mexicoflavour.7.t
+	desc = mexicoflavour.7.d
+	picture = GFX_event_rrg_raiders
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.7
+				days = 730
+			}
+		}
+	}
+	option = {
+		name = mexicoflavour.7.a
+		trigger = {
+			NOT = {
+				tag = TLA
+				tag = ARM
+			}
+		}
+		add_war_support = 0.01
+	}
+	option = {
+		name = mexicoflavour.7.b
+		trigger = {
+			tag = TLA
+		}
+		add_stability = -0.01
+	}
+	option = {
+		name = mexicoflavour.7.c
+		trigger = {
+			tag = ARM
+		}
+		add_political_power = 5
+	}
+}
+
+news_event = {
+	#hurricane melina (you can pick a dif name
+	id = mexicoflavour.8
+	title = mexicoflavour.8.t
+	desc = mexicoflavour.8.d
+	picture = GFX_event_sub_generic_ruins_1
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#sucks to be them
+		name = mexicoflavour.8.a
+		trigger = {
+			is_north_mexican_nation = yes
+		}
+	}
+	option = {
+		# oh fuck
+		name = mexicoflavour.8.b
+		trigger = {
+			is_south_mexican_nation = yes
+		}
+		every_owned_state = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.15
+			}
+		}
+	}
+}
+
+news_event = {
+	#the southern fire
+	id = mexicoflavour.9
+	title = mexicoflavour.9.t
+	desc = mexicoflavour.9.d
+	#icture = GFX_event_sub_generic_ruins_9
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#hopefully that's not a bad sign
+		name = mexicoflavour.9.a
+		trigger = {
+			NOT = {
+				tag = CAF
+				tag = GRH
+			}
+		}
+		add_political_power = -1
+	}
+	option = {
+		#special caf version
+		name = mexicoflavour.9.b
+		trigger = {
+			tag = CAF
+		}
+		add_political_power = -1
+	}
+	option = {
+		#we will defend against whatever is out there!
+		name = mexicoflavour.9.c
+		trigger = {
+			tag = GRH
+		}
+		add_war_support = 0.025
+	}
+}
+
+country_event = {
+	#the drifts (coastal salvage/debris
+	id = mexicoflavour.10
+	title = mexicoflavour.10.t
+	desc = mexicoflavour.10.d
+	picture = GFX_event_mexico_flavor_ship
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = mexicoflavour.10
+				days = 730
+			}
+		}
+	}
+	option = {
+		#get metal
+		name = mexicoflavour.10.a
+		random_owned_state = {
+			limit = {
+				is_coastal_to_the_pacific_ocean = yes
+			}
+			add_resource = {
+				type = metal
+				amount = 1
+			}
+		}
+	}
+	option = {
+		#study wrecks
+		name = mexicoflavour.10.b
+		add_political_power = -50
+		add_tech_bonus = {
+			name = tech_bonus_event_tt
+			bonus = 0.5
+			uses = 1
+			category = naval_tech_category
+		}
+	}
+}
+
+news_event = {
+	#WE LOVE GENERALISSIMO DAY (gdh)
+	id = mexicoflavour.11
+	title = mexicoflavour.11.t
+	desc = mexicoflavour.11.d
+	picture = GFX_event_mexico_flavor_generalissimo
+	is_triggered_only = yes
+	trigger = {
+		has_government = ruler
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.11
+				days = 730
+			}
+		}
+	}
+	option = {
+		#yay generalissimo!
+		name = mexicoflavour.11.a
+		add_political_power = 25
+	}
+}
+
+news_event = {
+	#day of founding ate
+	id = mexicoflavour.12
+	title = mexicoflavour.12.t
+	desc = mexicoflavour.12.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.12
+				days = 730
+			}
+		}
+	}
+	option = {
+		name = mexicoflavour.12.a
+		add_political_power = 20
+	}
+}
+
+news_event = {
+	#the great defeat (ates historic loss to tla
+	id = mexicoflavour.13
+	title = mexicoflavour.13.t
+	desc = mexicoflavour.13.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = TLA
+		country_exists = ATE
+		NOT = {
+			has_war_with = TLA
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.13
+				days = 730
+			}
+		}
+	}
+	option = {
+		name = mexicoflavour.13.a
+		trigger = {
+			tag = TLA
+		}
+		add_political_power = 35
+	}
+	option = {
+		name = mexicoflavour.13.b
+		trigger = {
+			tag = ATE
+		}
+		add_political_power = -5
+	}
+}
+
+news_event = {
+	#day of founding itz
+	id = mexicoflavour.14
+	title = mexicoflavour.14.t
+	desc = mexicoflavour.14.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.14
+				days = 730
+			}
+		}
+	}
+	option = {
+		name = mexicoflavour.14.a
+		add_political_power = 20
+	}
+	option = {
+		name = mexicoflavour.14.b
+		navy_experience = 5
+	}
+}
+
+news_event = {
+	#international coffee day
+	id = mexicoflavour.15
+	title = mexicoflavour.15.t
+	desc = mexicoflavour.15.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = CAF
+		NOT = {
+			has_war_with = CAF
+		}
+		OR = {
+			tag = CAF
+			has_country_flag = caf_investor
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = CAF
+						has_country_flag = caf_investor
+					}
+				}
+			}
+			news_event = {
+				id = mexicoflavour.15
+				days = 730
+			}
+		}
+	}
+	option = {
+		#coffee is great!
+		name = mexicoflavour.15.a
+		trigger = {
+			tag = CAF
+		}
+		add_political_power = 25
+	}
+	option = {
+		#it's alright
+		name = mexicoflavour.15.b
+		trigger = {
+			has_country_flag = caf_investor
+		}
+		add_political_power = 5
+	}
+}
+
+## Undetonated Nuke event
+# state_event = {
+# 	# ancient weapon
+# 	id = mexicoflavour.16
+# 	title = mexicoflavour.16.t
+# 	desc = mexicoflavour.16.d
+# 	#picture = GFX_event_slavery
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	immediate = {
+# 		set_temp_variable = {
+# 			bombstate = THIS
+# 		}
+# 	}
+# 	option = {
+# 		#leave it
+# 		name = mexicoflavour.16.a
+# 		var:bombstate = {
+# 			add_state_modifier = {
+# 				modifier = {
+# 					local_building_slots_factor = -0.25
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+		#disarm it
+# 		name = mexicoflavour.16.b
+# 		random_list = {
+# 			25 = {
+# 				var:bombstate = {
+# 					set_temp_variable = {
+# 						pop_add = -750
+# 					}
+# 					add_state_population = yes
+# 					add_state_modifier = {
+# 						modifier = {
+# 							local_building_slots_factor = -0.75
+# 						}
+# 					}
+# 				}
+# 			}
+# 			75 = {
+# 				var:bombstate = {
+# 					OWNER = { add_political_power = 5 }
+# 					add_resource = {
+# 						type = advanced
+# 						amount = 3
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+news_event = {
+	#all quiet on the southern front
+	id = mexicoflavour.17
+	title = mexicoflavour.17.t
+	desc = mexicoflavour.17.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#oh thank god
+		name = mexicoflavour.17.a
+		trigger = {
+			tag = CAF
+		}
+		add_stability = 0.01
+	}
+	option = {
+		#damn straight
+		name = mexicoflavour.17.b
+		trigger = {
+			tag = GRH
+		}
+		add_stability = 0.05
+	}
+}
+
+news_event = {
+	#employer appreciation day (capitalism riffing
+	id = mexicoflavour.18
+	title = mexicoflavour.18.t
+	desc = mexicoflavour.18.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		owns_state = 776
+	}
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					owns_state = 776
+				}
+				news_event = {
+					id = mexicoflavour.18
+					days = 730
+				}
+			}
+		}
+	}
+	option = {
+		#we love employers!
+		name = mexicoflavour.18.a
+		trigger = {
+			tag = PET
+		}
+		add_political_power = 35
+	}
+	option = {
+		#they sure are strange
+		name = mexicoflavour.18.b
+		trigger = {
+			PET = {
+				exists = no
+			}
+			owns_state = 776
+		}
+		add_political_power = 5
+	}
+}
+
+news_event = {
+	#day of seccession
+	id = mexicoflavour.19
+	title = mexicoflavour.19.t
+	desc = mexicoflavour.19.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = TVR
+		NOT = {
+			has_war_with = TVR
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.19
+				days = 730
+			}
+		}
+	}
+	option = {
+		#fuck the aztlan
+		name = mexicoflavour.19.a
+		trigger = {
+			tag = TVR
+		}
+		add_stability = 0.01
+		add_war_support = 0.01
+	}
+	option = {
+		#fuck the viceroyalty
+		name = mexicoflavour.19.b
+		trigger = {
+			tag = ATE
+		}
+		add_stability = -0.01
+	}
+}
+
+news_event = {
+	#santa anna bday
+	id = mexicoflavour.20
+	title = mexicoflavour.20.t
+	desc = mexicoflavour.20.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = ARM
+		NOT = {
+			has_war_with = ARM
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.20
+				days = 730
+			}
+		}
+	}
+	option = {
+		#happy birthday son
+		name = mexicoflavour.20.a
+		trigger = {
+			tag = TLA
+		}
+		add_political_power = 1
+	}
+	option = {
+		#happy birthday brother
+		name = mexicoflavour.20.b
+		trigger = {
+			OR = {
+				tag = MAX
+				tag = MOC
+				tag = ZAP
+			}
+		}
+	}
+	option = {
+		#happy birthday me
+		name = mexicoflavour.20.c
+		trigger = {
+			tag = ARM
+		}
+		add_political_power = 25
+	}
+}
+
+news_event = {
+	#maximillian coronation
+	id = mexicoflavour.21
+	title = mexicoflavour.21.t
+	desc = mexicoflavour.21.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = MAX
+		NOT = {
+			has_war_with = MAX
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.21
+				days = 730
+			}
+		}
+	}
+	option = {
+		#good for him
+		name = mexicoflavour.21.a
+		trigger = {
+			OR = {
+				tag = ARM
+				tag = MOC
+				tag = ZAP
+			}
+		}
+	}
+	option = {
+		#good for me
+		name = mexicoflavour.21.b
+		trigger = {
+			tag = MAX
+		}
+		add_stability = 0.01
+	}
+}
+
+news_event = {
+	#montezuma's defeat
+	id = mexicoflavour.22
+	title = mexicoflavour.22.t
+	desc = mexicoflavour.22.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = MOC
+		NOT = {
+			has_war_with = MOC
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.22
+				days = 730
+			}
+		}
+	}
+	option = {
+		#in defeat, victory
+		name = mexicoflavour.22.a
+		trigger = {
+			tag = MOC
+		}
+		add_war_support = 0.03
+	}
+	option = {
+		#uh, ok i guess?
+		name = mexicoflavour.22.b
+		trigger = {
+			OR = {
+				tag = ARM
+				tag = MAX
+				tag = ZAP
+			}
+		}
+	}
+}
+
+news_event = {
+	#constitution zapata
+	id = mexicoflavour.23
+	title = mexicoflavour.23.t
+	desc = mexicoflavour.23.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = ZAP
+		NOT = {
+			has_war_with = ZAP
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.23
+				days = 730
+			}
+		}
+	}
+	option = {
+		#im glad he's happy
+		name = mexicoflavour.23.a
+		trigger = {
+			OR = {
+				tag = ARM
+				tag = MAX
+				tag = MOC
+			}
+		}
+	}
+	option = {
+		#viva mexico!
+		name = mexicoflavour.23.b
+		trigger = {
+			tag = ZAP
+		}
+		add_stability = 0.025
+	}
+}
+
+news_event = {
+	#wrestling championships
+	id = mexicoflavour.24
+	title = mexicoflavour.24.t
+	desc = mexicoflavour.24.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	trigger = {
+		country_exists = FFI
+		NOT = {
+			has_war_with = FFI
+		}
+	}
+	fire_only_once = yes
+	option = {
+		#what a match!
+		name = mexicoflavour.24.a
+		trigger = {
+			is_neighbor_of = FFI
+			NOT = {
+				tag = SIN
+				tag = BLO
+			}
+		}
+		add_political_power = 10
+	}
+	option = {
+		#i hate those bastards
+		name = mexicoflavour.24.a
+		trigger = {
+			OR = {
+				tag = SIN
+				tag = BLO
+			}
+		}
+		add_political_power = -10
+	}
+	option = {
+		#what a match!
+		name = mexicoflavour.24.b
+		trigger = {
+			tag = FFI
+		}
+		add_political_power = 35
+		random_unit_leader = {
+			limit = {
+				has_id = 100005
+			}
+			add_defense = 2
+			add_timed_unit_leader_trait = {
+				trait = wounded
+				days = 90
+			}
+		}
+	}
+}
+
+country_event = {
+	#tales from afar
+	id = mexicoflavour.25
+	title = mexicoflavour.25.t
+	desc = mexicoflavour.25.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					is_mexican_nation = yes
+				}
+				country_event = {
+					id = mexicoflavour.25
+					days = 160
+					random_days = 50
+				}
+			}
+		}
+	}
+	option = {
+		#tales of the west coast
+		name = mexicoflavour.25.a
+		add_stability = 0.01
+	}
+	option = {
+		#tales of texas
+		name = mexicoflavour.25.b
+		add_war_support = 0.01
+	}
+	option = {
+		#tales from beyond
+		name = mexicoflavour.25.c
+		add_political_power = 45
+	}
+}
+
+news_event = {
+	#pancho celebration (oneoff flavour event people love panacho
+	id = mexicoflavour.26
+	title = mexicoflavour.26.t
+	desc = mexicoflavour.26.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		country_exists = BVC
+		NOT = {
+			has_war_with = BVC
+		}
+	}
+	option = {
+		#all for the people!
+		name = mexicoflavour.26.a
+		trigger = {
+			tag = BVC
+		}
+		add_stability = 0.01
+	}
+	option = {
+		#what a showoff
+		name = mexicoflavour.26.b
+		trigger = {
+			tag = BLP
+		}
+		add_political_power = -15
+	}
+}
+
+country_event = {
+	#the ncr spy PAZ (oneoff flavour event ncr spy captured
+	id = mexicoflavour.27
+	title = mexicoflavour.27.t
+	desc = mexicoflavour.27.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#ransom them back
+		name = mexicoflavour.27.b
+		add_political_power = 50
+	}
+	option = {
+		#make an example of them!
+		name = mexicoflavour.27.b
+		add_stability = 0.01
+	}
+}
+
+country_event = {
+	#mining or crafting tohono ( oneoff flavour minecraft hehe
+	id = mexicoflavour.28
+	title = mexicoflavour.28.t
+	desc = mexicoflavour.28.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		#mining
+		name = mexicoflavour.28.a
+		ai_chance = {
+			base = 1
+		}
+		random_owned_state = {
+			add_extra_state_shared_building_slots = 2
+		}
+	}
+	option = {
+		#crafting
+		name = mexicoflavour.28.b
+		random_owned_state = {
+			limit = {
+				is_valid_state_for_civilian_factory = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+unit_leader_event = {
+	#sinaloa red vs arizona ranger (cowboy oneoff unit leader event big iron
+	id = mexicoflavour.29
+	title = mexicoflavour.29.t
+	desc = mexicoflavour.29.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mexicoflavour.29.a
+		THIS = {
+			add_attack = 1
+		}
+	}
+}
+
+unit_leader_event = {
+	#sinaloa circuit two-sun (unit leader one-off event
+	id = mexicoflavour.30
+	title = mexicoflavour.30.t
+	desc = mexicoflavour.30.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = mexicoflavour.30.a
+		THIS = {
+			add_logistics = 1
+		}
+	}
+}
+
+news_event = {
+	#rio presidente day
+	id = mexicoflavour.31
+	title = mexicoflavour.31.t
+	desc = mexicoflavour.31.d
+	#picture = GFX_event_slavery
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			news_event = {
+				id = mexicoflavour.31
+				days = 730
+			}
+		}
+	}
+	option = {
+		name = mexicoflavour.31.a
+		add_political_power = 15
+	}
+}
+
+##no events for lgs/pec yet as they have no definite lore
+#gentle giant #drifts pacific #america apocalypse
+#raul events separate

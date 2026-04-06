@@ -2710,6 +2710,7 @@ VLT_ai_behavior = {
 		allow_achievements = yes
 	}
 }
+
 # Vault 37
 VTS_ai_behavior = {
 	name = RULE_AI_BEHAVIOR_VTS
@@ -2768,6 +2769,7 @@ WHT_ai_behavior = {
 #############
 # MAP SETUP #
 #############
+
 EHT_status = {
 	name = "RULE_MAP_SETUP_EIGHTIES_STATUS"
 	group = "RULE_GROUP_MAP_SETUP"
@@ -2843,6 +2845,7 @@ TNK_status = {
 # 		allow_achievements = yes
 # 	}
 # }
+
 NCN_status = {
 	name = "RULE_MAP_SETUP_NCN_STATUS"
 	group = "RULE_GROUP_MAP_SETUP"
@@ -2907,6 +2910,7 @@ VEG_status = {
 # 		allow_achievements = yes
 # 	}
 # }
+
 TLA_status = {
 	name = "RULE_MAP_SETUP_TLALOCAN_STATUS"
 	group = "RULE_GROUP_MAP_SETUP"
@@ -3220,9 +3224,11 @@ TOB_ai_behavior = {
 ##########################
 # COUNTRY SPECIFIC RULES #
 ##########################
+
 ##################
 # FOREIGN POLICY #
 ##################
+
 allow_wargoals = {
 	name = "RULE_ALLOW_WARGOALS"
 	group = "RULE_GROUP_GENERAL_FOREIGN_POLICY"
@@ -3678,7 +3684,7 @@ ITZ_synthetic_dawn = {
 	group = "RULE_GROUP_EVENTS"
 	option = {
 		name = "ENABLED"
-		text = "RULE_EVENTS_SYNTHETIC_DAWN_ENABLED"		# Tlaloc, say hello to my little friend...
+		text = "RULE_EVENTS_SYNTHETIC_DAWN_ENABLED" # Tlaloc, say hello to my little friend...
 		desc = "RULE_EVENTS_SYNTHETIC_DAWN_ENABLED_DESC"
 		allow_achievements = yes
 	}
@@ -3773,7 +3779,6 @@ KHA_mad_baron = {
 		allow_achievements = yes
 	}
 }
-
 TRK_second_kemalist_revolution = {
 	name = "RULE_EVENTS_TRK_KEMALISM"
 	group = "RULE_GROUP_EVENTS"
@@ -3807,7 +3812,6 @@ HAI_admiral_dictator = {
 		allow_achievements = yes
 	}
 }
-
 CAR_kerensky_chef = {
 	name = "RULE_EVENTS_CAR_KERENSKY_CHEF"
 	group = "RULE_GROUP_EVENTS"
@@ -3824,7 +3828,6 @@ CAR_kerensky_chef = {
 		allow_achievements = yes
 	}
 }
-
 anbennar_halloween = {
 	name = "RULE_EVENTS_ANBENNAR_HALLOWEEN"
 	group = "RULE_GROUP_EVENTS"
@@ -3841,7 +3844,6 @@ anbennar_halloween = {
 		allow_achievements = yes
 	}
 }
-
 TRK_status = {
 	name = "RULE_MAP_SETUP_TRK_STATUS"
 	group = "RULE_GROUP_EVENTS"
@@ -3858,7 +3860,6 @@ TRK_status = {
 		allow_achievements = yes
 	}
 }
-
 winter_wonder_wasteland = {
 	name = "RULE_EVENTS_WINTER_WONDER_WASTELAND"
 	group = "RULE_GROUP_EVENTS"
@@ -3881,7 +3882,6 @@ winter_wonder_wasteland = {
 		allow_achievements = yes
 	}
 }
-
 SHI_emperor_norton = {
 	name = "RULE_EVENTS_SHI_EMPEROR_NORTON"
 	group = "RULE_GROUP_EVENTS"
@@ -3898,7 +3898,6 @@ SHI_emperor_norton = {
 		allow_achievements = yes
 	}
 }
-
 minecraft_april_2024 = {
 	name = "RULE_MINECRAFT_2024"
 	group = "RULE_GROUP_EVENTS"
@@ -3915,7 +3914,6 @@ minecraft_april_2024 = {
 		allow_achievements = yes
 	}
 }
-
 april_elite_unit_secret = {
 	name = "RULE_EVENTS_SPAWN_APRIL_ELITE"
 	group = "RULE_GROUP_EVENTS"
@@ -4035,6 +4033,90 @@ LUM_dagoth_ur = {
 	}
 }
 
+OST_freakclave = {
+	name = "RULE_EVENTS_FRK_2026"
+	group = "RULE_GROUP_EVENTS"
+	default = {
+		name = "DISABLED"
+		text = "RULE_EVENTS_FRK_2026_DISABLED"
+		desc = "RULE_EVENTS_FRK_2026_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_EVENTS_FRK_2026_ENABLED"
+		desc = "RULE_EVENTS_FRK_2026_ENABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
+wardens_april_2026 = {
+	name = "RULE_WARDENS_2026"
+	group = "RULE_GROUP_EVENTS"
+	default = {
+		name = "DISABLED"
+		text = "RULE_WARDENS_2026_DISABLED"
+		desc = "RULE_WARDENS_2026_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_WARDENS_2026_ENABLED"
+		desc = "RULE_WARDENS_2026_ENABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
+SHI_ultimate_showdown = {
+	name = "RULE_EVENTS_SHI_SHOWDOWN_CITY"
+	group = "RULE_GROUP_EVENTS"
+	default = {
+		name = "DISABLED"
+		text = "RULE_EVENTS_SHI_SHOWDOWN_CITY_DISABLED"
+		desc = "RULE_EVENTS_SHI_SHOWDOWN_CITY_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_EVENTS_SHI_SHOWDOWN_CITY_ENABLED"
+		desc = "RULE_EVENTS_SHI_SHOWDOWN_CITY_ENABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
+EAS_haki_april_fools = {
+	name = "RULE_EVENTS_EAS_HAKIS"
+	group = "RULE_GROUP_EVENTS"
+	default = {
+		name = "DISABLED"
+		text = "RULE_EVENTS_EAS_HAKIS_DISABLED"
+		desc = "RULE_EVENTS_EAS_HAKIS_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_EVENTS_EAS_HAKIS_ENABLED"
+		desc = "RULE_EVENTS_EAS_HAKIS_ENABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
+TON_its_farming = {
+	name = "RULE_EVENTS_TON_FOCUS_TREE"
+	group = "RULE_GROUP_EVENTS"
+	default = {
+		name = "DISABLED"
+		text = "RULE_EVENTS_TON_FOCUS_DISABLED"
+		desc = "RULE_EVENTS_TON_FOCUS_DISABLED_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "ENABLED"
+		text = "RULE_EVENTS_TON_FOCUS_ENABLED"
+		desc = "RULE_EVENTS_TON_FOCUS_ENABLED_DESC"
+		allow_achievements = yes
+	}
+}
 
 ############
 # GAMEPLAY #
@@ -4255,7 +4337,9 @@ allow_paratroopers = {
 ################
 # CONSTRUCTION #
 ################
+
 # Disabled for now due to being outdated and having no effect @Tran
+
 # maximum_fort_level = {
 # 	name = "RULE_MAXIMUM_FORT_LEVEL"
 # 	group = "RULE_GROUP_GAMEPLAY"
@@ -4320,9 +4404,11 @@ allow_paratroopers = {
 # 		allow_achievements = yes
 # 	}
 # }
+
 ##############
 # MISC SETUP #
 ##############
+
 TLA_death_scream = {
 	name = "RULE_MISC_TLA_DEATH_SCREAM"
 	group = "RULE_GROUP_MISC"
@@ -4423,6 +4509,7 @@ BOS_buff_gamerule = {
 #####################
 # UTILITY #
 #####################
+
 caps_debug_toggle = {
 	name = "RULE_CAPS_DEBUG_TOGGLE"
 	group = "RULE_GROUP_UTILITY"
@@ -4460,6 +4547,7 @@ unit_logger_rule = {
 ##############
 #WAR OUTCOMES#
 ##############
+
 # Lone Star Civil War
 HWB_REVOLT_OUTCOME = {
 	name = "RULE_HWB_REVOLT_OUTCOME"
@@ -4698,6 +4786,7 @@ ALAMO_SHAKEDOWN_OUTCOME = {
 		allow_achievements = yes
 	}
 }
+
 AMICI_SQUABBLING_OUTCOME = {
 	name = "RULE_AMICI_SQUABBLING_OUTCOME"
 	group = "RULE_GROUP_OUTCOMES"
