@@ -2830,6 +2830,41 @@ focus_tree = {
 				}
 			}
 		}
+	}	
+	focus = {
+		id = wht_poverty_goal
+		icon = GFX_goal_80
+		cost  = 30
+		available = {	
+			EHT = {
+                all_core_land_owned_by_prev_sphere = yes
+            }
+
+			}
+
+		prerequisite = {
+			focus = wht_winds_change
+		}
+		x = 2
+		y = 0
+		relative_position_id = wht_strong_arms_white_legs
+		completion_reward = {
+			add_research_slot = 1
+			RUB = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			HAM = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			EAS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			MUR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
 	}
 }
 # vim: set ft=pdx ts=2 sw=2 tw=79 :
