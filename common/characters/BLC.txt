@@ -1,0 +1,1734 @@
+characters = {
+	BLC_battery = {
+		name = BLC_BATTERY_NAME
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLC/portrait_blc_leader.dds"
+				small = GFX_idea_YMP_leader
+			}
+		}
+		country_leader = {
+			desc = BLC_BATTERY_DESC
+			ideology = town_hall_democracy
+			expire = "3000.1.1"
+			traits = {
+				col_battery_trait
+				col_skilled_diplomat
+				col_water_mechanic
+				col_compromiser
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				NOT = {
+					has_character_flag = is_civilian_flag
+				}
+			}
+			#Not utilized
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			traits = {
+				charismatic_trait
+				enduring_trait
+				survivalist_trait
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BLC_BATTERY_ARMY_CHIEF
+			ledger = army
+			allowed = {
+				tag = BLC
+			}
+			traits = {
+				local_sherrif
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.05
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.05
+					}
+				}
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_BATTERY_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				tag = BAG
+			}
+			available = {
+				hidden_trigger = {
+					# has_completed_focus = bag_collaborate_with_caravan
+				}
+			}
+			traits = {
+				col_water_mechanic
+			}
+		}
+	}
+	BLC_warded = {
+		name = BLC_WARDED_NAME
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/character_small_icons/BLC_warded.dds"
+				large = "gfx/leaders/PNT/portrait_pnt_leader.dds"
+			}
+		}
+		country_leader = {
+			desc = BLC_WARDED_DESC
+			ideology = ideocracy
+			expire = "3000.1.1"
+			traits = {
+				col_head_of_painted_people
+				war_shaman
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				NOT = {
+					has_character_flag = is_civilian_flag
+				}
+			}
+			#Not utilized
+			skill = 1
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				charismatic_trait
+				lucky_trait
+				mysterious_stranger_trait
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_WARDED_CULTURAL_ADVISOR
+			cost = 100
+			can_be_fired = no
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				#hidden_trigger = {
+				#	NOT = {
+				#		has_completed_focus = blc_warded_reward
+				#	}
+				#}
+			}
+			traits = {
+				col_kende_trait
+			}
+			research_bonus = {
+				tribal_tech_category = 0.1
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.05
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.05
+					}
+				}
+			}
+		}
+	}
+	BLC_bearhard = {
+		name = BLC_BEARHARD_NAME
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/character_small_icons/BLC_rivers.dds"
+				large = "gfx/leaders/YMP/portrait_ymp_leader.dds"
+			}
+		}
+		country_leader = {
+			desc = BLC_BEARHARD_DESC
+			ideology = mercantile_elite
+			expire = "3000.1.1"
+			traits = {
+				col_bear_of_yampa
+				survivalist
+			}
+			id = -1
+		}
+		corps_commander = {
+			visible = {
+				NOT = {
+					has_character_flag = is_civilian_flag
+				}
+			}
+			#Not utilized
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 3
+			traits = {
+				charismatic_trait
+				intelligent_trait
+				inspirational_trait
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_BEARHARD_ECONOMIC_ADVISOR
+			cost = 100
+			can_be_fired = no
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				#hidden_trigger = {
+				#	NOT = {
+				#		has_completed_focus = blc_rivers_flow_our_way
+				#	}
+				#}
+			}
+			traits = {
+				col_lord_mayor_trait
+			}
+			modifier = {
+				caps_income_modifier = 0.15
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = 0.05
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = -0.05
+					}
+				}
+			}
+		}
+	}
+	BLC_mcbride = {
+		name = BLC_MCBRIDE_NAME
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BLC/portrait_bcr_leader.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/ministers/bag_galetski_high_command.dds"
+				large = "gfx/leaders/BLC/portrait_bcr_leader.dds"
+			}
+		}
+		field_marshal = {
+			traits = {
+				strong_trait
+				enduring_trait
+				BLC_raider_origins_trait
+			}
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BLC_MCBRIDE_ARMY_CHIEF
+			ledger = army
+			can_be_fired = no
+			allowed = {
+				tag = BLC
+			}
+			available = {
+				NOT = {
+					# has_completed_focus = blc_refill_our_prison
+				}
+			}
+			traits = {
+				col_raider_rebel_trait
+			}
+			modifier = {
+				experience_gain_army = 0.10
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = 0.05
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = -0.05
+					}
+				}
+			}
+		}
+		country_leader = {
+			desc = BLC_MCBRIDE_DESC
+			ideology = gang
+			expire = "3000.1.1"
+			traits = {
+				road_warrior
+			}
+			id = -1
+		}
+	}
+	BLC_quick_asp = {
+		name = BLC_QUICK_ASP_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_tribal_generic_1
+				large = GFX_Portrait_Tribal_Generic_1				#Became leader through Focus
+			}
+		}
+		field_marshal = {
+			traits = {
+				intelligent_trait
+				enduring_trait
+				BLC_tribal_origins_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BLC_QUICK_ASP_ARMY_CHIEF
+			ledger = army
+			allowed = {
+				tag = BLC
+			}
+			traits = {
+				tribal_expansion
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_deputy_fischer = {
+		name = BLC_DEPUTY_FISCHER_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_DES_General_6				#Became puppet-leader of Wyoming
+				small = GFX_Portrait_DES_General_6_small
+			}
+		}
+	}
+	BLC_warden_jackson = {
+		name = BLC_WARDEN_JACKSON_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_DLN_Reynolds				#Became puppet-leader of Tibbets
+			}
+		}
+	}
+	BLC_preston_miklovich = {
+		name = BLC_PRESTON_MIKLOVICH_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_settler_generic_28
+				large = GFX_Portrait_Settler_Generic_28
+			}
+		}
+		field_marshal = {
+			traits = {
+				intelligent_trait
+				enduring_trait
+				BLC_settler_origins_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 3
+			legacy_id = -1
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BLC_PRESTON_MIKLOVICH_ARMY_CHIEF
+			ledger = army
+			allowed = {
+				tag = BLC
+			}
+			available = {
+				not_already_hired_except_as = army_chief
+			}
+			traits = {
+				settler_defend_trait
+				col_militia_leader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = -0.03
+					}
+				}
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLC_PRESTON_MIKLOVICH_HIGH_COMMAND
+			ledger = army
+			allowed = {
+				tag = BLC
+			}
+			available = {
+				not_already_hired_except_as = high_command
+				# has_completed_focus = blc_begin_again
+			}
+			traits = {
+				col_militia_recruiter
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_koda = {
+		name = BLC_KODA_RIVERS_NAME
+		portraits = {
+			civilian = {
+				#Became leader through Focus
+				large = "gfx/leaders/settler/portrait_settler_generic_20.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/Settler_Generic_20.dds"
+				large = "gfx/leaders/settler/portrait_settler_generic_20.dds"
+			}
+		}
+		navy_leader = {
+			traits = {
+				old_guard_navy
+				spotter
+			}
+			#Change when naval-rework happened in the future
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			maneuvering_skill = 2
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = BLC_KODA_RIVERS_NAVY_CHIEF
+			ledger = navy
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = YMP
+				}
+			}
+			research_bonus = {
+				cat_naval_doctrine = 0.15
+			}
+			traits = {
+				settler_navy_buff
+				#naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_fishgarth = {
+		name = BLC_FISHGARTH_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/tribal_generic_11.dds"
+				large = "gfx/leaders/tribal/portrait_tribal_generic_11.dds"
+			}
+		}
+		navy_leader = {
+			traits = {
+				blockade_runner
+			}
+			#Change when naval-rework happened in the future
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 2
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = BLC_FISHGARTH_NAVY_CHIEF
+			ledger = navy
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = PNT
+				}
+			}
+			research_bonus = {
+				cat_naval_doctrine = 0.15
+			}
+			traits = {
+				tribal_navy_buff
+				#naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_lift = {
+		name = BLC_LIFT_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_supermutant_generic_10
+				large = "gfx/leaders/supermutant/portrait_supermutant_generic_10.dds"
+			}
+		}
+		navy_leader = {
+			traits = {
+				bold
+			}
+			#Change when naval-rework happened in the future
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = BLC_LIFT_NAVY_CHIEF
+			ledger = navy
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = BCR
+				}
+			}
+			research_bonus = {
+				cat_naval_doctrine = 0.05
+			}
+			traits = {
+				col_terrible_sailor
+				#naval_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_varga = {
+		name = BLC_VARGA_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_VLT_advisor_9
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = BLC_VARGA_AIR_CHIEF
+			ledger = air
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				owns_state = 532
+				# NOT = { #?Decrepit trigger, but it brings back good memories from older designs for the nation
+				# 	has_cosmetic_tag = BLC_raider_cosmetic
+				# }
+			}
+			research_bonus = {
+				cat_air_doctrine = 0.15
+			}
+			traits = {
+				settler_air_buff
+				#air_warfare_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.01
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+	BLC_wrothwright = {
+		name = BLC_WROTHWRIGHT_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor36
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = BLC_WROTHWRIGHT_AIR_CHIEF
+			ledger = air
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_invite_flyers
+			}
+			research_bonus = {
+				cat_air_doctrine = 0.15
+			}
+			traits = {
+				col_aerial_trader
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_inkhouse = {
+		name = BLC_INKHOUSE_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/tribal_generic_15.dds"
+				large = "gfx/leaders/tribal/portrait_tribal_generic_15.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				charismatic_trait
+				agile_trait
+				BLC_tribal_origins_trait
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLC_INKHOUSE_HIGH_COMMAND
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = PNT
+				}
+			}
+			available = {
+				not_already_hired_except_as = high_command
+			}
+			traits = {
+				tribal_champion
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = BLC_INKHOUSE_RESEARCH_ADVISOR
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = PNT
+				}
+			}
+			available = {
+				not_already_hired_except_as = theorist
+			}
+			traits = {
+				tribal_armorer
+			}
+			research_bonus = {
+				enforcer_tech_category = 0.1
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_zenith_of_criag = {
+		name = BLC_ZENITH_OF_CRIAG_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/tribal_generic_16.dds"
+				large = "gfx/leaders/tribal/portrait_tribal_generic_16.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLC_ZENITH_OF_CRIAG_HIGH_COMMAND
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = PNT
+				}
+			}
+			traits = {
+				tribal_quartermaster
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_thoreau = {
+		name = BLC_THOREAU_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/Settler_Generic_29.dds"
+				large = "gfx/leaders/settler/portrait_settler_generic_29.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				strong_trait
+				lucky_trait
+				BLC_settler_origins_trait
+			}
+			skill = 2
+			attack_skill = 4
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLC_THOREAU_HIGH_COMMAND
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = YMP
+				}
+			}
+			traits = {
+				military_quartermaster
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_ryan_mitchell = {
+		name = BLC_RYAN_MITCHELL_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_generic_advisor3
+				large = "gfx/leaders/raider/portrait_raider_generic_8.dds"
+			}
+		}
+		corps_commander = {
+			traits = {
+				strong_trait
+				agile_trait
+				BLC_raider_origins_trait
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLC_RYAN_MITCHELL_HIGH_COMMAND
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = BCR
+				}
+			}
+			available = {
+				NOT = {
+					# has_completed_focus = blc_refill_our_prison
+				}
+			}
+			traits = {
+				col_ryan_trait
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_anson = {
+		name = BLC_ANSON_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor25
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BLC_ANSON_HIGH_COMMAND
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = BCR
+				}
+			}
+			traits = {
+				col_anson_trait
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_hugh_jest = {
+		name = BLC_HUGH_JEST_NAME		#Jericho has been designed by Jeff Husges. Husges-Hugh Jest? Just a nod and a pun. /Gebe, 2021.12.21
+		portraits = {
+			army = {
+				small = GFX_idea_generic_advisor33
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = BLC_HUGH_JEST_RESEARCH_ADVISOR
+			ledger = army
+			allowed = {
+				tag = BLC
+			}
+			research_bonus = {
+				cat_land_doctrine = 0.15
+			}
+			traits = {
+				military_theorist
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_damien_etto = {
+		name = BLC_DAMIEN_ETTO_NAME		#Hoover Dam has been designed by Damien Foletto. Just a nod and a pun. /Gebe, 2021.12.22
+		portraits = {
+			army = {
+				small = GFX_idea_VLT_advisor_1
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = BLC_DAMIEN_ETTO_RESEARCH_ADVISOR
+			ledger = army
+			allowed = {
+				tag = BLC
+			}
+			available = {
+				owns_state = 532
+			}
+			traits = {
+				scientific_devotion
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.01
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+	BLC_ivan = {
+		name = BLC_IVAN_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_generic_advisor10
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_IVAN_ECONOMIC_ADVISOR
+			ledger = army
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = BCR
+				}
+			}
+			available = {
+				NOT = {
+					# has_completed_focus = blc_refill_our_prison
+				}
+			}
+			traits = {
+				col_ivan_trait
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_semmelweis = {
+		name = BLC_SEMMELWEIS_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_mexico_advisor4
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_SEMMELWEIS_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_invite_followers
+			}
+			traits = {
+				follower_advisor
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_jamison = {
+		name = BLC_JAMISON_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_political_advisor_europe_4
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_JAMISON_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_invite_crimson_caravan
+			}
+			traits = {
+				ruthless_capitalist
+			}
+		}
+	}
+	BLC_giordanos = {
+		name = BLC_GIORDANOS_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor27
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_GIORDANOS_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				has_completed_focus = blc_fund_three_some_caravan
+			}
+			traits = {
+				economic_expert
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_simon_krieger = {
+		name = BLC_SIMON_KRIEGER_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_mexico_advisor16
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_SIMON_KRIEGER_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = BCR
+				}
+			}
+			traits = {
+				col_dam_good
+			}
+		}
+	}
+	BLC_little_circle = {
+		name = BLC_LITTLE_CIRCLE_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor6
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_LITTLE_CIRCLE_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_stories_of_shaman
+			}
+			traits = {
+				old_world_roads
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_phil = {
+		name = BLC_PHIL_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor8
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_PHIL_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_the_boat_never_sinks
+			}
+			traits = {
+				lac_more_trait
+			}
+			modifier = {
+				organization_floor_modifier_1 = 25
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_sparky = {
+		name = BLC_SPARKY_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor21
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_SPARKY_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_the_boat_never_sinks
+			}
+			modifier = {
+				organization_floor_modifier_4 = 25
+			}
+			traits = {
+				DLN_shock
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_marissa = {
+		name = BLC_MARISSA_NAME
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/character_small_icons/tribal_generic_3.dds"
+			}
+		}
+	}
+	BLC_esther = {
+		name = BLC_ESTHER_NAME
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/character_small_icons/Settler_Generic_16.dds"
+			}
+		}
+	}
+	BLC_lane = {
+		name = BLC_LANE_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor34
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_LANE_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				OR = {
+					tag = BLC
+					tag = BCR
+				}
+			}
+			traits = {
+				settler_physician
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = ruler
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_delshay = {
+		name = BLC_DELSHAY_NAME
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/character_small_icons/tribal_generic_6.dds"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_DELSHAY_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				has_country_flag = jic_trail_of_tears
+			}
+			traits = {
+				great_survivor
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_southwick = {
+		name = BLC_SOUTHWICK_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_matthew
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_SOUTHWICK_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				# has_completed_focus = blc_way_of_canaanities
+			}
+			traits = {
+				peace_mission
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.01
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+	BLC_saddleburn = {
+		name = BLC_SADDLEBURN_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor26
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BLC_SADDLEBURN_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				not_already_hired_except_as = economic_advisor
+			}
+			traits = {
+				wall_painter
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_SADDLEBURN_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			available = {
+				not_already_hired_except_as = cultural_advisor
+			}
+			traits = {
+				tribal_good_natured
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = intellectuals
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_songbird = {
+		name = BLC_SONGBIRD_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor30
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_SONGBIRD_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			traits = {
+				friends_in_high_places
+			}
+		}
+	}
+	BLC_mcgraw = {
+		name = BLC_MCGRAW_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor37
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_MCGRAW_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BLC
+			}
+			traits = {
+				experienced_diplomat
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = 0.03
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = elites
+						popularity = -0.03
+					}
+				}
+			}
+		}
+	}
+	BLC_lady_veil = {
+		name = BLC_LADY_VEIL_NAME
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/character_small_icons/raider_generic_14.dds"
+				large = "gfx/leaders/raider/portrait_raider_generic_14.dds"
+			}
+		}
+		#country_leader = {
+		#	desc = BLC_LADY_VEIL_DESC
+		#	ideology = technocracy
+		#	expire = "3000.1.1"
+		#	traits = { charismatic_leader }
+		#	id = -1
+		#}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BLC_LADY_VEIL_CULTURAL_ADVISOR
+			cost = 100
+			removal_cost = -1
+			allowed = {
+				original_tag = BLC
+			}
+			traits = {
+				tribal_peaceful
+				#vault_hater
+			}
+			on_add = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = 0.01
+					}
+				}
+			}
+			on_remove = {
+				ROOT = {
+					add_popularity = {
+						ideology = people
+						popularity = -0.01
+					}
+				}
+			}
+		}
+	}
+	#Commented out for now. Future CD's wanted more freedom in how they could explore Alexandra/Blackjack writing - Zusk
+	#BLC_blackjack = {
+	#	name = BLC_BLACKJACK_NAME
+	#	portraits = {
+	#		army = {
+	#			large = "gfx/leaders/supermutant/portrait_supermutant_generic_4.dds"
+	#		}
+	#	}
+	#	corps_commander = {
+	#		desc = BLC_BLACKJACK_DESC
+	#		traits = {
+	#			intelligent_trait
+	#			enduring_trait
+	#		}
+	#		skill = 3
+	#		attack_skill = 1
+	#		defense_skill = 3
+	#		planning_skill = 3
+	#		logistics_skill = 2
+	#	}
+	#}
+}

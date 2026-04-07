@@ -1,0 +1,383 @@
+# on_actions = {
+# 	#Puppeting SIE through any means
+# 	on_puppet = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					SIE = { is_subject_of = BLC }
+# 					PRO = { is_subject_of = BLC }
+# 				}
+# 				SIE = {
+# 					annex_country = {
+# 						target = PRO
+# 						transfer_troops = yes
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					ROOT = { tag = SIE }
+# 					FROM = { tag = BLC }
+# 				}
+# 				load_focus_tree = settler_generic
+# 				set_popularities = {
+# 					people = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					elites = 0
+# 				}
+# 				set_politics = {
+# 					ruling_party = people
+# 				}
+# 				BLC = {
+# 					BLC_DEPUTY_FISCHER = {
+# 						set_nationality = SIE
+# 						add_country_leader_role = {
+# 							promote_leader = yes
+# 							country_leader = {
+# 								ideology = peoples_militia
+# 								expire = "3000.1.1.1"
+# 								traits = { military_background }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	on_release_as_puppet  = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					SIE = { is_subject_of = BLC }
+# 					PRO = { is_subject_of = BLC }
+# 				}
+# 				SIE = {
+# 					annex_country = {
+# 						target = PRO
+# 						transfer_troops = yes
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					ROOT = { tag = SIE }
+# 					FROM = { tag = BLC }
+# 				}
+# 				load_focus_tree = settler_generic
+# 				set_popularities = {
+# 					people = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					elites = 0
+# 				}
+# 				set_politics = {
+# 					ruling_party = people
+# 				}
+# 				BLC = {
+# 					BLC_DEPUTY_FISCHER = {
+# 						set_nationality = SIE
+# 						add_country_leader_role = {
+# 							promote_leader = yes
+# 							country_leader = {
+# 								desc = BLC_DEPUTY_FISCHER_DESC
+# 								ideology = peoples_militia
+# 								expire = "3000.1.1.1"
+# 								traits = { military_background }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	#Puppeting PRO any means
+# 	on_puppet = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					SIE = { is_subject_of = BLC }
+# 					PRO = { is_subject_of = BLC }
+# 				}
+# 				SIE = {
+# 					annex_country = {
+# 						target = PRO
+# 						transfer_troops = yes
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					ROOT = { tag = PRO }
+# 					FROM = { tag = BLC }
+# 				}
+# 				load_focus_tree = settler_generic
+# 				set_popularities = {
+# 					people = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					elites = 0
+# 				}
+# 				set_politics = {
+# 					ruling_party = people
+# 				}
+# 				#BLC = {
+# 				#	BLC_DEPUTY_FISCHER = {
+# 				#		set_nationality = PRO
+# 				#		add_country_leader_role = {
+# 				#			promote_leader = yes
+# 				#			country_leader = {
+# 				#				desc = BLC_DEPUTY_FISCHER_DESC
+# 				#				ideology = peoples_militia
+# 				#				expire = "3000.1.1.1"
+# 				#				traits = { military_background }
+# 				#			}
+# 				#		}
+# 				#	}
+# 				#}
+# 			}
+# 		}
+# 	}
+# 	on_release_as_puppet  = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					SIE = { is_subject_of = BLC }
+# 					PRO = { is_subject_of = BLC }
+# 				}
+# 				SIE = {
+# 					annex_country = {
+# 						target = PRO
+# 						transfer_troops = yes
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					ROOT = { tag = PRO }
+# 					FROM = { tag = BLC }
+# 				}
+# 				load_focus_tree = settler_generic
+# 				set_popularities = {
+# 					people = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					elites = 0
+# 				}
+# 				set_politics = {
+# 					ruling_party = people
+# 				}
+# 				#BLC = {
+# 				#	BLC_DEPUTY_FISCHER = {
+# 				#		set_nationality = PRO
+# 				#		add_country_leader_role = {
+# 				#			promote_leader = yes
+# 				#			country_leader = {
+# 				#				desc = BLC_DEPUTY_FISCHER_DESC
+# 				#				ideology = peoples_militia
+# 				#				expire = "3000.1.1.1"
+# 				#				traits = { military_background }
+# 				#			}
+# 				#		}
+# 				#	}
+# 				#}
+# 			}
+# 		}
+# 	}
+# 	#Puppeting VLS any means
+# 	on_puppet = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					ROOT = { tag = VLS }
+# 					FROM = { tag = BLC }
+# 				}
+# 				load_focus_tree = settler_generic
+# 				set_popularities = {
+# 					people = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					elites = 0
+# 				}
+# 				set_politics = {
+# 					ruling_party = people
+# 				}
+# 				BLC = {
+# 					BLC_LADY_VEIL = {
+# 						set_nationality = VLS
+# 						add_country_leader_role = {
+# 							promote_leader = yes
+# 							country_leader = {
+# 								ideology = town_hall_democracy
+# 								expire = "3000.1.1.1"
+# 								traits = { charismatic_leader }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	on_release_as_puppet  = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					ROOT = { tag = VLS }
+# 					FROM = { tag = BLC }
+# 				}
+# 				load_focus_tree = settler_generic
+# 				set_popularities = {
+# 					people = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					elites = 0
+# 				}
+# 				set_politics = {
+# 					ruling_party = people
+# 				}
+# 				BLC = {
+# 					BLC_LADY_VEIL = {
+# 						set_nationality = VLS
+# 						add_country_leader_role = {
+# 							promote_leader = yes
+# 							country_leader = {
+# 								ideology = town_hall_democracy
+# 								expire = "3000.1.1.1"
+# 								traits = { charismatic_leader }
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	on_daily_BLC = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					has_dynamic_modifier = { modifier = caravan_13_dynamic_modifier }
+# 				}
+# 				update_blc_influence = yes
+# 			}
+# 		}
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					original_tag = BLC
+# 					NOT = {
+# 						has_active_mission = black_canyon_raider_revolt_mission
+# 					}
+# 					#has_war = no
+# 					is_subject = no
+# 					has_character = BLC_mcbride
+# 					NOT = {
+# 						has_country_flag = blc_raiders_pacified
+# 						has_country_flag = blc_ceasefire_at_gathering
+# 						has_country_flag = black_canyon_bcr_revolt
+# 					}
+# 					OR = {
+# 						ruler > 0.4
+# 						ruler < 0.15
+# 					}
+# 				}
+# 				country_event = nf_black_canyon.13
+# 			}
+# 		}
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					original_tag = BLC
+# 					NOT = {
+# 						has_active_mission = black_canyon_tribal_revolt_mission
+# 					}
+# 					#has_war = no
+# 					is_subject = no
+# 					has_character = BLC_warded
+# 					NOT = {
+# 						has_country_flag = blc_tribals_pacified
+# 						has_country_flag = blc_ceasefire_at_gathering
+# 						has_country_flag = black_canyon_pnt_revolt
+# 					}
+# 					OR = {
+# 						intellectuals > 0.4
+# 						intellectuals < 0.15
+# 					}
+# 				}
+# 				country_event = nf_black_canyon.14
+# 			}
+# 		}
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					original_tag = BLC
+# 					NOT = {
+# 						has_active_mission = black_canyon_settler_revolt_mission
+# 					}
+# 					#has_war = no
+# 					is_subject = no
+# 					has_character = BLC_bearhard
+# 					NOT = {
+# 						has_country_flag = blc_settlers_pacified
+# 						has_country_flag = blc_ceasefire_at_gathering
+# 						has_country_flag = black_canyon_ymp_revolt
+# 					}
+# 					OR = {
+# 						elites > 0.4
+# 						elites < 0.15
+# 					}
+# 				}
+# 				country_event = nf_black_canyon.15
+# 			}
+# 		}
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					tag = BLC
+# 					has_country_flag = blc_battery_married
+# 					has_idea = BLC_MARISSA_CULTURAL_ADVISOR
+# 					has_idea = BLC_ESTHER_CULTURAL_ADVISOR
+# 				}
+# 				country_event = nf_black_canyon.37
+# 			}
+# 		}
+# 	}
+# 	on_state_control_changed = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					tag = LAC
+# 					FROM = { tag = MXC }
+# 					FROM.FROM = { state = 412 }
+# 				}
+# 				BLC = { country_event = nf_black_canyon.32 }
+# 			}
+# 		}
+# 	}
+# 	on_startup = {
+# 		effect = {
+# 			BLC = {
+# 				BLC_battery = { unit_leader_event = nf_blc_letters.0 }
+# 				### Setting up character flags to make them more easily sortable
+# 				BLC_quick_asp = { set_character_flag = BLC_tribal_character }
+# 				BLC_preston_miklovich = { set_character_flag = BLC_settler_character }
+# 				BLC_koda = { set_character_flag = BLC_settler_character }
+# 				BLC_fishgarth = { set_character_flag = BLC_tribal_character }
+# 				BLC_lift = { set_character_flag = BLC_raider_character }
+# 				BLC_inkhouse = { set_character_flag = BLC_tribal_character }
+# 				BLC_zenith_of_criag = { set_character_flag = BLC_tribal_character }
+# 				BLC_thoreau = { set_character_flag = BLC_settler_character }
+# 				BLC_ryan_mitchell = { set_character_flag = BLC_raider_character }
+# 				BLC_anson = { set_character_flag = BLC_raider_character }
+# 				BLC_ivan = { set_character_flag = BLC_raider_character }
+# 				BLC_little_circle = { set_character_flag = BLC_tribal_character }
+# 				BLC_saddleburn = { set_character_flag = BLC_tribal_character }
+# 				BLC_lane = { set_character_flag = BLC_raider_character }
+# 				BLC_mcgraw = { set_character_flag = BLC_settler_character }
+# 				#
+# 				BLC_battery = { set_character_flag = is_civilian_flag }
+# 				BLC_warded = { set_character_flag = is_civilian_flag }
+# 				BLC_bearhard = { set_character_flag = is_civilian_flag }
+# 			}
+# 		}
+# 	}
+# }

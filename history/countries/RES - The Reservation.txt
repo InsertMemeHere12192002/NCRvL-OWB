@@ -78,16 +78,9 @@ set_technology = {
 	ballistic_weaponry_tech_1 = 1
 	military_heritage_unlock_tech = 1
 	implant_tech_visibility_tech = 1
-}
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.5

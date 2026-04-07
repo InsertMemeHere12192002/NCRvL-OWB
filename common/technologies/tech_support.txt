@@ -115,6 +115,12 @@ technologies = {
 		enable_equipments = {
 			fireteam_equipment_1
 		}
+				enable_equipment_modules = {
+			ship_pd_module_2
+		}
+		enable_equipment_modules = {
+			ship_pd_module_3
+		}
 
 		path = {
 			leads_to_tech = energy_fireteam_weaponry_tech_2
@@ -1133,6 +1139,9 @@ technologies = {
 		enable_equipments = {
 			anti_air_equipment_1
 		}
+				enable_equipment_modules = {
+			ship_pd_module_4
+		}
 
 		path = {
 			leads_to_tech = aa_fireteam_tech
@@ -1194,7 +1203,9 @@ technologies = {
 
 		static_anti_air_damage_factor = 0.1
 		static_anti_air_hit_chance_factor = 0.1
-
+		enable_equipment_modules = {
+			ship_pd_module_5
+		}
 		anti_air_support = {
 			air_attack = 0.15
 		}
@@ -1247,6 +1258,9 @@ technologies = {
 
 		enable_equipments = {
 			anti_air_equipment_2
+		}
+				enable_equipment_modules = {
+			ship_pd_module_6
 		}
 
 		path = {
@@ -1303,6 +1317,9 @@ technologies = {
 
 		anti_air_support = {
 			air_attack = 0.15
+		}
+				enable_equipment_modules = {
+			ship_pd_module_7
 		}
 
 		research_cost = 1.35
@@ -1481,7 +1498,7 @@ technologies = {
 		category_demolitions = {
 			hard_attack = 0.1
 			ap_attack = 0.05
-			max_strength = 0.05
+			max_strength = 2
 		}
 
 		XOR = {
@@ -2397,7 +2414,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1.5
+			factor = 1
 
 			modifier = {
 				factor = 5
@@ -3009,7 +3026,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 
 			modifier = {
 				factor = 5
@@ -3741,22 +3758,22 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 3
 
 			modifier = {
-				factor = 3
+				factor = 4
 				is_brotherhood_nation = yes
 			}
 			modifier = {
-				factor = 3
+				factor = 4
 				date > "2276.1.1"
 			}
 			modifier = {
-				factor = 3
+				factor = 4
 				date > "2277.1.1"
 			}
 			modifier = {
-				factor = 3
+				factor = 4
 				date > "2278.1.1"
 			}
 		}
@@ -4538,6 +4555,7 @@ technologies = {
 			}
 		}
 	}
+	
 	railway_gun_unlock_tech = {
 		enable_equipments = {
 			railway_gun_equipment_1

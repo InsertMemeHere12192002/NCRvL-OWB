@@ -1,0 +1,1493 @@
+# ####################################
+# # SLE Decisions                    #
+# # Scripted by Silverfishv9         #
+# ####################################
+# sle_bop = {
+# 	sle_dream_big_decision = {
+
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			NOT = { has_cosmetic_tag = SLE_utopian_dream }
+# 			NOT = { has_cosmetic_tag = SLE_dreamers }
+# 			NOT = { has_cosmetic_tag = SLE_nightmares }
+# 		}
+
+# 		fire_only_once = yes
+
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = SLE_dreaming_big_tt
+# 				NOT = { has_cosmetic_tag = SLE_utopian_dream }
+# 				NOT = { has_cosmetic_tag = SLE_dreamers }
+# 				NOT = { has_cosmetic_tag = SLE_nightmares }
+# 			}
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.9
+# 			}
+# 			people > 0.6
+# 			owns_state = 568
+# 			has_completed_focus = sle_waking_up
+# 		}
+
+# 		complete_effect = {
+# 			set_cosmetic_tag = SLE_utopian_dream
+# 			add_ideas = sle_a_better_tomorrow
+# 			remove_ideas = sle_confused_future
+# 		}
+
+# 		remove_effect = {
+# 		}
+# 	}
+# 	sle_burn_the_world_decision = {
+
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			NOT = { has_cosmetic_tag = SLE_utopian_dream }
+# 			NOT = { has_cosmetic_tag = SLE_dreamers }
+# 			NOT = { has_cosmetic_tag = SLE_nightmares }
+# 		}
+
+# 		fire_only_once = yes
+
+# 		fixed_random_seed = no
+
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = SLE_eternal_hatred_tt
+# 				NOT = { has_cosmetic_tag = SLE_utopian_dream }
+# 				NOT = { has_cosmetic_tag = SLE_dreamers }
+# 				NOT = { has_cosmetic_tag = SLE_nightmares }
+# 			}
+# 			intellectuals > 0.70
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.9
+# 			}
+# 			owns_state = 127
+# 			has_completed_focus = sle_restart_BOMB
+# 		}
+
+# 		complete_effect = {
+# 			127 = {
+# 				add_manpower = 3000
+# 				add_extra_state_shared_building_slots = 4
+# 				add_building_construction = {
+# 					type = infrastructure
+# 					level = 4
+# 					instant_build = yes
+# 				}
+# 				set_state_category = city
+# 			}
+# 			set_cosmetic_tag = SLE_nightmares
+# 			add_ideas = sle_scourge_of_the_world
+# 			remove_ideas = sle_confused_future
+# 		}
+
+# 		remove_effect = {
+# 		}
+# 	}
+# 	sle_sleep_forever_decision = {
+
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			NOT = { has_cosmetic_tag = SLE_utopian_dream }
+# 			NOT = { has_cosmetic_tag = SLE_dreamers }
+# 			NOT = { has_cosmetic_tag = SLE_nightmares }
+# 		}
+
+# 		fire_only_once = yes
+
+# 		fixed_random_seed = no
+
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+
+# 		available = {
+# 			custom_trigger_tooltip = {
+# 				tooltip = SLE_back_to_bed_tt
+# 				NOT = { has_cosmetic_tag = SLE_utopian_dream }
+# 				NOT = { has_cosmetic_tag = SLE_dreamers }
+# 				NOT = { has_cosmetic_tag = SLE_nightmares }
+# 			}
+# 			has_completed_focus = sle_universal_migrators
+# 			ruler > 0.70
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > -0.3
+# 			}
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < 0.3
+# 			}
+# 			owns_state = 568
+# 		}
+
+# 		complete_effect = {
+# 			set_cosmetic_tag = SLE_dreamers
+# 			add_ideas = sle_liquid_eternity
+# 			remove_ideas = sle_confused_future
+# 			568 = {
+# 				add_core_of = SLE
+# 				add_manpower = 6000
+# 				add_extra_state_shared_building_slots = 2
+# 				add_building_construction = {
+# 					type = infrastructure
+# 					level = 2
+# 					instant_build = yes
+# 				}
+# 				set_state_category = metropolis
+# 			}
+# 			set_capital = {state = 568}
+# 		}
+# 	}
+# 	sle_bop_favor_ethics = {
+# 		icon = GFX_decision_category_generic_propaganda
+# 		cost = 45
+# 		days_remove = 60
+# 		days_re_enable = 30
+# 		priority = 5
+# 		modifier = {
+# 			consumer_goods_factor = -0.10
+# 		}
+# 		remove_effect = {
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 			add_popularity = {
+# 				ideology = people
+# 				popularity = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_bop_favor_research = {
+# 		icon = GFX_decision_category_generic_propaganda
+# 		cost = 45
+# 		days_remove = 60
+# 		days_re_enable = 30
+# 		priority = 5
+# 		modifier = {
+# 			research_speed_factor = 0.1
+# 		}
+# 		remove_effect = {
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 			add_popularity = {
+# 				ideology = intellectuals
+# 				popularity = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_bop_favor_revenge = {
+# 		icon = GFX_decision_category_generic_propaganda
+# 		cost = 45
+# 		days_remove = 60
+# 		days_re_enable = 30
+# 		priority = 5
+# 		modifier = {
+# 			war_stability_factor = 0.20
+# 		}
+# 		remove_effect = {
+# 			add_popularity = {
+# 				ideology = ruler
+# 				popularity = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_touch_grass_decision = {
+# 		icon = GFX_decision_pet_rock
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.3
+# 			}
+# 			people > 0.3
+# 			owns_state = 38
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			add_stability = 0.05
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_summer_camp_decision = {
+# 		icon = GFX_decision_pet_rock
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.2
+# 			}
+# 			people > 0.2
+# 			owns_state = 115
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			army_experience = 15
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_dinosaur_museum_decision = {
+# 		icon = GFX_decision_pet_rock
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.2
+# 			}
+# 			people > 0.2
+# 			owns_state = 302
+# 		}
+# 		cost = 100
+
+# 		complete_effect = {
+# 			302 = {
+# 				add_core_of = SLE
+# 			}
+# 			add_resource = {
+# 				type = water
+# 				amount = 5
+# 				state = 302
+# 			}
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_prisoner_memory_decision = {
+# 		icon = GFX_decision_pet_rock
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.2
+# 			}
+# 			people > 0.2
+# 			owns_state = 572
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			add_political_power = 110
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_protect_zion_decision = {
+# 		icon = GFX_decision_pet_rock
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.2
+# 			}
+# 			people > 0.2
+# 			owns_state = 43
+# 		}
+# 		cost = 100
+
+# 		complete_effect = {
+# 			43 = {
+# 				add_core_of = SLE
+# 			}
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_pet_dogs_decision = {
+# 		icon = GFX_decision_pet_rock
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value > 0.2
+# 			}
+# 			people > 0.2
+# 			owns_state = 525
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			add_equipment_to_stockpile = {
+# 				type = dogs_equipment_2
+# 				amount = 500
+# 				producer = USA
+# 			}
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.05
+# 			}
+# 		}
+# 	}
+# 	sle_uranium_mines_decision = {
+# 		icon = GFX_decision_gas_mask
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.2
+# 			}
+# 			intellectuals > 0.2
+# 			owns_state = 508
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			add_to_variable = {
+# 				var = fatman_uses
+# 				value = 10
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { has_country_flag = achievement_atom_bomb_baby }
+# 				}
+# 				set_country_flag = achievement_atom_bomb_baby
+# 			}
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 		}
+# 	}
+# 	sle_punish_prisoners_decision = {
+# 		icon = GFX_decision_gas_mask
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.2
+# 			}
+# 			intellectuals > 0.2
+# 			owns_state = 572
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			add_manpower = 500
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 		}
+# 	}
+# 	sle_dinosaur_park_decision = {
+# 		icon = GFX_decision_gas_mask
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.2
+# 			}
+# 			intellectuals > 0.2
+# 			owns_state = 302
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			set_technology = {
+# 				deathclaw_unlock_tech = 1
+# 				deathclaw_special_forces_unlock_tech = 1
+# 				deathclaw_tech_access_tech = 1
+# 			}
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.10
+# 			}
+# 		}
+# 	}
+# 	sle_contemplate_presper_decision = {
+# 		icon = GFX_decision_gas_mask
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.2
+# 			}
+# 			intellectuals > 0.2
+# 			owns_state = 568
+# 		}
+# 		cost = 10
+
+# 		complete_effect = {
+# 			add_war_support = 0.10
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 		}
+# 	}
+# 	sle_numidium_decision = {
+# 		icon = GFX_decision_gas_mask
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.2
+# 			}
+# 			intellectuals > 0.2
+# 			owns_state = 390
+# 		}
+# 		cost = 100
+
+# 		complete_effect = {
+# 			390 = {
+# 				add_core_of = SLE
+# 			}
+# 			add_ideas = sle_corpus_idea
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 		}
+# 	}
+# 	sle_back_in_bloomfield_decision = {
+# 		icon = GFX_decision_gas_mask
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 		}
+# 		fire_only_once = yes
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			power_balance_value = {
+# 				id = SLE_power_balance
+# 				value < -0.2
+# 			}
+# 			intellectuals > 0.2
+# 			owns_state = 381
+# 		}
+# 		cost = 60
+
+# 		complete_effect = {
+# 			381 = {
+# 				add_core_of = SLE
+# 			}
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 		}
+# 	}
+
+# 	sle_bioweapons_decision = {
+# 		icon = GFX_decision_skull
+# 		cost = 45
+# 		days_remove = 3
+# 		days_re_enable = 45
+# 		target_array = enemies
+
+# 		target_root_trigger = {
+# 			any_enemy_country = {
+# 				has_war_with = ROOT
+# 			}
+# 		}
+# 		allowed = {
+# 			tag = SLE
+# 		}
+# 		available = {
+# 			AND = {
+# 				has_stability > 0.2
+# 				has_completed_focus = sle_bioweapons
+# 				has_war = yes
+# 			}
+# 		}
+# 		visible = {
+# 			has_war_with = FROM
+# 		}
+# 		complete_effect = {
+# 			add_stability = -0.01
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.05
+# 			}
+# 			FROM = {
+# 				country_event = { id = nf_sle_dec.1 }
+# 			}
+# 		}
+# 	}
+# 	sle_mesmetron_decision = {
+# 		icon = GFX_decision_terminal
+# 		cost = 45
+# 		days_remove = 45
+# 		days_re_enable = 3
+# 		target_array = enemies
+
+# 		target_root_trigger = {
+# 			any_enemy_country = {
+# 				has_war_with = ROOT
+# 			}
+# 		}
+# 		allowed = {
+# 			tag = SLE
+# 		}
+# 		available = {
+# 			AND = {
+# 				has_stability > 0.2
+# 				has_completed_focus = sle_mass_mesmetrons
+# 				has_war = yes
+# 			}
+# 		}
+# 		visible = {
+# 			has_war_with = FROM
+# 		}
+# 		targeted_modifier = {
+# 			tag = FROM
+# 			attack_bonus_against = 0.1
+# 		}
+# 		complete_effect = {
+# 			add_manpower = 10
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = -0.01
+# 			}
+# 			add_stability = -0.01
+# 			FROM = {
+# 				country_event = { id = nf_sle_dec.2 }
+# 			}
+# 		}
+# 	}
+# }
+
+# sle_medicine_category = {
+# #	sle_pacify_canyon_decision = {
+# #
+# #		allowed = {
+# #			original_tag = SLE
+# #		}
+# #		visible = {
+# #		}
+# #
+# #		fire_only_once = yes
+# #
+# #		fixed_random_seed = no
+# #
+# #		days_remove = 90
+# #		cost = 30
+# #
+# #		ai_will_do = {
+# #			factor = 12
+# #		}
+# #
+# #		available = {
+# #			has_war = no
+# #			ORO = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #		}
+# #
+# #		complete_effect = {
+# #		}
+# #
+# #		remove_effect = {
+# #			BLC = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #			PNT = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #			YMP = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #		}
+# #	}
+
+# #	sle_back_to_boulder_decision = {
+# #
+# #		allowed = {
+# #			original_tag = SLE
+# #		}
+# #		visible = {
+# #		}
+# #
+# #		fire_only_once = yes
+# #
+# #		fixed_random_seed = no
+# #
+# #		days_remove = 90
+# #		cost = 30
+# #
+# #		ai_will_do = {
+# #			factor = 12
+# #		}
+# #
+# #		available = {
+# #			has_war = no
+# #			PNT = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #			YMP = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #			BLC = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #		}
+# #
+# #		complete_effect = {
+# #		}
+# #
+# #		remove_effect = {
+# #			GLW = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #			VLS = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #		}
+# #	}
+
+# #	sle_across_the_river_decision = {
+# #
+# #		allowed = {
+# #			original_tag = SLE
+# #		}
+# #		visible = {
+# #		}
+# #
+# #		fire_only_once = yes
+# #
+# #		fixed_random_seed = no
+# #
+# #		days_remove = 90
+# #		cost = 30
+# #
+# #		ai_will_do = {
+# #			factor = 12
+# #		}
+# #
+# #		available = {
+# #			has_war = no
+# #			ORO = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #		}
+# #
+# #		complete_effect = {
+# #			set_technology = {
+# #				naval_tech_level_tribal = 1
+# #				popup = no
+# #			}
+# #			set_technology = {
+# #				naval_tech_level_settler = 1
+# #				popup = no
+# #			}
+# #		}
+# #
+# #		remove_effect = {
+# #			EAG = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #			UIN = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #		}
+# #	}
+
+# #	sle_back_to_bomb_decision = {
+# #
+# #		allowed = {
+# #			original_tag = SLE
+# #		}
+# #		visible = {
+# #		}
+# #
+# #		fire_only_once = yes
+# #
+# #		fixed_random_seed = no
+# #
+# #		days_remove = 90
+# #		cost = 30
+# #
+# #		ai_will_do = {
+# #			factor = 12
+# #		}
+# #
+# #		available = {
+# #			has_war = no
+# #			UIN = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #			EAG = {
+# #				all_core_land_owned_by_prev_sphere = yes
+# #			}
+# #		}
+# #
+# #		complete_effect = {
+# #		}
+# #
+# #		remove_effect = {
+# #			SOR = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #			DEA = {
+# #				ROOT = {
+# #					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+# #				}
+# #			}
+# #		}
+# #	}
+# #	sle_restore_boulder_dome_decision = {
+# #		allowed = {
+# #			original_tag = SLE
+# #		}
+# #		visible = {
+# #			owns_state = 568
+# #		}
+# #		fire_only_once = yes
+# #		days_remove = 180
+# #		cost = 100
+# #		ai_will_do = {
+# #			factor = 100
+# #		}
+# #		available = {
+# #			owns_state = 568
+# #		}
+# #		remove_effect = {
+# #			568 = {
+# #				add_core_of = SLE
+# #				remove_dynamic_modifier = { modifier = boulder_state_GLW_modifier }
+# #			}
+# #			set_technology = {
+# #				robotics_tech_level_tribal = 1
+# #				popup = no
+# #			}
+# #			set_technology = {
+# #				robotics_tech_level_settler = 1
+# #				popup = no
+# #			}
+# #		}
+# #	}
+# #	sle_restore_bomb_outpost_decision = {
+# #		allowed = {
+# #			original_tag = SLE
+# #		}
+# #		visible = {
+# #			owns_state = 127
+# #		}
+# #		fire_only_once = yes
+# #		days_remove = 180
+# #		cost = 100
+# #		ai_will_do = {
+# #			factor = 100
+# #		}
+# #		available = {
+# #			owns_state = 127
+# #		}
+# #		remove_effect = {
+# #			127 = {
+# #				add_core_of = SLE
+# #			}
+# #			set_technology = {
+# #				air_tech_level_tribal = 1
+# #				popup = no
+# #			}
+# #			set_technology = {
+# #				air_tech_level_settler = 1
+# #				popup = no
+# #			}
+# #		}
+# #	}
+# ############################ MEDICINE #######################################
+
+# 	sle_breakthrough_1_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		available = {
+# 			has_tech = med_company_tech_1
+# 		}
+# 		icon = GFX_decision_mentats
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# #		days_remove = 30
+# 		cost = 10
+# 		complete_effect = {
+# 			add_to_variable = { SLE_variable_research = 1 }
+# 			custom_effect_tooltip = SLE_grants_1_research_tt
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 	}
+
+# 	sle_breakthrough_2_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = med_company_tech_1
+# 		}
+# 		available = {
+# 			has_tech = med_company_tech_2
+# 		}
+# 		icon = GFX_decision_mentats
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# #		days_remove = 30
+# 		cost = 10
+# 		complete_effect = {
+# 			add_to_variable = { SLE_variable_research = 1 }
+# 			custom_effect_tooltip = SLE_grants_1_research_tt
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 	}
+# 	sle_breakthrough_3_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = med_company_tech_2
+# 		}
+# 		available = {
+# 			has_tech = med_company_tech_3
+# 		}
+# 		icon = GFX_decision_mentats
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# #		days_remove = 30
+# 		cost = 10
+# 		complete_effect = {
+# 			add_to_variable = { SLE_variable_research = 1 }
+# 			custom_effect_tooltip = SLE_grants_1_research_tt
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 	}
+# 	sle_breakthrough_4_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = med_company_tech_3
+# 		}
+# 		available = {
+# 			has_tech = med_company_tech_4
+# 		}
+# 		icon = GFX_decision_mentats
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# #		days_remove = 30
+# 		cost = 10
+# 		complete_effect = {
+# 			add_to_variable = { SLE_variable_research = 1 }
+# 			custom_effect_tooltip = SLE_grants_1_research_tt
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 	}
+# 	sle_breakthrough_5_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = med_company_tech_4
+# 		}
+# 		available = {
+# 			has_tech = med_company_tech_5
+# 		}
+# 		icon = GFX_decision_mentats
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# #		days_remove = 30
+# 		cost = 10
+# 		complete_effect = {
+# 			add_to_variable = { SLE_variable_research = 1 }
+# 			custom_effect_tooltip = SLE_grants_1_research_tt
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 	}
+# 	sle_breakthrough_6_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = med_company_tech_5
+# 		}
+# 		available = {
+# 			has_tech = med_company_tech_6
+# 		}
+# 		icon = GFX_decision_mentats
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# #		days_remove = 30
+# 		cost = 10
+# 		complete_effect = {
+# 			add_to_variable = { SLE_variable_research = 1 }
+# 			custom_effect_tooltip = SLE_grants_1_research_tt
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 	}
+
+
+# 	sle_buffout_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_buffout = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_daddyo_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_daddy_o = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_mentats_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_mentats = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_cateye_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_cateye = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_fixer_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_fixer = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_radaway_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_radaway = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_antivenom_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_category_stimpak
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_antivenom = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_science_squad_decision = {#VULTURE CULTURE
+
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 		}
+# 		icon = GFX_decision_chemistry_set
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				khan_field_medics_tech = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_skilled_medics_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = khan_field_medics_tech
+# 			has_tech = med_company_tech_2
+# 		}
+# 		icon = GFX_decision_chemistry_set
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			has_tech = khan_field_medics_tech
+# 			has_tech = med_company_tech_3
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				tribalimmortals = 1
+# 			}
+# 		}
+# 	}
+
+# 	sle_reanimen_decision = {#VULTURE CULTURE
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		visible = {
+# 			has_completed_focus = sle_medical_expertise
+# 			has_tech = med_company_tech_5
+# 			has_tech = skilled_medics_tech
+# 		}
+# 		icon = GFX_decision_chemistry_set
+# 		fire_only_once = yes
+# 		fixed_random_seed = no
+# 		days_remove = 30
+# 		cost = 30
+# 		custom_cost_text = SLE_research_cost
+# 		custom_cost_trigger = {
+# 			check_variable = {
+# 				var = SLE_variable_research
+# 				value = 1
+# 				compare = greater_than_or_equals
+# 			}
+# 		}
+# 		complete_effect = {
+# 			hidden_effect = { subtract_from_variable = { SLE_variable_research = 1 } }
+# 		}
+# 		ai_will_do = {
+# 			factor = 12
+# 		}
+# 		available = {
+# 			has_tech = tribalimmortals
+# 			has_tech = med_company_tech_6
+# 		}
+# 		remove_effect = {
+# 			set_technology = {
+# 				skilled_medics_tech = 1
+# 			}
+# 		}
+# 	}
+# }
+
+# ############################ Formables ######################################
+
+# sle_decisions_category = {
+# 	sle_tribal_education_decision = {
+# 		icon = GFX_decision_glasses
+# 		allowed = {
+# 			original_tag = SLE
+# 		}
+# 		available = {
+# 			has_completed_focus = sle_educational_investment
+# 			NOT = {
+# 				has_country_flag = SLE_state_coring_flag
+# 			}
+# 		}
+# 		visible = {
+# 		}
+# 		state_target = any_owned_state
+# 		target_trigger = {
+# 			FROM = {
+# 				impassable = no
+# 				AND = {
+# 					OR = {
+# 						is_core_of = SOR
+# 						is_core_of = DEA
+# 						is_core_of = CRZ
+# 						is_core_of = UIN
+# 						is_core_of = EAG
+# 						is_core_of = ORO
+# 						is_core_of = TOB
+# 					}
+# 					NOT = {
+# 						is_core_of = ROOT
+# 					}
+
+# 					is_owned_and_controlled_by = ROOT
+# 				}
+# 			}
+# 		}
+
+# 	    on_map_mode = map_and_decisions_view
+# 		cost = 75
+
+# 		fire_only_once = yes
+# 		days_remove = 35
+
+# 		modifier = {
+# 			political_power_factor = -0.15
+# 		}
+
+# 		complete_effect = {
+# 			add_power_balance_value = {
+# 				id = SLE_power_balance
+# 				value = 0.01
+# 			}
+# 			hidden_effect = {
+# 				set_country_flag = SLE_state_coring_flag
+# 			}
+# 		}
+
+# 		remove_effect = {
+# 			hidden_effect = {
+# 				clr_country_flag = SLE_state_coring_flag
+# 			}
+# 			FROM = {
+# 				add_compliance = 30
+# 				add_resistance = -30
+# 				add_extra_state_shared_building_slots = 2
+# 			}
+# 		}
+# 	}
+# }

@@ -30,6 +30,7 @@ equipments = {
 
 		build_cost_ic = 30
 		resources = {
+			metal = 1
 		}
 
 		manpower = 10

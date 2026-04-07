@@ -155,7 +155,7 @@ formable_nations = {
 			custom_effect_tooltip = ncn_throne_tt
 			set_capital = { state = 266 }
 			266 = {
-				set_state_name = "The Throne of the Lord"
+				set_state_name = STATE_266_NCN
 				set_temp_variable = {
 					pop_add = 20000
 				}
@@ -165,7 +165,7 @@ formable_nations = {
 			hidden_effect = {
 				set_province_name = {
 					id = 6306
-					name = "The Throne of the Lord"
+					name = VICTORY_POINTS_6306_NCN
 				}
 			}
 			news_event = nf_ncn.43
@@ -178,12 +178,10 @@ formable_nations = {
 	form_cascadia = {
 		allowed = {
 			OR = {
-				original_tag = VIC
 				original_tag = HAI
 				original_tag = DRE
 				original_tag = WHI
-				original_tag = KAM
-				original_tag = BEL
+				original_tag = SYN
 			}
 		}
 		visible = {
@@ -198,13 +196,18 @@ formable_nations = {
 		}
 		available = {
 			has_war = no
-			BRK = {
-				all_core_land_owned_by_prev_sphere = yes
+			BRK = { all_core_land_owned_by_prev_sphere = yes }
+			OR = {
+				WBH = { all_core_land_owned_by_prev_sphere = yes }
+				TCA = { all_core_land_owned_by_prev_sphere = yes }
 			}
 		}
 		highlight_states = { # Due to the game being fucking stupid this doesn't do what it should do - it will only highlight 1 state but it should highlight them all :(
 			highlight_states_trigger = {
 				is_core_of = BRK
+				is_core_of = WBH
+				is_core_of = TCA
+
 			}
 		}
 
@@ -245,6 +248,8 @@ formable_nations = {
 							region = 61
 							region = 35
 							region = 89
+							state = 42
+							state = 987
 						}
 					}
 					add_claim_by = ROOT
@@ -473,6 +478,10 @@ formable_nations = {
 				original_tag = MXC
 				original_tag = HAN
 				original_tag = EAG
+				original_tag = GLW
+				original_tag = BLC
+				original_tag = YMP
+				original_tag = WHD
 			}
 		}
 		visible = {
@@ -670,9 +679,9 @@ formable_nations = {
 				#Move stuff over from Shady Sands to New Mariposa, so that you don't just have a capital with nothing in it
 				190 = {
 					add_core_of = ROOT
-					set_state_name = "New Mariposa"
+					set_state_name = STATE_190_TRL
 					hidden_effect = {
-						set_province_name = { id = 4740 name = "New Mariposa"}
+						set_province_name = { id = 4740 name = VICTORY_POINTS_4740_TRL}
 					}
 				}
 			}
@@ -694,9 +703,9 @@ formable_nations = {
 				set_capital = { state = 351 }
 				351 = {
 					add_core_of = ROOT
-					set_state_name = "New Mariposa"
+					set_state_name = STATE_351_TRL
 					hidden_effect = {
-						set_province_name = { id = 4335 name = "New Mariposa"}
+						set_province_name = { id = 4335 name = VICTORY_POINTS_4335_TRL}
 					}
 				}
 			}
@@ -716,7 +725,7 @@ formable_nations = {
 			original_tag = TCA
 		}
 		visible = {
-			NOT = { has_global_flag = northwestern_brotherhood_formed }
+			original_tag = TCA
 		}
 		available = {
 			OR = {
@@ -801,7 +810,7 @@ formable_nations = {
 			set_politics = {
 				ruling_party = people
 			}
-			delete_unit_template_and_units = { division_template = "Brotherhood Exiles" }
+			#delete_unit_template_and_units = { division_template = "Brotherhood Exiles" }
 			remove_ideas = tca_brotherhood_exiles
 			swap_ideas = {
 				remove_idea = tca_a_temporary_mandate
@@ -1089,13 +1098,13 @@ formable_nations = {
 			}
 			211 = {
 				add_core_of = FIE
-				set_state_name = "Motor City"
+				set_state_name = STATE_211_FIE
 			}
 			set_capital = { state = 211 }
 			hidden_effect = {
 				set_province_name = {
 					id = 3179
-					name = "Motor City"
+					name = VICTORY_POINTS_3179_FIE
 				}
 			}
 			VEG = { ROOT = { claim_core_states_of_prev = yes } }
@@ -1132,15 +1141,15 @@ formable_nations = {
 		complete_effect = {
 			set_cosmetic_tag = RHO_hookers
 			518 = {
-				set_state_name = "Northern Hook"
+				set_state_name = STATE_518_RHO
 				hidden_effect = {
-					set_province_name = { id = 7962 name = "Northern Hook"}
+					set_province_name = { id = 7962 name = VICTORY_POINTS_7962_RHO}
 				}
 			}
 			519 = {
-				set_state_name = "Southern Hook"
+				set_state_name = STATE_519_RHO
 				hidden_effect = {
-					set_province_name = { id = 8933 name = "Southern Hook"}
+					set_province_name = { id = 8933 name = VICTORY_POINTS_8933_RHO}
 				}
 			}
 			add_state_core = 518
@@ -1189,6 +1198,11 @@ formable_nations = {
 			#		}
 			#	}
 			#}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = woo_no_formable
+				}
+			}
 		}
 
 		highlight_states = {
@@ -1232,19 +1246,19 @@ formable_nations = {
 						}
 						set_province_name = {
 							id = 11634
-							name = "Lincoln City"
+							name = VICTORY_POINTS_11634_LIN
 						}
 					}
 					set_state_category = city
 					add_manpower = 10000
-					set_state_name = "Lincoln"
+					set_state_name = STATE_934_LIN
 				}
 			}
 			else = {
 				capital_scope = {
 					add_extra_state_shared_building_slots = 1
 					add_manpower = 5000
-					set_state_name = "Lincoln"
+					set_state_name = STATE_934_LIN
 				}
 			}
 			custom_effect_tooltip = lincoln_invitation_tt
@@ -1390,6 +1404,11 @@ formable_nations = {
 			else = {
 				LOS = {
 					all_core_land_owned_by_prev_sphere = yes
+				}
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = woo_no_formable
 				}
 			}
 		}
@@ -1612,11 +1631,11 @@ formable_nations = {
 				}
 			}
 			556 = {
-				set_state_name = "Olympia"
+				set_state_name = STATE_556_OLY
 			}
-			set_province_name = { id = 7111 name = "Amphitritepolis"}
+			set_province_name = { id = 7111 name = VICTORY_POINTS_7111_OLY }
 			hidden_effect = {
-				set_province_name = { id = 7116 name = "Olympia"}
+				set_province_name = { id = 7116 name = VICTORY_POINTS_7116_OLY }
 			}
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -1654,6 +1673,9 @@ formable_nations = {
 				log = "[GetDateText]: [Root.GetName] form_elysian_fields (decision) complete entered"
 			}
 			set_cosmetic_tag = OLY_elysian_fields
+						set_technology = {
+				creatures_tech_level_scientific = 1
+			}
 			add_ideas = oly_elysium_achieved
 			if = {
 				limit = { has_global_flag = debug_logs }
@@ -1718,6 +1740,324 @@ formable_nations = {
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] form_northern_federation (decision) complete exited"
+			}
+		}
+	}
+	form_wyoming = { #highland watch formable
+		allowed = {
+			original_tag = SIE
+		}
+		available = {
+			PRO = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			WYR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			LON = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+			has_completed_focus = sie_wyoming_once_again
+		}
+		visible = {
+			has_completed_focus = sie_wyoming_once_again
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 200
+		}
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] form_wyoming (decision) complete entered"
+			}
+			WYR = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			KHA = {
+				ROOT = {
+					core_owned_states_of_prev = yes
+				}
+			}
+			set_cosmetic_tag = SIE_wyoming
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] form_wyoming (decision) complete exited"
+			}
+		}
+	}
+	#form_safehaven_initiative = { #safehaven formable
+	#	allowed = {
+	#		original_tag = VSH
+	#	}
+	#	available = {
+	#		is_in_faction = no
+	#		STA = {
+	#			all_core_land_owned_by_prev_sphere = yes
+	#		}
+	#		has_completed_focus = vsh_peoples_coalition
+	#	}
+	#	fire_only_once = yes
+	#	ai_will_do = {
+	#		base = 200
+	#	}
+	#	complete_effect = {
+	#		if = {
+	#			limit = { has_global_flag = debug_logs }
+	#			log = "[GetDateText]: [Root.GetName] form_safehaven_initiative (decision) complete entered"
+	#		}
+	#		1271 = {
+	#			add_resource = {
+	#				type = metal
+	#				amount = 30
+	#			}
+	#			add_resource = {
+	#				type = water
+	#				amount = 30
+	#			}
+	#		}
+	#		add_ideas = sta_frontier_justice
+	#		set_cosmetic_tag = VSH_safehaven_initiative
+	#		if = {
+	#			limit = { has_global_flag = debug_logs }
+	#			log = "[GetDateText]: [Root.GetName] form_safehaven_initiative (decision) complete exited"
+	#		}
+	#	}
+	#}
+	form_dakota_republic = { #marshall formable
+		allowed = {
+			original_tag = MRR
+		}
+		available = {
+			STR = {
+				all_core_land_owned_by_prev_sphere = yes
+			}
+		}
+		visible = {
+			has_completed_focus = mrr_resolute_and_ready
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 200
+		}
+		complete_effect = {
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] form_dakota_republic (decision) complete entered"
+			}
+			add_ideas = mrr_dakota_republic_idea
+			set_cosmetic_tag = MRR_dakota
+			set_country_flag = owb_achievement_formed_dakota
+			if = {
+				limit = { has_global_flag = debug_logs }
+				log = "[GetDateText]: [Root.GetName] form_dakota_republic (decision) complete exited"
+			}
+		}
+	}
+	
+### Plaguelands Formables
+
+	form_upsilon_initiative = { # Site Y Formable
+		icon = GFX_decision_generic_research
+		allowed = {
+			original_tag = SIY
+		}
+		available = {
+			custom_trigger_tooltip = {
+				TLR = { all_core_land_owned_by_prev_sphere = yes }
+				BRE = { all_core_land_owned_by_prev_sphere = yes }
+				SAN = { all_core_land_owned_by_prev_sphere = yes }
+				RAD = { all_core_land_owned_by_prev_sphere = yes }
+				FRN = { all_core_land_owned_by_prev_sphere = yes }
+				DAM = { all_core_land_owned_by_prev_sphere = yes }
+				DED = { all_core_land_owned_by_prev_sphere = yes }
+				REH = { all_core_land_owned_by_prev_sphere = yes }
+				OST = { all_core_land_owned_by_prev_sphere = yes }
+
+				tooltip = SIY_plaguelands_conquered_tt
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = woo_no_formable
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 200
+		}
+		complete_effect = {
+			set_cosmetic_tag = SIY_initiative
+			custom_effect_tooltip = SIY_core_plaguelands_tt
+			set_province_name = {
+				id = 3734
+				name = VICTORY_POINTS_3734_SIY
+			}
+			set_province_name = {
+				id = 5124
+				name = VICTORY_POINTS_5124_SIY
+			}
+			set_province_name = {
+				id = 3042
+				name = VICTORY_POINTS_3042_SIY
+			}
+			swap_ideas = {
+				remove_idea = SIY_illfated_expedition
+				add_idea = SIY_successful_expedition
+			}
+			if = {
+				limit = {
+					has_idea = SIY_plagued_lands
+				}
+				remove_ideas = SIY_plagued_lands
+			}
+			add_research_slot = 1
+
+			hidden_effect = {
+				every_subject_country = {
+					ROOT = {
+						annex_country = {
+							target = PREV
+							transfer_troops = yes
+						}
+					}
+				}
+
+				TLR = { ROOT = { core_owned_states_of_prev = yes } }
+				BRE = { ROOT = { core_owned_states_of_prev = yes } }
+				SAN = { ROOT = { core_owned_states_of_prev = yes } }
+				RAD = { ROOT = { core_owned_states_of_prev = yes } }
+				FRN = { ROOT = { core_owned_states_of_prev = yes } }
+				DAM = { ROOT = { core_owned_states_of_prev = yes } }
+				DED = { ROOT = { core_owned_states_of_prev = yes } }
+				REH = { ROOT = { core_owned_states_of_prev = yes } }
+				OST = { ROOT = { core_owned_states_of_prev = yes } }
+
+				set_politics = {
+					ruling_party = intellectuals
+					elections_allowed = no
+				}
+				set_popularities = {
+					intellectuals = 100
+					people = 0
+					elites = 0
+					ruler = 0
+				}
+			}
+		}
+	}
+	BRE_formables = { # Parish Formables
+		allowed = {
+			original_tag = BRE
+		}
+		visible = {
+			OR= {
+				has_country_leader = {
+					character = BRE_highsentry_luna
+					ruling_only = yes
+				}
+				has_country_leader = {
+					character = BRE_joiner_ec
+					ruling_only = yes
+				}
+			}
+		}
+		available = {
+			custom_trigger_tooltip = {
+				SIY = { all_core_land_owned_by_prev_sphere = yes }
+				BRE = { all_core_land_owned_by_prev_sphere = yes }
+				SAN = { all_core_land_owned_by_prev_sphere = yes }
+				RAD = { all_core_land_owned_by_prev_sphere = yes }
+				FRN = { all_core_land_owned_by_prev_sphere = yes }
+				DAM = { all_core_land_owned_by_prev_sphere = yes }
+				DED = { all_core_land_owned_by_prev_sphere = yes }
+				REH = { all_core_land_owned_by_prev_sphere = yes }
+				OST = { all_core_land_owned_by_prev_sphere = yes }
+
+				tooltip = BRE_plaguelands_conquered_tt
+			}
+			hidden_trigger = {
+				NOT = {
+					has_country_flag = woo_no_formable
+				}
+			}
+		}
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 200
+		}
+		complete_effect = {
+			if = {
+				limit = {
+					has_country_leader = {
+						character = BRE_highsentry_luna
+						ruling_only = yes
+					}
+				}
+				set_cosmetic_tag = BRE_crusade
+			}
+			else_if = {
+				limit = {
+					has_country_leader = {
+						character = BRE_joiner_ec
+						ruling_only = yes
+					}
+				}
+				set_cosmetic_tag = BRE_synthesium
+			}
+		}
+	}
+	## Rockies Formables
+	FOR_formable = { # Foragers into Rocky Mountain Republic
+		allowed = {
+			original_tag = FOR
+		}
+		available = {
+				CIP = { all_core_land_owned_by_prev_sphere = yes }
+				INR = { all_core_land_owned_by_prev_sphere = yes }
+				CLJ = { all_core_land_owned_by_prev_sphere = yes }
+
+		}
+		priority = 100
+		fire_only_once = yes
+		ai_will_do = {
+			base = 300
+		}
+		complete_effect = {
+			set_cosmetic_tag = FOR_republic
+			swap_ideas = {
+				remove_idea = FOR_salvaging_experience
+				add_idea = FOR_salvaging_experience_2
+			}
+		}
+	}
+
+	CLJ_formable = { # Claim Jumpers into Bombay Canyon
+		allowed = {
+			original_tag = CLJ
+		}
+		available = {
+				CIP = { all_core_land_owned_by_prev_sphere = yes }
+				INR = { all_core_land_owned_by_prev_sphere = yes }
+				FOR = { all_core_land_owned_by_prev_sphere = yes }
+
+		}
+		priority = 100
+		fire_only_once = yes
+		ai_will_do = {
+			base = 300
+		}
+		complete_effect = {
+			set_cosmetic_tag = CLJ_bombay
+			swap_ideas = {
+				remove_idea = CLJ_explosive_lust
+				add_idea = CLJ_explosive_lust_2
 			}
 		}
 	}
@@ -1904,155 +2244,6 @@ formable_nations = {
 			if = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] form_pleasant_country (decision) complete exited"
-			}
-		}
-	}
-
-### Plaguelands Formables
-
-	form_upsilon_initiative = { # Site Y Formable
-		icon = GFX_decision_generic_research
-		allowed = {
-			original_tag = SIY
-		}
-		available = {
-			custom_trigger_tooltip = {
-				TLR = { all_core_land_owned_by_prev_sphere = yes }
-				BRE = { all_core_land_owned_by_prev_sphere = yes }
-				SAN = { all_core_land_owned_by_prev_sphere = yes }
-				RAD = { all_core_land_owned_by_prev_sphere = yes }
-				FRN = { all_core_land_owned_by_prev_sphere = yes }
-				DAM = { all_core_land_owned_by_prev_sphere = yes }
-				DED = { all_core_land_owned_by_prev_sphere = yes }
-				REH = { all_core_land_owned_by_prev_sphere = yes }
-				OQZ = { all_core_land_owned_by_prev_sphere = yes }
-				OST = { all_core_land_owned_by_prev_sphere = yes }
-
-				tooltip = SIY_plaguelands_conquered_tt
-			}
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 200
-		}
-		complete_effect = {
-			set_cosmetic_tag = SIY_initiative
-			custom_effect_tooltip = SIY_core_plaguelands_tt
-			set_province_name = {
-				id = 3724
-				name = "Site X"
-			}
-			set_province_name = {
-				id = 4422
-				name = "Site Y"
-			}
-			set_province_name = {
-				id = 3042
-				name = "Site Z"
-			}
-			swap_ideas = {
-				remove_idea = SIY_illfated_expedition
-				add_idea = SIY_successful_expedition
-			}
-			if = {
-				limit = {
-					has_idea = SIY_plagued_lands
-				}
-				remove_ideas = SIY_plagued_lands
-			}
-			add_research_slot = 1
-
-			hidden_effect = {
-				every_subject_country = {
-					ROOT = {
-						annex_country = {
-							target = PREV
-							transfer_troops = yes
-						}
-					}
-				}
-
-				TLR = { ROOT = { core_owned_states_of_prev = yes } }
-				BRE = { ROOT = { core_owned_states_of_prev = yes } }
-				SAN = { ROOT = { core_owned_states_of_prev = yes } }
-				RAD = { ROOT = { core_owned_states_of_prev = yes } }
-				FRN = { ROOT = { core_owned_states_of_prev = yes } }
-				DAM = { ROOT = { core_owned_states_of_prev = yes } }
-				DED = { ROOT = { core_owned_states_of_prev = yes } }
-				REH = { ROOT = { core_owned_states_of_prev = yes } }
-				OQZ = { ROOT = { core_owned_states_of_prev = yes } }
-				OST = { ROOT = { core_owned_states_of_prev = yes } }
-
-				set_politics = {
-					ruling_party = intellectuals
-					elections_allowed = no
-				}
-				set_popularities = {
-					intellectuals = 100
-					people = 0
-					elites = 0
-					ruler = 0
-				}
-			}
-		}
-	}
-
-	BRE_formables = { # Parish Formables
-		allowed = {
-			original_tag = BRE
-		}
-		visible = {
-			OR= {
-				has_country_leader = {
-					character = BRE_highsentry_luna
-					ruling_only = yes
-				}
-				has_country_leader = {
-					character = BRE_joiner_ec
-					ruling_only = yes
-				}
-			}
-		}
-		available = {
-			custom_trigger_tooltip = {
-				SIY = { all_core_land_owned_by_prev_sphere = yes }
-				BRE = { all_core_land_owned_by_prev_sphere = yes }
-				SAN = { all_core_land_owned_by_prev_sphere = yes }
-				RAD = { all_core_land_owned_by_prev_sphere = yes }
-				FRN = { all_core_land_owned_by_prev_sphere = yes }
-				DAM = { all_core_land_owned_by_prev_sphere = yes }
-				DED = { all_core_land_owned_by_prev_sphere = yes }
-				REH = { all_core_land_owned_by_prev_sphere = yes }
-				OQZ = { all_core_land_owned_by_prev_sphere = yes }
-				OST = { all_core_land_owned_by_prev_sphere = yes }
-
-				tooltip = BRE_plaguelands_conquered_tt
-			}
-		}
-		fire_only_once = yes
-
-		ai_will_do = {
-			base = 200
-		}
-		complete_effect = {
-			if = {
-				limit = {
-					has_country_leader = {
-						character = BRE_highsentry_luna
-						ruling_only = yes
-					}
-				}
-				set_cosmetic_tag = BRE_crusade
-			}
-			else_if = {
-				limit = {
-					has_country_leader = {
-					character = BRE_joiner_ec
-					ruling_only = yes
-					}
-				}
-				set_cosmetic_tag = BRE_synthesium
 			}
 		}
 	}

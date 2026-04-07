@@ -536,7 +536,6 @@ vlt_magistrates_cat = {
 		}
 	}
 }
-
 vlt_spatial_anomalies_cat = {
 	bone_dancer_anomaly_timer = {
 		allowed = {

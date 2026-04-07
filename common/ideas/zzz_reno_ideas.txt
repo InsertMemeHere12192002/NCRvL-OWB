@@ -25,6 +25,23 @@ ideas = {
 				stability_factor = -0.1
 			}
 		}
+				NEW_tourist_economy = {
+			picture = cmc_bright_lights
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				caps_flat_income_modifier = 7
+				caps_node_trade_modifier = -0.4
+				local_resources_factor = -0.1
+				consumer_goods_expected_value = 0.1
+				custom_modifier_tooltip = NEW_tourist_economy_tt
+			}
+		}
 		casinofunding = {
 			picture = generic_production_bonus
 			allowed = {
@@ -581,6 +598,7 @@ ideas = {
 			}
 
 			removal_cost = -1
+
 			modifier = {
 				modifier_army_sub_unit_tank_attack_factor = 0.1
 				modifier_army_sub_unit_tank_defence_factor = 0.1
@@ -646,6 +664,7 @@ ideas = {
 			}
 
 			removal_cost = -1
+			
 			modifier = {
 				special_forces_cap = 0.1
 				special_forces_min = 80

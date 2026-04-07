@@ -56,17 +56,9 @@ set_technology = {
 	unit_training_tech_3 = 1
 	terror_tactics = 1
 	raider_reckless_aggression = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.3
@@ -89,7 +81,6 @@ set_popularities = {
 	intellectuals = 0
 	ruler = 100
 }
-
 add_manpower = 1500
 
 add_ideas = {
@@ -99,7 +90,6 @@ add_ideas = {
 	okc_savages
 	undesirables_law_raider
 }
-
 
 recruit_character = PAR_dyed_blood
 # recruit_character = PAR_the_rock

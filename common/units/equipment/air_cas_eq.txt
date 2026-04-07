@@ -48,6 +48,9 @@ equipments = {
 
 		build_cost_ic = 120
 		resources = {
+			metal = 2
+			water = 2
+			energy = 1
 		}
 
 		manpower = 2
@@ -101,6 +104,9 @@ equipments = {
 
 		build_cost_ic = 130
 		resources = {
+			metal = 2
+			water = 2
+			energy = 1
 		}
 
 		manpower = 2
@@ -155,6 +161,9 @@ equipments = {
 
 		build_cost_ic = 130
 		resources = {
+			metal = 2
+			water = 2
+			energy = 1
 		}
 
 		manpower = 2
@@ -208,6 +217,9 @@ equipments = {
 
 		build_cost_ic = 130
 		resources = {
+			metal = 2
+			water = 1
+			energy = 1
 		}
 
 		manpower = 2
@@ -703,6 +715,7 @@ equipments = {
 		manpower = 2
 		reliability = 0.85
 		visual_level = 6
+		
 	}
 
 	# VB Gunship

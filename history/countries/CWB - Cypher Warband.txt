@@ -32,6 +32,14 @@ set_technology = {
 	support_weaponry = 1
 	terror_tactics = 1
 	spec_ops_equipment_tech_1 = 1
+		creatures_tech_level_tribal = 1
+	creatures_tech_level_settler = 1
+	#creatures_tech_level_scientific = 1
+	beast_tech_access_tech = 1
+	gecko_tech_access_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.45

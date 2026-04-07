@@ -69,7 +69,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = VLT_FIRST_CITIZEN_GORDON_DESC
+			#desc = VLT_FIRST_CITIZEN_GORDON_DESC
 			ideology = benevolent_dictatorship
 			expire = "3000.01.01.01"
 			traits = {
@@ -86,15 +86,11 @@ characters = {
 			visible = {
 				always = no
 			}
-			#available = {
-			#	always = no
-			#}
 			cost = -1
 			can_be_fired = no
 			traits = {
 				vlt_gordon_gecko_representative
 			}
-
 			ai_will_do = {
 				factor = 10
 			}
@@ -112,7 +108,7 @@ characters = {
 
 		}
 		country_leader = {
-			desc = VLT_THE_BRAIN_DESC
+			#desc = VLT_THE_BRAIN_DESC
 			ideology = benevolent_dictatorship
 			expire = "3000.01.01.01"
 		}
@@ -177,6 +173,7 @@ characters = {
 			defense_skill = 4
 			planning_skill = 4
 			logistics_skill = 2
+			legacy_id = 10045
 		}
 		advisor = {
 			slot = economic_advisor
@@ -222,7 +219,6 @@ characters = {
 	}
 	VLT_chad_rannor = {
 		name = VLT_CHAD_RANNOR_NAME
-		#desc = "alternative desc that should never show but was added for testing"
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_VLT_chad
@@ -401,54 +397,6 @@ characters = {
 			}
 		}
 	}
-	VLT_dweller_cyril = {
-		name = VLT_dweller_cyril
-		portraits = {
-			army = {
-				small = GFX_idea_VLT_advisor_1
-			}
-		}
-		advisor = {
-			slot = cultural_advisor
-			idea_token = VLT_dweller_cyril_cultural_advisor
-			allowed = {
-				original_tag = VLT
-			}
-			visible = {
-			}
-			traits = {
-				model_citizen
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 10
-			}
-		}
-	}
-	VLT_dweller_donald = {
-		name = VLT_dweller_donald
-		portraits = {
-			army = {
-				small = GFX_idea_VLT_advisor_2
-			}
-		}
-		advisor = {
-			slot = cultural_advisor
-			idea_token = VLT_dweller_donald_cultural_advisor
-			allowed = {
-				original_tag = VLT
-			}
-			visible = {
-			}
-			traits = {
-				vault_tec_medical_training
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 10
-			}
-		}
-	}
 	VLT_dweller_adam = {
 		name = VLT_dweller_adam
 		portraits = {
@@ -497,6 +445,54 @@ characters = {
 			}
 		}
 	}
+		VLT_dweller_cyril = {
+		name = VLT_dweller_cyril
+		portraits = {
+			army = {
+				small = GFX_idea_VLT_advisor_1
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = VLT_dweller_cyril_cultural_advisor
+			allowed = {
+				original_tag = VLT
+			}
+			visible = {
+			}
+			traits = {
+				model_citizen
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	VLT_dweller_donald = {
+		name = VLT_dweller_donald
+		portraits = {
+			army = {
+				small = GFX_idea_VLT_advisor_2
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = VLT_dweller_donald_cultural_advisor
+			allowed = {
+				original_tag = VLT
+			}
+			visible = {
+			}
+			traits = {
+				vault_tec_medical_training
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
 	VLT_dweller_nigel = {
 		name = VLT_dweller_nigel
 		portraits = {
@@ -513,7 +509,7 @@ characters = {
 			visible = {
 			}
 			traits = {
-				beloved_personality
+				well_loved_denizen
 			}
 			cost = 100
 			ai_will_do = {
@@ -531,7 +527,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = VLT_dweller_elena_research_advisor
+			idea_token = VLT_dweller_elena_theorist
 			allowed = {
 				original_tag = VLT
 			}

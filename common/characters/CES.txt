@@ -542,8 +542,8 @@ characters = {
 			}
 		}
 	}
-	CES_preist_david = {
-		name = CES_preist_david_name
+	CES_priest_david = {
+		name = CES_priest_david_name
 		portraits = {
 			army = {
 				#large = gfx_sprite_type_name_or_file_path
@@ -556,7 +556,7 @@ characters = {
 		}
 		advisor = {
 			slot = high_command
-			idea_token = CES_preist_david_high_command
+			idea_token = CES_priest_david_high_command
 			ledger = army
 			allowed = {
 				original_tag = CES
@@ -579,8 +579,8 @@ characters = {
 			}
 		}
 	}
-	CES_preist_selene = {
-		name = CES_preist_selene_name
+	CES_priest_selene = {
+		name = CES_priest_selene_name
 		portraits = {
 			army = {
 				#large = gfx_sprite_type_name_or_file_path
@@ -593,7 +593,7 @@ characters = {
 		}
 		advisor = {
 			slot = cultural_advisor
-			idea_token = CES_preist_selene_cultural_advisor
+			idea_token = CES_priest_selene_cultural_advisor
 			allowed = {
 				original_tag = CES
 			}

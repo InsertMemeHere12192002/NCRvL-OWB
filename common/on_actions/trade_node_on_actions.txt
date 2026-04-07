@@ -880,6 +880,33 @@ on_actions = {
 				update_node_base_value = yes
 
 			}
+						#### Ouroboros
+			90 = {
+				### Add to global Array
+				add_to_array = {
+					array = global.nodes_states
+					value = THIS.id
+				}
+				### Economic Development
+				set_variable = {
+					economic_development_level = 1 }
+				###Register Main Node
+				set_state_flag = main_node_@CONTROLLER
+				### Initalize Member State
+				initialize_nodes_member_states = yes
+				### Add to controller
+				CONTROLLER = {
+					add_to_array = {
+						array = state_controlled_nodes
+						value = PREV.id
+					}
+				}
+				### Progress Updates
+				update_node_progress = yes
+				initialize_node_level = yes
+				update_node_base_value = yes
+
+			}
 			#### Twin Mothers
 			554 = {
 				### Add to global Array
@@ -890,6 +917,33 @@ on_actions = {
 				### Economic Development
 				set_variable = {
 					economic_development_level = 1 }
+				###Register Main Node
+				set_state_flag = main_node_@CONTROLLER
+				### Initalize Member State
+				initialize_nodes_member_states = yes
+				### Add to controller
+				CONTROLLER = {
+					add_to_array = {
+						array = state_controlled_nodes
+						value = PREV.id
+					}
+				}
+				### Progress Updates
+				update_node_progress = yes
+				initialize_node_level = yes
+				update_node_base_value = yes
+
+			}
+						#### Big Top
+			572 = {
+				### Add to global Array
+				add_to_array = {
+					array = global.nodes_states
+					value = THIS.id
+				}
+				### Economic Development
+				set_variable = {
+					economic_development_level = 0 }
 				###Register Main Node
 				set_state_flag = main_node_@CONTROLLER
 				### Initalize Member State

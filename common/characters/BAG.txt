@@ -1,0 +1,1050 @@
+characters = {
+	#Leaders
+	BAG_GODDARD = {
+		name = "BAG_GODDARD_NAME"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAG/portrait_bag_leader.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/ministers/bag_goddard_research_advisor.dds"
+			}
+		}
+		country_leader = {
+			desc = "BAG_GODDARD_DESC"
+			ideology = technocracy
+			expire = "3000.1.1.1"
+			traits = {
+				col_electromechanic
+			}
+			id = -1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = BAG_GODDARD_RESEARCH_ADVISOR
+			available = {
+				is_country_leader = no
+			}
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				scientific_devotion
+			}
+			#research_bonus = {
+			#	electronics = 0.1
+			#}
+		}
+	}
+	BAG_COLERIDGE = {
+		name = "BAG_COLERIDGE_NAME"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAG/portrait_coleridge.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/ministers/bag_coleridge_army_chief.dds"
+				large = "gfx/leaders/BAG/portrait_coleridge.dds"
+			}
+		}
+		country_leader = {
+			desc = "BAG_COLERIDGE_DESC"
+			ideology = benevolent_dictatorship
+			expire = "3000.1.1.1"
+			traits = {
+				military_background
+				army_commando_1
+			}
+			id = -1
+		}
+		field_marshal = {
+			skill = 5
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 4
+			traits = {
+				charismatic_trait
+				strong_trait
+				pain_train_trait
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BAG_COLERIDGE_CHIEF_OF_ARMY
+			available = {
+				is_country_leader = no
+			}
+			can_be_fired = no
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				general_wait_and_see
+			}
+		}
+	}
+	BAG_AGNES = {
+		name = "BAG_AGNES_NAME"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/ministers/bag_agnes_cultural_advisor.dds"
+				large = gfx/leaders/BAG/portrait_agnes.dds
+			}
+		}
+		country_leader = {
+			desc = "BAG_AGNES_DESC"
+			ideology = town_hall_democracy
+			expire = "3000.1.1.1"
+			traits = {
+				col_tandi_of_colorado
+			}
+			id = -1
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BAG_AGNES_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			available = {
+				# has_completed_focus = bag_our_administrator_on_field
+				is_country_leader = no
+			}
+			traits = {
+				col_tandi_of_colorado
+			}
+		}
+	}
+	BAG_LARSEN = {
+		name = "BAG_LARSEN_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_BAG_larsen"
+				large = "GFX_Portrait_BAG_larsen"
+			}
+			army = {
+				small = "GFX_idea_BAG_larsen"
+				large = "GFX_Portrait_BAG_larsen"
+			}
+		}
+		country_leader = {
+			desc = "BAG_LARSEN_DESC"
+			ideology = militarist_technocracy
+			expire = "3000.1.1.1"
+			traits = {
+				military_background
+			}
+			id = -1
+		}
+		corps_commander = {
+			desc = "BAG_LARSEN_ARMY_DESC"
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				strong_trait
+				flexible_trait
+				chem_reliant
+			}
+		}
+	}
+	#CHIEF OF ARMY
+	BAG_PEOPLES = {
+		name = "BAG_PEOPLES_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_14_small"
+				large = "GFX_Portrait_NCR_Generic_14"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_14_small"
+				large = "GFX_Portrait_NCR_Generic_14"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BAG_PEOPLES_CHIEF_OF_ARMY
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_californian_menace
+			}
+		}
+	}
+	BAG_PRASAD = {
+		name = "BAG_PRASAD_NAME"
+		portraits = {
+			civilian = {
+				small = GFX_idea_DES_General_6
+			}
+			army = {
+				small = GFX_idea_DES_General_6
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = BAG_PRASAD_CHIEF_OF_ARMY
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_ranger_of_team_november
+			}
+		}
+	}
+	#CHIEF OF NAVY
+	BAG_PHILIP = {
+		name = "BAG_PHILIP_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_advisor18"
+			}
+			army = {
+				small = "GFX_idea_generic_advisor18"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = BAG_PHILIP_NAVY_CHIEF
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				settler_navy_buff
+			}
+			research_bonus = {
+				naval_tech_category = 0.1
+			}
+		}
+	}
+	#CHIEF OF AIRFORCE
+	BAG_LUSH = {
+		name = "BAG_LUSH_NAME"
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor41
+			}
+			army = {
+				small = GFX_idea_generic_advisor41
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = BAG_LUSH_AIR_CHIEF
+			cost = 100
+			ledger = air
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				settler_air_buff
+				air_chief_safety_2
+			}
+		}
+	}
+	#RESEARCH ADVISORS
+	BAG_MARIANO = {
+		name = "BAG_MARIANO_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_15_small"
+				large = "GFX_Portrait_NCR_Generic_15"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_15_small"
+				large = "GFX_Portrait_NCR_Generic_15"
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = BAG_MARIANO_RESEARCH_ADVISOR
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				military_theorist
+			}
+			research_bonus = {
+				cat_grand_army = 0.1
+			}
+		}
+	}
+	BAG_BAJAR = {
+		name = "BAG_BAJAR_NAME"
+		portraits = {
+			civilian = {
+				small = GFX_idea_generic_advisor43
+			}
+			army = {
+				small = GFX_idea_generic_advisor43
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = BAG_BAJAR_RESEARCH_ADVISOR
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				military_theorist
+			}
+			research_bonus = {
+				cat_automated_warfare = 0.1
+			}
+		}
+	}
+	#MILITARY HIGH COMMAND
+	BAG_DIANNE = {
+		name = "BAG_DIANNE_NAME"
+		portraits = {
+			civilian = {
+				small = GFX_idea_NCR_moore
+			}
+			army = {
+				small = GFX_idea_NCR_moore
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_DIANNE_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				military_quartermaster
+			}
+		}
+	}
+	BAG_GALETSKI = {
+		name = "BAG_GALETSKI_NAME"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/ministers/bag_galetski_high_command.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/ministers/bag_galetski_high_command.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_GALETSKI_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			available = {
+				# has_completed_focus = bag_fund_galetskis
+			}
+			traits = {
+				bag_crazy_horse
+			}
+			on_add = {
+				ROOT = {
+					country_event = nf_baggers_flavour.1
+				}
+			}
+		}
+	}
+	BAG_STILLER = {
+		name = "BAG_STILLER_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_13_small"
+				large = "GFX_Portrait_NCR_Generic_13"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_13_small"
+				large = "GFX_Portrait_NCR_Generic_13"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_STILLER_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_officer_of_military_police
+			}
+		}
+	}
+	BAG_DAVIDSON = {
+		name = "BAG_DAVIDSON_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_10_small"
+				large = "GFX_Portrait_NCR_Generic_10"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_10_small"
+				large = "GFX_Portrait_NCR_Generic_10"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_DAVIDSON_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				MOT_Moore_trait
+			}
+		}
+	}
+	BAG_PIERCE = {
+		name = "BAG_PIERCE_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_16_small"
+				large = "GFX_Portrait_NCR_Generic_16"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_16_small"
+				large = "GFX_Portrait_NCR_Generic_16"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_PIERCE_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				MOT_Dhatri_trait
+			}
+		}
+	}
+	BAG_BRIGGS = {
+		name = "BAG_BRIGGS_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_19_small"
+				large = "GFX_Portrait_NCR_Generic_19"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_19_small"
+				large = "GFX_Portrait_NCR_Generic_19"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_BRIGGS_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_heavy_support
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 3
+			planning_skill = 4
+			logistics_skill = 2
+			traits = {
+				intelligent_trait
+				charismatic_trait
+				gun_nut_trait
+			}
+		}
+	}
+	BAG_LEANDER = {
+		name = "BAG_LEANDER_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_12_small"
+				large = "GFX_Portrait_NCR_Generic_12"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_12_small"
+				large = "GFX_Portrait_NCR_Generic_12"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_LEANDER_HIGH_COMMAND
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			visible = {
+				has_country_flag = bag_leander_flag
+			}
+			traits = {
+				bag_soldier_chaplain
+			}
+		}
+	}
+	BAG_SOR = {
+		name = "BAG_SOR_NAME"
+		portraits = {
+			civilian = {
+				small = GFX_idea_robot_generic_5
+			}
+			army = {
+				small = GFX_idea_robot_generic_5
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = BAG_SOR_HIGH_COMMAND
+			cost = 100
+			ledger = army
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				scientific_devotion
+			}
+			#research_bonus = {
+			#	electronics = 0.1
+			#}
+		}
+	}
+	#ECONOMIC ADVISORS
+	BAG_WAHL = {
+		name = "BAG_WAHL_NAME"
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/ministers/bag_wahl_economic_advisor.dds"
+			}
+			civilian = {
+				small = "gfx/interface/ideas/ministers/bag_wahl_economic_advisor.dds"
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BAG_WAHL_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			available = {
+				# has_completed_focus = bag_welder_deal
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+	BAG_MOREHOUSE = {
+		name = "BAG_MOREHOUSE_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_mexico_advisor19
+			}
+			civilian = {
+				small = GFX_idea_mexico_advisor19
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BAG_MOREHOUSE_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				settler_military_industrial
+			}
+		}
+	}
+	BAG_BAROSS = {
+		name = "BAG_BAROSS_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_generic_political_advisor_europe_5
+			}
+			civilian = {
+				small = GFX_idea_generic_political_advisor_europe_5
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BAG_BAROSS_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				OR = {
+					original_tag = BAG
+					original_tag = RDS
+				}
+			}
+			available = {
+				if = {
+					limit = { tag = BAG }
+					# has_completed_focus = bag_barons_pick
+				}
+			}
+			traits = {
+				logistics_tsar
+			}
+		}
+	}
+	BAG_DONALD = {
+		name = "BAG_DONALD_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_generic_advisor24
+			}
+			civilian = {
+				small = GFX_idea_generic_advisor24
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BAG_DONALD_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_mr_efficient
+			}
+		}
+	}
+	BAG_JIM = {
+		name = "BAG_JIM_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_RDS_Daniel
+			}
+			civilian = {
+				small = GFX_idea_RDS_Daniel
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BAG_JIM_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			available = {
+				# has_completed_focus = bag_welder_deal
+			}
+			traits = {
+				bag_longtime_mechanic
+			}
+		}
+	}
+	BAG_NINA = {
+		name = "BAG_NINA_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_LON_leader
+			}
+			civilian = {
+				small = GFX_idea_LON_leader
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = BAG_NINA_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_people_pleaser
+			}
+		}
+	}
+	#CULTURAL ADVISORS
+	BAG_MORRIS = {
+		name = "BAG_MORRIS_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_generic_advisor2
+			}
+			civilian = {
+				small = GFX_idea_generic_advisor2
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BAG_MORRIS_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			available = {
+				#has_completed_focus = bag_followers_help?
+			}
+			traits = {
+				follower_advisor
+			}
+		}
+	}
+	BAG_ROCHE = {
+		name = "BAG_ROCHE_NAME"
+		portraits = {
+			army = {
+				small = GFX_idea_mutant_generic13
+			}
+			civilian = {
+				small = GFX_idea_mutant_generic13
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BAG_ROCHE_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			traits = {
+				bag_terrible_doctor
+				bag_friendly_trader
+			}
+		}
+	}
+	BAG_FLEMING = {
+		name = "BAG_FLEMING_NAME"
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_11_small"
+				large = "GFX_Portrait_NCR_Generic_11"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_11_small"
+				large = "GFX_Portrait_NCR_Generic_11"
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = BAG_FLEMING_CULTURAL_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = BAG
+			}
+			available = {
+				# has_completed_focus = bag_local_recruitment_drive
+			}
+			traits = {
+				bag_army_recruiter
+			}
+		}
+	}
+	BAG_JAMES = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name = "BAG_JAMES_NAME"
+			portraits = {
+				army = {
+					small = GFX_idea_generic_advisor15
+				}
+				civilian = {
+					small = GFX_idea_generic_advisor15
+				}
+			}
+			advisor = {
+				slot = cultural_advisor
+				idea_token = BAG_JAMES_CULTURAL_ADVISOR
+				cost = 100
+				allowed = {
+					original_tag = BAG
+				}
+				research_bonus = {
+					electronics = 0.08
+				}
+				traits = {
+					bag_real_geek
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			name = "BAG_JAMES_NOLAR_NAME"
+			portraits = {
+				army = {
+					small = GFX_idea_generic_advisor15
+				}
+				civilian = {
+					small = GFX_idea_generic_advisor15
+				}
+			}
+			advisor = {
+				slot = cultural_advisor
+				idea_token = BAG_JAMES_CULTURAL_ADVISOR_NOLAR
+				cost = 100
+				allowed = {
+					original_tag = BAG
+				}
+				research_bonus = {
+					electronics = 0.08
+				}
+				traits = {
+					bag_real_geek_nolar
+				}
+			}
+		}
+	}
+	BAG_PAUL = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name = "BAG_PAUL_NAME"
+			portraits = {
+				army = {
+					small = GFX_idea_generic_advisor46
+				}
+				civilian = {
+					small = GFX_idea_generic_advisor46
+				}
+			}
+			advisor = {
+				slot = cultural_advisor
+				idea_token = BAG_PAUL_CULTURAL_ADVISOR
+				cost = 100
+				allowed = {
+					original_tag = BAG
+				}
+				traits = {
+					bag_chaotic_mind
+				}
+				research_bonus = {
+					building_tech = 0.08
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			name = "BAG_PAUL_NOLAR_NAME"
+			portraits = {
+				army = {
+					small = GFX_idea_generic_advisor46
+				}
+				civilian = {
+					small = GFX_idea_generic_advisor46
+				}
+			}
+			advisor = {
+				slot = cultural_advisor
+				idea_token = BAG_PAUL_CULTURAL_ADVISOR_NOLAR
+				cost = 100
+				allowed = {
+					original_tag = BAG
+				}
+				traits = {
+					bag_chaotic_mind_nolar
+				}
+				research_bonus = {
+					building_tech = 0.08
+				}
+			}
+		}
+	}
+	BAG_MENO = {
+		instance = {
+			allowed = {
+				has_dlc = "La Resistance"
+			}
+			name = "BAG_MENO_NAME"
+			portraits = {
+				army = {
+					small = GFX_idea_SHI_researcher
+				}
+				civilian = {
+					small = GFX_idea_SHI_researcher
+				}
+			}
+			advisor = {
+				slot = cultural_advisor
+				idea_token = BAG_MENO_CULTURAL_ADVISOR
+				cost = 100
+				allowed = {
+					original_tag = BAG
+				}
+				traits = {
+					bag_dad_complex
+				}
+			}
+		}
+		instance = {
+			allowed = {
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			name = "BAG_MENO_NOLAR_NAME"
+			portraits = {
+				army = {
+					small = GFX_idea_SHI_researcher
+				}
+				civilian = {
+					small = GFX_idea_SHI_researcher
+				}
+			}
+			advisor = {
+				slot = cultural_advisor
+				idea_token = BAG_MENO_CULTURAL_ADVISOR_NOLAR
+				cost = 100
+				allowed = {
+					original_tag = BAG
+				}
+				traits = {
+					bag_dad_complex_nolar
+				}
+			}
+		}
+	}
+	#Dummy Characters
+	#>>UNIT LEADERS
+	BAG_ELI = {
+		#Empty, given Unit Leader role in Focus
+		name = "BAG_ELI_NAME"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/NCR/portrait_gamma.dds"
+			}
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/NCR_gamma.dds"
+				large = "gfx/leaders/NCR/portrait_gamma.dds"
+			}
+		}
+	}
+	#>>HIGH COMMAND
+	BAG_MATHIAS = {
+		name = "BAG_MATHIAS_NAME"		#Empty, takes over Davidson's place if he moved abroad
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_17_small"
+				large = "GFX_Portrait_NCR_Generic_17"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_17_small"
+				large = "GFX_Portrait_NCR_Generic_17"
+			}
+		}
+	}
+	BAG_WELDING = {
+		name = "BAG_WELDING_NAME"		#Empty, takes over Pierce's place if he moved abroad
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_16_small"
+				large = "GFX_Portrait_NCR_Generic_16"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_16_small"
+				large = "GFX_Portrait_NCR_Generic_16"
+			}
+		}
+	}
+	#>>UNIT LEADERS
+	BAG_MARTINEZ = {
+		name = "BAG_MARTINEZ_NAME"		#Empty, can be be promoted via focus
+		portraits = {
+			#TEMP, until woman portrait is added
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_20_small"
+				large = "GFX_Portrait_NCR_Generic_20"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_20_small"
+				large = "GFX_Portrait_NCR_Generic_20"
+			}
+		}
+	}
+	BAG_SMITH = {
+		name = "BAG_SMITH_NAME"		#Empty, can be be promoted via focus
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_16_small"
+				large = "GFX_Portrait_NCR_Generic_16"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_16_small"
+				large = "GFX_Portrait_NCR_Generic_16"
+			}
+		}
+	}
+	BAG_ZADANOWITZ = {
+		name = "BAG_ZADANOWITZ_NAME"		#Empty, can be be promoted via focus
+		portraits = {
+			#TEMP? I don't know what kind of portrait would work for 'Queen'
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_20_small"
+				large = "GFX_Portrait_NCR_Generic_20"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_20_small"
+				large = "GFX_Portrait_NCR_Generic_20"
+			}
+		}
+	}
+	BAG_ALEXANDER = {
+		name = "BAG_ALEXANDER_NAME"		#Empty, can be be promoted via focus
+		portraits = {
+			civilian = {
+				small = "GFX_Portrait_NCR_Generic_10_small"
+				large = "GFX_Portrait_NCR_Generic_10"
+			}
+			army = {
+				small = "GFX_Portrait_NCR_Generic_10_small"
+				large = "GFX_Portrait_NCR_Generic_10"
+			}
+		}
+	}
+	#Empty, used for Dialogue
+	BAG_ZAX = {
+		name = "BAG_ZAX_NAME"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/BAG/portrait_zax.dds"
+			}
+			army = {
+				large = "gfx/leaders/BAG/portrait_zax.dds"
+			}
+		}
+		corps_commander = {
+			visible = {
+				has_country_flag = bag_zax_commander_allowed
+			}
+			#Not utilized
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 4
+			logistics_skill = 4
+			traits = {
+				enduring_trait
+				intelligent_trait
+				robotics_expert_trait
+			}
+		}
+	}
+}

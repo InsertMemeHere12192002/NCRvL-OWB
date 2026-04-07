@@ -224,4 +224,5 @@ equipment_modules = {
 
 		critical_parts = { damaged_point_defense }
 	}
+}
 # Error log parses an error if there is an ending } here, just ignore the cwtools error

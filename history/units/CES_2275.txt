@@ -24,6 +24,7 @@ division_template = {
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 	}
+
 	support = {
 		medical_chem_company = { x = 0 y = 0 }
 		dog_company = { x = 1 y = 0 }
@@ -40,6 +41,7 @@ division_template = {
 		infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
 	}
+
 	support = {
 		recon_company = { x = 0 y = 0 }
 		demolitions_support = { x = 1 y = 0 }
@@ -47,7 +49,7 @@ division_template = {
 }
 
 division_template = {
-	name = "Praetorian Guard"
+	name = "Prime Legionaries"
 	regiments = {
 		spec_ops = { x = 0 y = 0 }
 		spec_ops = { x = 0 y = 1 }
@@ -55,6 +57,7 @@ division_template = {
 		spec_ops = { x = 1 y = 1 }
 		spec_ops = { x = 2 y = 0 }
 	}
+
 	support = {
 		medical_chem_company = { x = 0 y = 0 }
 		recon_company = { x = 1 y = 0 }
@@ -142,9 +145,9 @@ instant_effect = {
 units = {
 
 	division = {
-		name = "1st Praetorian Guard"
+		name = "Prime Legionaries"
 		location = 8951
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -156,9 +159,9 @@ units = {
 	}
 
 	division = {
-		name = "2nd Praetorian Guard"
+		name = "2nd Prime Legionaries"
 		location = 8959
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -170,9 +173,9 @@ units = {
 	}
 
 	division = {
-		name = "3rd Praetorian Guard"
+		name = "3rd Prime Legionaries"
 		location = 8956
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -184,9 +187,9 @@ units = {
 	}
 
 	division = {
-		name = "4th Praetorian Guard"
+		name = "4th Prime Legionaries"
 		location = 8957
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -198,9 +201,9 @@ units = {
 	}
 
 	division = {
-		name = "5th Praetorian Guard"
+		name = "5th Prime Legionaries"
 		location = 8954
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -212,9 +215,9 @@ units = {
 	}
 
 	division = {
-		name = "6th Praetorian Guard"
+		name = "6th Prime Legionaries"
 		location = 8960
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -226,9 +229,9 @@ units = {
 	}
 
 	division = {
-		name = "7th Praetorian Guard"
+		name = "7th Prime Legionaries"
 		location = 8958
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -240,9 +243,9 @@ units = {
 	}
 
 	division = {
-		name = "8th Praetorian Guard"
+		name = "8th Prime Legionaries"
 		location = 8952
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {
@@ -254,9 +257,9 @@ units = {
 	}
 
 	division = {
-		name = "9th Praetorian Guard"
+		name = "9th Prime Legionaries"
 		location = 1623
-		division_template = "Praetorian Guard"
+		division_template = "Prime Legionaries"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 		force_equipment_variants = {

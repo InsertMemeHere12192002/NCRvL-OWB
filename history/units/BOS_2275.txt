@@ -32,6 +32,33 @@ division_template = {
 	}
 }
 
+division_template = {
+	name = "Brotherhood Paladins"
+	is_locked = yes
+	division_names_group = BOS_DIV_1
+	priority = 2
+	template_counter = 0
+	regiments = {
+		Paladin_unit = { x = 0 y = 0 }
+		Paladin_unit = { x = 0 y = 1 }
+		Paladin_unit = { x = 1 y = 0 }
+		Paladin_unit = { x = 1 y = 1 }
+		Paladin_demo_unit = { x = 2 y = 0 }
+		Paladin_demo_unit = { x = 2 y = 1 }
+		Paladin_fireteam_unit = { x = 0 y = 2 }
+		Paladin_fireteam_unit = { x = 1 y = 2 }
+	}
+
+	support = {
+		knight_support_unit = { x = 0 y = 0 }
+		knight_support_unit = { x = 1 y = 0 }
+		scribe_support_unit = { x = 2 y = 0 }
+		scribe_support_unit = { x = 3 y = 0 }
+	}
+}
+
+
+
 units = {
 	division = {
 		name = "Steel Legion"

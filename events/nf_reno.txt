@@ -180,6 +180,7 @@ country_event = {
 
 		add_equipment_to_stockpile = { type = ballistic_equipment_2 amount = 600 producer = USA }
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.75
 			uses = 1
 			category = ballistic_weaponry_tech_category
@@ -841,7 +842,7 @@ news_event = {
 }
 
 
-### Tourist season result
+### Tourist season result: Main Driver of the 'Tourism' Mechanic
 news_event = {
 	id = nf_reno.50
 	title = nf_reno.50.t
@@ -849,12 +850,18 @@ news_event = {
 	picture = GFX_event_radio_new_vegas
 
 	is_triggered_only = yes
+
 	immediate = {
-		set_variable = { pop_income_tourist = 0 }
-		set_temp_variable = { pop_income_tourist_temp = tourists }
-		divide_temp_variable = { pop_income_tourist_temp = 500 }
-		set_variable = { pop_income_tourist = pop_income_tourist_temp }
+		# Upon event trigger, these actions calculate the income generated from tourists.
+		# The process involves resetting the current income, storing the number of tourists in a temporary variable,
+		# then dividing this number to calculate the income, and finally updating the income variable with this new value.
+
+		set_variable = { pop_income_tourist = 0 }  # Resets the tourist income variable
+		set_temp_variable = { pop_income_tourist_temp = tourists }  # Temporarily stores the current number of tourists
+		divide_temp_variable = { pop_income_tourist_temp = 500 }  # Divides the temp variable for calculating income
+		set_variable = { pop_income_tourist = pop_income_tourist_temp }  # Updates the tourist income variable with new value
 	}
+	
 
 	option = {
 		name = nf_reno.50.a
@@ -948,6 +955,7 @@ news_event = {
 		}
 	}
 }
+
 
 ### Vegas Or Reno launched an enormous advertising campaign
 news_event = {
@@ -1062,7 +1070,7 @@ country_event = {
 		}
 		hidden_effect = {
 			retire_character = NEW_mama_van_graff
-			retire_character = NEW_mason_salvatore
+			#retire_character = NEW_mason_salvatore
 			retire_character = NEW_christopher_wright
 			retire_character = NEW_mr_bishop
 			every_country = {

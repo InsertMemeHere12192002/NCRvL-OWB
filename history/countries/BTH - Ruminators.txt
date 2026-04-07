@@ -47,6 +47,9 @@ set_technology = {
 	spec_ops_equipment_tech_1 = 1
 	bike_tech_1 = 1
 	basic_supply_transport_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.35

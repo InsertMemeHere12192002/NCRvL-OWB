@@ -6,6 +6,27 @@ ideas = {
         ######
         # MOS
         ######
+         sun_victors_against_pallus = {
+            picture = pantheon_lon
+            removal_cost = -1
+            allowed = {
+                always = no
+            }
+            allowed_civil_war = {
+                always = yes
+            }
+            modifier = {
+                mobilization_speed = 0.075
+                war_support_factor = 0.05
+            }
+            equipment_bonus = {
+                chariot_equipment = {
+                    build_cost_ic = -0.15
+                    soft_attack = 0.15
+                    instant = yes
+                }
+            }
+        }
         hoover_dam_battle_preperations = {
             picture = propaganda_drinking
             allowed = {
@@ -223,23 +244,7 @@ ideas = {
             removal_cost = -1
         }
         
-        sun_victors_against_pallus = {
-            picture = pantheon_lon
-            removal_cost = -1
-            allowed = {
-                always = no
-            }
-            allowed_civil_war = {
-                always = yes
-            }
-            equipment_bonus = {
-                chariot_equipment = {
-                    build_cost_ic = -0.15
-                    soft_attack = 0.15
-                    instant = yes
-                }
-            }
-        }
+       
         MOS_one_of_two = {
             picture = KHA_a_new_silk_road
             removal_cost = -1
@@ -284,7 +289,7 @@ ideas = {
                 always = no
             }
             cancel = {
-                is_puppet = no
+				is_subject = no
             }
             allowed_civil_war = {
                 always = yes
@@ -618,7 +623,6 @@ ideas = {
                 spotting_chance = 0.08
             }
         }
-
         ######
         # MLE
         ######
@@ -922,7 +926,6 @@ ideas = {
 				naval_coordination = 0.1
             }
 		}
-       
         ######
         # VIC
         ######
@@ -1054,6 +1057,16 @@ ideas = {
                 consumer_goods_expected_value = -0.04
                 economy_cost_factor = -0.15
                 min_export = 0.02
+            }
+        }
+        tvr_chico_exchange = {
+            picture = chi_hyper_inflation5
+            allowed_civil_war = { always = yes }
+            removal_cost = -1
+            modifier = {
+                country_resource_energy = 8
+                country_resource_water = 4
+                country_resource_advanced = 4
             }
         }
         ######
@@ -1809,7 +1822,7 @@ ideas = {
         # SC)
         ######
         bizaare_market = {
-            picture = circus_tent
+            picture = generic_buffalo_trade
             removal_cost = -1
             allowed = {
                 always = no
@@ -2007,6 +2020,117 @@ ideas = {
                 consumer_goods_expected_value = -0.06
             }
         }
+    EAS_control_of_the_i80_hakis = {
+        picture = lns_lubbock_expedition
+        removal_cost = -1
+        allowed = {
+            always = no
+        }
+        modifier = {
+            monthly_population = 0.10
+            political_power_factor = 0.10
+            consumer_goods_expected_value = -0.06
+            army_core_defence_factor = 0.10
+        }
+    }
+    
+        EAS_hakis_barroom_style = {
+			picture = recruitment_drunk
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				army_morale_factor = 0.15
+			}
+			equipment_bonus = {
+				melee_equipment_1 = {
+					soft_attack = 0.10
+					breakthrough = 0.10
+					ap_attack = 0.10
+					instant = yes
+				}
+				melee_equipment_2 = {
+					soft_attack = 0.10
+					breakthrough = 0.10
+					ap_attack = 0.10
+					instant = yes
+				}
+				melee_equipment_3 = {
+					soft_attack = 0.10
+					breakthrough = 0.10
+					ap_attack = 0.10
+					instant = yes
+				}
+				melee_equipment_4 = {
+					soft_attack = 0.10
+					breakthrough = 0.10
+					ap_attack = 0.10
+					instant = yes
+				}
+			}
+		}
+		EAS_hakis_vc_friends = {
+			picture = vault_city
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				research_speed_factor = 0.15
+				caps_income_modifier = 0.15
+			}
+		}
+		EAS_hakis_renos_tab = {
+			picture = VEG_Repaid_Debt
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				caps_flat_income_modifier = 167
+			}
+		}
+		EAS_hakis_deathclaw_family = {
+			picture = TIM_patch_family_life
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				modifier_army_sub_unit_deathclaw_special_forces_attack_factor = 0.1
+				modifier_army_sub_unit_deathclaw_special_forces_defence_factor = 0.1
+			}
+		}
+		EAS_hakis_deathclaw_workers = {
+			picture = TIM_patch_family_life
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			modifier = {
+				industry_free_repair_factor = 0.5
+				production_speed_buildings_factor = 0.3
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		EAS_hakis_defending_life = {
+			picture = recruitment_cowboy
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			targeted_modifier = {
+				tag = CYC
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+			targeted_modifier = {
+				tag = PAL
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+		}
         EAS_the_quarries_of_eastport = {
             picture = generic_pickaxe
             removal_cost = -1
@@ -2706,6 +2830,7 @@ ideas = {
                 production_factory_efficiency_gain_factor = -0.2
             }
         }
+
         MET_cybernatics_son = {
             picture = propaganda_cyborg
             removal_cost = -1
@@ -2816,6 +2941,24 @@ ideas = {
                 caps_flat_income_modifier = 3
             }
         }
+        		BAT_princely_force = {
+			picture = generic_helm_army
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_leader_start_level = 1
+				navy_leader_start_level = 1
+				army_strength_factor = 0.1
+				army_morale_factor = 0.15
+				send_volunteer_size = 4
+				caps_flat_income_modifier = 3
+			}
+		}
         PAP_batfords_betrayal = {
             picture = generic_toy_soldier
             removal_cost = -1
@@ -3400,6 +3543,30 @@ ideas = {
                 }
             }
         }
+        		bgr_robobrain_factory_2 = {
+			name = bgr_robobrain_factory
+			picture = generic_protectron_silver
+			removal_cost = -1
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				custom_modifier_tooltip = bgr_robobrain_factory_tt
+			}
+			equipment_bonus = {
+				support_robot_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				combat_robot_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
         historian_presence = {
             picture = generic_corn
             removal_cost = -1
@@ -3411,10 +3578,10 @@ ideas = {
             }
             modifier = {
                 country_resource_water = 2
+                consumer_goods_expected_value = 0.05
             }
             research_bonus = {
                 agriculture_tech = 0.1
-                consumer_goods_expected_value = 0.05
             }
         }
 

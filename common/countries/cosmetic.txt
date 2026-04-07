@@ -372,7 +372,7 @@ ATE_ARM = {
 	color = rgb { 0 80 71 }
 	color_ui = rgb { 0 80 71 }
 }
-CIR_ARM = {
+ITZ_ARM = {
 	color = rgb { 0 80 71 }
 	color_ui = rgb { 0 80 71 }
 }
@@ -395,6 +395,10 @@ FFI_ARM = {
 PET_ARM = {
 	color = rgb { 0 80 71 }
 	color_ui = rgb { 0 80 71 }
+}
+PET_petronet_tag = {
+	color = rgb { 235 165 30 }
+	color_ui = rgb { 235 165 30 }
 }
 
 TDT_CIR = {
@@ -481,7 +485,7 @@ RRG_ATE = {
 	color = rgb { 33 20 33	}
 	color_ui = rgb { 33 20 33  }
 }
-CIR_ATE = {
+ITZ_ATE = {
 	color = rgb { 33 20 33	}
 	color_ui = rgb { 33 20 33  }
 }
@@ -542,6 +546,14 @@ ARM_RRG = {
 	color_ui = rgb { 210 230 230 }
 }
 
+NCR_MOJ = {
+	color = rgb { 120 140 110 }
+	color_ui = rgb { 120 140 110 }
+}
+CES_MOJ = {
+	color = rgb { 120 140 110 }
+	color_ui = rgb { 120 140 110 }
+}
 MRA_MOJ = {
 	color = rgb { 120 140 110 }
 	color_ui = rgb { 120 140 110 }
@@ -641,7 +653,7 @@ CYC_ENC = {
 	color_ui = rgb { 0 40 100 }
 }
 
-VLT_ENC = {
+EAS_ENC = {
 	color = rgb { 0 40 100 }
 	color_ui = rgb { 0 40 100 }
 }
@@ -691,9 +703,39 @@ MOJ_NCR = {
 	color_ui = rgb { 186 134 102 }
 }
 
+MTC_RED_RIVER = {
+	color = rgb { 255 7 44 }
+	color_ui = rgb { 255 7 44 }
+}
+
+MTC_MANITOBA = {
+	color = rgb { 255 89 94 }
+	color_ui = rgb { 255 89 94 }
+}
+
+MTC_CONGRESS_OF_PEOPLES = {
+	color = rgb { 137 237 210 }
+	color_ui = rgb { 137 237 210 }
+}
+
 MRA_NCR = {
 	color = rgb { 186 134 102}
 	color_ui = rgb { 186 134 102 }
+}
+
+MJW_GOVERNERSHIP = {
+	color = rgb { 13 53 128 }
+	color_ui = rgb { 13 53 128 }
+}
+
+MJW_GOVERNERSHIP_MANITOBA = {
+	color = rgb { 255 89 94 }
+	color_ui = rgb { 255 89 94 }
+}
+
+MJW_GOVERNERSHIP_RED = {
+	color = rgb { 255 7 44 }
+	color_ui = rgb { 255 7 448 }
 }
 
 PHR_NCR = {
@@ -916,7 +958,7 @@ PHA_HEA = {
 
 ### Troll Warren
 
-MIR_TRL = {
+MLT_TRL = {
 	color = rgb { 87 124 73 }
 	color_ui = rgb { 87 124 73 }
 }
@@ -1011,7 +1053,7 @@ VLT_maier_2 = {
 	color = rgb { 123 127 242 }
 	color_ui = rgb { 123 127 242 }
 }
-VLT_gordon_ncr = {
+VLT_NCR = {
 	color = rgb { 123 127 242 }
 	color_ui = rgb { 123 127 242 }
 }
@@ -1027,7 +1069,7 @@ FIE_VEG = {
 	color_ui = rgb { 58 165 86 }
 }
 
-KHA_VEG = {
+GKH_KHA = {
 	color = rgb { 58 165 86 }
 	color_ui = rgb { 58 165 86 }
 }
@@ -1037,12 +1079,12 @@ MOJ_VEG = {
 	color_ui = rgb { 58 165 86 }
 }
 
-FIE_VEG = {
+MOS_VEG = {
 	color = rgb { 58 165 86 }
 	color_ui = rgb { 58 165 86 }
 }
 
-DAM_VEG = {
+MRA_VEG = {
 	color = rgb { 58 165 86 }
 	color_ui = rgb { 58 165 86 }
 }
@@ -1216,8 +1258,8 @@ GDH_costa = {
 }
 
 CES_malpais_legion = {
-	color = rgb { 200 40 85 }
-	color_ui = rgb { 200 40 85 }
+	color = rgb { 255 204 102}
+	color_ui = rgb { 255 204 102 }
 }
 CES_lucius_legion = {
 	color = rgb { 134 19 19 }
@@ -1388,7 +1430,7 @@ SKY_old = {
 	color_ui = rgb { 0 106 164 }
 }
 
-EUR_ncrterritories = {
+EUR_NCR = {
 	color = rgb { 186 134 102}
 	color_ui = rgb { 186 134 102 }
 }
@@ -1463,13 +1505,13 @@ VIP_reborn = {
 
 ### NCR
 NCR_boneyard = {
-	color = rgb { 206 18 4 }
-	color_ui = rgb { 206 18 4 }
+	color = rgb { 230 200 200 }
+	color_ui = rgb { 230 200 200 }
 }
 
 NCR_redding = {
-	color = rgb { 126 16 16 }
-	color_ui = rgb { 126 16 16 }
+	color = rgb { 255 215 0 }
+	color_ui = rgb { 255 215 0 }
 }
 ARR_NCR = {
     color = rgb { 153 76 0 }
@@ -1516,13 +1558,33 @@ NCR_Pacific_States = {
 	color_ui = rgb { 213 39 39 }
 }
 
-
+#Roach King
 RCK_PURGE = {
     color = rgb { 10 10 10 }
     color_ui = rgb { 10 10 10 }
 }
+
+RCK_roach_swarm_two = {
+    color = rgb { 10 10 10 }
+    color_ui = rgb { 10 10 10 }
+}
+
+RCK_phase_2 = {
+    color = rgb { 32 7 54 }
+    color_ui = rgb { 32 7 54 }
+}
+
+RCK_phase_3 = {
+    color = rgb { 101 29 163 }
+    color_ui = rgb { 101 29 163 }
+}
+
+RCK_crook = {
+    color = rgb { 101 29 163 }
+    color_ui = rgb { 101 29 163 }
+}
 # Commonwealth Occupation Zones
-COM_WHC = {
+COM_MDM = {
     color = rgb { 30 91 170 }
     color_ui = rgb { 30 91 170 }
 }
@@ -1538,6 +1600,10 @@ CPL_DUC = {
     color = rgb { 27 24 77 }
     color_ui = rgb { 27 24 77 }
 }
+CPL_WAR = {
+    color = rgb { 27 24 77 }
+    color_ui = rgb { 27 24 77 }
+}
 CPL_OBU = {
     color = rgb { 179 25 66 }
     color_ui = rgb { 179 25 66 }
@@ -1549,24 +1615,23 @@ CPL_ANC = {
 
 #### BINARY COUNTS
 REH_reaver_movement = {
-	color = rgb { 36 13 13 }
-	color_ui = rgb { 36 13 13 }
+	color = rgb { 204 102 0 }
+	color_ui = rgb { 204 102 0 }
 }
 
 #### Canada
 
-BKB_credit_union = {
-	color = rgb { 232 220 57 }
-	color_ui = rgb { 232 220 57 }
+HVR_manifest_americana = {
+	color = rgb { 255 191 0 }
+	color_ui = rgb { 255 191 0 }
 }
-
 
 ### MONTANA CHAPTER
 MNC_sororibus_ferro = {
 	color = rgb { 112 11 189 }
 	color_ui = rgb { 112 11 189 }
 }
-mnc_newbrotherhood = {
+MNC_newbrotherhood = {
 	color = rgb { 0 106 164 }
 	color_ui = rgb { 0 106 164 }
 }
@@ -1702,6 +1767,47 @@ LOI_ussr = {
 	color = rgb { 125 13 24 }
 	color_ui = rgb { 125 13 24 }
 }
+LOI_redmond = {
+	color = rgb { 123 5 35 }
+	color_ui = rgb { 123 5 35 }
+}
+LOI_grand_prairie_processing = {
+	color = rgb { 124 133 168  }
+	color_ui = rgb { 124 133 168  }
+}
+LOI_canadian_ministry = {
+	color = rgb  { 161 131 131 } #223 100 60 my original planned color, makes it look like hungary lol
+	color_ui = rgb { 161 131 131 }
+}
+WHC = {
+	color = rgb { 84 108 83  }
+	color_ui = rgb { 84 108 83  }
+}
+LOI_breakaway_ekaterina = {
+	color = rgb { 125 13 24 }
+	color_ui = rgb { 125 13 24 }
+}
+LOI_breakaway_commune = {
+	color = rgb { 247 137 137   }
+	color_ui = rgb { 247 137 137   }
+}
+LOI_labor_league_normal = {
+	color = rgb { 154 144 216  }
+	color_ui = rgb { 154 144 216   }
+}
+LOI_labor_league_allies = {
+	color = rgb { 154 144 216  }
+	color_ui = rgb { 154 144 216   }
+}
+LOI_unifier = {
+	color = rgb { 202 3 59 }
+	color_ui = rgb { 202 3 59 }
+}
+#2025 April Fools
+LOI_april = {
+	color = rgb { 230 0 0 }
+	color_ui = rgb { 255 51 51 }
+}
 ### Langenburg
 dln_langenburg_king = {
 	color = rgb { 112 41 99 }
@@ -1712,7 +1818,14 @@ dln_empire_britannia = {
 	color_ui = rgb { 102 0 0 }
 }
 
+#Gateway Gang
+
 PLT_hope_takeover = {
+	color = rgb { 34 187 255 }
+	color_ui = rgb { 34 187 255 }
+}
+
+PLT_TPA = {
 	color = rgb { 34 187 255 }
 	color_ui = rgb { 34 187 255 }
 }
@@ -1720,6 +1833,16 @@ PLT_hope_takeover = {
 PLT_csis = {
 	color = rgb { 0 225 0 }
 	color_ui = rgb { 0 225 0 }
+}
+
+PLT_pleasant_electorate = {
+	color = rgb { 128 0 32 }
+	color_ui = rgb { 128 0 32 }
+}
+
+TPA_destiny = {
+	color = rgb { 189 37 32 }
+	color_ui = rgb { 189 37 32 }
 }
 RDS_People_Republic_Miners = {
 	color = rgb { 255 51 51}
@@ -1731,7 +1854,7 @@ RDS_Cali_People_Republic = {
 	color_ui = rgb { 255 51 51 }
 }
 RDS_Redding_State = {
-	color = rgb { 172 82 34 }
+	color = rgb { 232 203 18 }
 	color_ui = rgb { 172 82 34 }
 }
 RDS_Sheriff_Republic = {
@@ -1778,6 +1901,10 @@ MTR_great_circuit = {
 SNO_nomads_of_the_far_north = {
 	color = rgb { 0 176 135 }
 	color_ui = rgb { 0 176 135 }
+}
+MTC_RED_RIVER = {
+	color = rgb { 191 0 0 }
+	color_ui = rgb { 191 0 9 }
 }
 #ROS
 ROS_republic = {
@@ -1829,10 +1956,6 @@ TPA_destiny = {
 	color = rgb { 161 0 0 }
 	color_ui = rgb { 161 0 0 }
 }
-#TPA_destiny = {
-#	color = rgb { 189 37 32 }
-#	color_ui = rgb { 189 37 32 }
-#}
 UOA_Crusher = {
 	color = rgb { 183 92 0 }
 	color_ui = rgb { 183 92 0 }
@@ -1867,20 +1990,28 @@ STN_canada_goverment = {
 	color_ui = rgb { 181 0 0 }
 }
 STN_order_of_saint_george = {
-	color = rgb { 0 42 255 }
-	color_ui = rgb { 0 42 255 }
+	color = rgb { 112 41 99 }
+	color_ui = rgb { 112 41 99 }
+}
+STN_SBR = {
+	color = rgb { 112 41 99 }
+	color_ui = rgb { 112 41 99 }
 }
 STN_order = {
-	color = rgb { 0 22 255 }
-	color_ui = rgb { 0 22 255 }
+	color = rgb { 112 41 99 }
+	color_ui = rgb { 112 41 99 }
+}
+STN_dominion = {
+	color = rgb { 102 0 0 }
+	color_ui = rgb { 102 0 0 }
 }
 STN_here_be_rattlesnakes = {
 	color = rgb { 221 0 0 }
 	color_ui = rgb { 221 0 27 }
 }
 STN_freedoms_army = {
-	color = rgb { 15 84 186 }
-	color_ui = rgb { 15 84 186 }
+	color = rgb { 87 61 132 }
+	color_ui = rgb { 87 61 132 }
 }
 STN_president_of_canada = {
 	color = rgb { 5 74 176 }
@@ -1906,6 +2037,22 @@ FRG_faewild = {
 	color = rgb { 7 147 0 }
 	color_ui = rgb { 7 147 0 }
 }
+## BLC and kids; VLS, YMP, PNT, BCR
+
+PNT_painted_nation = {
+	color = rgb { 136 17 28 }
+	color_ui = rgb { 136 17 28 }
+}
+
+YMP_PNT = {
+	color = rgb { 91 172 204 }
+	color_ui = rgb { 91 172 204 }
+}
+
+BLC_BAG_BOULDER = {
+	color = rgb { 143 125 36 }
+	color_ui = rgb { 143 125 36 }
+}
 CPH_people_path = {
 	color = rgb { 69 105 56 }
 	color_ui = rgb { 69 105 56 }
@@ -1914,10 +2061,39 @@ CPH_elites_path = {
 	color = rgb { 30 91 170 }
 	color_ui = rgb { 30 91 170 }
 }
+PLT_cpf = {
+	color = rgb { 153 0 60 }
+	color_ui = rgb { 153 0 60 }
+}
 ### safehaven
 VSH_safehaven_initiative = {
 	color = rgb { 0 78 102 }
 	color_ui = rgb { 0 78 102 }
+}
+VSH_safehaven_mercenary = {
+	color = rgb { 255 196 0 }
+	color_ui = rgb { 255 196 0 }
+}
+VSH_wardens_sh = {
+	color = rgb { 255 229 191 }
+	color_ui = rgb { 255 229 191 }
+}
+VSH_good_wardens = {
+	color = rgb { 255 229 191 }
+	color_ui = rgb { 255 229 191 }
+}
+VSH_northern_prairie_wardens = {
+	color = rgb { 21 153 178 }
+	color_ui = rgb { 21 153 178 }
+}
+VSH_peoples_northern_haven = {
+	color = rgb { 255 154 0 }
+	color_ui = rgb { 255 154 0 }
+}
+###PAS
+PAS_mountain_wardens = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
 }
 ### RMM
 RMM_dawfin = {
@@ -1931,11 +2107,6 @@ RMM_CRA = {
 RMM_CRA_final = {
 	color = rgb { 162 112 13 }
 	color_ui = rgb { 162 112 13 }
-}
-
-PLT_cpf = {
-	color = rgb { 153 0 60 }
-	color_ui = rgb { 153 0 60 }
 }
 
 ### Plaguelands Formables
@@ -1986,10 +2157,37 @@ EDN_guardians_of_eden = {
 	color = rgb { 255 0 0 }
 	color_ui = rgb { 255 0 0 }
 }
+###Blue Rose New Mexico Formables
+EDA_ECH = {
+	color = rgb { 120 164 240 }
+	color_ui = rgb { 120 164 240 }
+}
+EDA_PUE = {
+	color = rgb { 240 180 100 }
+	color_ui = rgb { 240 180 100 }
+}
+EDA_NMX = {
+	color = rgb { 190 190 100 }
+	color_ui = rgb { 190 190 100 }
+}
+EDA_BOS = {
+	color = rgb { 166 160 2 }
+	color_ui = rgb { 166 160 2 }
+}
+
+ANO_plant = {
+	color = rgb { 19 149 10 }
+	color_ui = rgb { 19 149 10 }
+}
+
 #BRA
 BRA_empire = {
 	color = rgb { 29 64 110 }
 	color_ui = rgb { 29 64 110 }
+}
+BRA_commonwealth = {
+	color = rgb { 238 36 36 }
+	color_ui = rgb { 238 36 36 }
 }
 BRA_Hounds = {
 	color = rgb { 238 36 36 }
@@ -1999,7 +2197,20 @@ BRA_Canada = {
 	color = rgb { 110 8 8 }
 	color_ui = rgb { 110 8 8 }
 }
-#STC
+DLN_grand_duchy_of_langenburg = {
+	color = rgb { 0 42 255 }
+	color_ui = rgb { 0 42 255 }
+}
+
+MTR_station = {
+	color = rgb { 181 74 47 }
+	color_ui = rgb { 181 74 47 }
+}
+HVR_liberty = {
+	color = rgb { 181 74 47 }
+	color_ui = rgb { 181 74 47 }
+}
+
 STC_cadets = {
 	color = rgb { 64 0 0 }
 	color_ui = rgb { 64 0 0 }
@@ -2008,9 +2219,19 @@ STC_novemberists = {
 	color = rgb { 119 0 0 }
 	color_ui = rgb { 119 0 0 }
 }
+
+VTS_project_begun = {
+	color = rgb { 0 50 255 }
+	color_ui = rgb { 0 50 255 }
+}
+
 VTS_nathaniels_watchmen = {
-	color = rgb {102 204 0 }
+	color = rgb { 102 204 0 }
 	color_ui = rgb { 102 204 0 }
+}
+VTS_dakota_ward = {
+	color = rgb { 255 102 102 }
+	color_ui = rgb { 255 102 102 }
 }
 MRR_dakota = {
 	color = rgb { 54 196 247 }
@@ -2020,7 +2241,10 @@ JCK_montana = {
 	color = rgb { 0 10 124 }
 	color_ui = rgb { 0 10 124 }
 }
-
+COM_COMMONWEALTH = {
+	color = rgb { 30 91 170 }
+	color_ui = rgb { 30 91 170 }
+}
 ANO_plant = {
 	color = rgb { 19 149 10 }
 	color_ui = rgb { 19 149 10 }
@@ -2037,7 +2261,224 @@ COM_PIO = {
 	color = rgb { 51 101 55 }
 	color_ui = rgb { 51 101 55 }
 }
+MET_masters = {
+	color = rgb { 219 226 233 }
+	color_ui = rgb { 219 226 233 }
+}
 FBH = {
 	color = rgb { 227 154 66 }
 	color_ui = rgb { 227 154 66}
+}
+HST_academics = {
+	color = rgb { 125 25 125 }
+	color_ui = rgb { 125 25 125 }
+}
+BGR_union = {
+	color = rgb { 144 77 100 }
+	color_ui = rgb { 144 77 100 }
+}
+BAT_princely = {
+	color = rgb { 19 116 165 }
+	color_ui = rgb { 19 116 165 }
+}
+RRR_domain_expansion = {
+	color = rgb { 182 56 56 }
+	color_ui = rgb { 182 56 56 }
+}
+URA_county = {
+	color = rgb { 128 180 37 }
+	color_ui = rgb { 128 180 37 }
+}
+URA_horde = {
+	color = rgb { 142 225 0 }
+	color_ui = rgb { 142 225 0 }
+}
+RMT_birthright = {
+	color = rgb { 167 152 139 }
+	color_ui = rgb { 167 152 139 }
+}
+
+#LaO cosmetic
+TPM_lafayette_lawmen = {
+	color = rgb { 38 109 180 }
+	color_ui = rgb { 38 109 180 }
+}
+TPM_louisiana_lawmen = {
+	color = rgb { 212 180 39 }
+	color_ui = rgb { 247 202 6 }
+}
+TPM_southwest_lawmen = {
+	color = rgb { 100 115 100 }
+	color_ui = rgb { 100 115 100 }
+}
+TPM_11th_patrol = {
+	color = rgb { 205 100 85 }
+	color_ui = rgb { 205 100 85 }
+}
+GAM_gator_gang = {
+	color = rgb { 28 57 32 }
+	color_ui = rgb { 28 57 32 }
+}
+#5.0
+PER_hunting_coast = {
+	color = rgb { 255 49 49 }
+	color_ui = rgb { 255 49 49 }
+}
+
+SLE_utopian_dream = {
+	color = rgb { 200 240 250 }
+	color_ui = rgb { 200 240 250 }
+}
+SLE_dreamers = {
+	color = rgb { 180 230 180 }
+	color_ui = rgb { 180 230 180 }
+}
+SLE_nightmares = {
+	color = rgb { 20 20 50 }
+	color_ui = rgb { 20 20 50 }
+}
+
+EXE_vault_tec = {
+	color = rgb { 78 180 255 }
+	color_ui = rgb { 78 180 255 }
+}
+
+FOR_republic = {
+	color = rgb { 60 60 220 }
+	color_ui = rgb { 60 60 220 }
+}
+CLJ_bombay = {
+	color = rgb { 230 172 0 }
+	color_ui = rgb { 230 172 0 }
+}
+INR_tribe = {
+	color = rgb { 113 121 126 }
+	color_ui = rgb { 113 121 126 }
+}
+SCO_clanholds = {
+	color = rgb { 250 166 82 }
+	color_ui = rgb { 250 166 82 }
+}
+
+###MCA_COM Interaction Canada Dynamic Country
+MCA_COM_Canada = {
+	color = rgb { 238 36 36 }
+	color_ui = rgb { 238 36 36 }
+}
+
+#Bismarck Formable
+BIS_bismarck_union = {
+    color = rgb { 218 165 32 }
+    color_ui = rgb { 218 165 32 }
+}
+
+#Zhang Gang
+WHD_HXL = {
+	color = rgb { 200 40 40 }
+	color_ui = rgb {200 40 40 }
+}
+### woo bullshit
+woo_texlahoma = {
+	color = rgb { 250 158 27 }
+	color_ui = rgb { 250 158 27 }
+}
+woo_texlahoma_v2 = {
+	color = rgb { 250 158 27 }
+	color_ui = rgb { 250 158 27 }
+}
+woo_houston = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_lincoln = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_texas = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_colorado = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_newmex = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_blc = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_mexico = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_west = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_nebraska = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_louisiana = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_sonora = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_california = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_deseret = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_wyoming = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_dakotas = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_montanna = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_yucatan = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_idaho = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_northwest = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_columbia = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_manitoba = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_smiling = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+woo_alberta = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
+}
+EAS_hakis_republic = {
+	color = rgb { 74 43 3}
+	color_ui = rgb { 74 43 3 }
 }

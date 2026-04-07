@@ -36,6 +36,8 @@ sub_units = {
 		supply_consumption = 0.1
 		recon = 1.5
 		can_be_parachuted = yes
+		
+		# Support nerfs to combat abilities
 		defense = 1
 		breakthrough = 1
 		soft_attack = 1
@@ -122,17 +124,19 @@ sub_units = {
 		manpower = 15 # 500
 		training_time = 150
 		suppression = 1
-		defense = 1
-		breakthrough = 1
-		soft_attack = 1
-		hard_attack = 1
-		air_attack = 1
 
 		#Misc Abilities
 		weight = 0.3
 		supply_consumption = 0.3
 		recon = 2
 		can_be_parachuted = yes
+
+		# Support nerfs to combat abilities
+		defense = 1
+		breakthrough = 1
+		soft_attack = 1
+		hard_attack = 1
+		air_attack = 1
 
 		essential = {
 			infantry_equipment
@@ -471,6 +475,7 @@ sub_units = {
 			defence = 0.05
 			movement = 0.05
 		}
+		
 		same_support_type = maintenance_company # blocks adding other maintenance types to template
 	}
 

@@ -3,7 +3,6 @@ oob = "NCR_2275"
 set_naval_oob = "NCR_2275_naval"
 
 set_technology = {
-	basic_supply_transport_tech = 1
 	infantry_tech_level_tribal = 1
 	infantry_tech_level_settler = 1
 	special_forces_tech_level_tribal = 1
@@ -24,66 +23,55 @@ set_technology = {
 	tools_tech_level_settler = 1
 	habitation_tech_level_tribal = 1
 	habitation_tech_level_settler = 1
-	#habitation_tech_level_scientific = 1
 	exploitation_tech_level_tribal = 1
 	exploitation_tech_level_settler = 1
-	#exploitation_tech_level_scientific = 1
 	electronics_tech_level_tribal = 1
 	electronics_tech_level_settler = 1
-	grand_army = 1
-	grand_battle_plan_owb = 1
+
 	standard_weaponry_tech = 1
-	melee_weaponry_tech_1 = 1
 	ballistic_weaponry_tech_1 = 1
+	melee_weaponry_tech_1 = 1
+	spec_ops_equipment_tech_1 = 1
+
 	support_weaponry = 1
 	fireteam_weaponry_tech = 1
+	anti_tank_equipment_tech_1 = 1
 	recon_company_tech_1 = 1
 	maintenance_company_tech_1 = 1
+	
 	bike_tech_1 = 1
-	tribal_civilization = 1
-	settled_civilization = 1
-	anti_tank_equipment_tech_1 = 1
-	spec_ops_equipment_tech_1 = 1
-	spec_ops_equipment_tech_2 = 1
+	basic_supply_transport_tech = 1
+
+	grand_army = 1
+
 	tool_engineering = 1
 	basic_industry_tech = 1
 	pre_construction_industry_tech = 1
 	pre_agriculture_industry_tech = 1
 	agriculture_industry_tech_1 = 1
 	agriculture_industry_tech_2 = 1
+	tribal_civilization = 1
+	settled_civilization = 1
+	spec_ops_equipment_tech_2 = 1
 	stripped_pa_tech = 1
 	weight_support_frame_pa_tech_1 = 1
 	weight_support_frame_pa_tech_2 = 1
+	grand_battle_plan_owb = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	medium_navy_hull_tech_1 = 1
+	#multi_deck_construction_tech = 1
+	heavy_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+	naval_module_tech = 1
+	naval_armour_tech_1 = 1
+	#naval_pd_module_tech_1  = 1
+	#naval_communications_module_tech_1 = 1
+	#naval_weapons_module_tech = 1
 }
 
-
-
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		nautics_tech_2 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		heavy_navy_hull_tech_2 = 1
-		naval_hard_point_tech = 1
-		naval_support_module_tech = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_armour_tech_1 = 1
-		naval_pd_module_tech_1 = 1
-		naval_communications_module_tech_1 = 1
-		naval_weapons_module_tech = 1
-	}
-}
-
-set_stability = 0.5
+set_stability = 0.5	# Keep in mind that the NCR Dollars modifier raises this
 set_war_support = 0.25
 set_research_slots = 6
 set_convoys = 40
@@ -208,7 +196,7 @@ recruit_character = RDS_Redding_Council
 recruit_character = RDS_Lawrence_Greene
 recruit_character = RDS_Harry_OConnor
 recruit_character = RDS_DeWit
-
+recruit_character = BAG_BAROSS #Moved from Baggers due lore reasons
 recruit_character = NCR_general_oliver
 
 # Activate gamestart advisors
@@ -440,14 +428,10 @@ create_equipment_variant = {
 		fixed_ship_command_slot = ship_command_module_1
 		fixed_ship_engine_slot = heavy_ship_oars_module
 		fixed_ship_battery_slot = ship_heavy_mounted_gun_module
-		# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
 		fixed_ship_detection_slot = ship_detection_module_1
-		# fixed_ship_detection_slot_1 = ship_detection_module_1
 		fixed_ship_armour_slot = heavy_ship_armour_module_1
 		fixed_ship_point_defense_slot = ship_pd_module_1
-		# fixed_ship_point_defense_slot_1 = ship_pd_module_1
 		fixed_ship_communication_slot = ship_communications_module_1
-		# fixed_ship_storage_slot = empty
 		front_1_custom_slot = empty
 		mid_1_custom_slot = heavy_ship_oars_module
 		rear_1_custom_slot = ship_detection_module_1

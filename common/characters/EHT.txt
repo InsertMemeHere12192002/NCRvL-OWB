@@ -314,7 +314,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = EHT_jeet_research_advisor
+			idea_token = EHT_jeet_theorist
 			allowed = {
 				original_tag = EHT
 			}
@@ -340,7 +340,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = EHT_deepdog_search_advisor
+			idea_token = EHT_deepdog_theorist
 			allowed = {
 				original_tag = EHT
 			}
@@ -366,7 +366,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = EHT_deepdog_search_advisor
+			idea_token = EHT_hangnail_theorist
 			allowed = {
 				original_tag = EHT
 			}

@@ -1738,6 +1738,13 @@ technologies = {
 	}
 
 	robot_scurry_tech = {
+		research_cost = 4.0
+		start_year = 2280
+		dependencies = {
+			robot_precision_motor_tech = 1
+			robotics_tech_level_settler = 1
+			scurry_robot_unlock_tech = 1
+		}
 
 		enable_equipments = {
 			support_robot_scurry_equipment
@@ -1747,34 +1754,28 @@ technologies = {
 			custom_effect_tooltip = support_robot_tech
 		}
 
-		dependencies = {
-			blocked_tech = 1
-		}
-
-		allow = {
-			always = no
-		}
-
-		research_cost = 2.2
-		start_year = 2275
 		folder = {
 			name = fallout_robotics_folder
 			position = { x = @Row_support_robot y = @Col_10 }
 		}
 
 		categories = {
-			robotics_tech_category
-			support_robot_tech_category
-			armor_tech_category
 			scientific_tech_category
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
 		}
 	}
 
 	robot_humanoid_tech = {
+				research_cost = 4.0
+		start_year = 2282
+		dependencies = {
+			robotics_tech_level_scientific = 1
+			humanoid_robot_unlock_tech = 1
+			robot_advanced_power_systems_tech = 1
+		}
 
 		enable_equipments = {
 			support_robot_humanoid_equipment
@@ -1784,34 +1785,27 @@ technologies = {
 			custom_effect_tooltip = support_robot_tech
 		}
 
-		allow = {
-			always = no
-		}
-
-		dependencies = {
-			blocked_tech = 1
-		}
-
-		research_cost = 2.2
-		start_year = 2275
 		folder = {
 			name = fallout_robotics_folder
 			position = { x = @Row_support_robot y = @Col_11 }
 		}
 
 		categories = {
-			robotics_tech_category
-			combat_robot_tech_category
-			armor_tech_category
 			scientific_tech_category
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
 		}
 	}
 
 	robot_pacification_bot_tech = {
+				research_cost = 7.0
+		dependencies = {
+			blocked_unit_tech = 1
+			robotics_tech_level_settler = 1
+		}
+		start_year = 2280
 
 		enable_equipments = {
 			super_heavy_robot_equipment_1
@@ -1833,21 +1827,11 @@ technologies = {
 			custom_effect_tooltip = security_robot_tech
 		}
 
-		allow = {
-			always = no
-		}
-
 		path = {
 			leads_to_tech = robot_behemoth_robot_tech
 			research_cost_coeff = 1
 		}
 
-		dependencies = {
-			blocked_tech = 1
-		}
-
-		research_cost = 2.0
-		start_year = 2283
 		folder = {
 			name = fallout_robotics_folder
 			position = { x = @Row_cnc y = @Col_10 }
@@ -1861,7 +1845,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 100
+			factor = 0
 		}
 	}
 
@@ -1894,129 +1878,4 @@ technologies = {
 		}
 	}
 
-#	robot_synth_tech_1 = {
-#
-#		enable_equipments = {
-#			synth_equipment_1
-#		}
-#		enable_subunits = {
-#			synth_unit
-#		}
-#
-#		on_research_complete_limit = {
-#			NOT = {
-#				has_template_containing_unit = synth_unit
-#			}
-#		}
-#		on_research_complete = {
-#			hidden_effect = {
-#				load_oob = "unlock_synth_unit"
-#			}
-#			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
-#			custom_effect_tooltip = security_robot_tech
-#		}
-#
-#		allow = {
-#			always = no
-#		}
-#
-#		path = {
-#			leads_to_tech = robot_synth_tech_2
-#			research_cost_coeff = 1
-#		}
-#
-#		dependencies = {
-#			robotics_tech_level_scientific = 1
-#		}
-#
-#		research_cost = 2.2
-#		start_year = 2275
-#		folder = {
-#			name = fallout_robotics_folder
-#			position = { x = @Row_support_robot y = @Col_10 }
-#		}
-#
-#		categories = {
-#			robotics_tech_category
-#			combat_robot_tech_category
-#			armor_tech_category
-#			scientific_tech_category
-#		}
-#
-#		ai_will_do = {
-#			factor = 100
-#		}
-#	}
-#
-#	robot_synth_tech_2 = {
-#
-#		enable_equipments = {
-#			synth_equipment_2
-#		}
-#
-#		allow = {
-#			always = no
-#		}
-#
-#		path = {
-#			leads_to_tech = robot_synth_tech_3
-#			research_cost_coeff = 1
-#		}
-#
-#		dependencies = {
-#			robotics_tech_level_scientific = 1
-#		}
-#
-#		research_cost = 2.2
-#		start_year = 2275
-#		folder = {
-#			name = fallout_robotics_folder
-#			position = { x = @Row_thruster y = @Col_10 }
-#		}
-#
-#		categories = {
-#			robotics_tech_category
-#			combat_robot_tech_category
-#			armor_tech_category
-#			scientific_tech_category
-#		}
-#
-#		ai_will_do = {
-#			factor = 100
-#		}
-#	}
-#
-#	robot_synth_tech_3 = {
-#
-#		enable_equipments = {
-#			synth_equipment_3
-#		}
-#
-#		allow = {
-#			always = no
-#		}
-#
-#		dependencies = {
-#			robotics_tech_level_scientific = 1
-#		}
-#
-#		research_cost = 2.2
-#		start_year = 2275
-#		folder = {
-#			name = fallout_robotics_folder
-#			position = { x = @Row_thruster y = @Col_11 }
-#		}
-#
-#		categories = {
-#			robotics_tech_category
-#			combat_robot_tech_category
-#			armor_tech_category
-#			scientific_tech_category
-#		}
-#
-#		ai_will_do = {
-#			factor = 100
-#		}
-#	}
-#
 }

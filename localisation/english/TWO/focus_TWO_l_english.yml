@@ -302,7 +302,7 @@
   two_slave_trade_2_desc:0 "Two Suns' treatment of its involuntary servants is vastly different to that of the Legion - our slaves are granted far more autonomy, with a promise that they shall be set free as repayment for years of service. But whilst we may treat them like friends only separated from us through lower station, that does not change the fact that they are still slaves. As such, the daunting task of acquiring the resources that fuel our industry will fall upon them."
 
   two_ultima:0 "The Window to the Sea"
-  two_ultima_desc:0 "Now, that we have established our control over Yuma, it is time to lay down our first ships. But before that we have to determine our goals in the Gulf. Should we aim for naval supremacy, or just focus on naval invasion?"
+  two_ultima_desc:0 "Now, that we have established our control over [444.GetName], it is time to lay down our first ships. But before that we have to determine our goals in the Gulf. Should we aim for naval supremacy, or just focus on naval invasion?"
 
   two_small_fleet_advisor:0 "Mariner's Doctrine"
   two_small_fleet_advisor_desc:0 "Rudel has a plan, and a great one. Why waste efforts and resources on big boats, when we can just land our marines in Baja? Of course, we will have to train special marine divisions, but flesh is cheap."

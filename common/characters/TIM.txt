@@ -1,6 +1,6 @@
 characters = {
 	TIM_bear_bunyan = {
-		name = "Bear Bunyan"
+		name = TIM_bear_bunyan_name
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_TIM_bear_bunyan

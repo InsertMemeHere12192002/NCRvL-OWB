@@ -185,7 +185,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = nf_gente.7.d
+		name = nf_gente.8.e
 		set_technology = {
 			support_tech_level_scientific = 1
 		}
@@ -202,6 +202,7 @@ country_event = {
 	option = {
 		name = nf_gente.9.a
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.25
 			uses = 1
 			category = infantry_tech_category
@@ -348,6 +349,7 @@ country_event = {
 	option = {
 		name = nf_gente.16.a
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.25
 			uses = 1
 			category = infantry_tech_category

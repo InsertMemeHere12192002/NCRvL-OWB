@@ -171,7 +171,7 @@ country_event = { #CES, give us land pls
 		name = nf_two.5.b
 
 		TWO = {
-			unlock_national_focus = two_cowboy_ces
+			#unlock_national_focus = two_cowboy_ces
 			unlock_national_focus = two_rule_cow
 			unlock_national_focus = two_arizona_pacifiing
 			unlock_national_focus = two_cores_cow
@@ -308,7 +308,6 @@ country_event = { #wargoal on Gente
 		TWO = {
 			set_country_flag = two_gdh_friendship
 		}
-
 
 		ai_chance = {
 			base = 0

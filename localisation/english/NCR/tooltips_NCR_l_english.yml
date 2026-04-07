@@ -13,6 +13,7 @@
   ncr_moore_best_reward_tt:0 "§g\nThere's no other bonus - destroying the Steel Plague is its own reward§!"
   ncr_calhoun_shady_workers_tt:0 "§OWorking people rise up against the Moore's tyranny in Shady Sands§!"
   ncr_calhoun_graham_not_back_tt:0 "§OThe Prodigal Son is yet to return.§!"
+  ncr_mojave_remnants_focus_tt:0 "Spawns 2 units of §LMojave Rangers§! and 5 units of §LMojave Troopers§!"
   ncr_coredivide_tt:0 "§YGain cores on all of The Divide's core states which we own.§!"
   ncr_baja_ally_tt:0 "§YThis will invite the people of Baja into our sphere, ensuring that they are alligned with us and dependent on our Economy. Of course this will also change their Focus Tree and Politcal Party.§!"
 
@@ -31,6 +32,7 @@
   ncr_claims_utah_tt:0 "§tWe'll get claims on Northwest Arizona, Southeast and Southwest Utah!§!"
   ncr_canyonlands_owning_tt:0 "§tWe secured the control over the lands of NW Arizona, SE and SW Utah§!"
   ncr_basin_campaign_tt:0 "§tUnlocks decisions for a §gGreat Basin campaign§! to bring democracy to the West Nevada!§!"
+  ncr_tax_limits_tt:0 "Due to travel times of trade caravans, we can effectively only make these offers to countries with a capital in §YCalifornia§!, §YNevada§!, §YUtah§!, or §YOregon§!.\n\n"
   ncr_no_tax_tt:0 "§tWe can't TAX anyone? Impossible!§!"
   ncr_invest_cost_tt:0 "§RThis investment will cost us 1% penalty to consumer goods§!§G,but 3% increase of caps income!§!"
   NCR_investment_n_1:0 "§tWe invested into a nearby country§!"
@@ -51,6 +53,7 @@
   ncr_veronica_tt:0 "\n\n§8Dozens of miles away, Veronica felt a disturbance about her mentor, as though he suddenly cried out in terror, and was suddenly silenced.§!"
   ncr_mur_based_elijah_tt:0 "§RThe bunker exploded. A giant mushroom cloud, bigger than any nuke, erupted from Hidden Valley. The shockwave would be talked about for decades.§!"
   ncr_mur_followers_influence_decrease:0 "This will reduce the desire of the §YFollowers of the Apocalypse§! to make demands towards our government, letting us ask for more assistance from them.\n\n"
+  ncr_finished_rural_revitalisation_tt:0 "The Rural Revitalisation Act has been in effect for one year."
 
   #Hayes tooltips
   ncr_hayes_unlock_mexico_tt:0 "§1We'll unlock decisions that let us start the Mexico campaign!§!"
@@ -80,6 +83,7 @@
   ncr_cal_reformers_tt:0 "§5Even though negotiations with the reformists have been successful, we still have a long way to go before they come to power, but we will get decisions that will help to strengthen Lloyd position.§!"
   ncr_cal_cooping_with_steel_rangers:0 "§5gWe are cooperating with the Steel Rangers currently§!"
   ncr_good_man_goes_war_tt:0 "§57 divisions of Rangers and 10 divisions of militia will rally for our cause.§!"
+  ncr_deploy_the_reserved_tt:0 "§53 divisions of Rangers and 3 Divisions of Heavy Troopers will be deployed.§!"
   ncr_cal_raiders_tt:0 "§RI can't allow another Caesar to appear on the wastelands...§!\n\n§5We will get a decision, that gives us §Rwargoals§! on the neighboring raider nations.§!"
   ncr_cal_followers_tt:0 "§5All nations, who have Followers established, will get the following effects:\n§!"
   ncr_empty_tt:0 "\n\n"

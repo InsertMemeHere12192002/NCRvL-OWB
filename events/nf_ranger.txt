@@ -70,7 +70,7 @@ country_event = {
 		country_event = nf_des.7
 		ai_chance = {
 			modifier = {
-				DES_has_ai_behavior_wasteland_rangers = yes
+				has_country_flag = DES_ai_behavior_wasteland
 				factor = 0
 			}
 		}

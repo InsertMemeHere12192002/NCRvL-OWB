@@ -23,6 +23,7 @@ sub_units = {
 			category_infantry
 			category_infantry_and_special_forces
 			category_vehicles
+			category_motorized
 		}
 
 		combat_width = 2
@@ -88,6 +89,7 @@ sub_units = {
 			category_infantry
 			category_infantry_and_special_forces
 			category_vehicles
+			category_motorized
 		}
 
 		combat_width = 2
@@ -169,6 +171,7 @@ sub_units = {
 			category_weapon_infantry
 			category_fireteams
 			category_vehicles
+			category_motorized
 		}
 
 		combat_width = 1.5
@@ -247,6 +250,7 @@ sub_units = {
 			category_weapon_infantry
 			category_demolitions
 			category_vehicles
+			category_motorized
 		}
 
 		combat_width = 1.5
@@ -325,6 +329,7 @@ sub_units = {
 			category_weapon_infantry
 			category_anti_tank
 			category_vehicles
+			category_motorized
 		}
 
 		combat_width = 1.5

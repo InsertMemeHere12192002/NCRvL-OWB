@@ -1,0 +1,115 @@
+ideas = {
+	###############################
+	#		Pre-War Designs		  #
+	###############################
+	# engineering_firm = {
+	# }
+	###############################
+	#		Major Businesses	  #
+	###############################
+	construction_firm = {
+		designer = yes
+		canaan_caravans_firm = {
+			picture = company_canaan_caravans
+			allowed = {
+				original_tag = BLC
+				NOT = {
+					# has_completed_focus = blc_organized_trade
+				}
+			}
+			available = {
+				# has_completed_focus = blc_way_of_canaanities
+			}
+			cost = 100
+			traits = {
+				canaan_caravan_company
+			}
+		}
+		canaan_caravans_subsidize_firm = {
+			picture = company_canaan_caravans
+			allowed = {
+				original_tag = BLC
+				NOT = {
+					# has_completed_focus = blc_organized_trade
+				}
+			}
+			visible = {
+				# has_completed_focus = blc_leisure_fair_model
+			}
+			available = {
+				# has_completed_focus = blc_leisure_fair_model
+			}
+			cost = 100
+			traits = {
+				canaan_caravan_company_2
+			}
+		}
+		crimson_caravan_firm = {
+			picture = company_crimson_caravan
+			allowed = {
+				original_tag = BLC
+				NOT = {
+					# has_completed_focus = blc_organized_trade
+				}
+			}
+			available = {
+				# has_completed_focus = blc_invite_crimson_caravan
+			}
+			cost = 100
+			traits = {
+				crimson_caravan_company
+			}
+		}
+		three_some_caravan_firm = {
+			picture = company_three_some_caravan
+			allowed = {
+				original_tag = BLC
+				NOT = {
+					# has_completed_focus = blc_organized_trade
+				}
+			}
+			available = {
+				# has_completed_focus = blc_fund_three_some_caravan
+			}
+			cost = 100
+			traits = {
+				colorado_caravan_company
+			}
+		}
+		three_some_caravan_subsidize_firm = {
+			picture = company_three_some_caravan
+			allowed = {
+				original_tag = BLC
+				NOT = {
+					# has_completed_focus = blc_organized_trade
+				}
+			}
+			visible = {
+				# has_completed_focus = blc_assisted_reintegration_program
+			}
+			available = {
+				# has_completed_focus = blc_assisted_reintegration_program
+			}
+			cost = 100
+			traits = {
+				colorado_caravan_company_2
+			}
+		}
+		colorado_trade_united_firm = {
+			picture = sla_no_resource_scarcity
+			allowed = {
+				original_tag = BLC
+			}
+			visible = {
+				# has_completed_focus = blc_organized_trade
+			}
+			available = {
+				# has_completed_focus = blc_organized_trade
+			}
+			cost = 100
+			traits = {
+				colorado_caravan_company_merged
+			}
+		}
+	}
+}

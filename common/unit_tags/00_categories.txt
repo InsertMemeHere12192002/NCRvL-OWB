@@ -20,8 +20,10 @@ sub_unit_categories = {
 	category_leg_infantry
 	category_weapon_infantry
 	category_vehicles
+	category_motorized
 	category_support
 	category_combat_support
+	category_anti_tank
 	category_non_combat_support
 	category_medical_support
 	category_recon_support
@@ -43,7 +45,6 @@ sub_unit_categories = {
 	category_screen_ship
 	category_implant
 	category_behemoth
-	category_anti_tank
 	category_creatures
 	category_mutant_creatures
 	category_insects

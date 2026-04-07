@@ -70,8 +70,8 @@ characters={
 			}
 		}
 	}
-	EUR_varland_varland_gillett  = {
-		name ="Varland Gillett"
+	EUR_varland_gillett = {
+		name = EUR_VARLAND_GILLETT_NAME
 		portraits = {
 		army = {
 				large = GFX_Portrait_Settler_Generic_29
@@ -309,7 +309,7 @@ characters={
 		}
 		advisor = {
 			slot = high_command
-			idea_token = EUR_tiny_joe_token
+			idea_token = EUR_tiny_joe_high_command
 			ledger = army
 			allowed = {
 				original_tag = EUR
@@ -332,7 +332,7 @@ characters={
 		}
 		advisor = {
 			slot = high_command
-			idea_token = EUR_tiny_joe_token
+			idea_token = EUR_vega_poseidon_high_command
 			ledger = army
 			allowed = {
 				original_tag = EUR
@@ -455,7 +455,7 @@ characters={
 		name = EUR_george_jackson
 		portraits = {
 			army = {
-				small = GFX_idea_enclave_advisor
+				small = GFX_idea_enclave_advisor_2
 			}
 		}
 	}
@@ -636,7 +636,7 @@ characters={
 				original_tag = EUR
 			}
 			traits = {
-				followers_leader
+				follower_of_the_apocalypse
 			}
 			cost = 100
 			ai_will_do = {
@@ -699,7 +699,7 @@ characters={
 		}
 		advisor = {
 			slot = air_chief
-			idea_token = NEW_daisy_whitman_air_chief
+			idea_token = EUR_daisy_whitman_air_chief
 			ledger = air
 			allowed = {
 				original_tag = EUR
@@ -725,7 +725,7 @@ characters={
 		}
 		advisor = {
 			slot = theorist
-			idea_token = NEW_orion_moreno_research_advisor
+			idea_token = NEW_orion_moreno_theorist
 			ledger = army
 			allowed = {
 				original_tag = EUR

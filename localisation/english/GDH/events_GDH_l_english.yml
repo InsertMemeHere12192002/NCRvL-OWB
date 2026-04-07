@@ -39,7 +39,7 @@
   nf_gente.8.a:0 "Some fancy ships!"
   nf_gente.8.b:0 "We can use the planes to go parasailing!"
   nf_gente.8.c:0 "El Generalissimo could use a brand new car..."
-  nf_gente.7.d:0 "Is heavy weapons not another one of our exports?"
+  nf_gente.8.e:0 "Our chief export is still guns, no?"
    #############################################
   nf_gente.9.t:0 "A Trade Caravan from [GDH.Capital.GetName]"
   nf_gente.9.d:0 "[GDH.GetLeader] has sent another convoy to us, furthering the cause of Mexican solidarity. [GDH.GetLeader] is a son of a bitch, he's our son of a bitch."

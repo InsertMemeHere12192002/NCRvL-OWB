@@ -56,25 +56,16 @@ set_technology = {
 	decisive_engagement_doctrine = 1
 	ces_navajo_skin_walkers_tech = 1
 	ces_navajo_scouts_tech = 1
+		terror_tactics = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_variable = {
 	NAV_resistance = 2
 }
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		naval_invasion_tech_1 = 1
-	}
-}
-
-
 
 set_stability = 0.4
 set_war_support = 0.45
@@ -106,9 +97,7 @@ add_ideas = {
 	navajo_silversmith_companies
 	partial_economic_mobilisation
 }
-# hidden_effect = {
-# 	add_ideas = tech_air_production_nerf_idea
-# }
+
 recruit_character = NAV_chief_hashkeh_naabaah
 recruit_character = NAV_niyol_tsinajinnie
 recruit_character = NAV_dighin_sani
@@ -131,6 +120,5 @@ recruit_character = NAV_free_man
 			autonomy_state = autonomy_client_tribe
 		}
 	}
-
 
 add_to_tech_sharing_group = legion_research_pact

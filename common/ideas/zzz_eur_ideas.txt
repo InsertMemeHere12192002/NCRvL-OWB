@@ -179,7 +179,7 @@ ideas = {
 			}
 		}
 		eur_timber_scouts = {
-			picture = GFX_goal_TIM_patch_scouting_heritage
+			picture = TIM_patch_scouting_heritage
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {

@@ -162,6 +162,9 @@ focus_tree = {
 	focus = {
 		id = mot_make_our_final_preparations
 		icon = GFX_goal_NCR_Military_March
+			search_filters = {
+			FOCUS_FILTER_MOT_SUNBURST
+		}
 		cost = 30
 		available = {
 			NOT = {

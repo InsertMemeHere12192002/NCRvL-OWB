@@ -55,7 +55,7 @@ attis_army_taa_raids = {
 	attis_taa_border_war = {
 		icon = generic_independence
 		cost = 25
-		fire_only_once = no
+
 		ai_will_do = {
 			factor = 45
 			modifier = {
@@ -102,7 +102,6 @@ attis_army_taa_raids = {
 		}
 		days_remove = 20
 		days_re_enable = 40
-		cost = 50
 		war_with_on_remove = TAA
 		remove_effect = {
 			if = {

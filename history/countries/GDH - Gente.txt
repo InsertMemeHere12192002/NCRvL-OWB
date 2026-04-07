@@ -1,7 +1,6 @@
 ﻿capital = 471
 oob = "GDH_2275"
 set_naval_oob = "GDH_2275_naval"
-
 set_technology = {
 	basic_supply_transport_tech = 1
 	tribal_civilization = 1
@@ -44,31 +43,21 @@ set_technology = {
 	electronics_tech_level_tribal = 1
 	electronics_tech_level_settler = 1
 	terror_tactics = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		medium_navy_hull_tech_2 = 1
-		naval_medium_weapon_module_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_weapons_module_tech = 1
-		naval_pd_module_tech_1 = 1
-		naval_pd_module_tech_2 = 1
-		naval_hard_point_tech = 1
-		naval_armour_tech_1 = 1
-		naval_support_module_tech = 1
-		naval_communications_module_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	medium_navy_hull_tech_1 = 1
+	#multi_deck_construction_tech = 1
+	heavy_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+	naval_module_tech = 1
+	#naval_weapons_module_tech = 1
+	#naval_pd_module_tech_1  = 1
+	#naval_pd_module_tech_2 = 1
+	#naval_hard_point_tech = 1
+	naval_armour_tech_1 = 1
+	naval_support_module_tech = 1
+	#naval_communications_module_tech_1 = 1
 }
 
 set_stability = 0.35
@@ -77,7 +66,6 @@ set_research_slots = 4
 set_convoys = 50
 set_country_flag = is_arizona_nation
 set_country_flag = is_settler_nation
-
 set_country_flag = dont_give_settler_generic_political_advisors
 set_country_flag = dont_give_settler_generic_high_command
 set_country_flag = dont_give_settler_generic_theorists
@@ -90,7 +78,6 @@ set_country_flag = no_generic_theorists
 set_country_flag = grand_doctrine_ai
 set_country_flag = grand_infantry_doctrine_ai
 set_country_flag = infantry_ballistic_ai
-
 set_politics = {
 	ruling_party = ruler
 	elections_allowed = no
@@ -134,7 +121,6 @@ recruit_character = GDH_thornton
 recruit_character = GDH_oseguara
 recruit_character = GDH_lucius_three_roads
 recruit_character = GDH_gubernia_izquierda
-
 create_equipment_variant = {
 	name = "River Boat"
 	type = ship_hull_light_1

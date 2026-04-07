@@ -23,8 +23,6 @@ hangdogs_decisions = {
 		}
 		cost = 10
 		days_remove = 30
-		modifier = {
-		}
 		remove_effect = {
 			SUN = {
 				ROOT = {
@@ -158,8 +156,6 @@ hangdogs_decisions = {
 		}
 		cost = 60
 		days_remove = 90
-		modifier = {
-		}
 		remove_effect = {
 			every_state = {
 				limit = {
@@ -622,8 +618,6 @@ warden_decisions = {
 		}
 		cost = 30
 		days_remove = 30
-		modifier = {
-		}
 		remove_effect = {
 			set_technology = {
 				mansbestfriend = 1
@@ -1137,7 +1131,6 @@ warden_decisions = {
 		fire_only_once = yes
 		available = {
 			owns_state = 572
-			has_tech = vault_industry_tech
 			has_tech = construction_industry_tech_5
 			has_tech = electronic_engineering_7
 			NOT = { has_country_flag = zax_in_progress }

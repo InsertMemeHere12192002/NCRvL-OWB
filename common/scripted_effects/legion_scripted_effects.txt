@@ -96,7 +96,7 @@ lucius_breaks_off = {
 		#if = {
 		#	limit = {
 		#		NAV = {
-		#			is_puppet = yes
+		#			is_subject = yes
 		#			exists = yes
 		#		}
 		#	}
@@ -106,7 +106,6 @@ lucius_breaks_off = {
 		#}
 		setup_legion_revolter = yes
 		set_cosmetic_tag = CES_lucius_legion
-		set_country_flag = slavery_allowed
 		set_country_flag = manpower_laws_hidden
 		set_country_flag = slave_society
 		set_country_flag = bans_drugs
@@ -178,6 +177,14 @@ lucius_breaks_off = {
 		}
 		LUC = {
 			transfer_state = 130
+		}
+	}
+		if = {
+		limit = {
+			controls_state = 1524
+		}
+		LUC = {
+			transfer_state = 1524
 		}
 	}
 	if = {
@@ -294,6 +301,14 @@ lucius_breaks_off = {
 	}
 	if = {
 		limit = {
+			controls_state = 502
+		}
+		LUC = {
+			transfer_state = 502
+		}
+	}
+	if = {
+		limit = {
 			controls_state = 427
 		}
 		LUC = {
@@ -306,14 +321,6 @@ lucius_breaks_off = {
 		}
 		LUC = {
 			transfer_state = 402
-		}
-	}
-	if = {
-		limit = {
-			controls_state = 439
-		}
-		LUC = {
-			transfer_state = 439
 		}
 	}
 	if = {
@@ -393,8 +400,8 @@ lucius_breaks_off = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Old Guard"
-			name = "True to Caesar"
+			long_name = CES_old_guard_long
+			name = CES_old_guard_short
 		}
 		set_capital = { state = 529 }
 		set_stability = 0.6
@@ -470,14 +477,6 @@ malpais_breaks_off = {
 	}
 	if = {
 		limit = {
-			controls_state = 431
-		}
-		MAL = {
-			transfer_state = 431
-		}
-	}
-	if = {
-		limit = {
 			controls_state = 632
 		}
 		MAL = {
@@ -506,6 +505,14 @@ malpais_breaks_off = {
 		}
 		MAL = {
 			transfer_state = 232
+		}
+	}
+		if = {
+		limit = {
+			controls_state = 439
+		}
+		MAL = {
+			transfer_state = 439
 		}
 	}
 	if = {
@@ -542,14 +549,6 @@ malpais_breaks_off = {
 	}
 	if = {
 		limit = {
-			controls_state = 296
-		}
-		MAL = {
-			transfer_state = 296
-		}
-	}
-	if = {
-		limit = {
 			controls_state = 482
 		}
 		MAL = {
@@ -569,8 +568,8 @@ malpais_breaks_off = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "Malpais' Loyalists"
-			name = "The Legion Loyalists"
+			long_name = CES_malpais_loyal_long
+			name = CES_malpais_loyal_short
 		}
 		set_capital = { state = 266 }
 		set_stability = 0.6
@@ -662,12 +661,10 @@ vulpes_breaks_off = {
 		limit = {
 			controls_state = 114
 			controls_state = 35
-			controls_state = 502
 		}
 		VLP = {
 			transfer_state = 114
 			transfer_state = 35
-			transfer_state = 502
 		}
 	}
 	if = {
@@ -706,8 +703,8 @@ vulpes_breaks_off = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "Vulpes' Loyalists"
-			name = "Wolves"
+			long_name = CES_vulpes_loyal_long
+			name = CES_vulpes_loyal_short
 		}
 		set_capital = { state = 289 }
 		set_stability = 0.6
@@ -743,7 +740,6 @@ aurelian_breaks_off = {
 			}
 		}
 		setup_legion_revolter = yes
-		set_country_flag = slavery_allowed
 		set_country_flag = manpower_laws_hidden
 		set_country_flag = slave_society
 		set_country_flag = bans_drugs
@@ -775,6 +771,14 @@ aurelian_breaks_off = {
 			}
 			AUR = {
 				transfer_state = PREV
+			}
+		}
+		if = {
+			limit = {
+				controls_state = 431
+			}
+			AUR = {
+				transfer_state = 431
 			}
 		}
 		if = {
@@ -864,6 +868,14 @@ aurelian_breaks_off = {
 				transfer_state = 93
 			}
 		}
+		if = {
+			limit = {
+				controls_state = 296
+			}
+			AUR = {
+				transfer_state = 296
+			}
+		}
 	}
 	AUR = {
 		set_country_flag = CES_aurelian_legion_flag
@@ -878,8 +890,8 @@ aurelian_breaks_off = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "Aurelian's Loyalists"
-			name = "Aurelians"
+			long_name = CES_aurelian_loyal_long
+			name = CES_aurelian_loyal_short
 		}
 		set_capital = { state = 518 }
 		set_stability = 0.6
@@ -928,8 +940,8 @@ caius_breaks_off_lanius = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Cult of Hades"
-			name = "Hades"
+			long_name = CES_cult_hades_long
+			name = CES_cult_hades_short
 		}
 		set_capital = { state = 5 }
 		set_stability = 0.6
@@ -963,7 +975,6 @@ caius_breaks_off_malpais = {
 	}
 	CAU = {
 		setup_legion_revolter = yes
-		set_country_flag = slavery_allowed
 		set_country_flag = manpower_laws_hidden
 		set_country_flag = slave_society
 		set_country_flag = bans_drugs
@@ -974,6 +985,13 @@ caius_breaks_off_malpais = {
 			}
 		}
 		promote_character = CES_caius_drusus
+		set_technology = {
+			ghoul_civilization = 1
+			creatures_tech_level_tribal = 1
+			creatures_tech_level_settler = 1
+			feral_tech_access_tech = 1
+			feral_ghouls_unlock_tech = 1
+		}
 	}
 	every_state = {
 		limit = {
@@ -1015,14 +1033,6 @@ caius_breaks_off_malpais = {
 	}
 	if = {
 		limit = {
-			controls_state = 431
-		}
-		CAU = {
-			transfer_state = 431
-		}
-	}
-	if = {
-		limit = {
 			controls_state = 632
 		}
 		CAU = {
@@ -1051,6 +1061,14 @@ caius_breaks_off_malpais = {
 		}
 		CAU = {
 			transfer_state = 232
+		}
+	}
+	if = {
+		limit = {
+			controls_state = 439
+		}
+		CAU = {
+			transfer_state = 439
 		}
 	}
 	if = {
@@ -1087,14 +1105,6 @@ caius_breaks_off_malpais = {
 	}
 	if = {
 		limit = {
-			controls_state = 296
-		}
-		CAU = {
-			transfer_state = 296
-		}
-	}
-	if = {
-		limit = {
 			controls_state = 482
 		}
 		CAU = {
@@ -1114,8 +1124,8 @@ caius_breaks_off_malpais = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Cult of Hades"
-			name = "Hades"
+			long_name = CES_cult_hades_long
+			name = CES_cult_hades_short
 		}
 		set_capital = { state = 266 }
 		set_stability = 0.6
@@ -1165,6 +1175,7 @@ lanius_breaks_off = {
 					has_completed_focus = lac_hire_iron_alliance
 				}
 				IRN = {
+					is_subject = no
 					owns_state = 490
 				}
 			}
@@ -1206,7 +1217,10 @@ lanius_breaks_off = {
 	}
 	every_state = {
 		limit = {
-			is_core_of = CES
+			OR = {
+				is_core_of = CES
+				is_core_of = LAC
+			}
 		}
 		add_core_of = LAN
 	}

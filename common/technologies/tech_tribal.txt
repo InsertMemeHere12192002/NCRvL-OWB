@@ -1196,8 +1196,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			#Normal construction techs have the same ai_will_do after no longer having an ahead of time penalty. Tribal techs lack this penalty, so do not require that condition
-			factor = 50
+			factor = 1
+			modifier = {
+				factor = 3
+				date > "2276.1.1"
+			}
 		}
 	}
 
@@ -1230,11 +1233,8 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 3
-				date > "2276.1.1"
-			}
+			#Normal construction techs have the same ai_will_do after no longer having an ahead of time penalty. Tribal techs lack this penalty, so do not require that condition
+			factor = 50
 		}
 	}
 

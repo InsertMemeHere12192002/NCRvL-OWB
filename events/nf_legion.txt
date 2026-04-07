@@ -5,7 +5,7 @@ country_event = {
 	id = nf_legion.1
 	title = nf_legion.1.t
 	desc = nf_legion.1.d
-	picture = GFX_event_CES_whitelegs
+	picture = GFX_event_CES_caesar
 	is_triggered_only = yes
 	# Ally
 	option = {
@@ -160,7 +160,6 @@ country_event = {
 					autonomy_state = autonomy_client_tribe
 				}
 			}
-
 		WHT = {
 			add_country_leader_role = {
 				character = WHT_salt_upon_wounds
@@ -183,7 +182,7 @@ country_event = {
 	id = nf_legion.2
 	title = nf_legion.2.t
 	desc = nf_legion.2.d
-	picture = GFX_event_CES_whitelegs
+	picture = GFX_event_CES_caesar
 	is_triggered_only = yes
 	# Become Friends
 	option = {
@@ -194,6 +193,7 @@ country_event = {
 		ai_chance = {
 			base = 7
 		}
+	custom_effect_tooltip = accept_petition_tt
 		set_country_flag = accepted_petition
 		army_experience = 25
 		add_opinion_modifier = {
@@ -469,6 +469,9 @@ country_event = {
 			CES_stress_level = 1
 		}
 		set_country_flag = malpais_buddy
+		ai_chance = {
+			base = 25
+		}
 	}
 }
 
@@ -673,6 +676,17 @@ country_event = {
 		add_to_variable = {
 			CES_lucius_glory = 2
 		}
+				ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.21.b
@@ -683,6 +697,17 @@ country_event = {
 		custom_effect_tooltip = nf_legion.20.a_tt
 		add_to_variable = {
 			CES_vulpes_glory = 1
+		}
+				ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+				}
+				factor = 0
+			}
 		}
 	}
 	option = {
@@ -696,6 +721,17 @@ country_event = {
 			CES_aurelius_glory = 1
 		}
 		set_country_flag = aurelius_won
+				ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.21.e
@@ -704,6 +740,17 @@ country_event = {
 		}
 		custom_effect_tooltip = nf_legion.20.a_tt
 		set_country_flag = phx_doused
+				ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 }
 
@@ -960,6 +1007,13 @@ country_event = {
 				}
 			}
 		}
+				ai_chance = {
+			base = 25
+			modifier = {
+				has_global_flag = CES_ai_behavior_vulpes_global_flag
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.29.b
@@ -980,6 +1034,13 @@ country_event = {
 					level = 2
 					instant_build = yes
 				}
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				has_global_flag = CES_ai_behavior_aurelius_global_flag
+				factor = 0
 			}
 		}
 	}
@@ -1017,6 +1078,13 @@ country_event = {
 			NAV.NAV_loyalty = 1
 		}
 		custom_effect_tooltip = NAV_good_friends_tt
+		ai_chance = {
+			base = 25
+			modifier = {
+				has_global_flag = CES_ai_behavior_malpais_global_flag
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.30.b
@@ -1030,6 +1098,13 @@ country_event = {
 			NAV.NAV_resistance = 1
 		}
 		custom_effect_tooltip = NAV_plotting_tt
+		ai_chance = {
+			base = 25
+			modifier = {
+				has_global_flag = CES_ai_behavior_lucius_global_flag
+				factor = 0
+			}
+		}
 	}
 }
 
@@ -1068,6 +1143,13 @@ country_event = {
 			}
 		}
 		set_capital = { state = 518 }
+		ai_chance = {
+			base = 25
+			modifier = {
+				has_global_flag = CES_ai_behavior_lucius_global_flag
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.31.b
@@ -1094,6 +1176,13 @@ country_event = {
 				modifier = {
 					caps_trade_node_route_limit = 1
 				}
+			}
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				has_global_flag = CES_ai_behavior_aurelius_global_flag
+				factor = 0
 			}
 		}
 	}
@@ -1127,6 +1216,13 @@ country_event = {
 		}
 		custom_effect_tooltip = nf_legion.vulpes_glory
 		set_country_flag = lucius_friend_two_sun
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_global_flag = CES_ai_behavior_malpais_global_flag
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.32.b
@@ -1161,6 +1257,13 @@ country_event = {
 		}
 		custom_effect_tooltip = nf_legion.malpais_glory
 		set_country_flag = two_sun_hate_legion
+		ai_chance = {
+			base = 50
+			modifier = {
+				has_global_flag = CES_ai_behavior_vulpes_global_flag
+				factor = 0
+			}
+		}
 	}
 }
 
@@ -1286,6 +1389,7 @@ news_event = {
 			}
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.5
 			uses = 1
 			category = industry
@@ -1429,10 +1533,6 @@ news_event = { # not used
 	option = {
 		name = nf_legion.45.a
 		add_manpower = 1750
-		# set_temp_variable = {
-		# 	slaves_to_add = 1.75
-		# }
-		# add_slaves_to_nation = yes
 	}
 }
 
@@ -1551,8 +1651,8 @@ news_event = {
 				Country_leader = {
 					ideology = benevolent_dictatorship
 					#expire = “3000.01.01.01”
-					traits = {
-					}
+					#traits = {
+					#}
 					id = -1
 				}
 			}
@@ -1599,10 +1699,8 @@ news_event = {
 		name = nf_legion.71.a
 		trigger = {
 			NOT = {
-				OR = {
 					tag = LAC
 					tag = TWO
-				}
 				is_caesars_legion_member = yes
 			}
 		}
@@ -1742,8 +1840,8 @@ news_event = {
 			}
 			set_party_name = {
 				ideology = ruler
-				long_name = "Aurelian's Loyalists"
-				name = "Aurelians"
+				long_name = CES_aurelian_loyal_long
+				name = CES_aurelian_loyal_short
 			}
 			set_capital = { state = 518 }
 			inherit_technology = CES
@@ -1760,7 +1858,7 @@ news_event = {
 }
 
 news_event = {
-	#Vulpes  Revolts
+	#Vulpes	 Revolts
 	id = nf_legion.73
 	title = nf_legion.73.t
 	desc = nf_legion.73.d
@@ -1840,8 +1938,8 @@ news_event = {
 			}
 			set_party_name = {
 				ideology = ruler
-				long_name = "Vulpes' Loyalists"
-				name = "Wolves"
+				long_name = CES_vulpes_loyal_long
+				name = CES_vulpes_loyal_short
 			}
 			set_capital = { state = 289 }
 			inherit_technology = CES
@@ -1999,8 +2097,8 @@ news_event = {
 			}
 			set_party_name = {
 				ideology = ruler
-				long_name = "Malpais' Loyalists"
-				name = "The Legion Loyalists"
+				long_name = CES_malpais_loyal_long
+				name = CES_malpais_loyal_short
 			}
 			set_capital = { state = 522 }
 			inherit_technology = CES
@@ -2294,8 +2392,8 @@ news_event = {
 			}
 			set_party_name = {
 				ideology = ruler
-				long_name = "The Old Guard"
-				name = "True to Caesar"
+				long_name = CES_old_guard_long
+				name = CES_old_guard_short
 			}
 			set_capital = { state = 529 }
 			inherit_technology = CES
@@ -2334,8 +2432,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Old Guard"
-			name = "True to Caesar"
+			long_name = CES_old_guard_long
+			name = CES_old_guard_short
 		}
 		set_capital = { state = 529 }
 		country_event = nf_legion.92
@@ -2367,8 +2465,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Old Guard"
-			name = "True to Caesar"
+			long_name = CES_old_guard_long
+			name = CES_old_guard_short
 		}
 		promote_character = CES_vulpes
 	}
@@ -2396,8 +2494,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "Malpais' Loyalists"
-			name = "The Legion Loyalists"
+			long_name = CES_malpais_loyal_long
+			name = CES_malpais_loyal_short
 		}
 		set_stability = 0.6
 		set_war_support = 0.5
@@ -2433,7 +2531,7 @@ news_event = {
 }
 
 country_event = {
-	###  Who Leads
+	###	 Who Leads
 	id = nf_legion.80
 	title = nf_legion.80.t
 	desc = nf_legion.80.d
@@ -2442,12 +2540,25 @@ country_event = {
 	option = {
 		name = nf_legion.80.a
 		trigger = {
-			check_variable = {
-				CES_lucius_glory > 3
+			OR = {
+				check_variable = {
+					CES_lucius_glory > 3
+				}
+				has_global_flag = CES_ai_behavior_lucius_global_flag
 			}
 		}
 		ai_chance = {
-			base = 5
+			base = 20
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+					has_global_flag = CES_ai_behavior_lanius_global_flag
+					has_global_flag = CES_ai_behavior_heirless_global_flag
+				}
+				factor = 0
+			}
 		}
 		country_event = nf_legion.76
 		every_other_country = {
@@ -2457,12 +2568,25 @@ country_event = {
 	option = {
 		name = nf_legion.80.b
 		trigger = {
-			check_variable = {
-				CES_vulpes_glory > 3
+			OR = {
+				check_variable = {
+					CES_vulpes_glory > 3
+				}
+				has_global_flag = CES_ai_behavior_vulpes_global_flag
 			}
 		}
 		ai_chance = {
-			base = 5
+			base = 20
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_lanius_global_flag
+					has_global_flag = CES_ai_behavior_heirless_global_flag
+				}
+				factor = 0
+			}
 		}
 		country_event = nf_legion.77
 		every_other_country = {
@@ -2472,12 +2596,25 @@ country_event = {
 	option = {
 		name = nf_legion.80.c
 		trigger = {
-			check_variable = {
-				CES_aurelius_glory > 3
+			OR = {
+				check_variable = {
+					CES_aurelius_glory > 3
+				}
+				has_global_flag = CES_ai_behavior_aurelius_global_flag
 			}
 		}
 		ai_chance = {
-			base = 5
+			base = 20
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+					has_global_flag = CES_ai_behavior_lanius_global_flag
+					has_global_flag = CES_ai_behavior_heirless_global_flag
+				}
+				factor = 0
+			}
 		}
 		country_event = nf_legion.81
 		every_other_country = {
@@ -2487,12 +2624,25 @@ country_event = {
 	option = {
 		name = nf_legion.80.e
 		trigger = {
-			check_variable = {
-				CES_malp_glory > 3
+			OR = {
+				check_variable = {
+					CES_malp_glory > 3
+				}
+				has_global_flag = CES_ai_behavior_malpais_global_flag
 			}
 		}
 		ai_chance = {
-			base = 5
+			base = 20
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+					has_global_flag = CES_ai_behavior_lanius_global_flag
+					has_global_flag = CES_ai_behavior_heirless_global_flag
+				}
+				factor = 0
+			}
 		}
 		country_event = nf_legion.78
 		every_other_country = {
@@ -2508,7 +2658,17 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			base = 10
+			base = 20
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+					has_global_flag = CES_ai_behavior_heirless_global_flag
+				}
+				factor = 0
+			}
 		}
 		news_event = nf_legion.126
 		every_other_country = {
@@ -2518,6 +2678,19 @@ country_event = {
 	option = {
 		name = nf_legion.80.f
 		country_event = nf_legion.82
+				ai_chance = {
+			base = 20
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_malpais_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+					has_global_flag = CES_ai_behavior_lanius_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 }
 
@@ -3148,8 +3321,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Old Guard"
-			name = "True to Caesar"
+			long_name = CES_old_guard_long
+			name = CES_old_guard_short
 		}
 		promote_character = CES_vulpes
 		if = {
@@ -3677,8 +3850,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Old Guard"
-			name = "True to Caesar"
+			long_name = CES_old_guard_long
+			name = CES_old_guard_short
 		}
 		set_capital = { state = 529 }
 		country_event = nf_legion.92
@@ -3702,6 +3875,9 @@ country_event = {
 					army_ratio = 0.25
 					navy_ratio = 0.25
 					air_ratio = 0.25
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = MAL
@@ -3710,6 +3886,9 @@ country_event = {
 					army_ratio = 0.33
 					navy_ratio = 0.33
 					air_ratio = 0.33
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = AUR
@@ -3718,6 +3897,9 @@ country_event = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 			}
 			else_if = {
@@ -3737,6 +3919,9 @@ country_event = {
 					army_ratio = 0.25
 					navy_ratio = 0.25
 					air_ratio = 0.25
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = MAL
@@ -3745,6 +3930,9 @@ country_event = {
 					army_ratio = 0.33
 					navy_ratio = 0.33
 					air_ratio = 0.33
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = AUR
@@ -3753,6 +3941,9 @@ country_event = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 			}
 			else_if = {
@@ -3774,6 +3965,9 @@ country_event = {
 					army_ratio = 0.20
 					navy_ratio = 0.20
 					air_ratio = 0.20
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = MAL
@@ -3790,6 +3984,9 @@ country_event = {
 					army_ratio = 0.34
 					navy_ratio = 0.34
 					air_ratio = 0.34
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = CAU
@@ -3798,6 +3995,9 @@ country_event = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 			}
 			else_if = {
@@ -3816,6 +4016,9 @@ country_event = {
 					army_ratio = 0.25
 					navy_ratio = 0.25
 					air_ratio = 0.25
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = VLP
@@ -3824,6 +4027,9 @@ country_event = {
 					army_ratio = 0.33
 					navy_ratio = 0.33
 					air_ratio = 0.33
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = CAU
@@ -3832,6 +4038,9 @@ country_event = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 			}
 			else_if = {
@@ -3853,6 +4062,9 @@ country_event = {
 					army_ratio = 0.20
 					navy_ratio = 0.20
 					air_ratio = 0.20
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = MAL
@@ -3861,6 +4073,9 @@ country_event = {
 					army_ratio = 0.25
 					navy_ratio = 0.25
 					air_ratio = 0.25
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = VLP
@@ -3869,6 +4084,9 @@ country_event = {
 					army_ratio = 0.34
 					navy_ratio = 0.34
 					air_ratio = 0.34
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = LAN
@@ -3877,6 +4095,9 @@ country_event = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 			}
 			else_if = {
@@ -3898,6 +4119,9 @@ country_event = {
 					army_ratio = 0.20
 					navy_ratio = 0.20
 					air_ratio = 0.20
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = MAL
@@ -3906,6 +4130,9 @@ country_event = {
 					army_ratio = 0.25
 					navy_ratio = 0.25
 					air_ratio = 0.25
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = VLP
@@ -3914,6 +4141,9 @@ country_event = {
 					army_ratio = 0.34
 					navy_ratio = 0.34
 					air_ratio = 0.34
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 				transfer_units_fraction = {
 					target = LAN
@@ -3922,6 +4152,9 @@ country_event = {
 					army_ratio = 0.5
 					navy_ratio = 0.5
 					air_ratio = 0.5
+					keep_unit_leaders_trigger = {
+						always = yes
+					}
 				}
 			}
 		}
@@ -4123,8 +4356,8 @@ country_event = {
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "Malpais' Loyalists"
-			name = "The Legion Loyalists"
+			long_name = CES_malpais_loyal_long
+			name = CES_malpais_loyal_short
 		}
 		set_stability = 0.6
 		set_war_support = 0.5
@@ -4462,7 +4695,7 @@ country_event = {
 	option = {
 		name = nf_legion.82.f
 		trigger = {
-			NOT  =  {
+			NOT	 =	{
 				LAC = { has_focus_tree = lac_revolter_focus_tree }
 			}
 			owns_state = 5
@@ -4474,6 +4707,7 @@ country_event = {
 					has_completed_focus = lac_hire_iron_alliance
 				}
 				IRN = {
+					is_subject = no
 					owns_state = 490
 				}
 			}
@@ -4807,8 +5041,10 @@ country_event = {
 				}
 				AND = {
 					NOT = {
-						LAC = { has_focus_tree = lac_revolter_focus_tree }
-						owns_state = 5
+						AND = {
+							LAC = { has_focus_tree = lac_revolter_focus_tree }
+							owns_state = 5
+						}
 					}
 					has_country_flag = CES_burned_man
 				}
@@ -4935,14 +5171,13 @@ country_event = {
 			else_if = {
 				limit = {
 					NOT = {
-						OR = {
+						AND = {
 							LAC = { has_focus_tree = lac_revolter_focus_tree }
 							owns_state = 5
 						}
 					}
 					has_country_flag = CES_burned_man
 				}
-				caius_breaks_off_malpais = yes
 				aurelian_breaks_off = yes
 				vulpes_breaks_off = yes
 				lucius_breaks_off = yes
@@ -4990,6 +5225,13 @@ country_event = {
 						always = yes
 					}
 				}
+			}
+			set_technology = {
+				ghoul_civilization = 1
+				creatures_tech_level_tribal = 1
+				creatures_tech_level_settler = 1
+				feral_tech_access_tech = 1
+				feral_ghouls_unlock_tech = 1
 			}
 		}
 		AUR = {
@@ -5204,6 +5446,7 @@ country_event = {
 				}
 			}
 		}
+
 			CES = {
 				set_autonomy = {
 					target = EHT
@@ -5314,6 +5557,9 @@ country_event = {
 			CES_malp_glory = 1
 		}
 		custom_effect_tooltip = nf_legion.malpais_glory
+		ai_chance = {
+			base = 50
+		}
 	}
 }
 
@@ -5323,7 +5569,7 @@ country_event = {
 	id = nf_legion.91
 	title = nf_legion.91.t
 	desc = nf_legion.91.d
-	picture = event_VEG_wall
+	picture = GFX_event_VEG_wall
 	is_triggered_only = yes
 	option = {
 		name = nf_legion.91.a
@@ -5344,7 +5590,7 @@ country_event = {
 		}
 		add_stability = -0.05
 		# add_to_variable = {
-		# 	CES_stress_level = 1
+		#	CES_stress_level = 1
 		# }
 		# custom_effect_tooltip = CES_stress_increase
 	}
@@ -5411,9 +5657,9 @@ country_event = {
 		custom_effect_tooltip = nf_legion.95.a_tt
 		set_country_flag = CES_healthy
 		ai_chance = {
-			base = 4
+			base = 9
 			modifier = {
-				has_global_flag = death_of_caesar_enabled_flag
+				CES_has_ai_behavior_caesar_death = yes
 				factor = 0
 			}
 		}
@@ -5425,11 +5671,11 @@ country_event = {
 		}
 		add_stability = -0.15
 		custom_effect_tooltip = nf_legion.95.b_tt
-		country_event = nf_legion.70
+		news_event = nf_legion.70
 		ai_chance = {
 			base = 1
 			modifier = {
-				has_global_flag = life_of_caesar_enabled_flag
+				CES_has_ai_behavior_caesar_lives = yes
 				factor = 0
 			}
 		}
@@ -5609,6 +5855,9 @@ country_event = {
 			CES_stress_level = 1
 		}
 		custom_effect_tooltip = nf_legion.104.b_tt
+		ai_chance = {
+			base = 50
+		}
 	}
 }
 
@@ -5632,6 +5881,7 @@ news_event = {
 	title = nf_legion.106.t
 	desc = nf_legion.106.d
 	picture = GFX_event_ncr_won
+		fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = nf_legion.106.a
@@ -5715,11 +5965,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = nf_legion.108.a
-		complete_national_focus = CES_legionary_inger
+		complete_national_focus = CES_legionary_support
 	}
 	option = {
 		name = nf_legion.108.b
-		complete_national_focus = CES_legionary_support
+		complete_national_focus = CES_legionary_inger
 	}
 }
 
@@ -5777,6 +6027,16 @@ country_event = {
 				add_max_trait = 1
 			}
 		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.111.b
@@ -5814,6 +6074,16 @@ country_event = {
 				logistics_skill = 3
 			}
 		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.111.c
@@ -5830,6 +6100,16 @@ country_event = {
 			}
 		}
 		set_country_flag = aurelius_won
+		ai_chance = {
+			base = 25
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+				}
+				factor = 0
+			}
+		}
 	}
 	option = {
 		name = nf_legion.111.e
@@ -5859,10 +6139,18 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			base = 2
+			base = 50
 			modifier = {
-				add = 3
+				add = 75
 				has_character = LAC_lanius	# Bonus chance if Lanius already joined the Legion
+			}
+			modifier = {
+				OR = {
+					has_global_flag = CES_ai_behavior_lucius_global_flag
+					has_global_flag = CES_ai_behavior_aurelius_global_flag
+					has_global_flag = CES_ai_behavior_vulpes_global_flag
+				}
+				factor = 0
 			}
 		}
 	}
@@ -6075,14 +6363,14 @@ country_event = {
 	id = nf_legion.121
 	title = nf_legion.121.t
 	desc = nf_legion.121.d
-	picture = event_VEG_wall
+	picture = GFX_event_VEG_wall
 	is_triggered_only = yes
 	option = {
 		name = nf_legion.121.a
 		set_capital = { state = 211 }
 		211 = {
 			add_core_of = CES
-			set_state_name = "Nova Roma"
+			set_state_name = STATE_211_CES
 		}
 		add_political_power = 25
 		add_stability = -0.025
@@ -6318,6 +6606,154 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = nf_legion.131
+	title = nf_legion.131.t
+	desc = nf_legion.131.d
+	picture = GFX_event_CES_camp_1
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = nf_legion.131.a
+	}
+}
+
+country_event = {
+	id = nf_legion.132
+	title = nf_legion.132.t
+	desc = nf_legion.132.d
+	picture = GFX_event_CES_camp_1
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = nf_legion.132.a
+	}
+}
+
+country_event = {
+	id = nf_legion.133
+	title = nf_legion.133.t
+	desc = nf_legion.133.d
+	picture = GFX_event_ces_ghoul_dogs_picture
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = nf_legion.133.a
+	}
+}
+
+country_event = {
+	id = nf_legion.134
+	title = nf_legion.134.t
+	desc = nf_legion.134.d
+	picture = GFX_event_ces_vulpes_flag
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = nf_legion.134.a
+		custom_effect_tooltip = ces_vlp_fantasticus_puppet_tt
+		hidden_effect = {
+			every_state = {
+				limit = {
+					owner = {
+						original_tag = CES
+					}
+					OR = {
+						is_core_of = MOT
+						is_core_of = MOJ
+						is_core_of = MRA
+						is_core_of = FIE
+					}
+				}
+				MOT = {
+					transfer_state = PREV
+				}
+				add_core_of = MOT
+			}
+			puppet = MOT
+			transfer_units_fraction= {
+				target = MOT
+				size = 0.1
+				stockpile_ratio = 0.1
+				army_ratio = 0.1
+				navy_ratio = 0.1
+				air_ratio = 0.1
+			}
+			MOT = {
+				set_capital = {
+					state = 417
+				}
+				set_cosmetic_tag = MOT_CES
+				load_focus_tree = ces_puppet_nf
+				add_country_leader_role = {
+					character = MOT_fantasticus
+					promote_leader = yes
+					country_leader = {
+						ideology = benevolent_dictatorship
+						desc = MOT_FANTASTICUS_DESC
+						#traits = {
+						#}
+						expire = "3000.01.01.01"
+					}
+				}
+				add_country_leader_role = {
+					character = MOT_fantasticus
+					promote_leader = yes
+					country_leader = {
+						ideology = theodemocracy
+						desc = MOT_FANTASTICUS_DESC
+						#traits = {
+						#}
+						expire = "3000.01.01.01"
+					}
+				}
+				add_country_leader_role = {
+					character = MOT_fantasticus
+					promote_leader = yes
+					country_leader = {
+						ideology = militarist_technocracy
+						desc = MOT_FANTASTICUS_DESC
+						#traits = {
+						#}
+						expire = "3000.01.01.01"
+					}
+				}
+				add_country_leader_role = {
+					character = MOT_fantasticus
+					promote_leader = yes
+					country_leader = {
+						ideology = technocracy
+						desc = MOT_FANTASTICUS_DESC
+						#traits = {
+						#}
+						expire = "3000.01.01.01"
+					}
+				}
+				set_country_flag = color_changed
+			}
+		}
+
+	}
+
+	option = {
+		name = nf_legion.134.b
+		custom_effect_tooltip = ces_vlp_fantasticus_tt
+		set_country_flag = vlp_fanasticus_advisor
+	}
+}
+
 
 ############################################
 ### Legion news events
@@ -6391,156 +6827,11 @@ news_event = {
 	}
 }
 
-country_event = {
-	id = nf_legion.131
-	title = nf_legion.131.t
-	desc = nf_legion.131.d
-	picture = GFX_event_CES_camp_1
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = nf_legion.131.a
-	}
-}
-
-country_event = {
-	id = nf_legion.132
-	title = nf_legion.132.t
-	desc = nf_legion.132.d
-	picture = GFX_event_CES_camp_1
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = nf_legion.132.a
-	}
-}
-
-country_event = {
-	id = nf_legion.133
-	title = nf_legion.133.t
-	desc = nf_legion.133.d
-	picture = GFX_event_ces_ghoul_dogs_picture
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = nf_legion.133.a
-	}
-}
-country_event = {
-	id = nf_legion.134
-	title = nf_legion.134.t
-	desc = nf_legion.134.d
-	picture = GFX_event_ces_vulpes_flag
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = nf_legion.134.a
-		custom_effect_tooltip = ces_vlp_fantasticus_puppet_tt
-		hidden_effect = {
-			every_state = {
-				limit = {
-					owner = {
-						original_tag = CES
-					}
-					OR = {
-						is_core_of = MOT
-						is_core_of = MOJ
-						is_core_of = MRA
-						is_core_of = FIE
-					}
-				}
-				MOT = {
-					transfer_state = PREV
-				}
-				add_core_of = MOT
-			}
-			puppet = MOT
-			transfer_units_fraction= {
-				target = MOT
-				size = 0.1
-				stockpile_ratio = 0.1
-				army_ratio = 0.1
-				navy_ratio = 0.1
-				air_ratio = 0.1
-			}
-			MOT = {
-				set_capital = {
-					state = 417
-				}
-				set_cosmetic_tag = MOT_CES
-				load_focus_tree = ces_puppet_nf
-				add_country_leader_role = {
-					character = MOT_fantasticus
-					promote_leader = yes
-					country_leader = {
-						ideology = benevolent_dictatorship
-						desc = MOT_FANTASTICUS_DESC
-						traits = {
-						}
-						expire = "3000.01.01.01"
-					}
-				}
-				add_country_leader_role = {
-					character = MOT_fantasticus
-					promote_leader = yes
-					country_leader = {
-						ideology = theodemocracy
-						desc = MOT_FANTASTICUS_DESC
-						traits = {
-						}
-						expire = "3000.01.01.01"
-					}
-				}
-				add_country_leader_role = {
-					character = MOT_fantasticus
-					promote_leader = yes
-					country_leader = {
-						ideology = militarist_technocracy
-						desc = MOT_FANTASTICUS_DESC
-						traits = {
-						}
-						expire = "3000.01.01.01"
-					}
-				}
-				add_country_leader_role = {
-					character = MOT_fantasticus
-					promote_leader = yes
-					country_leader = {
-						ideology = technocracy
-						desc = MOT_FANTASTICUS_DESC
-						traits = {
-						}
-						expire = "3000.01.01.01"
-					}
-				}
-				set_country_flag = color_changed
-			}
-		}
-
-	}
-
-	option = {
-		name = nf_legion.134.b
-		custom_effect_tooltip = ces_vlp_fantasticus_tt
-		set_country_flag = vlp_fanasticus_advisor
-	}
-}
-add_namespace = nf_legion_mutants
 ############################################
 #First event chain - Keen looks for Dr Henry
 ############################################
+add_namespace = nf_legion_mutants
+
 country_event = {
 	#Keen starts looking for Henry
 	id =  nf_legion_mutants.1
@@ -6680,6 +6971,7 @@ country_event = {
 }
 
 add_namespace = centurion_event
+
 country_event = {
 	id = centurion_event.1
 	title = centurion_event.1.title

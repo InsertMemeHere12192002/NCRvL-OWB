@@ -103,7 +103,6 @@ set_politics = {
 	ruling_party = ruler
 	elections_allowed = no
 }
-
 add_manpower = 1000
 
 set_popularities = {

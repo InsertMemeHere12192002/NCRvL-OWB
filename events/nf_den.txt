@@ -1,0 +1,779 @@
+﻿add_namespace = nf_den
+
+country_event = {
+	id = nf_den.1
+	title = nf_den.1.t
+	desc = nf_den.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.1.a
+		add_resource = {
+			type = water
+			amount = 8
+			state = 57
+		}
+	}
+
+	option = {
+		name = nf_den.1.b
+		add_ideas = den_trading_location
+	}
+}
+
+country_event = {
+	id = nf_den.2
+	title = nf_den.2.t
+	desc = nf_den.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.2.a
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = 75 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 3
+				state = 57
+			}
+		}
+	}
+
+	option = {
+		name = nf_den.2.b
+		add_manpower = 250
+	}
+}
+
+country_event = {
+	id = nf_den.3
+	title = nf_den.3.t
+	desc = nf_den.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.3.a
+		add_ideas = jetbeta
+	}
+
+	option = {
+		name = nf_den.3.b
+		add_ideas = den_slaveworkers
+	}
+
+	option = {
+		name = nf_den.3.c
+		add_stability = 0.07
+	}
+
+	option = {
+		name = nf_den.3.e
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = 75 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 3
+				state = 57
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.4
+	title = nf_den.4.t
+	desc = nf_den.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.4.a
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = -50 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = -4
+				state = 57
+			}
+		}
+	}
+
+	option = {
+		name = nf_den.4.b
+		remove_ideas = tdn_wannabe_drug_empire
+	}
+
+	option = {
+		name = nf_den.4.c
+		add_manpower = -300
+	}
+}
+
+# country_event = {
+# 	id = nf_den.5
+# 	title = nf_den.5.t
+# 	desc = nf_den.5.d
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		AND = {
+# 			tag = TDN
+# 			TDN = { controls_state = 159 }
+# 		}
+# 	}
+
+# 	option = {
+# 		name = nf_den.5.a
+# 		transfer_state = 159
+# 		add_political_power = 50
+# 		add_stability = 0.03
+# 		add_war_support = 0.03
+# 		TDN  = { white_peace = NEW }
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_den.6
+# 	title = nf_den.6.t
+# 	desc = nf_den.6.d
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		AND = {
+# 			tag = TDN
+# 			NEW = { controls_province = 2598 }
+# 			NEW = { controls_province = 3469 }
+# 		}
+# 	}
+
+# 	option = {
+# 		name = nf_den.6.a
+# 		add_political_power = -100
+# 		add_stability = -0.15
+# 		add_war_support = -0.15
+# 		TDN  = { white_peace = NEW }
+# 		complete_national_focus = den_rebecca_story_1
+# 		delete_unit_template_and_units = { division_template = "Jackal warriors" }
+# 		delete_unit_template_and_units = { division_template = "Tech Samurai" }
+# 		delete_unit_template_and_units = { division_template = "Salvatore" }
+# 		delete_unit_template_and_units = { division_template = "Van Graffs" }
+# 	}
+# }
+
+country_event = {
+	id = nf_den.11
+	title = nf_den.11.t
+	desc = nf_den.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.11.a
+		add_political_power = 30
+		add_stability = 0.03
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = 25 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 1
+				state = 57
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.12
+	title = nf_den.12.t
+	desc = nf_den.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.12.a
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = nf_den.13
+	title = nf_den.13.t
+	desc = nf_den.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.13.a
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = nf_den.14
+	title = nf_den.14.t
+	desc = nf_den.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.14.a
+		add_political_power = 25
+		add_stability = 0.03
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = nf_den.15
+	title = nf_den.15.t
+	desc = nf_den.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.15.a
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = 0.1
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = -25 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 1
+				state = 369
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.16
+	title = nf_den.16.t
+	desc = nf_den.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.16.a
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = 0.1
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = -25 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 1
+				state = 369
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.17
+	title = nf_den.17.t
+	desc = nf_den.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.17.a
+		add_political_power = 30
+		add_stability = 0.03
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = 25 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 1
+				state = 57
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.18
+	title = nf_den.18.t
+	desc = nf_den.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.18.a
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = nf_den.19
+	title = nf_den.19.t
+	desc = nf_den.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.19.a
+		add_political_power = -25
+		add_stability = -0.03
+		add_war_support = -0.03
+	}
+}
+
+country_event = {
+	id = nf_den.20
+	title = nf_den.20.t
+	desc = nf_den.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.20.a
+		add_political_power = 25
+		add_stability = 0.03
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = nf_den.21
+	title = nf_den.21.t
+	desc = nf_den.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.21.a
+		add_stability = -0.03
+		add_war_support = 0.1
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = -25 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 1
+				state = 467
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.22
+	title = nf_den.22.t
+	desc = nf_den.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.22.a
+		add_stability = -0.03
+		add_war_support = 0.1
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = -25 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 1
+				state = 467
+			}
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.23
+	title = nf_den.23.t
+	desc = nf_den.23.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.23.a
+		TDN = {
+			KLA = { become_puppet = yes }
+		}
+		454 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = nf_den.23.b
+	}
+}
+
+country_event = {
+	id = nf_den.24
+	title = nf_den.24.t
+	desc = nf_den.24.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.24.a
+		add_political_power = 25
+		add_stability = 0.05
+	}
+}
+
+country_event = {
+	id = nf_den.25
+	title = nf_den.25.t
+	desc = nf_den.25.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.25.a
+	}
+}
+
+country_event = {
+	id = nf_den.26
+	title = nf_den.26.t
+	desc = nf_den.26.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.26.a
+	}
+}
+
+country_event = {
+	id = nf_den.27
+	title = nf_den.27.t
+	desc = nf_den.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.27.a
+	}
+}
+
+country_event = {
+	id = nf_den.28
+	title = nf_den.28.t
+	desc = nf_den.28.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.28.a
+	}
+}
+
+country_event = {
+	id = nf_den.29
+	title = nf_den.29.t
+	desc = nf_den.29.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.29.a
+	}
+}
+
+country_event = {
+	id = nf_den.30
+	title = nf_den.30.t
+	desc = nf_den.30.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.30.a
+	}
+}
+
+country_event = {
+	id = nf_den.31
+	title = nf_den.31.t
+	desc = nf_den.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.31.a
+		add_stability = -0.1
+		add_war_support = -0.1
+		TDN = { transfer_state = 141 }
+		TDN = { transfer_state = 162 }
+		TDN = { transfer_state = 543 }
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = nf_den.31.b
+		add_war_support = 0.05
+		declare_war_on = {
+			target = TDN
+			type = annex_everything
+		}
+		ai_chance = {
+			base = 2
+		}
+	}
+}
+
+# country_event = {
+# 	id = nf_den.32
+# 	title = nf_den.32.t
+# 	desc = nf_den.32.d
+
+# 	fire_only_once = yes
+
+# 	trigger = {
+# 		AND = {
+# 			tag = NCR
+# 			TDN = { controls_state = 141 }
+# 			TDN = { controls_state = 162 }
+# 			TDN = { controls_state = 543 }
+# 			TDN = { controls_state = 421 }
+# 			TDN = { controls_state = 168 }
+# 			TDN = { controls_state = 135 }
+# 		}
+# 	}
+
+# 	option = {
+# 		name = nf_den.32.a
+# 		add_stability = -0.15
+# 		add_war_support = -0.15
+# 		TDN = { set_state_owner = 141 }
+# 		TDN = { set_state_owner = 162 }
+# 		TDN = { set_state_owner = 543 }
+# 		NCR = { white_peace = TDN }
+# 		ai_chance = {
+# 			base = 1
+# 		}
+# 	}
+
+# 	option = {
+# 		name = nf_den.32.b
+# 		add_stability = -0.3
+# 		add_war_support = -0.3
+# 		ai_chance = {
+# 			base = 0
+# 		}
+# 	}
+# }
+
+
+country_event = {
+	id = nf_den.33
+	title = nf_den.33.t
+	desc = nf_den.33.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.33.a
+		add_stability = 0.07
+	}
+
+	option = {
+		name = nf_den.33.b
+		add_war_support = 0.07
+	}
+}
+
+
+country_event = {
+	id = nf_den.34
+	title = nf_den.34.t
+	desc = nf_den.34.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.34.a
+		57 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+
+	option = {
+		name = nf_den.34.b
+		add_manpower = 500
+	}
+
+	option = {
+		name = nf_den.34.c
+		if = {
+			limit = {
+				has_game_rule = {
+					rule = caps_system_toggle
+					option = ENABLED
+				}
+			}
+			set_temp_variable = { caps_to_add = 30 }
+			add_caps = yes
+		}
+		else = {
+			add_resource = {
+				type = metal
+				amount = 2
+				state = 57
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = nf_den.35
+	title = nf_den.35.t
+	desc = nf_den.35.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.35.a
+		add_stability = 0.15
+		set_politics = {
+			ruling_party = people
+		}
+		set_popularities = {
+			people = 80
+		}
+	}
+}
+
+country_event = {
+	id = nf_den.36
+	title = nf_den.36.t
+	desc = nf_den.36.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = nf_den.36.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		TDN = {
+			ROOT = { become_puppet = yes }
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name = nf_den.36.b
+		ROOT = {
+			TDN = {
+				grant_wargoals_on_core_states_of_prev = yes
+			}
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+}

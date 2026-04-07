@@ -1,5 +1,7 @@
 ﻿capital = 326
 
+oob = WHT_2275
+
 set_technology = {
 	basic_supply_transport_tech = 1
 	infantry_tech_level_tribal = 1
@@ -67,6 +69,9 @@ set_technology = {
 	deathclaw_civilization_access_tech = 1
 	deathclaw_alphas_access_tech = 1
 	gecko_tech_access_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
 
 354 = { add_claim_by = WHT }
@@ -83,17 +88,6 @@ set_technology = {
 324 = { add_claim_by = WHT }
 472 = { add_claim_by = WHT }
 456 = { add_claim_by = WHT }
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-	}
-}
 
 set_stability = 0.4
 set_war_support = 0.4
@@ -128,9 +122,7 @@ add_ideas = {
 	outsider_law_volunteers
 	partial_economic_mobilisation
 }
-# hidden_effect = {
-# 	add_ideas = tech_air_production_nerf_idea
-# }
+
 set_variable = { never_return_stolen_territory = 1 }
 
 recruit_character = WHT_salt_upon_wounds
@@ -138,4 +130,3 @@ recruit_character = WHT_balm_upon_wounds
 recruit_character = WHT_tears_in_the_rain
 
 set_country_flag = infantry_melee_ai
-# vim: set ft=pdx ts=2 sw=2 tw=79 :

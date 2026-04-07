@@ -187,6 +187,42 @@ on_actions = {
 			if = {
 				limit = {
 					FROM = {
+						original_tag = ROT
+					}
+					ROOT = {
+						tag = TOC
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = ROT
+					}
+					TOC = {
+						transfer_state = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = ROS
+					}
+					ROOT = {
+						tag = MCA
+					}
+				}
+				every_state = {
+					limit = {
+						is_core_of = ROS
+					}
+					MCA = {
+						transfer_state = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
 						original_tag = HAN
 					}
 					ROOT = {
@@ -257,6 +293,50 @@ on_actions = {
 							transfer_state = PREV
 						}
 					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = RSR
+					}
+					ROOT = {
+						original_tag = LAC
+						is_caesars_legion_member = yes
+					}
+				}
+				522 = {
+					CES = {
+						transfer_state = PREV
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = LAC
+					}
+					ROOT = {
+						original_tag = EDA
+						has_country_flag = eda_red_sun_revolt
+					}
+				}
+				ROOT = {
+					country_event = nf_eda.24
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						original_tag = MCA
+					}
+					ROOT = {
+						original_tag = ROS
+						has_country_flag = nit_land_deal
+					}
+				}
+				ROS = {
+					country_event = nf_nit.19
 				}
 			}
 			# 	if = {
@@ -376,7 +456,7 @@ on_actions = {
 	#			limit = {
 	#				original_tag = FRA
 	#				has_government = democratic
-	#				is_puppet = no
+	#				is_subject = no
 	#			}
 	#			drop_cosmetic_tag = yes
 	#		}
@@ -796,6 +876,79 @@ on_actions = {
 			SLN = {
 				activate_mission = SLN_vision_quest_countdown
 			}
+			JCT = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = { has_tech = heavy_infantry_tech_1 }
+					}
+					set_technology = {
+						heavy_infantry_tech_1 = 1
+						popup = no
+					}
+				}
+			}
+			ORC = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = { has_tech = heavy_infantry_tech_1 }
+					}
+					set_technology = {
+						heavy_infantry_tech_1 = 1
+						popup = no
+					}
+				}
+			}
+			SHA = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = { has_tech = heavy_infantry_tech_1 }
+					}
+					set_technology = {
+						heavy_infantry_tech_1 = 1
+						popup = no
+					}
+				}
+			}
+			TRL = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = { has_tech = heavy_infantry_tech_1 }
+					}
+					set_technology = {
+						heavy_infantry_tech_1 = 1
+						spec_ops_equipment_tech_1 = 1
+						popup = no
+					}
+				}
+			}
+			UOA = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = { has_tech = heavy_infantry_tech_1 }
+					}
+					set_technology = {
+						heavy_infantry_tech_1 = 1
+						popup = no
+					}
+				}
+			}
+			UTO = {
+				if = {
+					limit = {
+						is_ai = no
+						NOT = { has_tech = heavy_infantry_tech_1 }
+					}
+					set_technology = {
+						heavy_infantry_tech_1 = 1
+						popup = no
+					}
+				}
+			}
 		}
 	}
 
@@ -1004,24 +1157,28 @@ on_actions = {
 							}
 							AND = {
 								FROM = {
+									tag = ROB
+								}
+								NOT = {
+									is_character = ROB_doki_doki
+								}
+							}
+							AND = {
+								FROM = {
 									tag = MOJ
 								}
-								OR = {
+								NOT = {
 									is_character = MOJ_vera_keyes
 									is_character = MOJ_primm_slim
 								}
 							}
 							AND = {
 								FROM = {
-									tag = ROB
-								}
-								is_character = ROB_doki_doki
-							}
-							AND = {
-								FROM = {
 									tag = PET
 								}
-								is_character = PET_petronet
+								NOT = {
+									is_character = PET_petronet
+								}
 							}
 						}
 					}
@@ -1143,26 +1300,16 @@ on_actions = {
 	# root country that paradrops
 	# scope state that is paradroped into
 	# from scope state that the paradrop started
-	on_paradrop = {
-		effect = {
-			set_country_flag = has_paradropped_flag
-		}
-	}
+
+	#on_paradrop = {
+	#	effect = {
+	#		set_country_flag = has_paradropped_flag
+	#	}
+	#}
 	on_ruling_party_change = {
 		effect = {
 		}
 	}
-
-
-	# ROOT is capitulated country, FROM is winner
-	# on_peaceconference_ended = {
-	# 	effect = {
-	# 		set_temp_variable = {
-	# 			slaves_to_add = 0.40
-	# 		}
-	# 		add_slaves_to_nation = yes
-	# 	}
-	# }
 
 	#ROOT = attacking side
 	#FROM = defending side
@@ -1225,4 +1372,135 @@ on_actions = {
 			}
 		}
 	}
+		#Removed in 5.1 because this was here to make it that LAC could fight a non-bordering MXC-CHC alliance. Now that alliance requires a border, so we can remove this and it's fine. - Zusk
+	#on_capitulation = {
+    #    effect = {
+    #        if = {
+    #            limit = {
+    #               ROOT = { tag = MXC }
+    #               FROM = { tag = LAC }
+	#				MXC = { is_ally_with = CHC }
+	#				LAC = { has_war_with = CHC }
+	#				NOT = {
+	#					LAC = { is_neighbor_of = CHC }
+	#				}
+    #           }
+	#			LAC = { country_event = nf_lanius.34 }
+    #        }
+    #    }
+    #}
+
+	on_capitulation = { #Peace message on action
+		effect = {
+			set_variable = { global.winning_country = FROM }
+			set_variable = { global.losing_country = ROOT }
+
+			clr_global_flag = show_west_coast_peace
+			clr_global_flag = show_north_peace
+			clr_global_flag = show_mexico_peace
+			clr_global_flag = show_midwest_peace
+			clr_global_flag = show_east_peace
+			clr_global_flag = show_carib_peace
+
+
+			if = {
+				limit = {
+					OR = {
+						FROM = { capital_scope = { is_on_continent = west_coast } }
+						ROOT = { capital_scope = { is_on_continent = west_coast } }
+					}
+				}
+				set_global_flag = show_west_coast_peace
+				log = "This is west coast peace!"
+			}
+			if = {
+				limit = {
+					OR = {
+						FROM = { capital_scope = { is_on_continent = northern_reaches } }
+						ROOT = { capital_scope = { is_on_continent = northern_reaches } }
+					}
+				}
+				set_global_flag = show_north_peace
+				log = "This is north peace!"
+			}
+			if = {
+				limit = {
+					OR = {
+						FROM = { capital_scope = { is_on_continent = land_of_titans } }
+						ROOT = { capital_scope = { is_on_continent = land_of_titans } }
+					}
+				}
+				set_global_flag = show_mexico_peace
+				log = "This is Mexico peace!"
+			}
+			if = {
+				limit = {
+					OR = {
+						FROM = { capital_scope = { is_on_continent = midwest } }
+						ROOT = { capital_scope = { is_on_continent = midwest } }
+					}
+				}
+				set_global_flag = show_midwest_peace
+			}
+			if = {
+				limit = {
+					OR = {
+						FROM = { capital_scope = { is_on_continent = east_coast } }
+						ROOT = { capital_scope = { is_on_continent = east_coast } }
+					}
+				}
+				set_global_flag = show_east_peace
+			}
+			if = {
+				limit = {#Test
+					OR = {
+						FROM = { capital_scope = { is_on_continent = caribbean_expanse } }
+						ROOT = { capital_scope = { is_on_continent = caribbean_expanse } }
+					}
+				}
+				set_global_flag = show_carib_peace
+			}
+
+			every_country = {
+				limit = {
+					is_ai = no #Put this first for performance reasons — all below checks are skipped if AI
+					NOT = { check_variable = { peace_message_var = 3 } }
+					OR = {
+						check_variable = { peace_message_var = 2 }
+						if = { limit = { has_global_flag = show_west_coast_peace }
+							capital_scope = { is_on_continent = west_coast }
+							log = "[THIS.GetName] is Capital is on west!"
+						}
+						else_if = { limit = { has_global_flag = show_north_peace }
+							capital_scope = { is_on_continent = northern_reaches }
+							log = "Capital is on north!"
+						}
+						else_if = { limit = { has_global_flag = show_mexico_peace }
+							capital_scope = { is_on_continent = land_of_titans }
+							log = "Capital is on mexico!"
+						}
+						else_if = { limit = { has_global_flag = show_midwest_peace }
+							capital_scope = { is_on_continent = midwest }
+							log = "Capital is on midwest!"
+						}
+						else_if = { limit = { has_global_flag = show_east_peace }
+							capital_scope = { is_on_continent = east_coast }
+							log = "Capital is on east!"
+						}
+						else_if = { limit = { has_global_flag = show_carib_peace }
+							capital_scope = { is_on_continent = caribbean_expanse }
+							log = "Capital is on carib!"
+						}
+						else = {
+							always = no
+						}
+					}
+				}
+				set_variable = { winning_country = global.winning_country }
+				set_variable = { losing_country = global.losing_country }
+				set_country_flag = peace_message_gui_active
+			}
+		}
+	}
+
 }

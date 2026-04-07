@@ -176,6 +176,10 @@ shi_bay_control_desc:0 "We have secured our existance against the meddlesome Bea
   nf_shi.29.t:0 "A Belated Gift"
   nf_shi.29.d:0 "While dredging the San Francisco Bay, our men found something that was immediately brought to [Root.GetLeader]’s attention. Arriving at the nearest cove, the anomaly rests on a puddle of mud that it brought with it from the bottom of the bay. The bomb stood resolute under the intense gaze of [Root.GetLeader], as did the message written on the side of the Old World’s Bane."
   nf_shi.29.a:0 "With Love\nFrom §PThe Enclave§!"
+  
+  nf_shi.30.t:0 "Last Aboard"
+  nf_shi.30.d:0 "A crowd had gathered at the harbor of San Francisco. A decent sized ship, having come from as far north as perhaps Alaska, managed to crash right into the docks and come to a halt without a single soul in sight. Nobody was hurt, but a ship piloted by ghosts led to much unsettlement among those who worked by the sea. As a result, the [SHI.GetName] sent a team to investigate the vessel, led by Master Tang.\n\nThe report he brought back was a remarkable story of how one stowaway, who had hidden himself to avenge his family, managed to wipe out the entire ship using nothing but his body and a Power Fist. Some were still alive, unconscious yet breathing. Others had been thrown overboard and would be found over the coming days partially eaten by the sea life. Others still were dead outright, with one man's head twisted a hundred and eighty degrees vertically. Master Tang's proposal was to immediately induct who was clearly a great and powerful warrior into our ranks. A shame that his tongue has an... interesting mutation."
+  nf_shi.30.a:0 "Surely, he knows what he's doing!"
 
   ### Traits
   ncr_best_friend:0 "The NCR's Sifu"

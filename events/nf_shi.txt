@@ -218,6 +218,7 @@ country_event = {
 	option = {
 		name = nf_shi.8.a
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.25
 			uses = 4
 			category = naval_tech_category
@@ -246,6 +247,7 @@ country_event = {
 	option = {
 		name = nf_shi.9.b
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.7
 			uses = 2
 			category = computing_tech
@@ -265,8 +267,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_independent = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_independent
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -282,8 +284,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -314,8 +316,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -335,8 +337,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_independent = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_independent
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -360,8 +362,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_independent = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_independent
 				}
 				factor = 0
 			}
@@ -428,8 +430,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_independent = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_independent
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -446,8 +448,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -463,8 +465,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_independent = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_independent
 				}
 				factor = 0
 			}
@@ -491,8 +493,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_independent = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_independent
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -502,6 +504,7 @@ country_event = {
 			popularity = 0.05
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.70
 			uses = 2
 			category = industry_specialisation_category
@@ -512,8 +515,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -523,6 +526,7 @@ country_event = {
 			popularity = 0.10
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.70
 			uses = 2
 			category = infantry_tech_category
@@ -534,8 +538,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_independent = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_independent
 				}
 				factor = 0
 			}
@@ -545,6 +549,7 @@ country_event = {
 			popularity = 0.20
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.70
 			uses = 2
 			category = electronics
@@ -567,8 +572,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_independent = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_independent
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -604,8 +609,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -622,8 +627,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_independent = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_independent
 				}
 				factor = 0
 			}
@@ -649,8 +654,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_independent = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_independent
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -671,6 +676,7 @@ country_event = {
 			swap_ideas = { remove_idea = shi_two_schools_1c add_idea = shi_two_schools_1c_2a }
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.70
 			uses = 2
 			category = tool_tech
@@ -681,8 +687,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_bos = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_bos
 				}
 				factor = 0
 			}
@@ -709,8 +715,8 @@ country_event = {
 		ai_chance = {
 			modifier = {
 				OR = {
-					SHI_has_ai_behavior_ncr = yes
-					SHI_has_ai_behavior_independent = yes
+					has_country_flag = SHI_ai_behavior_ncr
+					has_country_flag = SHI_ai_behavior_independent
 				}
 				factor = 0
 			}
@@ -813,6 +819,8 @@ country_event = {
 			set_country_flag = san_francisco_chapter_established
 			set_cosmetic_tag = SHI_BOS
 			set_politics = { ruling_party = intellectuals elections_allowed = no }
+			retire_character = SHI_Xu_Luqi
+			retire_character = SHI_Chang_Ho
 			NCR = {
 				diplomatic_relation = {
 					country = SHI
@@ -841,13 +849,18 @@ country_event = {
 				elites > party_popularity@people
 			}
 			set_politics = { ruling_party = elites elections_allowed = no }
+			retire_character = SHI_Xu_Luqi
+			retire_character = SHI_Knight_Gou
 			custom_effect_tooltip = spacer_tt
 			custom_effect_tooltip = AKIGAHAI_TT
 			hidden_effect = {
-				create_corps_commander = {
-					name = "Akigahai"
-					picture = GFX_Portrait_SHI_leader
-					traits = { perceptive_trait intelligent_trait charismatic_trait }
+				add_corps_commander_role = {
+					character = SHI_Akigahai
+					traits = {
+						perceptive_trait
+						intelligent_trait
+						charismatic_trait
+					}					
 					skill = 4
 					attack_skill = 3
 					defense_skill = 1
@@ -884,10 +897,16 @@ country_event = {
 			add_ideas = united_kingdom_shi
 			#set_cosmetic_tag = SHI_NCR
 			# create_or_join_new_california = yes	#NOTE# wanted the choice to be made by focus
-			create_corps_commander = {
-				name = "Lo Pan"
-				picture = GFX_Portrait_SHI_lo_pan
-				traits = { strong_trait perceptive_trait enduring_trait agile_trait }
+			retire_character = SHI_Chang_Ho
+			retire_character = SHI_Knight_Gou
+			add_corps_commander_role = {
+			character = SHI_lo_pan
+			traits = {
+					strong_trait
+					perceptive_trait
+					enduring_trait
+					agile_trait
+				}				
 				skill = 2
 				attack_skill = 2
 				defense_skill = 1
@@ -939,6 +958,7 @@ country_event = { #ask for peace
 			has_government = ruler
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.4
 			uses = 1
 			category = cat_land_doctrine	#NOTE# should give bonus to land doctrine
@@ -1166,6 +1186,7 @@ country_event = {
 	option = {
 		name = nf_shi.26.a
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.4
 			uses = 8
 			category = vehicle_tech_category
@@ -1178,6 +1199,7 @@ country_event = {
 		name = nf_shi.26.b
 		add_tech_bonus = {
 			#name = doctrine_bonus
+			name = tech_bonus_event_tt
 			bonus = 0.6
 			uses = 4
 			category = air_tech_category
@@ -1190,6 +1212,7 @@ country_event = {
 		name = nf_shi.26.c
 		add_tech_bonus = {
 			#name = doctrine_bonus
+			name = tech_bonus_event_tt
 			bonus = 0.4
 			uses = 8
 			category = robotics_tech_category
@@ -1261,7 +1284,7 @@ country_event = {
 			set_cosmetic_tag = SHI_NCR
 		}
 		add_political_power = -300
-		set_party_name = { ideology = elites  name = "The True Serpent School" long_name = "The True Serpent School" }
+		set_party_name = { ideology = elites  name = SHI_serpent_school_short long_name = SHI_serpent_school_long }
 	}
 }
 country_event = {
@@ -1280,7 +1303,32 @@ country_event = {
 		}
 	}
 }
+#Shi Wild Wasteland Kung Pow
+country_event = {
+	id = nf_shi.30
+	title = nf_shi.30.t
+	desc = nf_shi.30.d
+	picture = GFX_event_deadly_dispute
+	is_triggered_only = yes
+	fire_only_once = yes
 
+	option = {
+		name = nf_shi.30.a
+		add_corps_commander_role = {
+			character = SHI_Hung_Wei_Lo
+			traits = { lucky_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+			desc = SHI_HUNG_WEI_LO_DESC
+		}
+		hidden_effect = { scoped_sound_effect = "power_fist" }
+		hidden_effect = { scoped_sound_effect = "wild_wasteland" }
+	}
+}
 
 add_namespace = nf_shi_april
 
@@ -1355,7 +1403,7 @@ country_event = {
 			has_country_flag = norton_cured
 		}
     }
-    fire_only_once = no
+
     mean_time_to_happen = { days = 45 }
     option = {
         name = nf_shi_april.3.a
@@ -1379,7 +1427,7 @@ country_event = {
 			has_country_flag = norton_cured
 		}
     }
-    fire_only_once = no
+    
     mean_time_to_happen = { days = 45 }
     option = {
         name = nf_shi_april.4.a
@@ -1463,33 +1511,33 @@ country_event = {
 
     }
 }
-country_event = {
-    id = nf_shi_april.9
-    title = nf_shi_april.9.t
-    desc = nf_shi_april.9.d
-	picture = GFX_event_HEA_shadowy_cabal
-    trigger = {
-        tag = SHI
-    }
-    fire_only_once = yes
-	is_triggered_only = yes
-    option = {
-        name = nf_shi_april.9.a
-		set_country_flag = norton_cured
-
-    }
-	option = {
-        name = nf_shi_april.9.b
-
-		USA = {
-			annex_country = {
-				target = SHI
-				transfer_troops = yes
-			}
-		}
-
-    }
-}
+#country_event = {
+#    id = nf_shi_april.9
+#    title = nf_shi_april.9.t
+#    desc = nf_shi_april.9.d
+#	picture = GFX_event_HEA_shadowy_cabal
+#    trigger = {
+#        tag = SHI
+#    }
+#    fire_only_once = yes
+#	is_triggered_only = yes
+#    option = {
+#        name = nf_shi_april.9.a
+#		set_country_flag = norton_cured
+#
+#    }
+#	option = {
+#        name = nf_shi_april.9.b
+#
+#		USA = {
+#			annex_country = {
+#				target = SHI
+#				transfer_troops = yes
+#			}
+#		}
+#
+#    }
+#}
 country_event = {
     id = nf_shi_april.10
     title = nf_shi_april.10.t

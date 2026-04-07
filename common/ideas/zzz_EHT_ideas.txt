@@ -1,5 +1,7 @@
 ideas = {
 	country = {
+
+		
 		roaring_machines_eht = {
 			picture = generic_armor
 

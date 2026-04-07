@@ -99,3 +99,20 @@ VEG_CES_threat_to_region = {
 		value = 50
 	}
 }
+
+VEG_ignore_claims_if_CES_alive = {
+	allowed = {
+		original_tag = VEG
+	}
+	enable = {
+		country_exists = CES
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = ignore_claim
+		id = "SKY"
+		value = 1
+	}
+}

@@ -2,6 +2,8 @@
 add_namespace = nf_lanius_integration
 add_namespace = nf_lanius_revolter
 add_namespace = nf_lanius_ces_relations
+add_namespace = nf_lanius_vulpes_scheme
+
 country_event = {
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event nf_lanius.1"
@@ -400,11 +402,11 @@ news_event = {
 news_event = {
 	id = nf_lanius.18
 	title = nf_lanius.18.t
-	desc = nf_lanius.16.d
+	desc = nf_lanius.18.d
 	picture = GFX_event_lanius_cool
 	is_triggered_only = yes
 	option = {
-		name = nf_lanius.16.a
+		name = nf_lanius.18.a
 
 	}
 }
@@ -526,7 +528,7 @@ news_event = {
 	id = nf_lanius.20
 	title = nf_lanius.20.t
 	desc = nf_lanius.20.d
-	picture = GFX_event_sub_generic_fortress
+	picture = GFX_event_mr_entertainment_news
 	is_triggered_only = yes
 	option = {
 		name = nf_lanius.20.a
@@ -598,7 +600,7 @@ news_event = {
 			}
 			support = {
 				anti_tank_company = { x = 0 y = 0 }
-				recon_company = { x = 1 y = 0 }
+				recon_company = { x = 0 y = 1 }
 			}
 		}
 		set_division_template_lock = {
@@ -829,9 +831,34 @@ news_event = {
 				type = metal
 				amount = 4
 			}
+						add_resource = {
+				type = composites
+				amount = 3
+			}
+			add_resource = {
+				type = circuitry
+				amount = 3
+			}
 		}
 	}
 }
+
+#country_event = {
+#	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_lanius.32" }
+#	id = nf_lanius.34
+#	title = nf_lanius.34.t
+#	desc = nf_lanius.34.d
+#	picture = GFX_event_ENC_legion_conquest
+#	is_triggered_only = yes
+#	option = {
+#		name = nf_lanius.34.a #painted rock wargoal to stop the forever war with CHC
+#		activate_mission = the_conquest_of_the_painted_rock
+#		hidden_effect = {
+#			PAR = { activate_mission = the_conquest_of_the_painted_rock }
+#			CHC = { activate_mission = the_conquest_of_the_painted_rock }
+#		}
+#	}
+#}
 
 #Event chain about CES integrating LAC
 #Planning to return home
@@ -1376,6 +1403,7 @@ country_event = {
 	option = {
 		name = nf_lanius_integration.23.1s
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 1
 			uses = 2
 			category = med_tech
@@ -1384,6 +1412,7 @@ country_event = {
 	option = {
 		name = nf_lanius_integration.23.2
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 1
 			uses = 2
 			category = agriculture_tech
@@ -1504,7 +1533,7 @@ country_event = {
 	id = nf_lanius_ces_relations.1
 	title = nf_lanius_ces_relations.1.t
 	desc = nf_lanius_ces_relations.1.d
-	picture =  GFX_event_caesar_death
+	picture =  GFX_event_caesar_judgement
 	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {

@@ -3,9 +3,11 @@
 #						   #
 #           			   #
 # Coded by Wcht  & Faeelin #
+# Maintained by Zusk       #
 ############################
 
 add_namespace = nf_navajo
+add_namespace = nf_navajo_land_request
 
 country_event = {#navajo
 	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo.1" }
@@ -114,6 +116,7 @@ country_event = {#navajo
 	option = {
 		name = nf_navajo.3.b
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.5
 			uses = 2
 			category = spec_force_tech_category
@@ -175,10 +178,6 @@ news_event = {#reservation
 			set_temp_variable = { caps_to_add = 20 }
 			add_caps = yes
 		}
-		# set_temp_variable = {
-		# 	slaves_to_add = 0.90
-		# }
-		# add_slaves_to_nation = yes
 	}
 
 }
@@ -213,10 +212,6 @@ news_event = {#reservation
 			set_temp_variable = { caps_to_add = 20 }
 			add_caps = yes
 		}
-		# set_temp_variable = {
-		# 	slaves_to_add = 0.90
-		# }
-		# add_slaves_to_nation = yes
 	}
 
 }
@@ -276,7 +271,7 @@ news_event = {# Navajo War
 		end_puppet = NAV
 		CES = {
 			NAV = {
-				grant_wargoals_on_core_states_of_prev = yes
+				grant_wargoals_on_core_states_of_prev_force_ai_war = yes
 			}
 		}
 		#NAV = { leave_faction = yes }
@@ -284,10 +279,10 @@ news_event = {# Navajo War
 }
 
 country_event = {# Navajo ask for Chinle
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo.10" }
-	id = nf_navajo.10
-	title = nf_navajo.10.t
-	desc = nf_navajo.10.t
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo_land_request.1" }
+	id = nf_navajo_land_request.1
+	title = nf_navajo_land_request.1.t
+	desc = nf_navajo_land_request.1.d
 	picture = GFX_event_navajo_1
 	is_triggered_only = yes
 
@@ -299,9 +294,21 @@ country_event = {# Navajo ask for Chinle
 			remove_core_of = CES
 			remove_claim_by = CES
 		}
-		NAV = { transfer_state = 482 }
-		482 = { add_core_of = NAV }
-		482 = {
+		NAV = { transfer_state = 439 }
+		439 = { add_core_of = NAV }
+		439 = {
+			remove_core_of = CES
+			remove_claim_by = CES
+		}
+		NAV = { transfer_state = 85 }
+		85 = { add_core_of = NAV }
+		85 = {
+			remove_core_of = CES
+			remove_claim_by = CES
+		}
+		NAV = { transfer_state = 164 }
+		164 = { add_core_of = NAV }
+		164 = {
 			remove_core_of = CES
 			remove_claim_by = CES
 		}
@@ -314,29 +321,42 @@ country_event = {# Navajo ask for Chinle
 }
 
 country_event = {# Navajo ask for New Cortez, Dove Creek
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo.11" }
-	id = nf_navajo.11
-	title = nf_navajo.11.t
-	desc = nf_navajo.11.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo_land_request.2" }
+	id = nf_navajo_land_request.2
+	title = nf_navajo_land_request.2.t
+	desc = nf_navajo_land_request.2.d
 	picture = GFX_event_navajo_1
 	is_triggered_only = yes
 
 	option = {
-		name = nf_navajo.11.a
-		NAV = { transfer_state = 482 }
-		482 = { add_core_of = NAV }
+		name = nf_navajo_land_request.2.a
+
 		NAV = { transfer_state = 244 }
 		244 = { add_core_of = NAV }
 		244 = {
 			remove_core_of = CES
 			remove_claim_by = CES
 		}
+		NAV = { transfer_state = 482 }
+		482 = { add_core_of = NAV }
 		482 = {
 			remove_core_of = CES
 			remove_claim_by = CES
 		}
+		NAV = { transfer_state = 427 }
+		427 = { add_core_of = NAV }
+		427 = {
+			remove_core_of = CES
+			remove_claim_by = CES
+		}
+		NAV = { transfer_state = 402 }
+		402 = { add_core_of = NAV }
+		402 = {
+			remove_core_of = CES
+			remove_claim_by = CES
+		}
 		ai_chance = {
-			base = 1
+			base = 3
 		}
 		add_to_variable = { NAV_loyalty = 1 }
 		custom_effect_tooltip = NAV_good_friends_tt
@@ -344,15 +364,15 @@ country_event = {# Navajo ask for New Cortez, Dove Creek
 }
 
 country_event = {# Navajo ask for New Cortez, Dove Creek
-	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo.12" }
-	id = nf_navajo.12
-	title = nf_navajo.12.t
-	desc = nf_navajo.12.d
+	immediate = { log = "[GetDateText]: [Root.GetName]: event nf_navajo_land_request.3" }
+	id = nf_navajo_land_request.3
+	title = nf_navajo_land_request.3.t
+	desc = nf_navajo_land_request.3.d
 	picture = GFX_event_navajo_1
 	is_triggered_only = yes
 
 	option = {
-		name = nf_navajo.12.a
+		name = nf_navajo_land_request.3.a
 		NAV = { transfer_state = 124 }
 		124 = { add_core_of = NAV }
 		NAV = { transfer_state = 608 }
@@ -384,7 +404,7 @@ country_event = {# Navajo ask for New Cortez, Dove Creek
 			remove_claim_by = CES
 		}
 		ai_chance = {
-			base = 1
+			base = 3
 		}
 		add_to_variable = { NAV_loyalty = 1 }
 		custom_effect_tooltip = NAV_good_friends_tt
@@ -401,10 +421,13 @@ country_event = {# Navajo ask for freedom
 
 	option = {
 		name = nf_navajo.13.a
-		end_puppet = NAV
+		custom_effect_tooltip = NAV_become_ally_not_puppet
+		hidden_effect = {
+			end_puppet = NAV
+		}
 		add_ideas = CES_nav_loyalty
 		ai_chance = {
-			base = 1
+			base = 10
 		}
 		NAV = { transfer_state = 439 }
 		439 = { add_core_of = NAV }

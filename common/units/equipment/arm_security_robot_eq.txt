@@ -12,15 +12,6 @@ equipments = {
 
 		interface_category = interface_category_armor
 
-		upgrades = {
-			#pa_redundancy_upgrade
-			#pa_production_upgrade
-			#pa_plating_upgrade
-			#pa_shock_upgrade
-			#pa_servo_motion_upgrade
-			#rob_brain_upgrade
-		}
-
 		#Misc Abilities
 		maximum_speed = 5.5
 		reliability = 0.85
@@ -44,6 +35,10 @@ equipments = {
 
 		build_cost_ic = 6
 		resources = {
+			metal = 2
+			composites = 1
+			circuitry = 1
+			advanced = 1
 		}
 
 	}

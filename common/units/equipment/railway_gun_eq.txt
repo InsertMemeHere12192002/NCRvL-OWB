@@ -9,9 +9,7 @@ equipments = {
 		group_by = archetype
 		is_buildable = no
 		can_license = no
-		
 		interface_category = interface_category_land
-		
 		active = yes
 
 		#Misc Abilities
@@ -19,11 +17,13 @@ equipments = {
 		maximum_speed = 5
 
 		#Offensive Abilities
+		# range is set with an index in define array RAILWAY_GUN_POSSIBLE_RANGES (default is index 0)
 		railway_gun_attack = 45
 		railway_gun_attack_range_index_in_define = 0
 		railway_gun_hours_between_redistribution = 36
 		
 		manpower = 1000
+
 	}
 
 	railway_gun_equipment_1 = {
@@ -41,9 +41,11 @@ equipments = {
 		railway_gun_attack_range_index_in_define = 0
 		railway_gun_hours_between_redistribution = 36
 		resources = {
-			metal = 1
+			metal = 3
+			water = 2
 		}		
 	}
+	
 	railway_gun_equipment_2 = {
 		year = 2279
 

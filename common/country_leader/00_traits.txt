@@ -1098,6 +1098,15 @@ leader_traits = {
 		political_power_factor = 0.10
 	}
 
+		ncr_follower_theorist = {
+		random = no
+		experience_gain_army = 0.05
+		experience_gain_navy = 0.05
+		experience_gain_air = 0.05
+		experience_loss_factor = -0.1
+
+	}
+
 	old_worldist = {
 		random = no
 		research_speed_factor = 0.02
@@ -1110,7 +1119,6 @@ leader_traits = {
 		production_speed_buildings_factor = 0.05
 		conscription_factor = 0.05
 	}
-
 
 	baron_connections = {
 		random = no
@@ -1190,6 +1198,17 @@ leader_traits = {
 		}
 	}
 
+		lanius_caesars_voice = {
+		random = no
+		resistance_target = -0.05
+		training_time_factor = -0.2
+		compliance_gain = 0.02
+		#autonomy_gain = -0.50
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
 	lac_frontier_justice = {
 		random = no
 		production_speed_buildings_factor = -0.05
@@ -1252,7 +1271,8 @@ leader_traits = {
 		random = no
 		stability_factor = -0.1
 		war_support_factor = -0.1
-		special_forces_min = 20 #special_forces_cap = 0.05
+		special_forces_min = 20 
+		#special_forces_cap = 0.05
 		conscription_factor = 0.1
 		ai_will_do = {
 			factor = 1
@@ -1561,6 +1581,14 @@ leader_traits = {
 	military_theorist = {
 		sprite = 14
 		experience_gain_army = 0.3
+		ai_will_do = {
+			factor = 500
+		}
+	}
+		military_theorist_no_sprite = {
+		experience_gain_army = 0.15
+		experience_gain_navy = 0.15
+		experience_gain_air = 0.05
 		ai_will_do = {
 			factor = 500
 		}
@@ -2179,7 +2207,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_reform_1 = {  # Rate at which air experience is gained increases by 5%
+	air_chief_reform_1 = {	# Rate at which air experience is gained increases by 5%
 		sprite = 5
 		experience_gain_air_factor = 0.05
 
@@ -2188,7 +2216,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_reform_2 = {  # Rate at which air experience is gained increases by 10%
+	air_chief_reform_2 = {	# Rate at which air experience is gained increases by 10%
 		sprite = 5
 		experience_gain_air_factor = 0.1
 
@@ -2197,7 +2225,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_reform_3 = {  # Rate at which air experience is gained increases by 15%
+	air_chief_reform_3 = {	# Rate at which air experience is gained increases by 15%
 		sprite = 5
 		experience_gain_air_factor = 0.15
 
@@ -2206,7 +2234,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_safety_1 = {  # Rate of air accidents reduced by 5%
+	air_chief_safety_1 = {	# Rate of air accidents reduced by 5%
 		sprite = 1
 		air_accidents_factor = -0.05
 
@@ -2215,7 +2243,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_safety_2 = {  # Rate of air accidents reduced by 10%
+	air_chief_safety_2 = {	# Rate of air accidents reduced by 10%
 		sprite = 1
 		air_accidents_factor = -0.1
 
@@ -2224,7 +2252,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_safety_3 = {  # Rate of air accidents reduced by 15%
+	air_chief_safety_3 = {	# Rate of air accidents reduced by 15%
 		sprite = 1
 		air_accidents_factor = -0.15
 
@@ -2270,7 +2298,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_ground_support_1 = {  # Air superiority impact on land units improved by 5%
+	air_chief_ground_support_1 = {	# Air superiority impact on land units improved by 5%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.05
 
@@ -2279,7 +2307,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_ground_support_2 = {  # Air superiority impact on land units improved by 10%
+	air_chief_ground_support_2 = {	# Air superiority impact on land units improved by 10%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.1
 
@@ -2288,7 +2316,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_ground_support_3 = {  # Air superiority impact on land units improved by 15%
+	air_chief_ground_support_3 = {	# Air superiority impact on land units improved by 15%
 		sprite = 2
 		army_bonus_air_superiority_factor = 0.15
 
@@ -2298,7 +2326,7 @@ leader_traits = {
 	}
 
 	# using factor in stead of values because it is applied in ALL weathers (means bonus in good weather)
-	air_chief_all_weather_1 = {  # +5 bad weather air efficiency
+	air_chief_all_weather_1 = {	 # +5 bad weather air efficiency
 		sprite = 1
 		air_weather_penalty = -0.1
 
@@ -2307,7 +2335,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_all_weather_2 = {  # +10 bad weather air efficiency
+	air_chief_all_weather_2 = {	 # +10 bad weather air efficiency
 		sprite = 1
 		air_weather_penalty = -0.2
 
@@ -2316,7 +2344,7 @@ leader_traits = {
 		}
 	}
 
-	air_chief_all_weather_3 = {  # +15 bad weather air efficiency
+	air_chief_all_weather_3 = {	 # +15 bad weather air efficiency
 		sprite = 1
 		air_weather_penalty = -0.3
 
@@ -2385,6 +2413,7 @@ leader_traits = {
 			factor = 3
 		}
 	}
+
 	air_bomber_interception_1 = { # Bomber Interception mission efficiency increased by 4%
 		sprite = 1
 		air_intercept_efficiency = 0.02
@@ -2493,7 +2522,6 @@ leader_traits = {
 		}
 	}
 
-
 	# Removed?
 	air_tactical_bombing_1 = { # Tactical Bombing mission efficiency increased
 		sprite = 2
@@ -2521,6 +2549,41 @@ leader_traits = {
 			factor = 3
 		}
 	}
+	
+	# No suitable replacement for these modifiers now that PDX deleted them and they aren't referenced elsewhere @Tran
+
+	# air_airborne_1 = { # Paratrooper drop efficiency increased by 4%
+	#	sprite = 1
+	#	air_paradrop_attack_factor = 0.01
+	#	air_paradrop_defence_factor = 0.03
+	#	air_paradrop_agility_factor = 0.03
+
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	# }
+
+	# air_airborne_2 = { # Paratrooper drop efficiency increased by 8%
+	#	sprite = 1
+	#	air_paradrop_attack_factor = 0.02
+	#	air_paradrop_defence_factor = 0.05
+	#	air_paradrop_agility_factor = 0.05
+
+	#	ai_will_do = {
+	#		factor = 2
+	#	}
+	# }
+
+	# air_airborne_3 = { # Paratrooper drop efficiency increased by 12%
+	#	sprite = 1
+	#	air_paradrop_attack_factor = 0.03
+	#	air_paradrop_defence_factor = 0.07
+	#	air_paradrop_agility_factor = 0.07
+
+	#	ai_will_do = {
+	#		factor = 3
+	#	}
+	# }
 
 	navy_chief_naval_aviation_1 = {
 		sprite = 1
@@ -3385,6 +3448,14 @@ leader_traits = {
 			factor = 1
 		}
 	}
+		captain_crabeater_trait = {
+		random = no
+		naval_invasion_penalty = -0.1
+		convoy_raiding_efficiency_factor = 0.075
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	nagor_reclusive = {
 		random = no
 		trade_opinion_factor = -0.2
@@ -3535,7 +3606,8 @@ leader_traits = {
 		random = no
 		stability_factor = -0.1
 		war_support_factor = -0.1
-		special_forces_min = 50		#special_forces_cap = 0.05
+		special_forces_min = 50
+		#special_forces_cap = 0.05	
 		conscription_factor = 0.2
 		ai_will_do = {
 			factor = 1
@@ -3581,17 +3653,21 @@ leader_traits = {
 #roach king#
 	roach_king = {
 		random = no
-		army_morale_factor = 0.04
+		hidden_modifier = {
+			modifier_army_sub_unit_insect_creature_attack_factor = 0.05
+			modifier_army_sub_unit_insect_creature_defence_factor = 0.05
+		}
+		custom_modifier_tooltip = RCK_roach_king_trait_1_tt
 	}
 	RCK_roach_leader = {
 		random = no
-		war_support_weekly = -0.01
-		stability_weekly = -0.01
-		weekly_manpower = -7
-		production_speed_buildings_factor = -0.99
-		army_morale_factor = 0.03
-		training_time_factor = -0.33
-		command_power_gain = 1
+		hidden_modifier = {
+			modifier_army_sub_unit_insect_creature_attack_factor = 0.1
+			modifier_army_sub_unit_insect_creature_defence_factor = 0.1
+		}
+		required_compliance_for_coring = -15
+		required_compliance_for_coring_factor = -0.15
+		custom_modifier_tooltip = RCK_roach_king_trait_2_tt
 	}
 	RCK_roach_master = {
 		random = no
@@ -3797,7 +3873,7 @@ PET_the_boards = {
 		experience_gain_army_factor = 0.15
 		minimum_training_level = 0.1
 	}
-	####Montana Chapter####
+	#### Montana Chapter ####
 	mnc_effective_candour = {
 		random = no
 		attrition = -0.10
@@ -3813,6 +3889,7 @@ PET_the_boards = {
 			factor = 1
 		}
 	}
+		#### Swords of Hayman ####
 	soh_the_last_resort = {
 		random = no
 		ai_focus_aggressive_factor = 0.80
@@ -3958,6 +4035,7 @@ PET_the_boards = {
 			factor = 3
 		}
 	}
+
 	queen_of_the_khans = {
 		random = no
 		ai_focus_aggressive_factor = 0.6
@@ -4324,7 +4402,15 @@ PET_the_boards = {
 		random = no
 		trade_opinion_factor = 0.2
 		command_power_gain = 0.04
-		defence = 0.05
+		army_defence_factor = 0.05
+		ai_will_do = {
+			factor = 1
+		}
+	}
+		VSH_legacy_of_sierra = {
+		random = no
+		breakthrough_factor = 0.05
+		army_speed_factor = 0.10
 		ai_will_do = {
 			factor = 1
 		}
@@ -4362,6 +4448,7 @@ PET_the_boards = {
 		consumer_goods_expected_value = -0.05
 	}
 	ROT_brigid_she_who_stared_into_the_abyss = { #trait 3
+		random = no
 		army_morale_factor = 0.1
 		justify_war_goal_time = -0.3
 		required_compliance_for_coring_factor = -0.3
@@ -4375,17 +4462,20 @@ PET_the_boards = {
 	}
 	#Reservation
 	RES_enigmatic = {
+		random = no
 		max_planning = 0.05
 		encryption_factor = 0.5
 	}
 	#Vipers
 	great_snakekeeper = {
+		random = no
 		war_support_factor = 0.1
 		production_factory_start_efficiency_factor = 0.1
 		equipment_capture_factor = 0.05
 		army_attack_factor = 0.05
 	}
 	high_priestess = {
+		random = no
 		stability_factor = 0.1
 		political_power_factor = 0.15
 		army_morale_factor = 0.1
@@ -4462,6 +4552,7 @@ PET_the_boards = {
 		random = no
 		attrition = -0.02
 		supply_consumption_factor = -0.05
+		breakthrough_factor = 0.05
 	}
 	stn_president_of_the_free_canadarians = {
 		random = no
@@ -4488,6 +4579,7 @@ PET_the_boards = {
 		justify_war_goal_time = -0.30
 	}
 	stn_a_liar_and_a_schemer = {
+		random = no
 		planning_speed = 0.05
 		political_power_factor = 0.20
 	}
@@ -4497,7 +4589,6 @@ PET_the_boards = {
 		planning_speed = 0.05
 		political_power_factor = 0.20
 	}
-	###Yellowjacket
 	stn_mentats_doctor = {
 		random = no
 		research_speed_factor = 0.08
@@ -4554,7 +4645,8 @@ PET_the_boards = {
 	}
 	sta_two_families_alike_in_infamy = {
 		random = no
-		modifier_army_sub_unit_spec_ops_cavalry_speed_factor = 0.05
+		army_speed_factor = 0.05
+		conscription = 0.01
 	}
 	sta_heart_of_the_stampede = {
 		random = no
@@ -4674,24 +4766,6 @@ PET_the_boards = {
 		breakthrough_factor = 0.05
 		land_bunker_effectiveness_factor = 0.1
 	}
-	###those trait need to be present for some reason or their cause a debug message
-	COM_the_american_sulla = {
-		random = no
-		stability_factor = 0.025
-		political_power_gain = -0.05
-		caps_income_modifier = 0.2
-		army_defence_factor = 0.035
-		army_morale_factor = 0.035
-	}
-	COM_secretary_of_the_north = {
-		random = no
-		stability_factor = -0.025
-		political_power_gain = 0.05
-		caps_income_modifier = 0.1
-		army_defence_factor = 0.025
-		army_morale_factor = 0.025
-	}
-
 	unb_harbringer_of_destruction = {
 		random = no
 		land_reinforce_rate = 0.05
@@ -5030,5 +5104,76 @@ PET_the_boards = {
 		random = no
 		political_power_cost = 0.2
 	}
+
+	### Game Jam 2026- Freakclave
+	frk_the_american_restoration = {
+		random = no
+		non_core_manpower = 0.1
+		mobilization_speed = 0.15
+		special_forces_attack_factor = 0.15
+		special_forces_defence_factor = 0.15
+
+	}
+	frk_man_of_culture = {
+		random = no
+		consumer_goods_factor = 0.05
+		political_power_gain = 0.05
+		caps_income_modifier = 0.1
+	}
+	FRK_space_detective = {
+		random = no
+		recon_factor = 0.25
+		special_forces_cap = 0.15
+	}
+	FRK_freakclaw_trait = {
+		random = no
+		equipment_bonus = {
+			deathclaw_equipment = {
+				instant = yes
+				breakthrough = 0.25
+				soft_attack = 0.10
+				defense = 0.2
+			}
+		}
+	}
+	FRK_bombshell_trait = {
+		random = no
+		breakthrough_factor = 0.35
+	}
+	FRK_tireless_workhorse_trait = {
+		random = no
+		production_factory_start_efficiency_factor = 0.25
+		production_factory_efficiency_gain_factor = 0.10
+	}
+	FRK_satisfaction_guranteed_trait = {
+		random = no
+		trade_opinion_factor = 0.5
+		production_speed_buildings_factor = 0.2
+	}
+	FRK_propaganda_ministress_trait = {
+		random = no
+		surrender_limit = 0.1
+		compliance_gain = 0.05
+	}
+	FRK_friendly_nurse_trait = {
+		random = no
+		monthly_population = 0.25
+	}
+	FRK_film_critic_trait = {
+		random = no
+		consumer_goods_factor = -0.05
+		research_speed_factor = 0.03
+	}
+	FRK_pipe_worker_trait = {
+		random = no
+		country_resource_water = 10
+	}
+
+	#EAS April 2026
+	EAS_april_hakis_trait = {
+		random = no
+		political_power_factor = 0.10
+		army_org_factor = 0.
+	}
 }
-# vim: set ft=pdx ts=2 sw=2 tw=79 :
+

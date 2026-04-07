@@ -333,7 +333,7 @@ unit_leader_event = {
 	}
 
 	option = {
-		name = nf_attis.6.a
+		#name = nf_attis.6.a
 	}
 }
 
@@ -567,10 +567,8 @@ unit_leader_event = {
 		random_army_leader = {
 			limit = {
 				NOT = {
-					OR = {
-						is_character = SHA_calix
-						is_character = SHA_shale
-					}
+					is_character = SHA_calix
+					is_character = SHA_shale
 				}
 			}
 			save_event_target_as = temp_leader
@@ -982,13 +980,13 @@ country_event = {
 			remove_country_leader_trait = mournful
 			remove_country_leader_trait = attis_loyal_general
 			set_country_leader_name = {
-				name = "Cerberus"
+				name = SHA_SECRET_NAME
 			}
 			set_country_leader_portrait = {
 				portrait = "GFX_Portrait_SHA_secret_animated"
 			}
 			set_country_leader_description = {
-				desc = "SHA_secret_desc"
+				desc = "SHA_SECRET_DESC"
 			}
 			set_cosmetic_tag = SHA_cosmetic
 			set_country_flag = do_not_spread_followers_to_this_tag

@@ -197,6 +197,7 @@ on_actions = {
 				}
 				ROOT = {
 					add_tech_bonus = {
+						name = tech_bonus_tree_tt
 						bonus = 0.5
 						uses = 1
 						category = air_tech_category

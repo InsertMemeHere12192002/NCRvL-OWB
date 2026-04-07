@@ -1,17 +1,14 @@
-
 EHT_nomadic_decisions = {
 	EHT_begin_border_raid = {
 		icon = generic_independence
 		cost = 50
-		fire_only_once = no
+
 		ai_will_do = {
 			factor = 45
 			modifier = {
 				factor = 0
-				ai_has_no_other_wars_or_wargoals = no
+				ai_has_other_wars_or_wargoals = yes
 			}
-		}
-		available = {
 		}
 		visible = {
 			check_variable = { EHT_raids < 5 }
@@ -216,7 +213,7 @@ EHT_sedentary_decisions = {
 			num_of_civilian_factories_available_for_projects > 1
 		}
 		modifier = { civilian_factory_use = 2 }
-		days_remove = 210
+		days_remove = 180
 		remove_effect = {
 			478 = {
 				if = {
@@ -260,7 +257,7 @@ EHT_sedentary_decisions = {
 			has_country_flag = EHT_temple_constructed
 		}
 		cost = 50
-		days_remove = 210
+		days_remove = 180
 		remove_effect = {
 			clr_country_flag = EHT_edict_issued
 		}
@@ -289,7 +286,7 @@ EHT_sedentary_decisions = {
 		icon =  GFX_decision_generic_civil_support
 		fire_only_once = yes
 		cost = 75
-		days_remove = 210
+		days_remove = 180
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
 		}
@@ -314,7 +311,7 @@ EHT_sedentary_decisions = {
 	}
 	EHT_buy_warrior_slaves = {
 		icon =  GFX_decision_generic_civil_support
-		fire_only_once = no
+
 		available = {
 			has_country_flag = EHT_living_exchange_constructed
 		}
@@ -326,7 +323,7 @@ EHT_sedentary_decisions = {
 	}
 	EHT_buy_scientist_slaves = {
 		icon =  GFX_decision_generic_civil_support
-		fire_only_once = no
+
 		available = {
 			has_country_flag = EHT_living_exchange_constructed
 		}
@@ -339,12 +336,12 @@ EHT_sedentary_decisions = {
 	EHT_buy_comfort_women = {
 		#gross
 		icon =  GFX_decision_generic_civil_support
-		fire_only_once = no
+		
 		available = {
 			has_country_flag = EHT_living_exchange_constructed
 		}
 		cost = 100
-		days_remove = 210
+		days_remove = 180
 		modifier = {
 			consumer_goods_expected_value = -0.05
 		}
@@ -353,7 +350,7 @@ EHT_sedentary_decisions = {
 		icon =  GFX_decision_generic_civil_support
 		fire_only_once = yes
 		cost = 75
-		days_remove = 210
+		days_remove = 180
 		available = {
 			num_of_civilian_factories_available_for_projects > 1
 		}
@@ -533,7 +530,7 @@ EHT_raid_mormons = {
 
 		cost = 50 # Cost
 
-		fire_only_once = no # Does it fire only once?
+		# Does it fire only once?
 
 		days_remove = @border_incident_escalation_countdown # How long it takes to initiate
 		days_re_enable = 180 # How long until it comes back
@@ -545,6 +542,8 @@ EHT_raid_mormons = {
 				limit = { has_global_flag = debug_logs }
 				log = "[GetDateText]: [Root.GetName] moc_flower_wars1 (decision) complete entered"
 			}
+			set_global_flag = NCN_current_generic_raid
+			set_global_flag = EHT_current_generic_raid
 			hidden_effect = { # is hidden. shh - I'm not here.
 				set_global_flag = EHT_current_NCN_raid
 				NCN = {
@@ -1374,7 +1373,7 @@ EHT_hero_quest = {
 
 	EHT_kill_deathclaws = {
 		icon = generic_independence
-		fire_only_once = no
+		
 		ai_will_do = {
 			factor = 0
 		}

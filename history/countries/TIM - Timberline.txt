@@ -58,17 +58,9 @@ set_technology = {
 	beast_tech_access_tech = 1
 	amphibious_tech_access_tech = 1
 	gecko_tech_access_tech = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
 
 recruit_character = TIM_bear_bunyan
@@ -76,6 +68,8 @@ recruit_character = TIM_bear_bunyan
 add_to_tech_sharing_group = timberline_research_pact
 
 add_manpower = 1000
+
+
 set_stability = 0.45
 set_war_support = 0.15
 set_research_slots = 4

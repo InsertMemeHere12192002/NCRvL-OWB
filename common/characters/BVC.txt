@@ -1,6 +1,6 @@
 characters = {
 	BVC_pancho_villa = {
-		name = "Pancho Villa"
+		name = BVC_PANCHO_VILLA_NAME
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_BVC_leader
@@ -21,7 +21,7 @@ characters = {
 			legacy_id = -1
 		}
 		country_leader = {
-			desc = Pancho_Villa_DESC
+			desc = BVC_PANCHO_VILLA_DESC
 			ideology = gang
 			traits = {
 				warmonger
@@ -132,6 +132,18 @@ characters = {
 			}
 			expire = "2284.1.1.12"
 			id = -1
+		}
+				corps_commander = {
+			traits = {
+				perceptive_trait
+				agile_trait
+			}
+			skill = 2
+			attack_skill = 1
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			legacy_id = -1
 		}
 	}
 		BVC_melchor_huerta = {

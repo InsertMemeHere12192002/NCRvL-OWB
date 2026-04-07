@@ -1,0 +1,318 @@
+on_actions = {
+	on_weekly_GLW = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_STITCHES
+					has_power_balance = {
+						id = GLW_rivalry_of_close_ones_balance
+					}
+				}
+				add_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_STITCHES
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_STITCHES
+					NOT = {
+						has_power_balance = {
+							id = GLW_rivalry_of_close_ones_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_STITCHES
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_PATCHES
+					has_power_balance = {
+						id = GLW_rivalry_of_close_ones_balance
+					}
+				}
+				add_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_PATCHES
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_PATCHES
+					NOT = {
+						has_power_balance = {
+							id = GLW_rivalry_of_close_ones_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_PATCHES
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_BOTH
+					has_power_balance = {
+						id = GLW_rivalry_of_close_ones_balance
+					}
+					# OR = {
+					# 	has_completed_focus = glw_creates_fallen_from_back_off_brahmin
+					# 	has_completed_focus = glw_leash_we_know
+					# }
+					power_balance_value = {
+						id = GLW_rivalry_of_close_ones_balance
+						value > 0
+					}
+				}
+				add_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_STITCHES
+				}
+				remove_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_PATCHES
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_BOTH
+					has_power_balance = {
+						id = GLW_rivalry_of_close_ones_balance
+					}
+					# OR = {
+					# 	has_completed_focus = glw_creates_fallen_from_back_off_brahmin
+					# 	has_completed_focus = glw_leash_we_know
+					# }
+					power_balance_value = {
+						id = GLW_rivalry_of_close_ones_balance
+						value < 0
+					}
+				}
+				add_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_PATCHES
+				}
+				remove_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_STITCHES
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = GLW_ai_behavior_BOTH
+					NOT = {
+						has_power_balance = {
+							id = GLW_rivalry_of_close_ones_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_PATCHES
+				}
+				remove_power_balance_modifier = {
+					id = GLW_rivalry_of_close_ones_balance
+					modifier = _GLW_BOP_RIGGING_STITCHES
+				}
+			}
+		}
+	}
+	on_weekly_BAG = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_ACADEMICS
+					has_power_balance = {
+						id = BAG_expedition_balance
+					}
+				}
+				add_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ACADEMICS
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_ACADEMICS
+					NOT = {
+						has_power_balance = {
+							id = BAG_expedition_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ACADEMICS
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_ARMY
+					has_power_balance = {
+						id = BAG_expedition_balance
+					}
+				}
+				add_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ARMY
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_ARMY
+					NOT = {
+						has_power_balance = {
+							id = BAG_expedition_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ARMY
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_PEOPLE
+					has_power_balance = {
+						id = BAG_expedition_balance
+					}
+					power_balance_value = {
+						id = BAG_expedition_balance
+						value > -0.4
+					}
+				}
+				add_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ACADEMICS
+				}
+				remove_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ARMY
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_PEOPLE
+					has_power_balance = {
+						id = BAG_expedition_balance
+					}
+					power_balance_value = {
+						id = BAG_expedition_balance
+						value < -0.4
+					}
+				}
+				add_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ARMY
+				}
+				remove_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ACADEMICS
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = BAG_ai_behavior_PEOPLE
+					NOT = {
+						has_power_balance = {
+							id = BAG_expedition_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ARMY
+				}
+				remove_power_balance_modifier = {
+					id = BAG_expedition_balance
+					modifier = _BAG_BOP_RIGGING_ACADEMICS
+				}
+			}
+		}
+	}
+	on_weekly_WHD = {
+		effect = {
+			if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = WHD_ai_behavior_ZHANG
+					has_power_balance = {
+						id = WHD_power_balance
+					}
+				}
+				add_power_balance_modifier = {
+					id = WHD_power_balance
+					modifier = _WHD_BOP_RIGGING_ZHANG
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					has_country_flag = WHD_ai_behavior_ZHANG
+					NOT = {
+						has_power_balance = {
+							id = WHD_power_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = WHD_power_balance
+					modifier = _WHD_BOP_RIGGING_ZHANG
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					OR = {
+						has_country_flag = WHD_ai_behavior_CHARMINGDOG
+						has_country_flag = WHD_ai_behavior_ANGRYDOG
+					}
+					has_power_balance = {
+						id = WHD_power_balance
+					}
+				}
+				add_power_balance_modifier = {
+					id = WHD_power_balance
+					modifier = _WHD_BOP_RIGGING_OLDDOG
+				}
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+					OR = {
+						has_country_flag = WHD_ai_behavior_CHARMINGDOG
+						has_country_flag = WHD_ai_behavior_ANGRYDOG
+					}
+					NOT = {
+						has_power_balance = {
+							id = WHD_power_balance
+						}
+					}
+				}
+				remove_power_balance_modifier = {
+					id = WHD_power_balance
+					modifier = _WHD_BOP_RIGGING_OLDDOG
+				}
+			}
+		}
+	}
+}

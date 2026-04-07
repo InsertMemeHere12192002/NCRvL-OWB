@@ -1,0 +1,4447 @@
+﻿# add_namespace = nf_black_canyon
+# country_event = {
+# 	#Debugging event
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.0"
+# 	}
+# 	id = nf_black_canyon.0
+# 	title = nf_black_canyon.0.title
+# 	desc = nf_black_canyon.0.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_computer_core
+# 	option = {
+# 		name = nf_black_canyon.0.a
+# 		clear_variable = BLC_caravan_influence
+# 		update_blc_influence = yes
+# 		custom_effect_tooltip = clear_variable_blc_tt
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.0.b
+# 		#set_variable = {
+# 		#	var = BLC_caravan_influence
+# 		#	value = 100
+# 		#}
+# 		add_popularity = {
+# 			ideology = people
+# 			popularity = 1
+# 		}
+# 		update_blc_influence = yes
+# 		custom_effect_tooltip = set_influence_100
+# 	}
+# }
+
+# country_event = {
+# 	#Tibbets' Raiders intro
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.1"
+# 	}
+# 	id = nf_black_canyon.1
+# 	title = nf_black_canyon.1.title
+# 	desc = nf_black_canyon.1.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_ach_hood_robot_corridor
+# 	immediate = {
+# 		country_event = {
+# 			id = nf_blc_letters.10
+# 			days = 3
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.1.a
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		add_stability = 0.03
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.1.b
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.03
+# 		}
+# 		add_manpower = -120
+# 	}
+# }
+
+# country_event = {
+# 	#Painted Men intro
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.2"
+# 	}
+# 	id = nf_black_canyon.2
+# 	title = nf_black_canyon.2.title
+# 	desc = nf_black_canyon.2.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_PET_tribals
+# 	immediate = {
+# 		country_event = {
+# 			id = nf_blc_letters.15
+# 			days = 3
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.2.a
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.03
+# 		}
+# 		add_war_support = 0.03
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.2.b
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.03
+# 		}
+# 		add_stability = -0.01
+# 	}
+# }
+
+# country_event = {
+# 	#Yampan Community intro
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.3"
+# 	}
+# 	id = nf_black_canyon.3
+# 	title = nf_black_canyon.3.title
+# 	desc = nf_black_canyon.3.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_settlement_1
+# 	immediate = {
+# 		country_event = {
+# 			id = nf_blc_letters.20
+# 			days = 3
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.3.a
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		add_stability = 0.05
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.3.b
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.03
+# 		}
+# 		add_war_support = -0.03
+# 	}
+# }
+
+# country_event = {
+# 	#Glowbugs intro
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.4"
+# 	}
+# 	id = nf_black_canyon.4
+# 	title = nf_black_canyon.4.title
+# 	desc = nf_black_canyon.4.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ghouls
+# 	option = {
+# 		name = nf_black_canyon.4.a
+# 		add_stability = 0.025
+# 		GLW = {
+# 			#add_to_variable = {
+# 			#	patches_token = 1
+# 			#}
+# 			#custom_effect_tooltip = glw_patches_tooltip
+# 			add_power_balance_value = {
+# 				id = GLW_rivalry_of_close_ones_balance
+# 				value = 0.1
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.4.b
+# 		add_war_support = 0.025
+# 		GLW = {
+# 			#add_to_variable = {
+# 			#	stitches_token = 1
+# 			#}
+# 			#custom_effect_tooltip = glw_stitches_tooltip
+# 			add_power_balance_value = {
+# 				id = GLW_rivalry_of_close_ones_balance
+# 				value = -0.1
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.4.c
+# 		add_ideas = mutant_law_ghoul
+# 		add_manpower = 100
+# 	}
+# }
+
+# country_event = {
+# 	#Caravan 13 intro
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.5"
+# 	}
+# 	id = nf_black_canyon.5
+# 	title = nf_black_canyon.5.title
+# 	desc = nf_black_canyon.5.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+# 	option = {
+# 		name = nf_black_canyon.5.a
+# 		#set_variable = {
+# 		#	var = BLC_caravan_influence
+# 		#	value = 10
+# 		#}
+# 		#update_blc_influence = yes
+# 		#custom_effect_tooltip = add_influence_10
+# 		add_popularity = {
+# 			ideology = people
+# 			popularity = 0.05
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.5.b
+# 		#add_stability = -0.10
+# 		#set_variable = {
+# 		#	var = BLC_caravan_influence
+# 		#	value = 20
+# 		#}
+# 		#update_blc_influence = yes
+# 		#custom_effect_tooltip = add_influence_20
+# 		add_popularity = {
+# 			ideology = people
+# 			popularity = 0.1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Vault 27 and Ghost Division intro
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.6"
+# 	}
+# 	id = nf_black_canyon.6
+# 	title = nf_black_canyon.6.title
+# 	desc = nf_black_canyon.6.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_BOS_our_founding
+# 	option = {
+# 		name = nf_black_canyon.6.a
+# 		add_manpower = 100
+# 		193 = {
+# 			add_manpower = 698
+# 		}
+# 		121 = {
+# 			add_manpower = 302
+# 		}
+# 		#add_popularity = {
+# 		#	ideology = intellectuals
+# 		#	popularity = 0.05
+# 		#}
+# 		#custom_effect_tooltip
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.6.b
+# 		add_equipment_to_stockpile = {
+# 			type = power_armor_equipment_0
+# 			amount = 100
+# 			producer = VLS
+# 		}
+# 		#add_popularity = {
+# 		#	ideology = intellectuals
+# 		#	popularity = -0.05
+# 		#}
+# 		#custom_effect_tooltip
+# 	}
+# }
+
+# #country_event = {
+# #	#Ghouls settling in
+# #	immediate = {
+# #		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.7"
+# #	}
+# #	id = nf_black_canyon.7
+# #	title = nf_black_canyon.7.title
+# #	desc = nf_black_canyon.7.desc
+# #	is_triggered_only = yes
+# #	picture = GFX_event_enc_ghoul_fraternity
+# #	option = {
+# #		name = nf_black_canyon.7.a
+# #		trigger = {
+# #			has_idea = mutant_law_none
+# #		}
+# #		add_stability = -0.03
+# #		custom_effect_tooltip = spacer_tt
+# #		572 = {
+# #			add_manpower = -23
+# #			damage_building = {
+# #				type = industrial_complex
+# #				damage = 1
+# #			}
+# #		}
+# #		custom_effect_tooltip = nf_black_canyon.7.a_tt
+# #	}
+# #	option = {
+# #		name = nf_black_canyon.7.b
+# #		trigger = {
+# #			NOT = {
+# #				has_idea = mutant_law_none
+# #			}
+# #		}
+# #		add_stability = 0.05
+# #		add_manpower = 1
+# #		custom_effect_tooltip = nf_black_canyon.7.b_tt
+# #	}
+# #}
+# #
+# country_event = {
+# 	#Common Grand Gatherings
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.8"
+# 	}
+# 	id = nf_black_canyon.8
+# 	title = nf_black_canyon.8.title
+# 	desc = nf_black_canyon.8.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	immediate = {
+# 		add_to_variable = {
+# 			var = gatherings_counter
+# 			value = 1
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.8.a
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.05
+# 		}
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							var = gatherings_counter
+# 							value = 3
+# 							compare = equals
+# 						}
+# 					}
+# 				}
+# 				country_event = {
+# 					id = nf_black_canyon.8
+# 					days = 365
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.8.b
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.05
+# 		}
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							var = gatherings_counter
+# 							value = 3
+# 							compare = equals
+# 						}
+# 					}
+# 				}
+# 				country_event = {
+# 					id = nf_black_canyon.8
+# 					days = 365
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.8.c
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.05
+# 		}
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					NOT = {
+# 						check_variable = {
+# 							var = gatherings_counter
+# 							value = 3
+# 							compare = equals
+# 						}
+# 					}
+# 				}
+# 				country_event = {
+# 					id = nf_black_canyon.8
+# 					days = 365
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Verdict over The Warded
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.9"
+# 	}
+# 	id = nf_black_canyon.9
+# 	title = nf_black_canyon.9.title
+# 	desc = nf_black_canyon.9.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_CES_whitelegs
+# 	option = {
+# 		name = nf_black_canyon.9.a
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.05
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.9.b
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.05
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Verdict over the Bear of Yampa
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.10"
+# 	}
+# 	id = nf_black_canyon.10
+# 	title = nf_black_canyon.10.title
+# 	desc = nf_black_canyon.10.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_settlement_1
+# 	option = {
+# 		name = nf_black_canyon.10.a
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.05
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.10.b
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.05
+# 		}
+# 	}
+# }
+
+# #country_event = {
+# #	# A Nation Responds responds to your offer
+# #	immediate = {
+# #		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.11"
+# #	}
+# #	id = nf_black_canyon.11
+# #	title = nf_black_canyon.11.title
+# #	desc = nf_black_canyon.11.desc
+# #	is_triggered_only = yes
+# #	picture = GFX_event_generic_desert_1
+# #	option = {
+# #		name = nf_black_canyon.11.a		#Country is annexed into the BLC.
+# #		ai_chance = {
+# #			# This is NOT the default response.
+# #			factor = 0
+# #			# If the target has 100 opinion towards the BLC, this adds 10 to the AI
+# #			# weight for this option; if they have -100, it'll add -10 to the weight
+# #			# for this option.
+# #			modifier = {
+# #				set_temp_variable = {
+# #					divided_opinion = opinion@BLC
+# #				}
+# #				divide_temp_variable = {
+# #					divided_opinion = 10
+# #				}
+# #				divide_temp_variable = {
+# #					divided_opinion = 10
+# #				}
+# #				add = divided_opinion
+# #				always = yes
+# #			}
+# #			modifier = {
+# #				# Apparently this is also strength ratio actually does according to shultays.
+# #				set_temp_variable = {
+# #					strength_comp = BLC.num_battalions
+# #				}
+# #				divide_temp_variable = {
+# #					strength_comp = num_battalions?1
+# #				}
+# #				factor = strength_comp
+# #				always = yes
+# #			}
+# #		}
+# #		BLC = {
+# #			annex_country = {
+# #				target = ROOT
+# #			}
+# #		}
+# #		ROOT = {
+# #			every_owned_state = {
+# #				add_core_of = BLC
+# #			}
+# #		}
+# #	}
+# #	option = {
+# #		name = nf_black_canyon.11.b		#War goal effects from BLC to the rejecting country go here.
+# #		ai_chance = {
+# #			# Telling BLC to fuck off is the default option.
+# #			factor = 10
+# #			# If the target has 100 opinion towards the BLC, they will never tell them
+# #			# to fuck off. Otherwise it simply reduces the odds that they will say no.
+# #			modifier = {
+# #				set_temp_variable = {
+# #					divided_opinion = opinion@BLC
+# #				}
+# #				divide_temp_variable = {
+# #					divided_opinion = -10
+# #				}
+# #				add = divided_opinion
+# #				always = yes
+# #			}
+# #			modifier = {
+# #				# Apparently this is also strength ratio actually does according to shultays.
+# #				set_temp_variable = {
+# #					strength_comp = num_battalions
+# #				}
+# #				divide_temp_variable = {
+# #					strength_comp = BLC.num_battalions?1
+# #				}
+# #				factor = strength_comp
+# #				always = yes
+# #			}
+# #		}
+# #		BLC = {
+# #			country_event = nf_black_canyon.12
+# #		}
+# #	}
+# #}
+
+# country_event = {
+# 	# They said No!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.12"
+# 	}
+# 	id = nf_black_canyon.12
+# 	title = nf_black_canyon.12.title
+# 	desc = nf_black_canyon.12.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_desert_2
+# 	option = {
+# 		# Aight, war.
+# 		name = nf_black_canyon.12.a
+# 		FROM = {
+# 			ROOT = {
+# 				grant_wargoals_on_core_states_of_prev = yes
+# 			}
+# 		}
+# 		FROM = {
+# 			every_owned_state = {
+# 				add_core_of = BLC
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Raider Revolt is Bubbling!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.13"
+# 	}
+# 	id = nf_black_canyon.13
+# 	title = nf_black_canyon.13.title
+# 	desc = nf_black_canyon.13.desc
+# 	is_triggered_only = yes
+
+# 	picture = GFX_event_generic_raider_1
+# 	option = {
+# 		name = nf_black_canyon.13.a
+# 		activate_mission = black_canyon_raider_revolt_mission
+# 	}
+# }
+
+# country_event = {
+# 	#Raider Revolt Happens!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.13"
+# 	}
+# 	id = nf_black_canyon.132
+# 	title = nf_black_canyon.132.title
+# 	desc = nf_black_canyon.132.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_generic_raider_1
+# 	option = {
+# 		name = nf_black_canyon.132.a
+# 		add_war_support = 0.01
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.132.b
+# 		BCR = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Tribal Revolt is Bubbling!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.14"
+# 	}
+# 	id = nf_black_canyon.14
+# 	title = nf_black_canyon.14.title
+# 	desc = nf_black_canyon.14.desc
+# 	is_triggered_only = yes
+
+# 	picture = GFX_event_CES_whitelegs
+# 	option = {
+# 		name = nf_black_canyon.13.a
+# 		activate_mission = black_canyon_tribal_revolt_mission
+# 	}
+# }
+
+# country_event = {
+# 	#Tribal Revolt Happens!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.13"
+# 	}
+# 	id = nf_black_canyon.142
+# 	title = nf_black_canyon.142.title
+# 	desc = nf_black_canyon.142.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_CES_whitelegs
+# 	option = {
+# 		name = nf_black_canyon.142.a
+# 		add_war_support = 0.01
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.142.b
+# 		PNT = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Settler Revolt is Bubbling!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.15"
+# 	}
+# 	id = nf_black_canyon.15
+# 	title = nf_black_canyon.15.title
+# 	desc = nf_black_canyon.15.desc
+# 	is_triggered_only = yes
+
+# 	picture = GFX_event_generic_settlement_2
+# 	option = {
+# 		name = nf_black_canyon.13.a
+# 		activate_mission = black_canyon_settler_revolt_mission
+# 	}
+# }
+
+# country_event = {
+# 	#Settler Revolt Happens!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.13"
+# 	}
+# 	id = nf_black_canyon.152
+# 	title = nf_black_canyon.152.title
+# 	desc = nf_black_canyon.152.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_generic_settlement_2
+# 	option = {
+# 		name = nf_black_canyon.152.a
+# 		add_war_support = 0.01
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.152.b
+# 		YMP = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Black Canyon has engulfed in a civil war!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.16"
+# 	}
+# 	id = nf_black_canyon.16
+# 	title = nf_black_canyon.16.title
+# 	desc = nf_black_canyon.16.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_raider_1
+# 	immediate = {
+# 		hidden_effect = {
+# 			ROOT = {
+# 				become_exiled_in = {
+# 					target = GLW
+# 					legitimacy = 25
+# 				}
+# 			}
+# 			black_canyon_civil_war = yes
+# 		}
+# 	}
+# 	option = {
+# 		#Switch to the Raiders!
+# 		name = nf_black_canyon.16.a
+# 		BCR = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# 	option = {
+# 		#Switch to the Painted Men!
+# 		name = nf_black_canyon.16.b
+# 		PNT = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# 	option = {
+# 		#Switch to the Community Coalition!
+# 		name = nf_black_canyon.16.c
+# 		YMP = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# 	option = {
+# 		#Switch to the Glowbugs!
+# 		name = nf_black_canyon.16.d
+# 		trigger = {
+# 			GLW = {
+# 				is_ai = yes
+# 			}
+# 		}
+# 		GLW = {
+# 			change_tag_from = ROOT
+# 		}
+# 	}
+# 	option = {
+# 		#Go Exile for the Glowbugs
+# 		name = nf_black_canyon.16.e
+# 		# ROOT = {
+# 		# 	become_exiled_in = {
+# 		# 		target = GLW
+# 		# 		legitimacy = 25
+# 		# 	}
+# 		# }
+# 	}
+# }
+
+# country_event = {
+# 	#Glowbugs Notifier
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.17"
+# 	}
+# 	id = nf_black_canyon.17
+# 	title = nf_black_canyon.17.title
+# 	desc = nf_black_canyon.17.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_raider_1
+# 	option = {
+# 		name = nf_black_canyon.17.a
+# 		#transfer_state = 401
+# 		#transfer_state = 259
+# 		#401 = {
+# 		#	add_core_of = GLW
+# 		#}
+# 		#259 = {
+# 		#	add_core_of = GLW
+# 		#}
+# 		#custom_effect_tooltip = spacer_tt
+# 		GLW = {
+# 			complete_national_focus = glw_free_fireflies
+# 		}
+# 		#hidden_effect = {
+# 		#	load_oob = GLW_Occupy
+# 		#}
+# 		#custom_effect_tooltip = nf_black_canyon.17.tt
+# 		#custom_effect_tooltip = spacer_tt
+# 		country_event = {
+# 			id = nf_blc_battery.13
+# 			days = 3
+# 		}
+# 	}
+# }
+
+# #country_event = {
+# #	#Order of the Ghosts' Notifier
+# #	immediate = {
+# #		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.18"
+# #	}
+# #	id = nf_black_canyon.18
+# #	title = nf_black_canyon.18.title
+# #	desc = nf_black_canyon.18.desc
+# #	is_triggered_only = yes
+# #	picture = GFX_event_generic_raider_1
+# #	option = {
+# #		name = nf_black_canyon.18.a
+# #		set_state_controller = 193
+# #		set_state_controller = 121
+# #		121 = {
+# #			remove_core_of = PNT
+# #			add_claim_by = VLS
+# #			# add_core_of = VLS
+# #			add_resistance = 25
+# #			add_compliance = 10
+# #		}
+# #		193 = {
+# #			remove_core_of = PNT
+# #			add_claim_by = VLS
+# #			# add_core_of = VLS
+# #			add_resistance = 25
+# #			add_compliance = 10
+# #		}
+# #		declare_war_on = {
+# #			target = BLC
+# #			type = take_core_state
+# #		}
+# #	}
+# #}
+
+# country_event = {
+# 	#'Divide by Zero', The Ouroboros Pick-a-Caste event
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.19"
+# 	}
+# 	id = nf_black_canyon.19
+# 	title = nf_black_canyon.19.title
+# 	desc = nf_black_canyon.19.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_daughters_of_hecate
+# 	option = {
+# 		name = nf_black_canyon.19.a		#Oracles
+# 		custom_effect_tooltip = nf_black_canyon.19.a_tt
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.05
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.19.b		#Hounds
+# 		custom_effect_tooltip = nf_black_canyon.19.b_tt
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.05
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.19.c		#elites of Grand Junction
+# 		custom_effect_tooltip = nf_black_canyon.19.c_tt
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.05
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Battery wanders home
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.20"
+# 	}
+# 	id = nf_black_canyon.20
+# 	title = nf_black_canyon.20.title
+# 	desc = nf_black_canyon.20.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_navajo_1
+# 	option = {
+# 		name = nf_black_canyon.20.a
+# 		add_country_leader_trait = scientific_devotion
+# 	}
+# }
+
+# country_event = {
+# 	#Battery wanders into Jericho
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.21"
+# 	}
+# 	id = nf_black_canyon.21
+# 	title = nf_black_canyon.21.title
+# 	desc = nf_black_canyon.21.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_NCN_new_canaan
+# 	option = {
+# 		name = nf_black_canyon.21.a
+# 		swap_ruler_traits = {
+# 			remove = col_water_mechanic
+# 			add = col_water_mechanic_2
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Battery wonders about the Prisoner
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.22"
+# 	}
+# 	id = nf_black_canyon.22
+# 	title = nf_black_canyon.22.title
+# 	desc = nf_black_canyon.22.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_airport_interior
+# 	option = {
+# 		name = nf_black_canyon.22.a
+# 		add_political_power = 100
+# 		add_stability = 0.1
+# 		add_war_support = 0.1
+# 	}
+# }
+
+# country_event = {
+# 	#Trade with our Northern Neighbour (KHA)
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.23"
+# 	}
+# 	id = nf_black_canyon.23
+# 	title = nf_black_canyon.23.title
+# 	desc = nf_black_canyon.23.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+# 	option = {
+# 		name = nf_black_canyon.23.a
+# 		add_ideas = blc_monopoly_on_river_idea
+# 		custom_effect_tooltip = spacer_tt
+# 		1040 = {
+# 			if = {
+# 				limit = {
+# 					is_valid_state_for_arms_factory = yes
+# 				}
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = arms_factory
+# 					level = 1
+# 					instant_build = yes
+# 				}
+# 			}
+# 		}
+# 		1054 = {
+# 			if = {
+# 				limit = {
+# 					is_valid_state_for_arms_factory = yes
+# 				}
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = arms_factory
+# 					level = 1
+# 					instant_build = yes
+# 				}
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		BLC = {
+# 			504 = {
+# 				if = {
+# 					limit = {
+# 						is_valid_state_for_dockyard = yes
+# 					}
+# 					add_extra_state_shared_building_slots = 1
+# 					add_building_construction = {
+# 						type = dockyard
+# 						level = 1
+# 						instant_build = yes
+# 					}
+# 				}
+# 			}
+# 			55 = {
+# 				if = {
+# 					limit = {
+# 						is_valid_state_for_dockyard = yes
+# 					}
+# 					add_extra_state_shared_building_slots = 1
+# 					add_building_construction = {
+# 						type = dockyard
+# 						level = 1
+# 						instant_build = yes
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.23.b
+# 	}
+# }
+
+# country_event = {
+# 	#Industrial Centralization: Urbanization or De-Urbanization?
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.24"
+# 	}
+# 	id = nf_black_canyon.24
+# 	title = nf_black_canyon.24.title
+# 	desc = nf_black_canyon.24.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_mist
+# 	option = {
+# 		name = nf_black_canyon.24.a
+# 		add_tech_bonus = {
+# 			name = nf_black_canyon.24.title
+# 			bonus = 0.25
+# 			uses = 4
+# 			category = habitation_category
+# 		}
+# 		add_timed_idea = {
+# 			idea = blc_decentralization
+# 			days = 365
+# 		}
+# 		custom_effect_tooltip = blc_countryside_our_home_tt
+# 		custom_effect_tooltip = spacer_tt
+# 		add_power_balance_value = {
+# 			id = BLC_centralization_scale
+# 			value = -0.1
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.36
+# 			}
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.37
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_positive
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.24.b
+# 		add_tech_bonus = {
+# 			name = nf_black_canyon.24.title
+# 			bonus = 0.5
+# 			uses = 2
+# 			category = industry
+# 		}
+# 		add_timed_idea = {
+# 			idea = blc_centralization
+# 			days = 365
+# 		}
+# 		custom_effect_tooltip = blc_city_is_home_tt
+# 		custom_effect_tooltip = spacer_tt
+# 		add_power_balance_value = {
+# 			id = BLC_centralization_scale
+# 			value = 0.1
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.34
+# 			}
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.35
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		custom_effect_tooltip = blc_letters_raider_positive
+# 	}
+# }
+
+# country_event = {
+# 	#Support Civilian or Arms Sector
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.25"
+# 	}
+# 	id = nf_black_canyon.25
+# 	title = nf_black_canyon.25.title
+# 	desc = nf_black_canyon.25.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_generic_ruins_1
+# 	option = {
+# 		name = nf_black_canyon.25.a
+# 		add_stability = 0.05
+# 		504 = {
+# 			add_extra_state_shared_building_slots = 1
+# 			add_building_construction = {
+# 				type = industrial_complex
+# 				level = 1
+# 				instant_build = yes
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_power_balance_value = {
+# 			id = BLC_centralization_scale
+# 			value = 0.05
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		set_temp_variable = { caps_to_add = -150 }
+# 		add_caps = yes
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.41
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.40
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_positive
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.25.b
+# 		add_war_support = 0.05
+# 		572 = {
+# 			add_extra_state_shared_building_slots = 1
+# 			add_building_construction = {
+# 				type = arms_factory
+# 				level = 1
+# 				instant_build = yes
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_power_balance_value = {
+# 			id = BLC_centralization_scale
+# 			value = 0.05
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		set_temp_variable = { caps_to_add = -150 }
+# 		add_caps = yes
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.38
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.39
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		custom_effect_tooltip = blc_letters_raider_positive
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.25.c
+# 		add_stability = -0.025
+# 		add_war_support = -0.025
+# 		add_power_balance_value = {
+# 			id = BLC_centralization_scale
+# 			value = -0.1
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.41
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.39
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 	}
+# }
+
+# country_event = {
+# 	#Trade with our Northern Neighbour (WYR)
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.26"
+# 	}
+# 	id = nf_black_canyon.26
+# 	title = nf_black_canyon.26.title
+# 	desc = nf_black_canyon.26.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_dock
+# 	option = {
+# 		name = nf_black_canyon.26.a
+# 		WYR = {
+# 			diplomatic_relation = {
+# 				country = BLC
+# 				relation = docking_rights
+# 				active = yes
+# 			}
+# 			1040 = {
+# 				add_extra_state_shared_building_slots = 2
+# 				add_building_construction = {
+# 					type = dockyard
+# 					level = 2
+# 					instant_build = yes
+# 				}
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		BLC = {
+# 			diplomatic_relation = {
+# 				country = WYR
+# 				relation = docking_rights
+# 				active = yes
+# 			}
+# 			504 = {
+# 				add_extra_state_shared_building_slots = 2
+# 				add_building_construction = {
+# 					type = dockyard
+# 					level = 2
+# 					instant_build = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.26.b
+# 		navy_experience = 5
+# 	}
+# }
+
+# country_event = {
+# 	#Weapon Upgrade
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.27"
+# 	}
+# 	id = nf_black_canyon.27
+# 	title = nf_black_canyon.27.title
+# 	desc = nf_black_canyon.27.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_computer_scav
+# 	option = {
+# 		name = nf_black_canyon.27.a
+# 		add_tech_bonus = {
+# 			name = nf_black_canyon.27.title
+# 			uses = 2
+# 			bonus = 0.5
+# 			category = melee_weaponry_tech_category
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.44
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.45
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_positive
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.27.b
+# 		add_tech_bonus = {
+# 			name = nf_black_canyon.27.title
+# 			uses = 2
+# 			bonus = 0.5
+# 			category = ballistic_weaponry_tech_category
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.43
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.42
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		custom_effect_tooltip = blc_letters_settler_positive
+# 	}
+# }
+
+# country_event = {
+# 	#Mustering Army
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.28"
+# 	}
+# 	id = nf_black_canyon.28
+# 	title = nf_black_canyon.28.title
+# 	desc = nf_black_canyon.28.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_black_canyon.28.a
+# 		hidden_effect = {
+# 			set_temp_variable = {
+# 				modify_unit_cap = 3
+# 			}
+# 			add_to_variable = {
+# 				BLC_DIVISION_CAP_RAIDERS = modify_unit_cap
+# 			}
+# 			set_division_template_cap = {
+# 				division_template = "Former Convicts"
+# 				division_cap = BLC_DIVISION_CAP_RAIDERS
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_modify_raider_cap
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.46
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.50
+# 			}
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.51
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		custom_effect_tooltip = blc_letters_raider_positive
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.28.b
+# 		hidden_effect = {
+# 			set_temp_variable = {
+# 				modify_unit_cap = 3
+# 			}
+# 			add_to_variable = {
+# 				BLC_DIVISION_CAP_SETTLERS = modify_unit_cap
+# 			}
+# 			set_division_template_cap = {
+# 				division_template = "Yampan Community Defenders"
+# 				division_cap = BLC_DIVISION_CAP_SETTLERS
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_modify_settler_cap
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.49
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.47
+# 			}
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.51
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		custom_effect_tooltip = blc_letters_settler_positive
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.28.c
+# 		hidden_effect = {
+# 			set_temp_variable = {
+# 				modify_unit_cap = 3
+# 			}
+# 			add_to_variable = {
+# 				BLC_DIVISION_CAP_TRIBALS = modify_unit_cap
+# 			}
+# 			set_division_template_cap = {
+# 				division_template = "Painted Men Warrior Band"
+# 				division_cap = BLC_DIVISION_CAP_TRIBALS
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_modify_tribal_cap
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.03
+# 		}
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.49
+# 			}
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.50
+# 			}
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.48
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_positive
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 	}
+# }
+
+# country_event = {
+# 	#Verdict over McBride
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.29"
+# 	}
+# 	id = nf_black_canyon.29
+# 	title = nf_black_canyon.29.title
+# 	desc = nf_black_canyon.29.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_ncr_jail
+# 	option = {
+# 		name = nf_black_canyon.29.a
+# 		kill_ideology_leader = ruler
+# 		BLC_warden_jackson = {
+# 			add_country_leader_role = {
+# 				promote_leader = yes
+# 				country_leader = {
+# 					ideology = benevolent_dictatorship
+# 					expire = "3000.1.1"
+# 					traits = {
+# 						cruel_tyrant
+# 					}
+# 				}
+# 			}
+# 			add_advisor_role = {
+# 				advisor = {
+# 					slot = high_command
+# 					cost = 100
+# 					idea_token = BLC_WARDEN_JACKSON_HIGH_COMMAND
+# 					traits = {
+# 						bag_officer_of_military_police
+# 					}
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			set_party_name = {
+# 				ideology = ruler
+# 				long_name = BLC_ruler_party_prisoners_long
+# 				name = BLC_ruler_party_prisoners
+# 			}
+# 			#BCR tree's no longer makes sense here. Its all about McBride!
+# 			BCR = {
+# 				load_focus_tree = raider_generic
+# 			}
+# 		}
+# 		custom_effect_tooltip = nf_black_canyon.29.a_tt
+# 		every_character = {
+# 			limit = {
+# 				NOT = { is_character = BLC_mcbride }
+# 				OR = {
+# 					has_character_flag = BLC_raider_character
+# 					has_trait = BLC_raider_origins_trait
+# 				}
+# 			}
+# 			retire = yes
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Verdict over McBride
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.30"
+# 	}
+# 	id = nf_black_canyon.30
+# 	title = nf_black_canyon.30.title
+# 	desc = nf_black_canyon.30.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_raider_1
+# 	option = {
+# 		name = nf_black_canyon.30.a
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.05
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.30.b
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.05
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Interaction with the Glowbugs
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.31"
+# 	}
+# 	id = nf_black_canyon.31
+# 	title = nf_black_canyon.31.title
+# 	desc = nf_black_canyon.31.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_airport_exterior
+# 	option = {
+# 		name = nf_black_canyon.31.a
+# 		set_temp_variable = {
+# 			BLC_caps_temp = 3
+# 		}
+# 		custom_effect_tooltip = GLW_ADD_HEADER_tooltip
+# 		custom_effect_tooltip = BLC_CAPS_ADD_tooltip
+# 		change_GLW_resource_tax = yes
+# 		GLW = {
+# 			set_temp_variable = {
+# 				GLW_caps_temp = -3
+# 			}
+# 			change_GLW_resource_tax = yes
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		set_country_flag = blc_stop_glw_development
+# 		unlock_decision_tooltip = blc_let_kids_walk
+# 	}
+# }
+
+# country_event = {
+# 	#Yet Another Trail of Tears
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.32"
+# 	}
+# 	id = nf_black_canyon.32
+# 	title = nf_black_canyon.32.title
+# 	desc = nf_black_canyon.32.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_highway
+# 	option = {
+# 		name = nf_black_canyon.32.a
+# 		add_manpower = 43
+# 		add_tech_bonus = {
+# 			name = nf_black_canyon.32.title
+# 			bonus = 0.5
+# 			uses = 1
+# 			category = tribal_tech_category
+# 		}
+# 		set_country_flag = jic_trail_of_tears
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = available_political_advisor
+# 		show_ideas_tooltip = BLC_DELSHAY_CULTURAL_ADVISOR
+# 	}
+# }
+
+# country_event = {
+# 	#The End of the Warded
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.33"
+# 	}
+# 	id = nf_black_canyon.33
+# 	title = nf_black_canyon.33.title
+# 	desc = nf_black_canyon.33.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_wasteland_5
+# 	option = {
+# 		name = nf_black_canyon.33.a
+# 		retire_character = BLC_warded
+# 	}
+# }
+
+# country_event = {
+# 	#The End of Bearhard
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.34"
+# 	}
+# 	id = nf_black_canyon.34
+# 	title = nf_black_canyon.34.title
+# 	desc = nf_black_canyon.34.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_fish_town
+# 	option = {
+# 		name = nf_black_canyon.34.a
+# 		retire_character = BLC_bearhard
+# 	}
+# }
+
+# country_event = {
+# 	#Emergency Election in the Painted Men
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.35"
+# 	}
+# 	id = nf_black_canyon.35
+# 	title = nf_black_canyon.35.title
+# 	desc = nf_black_canyon.35.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_black_canyon.35.a
+# 		add_country_leader_role = {
+# 			character = BLC_inkhouse
+# 			promote_leader = yes
+# 			country_leader = {
+# 					ideology = ideocracy
+# 					expire = "2295.1.1.1"
+# 					traits = { tribal_shaman }
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.35.b
+# 		add_country_leader_role = {
+# 			character = BLC_saddleburn
+# 			promote_leader = yes
+# 			country_leader = {
+# 					ideology = ideocracy
+# 					expire = "2295.1.1.1"
+# 					traits = { tribal_peaceful }
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.35.c
+# 		trigger = {
+# 			NOT = {
+# 				has_country_flag = blc_marissa_dead_flag
+# 			}
+# 		}
+# 		add_country_leader_role = {
+# 			character = BLC_marissa
+# 			promote_leader = yes
+# 			country_leader = {
+# 					ideology = ideocracy
+# 					expire = "2295.1.1.1"
+# 					traits = { man_of_community }
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		BLC_marissa = {
+# 			add_advisor_role = {
+# 				advisor = {
+# 					slot = cultural_advisor
+# 					cost = 100
+# 					idea_token = BLC_MARISSA_CULTURAL_ADVISOR
+# 					modifier = {
+# 						people_drift = 0.05
+# 					}
+# 					traits = {
+# 						man_of_community
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Emergency Election in the Yampan Confederation
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.36"
+# 	}
+# 	id = nf_black_canyon.36
+# 	title = nf_black_canyon.36.title
+# 	desc = nf_black_canyon.36.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_black_canyon.36.a
+# 		add_country_leader_role = {
+# 			character = BLC_thoreau
+# 			promote_leader = yes
+# 			country_leader = {
+# 					ideology = mercantile_elite
+# 					expire = "2295.1.1.1"
+# 					traits = { military_background logistics_tsar }
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.36.b
+# 		add_country_leader_role = {
+# 			character = BLC_preston_miklovich
+# 			promote_leader = yes
+# 			country_leader = {
+# 					ideology = militarist_oligarchy
+# 					expire = "2295.1.1.1"
+# 					traits = { military_background survivalist }
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_black_canyon.36.c
+# 		trigger = {
+# 			NOT = {
+# 				has_country_flag = blc_marissa_dead_flag
+# 			}
+# 		}
+# 		add_country_leader_role = {
+# 			character = BLC_esther
+# 			promote_leader = yes
+# 			country_leader = {
+# 					ideology = survivalism
+# 					expire = "2295.1.1.1"
+# 					traits = { DES_head_physician }
+# 			}
+# 		}
+# 		BLC_esther = {
+# 			add_advisor_role = {
+# 				advisor = {
+# 					slot = cultural_advisor
+# 					cost = 100
+# 					idea_token = BLC_ESTHER_CULTURAL_ADVISOR
+# 					modifier = {
+# 						people_drift = 0.05
+# 					}
+# 					traits = {
+# 						DES_head_physician
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Love Prevails
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_black_canyon.37"
+# 	}
+# 	id = nf_black_canyon.37
+# 	title = nf_black_canyon.37.title
+# 	desc = nf_black_canyon.37.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_KHA_high_chapel
+# 	fire_only_once = yes
+# 	option = {
+# 		name = nf_black_canyon.37.a
+# 		custom_effect_tooltip = nf_black_canyon.37.a_tt
+# 		add_stability = 0.10
+# 		add_war_support = 0.10
+# 		add_political_power = 100
+# 	}
+# }
+
+# #Battery and his Diplomatic Quests
+# add_namespace = nf_blc_battery
+# country_event = {
+# 	#Checking out New Jericho, helping out NCN
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.1"
+# 	}
+# 	id = nf_blc_battery.1
+# 	title = nf_blc_battery.1.title
+# 	desc = nf_blc_battery.1.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_fish_town
+# 	option = {
+# 		name = nf_blc_battery.1.a
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.1.title
+# 			bonus = 1
+# 			uses = 1
+# 			category = purification_station_tech_category
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		NCN = {
+# 			457 = {
+# 				add_extra_state_shared_building_slots = 1
+# 				add_building_construction = {
+# 					type = water_generator
+# 					level = 1
+# 					instant_build = yes
+# 				}
+# 			}
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Walk in Paradise, helping out TTM
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.2"
+# 	}
+# 	id = nf_blc_battery.2
+# 	title = nf_blc_battery.2.title
+# 	desc = nf_blc_battery.2.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_TTM_repository
+# 	option = {
+# 		name = nf_blc_battery.2.a
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.2.title
+# 			bonus = 0.5
+# 			uses = 2
+# 			category = agriculture_tech
+# 		}
+# 		# BLC = {
+# 		# 	add_offsite_building = {
+# 		# 		type = water_generator
+# 		# 		level = 1
+# 		# 	}
+# 		# 	add_offsite_building = {
+# 		# 		type = electricity_generator
+# 		# 		level = 1
+# 		# 	}
+# 		# }
+
+# 		TTM = {
+# 			add_offsite_building = {
+# 				type = industrial_complex
+# 				level = 1
+# 			}
+# 			add_offsite_building = {
+# 				type = arms_factory
+# 				level = 1
+# 			}
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Checking out New Sterling, Battery did a little "impromptu emancipation"
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.3"
+# 	}
+# 	id = nf_blc_battery.3
+# 	title = nf_blc_battery.3.title
+# 	desc = nf_blc_battery.3.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_city
+# 	option = {
+# 		name = nf_blc_battery.3.a
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.3.title
+# 			bonus = 1
+# 			uses = 1
+# 			category = foundry_tech_category
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		IRN = {
+# 			add_opinion_modifier = {
+# 				target = BLC
+# 				modifier = col_suspicion_arised
+# 			}
+# 			custom_effect_tooltip = spacer_tt
+# 			430 = {
+# 				damage_building = {
+# 					type = industrial_complex
+# 					damage = 1
+# 				}
+# 			}
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Strolling into Dog-City, Battery petted a cute pup, sponsored a new kennel
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.4"
+# 	}
+# 	id = nf_blc_battery.4
+# 	title = nf_blc_battery.4.title
+# 	desc = nf_blc_battery.4.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_9
+# 	option = {
+# 		name = nf_blc_battery.4.a
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.4.title
+# 			bonus = 0.5
+# 			uses = 1
+# 			category = support_dog_tech_category
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		HAN = {
+# 			525 = {
+# 				add_extra_state_shared_building_slots = 1
+# 			}
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Getting into Casper, Wyoming, Battery learns about brahmins
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.5"
+# 	}
+# 	id = nf_blc_battery.5
+# 	title = nf_blc_battery.5.title
+# 	desc = nf_blc_battery.5.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_wasteland_2
+# 	option = {
+# 		name = nf_blc_battery.5.a
+# 		set_technology = {
+# 			war_beasts_unlock_tech = 1
+# 			war_beasts_first_form_tech = 1
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		WYR = {
+# 			set_temp_variable = { caps_to_add = 25 } add_caps = yes
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Strolling into Greenway, Lovell, Battery learns about the Khans Culture and Whiskey
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.6"
+# 	}
+# 	id = nf_blc_battery.6
+# 	title = nf_blc_battery.6.title
+# 	desc = nf_blc_battery.6.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_KHA_bitter_springs_massacre
+# 	option = {
+# 		name = nf_blc_battery.6.a
+# 		army_experience = 15
+# 		custom_effect_tooltip = spacer_tt
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#First Trip to the Foragers
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.7"
+# 	}
+# 	id = nf_blc_battery.7
+# 	title = nf_blc_battery.7.title
+# 	desc = nf_blc_battery.7.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_wasteland_1
+# 	option = {
+# 		name = nf_blc_battery.7.a
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.7.title
+# 			bonus = 0.5
+# 			uses = 1
+# 			category = extraction_category
+# 		}
+# 		set_country_flag = blc_battery_met_foragers
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#First trip to the Claim Jumpers
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.8"
+# 	}
+# 	id = nf_blc_battery.8
+# 	title = nf_blc_battery.8.title
+# 	desc = nf_blc_battery.8.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_divide
+# 	option = {
+# 		name = nf_blc_battery.8.a
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.8.title
+# 			bonus = 0.5
+# 			uses = 1
+# 			category = support_demolitions_tech_category
+# 		}
+# 		set_country_flag = blc_battery_met_claim_jumpers
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#First Trip to the Mesa
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.9"
+# 	}
+# 	id = nf_blc_battery.9
+# 	title = nf_blc_battery.9.title
+# 	desc = nf_blc_battery.9.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_quarry
+# 	option = {
+# 		name = nf_blc_battery.9.a
+# 		custom_effect_tooltip = nf_blc_battery.9.a_tt
+# 		add_tech_bonus = {
+# 			name = nf_blc_battery.9.a
+# 			bonus = 0.25
+# 			uses = 2
+# 			category = computing_tech
+# 		}
+# 		set_country_flag = blc_battery_met_ciphers
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#First Trip to Circle Junction
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.10"
+# 	}
+# 	id = nf_blc_battery.10
+# 	title = nf_blc_battery.10.title
+# 	desc = nf_blc_battery.10.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_train_yard
+# 	option = {
+# 		name = nf_blc_battery.10.a
+# 		add_equipment_to_stockpile = {
+# 			type = supply_equipment_1
+# 			amount = 25
+# 			producer = INR
+# 		}
+# 		set_country_flag = blc_battery_met_iron_lines
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Trade Delagation to the Eighties
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.11"
+# 	}
+# 	id = nf_blc_battery.11
+# 	title = nf_blc_battery.11.title
+# 	desc = nf_blc_battery.11.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_highway
+# 	option = {
+# 		name = nf_blc_battery.11.a
+# 		add_equipment_to_stockpile = {
+# 			type = light_motorized_equipment_2
+# 			amount = 1
+# 			producer = USA
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Trade Delagation to the Ruminators
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.12"
+# 	}
+# 	id = nf_blc_battery.12
+# 	title = nf_blc_battery.12.title
+# 	desc = nf_blc_battery.12.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_house_2
+# 	option = {
+# 		name = nf_blc_battery.12.a
+# 		add_ideas = ruminator_book
+# 		custom_effect_tooltip = spacer_tt
+# 		add_opinion_modifier = {
+# 			target = BTH
+# 			modifier = bth_friendly
+# 		}
+# 		add_to_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 1
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Black Canyon escapes into the Glowbugs land
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.13"
+# 	}
+# 	id = nf_blc_battery.13
+# 	title = nf_blc_battery.13.title
+# 	desc = nf_blc_battery.13.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_battle
+# 	option = {
+# 		name = nf_blc_battery.13.a
+# 		add_ideas = glw_caravan_in_exile
+# 		#custom_effect_tooltip = spacer_tt
+# 		#if = {
+# 		#	limit = {
+# 		#		NOT = {
+# 		#			has_template = "The Caravanserai"
+# 		#		}
+# 		#	}
+# 		#	division_template = {
+# 		#		name = "The Caravanserai"
+# 		#		priority = 2
+# 		#		template_counter = 192
+# 		#		regiments = {
+# 		#			spec_ops = { x = 0 y = 0 }
+# 		#			spec_ops = { x = 0 y = 1 }
+# 		#			spec_ops = { x = 0 y = 2 }
+# 		#			spec_ops = { x = 1 y = 0 }
+# 		#			spec_ops = { x = 1 y = 1 }
+# 		#		}
+# 		#		support = {
+# 		#			anti_tank_company = { x = 0 y = 0 }
+# 		#		}
+# 		#	}
+# 		#}#
+# 		#capital_scope = {
+# 		#	create_unit = {
+# 		#		division = "name = \"The Caravanserai\" division_template = \"Jet Junkies\" start_experience_factor = 0.75 start_equipment_factor = 1.0"
+# 		#		owner = BAG
+# 		#	}
+# 		#}
+# 	}
+# }
+
+# country_event = {
+# 	#Dying for a Final Time
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.14"
+# 	}
+# 	id = nf_blc_battery.14
+# 	title = nf_blc_battery.14.title
+# 	desc = nf_blc_battery.14.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_car_2
+# 	option = {
+# 		name = nf_blc_battery.14.a
+# 		add_stability = -0.05
+# 		if = {
+# 			limit = {
+# 				BLC = { has_country_flag = blc_marissa_dead_flag }
+# 			}
+# 			country_event = {
+# 				id = nf_blc_battery.16
+# 				days = 2
+# 			}
+# 			#Hook this up for achievement (probably hard-level) "Worst Possible Ending"
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Character Growth
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.15"
+# 	}
+# 	id = nf_blc_battery.15
+# 	title = nf_blc_battery.15.title
+# 	desc = nf_blc_battery.15.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_blc_battery.15.a
+# 		add_stability = 0.10
+# 		if = {
+# 			limit = {
+# 				has_completed_focus = blc_invite_flyers
+# 				check_variable = {
+# 					var = blc_journey_of_battery
+# 					value = 12
+# 					compare = equals
+# 				}
+# 			}
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.17
+# 			}
+# 			#Hook this up for achievement (probably hard-level) "Best Possible Ending"
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Dying for the Final Time - Worst Possible Ending
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.16"
+# 	}
+# 	id = nf_blc_battery.16
+# 	title = nf_blc_battery.16.title
+# 	desc = nf_blc_battery.16.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_car_2
+# 	option = {
+# 		name = nf_blc_battery.16.a
+# 		add_stability = -0.05
+# 	}
+# }
+
+# country_event = {
+# 	#Character Growth - Best Possible Ending
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_battery.17"
+# 	}
+# 	id = nf_blc_battery.17
+# 	title = nf_blc_battery.17.title
+# 	desc = nf_blc_battery.17.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_KHA_high_chapel
+# 	option = {
+# 		name = nf_blc_battery.17.a
+# 		add_stability = 0.05
+# 		set_country_flag = blc_battery_married
+# 	}
+# }
+
+# # Letters from the other factions (character events)
+# add_namespace = nf_blc_letters
+
+# unit_leader_event = {
+# 	#Battery's Intro Event
+# 	id = nf_blc_letters.0
+# 	title = nf_blc_letters.0.title
+# 	desc = nf_blc_letters.0.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.0.a
+# 		add_popularity = {
+# 			ideology = people
+# 			popularity = 0.05
+# 		}
+# 		set_variable = {
+# 			var = blc_journey_of_battery
+# 			value = 0
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Raider Infrastucture
+# 	id = nf_blc_letters.1
+# 	title = nf_blc_letters.1.title
+# 	desc = nf_blc_letters.1.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.1.a
+# 		add_stability = 0.05
+# 		572 = {
+# 			add_manpower = -27
+# 			damage_building = {
+# 				type = infrastructure
+# 				damage = 0.25
+# 			}
+# 		}
+# 		every_neighbor_country = {
+# 			limit = {
+# 				NOT = {
+# 					has_country_flag = is_raider_nation
+# 				}
+# 			}
+# 			add_opinion_modifier = {
+# 				target = PREV
+# 				modifier = col_raider_reforms
+# 			}
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Tribal Infrastucture
+# 	id = nf_blc_letters.2
+# 	title = nf_blc_letters.2.title
+# 	desc = nf_blc_letters.2.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.2.a
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.02
+# 		}
+# 		add_popularity = {
+# 			ideology = people
+# 			popularity = 0.02
+# 		}
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.02
+# 		}
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.02
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Settler Infrastructure
+# 	id = nf_blc_letters.3
+# 	title = nf_blc_letters.3.title
+# 	desc = nf_blc_letters.3.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.3.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Raider Industrial
+# 	id = nf_blc_letters.4
+# 	title = nf_blc_letters.4.title
+# 	desc = nf_blc_letters.4.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.4.a
+# 		add_stability = -0.03
+# 		custom_effect_tooltip = spacer_tt
+# 		add_ideas = raider_idea_slaves
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Tribal Industrial
+# 	id = nf_blc_letters.5
+# 	title = nf_blc_letters.5.title
+# 	desc = nf_blc_letters.5.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.5.a
+# 		121 = {
+# 			damage_building = {
+# 				type = industrial_complex
+# 				damage = 0.5
+# 			}
+# 			add_dynamic_modifier = {
+# 				modifier = painted_men_bad_state_modifier
+# 				days = 180
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		set_technology = {
+# 			tribal_production_tech_2 = 1
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Settler Industrial
+# 	id = nf_blc_letters.6
+# 	title = nf_blc_letters.6.title
+# 	desc = nf_blc_letters.6.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.6.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Raider Armament
+# 	id = nf_blc_letters.7
+# 	title = nf_blc_letters.7.title
+# 	desc = nf_blc_letters.7.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.7.a
+# 		add_stability = 0.03
+# 		add_manpower = -18
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Tribal Armament
+# 	id = nf_blc_letters.8
+# 	title = nf_blc_letters.8.title
+# 	desc = nf_blc_letters.8.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.8.a
+# 		set_technology = {
+# 			tribal_enforcer_defense_tech = 1
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Settler Armament
+# 	id = nf_blc_letters.9
+# 	title = nf_blc_letters.9.title
+# 	desc = nf_blc_letters.9.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.9.a
+# 	}
+# }
+
+# ###Intro Extra Events
+# country_event = {
+# 	#The First Arbitration - BCR vs PNT
+# 	id = nf_blc_letters.10
+# 	title = nf_blc_letters.10.title
+# 	desc = nf_blc_letters.10.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_battle
+# 	option = {
+# 		name = nf_blc_letters.10.a
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_positive
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.11
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.14
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.10.b
+# 		add_popularity = {
+# 			ideology = people
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.015
+# 		}
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.015
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.13
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.14
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.10.c
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.13
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_raider_positive
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.12
+# 			}
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A1 - Warded Positive
+# 	id = nf_blc_letters.11
+# 	title = nf_blc_letters.11.title
+# 	desc = nf_blc_letters.11.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.11.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A1 - McBride Positive
+# 	id = nf_blc_letters.12
+# 	title = nf_blc_letters.12.title
+# 	desc = nf_blc_letters.12.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.12.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A1 - Warded Negative
+# 	id = nf_blc_letters.13
+# 	title = nf_blc_letters.13.title
+# 	desc = nf_blc_letters.13.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.13.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A1 - McBride Negative
+# 	id = nf_blc_letters.14
+# 	title = nf_blc_letters.14.title
+# 	desc = nf_blc_letters.14.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.14.a
+# 	}
+# }
+
+# country_event = {
+# 	#The Second Arbitration - YMP vs PNT
+# 	id = nf_blc_letters.15
+# 	title = nf_blc_letters.15.title
+# 	desc = nf_blc_letters.15.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_wasteland_river
+# 	option = {
+# 		name = nf_blc_letters.15.a
+# 		55 = {
+# 			remove_core_of = YMP
+# 			remove_building = {
+# 				type = dockyard
+# 				level = 1
+# 			}
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.18
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_tribal_positive
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.17
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.15.b
+# 		55 = {
+# 			remove_core_of = YMP
+# 			remove_core_of = PNT
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.18
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.19
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.15.c
+# 		55 = {
+# 			remove_core_of = PNT
+# 		}
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_positive
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.16
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.19
+# 			}
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A2 - Bearhard Positive
+# 	id = nf_blc_letters.16
+# 	title = nf_blc_letters.16.title
+# 	desc = nf_blc_letters.16.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.16.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A2 - Warded Positive
+# 	id = nf_blc_letters.17
+# 	title = nf_blc_letters.17.title
+# 	desc = nf_blc_letters.17.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.17.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A2 - Bearhard Negative
+# 	id = nf_blc_letters.18
+# 	title = nf_blc_letters.18.title
+# 	desc = nf_blc_letters.18.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.18.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A2 - Warded Negative
+# 	id = nf_blc_letters.19
+# 	title = nf_blc_letters.19.title
+# 	desc = nf_blc_letters.19.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.19.a
+# 	}
+# }
+
+# country_event = {
+# 	#The Third Arbitration - YMP vs BCR
+# 	id = nf_blc_letters.20
+# 	title = nf_blc_letters.20.title
+# 	desc = nf_blc_letters.20.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_blc_letters.20.a
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_raider_positive
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.21
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.24
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.20.b
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.24
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.23
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.20.c
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.05
+# 		}
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.05
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_settler_positive
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.22
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.23
+# 			}
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A3 - McBride Positive
+# 	id = nf_blc_letters.21
+# 	title = nf_blc_letters.21.title
+# 	desc = nf_blc_letters.21.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.21.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A3 - Bearhard Positive
+# 	id = nf_blc_letters.22
+# 	title = nf_blc_letters.22.title
+# 	desc = nf_blc_letters.22.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.22.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A3 - McBride Negative
+# 	id = nf_blc_letters.23
+# 	title = nf_blc_letters.23.title
+# 	desc = nf_blc_letters.23.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.23.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#A3 - Bearhard Negative
+# 	id = nf_blc_letters.24
+# 	title = nf_blc_letters.24.title
+# 	desc = nf_blc_letters.24.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.24.a
+# 	}
+# }
+
+# country_event = {
+# 	#The Last Arbitration - Free-for-All!
+# 	id = nf_blc_letters.25
+# 	title = nf_blc_letters.25.title
+# 	desc = nf_blc_letters.25.desc
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_house_2
+# 	option = {
+# 		name = nf_blc_letters.25.a
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = blc_this_will_have_consequences_tt
+# 		set_country_flag = blc_marissa_dead_flag
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_raider_positive
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.27
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.32
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.31
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.25.b
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = -0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = 0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.33
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_settler_negative
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.30
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_tribal_positive
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.26
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_letters.25.c
+# 		add_popularity = {
+# 			ideology = ruler
+# 			popularity = -0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = elites
+# 			popularity = 0.03
+# 		}
+# 		add_popularity = {
+# 			ideology = intellectuals
+# 			popularity = -0.03
+# 		}
+# 		custom_effect_tooltip = spacer_tt
+# 		custom_effect_tooltip = blc_letters_raider_negative
+# 		hidden_effect = {
+# 			BLC_mcbride = {
+# 				unit_leader_event = nf_blc_letters.33
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_settler_positive
+# 		hidden_effect = {
+# 			BLC_bearhard = {
+# 				unit_leader_event = nf_blc_letters.28
+# 			}
+# 		}
+# 		custom_effect_tooltip = blc_letters_tribal_negative
+# 		hidden_effect = {
+# 			BLC_warded = {
+# 				unit_leader_event = nf_blc_letters.29
+# 			}
+# 		}
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - Warded Positive
+# 	id = nf_blc_letters.26
+# 	title = nf_blc_letters.26.title
+# 	desc = nf_blc_letters.26.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.26.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - McBride Positive
+# 	id = nf_blc_letters.27
+# 	title = nf_blc_letters.27.title
+# 	desc = nf_blc_letters.27.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.27.a
+# 		add_war_support = 0.05
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - Bearhard Positive
+# 	id = nf_blc_letters.28
+# 	title = nf_blc_letters.28.title
+# 	desc = nf_blc_letters.28.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.28.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - Warded Negative/1
+# 	id = nf_blc_letters.29
+# 	title = nf_blc_letters.29.title
+# 	desc = nf_blc_letters.29.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.29.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - Bearhard Negative/1
+# 	id = nf_blc_letters.30
+# 	title = nf_blc_letters.30.title
+# 	desc = nf_blc_letters.30.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.30.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - Warded Negative/2
+# 	id = nf_blc_letters.31
+# 	title = nf_blc_letters.31.title
+# 	desc = nf_blc_letters.31.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.31.a
+# 		add_stability = -0.025
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - Bearhard Negative/2
+# 	id = nf_blc_letters.32
+# 	title = nf_blc_letters.32.title
+# 	desc = nf_blc_letters.32.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.32.a
+# 		add_stability = -0.025
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#AF - McBride Negative
+# 	id = nf_blc_letters.33
+# 	title = nf_blc_letters.33.title
+# 	desc = nf_blc_letters.33.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.33.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Urbanisation - McBride Positive
+# 	id = nf_blc_letters.34
+# 	title = nf_blc_letters.34.title
+# 	desc = nf_blc_letters.34.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.34.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Urbanisation - Warded Negatove
+# 	id = nf_blc_letters.35
+# 	title = nf_blc_letters.35.title
+# 	desc = nf_blc_letters.35.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.35.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Urbanisation - McBride Negative
+# 	id = nf_blc_letters.36
+# 	title = nf_blc_letters.36.title
+# 	desc = nf_blc_letters.36.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.36.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Urbanisation - Warded Positive
+# 	id = nf_blc_letters.37
+# 	title = nf_blc_letters.37.title
+# 	desc = nf_blc_letters.37.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.37.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Intervention - Mallet Positive
+# 	id = nf_blc_letters.38
+# 	title = nf_blc_letters.38.title
+# 	desc = nf_blc_letters.38.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.38.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Intervention - Bearhard Negative
+# 	id = nf_blc_letters.39
+# 	title = nf_blc_letters.39.title
+# 	desc = nf_blc_letters.39.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.39.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Intervention - Bearhard Positive
+# 	id = nf_blc_letters.40
+# 	title = nf_blc_letters.40.title
+# 	desc = nf_blc_letters.40.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.40.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Intervention - Mallet Negative
+# 	id = nf_blc_letters.41
+# 	title = nf_blc_letters.41.title
+# 	desc = nf_blc_letters.41.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.41.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Weapon Development - Bearhard Positive
+# 	id = nf_blc_letters.42
+# 	title = nf_blc_letters.42.title
+# 	desc = nf_blc_letters.42.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.42.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Weapon Development - Warded Negative
+# 	id = nf_blc_letters.43
+# 	title = nf_blc_letters.43.title
+# 	desc = nf_blc_letters.43.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.43.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Weapon Development - Warded Positive
+# 	id = nf_blc_letters.44
+# 	title = nf_blc_letters.44.title
+# 	desc = nf_blc_letters.44.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.44.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Weapon Development - Bearhard Negative
+# 	id = nf_blc_letters.45
+# 	title = nf_blc_letters.45.title
+# 	desc = nf_blc_letters.45.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.45.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Mustering Warband - Mallet Positive
+# 	id = nf_blc_letters.46
+# 	title = nf_blc_letters.46.title
+# 	desc = nf_blc_letters.46.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.46.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Mustering Warband - Bearhard Positive
+# 	id = nf_blc_letters.47
+# 	title = nf_blc_letters.47.title
+# 	desc = nf_blc_letters.47.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.47.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Mustering Warband - Warded Positive
+# 	id = nf_blc_letters.48
+# 	title = nf_blc_letters.48.title
+# 	desc = nf_blc_letters.48.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.48.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Mustering Warband - Mallet Negative
+# 	id = nf_blc_letters.49
+# 	title = nf_blc_letters.49.title
+# 	desc = nf_blc_letters.49.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.49.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Mustering Warband - Bearhard Negative
+# 	id = nf_blc_letters.50
+# 	title = nf_blc_letters.50.title
+# 	desc = nf_blc_letters.50.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.50.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Mustering Warband - Warded Negative
+# 	id = nf_blc_letters.51
+# 	title = nf_blc_letters.51.title
+# 	desc = nf_blc_letters.51.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.51.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Death of Quick Asp
+# 	id = nf_blc_letters.52
+# 	title = nf_blc_letters.52.title
+# 	desc = nf_blc_letters.52.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.52.a
+# 	}
+# }
+
+# unit_leader_event = {
+# 	#Death of Koda Rivers
+# 	id = nf_blc_letters.53
+# 	title = nf_blc_letters.53.title
+# 	desc = nf_blc_letters.53.desc
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_blc_letters.53.a
+# 	}
+# }
+
+# #? That's a lot of letters, huh?
+
+# ### The Beacons of (GONDOR!) the Rockies
+# add_namespace = nf_blc_beacons
+# country_event = {
+# 	#The 'Sweetwater Nation's Crisis' notifier
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.1"
+# 	}
+# 	id = nf_blc_beacons.1
+# 	title = nf_blc_beacons.1.title
+# 	desc = nf_blc_beacons.1.desc
+# 	trigger = {
+# 		original_tag = BLC
+# 		NOT = {
+# 			OR = {
+# 				PRO = {
+# 					has_war_with = SIE
+# 				}
+# 				SIE = {
+# 					has_war_with = PRO
+# 				}
+# 			}
+# 		}
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 20
+# 	}
+# 	fire_only_once = yes
+# 	picture = GFX_event_sub_generic_battle
+# 	option = {
+# 		name = nf_blc_beacons.1.a
+# 	}
+# }
+
+# country_event = {
+# 	#Offer for Vassalization, or war
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.11"
+# 	}
+# 	id = nf_blc_beacons.11
+# 	title = nf_blc_beacons.11.title
+# 	desc = nf_blc_beacons.11.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_4
+# 	option = {
+# 		name = nf_blc_beacons.11.a
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					original_tag = PRO
+# 					original_tag = SIE
+# 				}
+# 			}
+# 			set_cosmetic_tag = BLC_WYOMING
+# 			set_politics = {
+# 				ruling_party = elites
+# 			}
+# 			hidden_effect = {
+# 				set_popularities = {
+# 					elites = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					intellectuals = 0
+# 				}
+# 				create_country_leader = {
+# 					name = BLC_DEPUTY_FISCHER_NAME
+# 					desc = BLC_DEPUTY_FISCHER_DESC
+# 					picture = "gfx/leaders/DES/portrait_des_general_6.dds"
+# 					expire = "3000.1.1"
+# 					ideology = peoples_militia
+# 					traits = {
+# 						military_background
+# 					}
+# 				}
+# 			}
+# 			BLC = {
+# 				transfer_state = 1035
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				original_tag = VLS
+# 			}
+# 			set_cosmetic_tag = BLC_VLS
+# 			set_politics = {
+# 				ruling_party = elites
+# 			}
+# 			hidden_effect = {
+# 				set_popularities = {
+# 					elites = 100
+# 					ruler = 0
+# 					intellectuals = 0
+# 					intellectuals = 0
+# 				}
+# 				create_country_leader = {
+# 					name = BLC_LADY_VEIL_NAME
+# 					desc = BLC_LADY_VEIL_DESC
+# 					picture = "gfx/leaders/raider/portrait_raider_generic_14.dds"
+# 					expire = "3000.1.1"
+# 					ideology = town_hall_democracy
+# 					traits = {
+# 						charismatic_leader
+# 					}
+# 				}
+# 			}
+# 		}
+# 		become_puppet = yes
+# 		capital_scope = {
+# 			add_extra_state_shared_building_slots = 3
+# 			add_building_construction = {
+# 				type = industrial_complex
+# 				level = 2
+# 				instant_build = yes
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_beacons.11.b
+# 		add_war_support = 0.05
+# 		BLC = {
+# 			country_event = nf_blc_beacons.12
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The War part of the deal
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.12"
+# 	}
+# 	id = nf_blc_beacons.12
+# 	title = nf_blc_beacons.12.title
+# 	desc = nf_blc_beacons.12.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_battle
+# 	option = {
+# 		name = nf_blc_beacons.12.a
+# 		if = {
+# 			limit = {
+# 				SIE = {
+# 					exists = yes
+# 				}
+# 			}
+# 			SIE = {
+# 				ROOT = {
+# 					grant_wargoals_on_core_states_of_prev = yes
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				PRO = {
+# 					exists = yes
+# 				}
+# 			}
+# 			PRO = {
+# 				ROOT = {
+# 					grant_wargoals_on_core_states_of_prev = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The "Ghost's Offer" Crisis Notifier
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.2"
+# 	}
+# 	id = nf_blc_beacons.2
+# 	title = nf_blc_beacons.2.title
+# 	desc = nf_blc_beacons.2.desc
+# 	fire_only_once = yes
+# 	trigger = {
+# 		original_tag = BLC
+# 		VLS = {
+# 			#has_completed_focus = vls_chance_of_a_lifetime
+# 			#?Just for testing
+# 			has_completed_focus = shared_vault_the_geck
+# 		}
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+# 	picture = GFX_event_BOS_our_founding
+# 	option = {
+# 		name = nf_blc_beacons.2.a
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_completed_focus = blc_beacons_alight_on_peaks
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				complete_national_focus = blc_beacons_alight_on_peaks
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				has_country_flag = vls_demand
+# 			}
+# 			country_event = nf_blc_beacons.21
+# 		}
+# 		else = {
+# 			country_event = nf_blc_beacons.22
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_completed_focus = blc_beacons_alight_on_peaks
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				complete_national_focus = blc_beacons_alight_on_peaks
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The Ghosts' Demand
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.21"
+# 	}
+# 	id = nf_blc_beacons.21
+# 	title = nf_blc_beacons.21.title
+# 	desc = nf_blc_beacons.21.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_blc_beacons.21.a
+# 		add_stability = -0.05
+# 		VLS = {
+# 			country_event = vls_vault.2
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_beacons.21.b
+# 		add_war_support = 0.05
+# 		VLS = {
+# 			country_event = vls_vault.3
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The Ghosts' Help
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.22"
+# 	}
+# 	id = nf_blc_beacons.22
+# 	title = nf_blc_beacons.22.title
+# 	desc = nf_blc_beacons.22.desc
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+# 	picture = GFX_event_BOS_settler_defense
+# 	option = {
+# 		name = nf_blc_beacons.22.a
+# 		give_military_access = VLS
+# 		VLS = {
+# 			give_military_access = BLC
+# 		}
+# 		set_technology = {
+# 			stripped_pa_tech = 1
+# 		}
+# 		VLS = {
+# 			country_event = vls_vault.4
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_template = "Ghost Mercenaries"
+# 				}
+# 			}
+# 			division_template = {
+# 				name = "Ghost Mercenaries"
+# 				regiments = {
+# 					power_armour = {
+# 						x = 0
+# 						y = 0
+# 					}
+# 					power_armour = {
+# 						x = 0
+# 						y = 1
+# 					}
+# 					power_armour = {
+# 						x = 0
+# 						y = 2
+# 					}
+# 					power_armour = {
+# 						x = 1
+# 						y = 0
+# 					}
+# 					power_armour = {
+# 						x = 1
+# 						y = 1
+# 					}
+# 				}
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			532 = {
+# 				create_unit = {
+# 					division = "name = \"The Order\" division_template = \"Ghost Mercenaries\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+# 					owner = BLC
+# 				}
+# 			}
+# 			532 = {
+# 				create_unit = {
+# 					division = "name = \"Night Witches\" division_template = \"Ghost Mercenaries\" start_experience_factor = 1.0 start_equipment_factor = 1.0"
+# 					owner = BLC
+# 				}
+# 			}
+# 		}
+# 		custom_effect_tooltip = nf_blc_beacons.22.a_tt
+# 	}
+# 	option = {
+# 		name = nf_blc_beacons.21.b
+# 		add_war_support = 0.05
+# 		VLS = {
+# 			country_event = vls_vault.3
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The Moles' Ruckus Crisis Notifier
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.3"
+# 	}
+# 	id = nf_blc_beacons.3
+# 	title = nf_blc_beacons.3.title
+# 	desc = nf_blc_beacons.3.desc
+# 	fire_only_once = yes
+# 	trigger = {
+# 		original_tag = BLC
+# 		date > 2276.06.20
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 10
+# 	}
+# 	picture = GFX_event_sub_generic_highway
+# 	option = {
+# 		name = nf_blc_beacons.3.a
+# 		complete_national_focus = blc_deal_with_moles
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_completed_focus = blc_beacons_alight_on_peaks
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				complete_national_focus = blc_beacons_alight_on_peaks
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The Moles Frick Up an Arms Factory
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.31"
+# 	}
+# 	id = nf_blc_beacons.31
+# 	title = nf_blc_beacons.31.title
+# 	desc = nf_blc_beacons.31.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_divide
+# 	option = {
+# 		name = nf_blc_beacons.31.a
+# 		572 = {
+# 			damage_building = {
+# 				type = arms_factory
+# 				damage = 0.6
+# 			}
+# 		}
+# 		activate_mission = black_canyon_moles_mission
+# 	}
+# }
+
+# country_event = {
+# 	#The Moles Frick Up a Civilian Workshop
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.32"
+# 	}
+# 	id = nf_blc_beacons.32
+# 	title = nf_blc_beacons.32.title
+# 	desc = nf_blc_beacons.32.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_divide
+# 	option = {
+# 		name = nf_blc_beacons.32.a
+# 		572 = {
+# 			damage_building = {
+# 				type = industrial_complex
+# 				damage = 0.6
+# 			}
+# 		}
+# 		activate_mission = black_canyon_moles_mission
+# 	}
+# }
+
+# country_event = {
+# 	#The Moles Frick Up a Road
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.33"
+# 	}
+# 	id = nf_blc_beacons.33
+# 	title = nf_blc_beacons.33.title
+# 	desc = nf_blc_beacons.33.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_divide
+# 	option = {
+# 		name = nf_blc_beacons.33.a
+# 		572 = {
+# 			damage_building = {
+# 				type = infrastructure
+# 				damage = 1
+# 			}
+# 		}
+# 		activate_mission = black_canyon_moles_mission
+# 	}
+# }
+
+# #country_event = {
+# #	#Oroboros Political Developments Notifier
+# #	immediate = {
+# #		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.4"
+# #	}
+# #	id = nf_blc_beacons.4
+# #	title = nf_blc_beacons.4.title
+# #	desc = nf_blc_beacons.4.desc
+# #	fire_only_once = yes
+# #	trigger = {
+# #		original_tag = BLC
+# #	}
+# #	mean_time_to_happen = {
+# #		days = 1
+# #	}
+# #	picture = GFX_event_daughters_of_hecate
+# #	option = {
+# #		name = nf_blc_beacons.4.a
+# #		custom_effect_tooltip = nf_blc_beacons.4_tt
+# #		if = {
+# #			limit = {
+# #				NOT = {
+# #					has_completed_focus = blc_beacons_alight_on_peaks
+# #				}
+# #			}
+# #			hidden_effect = {
+# #				complete_national_focus = blc_beacons_alight_on_peaks
+# #			}
+# #		}
+# #	}
+# #}
+
+# country_event = {
+# 	#The Colorado War erupts!
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.5"
+# 	}
+# 	id = nf_blc_beacons.5
+# 	title = nf_blc_beacons.5.title
+# 	desc = nf_blc_beacons.5.desc
+# 	fire_only_once = yes
+# 	is_triggered_only = yes
+
+# 	option = {
+# 		name = nf_blc_beacons.5.a
+# 		custom_effect_tooltip = nf_blc_beacons.5.a_tt
+# 		complete_national_focus = blc_powderkeg_of_colorado
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_completed_focus = blc_beacons_alight_on_peaks
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				complete_national_focus = blc_beacons_alight_on_peaks
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.51"
+# 	}
+# 	id = nf_blc_beacons.51
+# 	title = nf_blc_beacons.51.title
+# 	desc = nf_blc_beacons.51.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_vintage_letter
+# 	option = {
+# 		name = nf_blc_beacons.51.a
+# 		custom_effect_tooltip = nf_blc_beacons.51.become_puppet_of_blc
+# 		568 = {
+# 			transfer_state_to = BAG
+# 		}
+# 		hidden_effect = {
+# 			GLW = {
+# 				set_capital = {
+# 					state = 310
+# 				}
+# 			}
+# 		}
+# 		BLC = {
+# 			BAG = {
+# 				become_puppet = yes
+# 			}
+# 		}
+# 		BAG = {
+# 			every_owned_state = {
+# 				limit = {
+# 					is_core_of = BAG
+# 				}
+# 				transfer_state_to = GLW
+# 			}
+# 			hidden_effect = {
+# 				set_capital = {
+# 					state = 568
+# 				}
+# 				568 = {
+# 					add_core_of = BAG
+# 				}
+# 			}
+# 			custom_effect_tooltip = spacer_tt
+# 			set_politics = {
+# 				ruling_party = intellectuals
+# 			}
+# 			set_political_party = {
+# 				ideology = intellectuals
+# 				popularity = 100
+# 			}
+# 			add_ideas = blc_death_or_taxes
+# 			custom_effect_tooltip = spacer_tt
+# 			complete_national_focus = bag_fill_out_damage_report			#Complete National Focus effect uses no spacing, ain't that great?
+# 			custom_effect_tooltip = spacer_tt
+# 			set_cosmetic_tag = BLC_BAG_BOULDER
+# 		}
+# 		custom_effect_tooltip = bag_end_of_the_line_tt
+# 	}
+# 	option = {
+# 		name = nf_blc_beacons.51.b
+# 		custom_effect_tooltip = nf_blc_beacons.51.black_canyon_wont_like_this
+# 	}
+# }
+
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.52"
+# 	}
+# 	id = nf_blc_beacons.52
+# 	title = nf_blc_beacons.52.title
+# 	desc = nf_blc_beacons.52.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_battle
+# 	option = {
+# 		name = nf_blc_beacons.52.a
+# 		if = {
+# 			limit = {
+# 				country_exists = WHD
+# 			}
+# 			WHD = {
+# 				ROOT = {
+# 					grant_wargoals_on_core_states_of_prev = yes
+# 				}
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				country_exists = LUM
+# 			}
+# 			LUM = {
+# 				ROOT = {
+# 					grant_wargoals_on_core_states_of_prev = yes
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.6"
+# 	}
+# 	id = nf_blc_beacons.6
+# 	title = nf_blc_beacons.6.title
+
+# 	desc = {
+# 		text = nf_blc_beacons.6.desc.1
+# 		trigger = {
+# 			has_character = BLC_MCBRIDE
+# 		}
+# 	}
+
+# 	desc = {
+# 		text = nf_blc_beacons.6.desc.2
+# 		trigger = {
+# 			NOT = {
+# 				has_character = BLC_MCBRIDE
+# 			}
+# 		}
+# 	}
+# 	fire_only_once = yes
+# 	trigger = {
+# 		original_tag = BLC
+# 		has_country_flag = ttm_stole_paradise_from_us
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 7
+# 	}
+# 	picture = GFX_event_TTM_repository
+# 	#Try to plead, TTM is mean because you still have McBride.
+# 	option = {
+# 		trigger = {
+# 			has_character = BLC_MCBRIDE
+# 		}
+# 		name = nf_blc_beacons.6.a
+# 		unlock_national_focus = blc_forbidden_temple
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_completed_focus = blc_beacons_alight_on_peaks
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				complete_national_focus = blc_beacons_alight_on_peaks
+# 			}
+# 		}
+# 		TTM = {
+# 			country_event = nf_blc_beacons.61
+# 		}
+# 	}
+# 	#Try to plead with them, allows for TTM to be nice.
+# 	option = {
+# 		trigger = {
+# 			NOT = {
+# 				has_character = BLC_MCBRIDE
+# 			}
+# 		}
+# 		ai_chance = {
+# 			# ALWAYS be mean to TTM's player if TTM is AI and ORO is player.
+# 			factor = 1
+# 			modifier = {
+# 				ORO = {
+# 					is_ai = no
+# 				}
+# 				TTM = {
+# 					is_ai = yes
+# 				}
+# 				factor = 0
+# 			}
+# 		}
+# 		name = nf_blc_beacons.6.b1
+# 		unlock_national_focus = blc_forbidden_temple
+# 		TTM = {
+# 			country_event = nf_blc_beacons.611
+# 		}
+# 	}
+# 	#No negotiations! This land is ours!
+# 	option = {
+# 		trigger = {
+# 			NOT = {
+# 				has_character = BLC_MCBRIDE
+# 			}
+# 		}
+
+# 		ai_chance = {
+# 			# ALWAYS be mean to TTM's player if TTM is AI and ORO is player.
+# 			factor = 1
+# 			modifier = {
+# 				ORO = {
+# 					is_ai = no
+# 				}
+# 				TTM = {
+# 					is_ai = yes
+# 				}
+# 				factor = 100
+# 			}
+# 		}
+# 		name = nf_blc_beacons.6.b2
+# 		unlock_national_focus = blc_forbidden_temple
+# 		TTM = {
+# 			country_event = nf_blc_beacons.612
+# 		}
+# 		38 = {
+# 			add_claim_by = BLC
+# 		}
+# 	}
+# }
+
+# #Nice to TTM. Offer them stuff!
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.611"
+# 	}
+# 	id = nf_blc_beacons.611
+# 	title = nf_blc_beacons.611.title
+# 	desc = nf_blc_beacons.611.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_vintage_letter
+# 	option = {
+# 		name = nf_blc_beacons.611.a
+# 		add_war_support = 0.1
+# 		add_stability = 0.1
+# 		BLC = {
+# 			give_guarantee = TTM
+# 			diplomatic_relation = {
+# 				country = TTM
+# 				relation = non_aggression_pact
+# 				active = yes
+# 			}
+# 			set_country_flag = blc_was_nice_to_ttm
+# 		}
+# 	}
+# }
+
+# #BLC sent TTM a mean letter!
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.612"
+# 	}
+# 	id = nf_blc_beacons.612
+# 	title = nf_blc_beacons.612.title
+# 	desc = nf_blc_beacons.612.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_vintage_letter
+# 	option = {
+# 		name = nf_blc_beacons.612.a
+# 	}
+# }
+
+# #Battery /plead's with Diana. No dice here! She is mad at McBride.
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.61"
+# 	}
+# 	id = nf_blc_beacons.61
+# 	title = nf_blc_beacons.61.title
+# 	desc = nf_blc_beacons.61.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_vintage_letter
+# 	option = {
+# 		name = nf_blc_beacons.61.a
+# 		BLC = {
+# 			country_event = {
+# 				id = nf_blc_beacons.62
+# 				days = 1
+# 			}
+# 		}
+# 	}
+# }
+
+# #Diana 'Man of Steel''s the Caravan Congress
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.62"
+# 	}
+# 	id = nf_blc_beacons.62
+# 	title = nf_blc_beacons.62.title
+# 	desc = nf_blc_beacons.62.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_nuclear_explosion
+# 	option = {
+# 		name = nf_blc_beacons.62.a
+# 		add_stability = -0.05
+# 		capital_scope = {
+# 			damage_building = {
+# 				type = infrastructure
+# 				damage = 2
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.7"
+# 	}
+# 	id = nf_blc_beacons.7
+# 	title = nf_blc_beacons.7.title
+# 	desc = nf_blc_beacons.7.desc
+# 	fire_only_once = yes
+# 	trigger = {
+# 		original_tag = BLC
+# 		date > 2278.01.01
+# 	}
+# 	mean_time_to_happen = {
+# 		days = 1
+# 	}
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_blc_beacons.7.a
+# 		complete_national_focus = blc_grand_gathering
+# 		#complete_national_focus = blc_our_green_fireflies
+# 		hidden_effect = {
+# 			add_to_variable = {
+# 				var = gatherings_counter
+# 				value = 1
+# 			}
+# 			country_event = {
+# 				id = nf_black_canyon.8
+# 				days = 365
+# 			}
+# 		}
+# 		if = {
+# 			limit = {
+# 				NOT = {
+# 					has_completed_focus = blc_beacons_alight_on_peaks
+# 				}
+# 			}
+# 			hidden_effect = {
+# 				complete_national_focus = blc_beacons_alight_on_peaks
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#Offer for Surrender, or war
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.71"
+# 	}
+# 	id = nf_blc_beacons.71
+# 	title = nf_blc_beacons.71.title
+# 	desc = nf_blc_beacons.71.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_ruins_1
+# 	option = {
+# 		name = nf_blc_beacons.71.a
+# 		become_puppet = yes
+# 		set_cosmetic_tag = BLC_GLW
+# 		set_politics = {
+# 			ruling_party = ruler
+# 		}
+# 		hidden_effect = {
+# 			set_popularities = {
+# 				elites = 0
+# 				ruler = 100
+# 				intellectuals = 0
+# 				intellectuals = 0
+# 			}
+# 		}
+# 	}
+# 	option = {
+# 		name = nf_blc_beacons.71.b
+# 		add_war_support = 0.05
+# 		BLC = {
+# 			country_event = nf_blc_beacons.72
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The War part of the deal
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.72"
+# 	}
+# 	id = nf_blc_beacons.72
+# 	title = nf_blc_beacons.72.title
+# 	desc = nf_blc_beacons.72.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_battle
+# 	option = {
+# 		name = nf_blc_beacons.72.a
+# 		GLW = {
+# 			ROOT = {
+# 				grant_wargoals_on_core_states_of_prev = yes
+# 			}
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	#The Speech of Stitches
+# 	immediate = {
+# 		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.73"
+# 	}
+# 	id = nf_blc_beacons.73
+# 	title = nf_blc_beacons.73.title
+# 	desc = nf_blc_beacons.73.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_war_room
+# 	option = {
+# 		name = nf_blc_beacons.72.a
+# 		add_to_variable = {
+# 			var = BLC_caravan_influence
+# 			value = 30
+# 		}
+# 		update_blc_influence = yes
+# 		custom_effect_tooltip = add_influence_30
+# 		add_stability = 0.1
+# 	}
+# }
+
+# #country_event = {
+# #	immediate = {
+# #		log = "[GetDateText]: [Root.GetName]: event nf_blc_beacons.8"
+# #	}
+# #	id = nf_blc_beacons.8
+# #	title = nf_blc_beacons.8.title
+# #	desc = nf_blc_beacons.8.desc
+# #	fire_only_once = yes
+# #	trigger = {
+# #		original_tag = BLC
+# #		OR = {
+# #			KHA = {
+# #				has_war_with = WYR
+# #			}
+# #			WYR = {
+# #				has_war_with = KHA
+# #			}
+# #		}
+# #	}
+# #	mean_time_to_happen = {
+# #		days = 3
+# #	}
+# #	picture = GFX_event_sub_generic_battle
+# #	option = {
+# #		name = nf_blc_beacons.8.a
+# #	}
+# #}
+
+# ### Painted Men's Events
+# add_namespace = nf_pnt
+# country_event = {
+# 	id = nf_pnt.1
+# 	title = nf_pnt.1.title
+# 	desc = nf_pnt.1.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_PET_tribals
+# 	option = {
+# 		name = nf_pnt.1.a
+# 		add_country_leader_trait = war_shaman
+# 		add_field_marshal_role = {
+# 			character = PNT_warded
+# 			traits = {
+# 				intelligent_trait
+# 				charismatic_trait
+# 			}
+# 			skill = 4
+# 			attack_skill = 4
+# 			defense_skill = 3
+# 			planning_skill = 3
+# 			logistics_skill = 3
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_pnt.2
+# 	title = nf_pnt.2.title
+# 	desc = nf_pnt.2.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_fortress
+# 	option = {
+# 		name = nf_pnt.2.a
+# 		add_ideas = blc_painted_ways
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_pnt.3
+# 	title = nf_pnt.3.title
+# 	desc = nf_pnt.3.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_NCN_new_canaan
+# 	option = {
+# 		name = nf_pnt.3.a
+# 		custom_effect_tooltip = nf_pnt.3.a_tt
+# 		add_war_support = 0.1
+# 		add_ideas = ncn_idea_mormon_mission
+# 		add_timed_idea = {
+# 			idea = ncn_going_to_school
+# 			days = 180
+# 		}
+# 	}
+# }
+
+# ### Yampan Community Coalition Events
+# add_namespace = nf_ymp
+# country_event = {
+# 	id = nf_ymp.1
+# 	title = nf_ymp.1.title
+# 	desc = nf_ymp.1.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_settlement_1
+# 	option = {
+# 		name = nf_ymp.1.a
+# 		add_country_leader_trait = survivalist
+# 		add_field_marshal_role = {
+# 			character = YMP_bearhard
+# 			traits = {
+# 				intelligent_trait
+# 				charismatic_trait
+# 			}
+# 			skill = 2
+# 			attack_skill = 1
+# 			defense_skill = 2
+# 			planning_skill = 3
+# 			logistics_skill = 3
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_ymp.2
+# 	title = nf_ymp.2.title
+# 	desc = nf_ymp.2.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_caravan
+# 	option = {
+# 		name = nf_ymp.2.a
+# 		if = {
+# 			limit = {
+# 				has_idea = blc_internal_trading
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = blc_internal_trading
+# 				add_idea = blc_maritime_trade_deals
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				has_idea = blc_proper_tax_code
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = blc_internal_trading
+# 				add_idea = blc_maritime_trade_deals
+# 			}
+# 		}
+# 		else = {
+# 			add_ideas = blc_maritime_trade_deals
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_ymp.3
+# 	title = nf_ymp.3.title
+# 	desc = nf_ymp.3.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_sub_generic_boathouse
+# 	option = {
+# 		name = nf_ymp.3.a
+# 		504 = {
+# 			add_extra_state_shared_building_slots = 3
+# 			add_building_construction = {
+# 				type = dockyard
+# 				level = 2
+# 				instant_build = yes
+# 			}
+# 			add_building_construction = {
+# 				type = arms_factory
+# 				level = 1
+# 				instant_build = yes
+# 			}
+# 		}
+# 	}
+# }
+
+# ### Tibbets' Raiders Events
+# add_namespace = nf_bcr
+# country_event = {
+# 	id = nf_bcr.1
+# 	title = nf_bcr.1.title
+# 	desc = nf_bcr.1.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_rrg_raiders
+# 	option = {
+# 		name = nf_bcr.1.a
+# 		add_country_leader_trait = military_background
+# 		add_field_marshal_role = {
+# 			character = BCR_mcbride
+# 			traits = {
+# 				strong_trait
+# 				enduring_trait
+# 			}
+# 			skill = 4
+# 			attack_skill = 4
+# 			defense_skill = 4
+# 			planning_skill = 2
+# 			logistics_skill = 2
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_bcr.2
+# 	title = nf_bcr.2.title
+# 	desc = nf_bcr.2.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_generic_raider_1
+# 	option = {
+# 		name = nf_bcr.2.a
+# 		if = {
+# 			limit = {
+# 				has_idea = undesirables_law_raider
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = undesirables_law_raider
+# 				add_idea = blc_undesirables_law_raider_compromise
+# 			}
+# 		}
+# 		else = {
+# 			add_ideas = blc_undesirables_law_raider_compromise
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_bcr.3
+# 	title = nf_bcr.3.title
+# 	desc = nf_bcr.3.desc
+# 	is_triggered_only = yes
+# 	picture = GFX_event_enc_drugs
+# 	option = {
+# 		name = nf_bcr.3.a
+# 		if = {
+# 			limit = {
+# 				has_idea = chems_banned
+# 			}
+# 			swap_ideas = {
+# 				remove_idea = chems_banned
+# 				add_idea = chems_legalised
+# 			}
+# 			else = {
+# 				set_temp_variable = {
+# 					caps_to_add = 50
+# 				}
+# 				add_caps = yes
+# 			}
+# 		}
+# 		else = {
+# 			set_temp_variable = {
+# 				caps_to_add = 200
+# 			}
+# 			add_caps = yes
+# 		}
+# 	}
+# }
+
+# country_event = {
+# 	id = nf_bcr.4
+# 	title = nf_bcr.4.title
+# 	desc = nf_bcr.4.desc
+# 	is_triggered_only = yes
+# 	major = yes
+# 	picture = GFX_event_mount_rushmore
+# 	option = {
+# 		trigger = {
+# 			original_tag = BCR
+# 		}
+# 		name = nf_bcr.4.a
+# 		1058 = {
+# 			damage_building = {
+# 				type = infrastructure
+# 				damage = 0.25
+# 			}
+# 		}
+# 		add_country_leader_trait = fucking_fabulous
+# 		1058 = {
+# 			set_state_flag = mount_rushmore_destroyed
+# 		}
+# 	}
+# 	option = {
+# 		trigger = {
+# 			is_enclave_nation_proper = yes
+# 		}
+# 		name = nf_bcr.4.b
+# 		add_opinion_modifier = {
+# 			modifier = ridiculed_mount_rushmore
+# 			target = BCR
+# 		}
+# 	}
+# 	option = {
+# 		trigger = {
+# 			NOT = {
+# 				is_enclave_nation_proper = yes
+# 				original_tag = BCR
+# 			}
+# 		}
+# 		name = nf_bcr.4.c
+# 	}
+# }
+
+# #country_event = {
+# #	id = nf_bcr.5
+# #	title = nf_bcr.5.title
+# #	desc = nf_bcr.5.desc
+# #	is_triggered_only = yes
+# #	picture = GFX_event_generic_raider_1
+# #	option = {
+# #		name = nf_bcr.5.a
+# #	}
+# #	option = {
+# #		name = nf_bcr.5.b
+# #		add_war_support = 0.01
+# #	}
+# #}
+
+# #country_event = {
+# #	id = nf_bcr.6
+# #	title = nf_bcr.6.title
+# #	desc = nf_bcr.6.desc
+# #	is_triggered_only = yes
+# #	picture = GFX_event_KHA_high_chapel
+# #	option = {
+# #		name = nf_bcr.6.a
+# #		add_ideas = bcr_queen_consort
+# #	}
+# #}
+
+# #country_event = {
+# #	id = nf_bcr.7
+# #	title = nf_bcr.7.title
+# #	desc = nf_bcr.7.desc
+# #	is_triggered_only = yes
+# #	picture = GFX_event_KHA_high_chapel
+# #	option = {
+# #		name = nf_bcr.7.a
+# #		add_ideas = bcr_queen_partner
+# #	}
+# #}
+
+
+# country_event = {
+# 	id = nf_bcr.8
+# 	title = nf_bcr.8.title
+# 	desc = nf_bcr.8.desc
+# 	picture = GFX_event_vintage_letter
+# 	is_triggered_only = yes
+# 	option = {
+# 		name = nf_bcr.8.a
+# 		set_cosmetic_tag = BCR_kingdom_of_mcbride
+# 		set_variable = { coring_cost_country_factor = -0.25 }
+# 		custom_effect_tooltip = bdt_25_percent_core_cost_reduction_tt
+# 	}
+# }

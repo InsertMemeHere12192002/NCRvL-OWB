@@ -9,7 +9,25 @@ ideas = {
 				special_forces_cap = 0.2
 				special_forces_attack_factor = 0.2
 				special_forces_defence_factor = 0.2
-				special_forces_min = 120 #special_forces_cap = 0.15
+				special_forces_min = 120 
+				#special_forces_cap = 0.15
+				required_garrison_factor = -0.5
+                resistance_damage_to_garrison = -0.5
+				people_acceptance = 30
+				exodus_national_appeal = 0.5
+			}
+		}
+		TIM_scouting_heritage_2 = {
+			picture = TIM_patch_scouting_heritage
+			removal_cost = -1
+			modifier = {
+				attrition = -0.2
+				recon_factor = 0.2
+				special_forces_cap = 0.3
+				special_forces_attack_factor = 0.25
+				special_forces_defence_factor = 0.25
+				special_forces_min = 160 
+				#special_forces_cap = 0.15
 				required_garrison_factor = -0.5
                 resistance_damage_to_garrison = -0.5
 				people_acceptance = 30
@@ -37,4 +55,3 @@ ideas = {
 		}
 	}
 }
-# vim: set ft=pdx ts=2 sw=2 tw=79 :

@@ -1,13 +1,13 @@
 characters = {
 	CWB_helki_the_ripper = {
-		name = "Helki the Ripper"
+		name = CWB_HELKI_THE_RIPPER_NAME
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_CWB_leader
 			}
 		}
 		country_leader = {
-			desc = CWB_LEADER_DESC
+			desc = CWB_HELKI_THE_RIPPER_DESC
 			ideology = chieftain
 			traits = {
 				warmonger

@@ -1,1 +1,0 @@
-#Prevents error log from vanilla file

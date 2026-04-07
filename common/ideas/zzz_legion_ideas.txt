@@ -474,6 +474,12 @@ ideas = {
 				army_morale_factor = 0.08
 				army_org_factor = 0.05
 			}
+						equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					breakthrough = 0.05
+				}
+			}
 		}
 		ces_legionary_inger_idea = {
 			picture = generic_medicine
@@ -506,8 +512,7 @@ ideas = {
 				conscription = 0.01
 				monthly_population = 0.1
 				experience_loss_factor = -0.1
-				modifier_army_sub_unit_medical_chem_company_max_org_factor = 0.3
-				modifier_army_sub_unit_motorized_medical_chem_company_max_org_factor = 0.3
+				modifier_army_sub_unit_category_medical_support_max_org_factor = 0.3
 			}
 			research_bonus = {
 				support_tech_category = 0.1
@@ -549,6 +554,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				modifier_army_sub_unit_recon_company_attack_factor = 0.1
 				modifier_army_sub_unit_fireteam_support_attack_factor = 0.1
 				modifier_army_sub_unit_demolitions_support_attack_factor = 0.1
 				modifier_army_sub_unit_anti_tank_company_attack_factor = 0.1
@@ -600,6 +606,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
+				modifier_army_sub_unit_recon_company_attack_factor = 0.1
 				modifier_army_sub_unit_fireteam_support_attack_factor = 0.1
 				modifier_army_sub_unit_demolitions_support_attack_factor = 0.1
 				modifier_army_sub_unit_anti_tank_company_attack_factor = 0.1
@@ -666,6 +673,12 @@ ideas = {
 				motorized_defence_factor = 0.08
 				motorized_attack_factor = 0.05
 			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					breakthrough = 0.05
+				}
+			}
 		}
 		ces_auxiliaries_idea = {
 			picture = generic_raider_1
@@ -709,8 +722,8 @@ ideas = {
 			modifier = {
 				non_core_manpower = 0.05
 				resistance_damage_to_garrison = -0.15
-				modifier_army_sub_unit_infantry_defence_factor = 0.04
-				modifier_army_sub_unit_infantry_attack_factor = 0.04
+				army_infantry_defence_factor = 0.04
+				army_infantry_attack_factor = 0.04
 				motorized_defence_factor = 0.04
 				motorized_attack_factor = 0.04
 				special_forces_attack_factor = 0.1
@@ -1757,7 +1770,7 @@ ideas = {
 			}
 		}
 		legion_nf_weapon_maintenance = {
-			picture = generic_service_rifle
+			picture = generic_pipe_pistol
 			allowed = {
 				always = no
 			}
@@ -1822,6 +1835,10 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
+			modifier = {
+				modifier_army_sub_unit_heavy_infantry_attack_factor = 0.075
+				modifier_army_sub_unit_heavy_infantry_defence_factor = 0.075
+			}
 			equipment_bonus = {
 				infantry_equipment = {
 					reliability = 0.05
@@ -1976,7 +1993,7 @@ ideas = {
 			}
 		}
 		legion_nf_ridgers_pyre = {
-			picture = generic_manpower_bonus
+			picture = generic_gold_bars
 			allowed = {
 				always = no
 			}
@@ -2035,7 +2052,7 @@ ideas = {
 				always = no				# Added via focus
 			}
 			removal_cost = -1
-			picture = radio
+			picture = generic_radio
 			modifier = {
 				operative_slot = 1
 				intelligence_agency_defense = 0.5
@@ -2044,7 +2061,7 @@ ideas = {
 			}
 		}
 		infiltrate_ncr = {
-			picture = caps
+			picture = generic_caps
 			allowed = {
 				always = no
 			}

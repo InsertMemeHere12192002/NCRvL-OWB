@@ -1,7 +1,5 @@
 equipments = {
-    #------------------------
-    # special forces equipment
-    #------------------------
+
     spec_ops_equipment = {
 		is_archetype = yes
 		is_buildable = no
@@ -10,10 +8,6 @@ equipments = {
 		group_by = archetype
 
 		interface_category = interface_category_land
-
-		upgrades = {
-
-		}
 
 		maximum_speed = 4.5
 
@@ -30,6 +24,7 @@ equipments = {
 		build_cost_ic = 3.5
 
 		resources = {
+			water = 1
 		}
 	}
 

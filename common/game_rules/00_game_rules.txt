@@ -20,6 +20,7 @@
 #			...
 #		}
 # }
+
 #####################
 # REGIONAL UNIFIERS #
 #####################
@@ -3632,13 +3633,16 @@ change_base_diplomacy = {
 # CONVERT ACTIONS #
 ###################
 # Coups and Party Boosting not allowed in OWB. Game rules are hidden.
+
 ############
 # RESEARCH #
 ############
 # No research specific rules currently.
+
 ###############
 # EVENT RULES #
 ###############
+
 NCR_civil_war = {
 	name = "RULE_EVENTS_NCR_CIVIL_WAR"
 	group = "RULE_GROUP_EVENTS"
@@ -5282,13 +5286,23 @@ REVOLTING_ROACHES_OUTCOME = {
 #########
 #SUBMODS#
 #########
+
 #####################
 # REGIONAL UNIFIERS #
 #####################
+
+
 #############
 #AI BEHAVIOR#
 #############
+
+
+
 ###########
 #MAP SETUP#
 ###########
+
+
+
+
 # vim: set ft=pdx tw=79 :

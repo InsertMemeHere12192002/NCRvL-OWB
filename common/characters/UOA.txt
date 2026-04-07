@@ -19,7 +19,7 @@ characters = {
 			traits = {
 				intelligent_trait
 				charismatic_trait
-				vat_skin
+				vat_skin_trait
 			}
 			skill = 2
 			attack_skill = 1
@@ -37,6 +37,15 @@ characters = {
 			army = {
 				large = GFX_Portrait_UOA_lieutenant_crusher
 			}
+		}
+				country_leader = {
+			desc = UOA_LIEUTENTANT_CRUSHER_DESC
+			ideology = warlordship
+			traits = {
+				isolationist
+			}
+			expire = "3000.01.01.01"
+			id = -1
 		}
 	}
 	UOA_chauncey_ferocious = {

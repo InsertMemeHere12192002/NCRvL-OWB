@@ -10,15 +10,6 @@
 
 		interface_category = interface_category_armor
 
-		upgrades = {
-			#pa_redundancy_upgrade
-			#pa_production_upgrade
-			#pa_plating_upgrade
-			#pa_shock_upgrade
-			#pa_servo_motion_upgrade
-			#rob_brain_upgrade
-		}
-
 		#Misc Abilities
 		maximum_speed = 7
 		reliability = 0.85
@@ -41,7 +32,10 @@
 		lend_lease_cost = 10
 
 		build_cost_ic = 15
-		resources = {
+			resources = {
+			metal = 3
+			circuitry = 2
+			energy = 1
 		}
 
 	}

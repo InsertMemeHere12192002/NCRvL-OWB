@@ -13,6 +13,7 @@ leader_traits = {
 	TWO_large_navy_trait = {
 		random = no
 		navy_capital_ship_attack_factor = 0.25
+		naval_damage_factor = 0.1
 	}
 	TWO_air_trait = {
 		random = no

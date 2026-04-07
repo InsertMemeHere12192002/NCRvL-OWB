@@ -1,6 +1,6 @@
 ﻿capital = 163
 oob = "SHI_2275"
-
+set_naval_oob = "SHI_2275_naval"
 set_technology = {
 	basic_supply_transport_tech = 1
 	infantry_tech_level_tribal = 1
@@ -78,33 +78,24 @@ set_technology = {
 	glider_tech = 1
 	elite_army = 1
 	pragmatic_aviation_doctrine = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		nautics_tech_2 = 1
-		light_navy_hull_tech_1 = 1
-		light_navy_hull_tech_2 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_armour_tech_1 = 1
-		naval_pd_module_tech_1 = 1
-		naval_support_module_tech = 1
-		naval_weapons_module_tech = 1
-		naval_detection_module_tech_2 = 1
-		naval_communications_module_tech_1 = 1
-		naval_command_module_tech_2 = 1
-		naval_hard_point_tech = 1
-		naval_subsurface_module_tech_1 = 1
-	}
+nautics_tech_1 = 1
+	#nautics_tech_2 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	medium_navy_hull_tech_1 = 1
+	#multi_deck_construction_tech = 1
+	heavy_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+	naval_module_tech = 1
+	naval_armour_tech_1 = 1
+	#naval_pd_module_tech_1  = 1
+	naval_support_module_tech = 1
+	#naval_weapons_module_tech = 1
+	naval_detection_module_tech_2 = 1
+	#naval_communications_module_tech_1 = 1
+	#naval_command_module_tech_2 = 1
+	#naval_hard_point_tech = 1
+	naval_subsurface_module_tech_1 = 1
 }
 
 set_stability = 0.65
@@ -129,6 +120,7 @@ set_popularities = {
 	intellectuals = 20
 	ruler = 40
 }
+
 recruit_character = SHI_Akigahai
 recruit_character = SHI_lo_pan
 recruit_character = shi_elder_francis
@@ -136,7 +128,10 @@ recruit_character = SHI_dragon
 promote_character = SHI_Akigahai
 recruit_character = SHI_Norton
 recruit_character = SHI_xian
-
+recruit_character = SHI_Chang_Ho
+recruit_character = SHI_Knight_Gou
+recruit_character = SHI_Xu_Luqi
+recruit_character = SHI_Hung_Wei_Lo
 add_ideas = {
 	shi_shi_huang_ti
 	shi_ghosts_of_the_pacific
@@ -147,9 +142,7 @@ add_ideas = {
 	ncr_sphere
 	currencyncrdollar
 }
-# hidden_effect = {
-# 	add_ideas = tech_air_production_nerf_idea
-# }
+
 if = {
 	limit = {
 		has_dlc = "La Resistance"
@@ -164,10 +157,10 @@ create_equipment_variant = {
 	parent_version = 0
 	modules = {
 		fixed_ship_command_slot = ship_command_module_1
-		fixed_ship_engine_slot = light_ship_oars_module
+		fixed_ship_engine_slot = light_ship_sail_module
 		fixed_ship_battery_slot = ship_light_mounted_gun_module
 		# fixed_ship_battery_slot_1 = ship_light_mounted_gun_module
-		fixed_ship_detection_slot = ship_detection_module_1
+		fixed_ship_detection_slot = ship_detection_module_2
 		# fixed_ship_detection_slot_1 = empty
 		fixed_ship_point_defense_slot = empty
 		mid_1_custom_slot = light_ship_oars_module
@@ -196,10 +189,10 @@ create_equipment_variant = {
 	parent_version = 0
 	modules = {
 		fixed_ship_command_slot = ship_command_module_1
-		fixed_ship_engine_slot = medium_ship_oars_module
+		fixed_ship_engine_slot = medium_ship_sail_module
 		fixed_ship_battery_slot = ship_medium_mounted_gun_module
 		# fixed_ship_battery_slot_1 = ship_medium_mounted_gun_module
-		fixed_ship_detection_slot = ship_detection_module_1
+		fixed_ship_detection_slot = ship_detection_module_2
 		# fixed_ship_detection_slot_1 = empty
 		fixed_ship_armour_slot = empty
 		fixed_ship_point_defense_slot = ship_light_mounted_gun_module
@@ -210,9 +203,51 @@ create_equipment_variant = {
 	}
 }
 
-set_party_name = { ideology = people  name = "Vagrants"  long_name = "Vagrants" }
-set_party_name = { ideology = ruler  name = "The Crane School" long_name = "The Crane Clique" }
-set_party_name = { ideology = elites  name = "The Dragon School" long_name = "The Dragon School" }
-set_party_name = { ideology = intellectuals  name = "Brotherhood Sympathizers" long_name = "Brotherhood Sympathizers" }
+create_equipment_variant = {
+	name = "Heavy Ship"
+	type = ship_hull_heavy_1
+	name_group = SHI_HEAVY
+	parent_version = 0
+	modules = {
+		fixed_ship_command_slot = ship_command_module_2
+		fixed_ship_engine_slot = heavy_ship_sail_module
+		fixed_ship_battery_slot = ship_heavy_mounted_gun_module
+		# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
+		fixed_ship_detection_slot = ship_detection_module_2
+		# fixed_ship_detection_slot_1 = ship_detection_module_1
+		fixed_ship_armour_slot = heavy_ship_armour_module_1
+		fixed_ship_point_defense_slot = ship_pd_module_1
+		# fixed_ship_point_defense_slot_1 = ship_pd_module_1
+		fixed_ship_communication_slot = ship_communications_module_1
+		# fixed_ship_storage_slot = empty
+		front_1_custom_slot = empty
+		mid_1_custom_slot = heavy_ship_oars_module
+		rear_1_custom_slot = ship_detection_module_2
+		rear_2_custom_slot = ship_heavy_mounted_gun_module
+	}
+}
 
+set_party_name = {
+	ideology = people
+	name = SHI_people_party_short
+	long_name = SHI_people_party_long
+}
+
+set_party_name = {
+	ideology = ruler
+	name = SHI_ruler_party_short
+	long_name = SHI_ruler_party_long
+}
+
+set_party_name = {
+	ideology = elites
+	name = SHI_elites_party_short
+	long_name = SHI_elites_party_long
+}
+
+set_party_name = {
+	ideology = intellectuals
+	name = SHI_intellectuals_party_short
+	long_name = SHI_intellectuals_party_long
+}
 add_manpower = 2250

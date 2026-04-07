@@ -158,15 +158,24 @@ country_event = {
 	is_triggered_only = yes
 	option = {  ## offer loot
 		name = nf_whitelegs.6.a
+				ai_chance = {
+			base = 0
+		}
 		EHT = { country_event = nf_whitelegs.7 }
 	}
 	option = { ####
 		name = nf_whitelegs.6.b
+		ai_chance = {
+			base = 100
+		}
 		add_political_power = -200
 		EHT = { country_event = nf_whitelegs.10 }
 	}
 	option = {
 		name = nf_whitelegs.6.c
+		ai_chance = {
+			base = 0
+		}
 		custom_effect_tooltip = nf_whitelegs.6.c_tt
 		start_border_war = {
 			change_state_after_war = no
@@ -261,6 +270,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = nf_whitelegs.10.a
+		ai_chance = {
+			base = 10
+		}
 		WHT = { country_event = nf_whitelegs.11 }
 		478 = {
 			if = {
@@ -278,6 +290,9 @@ country_event = {
 	}
 	option = {
 		name = nf_whitelegs.10.b
+		ai_chance = {
+			base = 0
+		}
 		WHT = {
 			country_event = nf_whitelegs.9
 			add_political_power = 200

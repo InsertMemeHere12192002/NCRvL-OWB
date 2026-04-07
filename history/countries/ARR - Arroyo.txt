@@ -39,6 +39,7 @@ set_technology = {
 	electronics_tech_level_tribal = 1
 	electronics_tech_level_settler = 1
 	#electronics_tech_level_scientific = 1
+	
 	standard_weaponry_tech = 1
 	ballistic_weaponry_tech_1 = 1
 	melee_weaponry_tech_1 = 1
@@ -72,33 +73,16 @@ set_technology = {
 	tribal_tech_visibility_tech = 1
 	tribal_tech_access_tech = 1
 	terror_tactics = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		nautics_tech_2 = 1
-		light_navy_hull_tech_1 = 1
-		light_navy_hull_tech_2 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_armour_tech_1 = 1
-		naval_pd_module_tech_1 = 1
-		naval_support_module_tech = 1
-		naval_weapons_module_tech = 1
-		naval_detection_module_tech_2 = 1
-		naval_communications_module_tech_1 = 1
-		naval_command_module_tech_2 = 1
-		naval_hard_point_tech = 1
-		naval_subsurface_module_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+	#multi_deck_construction_tech = 1
+	heavy_navy_hull_tech_1 = 1
+	naval_module_tech = 1
+	naval_armour_tech_1 = 1
+	#naval_pd_module_tech_1  = 1
+	#naval_communications_module_tech_1 = 1
+	#naval_weapons_module_tech = 1
 }
 
 set_stability = 0.3
