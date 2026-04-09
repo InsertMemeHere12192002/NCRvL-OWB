@@ -21,7 +21,9 @@
   category_standard_infantry:0 "Standard Infantry"
   category_leg_infantry:0 "Walking Infantry"
   category_weapon_infantry:0 "Weapon Infantry"
+  category_anti_tank:0 "Anti-Tank Units"
   category_vehicles:0 "Vehicles"
+  category_motorized:0 "Motorized Units"
   category_support:0 "Support Units"
   category_combat_support:0 "Fighting Support Units"
   category_non_combat_support:0 "Non Combat Support Units"
@@ -30,6 +32,13 @@
   category_logistics_support:0 "Logistics Support Units"
   category_maintenance_support:0 "Maintenance Support Units"
   category_behemoth:0 "Behemoths"
+  category_creatures:0 "Creature Units"
+  category_mutant_creatures:0 "Monstrous Creature Units"
+  category_insects:0 "Insect Units"
+  category_amphibious_creatures:0 "Amphibious Creature Units"
+  category_deathclaws:0 "Deathclaw Units"
+  category_ferals:0 "Feral Units"
+  category_beasts:0 "Beast Units"
   mobile:0 "Mobile"
   infantry:0 "Infantry"
   support:0 "Support"
@@ -135,23 +144,80 @@
   super_mutant_infantry_short:0 "Super Mutants"
   super_mutant_infantry_desc:0 "Super mutants, while usually not as smart as their human counterparts, are much stronger and resilient due to their larger, more powerful frame. In contrast to normal infantry however an access to FEV is needed to produce these hulking soldiers."
 
+  heavy_super_mutant_infantry:0 "Super Mutant Breacher Platoon"
+  heavy_super_mutant_infantry_short:0 "Super Mutant Breacher"
+  heavy_super_mutant_infantry_desc:0 "Even though the skin of Super Mutants is basically bulletproof, sometimes some extra armour and padding doesn't hurt. Strapping the hulks of cars, fridges or just ordinary scrap metal, these mutants can take an extra punch from enemy fire, and can be used to punch holes in enemy lines better than their unarmoured counterparts."
+
   super_mutant_aux_infantry:0 "Super Mutant Auxiliary Platoon"
   super_mutant_aux_infantry_short:0 "Super Mutants"
   super_mutant_aux_infantry_desc:0 "Super mutants, while usually not as smart as their human counterparts, are much stronger and resilient due to their larger, more powerful frame. In contrast to normal infantry however an access to FEV is needed to produce these hulking soldiers."
 
-
-  molerat_infantry:0 "Molerat Cohort"
-  molerat_infantry_short:0 "Molerats"
-  molerat_infantry_desc:0 "One of the buggers might not be dangerous. But what about twenty? Or a hundred?"
-  mirelurk_infantry:0 "Mirelurk Platoon"
-  mirelurk_infantry_short:0 "Lurkers"
-  mirelurk_infantry_desc:0 "Tamed Mirelurks, ready to fight and die for their queen."
+  faerie_infantry:0 "Faerie Platoon"
+  faerie_infantry_short:0 "Faeries"
+  faerie_infantry_desc:0 ""
 
   cybernetic_support:0 "Cybernetic Implants"
   cybernetic_support_desc:0 "With the right kind of technology we can surpass human limits! Our soldiers will be harder, better, faster and stronger then our simple organic foes!"
 
   plant_support:0 "Monstrous Plants"
   plant_support_desc:0 "Home grown bio-warriors will give our troops a huge advantage, assuming that we can fight in lands fertile enough to plant them."
+
+  spec_ops_horses_tech:0 "Horsemen"
+  spec_ops_horses_tech_desc:0 ""
+  spec_ops_horses_tech_2:0 "Horsemen II"
+  spec_ops_horses_tech_2_desc:0 ""
+  spec_ops_horses_tech_3:0 "Horsemen III"
+  spec_ops_horses_tech_3_desc:0 ""
+
+  spec_ops_cavalry:0 "Horsemen"
+  spec_ops_cavalry_short:0 "Riders"
+  spec_ops_cavalry_desc:0 "Who knew horses were still a thing in this wasteland?"
+
+  #Canada Uniques
+  leshy_unit:0 "The Great Leshy"
+  leshy_unit_short:0 "Leshy"
+  leshy_unit_desc:0 ""
+
+  leshy_baby_unit:0 "Hatchlings Of The Great Leshy"
+  leshy_baby_unit_short:0 "Leshy Hatchlings"
+  leshy_baby_unit_desc:0 ""
+
+  dun_robot_unit:0 "The Steel Dame"
+  dun_robot_unit_short:0 "Steel Dame"
+  dun_robot_unit_desc:0 ""
+
+  #Creatures
+  burrowing_beast_creature:0 "Burrowing Cohort"
+  burrowing_beast_creature_short:0 "Burrowers"
+  burrowing_beast_creature_desc:0 "Beasts adapted to dig through soil and stone to strike."
+
+  insect_creature:0 "Insect Swarms"
+  insect_creature_short:0 "Insects"
+  insect_creature_desc:0 "These upsized insects are grouped together to ensure maximum efficiency. The larger the better!"
+
+  amphibious_beast_creature:0 "Amphibious Platoon"
+  amphibious_beast_creature_short:0 "Amphibious Platoon"
+  amphibious_beast_creature_desc:0 "Tamed water dwelling beasts, ready to fight and die for their queen."
+
+  feral_ghoul:0 "Feral Horde"
+  feral_ghoul_short:0 "Ferals"
+  feral_ghoul_desc:0 "Directing groups of ferals isn't easy work, but these unflinching hordes are worth it."
+
+  deathclaw_creature:0 "Deathclaw Mess"
+  deathclaw_creature_short:0 "Deathclaws"
+  deathclaw_creature_desc:0 "The most singularly dangerous predators in the American Wasteland."
+
+  deathclaw_special_forces:0 "Alpha Deathclaws"
+  deathclaw_special_forces_short:0 "Alphas"
+  deathclaw_special_forces_desc:0 "The fiercest of all Deathclaws are the Alphas, who fight for the right to mate within their pack."
+
+  beast_creature:0 "War Beast Pack"
+  beast_creature_short:0 "Beasts"
+  beast_creature_desc:0 "Taming animals has been a practice for millenia. The new creatures of the fallout will be brought to bear on our enemies."
+
+  gecko_support_company:0 "Gecko Support"
+  gecko_support_company_short:0 "Geckos"
+  gecko_support_company_desc:0 "While these mutated lizards are normally hunted for their hides, once tamed they can fight alongside us on the battlefield."
 
  # Motorized/Mechanized
   motorized_heavy_infantry:0 "Motorized Enforcers"
@@ -166,6 +232,10 @@
   motorized_anti_tank:0 "Motorized Anti-tank"
   motorized_anti_tank_short:0 "Mobile Anti-tank"
   motorized_anti_tank_desc:0 ""
+
+  chariot_unit:0 "Legion Chariots"
+  chariot_unit_short:0 "Chariots"
+  chariot_unit_desc:0 "Legion goes BRRRRRRRRRR"
 
  # tanks
   tank:0 "Tank Platoon"
@@ -191,14 +261,14 @@
   cas:0 "Close Air Support"
   cas_short:0 "CAS"
   cas_desc:0 ""
-  hev_cas:0 "Heavy Cas Plane"
-  hev_cas_short:0 "Heavy Cas Plane"
+  hev_cas:0 "Heavy CAS Plane"
+  hev_cas_short:0 "Heavy CAS Plane"
   hev_cas_desc:0 ""
-  car_cas:0 "Carrier Cas Plane"
-  car_cas_short:0 "Carrier Cas Plane"
+  car_cas:0 "Carrier CAS Plane"
+  car_cas_short:0 "Carrier CAS Plane"
   car_cas_desc:0 ""
-  long_cas:0 "Long Range Cas Plane"
-  long_cas_short:0 "Long Range Cas Plane"
+  long_cas:0 "Long Range CAS Plane"
+  long_cas_short:0 "Long Range CAS Plane"
   long_cas_desc:0 ""
   transport_plane:0 "Cargo Plane"
   transport_plane_short:0 "Cargo Plane"
@@ -333,25 +403,10 @@
   motorized_medical_chem_company_short:0 "Mobile Chems"
   motorized_medical_chem_company_desc:0 "Treating an injured soldier is enough of an arduous task to begin with, but extracting men from an active warzone brings a whole extra set of difficulties to the table. The incorporation of vehicles into our medical crews will significantly improve this process and help us save more lives."
 
-  spec_ops_horses_tech:0 "Horsemen"
-  spec_ops_horses_tech_desc:0 ""
-  spec_ops_horses_tech_2:0 "Horsemen II"
-  spec_ops_horses_tech_2_desc:0 ""
-  spec_ops_horses_tech_3:0 "Horsemen III"
-  spec_ops_horses_tech_3_desc:0 ""
-
-  spec_ops_cavalry:0 "Horsemen"
-  spec_ops_cavalry_short:0 "Riders"
-  spec_ops_cavalry_desc:0 "Who knew horses were still a thing in this wasteland?"
-
-  chariot:0 "Legion Chariots"
-  chariot_short:0 "Chariots"
-  chariot_desc:0 "Legion goes BRRRRRRRRRR"
-
   monster_support:0 "Colorado Mutant Support"
   monster_support_desc:0 ""
 
-  # Support
+  # Ships
   light_ship_unit:0 "Light Ship"
   light_ship_unit_short:0 "LS"
   light_ship_unit_desc:0 ""
@@ -400,6 +455,8 @@
   scribe_support_unit:0 "Field Scribes"
   scribe_support_unit_short:0 "Scribes"
   scribe_support_unit_desc:0 ""
+  ACH_scribe_support_unit:0 "Specialist Support"
+  ACH_scribe_support_unit_short:0 "Specialists"
 
   # Elites
   elite_infantry:0 "Elite Infantry"

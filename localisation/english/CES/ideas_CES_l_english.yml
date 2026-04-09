@@ -135,7 +135,8 @@
 
   legion_chariots_of_gods:0 "Chariots of the God"
 
-  ces_scribes_slaves:0 "Survivors of the Colorado Brotherhood"
+  ces_scribes_slaves:0 "Sleeper Survivors"
+  ces_scribes_slaves_desc:0 "A mix of frozen and pre-war scientists that thought they could wander Legion territory with impunity after their master's death, they serve only Caesar now."
 
   legion_nf_divide_et_impera:0 "Divide Et Impera"
   legion_nf_divide_et_impera_desc:0 ""
@@ -314,3 +315,6 @@
   CES_learning_to_build_quickly_desc:0 ""
   CES_comprehensive_training:0 "Comprehensive Training"
   CES_comprehensive_training_desc:0 ""
+  
+    # Dynamic Modifier
+  ces_legionary_pacification_dynamic_modifier:0 "Legionary Pacification"

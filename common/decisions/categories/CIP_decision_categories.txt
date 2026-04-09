@@ -1,0 +1,40 @@
+CIP_Azkee_schematics_category = {
+	allowed = { original_tag = CIP }
+	visible = {
+		# has_completed_focus = CIP_shift_through_the_memory_core
+		# has_completed_focus = CIP_counter_azkee
+	}
+	priority = 1000
+}
+
+CIP_Nemonik_schematics_category = {
+	allowed = { original_tag = CIP }
+	visible = {
+		# has_completed_focus = CIP_shift_through_the_memory_core
+		# has_completed_focus = CIP_the_nemonik
+	}
+	priority = 1000
+}
+
+CIP_investing_schematics_category = {
+	allowed = {
+		NOT = { has_dlc = "La Resistance" }
+		original_tag = CIP
+	}
+	visible = {
+		# has_completed_focus = CIP_investigating_coordinates
+	}
+	priority = 1000
+}
+
+rocky_mountain_merger_category = {
+	allowed = {
+		OR = {
+			original_tag = FOR
+			original_tag = CLJ
+			original_tag = INR
+		}
+	}
+	priority = 200
+}
+

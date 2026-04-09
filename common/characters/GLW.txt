@@ -1,0 +1,416 @@
+characters = {
+	GLW_PATCHES = {
+		name = GLW_PATCHES_NAME
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GLW/portrait_glw_leader.dds"
+				small = "GFX_idea_GLW_Patches"
+			}
+		}
+		country_leader = {
+			desc = "GLW_PATCHES_DESC"
+			ideology = gang
+			expire = "3000.1.1.1"
+			traits = { col_appeaser col_scavenger }
+			id = -1
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = GLW_PATCHES_CULTURAL_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			# available = { has_completed_focus = glw_our_people_pleaser }
+			traits = { man_of_community }
+		}
+	}
+	GLW_STITCHES = {
+		name = GLW_STITCHES_NAME
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GLW/portrait_glw_stitches.dds"
+			}
+		}
+		country_leader = {
+			desc = "GLW_STITCHES_DESC"
+			ideology = peoples_militia
+			expire = "3000.1.1.1"
+			traits = { war_industrialist armaments_organizer }
+			id = -1
+		}
+	}
+	GLW_COUPLE = {
+		name = GLW_COUPLE_NAME
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GLW/portrait_glw_rotten_duo.dds"
+			}
+		}
+		country_leader = {
+			desc = "GLW_COUPLE_DESC"
+			ideology = peoples_militia
+			expire = "3000.1.1.1"
+			traits = { captain_of_industry war_industrialist }
+			id = -1
+		}
+	}
+	GLW_FRECKLES = {
+		name = GLW_FRECKLES_NAME
+		portraits = {
+			army = {
+				large = "gfx/leaders/ghoul/portrait_ghoul_generic_3.dds"
+			}
+		}
+		country_leader = {
+			#desc = "GLW_FRECKLES_DESC"
+			ideology = 	kritocracy
+			expire = "3000.1.1.1"
+			traits = { backroom_backstabber }
+			id = -1
+		}
+		corps_commander = {
+			traits = { charismatic_trait enduring_trait }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	GLW_JOB = {
+		name = GLW_JOB_NAME
+		portraits = {
+			army = {
+				large = "gfx/leaders/robot/portrait_robot_generic_2.dds"
+			}
+		}
+		country_leader = {
+			#desc = "GLW_JOB_DESC"
+			ideology = technocracy
+			expire = "3000.1.1.1"
+			traits = { HAN_mobius_trait }
+			id = -1
+		}
+		corps_commander = {
+			traits = { intelligent_trait lucky_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	###CHIEF OF ARMY
+	GLW_BRIGHT = {
+		name = GLW_BRIGHT_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/LUM_gherze_small.dds"
+				large = "gfx/leaders/LUM/portrait_gherze_roentgen.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			ledger = army
+			idea_token = GLW_BRIGHT_ARMY_CHIEF
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { col_defender_of_faith }
+		}
+	}
+	GLW_HERTZ = {
+		name = GLW_HERTZ_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/LUM_aushnat_small.dds"
+				large = "gfx/leaders/LUM/portrait_aushnat_decay.dds"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			ledger = army
+			idea_token = GLW_HERTZ_ARMY_CHIEF
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { col_violent_converter }
+		}
+	}
+	###CHIEF OF NAVY
+	GLW_DIRTY_HARRY = {
+		name = GLW_DIRTY_HARRY_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_ghoul_generic12
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			ledger = navy
+			idea_token = GLW_DIRTY_HARRY_NAVY_CHIEF
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { settler_navy_buff }
+		}
+	}
+	###CHIEF OF AIRFORCE
+	GLW_WHITE_BARON = {
+		name = GLW_WHITE_BARON_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic9
+			}
+		}
+		advisor = {
+			slot = air_chief
+			ledger = air
+			idea_token = GLW_WHITE_BARON_AIR_CHIEF
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { settler_air_buff }
+		}
+	}
+	###HIGH COMMAND
+	GLW_SHEPARD = {
+		name = GLW_SHEPARD_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_ghoul_generic13
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GLW_SHEPARD_HIGH_COMMAND
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { ghoul_shepard }
+		}
+	}
+	GLW_CAPTAIN_COLLINS = {
+		name = GLW_CAPTAIN_COLLINS_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/NCR_gamma.dds"
+				large = "gfx/leaders/NCR/portrait_gamma.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GLW_CAPTAIN_COLLINS_HIGH_COMMAND
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { owb_army_infantry_2 }
+		}
+	}
+	GLW_MORGEN = {
+		name = GLW_MORGEN_NAME
+		portraits = {
+			army = {
+				small = "gfx/interface/ideas/character_small_icons/TLP_leader.dds"
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GLW_MORGEN_HIGH_COMMAND
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { col_drill_sergeant }
+		}
+	}
+	GLW_BELGIAN = {
+		name = GLW_BELGIAN_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_ghoul_generic6
+				large = GFX_Portrait_WBH_rodriguez
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GLW_BELGIAN_HIGH_COMMAND
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible = { has_country_flag = unlock_character_belgian }
+			traits = { military_quartermaster }
+		}
+	}
+	GLW_NILEAF = {
+		name = GLW_NILEAF_NAME
+		portraits = {
+			army = {
+				small = GFX_idea_ghoul_generic6
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = GLW_NILEAF_HIGH_COMMAND
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible =  { has_country_flag = unlock_character_nileaf }
+			traits = { old_experience_trait  }
+		}
+	}
+	###RESEARCH ADVISORS
+	GLW_PROFESSOR_CROSS = {
+		name = GLW_PROFESSOR_CROSS
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic7
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = GLW_PROFESSOR_CROSS_RESEARCH_ADVISOR
+			cost = 100
+			allowed = {
+				original_tag = GLW
+			}
+			traits = {
+				scientific_devotion
+			}
+		}
+	}
+	###ECONOMIC ADVISORS
+	GLW_STINNES = {
+		name = GLW_STINNES_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic4
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = GLW_STINNES_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { captain_of_industry industrial_baron }
+		}
+	}
+	GLW_SCHMIDT = {
+		name = GLW_SCHMIDT_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic10
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = GLW_SCHMIDT_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			# available = { has_completed_focus = glw_financial_situation }
+			traits = { caravan_trader economic_expert }
+		}
+	}
+	GLW_WAGNER = {
+		name = GLW_WAGNER_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic8
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = GLW_WAGNER_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible = { has_country_flag = unlock_character_wagner }
+			traits = { col_radio_engineer }
+		}
+	}
+	GLW_STEED = {
+		name = GLW_STEED_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic5
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = GLW_STEED_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible = { has_country_flag = unlock_character_steed }
+			traits = { head_mechanic col_water_mechanic }
+		}
+	}
+	GLW_RUSSIAN = {
+		name = GLW_RUSSIAN_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_mutant_generic12
+			}
+		}
+		advisor = {
+			slot = economic_advisor
+			idea_token = GLW_RUSSIAN_ECONOMIC_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible = { has_country_flag = unlock_character_russian	}
+			traits = { sensitive_artist expert_negotiator  }
+		}
+	}
+	###CULTURAL ADVISOR
+	GLW_SMILEY = {
+		name = GLW_SMILEY_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic1
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = GLW_SMILEY_CULTURAL_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			traits = { hideous_quartermaster }
+		}
+	}
+	GLW_NIX = {
+		name = GLW_NIX_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_mutant_generic14
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = GLW_NIX_CULTURAL_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible = { has_country_flag = unlock_character_nix }
+			traits = { col_chalkboard_trait }
+		}
+	}
+	GLW_XUE_WEI = {
+		name = GLW_XUE_WEI_NAME
+		portraits = {
+			civilian = {
+				small = GFX_idea_ghoul_generic2
+			}
+		}
+		advisor = {
+			slot = cultural_advisor
+			idea_token = GLW_XUE_WEI_CULTURAL_ADVISOR
+			cost = 100
+			allowed = { original_tag = GLW }
+			visible = { has_country_flag = unlock_character_xue }
+			traits = { col_wonderful_tea_trait }
+		}
+	}
+	###Dummy Characters
+	GLW_JACKSON = {
+		name = GLW_JACKSON_NAME
+		portraits = {
+			army = {
+				large = "gfx/leaders/brotherhood_midwestern/portrait_brotherhood_midwest_generic_7.dds"
+			}
+		}
+	}
+	GLW_DIRTMAN = { ##Wild Wasteland Rule/Unit Leader
+		name = GLW_DIRTMAN_NAME
+		portraits = {
+			army = {
+				large = "gfx/leaders/settler_mexico/portrait_mex_settler_generic_1.dds"
+			}
+		}
+	}
+}

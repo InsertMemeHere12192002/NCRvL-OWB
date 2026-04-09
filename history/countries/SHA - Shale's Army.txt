@@ -64,16 +64,8 @@ set_technology = {
 	support_weaponry = 1
 
 	super_mutant_civilization = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
 }
 
 set_stability = 0.4

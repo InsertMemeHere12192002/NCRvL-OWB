@@ -79,11 +79,24 @@ set_technology = {
 	grand_army = 1
 	grand_battle_plan_owb = 1
 	tactics_doctrine_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
 }
 
 set_stability = 0.4
 set_war_support = 0.4
 set_research_slots = 5
+set_country_flag = is_settler_nation
+set_country_flag = dont_give_settler_generic_political_advisors
+set_country_flag = dont_give_settler_generic_high_command
+set_country_flag = dont_give_settler_generic_theorists
+set_country_flag = dont_give_settler_generic_chiefs
+set_country_flag = no_generic_advisor
+set_country_flag = no_generic_chief
+set_country_flag = no_generic_political_advisors
+set_country_flag = no_generic_high_command
+set_country_flag = no_generic_theorists
 set_country_flag = is_nevada_nation
 set_country_flag = grand_doctrine_ai
 set_country_flag = grand_infantry_doctrine_ai

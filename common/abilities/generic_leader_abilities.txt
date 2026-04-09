@@ -731,13 +731,12 @@ ability = {
 			factor = -1
 			modifier = {
 				FROM = {
-					has_war_support > 0.4
+					has_war_support > 0.1
 				}
+				check_variable = { num_units_offensive_combats > 6 }
 
-				check_variable = { num_units_defensive_combats > 6 }
-
-				set_temp_variable = { temp = avg_defensive_combat_status }
-				check_variable = { temp < 0.40 }
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
 				check_variable = { ai_random > temp }
 
 				add = 2
@@ -758,7 +757,6 @@ ability = {
 				}
 			}
 			NOT = { has_trait = exhausted_order_trait}
-			is_leading_army_group = no
 		}
 
 		cost = 0.10
@@ -786,13 +784,13 @@ ability = {
 			factor = -1
 			modifier = {
 				FROM = {
-					has_war_support > 0.4
+					has_war_support > 0.1
+					command_power > 1.5
 				}
+				check_variable = { num_units_offensive_combats > 6 }
 
-				check_variable = { num_units_defensive_combats > 6 }
-
-				set_temp_variable = { temp = avg_defensive_combat_status }
-				check_variable = { temp < 0.40 }
+				set_temp_variable = { temp = avg_offensive_combat_status }
+				check_variable = { temp > 0.45 }
 				check_variable = { ai_random > temp }
 
 				add = 2

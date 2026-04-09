@@ -73,10 +73,7 @@ country_event = {
 			base = 1
 			modifier = {
 				factor = 0
-				OR = {
-					VLT_has_ai_behavior_maier = yes
-					VLT_has_ai_behavior_gordon = yes	# Picking Maier here, getting support for Lynette from NCR and then picking 4 of each focus = election draw
-				}
+				VLT_has_ai_behavior_maier = yes
 			}
 		}
 	}
@@ -96,7 +93,11 @@ country_event = {
 			base = 1
 			modifier = {
 				factor = 0
-				VLT_has_ai_behavior_lynette = yes
+				OR = {
+					VLT_has_ai_behavior_lynette = yes
+					VLT_has_ai_behavior_brain = yes
+					VLT_has_ai_behavior_gordon = yes
+				}
 			}
 		}
 	}
@@ -108,8 +109,10 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
+					VLT_has_ai_behavior_lynette = yes
+					VLT_has_ai_behavior_brain = yes
 					VLT_has_ai_behavior_maier = yes
-					VLT_has_ai_behavior_gordon = yes	# Picking Maier here, getting support for Lynette from NCR and then picking 4 of each focus = election draw
+					VLT_has_ai_behavior_gordon = yes
 				}
 			}
 		}
@@ -174,7 +177,6 @@ country_event = {
 		name = nf_vault_city.5.a
 		complete_national_focus = vlt_the_election_of_2275
 		clr_country_flag = vlt_selection_has_not_happened
-
 		country_event = {
 			id = nf_vault_city.6
 		}
@@ -284,6 +286,7 @@ country_event = {
 				id = nf_vault_city.9
 				days = 7
 			}
+			set_country_flag = VLT_ai_behavior_lynette
 		}
 	}
 }
@@ -548,6 +551,7 @@ country_event = {
 	option = {
 		name = nf_vault_city.21.b
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.3
 			uses = 2
 			category = infantry_tech_category
@@ -989,6 +993,7 @@ country_event = {
 		set_temp_variable = { caps_to_add = 100 }
 		add_caps = yes
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.5
 			uses = 1
 			category = energy_weaponry_tech_category
@@ -2356,8 +2361,8 @@ country_event = {
 					slot = high_command
 					cost = 0
 					idea_token = VLT_zomak_advisor
-					traits = {
-					}
+					#traits = {
+					#}
 				}
 			activate = yes
 			}
@@ -2378,8 +2383,8 @@ country_event = {
 					slot = high_command
 					cost = 0
 					idea_token = VLT_zomak_advisor
-					traits = {
-					}
+					#traits = {
+					#}
 				}
 			activate = yes
 			}

@@ -91,7 +91,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				defence = 0.05
+				army_defence_factor = 0.05
 				industry_repair_factor = 0.15
 			}
 		}
@@ -101,7 +101,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				defence = -0.025
+				army_defence_factor = -0.025
 				max_planning = 0.075
 				consumer_goods_expected_value = -0.05
 			}
@@ -131,15 +131,13 @@ ideas = {
 			removal_cost = 1
 			equipment_bonus = {
 				support_equipment = {
+					build_cost_ic = -0.05 #added to replace trickleback
+					# casualty_trickleback = 0.05 #Doesnt work with ideas
+					reliability = 0.03
 					build_cost_ic = -0.1
 					instant = yes
 				}
 			}
-			# medical_chem_company = {
-			# 		casualty_trickleback = 0.1
-			# 		reliability = 0.05
-			# 		instant = yes
-			# 	} doesn't work need to make it a tech
 		}
 
 		arr_memories_of_captivity = {
@@ -399,9 +397,6 @@ ideas = {
 			picture = trl_dakka
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
-			modifier = {
-
-			}
 		}
 
 		#MXS

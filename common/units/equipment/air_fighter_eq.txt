@@ -50,6 +50,9 @@ equipments = {
 
 		build_cost_ic = 75
 		resources = {
+			metal = 1
+			water = 1
+			energy = 1
 		}
 
 		manpower = 2
@@ -107,6 +110,9 @@ equipments = {
 
 		build_cost_ic = 210
 		resources = {
+			metal = 1
+			water = 1
+			energy = 1
 		}
 
 		manpower = 2
@@ -163,6 +169,9 @@ equipments = {
 
 		build_cost_ic = 210
 		resources = {
+			metal = 1
+			water = 1
+			energy = 1
 		}
 
 		manpower = 2
@@ -219,6 +228,9 @@ equipments = {
 
 		build_cost_ic = 210
 		resources = {
+			metal = 1
+			water = 1
+			energy = 1
 		}
 
 		manpower = 2

@@ -795,7 +795,7 @@ focus_tree = {
 			focus = NAV_heavy_artillery
 		}
 		completion_reward = {
-			CES = {country_event = nf_navajo.10 }
+			CES = {country_event = nf_navajo_land_request.1 }
 			custom_effect_tooltip = NAV_territory_tt
 		}
 	}
@@ -825,7 +825,7 @@ focus_tree = {
 			focus = NAV_legion_training
 		}
 		completion_reward = {
-			CES = {country_event = nf_navajo.11 }
+			CES = {country_event = nf_navajo_land_request.2 }
 			custom_effect_tooltip = NAV_territory_tt
 		}
 	}
@@ -901,7 +901,7 @@ focus_tree = {
 			focus = NAV_railroads
 		}
 		completion_reward = {
-			CES = { country_event = nf_navajo.12 }
+			CES = { country_event = nf_navajo_land_request.3 }
 			custom_effect_tooltip = NAV_territory_tt
 		}
 	}

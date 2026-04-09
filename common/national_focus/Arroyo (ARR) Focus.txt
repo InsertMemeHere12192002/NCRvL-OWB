@@ -624,6 +624,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = arr_army_special_forces_bonus_tt
 				bonus = 0.5
 				uses = 2
 				category = spec_force_equipment_tech_category
@@ -648,6 +649,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = arr_our_own_metal_men_bonus_tt
 				bonus = 0.7
 				uses = 2
 				category = power_armor_tech_category
@@ -693,6 +695,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
+					name = arr_stripping_fear_bonus_tt
 					bonus = 1
 					uses = 1
 					ahead_reduction = 1
@@ -742,6 +745,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.8
 				uses = 2
 				category = cat_land_doctrine
@@ -886,6 +890,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 1
 				category = bike_tech_category
@@ -907,6 +912,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.8
 				uses = 2
 				category = vehicle_tech_category
@@ -1390,6 +1396,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
+					name = tech_bonus_tree_tt
 					bonus = 0.8
 					uses = 1
 					ahead_reduction = 1
@@ -1647,7 +1654,7 @@ focus_tree = {
 	}
 	focus = {
 		id = arr_production_deals
-		icon = GFX_goal_behemoth_yellow
+		icon = GFX_goal_CES_Industry_Unity
 		available = {
 			has_government = elites
 			custom_trigger_tooltip = {
@@ -1777,6 +1784,7 @@ focus_tree = {
 		relative_position_id = arr_meet_chitsa
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 1
 				category = support_tech_category
@@ -1820,6 +1828,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 2
 				category = support_medical_tech_category
@@ -1863,6 +1872,7 @@ focus_tree = {
 				warden_doggos_tech = 1
 			}
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 2
 				category = support_dog_tech_category
@@ -1888,6 +1898,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 1
 				category = civilized_tech_category
@@ -1936,11 +1947,12 @@ focus_tree = {
 			focus = arr_new_warfare_doctrine
 		}
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 1
-				uses = 2
-				category = cat_air_doctrine
-			}
+			#add_doctrine_cost_reduction = {
+			#	cost_reduction = 1
+			#	uses = 2
+			#	category = cat_air_doctrine
+			#}
+			army_experience = 100
 		}
 		ai_will_do = {
 			factor = 0.5
@@ -1962,6 +1974,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 1
 				category = infantry_weapons_tech_category
@@ -1987,6 +2000,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 2
 				category = fighter_tech_category
@@ -2009,6 +2023,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 1
 				uses = 2
 				category = cas_bomber_tech_category
@@ -2017,7 +2032,7 @@ focus_tree = {
 	}
 	focus = {
 		id = arr_batch_thirty
-		icon = GFX_goal_generic_wizard_hat
+		icon = GFX_goal_generic_vehicle_plane
 		available = {
 			has_country_flag = chosen_one_gone
 			has_government = intellectuals
@@ -2175,6 +2190,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.8
 				uses = 2
 				category = agriculture_tech
@@ -2272,6 +2288,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.5
 				uses = 2
 				category = industry_specialisation_category
@@ -2373,20 +2390,19 @@ focus_tree = {
 			country_event = {
 				id = nf_arroyo.88
 			}
-			create_corps_commander = {
-				name = "Chosen One"
-				portrait_path = GFX_Portrait_ARR_chosen_one
+		add_corps_commander_role = {
+				character = ARR_chosen_one
 				skill = 3
-				id = 15867
+				attack_skill = 2
+				defense_skill = 3
+				planning_skill = 4
+				logistics_skill = 3
 				traits = {
 					perceptive_trait
 					enduring_trait
 					charismatic_trait
 				}
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 4
-				logistics_skill = 3
+				legacy_id = 15867
 			}
 		}
 	}
@@ -2411,6 +2427,7 @@ focus_tree = {
 						is_core_of = PAC
 						is_core_of = MXS
 						is_core_of = FOU
+						is_core_of = EMB
 					}
 				}
 				add_core_of = ARR

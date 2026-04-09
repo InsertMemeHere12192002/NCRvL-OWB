@@ -56,6 +56,10 @@ set_technology = {
 	safety_hatches_vehicle_tech = 1
 	raider_reckless_aggression = 1
 	grand_army = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.5
@@ -85,6 +89,10 @@ set_popularities = {
 	ruler = 20
 }
 
+
+#add_dynamic_modifier = {
+#	modifier = 80s_eht_industry_dynamic_modifier
+#}
 
 set_country_flag = grand_doctrine_ai
 set_country_flag = grand_motorized_doctrine_ai

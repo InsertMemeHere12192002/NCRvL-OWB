@@ -1,0 +1,89 @@
+blc_realm_status = {
+	allowed = { original_tag = BLC }
+	icon = GFX_decision_revolt
+	visible_when_empty = yes
+	priority = 300
+}
+
+blc_moles_ruckus = {
+	allowed = { original_tag = BLC }
+	icon = GFX_decision_revolt
+	# visible = { has_active_mission = black_canyon_moles_mission }
+	priority = 250
+}
+
+blc_common_army = {
+	allowed = { original_tag = BLC }
+	icon = GFX_decision_category_military_operation
+	visible = {
+		# has_completed_focus = blc_secret_rearnament
+	}
+	priority = 80
+}
+
+blc_diplomatic_relations = {
+	allowed = { original_tag = BLC }
+	icon = GFX_decision_category_generic_crisis
+	visible = {
+		# has_completed_focus = blc_broke_out_from_isolation
+	}
+	priority = 50
+}
+
+blc_trade_agreements = {
+	allowed = { original_tag = BLC }
+	priority = 49
+	#icon = GFX_decision_category_generic_economy
+	#priority = 60
+}
+
+blc_colorado_developments = {
+	allowed = {
+		OR = {
+			original_tag = BLC
+			original_tag = BAG
+		}
+	}
+	icon = GFX_decision_category_generic_prospect_for_resources
+	visible = {
+		OR = {
+			AND = {
+				original_tag = BLC
+				# has_completed_focus = blc_colorado_reconstruction_bureau
+			}
+			AND = {
+				original_tag = BAG
+				# has_completed_focus = bag_collaborate_with_mining_enterprises
+			}
+		}
+	}
+	priority = 40
+}
+
+blc_utah_colorado_joint_mining_consortium = {
+	allowed = {
+		OR = {
+			original_tag = BLC
+			original_tag = NCN
+		}
+	}
+	icon = GFX_decision_category_generic_prospect_for_resources
+	visible = {
+		BLC = { 
+			# has_completed_focus = blc_concession_of_mining_rights 
+			exists = yes
+		}
+		NCN = {
+			exists = yes
+		}
+	}
+	priority = 40
+}
+
+pnt_paints_of_colorado = {
+	allowed = {
+		original_tag = PNT
+	}
+	icon = GFX_decision_category_generic_propaganda
+	priority = 40
+}

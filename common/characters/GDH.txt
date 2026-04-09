@@ -609,7 +609,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = GDH_thornton_research_advisor
+			idea_token = GDH_thornton_theorist
 			ledger = army
 			allowed = {
 				original_tag = GDH
@@ -643,7 +643,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = GDH_oseguara_research_advisor
+			idea_token = GDH_oseguara_theorist
 			ledger = army
 			allowed = {
 				original_tag = GDH

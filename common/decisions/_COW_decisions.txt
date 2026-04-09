@@ -1,0 +1,1706 @@
+# CODED BY THE COOLEST PERSON EVER, REAL!!!!!!!!!!!!!!!!!!!!!!!!!!
+# designed and written by Applefries who is really cool
+
+formable_nations = {
+	form_arizona_rangers = {
+		allowed = {
+			tag = COW
+		}
+		available = {
+			controls_state = 520
+			controls_state = 518
+			controls_state = 519
+			controls_state = 516
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				OR = {
+					state = 520
+					state = 518
+					state = 519
+					state = 516
+				}
+			}
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			base = 200
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = ARZ_rangers
+			hidden_effect = {
+				every_state = {
+					limit = {
+						OR = {
+							is_arizona_state = yes
+							is_core_of = NAV
+							is_core_of = CES
+							is_core_of = TWO
+							is_core_of = TON
+							is_owned_by = LAC
+							AND = {
+								is_core_of = RBD
+								RBD = { exists = no }
+							}
+							AND = {
+								is_core_of = GDH
+								GDH = { has_completed_focus = gdh_profit }
+							}
+							AND = {
+								is_core_of = LGS
+								CES = { has_completed_focus = ces_grainmakers }
+							}
+						}
+						NOT = { state = 72 state = 127 state = 508 state = 294 state = 446 state = 383 state = 224 state = 43 state = 428 state = 361 }
+					}
+					add_claim_by = ROOT
+					add_to_variable = {
+						coring_cost_targeted_state_factor@COW = -0.25
+					}
+				}
+				add_victory_points = {
+					province = 6632
+					value = 10
+				}
+				518 = {
+					add_building_construction = {
+						type = supply_node
+						level = 1
+						province = {
+							id = 6632
+						}
+						instant_build = yes
+					}
+				}
+			}
+			520 = { add_core_of = COW }
+			519 = { add_core_of = COW }
+			518 = { add_core_of = COW }
+			516 = { add_core_of = COW }
+			custom_effect_tooltip = form_arizona_rangers_tt
+			set_technology = {
+				infantry_tech_level_scientific = 1
+				special_forces_tech_level_scientific = 1
+			}
+			swap_ideas = {
+				remove_idea = COW_remnants_of_rangers
+				add_idea = COW_reformed_corps
+			}
+			country_event = nf_COW.33
+		}
+	}
+}
+political_actions = {
+	COW_try_to_join_ncr = {
+		fire_only_once = yes
+		fixed_random_seed = no
+
+		days_remove = 10
+		cost = 50
+
+		ai_will_do = {
+			factor = 100000
+		}
+
+		visible = {
+			is_subject = no
+			is_in_faction = no
+			has_completed_focus = COW_riding_bear_into_battle
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			is_in_faction = no
+			borders_new_california = yes
+			at_peace_with_new_california = yes
+			new_california_exists = yes
+		}
+
+		remove_effect = {
+			ask_to_join_new_california = yes
+		}
+	}
+	COW_try_to_join_california_way = {
+		fire_only_once = yes
+		fixed_random_seed = no
+
+		days_remove = 10
+		cost = 50
+
+		ai_will_do = {
+			factor = 100000
+		}
+
+		visible = {
+			is_subject = no
+			is_in_faction = no
+			has_completed_focus = COW_riding_bear_into_battle
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			is_in_faction = no
+			at_peace_with_dharma_way = yes
+			dharma_way_exists = yes
+			OR = {
+				owns_state = 520
+				owns_state = 519
+				owns_state = 518
+				520 = {
+					owner = {
+						is_subject_of = COW
+					}
+				}
+				519 = {
+					owner = {
+						is_subject_of = COW
+					}
+				}
+				518 = {
+					owner = {
+						is_subject_of = COW
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			ask_to_join_dharma_way = yes
+		}
+	}
+}
+COW_legion_infuence_category = {
+	COW_lower_legion_influence = {
+		fixed_random_seed = no
+
+		days_remove = 180
+
+		custom_cost_trigger = {
+			has_equipment = {
+				infantry_equipment > 2499
+			}
+			has_manpower > 1999
+		}
+		custom_cost_text = 2500_inf_2000_MP
+
+		ai_will_do = {
+			factor = 100000
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+			}
+			NOT = {
+				has_idea = COW_legion_resistance_eliminated
+			}
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			has_manpower > 2000
+			has_equipment = {
+				infantry_equipment > 2499
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+			modifier = {
+				factor = 0.1
+				has_manpower < 2000
+			}
+			modifier = {
+				factor = 0.1
+				has_equipment = {
+					infantry_equipment < 2500
+				}
+			}
+		}
+
+		complete_effect = {
+			add_manpower = -2000
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2500
+			}
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					has_idea = COW_legion_resistance_massive
+				}
+				swap_ideas = {
+					remove_idea = COW_legion_resistance_massive
+					add_idea = COW_legion_resistance_large
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = COW_legion_resistance_large
+				}
+				swap_ideas = {
+					remove_idea = COW_legion_resistance_large
+					add_idea = COW_legion_resistance_medium
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = COW_legion_resistance_medium
+				}
+				swap_ideas = {
+					remove_idea = COW_legion_resistance_medium
+					add_idea = COW_legion_resistance_small
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = COW_legion_resistance_small
+				}
+				swap_ideas = {
+					remove_idea = COW_legion_resistance_small
+					add_idea = COW_legion_resistance_eliminated
+				}
+			}
+		}
+	}
+	COW_destroy_lanius = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = LAC
+			LAC = {	is_subject = no }
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = LAC
+			}
+		}
+
+		remove_effect = {
+			LAC = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_paullus = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = PLS
+			PLS = {	is_subject = no }
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = PLS
+			}
+		}
+
+		remove_effect = {
+			PLS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_gente = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = GDH
+			GDH = {	is_subject = no }
+			GDH = {
+				has_government = ruler
+			}
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = GDH
+			}
+			GDH = {
+				has_government = ruler
+			}
+		}
+
+		remove_effect = {
+			GDH = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_hand = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = LNS
+			LNS = {	is_subject = no }
+			LNS = {
+				has_government = ruler
+			}
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = LNS
+			}
+			LNS = {
+				has_government = ruler
+			}
+		}
+
+		remove_effect = {
+			LNS = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_malpais = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = NCN
+			NCN = {	is_subject = no }
+			NCN = {
+				is_joshua_leader = yes
+			}
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = NCN
+			}
+			NCN = {
+				is_joshua_leader = yes
+			}
+		}
+
+		remove_effect = {
+			NCN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_whitelegs = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = WHT
+			WHT = {	is_subject = no }
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = WHT
+			}
+		}
+
+		remove_effect = {
+			WHT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_eighties = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = EHT
+			EHT = {	is_subject = no }
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = EHT
+			}
+		}
+
+		remove_effect = {
+			EHT = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+	COW_destroy_moore = {
+		fixed_random_seed = no
+		fire_only_once = yes
+
+		days_remove = 30
+		cost = 100
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			OR = {
+				has_idea = COW_legion_resistance_massive
+				has_idea = COW_legion_resistance_large
+				has_idea = COW_legion_resistance_medium
+				has_idea = COW_legion_resistance_small
+				has_idea = COW_legion_resistance_eliminated
+			}
+			country_exists = NCR
+			NCR = {	is_subject = no }
+			NCR = {
+				has_government = ruler
+				has_completed_focus = ncr_put_down_revanchists
+			}
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			any_neighbor_country = {
+				tag = NCR
+			}
+			NCR = {
+				has_government = ruler
+				has_completed_focus = ncr_put_down_revanchists
+			}
+		}
+
+		remove_effect = {
+			NCR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev = yes
+				}
+			}
+		}
+	}
+
+}
+COW_reforming_the_desert_rangers_category = {
+	COW_form_desert_rangers = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		days_remove = 10
+		cost = 50
+
+		ai_will_do = {
+			factor = 100000
+		}
+
+		visible = {
+			is_subject = no
+			DES = { is_in_faction = no }
+			COW = { is_in_faction = no }
+			OR = {
+				AND = { DES = { has_country_flag = can_form_desert_rangers } tag = DES }
+				AND = {
+					tag = COW
+					COW = { has_subject = DES }
+				}
+				AND = {
+					tag = DES
+					DES = { has_subject = COW }
+				}
+				# AND = {
+				# 	tag = DES
+				# 	dharma_way_exists = no
+				# 	DES = { has_completed_focus = des_fall_of_the_republic }
+				# }
+				# AND = {
+				# 	tag = DES
+				# 	DES = { has_completed_focus = des_rogue_ranger }
+				# }
+			}
+		}
+		allowed = {
+			OR = {
+				original_tag = COW
+				original_tag = DES
+			}
+		}
+
+		available = {
+			is_subject = no
+			is_in_faction = no
+			country_exists = COW
+			country_exists = DES
+			DES = {
+				OR = {
+					is_subject = no
+					is_subject_of = COW
+				}
+			}
+			COW = {
+				OR = {
+					is_subject = no
+					is_subject_of = DES
+				}
+			}
+			OR = {
+				NOT = { country_exists = BON }
+				BON = { is_subject = yes }
+			}
+			NOT = { DES = {	has_war_with = COW } }
+			OR = {
+				owns_state = 253
+				owns_state = 520
+				NOT = { country_exists = CES }
+				NOT = { country_exists = NCR }
+				CES = { is_subject = yes }
+				NCR = { is_subject = yes }
+			}
+		}
+
+		remove_effect = {
+			DES = {
+				create_or_join_desert_rangers = yes
+			}
+			COW = {
+				create_or_join_desert_rangers = yes
+			}
+		}
+	}
+	COW_rangers_nevada = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = DES }
+					owns_state = 210
+				}
+				has_subject = DES
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_basin_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = DES }
+				}
+				release_puppet = DES
+			}
+			DES = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 210 }
+				210 = { add_core_of = DES }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			set_province_name = {
+				id = 3519
+				name = VICTORY_POINTS_3519_DES
+			}
+			hidden_effect = {
+				210 = {
+					set_state_name = STATE_210_DES
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_basin_rangers_state = yes
+				}
+				DES = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_california = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = NCR }
+					owns_state = 350
+				}
+				has_subject = NCR
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_california_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = NCR }
+				}
+				release_puppet = NCR
+			}
+			NCR = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 350 }
+				350 = { add_core_of = NCR }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_california_rangers_state = yes
+				}
+				NCR = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_santa_fe = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = SUF }
+					owns_state = 44
+				}
+				has_subject = SUF
+			}
+		}
+
+		visible = {
+			OR = {
+				owns_state = 546
+				AND = {
+					has_idea = COW_on_our_own
+					NOT = {
+						is_new_california_member = yes
+						is_dharma_way_member = yes
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_santa_fe_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = SUF }
+				}
+				release_puppet = SUF
+			}
+			SUF = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 44 }
+				44 = { add_core_of = SUF }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_santa_fe_rangers_state = yes
+				}
+				SUF = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_colorado = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = BAG }
+					owns_state = 525
+				}
+				has_subject = BAG
+			}
+		}
+
+		visible = {
+			OR = {
+				owns_state = 525
+				AND = {
+					has_idea = COW_on_our_own
+					NOT = {
+						is_new_california_member = yes
+						is_dharma_way_member = yes
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_colorado_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = BAG }
+				}
+				release_puppet = BAG
+			}
+			BAG = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 525 }
+				525 = { add_core_of = BAG }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_colorado_rangers_state = yes
+				}
+				BAG = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_texas = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = TBH }
+					owns_state = 915
+				}
+				has_subject = TBH
+			}
+		}
+
+		visible = {
+			OR = {
+				owns_state = 915
+				AND = {
+					has_idea = COW_on_our_own
+					NOT = {
+						is_new_california_member = yes
+						is_dharma_way_member = yes
+					}
+				}
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_texas_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = TBH }
+				}
+				release_puppet = TBH
+			}
+			TBH = {
+				drop_cosmetic_tag = yes
+				set_cosmetic_tag = TBH_texas_flag_rangers
+				set_capital = { state = 915 }
+				915 = { add_core_of = TBH }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_texas_rangers_state = yes
+				}
+				TBH = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_plains = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = MRR }
+					owns_state = 1044
+				}
+				has_subject = MRR
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_plains_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = MRR }
+				}
+				release_puppet = MRR
+			}
+			MRR = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 1044 }
+				1044 = { add_core_of = MRR }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_plains_rangers_state = yes
+				}
+				MRR = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_cascadia = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = BEL }
+					owns_state = 21
+				}
+				has_subject = BEL
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_cascadia_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = BEL }
+				}
+				release_puppet = BEL
+			}
+			BEL = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 21 }
+				21 = { add_core_of = BEL }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_cascadia_rangers_state = yes
+				}
+				BEL = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_rio_grande = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = FFI }
+					owns_state = 746
+				}
+				has_subject = FFI
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_rio_grande_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = FFI }
+				}
+				release_puppet = FFI
+			}
+			FFI = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 746 }
+				746 = { add_core_of = FFI }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_rio_grande_rangers_state = yes
+				}
+				FFI = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_latin = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = ATE }
+					owns_state = 818
+				}
+				has_subject = ATE
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_latin_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = ATE }
+				}
+				release_puppet = ATE
+			}
+            818 = {
+                set_state_name = STATE_818_RRG
+                set_state_flag = rrg_renamed_state
+            }
+			ATE = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 818 }
+				818 = { add_core_of = ATE }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_latin_rangers_state = yes
+				}
+				ATE = {
+					transfer_state = PREV
+				}
+			}
+		}
+	}
+	COW_rangers_canadian = {
+		fire_only_once = yes
+		fixed_random_seed = no
+		icon = GFX_decision_helm_ranger
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		allowed = {
+			original_tag = COW
+		}
+
+		visible = {
+			has_idea = COW_on_our_own
+			NOT = {
+				is_new_california_member = yes
+				is_dharma_way_member = yes
+			}
+		}
+
+		available = {
+			OR = {
+				AND = {
+					NOT = { country_exists = WPG }
+					owns_state = 1108
+				}
+				has_subject = WPG
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = COW_formed_canadian_rangers
+			if = {
+				limit = {
+					NOT = { country_exists = WPG }
+				}
+				release_puppet = WPG
+			}
+			WPG = {
+				drop_cosmetic_tag = yes
+				set_capital = { state = 1108 }
+				1108 = { add_core_of = WPG }
+				load_focus_tree = cow_puppet_nf
+				if = {
+					limit = {
+						has_government = ruler
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = benevolent_dictatorship
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = people
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = peoples_militia
+						traits = { po_loyal_puppet }
+					}
+				}
+				else_if = {
+					limit = {
+						has_government = intellectuals
+					}
+					create_country_leader = {
+						name = DES_PUPPET_LEADER_NAME
+						desc = DES_PUPPET_LEADER_DESC
+						picture = GFX_Portrait_Puppet_Leader_DES
+						expire = "3000.1.1"
+						ideology = technocracy
+						traits = { po_loyal_puppet }
+					}
+				}
+			}
+			every_owned_state = {
+				limit = {
+					is_canadian_rangers_state = yes
+				}
+				WPG = {
+					transfer_state = PREV
+				}
+			}
+			if = {
+				limit = { wild_wasteland = yes }
+				custom_effect_tooltip = COW_secret_canada_tooltip
+			}
+		}
+	}
+}

@@ -39,6 +39,10 @@ equipments = {
 
 		build_cost_ic = 45
 		resources = {
+			metal = 3
+			water = 2
+			circuitry = 1
+			energy = 1
 		}
 
 	}

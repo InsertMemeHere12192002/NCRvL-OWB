@@ -87,4 +87,42 @@ characters = {
 			}
 		}
 	}
+	WHT_cunning_owl = {
+		name = WHT_CUNNING_OWL_NAME
+		portraits = {
+			army = {
+				large = GFX_Portrait_WHT_generic_1
+			}
+		}
+		corps_commander = {
+			traits = {
+				strong_trait
+				perceptive_trait
+			}
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
+	WHT_red_anteater = {
+		name = WHT_RED_ANTEATER_NAME
+		portraits = {
+			army = {
+				large = GFX_Portrait_WHT_generic_2
+			}
+		}
+		corps_commander = {
+			traits = {
+				intelligent_trait
+				lucky_trait
+			}
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+		}
+	}
 }

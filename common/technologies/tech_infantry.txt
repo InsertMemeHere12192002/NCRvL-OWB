@@ -68,6 +68,10 @@ technologies = {
 				date > "2276.1.1"
 			}
 			modifier = {
+				factor = 5.0
+				has_war = yes
+			}
+			modifier = {
 				factor = 2.5
 				date > "2277.1.1"
 			}
@@ -110,7 +114,11 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 1.0
+			modifier = {
+				factor = 5
+				has_war = yes
+			}
 			modifier = {
 				factor = 2.5
 				date > "2278.1.1"
@@ -159,6 +167,10 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
+						modifier = {
+				factor = 5
+				has_war = yes
+			}
 			modifier = {
 				factor = 2.5
 				date > "2280.1.1"
@@ -207,7 +219,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 2.5
 				date > "2281.1.1"
@@ -252,7 +264,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 2.5
 				date > "2282.1.1"
@@ -300,7 +312,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 2.5
 				date > "2283.1.1"
@@ -348,7 +360,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 2.5
 				date > "2285.1.1"
@@ -391,7 +403,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 2.5
 			modifier = {
 				factor = 2.5
 				date > "2287.1.1"

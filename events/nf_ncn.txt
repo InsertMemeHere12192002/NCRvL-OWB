@@ -334,7 +334,7 @@ country_event = { # Day of Judgement / Canaan in Flames
 			ncn_idea_destroyed_economy
 			ncn_idea_theological_confusion
 		}
-		country_event = { id = nf_ncn.12 days = 7 random = 2 }
+		country_event = { id = nf_ncn.12 days = 7 random_hours = 2 }
 		remove_dynamic_modifier = {
 			modifier = ncn_decadence_dynamic_modifier
 		}
@@ -429,7 +429,7 @@ country_event = { # Day of Judgement / Capture of Lincon
 			ncn_idea_warmongering_disposition
 			ncn_idea_disrupted_economy
 		}
-		country_event = { id = nf_ncn.13 days = 7 random = 2 }
+		country_event = { id = nf_ncn.13 days = 7 random_hours = 2 }
 		remove_dynamic_modifier = {
 			modifier = ncn_threat_dynamic_modifier
 		}
@@ -731,9 +731,9 @@ country_event = { # Get with the Program, Old Man!
 							}
 						}
 					}
-					keep_unit_leaders = {
-						4000
-					}
+					#keep_unit_leaders = {
+					#	legacy_id = 4000
+					#}
 				}
 			}
 			else_if = {
@@ -751,9 +751,9 @@ country_event = { # Get with the Program, Old Man!
 							}
 						}
 					}
-					keep_unit_leaders = {
-						4000
-					}
+					#keep_unit_leaders = {
+					#	4000
+					#}
 				}
 			}
 		}
@@ -770,9 +770,9 @@ country_event = { # Get with the Program, Old Man!
 				start_civil_war = {
 					ideology = elites
 					size = 0.35
-					keep_unit_leaders = {
-						4000
-					}
+					#keep_unit_leaders = {
+					#	4000
+					#}
 				}
 			}
 			else_if = {
@@ -782,9 +782,9 @@ country_event = { # Get with the Program, Old Man!
 				start_civil_war = {
 					ideology = elites
 					size = 0.45
-					keep_unit_leaders = {
-						4000
-					}
+					#keep_unit_leaders = {
+					#	4000
+					#}
 				}
 			}
 			random_country = {
@@ -1024,7 +1024,7 @@ country_event = { # The White Legs Fall
 			OR = {
 				exists = no
 				AND = {
-					is_puppet = yes
+					is_subject = yes
 					NOT = { is_subject_of = NCN }
 				}
 				NOT = { owns_state = 326 }
@@ -1678,7 +1678,7 @@ country_event = { # A Kingdom of Utah?
 		}
 		set_character_name = {
 			character = NCN_jeremiah_rigdon
-			name = NCN_GOVENOR_JEREMIAH_RIDGON_NAME
+			name = NCN_GOVERNOR_JEREMIAH_RIDGON_NAME
 		}
 		set_cosmetic_tag = NCN_utah_state
 		set_temp_variable = { caps_to_add = 400 }

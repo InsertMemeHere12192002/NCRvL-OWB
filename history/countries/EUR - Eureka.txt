@@ -1,6 +1,5 @@
 ﻿capital = 39
 oob = "EUR_2275"
-
 set_technology = {
 	infantry_tech_level_tribal = 1
 	infantry_tech_level_settler = 1
@@ -57,6 +56,10 @@ set_technology = {
 	pre_agriculture_industry_tech = 1
 	elite_army = 1
 	military_heritage_unlock_tech = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.35
@@ -64,7 +67,6 @@ set_war_support = 0.4
 set_research_slots = 5
 set_convoys = 25
 add_manpower = 1000
-
 set_politics = {
 	ruling_party = elites
 	elections_allowed = no
@@ -104,19 +106,18 @@ add_equipment_to_stockpile = {
 	amount = 50
 }
 
-
 add_equipment_to_stockpile = {
 	type = enclave_power_armour_equipment_1
 	amount = 100
 	producer = USA
 }
 
-
 add_equipment_to_stockpile = {
 	type = plasma_equipment_1
 	amount = 159
 	producer = USA
 }
+
 add_equipment_to_stockpile = {
 	type = spec_ops_equipment
 	amount = 25
@@ -146,25 +147,66 @@ set_country_flag = scavenging_disabled
 #Doctrine flag is sometimes changed when the gamerules/default path weights are applied so they can depend on Eureka's path. Before editing these, check the game rule on actions file
 set_country_flag = elite_doctrine_ai
 set_country_flag = is_california_nation
-
 # Trying to do valid Eureka volunteers as an array - values are region id's
-add_to_array = { volunteer_targets = 84 }
-add_to_array = { volunteer_targets = 609 }
-add_to_array = { volunteer_targets = 420 }
-add_to_array = { volunteer_targets = 48 }
-add_to_array = { volunteer_targets = 274 }
-add_to_array = { volunteer_targets = 358 }
-add_to_array = { volunteer_targets = 86 }
-add_to_array = { volunteer_targets = 32 }
-add_to_array = { volunteer_targets = 548 }
-add_to_array = { volunteer_targets = 350 }
-add_to_array = { volunteer_targets = 163 }
-add_to_array = { volunteer_targets = 63 }
-add_to_array = { volunteer_targets = 136 }
-add_to_array = { volunteer_targets = 97 }
+add_to_array = {
+	volunteer_targets = 84
+}
+
+add_to_array = {
+	volunteer_targets = 609
+}
+
+add_to_array = {
+	volunteer_targets = 420
+}
+
+add_to_array = {
+	volunteer_targets = 48
+}
+
+add_to_array = {
+	volunteer_targets = 274
+}
+
+add_to_array = {
+	volunteer_targets = 358
+}
+
+add_to_array = {
+	volunteer_targets = 86
+}
+
+add_to_array = {
+	volunteer_targets = 32
+}
+
+add_to_array = {
+	volunteer_targets = 548
+}
+
+add_to_array = {
+	volunteer_targets = 350
+}
+
+add_to_array = {
+	volunteer_targets = 163
+}
+
+add_to_array = {
+	volunteer_targets = 63
+}
+
+add_to_array = {
+	volunteer_targets = 136
+}
+
+add_to_array = {
+	volunteer_targets = 97
+}
+
 recruit_character = MCA_Douglas_Granite
 recruit_character = EUR_portmaster
-recruit_character = EUR_varland_varland_gillett
+recruit_character = EUR_varland_gillett
 recruit_character = ERB_Dwemer
 recruit_character = ERB_Scott
 recruit_character = ERB_Hamilton
@@ -214,10 +256,31 @@ add_offsite_building = {
 set_variable = {
     bribe_cost = 30
 }
+
 set_variable = {
     bribe_increase = 25
 }
-set_party_name = { ideology = elites  long_name = "Portmasters" name = "Portmasters" }
-set_party_name = { ideology = intellectuals  long_name = "Granite Company" name = "Granite Company" }
-set_party_name = { ideology = ruler  long_name = "Regulators" name = "Regulators" }
-set_party_name = { ideology = people  long_name = "Hubologists" name = "Hubologists" }
+
+set_party_name = {
+	ideology = elites
+	long_name = EUR_elites_party_long
+	name = EUR_elites_party_short
+}
+
+set_party_name = {
+	ideology = intellectuals
+	long_name = EUR_intellectuals_party_long
+	name = EUR_intellectuals_party_short
+}
+
+set_party_name = {
+	ideology = ruler
+	long_name = EUR_ruler_party_long
+	name = EUR_ruler_party_short
+}
+
+set_party_name = {
+	ideology = people
+	long_name = EUR_people_party_long
+	name = EUR_people_party_short
+}

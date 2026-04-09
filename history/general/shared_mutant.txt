@@ -241,7 +241,7 @@ every_possible_country = {
 		}
 	}
 	generate_character = {
-		token_base = generic_super_mutant_research_advisor_one
+		token_base = generic_super_mutant_theorist_one
 		portraits = {
 			army = {
 				small = "GFX_idea_mutant_generic11"
@@ -280,7 +280,7 @@ every_possible_country = {
 		}
 	}
 	generate_character = {
-		token_base = generic_super_mutant_research_advisor_two
+		token_base = generic_super_mutant_theorist_two
 		portraits = {
 			army = {
 				small = "GFX_idea_mutant_generic1"

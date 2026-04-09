@@ -20,7 +20,7 @@ division_template = {
 }
 units = {
 	division = {
-		name = "Bandidos de Ensenada"
+		name = "Bandidos de Colonet"
 		location = 823
 		division_template = "Bandidos Armados"
 		start_experience_factor = 0.3

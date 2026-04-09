@@ -69,9 +69,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 10 }
 			check_variable = {
@@ -127,9 +124,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 15
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 10 }
 			check_variable = {
@@ -174,9 +168,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 20 }
 			check_variable = {
@@ -224,9 +215,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 15
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 20 }
 			check_variable = {
@@ -274,9 +262,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 20 }
 			check_variable = {
@@ -330,9 +315,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 15
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 20 }
 			check_variable = {
@@ -377,9 +359,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 20 }
 			check_variable = {
@@ -433,9 +412,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 40 }
 			check_variable = {
@@ -492,9 +468,6 @@ eur_scavenging_category = {
 			}
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 50 }
 			check_variable = {
@@ -532,9 +505,6 @@ eur_scavenging_category = {
 		available = {
 			has_template = "Portmasters"
 		}
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_army_experience > 19
 		}
@@ -561,9 +531,6 @@ eur_scavenging_category = {
 			has_template = "True Fishermen"
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_army_experience > 39
 		}
@@ -590,9 +557,6 @@ eur_scavenging_category = {
 			has_template = "Metalbreakers"
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_army_experience > 39
 		}
@@ -619,9 +583,6 @@ eur_scavenging_category = {
 			has_template = "Eureka Motorgangers"
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_army_experience > 39
 		}
@@ -645,12 +606,9 @@ eur_scavenging_category = {
 	eur_raise_power_armor = {
 		icon = GFX_decision_t51_vb_helm
 		available = {
-			has_template = "31st Mechanized"
+			has_template = "Shelled Warriors"
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_army_experience > 39
 		}
@@ -662,7 +620,7 @@ eur_scavenging_category = {
 			hidden_effect = {
 				capital_scope = {
 					create_unit = {
-						division = "name = \"Shelled Warriors\" division_template = \"31st Mechanized\" start_experience_factor = 0.8 start_equipment_factor = 1"
+						division = "name = \"Shelled Warriors\" division_template = \"Shelled Warriors\" start_experience_factor = 0.8 start_equipment_factor = 1"
 						owner = EUR
 					}
 				}
@@ -677,9 +635,6 @@ eur_scavenging_category = {
 			has_template = "Regulators"
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_army_experience > 79
 		}
@@ -706,9 +661,6 @@ eur_scavenging_category = {
 			has_completed_focus = eur_prioritize_army_training
 		}
 		days_remove = 20
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			has_navy_experience > 19
 		}
@@ -828,8 +780,7 @@ EUR_political_infighting = {
 		visible = {
 			elites > 0.2
 		}
-		cost = 30
-
+		
 		complete_effect = {
 			add_popularity = { ideology = intellectuals popularity = 0.10 }
 		}
@@ -840,12 +791,11 @@ EUR_political_infighting = {
 		priority = 25
 		cost = 25
 		allowed = { tag = EUR }
-		cost = 30
 
 		complete_effect = {
 			add_popularity = { ideology = people popularity = 0.10 }
 		}
-		fire_only_once = no
+
 	}
 	EUR_ncr_shipments = {
 		icon = GFX_decision_flamethrower
@@ -863,7 +813,7 @@ EUR_political_infighting = {
 			set_temp_variable = { caps_to_add = -20 }
 			add_caps = yes
 		}
-		fire_only_once = no
+		
 	}
 }
 eur_NCR_hiding = {
@@ -881,7 +831,7 @@ eur_NCR_hiding = {
 		}
 		is_good = no
 		selectable_mission = yes
-		fire_only_once = no
+		
 		cancel_trigger = {
 			OR = {
 				NOT = {
@@ -920,12 +870,7 @@ eur_NCR_hiding = {
 			original_tag = EUR
 			has_completed_focus = eur_plasma_grenades
 		}
-		available = {
-		}
 		days_remove = 15
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 50 }
 			check_variable = {
@@ -1151,9 +1096,6 @@ eur_NCR_hiding = {
 			has_completed_focus = eur_power_armor_specialization
 		}
 		days_remove = 30
-		#modifier = {
-		#	production_speed_buildings_factor = 0.05
-		#}
 		custom_cost_trigger = {
 			set_temp_variable = { temp_cap_cost = 20 }
 			check_variable = {

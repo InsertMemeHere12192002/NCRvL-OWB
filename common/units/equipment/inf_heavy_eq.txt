@@ -11,11 +11,8 @@ equipments = {
 
 		interface_category = interface_category_land
 
-		upgrades = {
-
-		}
-
 		resources = {
+			water = 1
 		}
 	}
 

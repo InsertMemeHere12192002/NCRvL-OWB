@@ -15,7 +15,6 @@ characters = {
 			desc = NCR_GRANT_C_HAYES_DESC
 			ideology = ideocracy
 			expire = "3000.01.01.01"
-			id = -1
 		}
 		advisor = {
 			slot = cultural_advisor
@@ -32,7 +31,6 @@ characters = {
 					NOT = {
 						has_country_flag = ncr_hayes_left
 					}
-					#tag = DAY
 				}
 			}
 			traits = {
@@ -64,7 +62,6 @@ characters = {
 			desc = NCR_ALLGOOD_MURPHY_DESC
 			ideology = constitutional_republic
 			expire = "3000.01.01.01"
-			id = -1
 			traits = {
 				charismatic_leader
 				captain_of_industry
@@ -91,7 +88,6 @@ characters = {
 			traits = {
 				baron_connections
             }
-			id = -1
 		}
 		advisor = {
 			slot = economic_advisor
@@ -130,7 +126,8 @@ characters = {
 		}
 	}
 	NCR_colonel_moore = {
-		name = NCR_moore_name
+		name = NCR_MOORE_NAME
+		gender = female
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_NCR_moore
@@ -144,7 +141,6 @@ characters = {
 			desc = CASSANDRA_MOORE_DESC
 			ideology = benevolent_dictatorship
 			expire = "3000.01.01.01"
-			id = -1
 			traits = {
 				president_general
 			}
@@ -202,7 +198,7 @@ characters = {
 	NCR_navy_chief = {
 		name = NCR_navy_chief_name
 		portraits = {
-			army = {
+			navy = {
 				small = GFX_idea_generic_advisor18
 			}
 		}
@@ -231,7 +227,7 @@ characters = {
 		}
 	}
 	NCR_enclave_advisor_advisor_4 = {
-		name= ENC_generic_advisor_4_name
+		name = ENC_generic_advisor_4_name
 		portraits = {
 			army = {
 				large = GFX_Portrait_ENC_generic_advisor_4
@@ -272,7 +268,6 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_TEX_provisional_senate
-				#small = GFX_idea_moore_minister
 			}
 			army = {
 				large = GFX_Portrait_TEX_provisional_senate
@@ -282,7 +277,6 @@ characters = {
 			desc = NCR_Committee_DESC
 			ideology = ideocracy
 			expire = "3000.01.01.01"
-			id = -1
 			traits = {
 				military_dominance
 				civil_service_members
@@ -294,7 +288,6 @@ characters = {
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_TEX_provisional_senate
-				#small = GFX_idea_moore_minister
 			}
 			army = {
 				large = GFX_Portrait_TEX_provisional_senate
@@ -304,7 +297,6 @@ characters = {
 			desc = NCR_Vacant_DESC
 			ideology = constitutional_republic
 			expire = "3000.01.01.01"
-			id = -1
 			traits = {
 				constitutional_chaos
 			}
@@ -335,6 +327,16 @@ characters = {
 			traits = {
 				ranger_general
 			}
+						on_add = {
+				ROOT = {
+					set_country_flag = rangergeneral
+				}
+			}
+			on_remove = {
+				ROOT = {
+					clr_country_flag = rangergeneral
+				}
+			}
 			cost = 100
 			ai_will_do = {
 				factor = 10
@@ -351,13 +353,12 @@ characters = {
 				agile_trait
 				ranger_trait
 			}
-			legacy_id = 123456
+			legacy_id = -1
 		}
 		country_leader = {
 			desc = NCR_mossman_character_name_DESC
 			ideology = military_government
 			expire = "3000.01.01.01"
-			id = -1
 			traits = {
 				war_hero
 				army_commando_1
@@ -380,7 +381,6 @@ characters = {
 			desc = NCR_kimball_character_name_desc
 			ideology = constitutional_republic
 			expire = "3000.01.01.01"
-			id = -1
 			traits = {
 				military_background
 			}
@@ -389,6 +389,7 @@ characters = {
 	NCR_ranger_commander_martin = {
 		name = NCR_ranger_commander_martin
 		portraits = {
+
 			army = {
 				large = GFX_Portrait_NCR_Generic_1
 			}
@@ -404,7 +405,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 2
-			legacy_id = 123456789
+			legacy_id = -1
 		}
 	}
 	NCR_brigadier_general_thompson = {
@@ -425,7 +426,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 3
 			logistics_skill = 1
-			legacy_id = 12345678
+			legacy_id = -1
 		}
 	}
 	NCR_big_jim = {
@@ -468,7 +469,7 @@ characters = {
 				strong_trait
 				charismatic_trait
 			}
-			legacy_id = 1234567
+			legacy_id = -1
 		}
 	}
 
@@ -493,6 +494,16 @@ characters = {
 			}
 			traits = {
 				unpopular_genius
+			}
+						on_add = {
+				ROOT = {
+					set_country_flag = drummondorbaronschoice
+				}
+			}
+			on_remove = {
+				ROOT = {
+					clr_country_flag = drummondorbaronschoice
+				}
 			}
 			cost = 100
 			ai_will_do = {
@@ -523,7 +534,6 @@ characters = {
 				#traits_here
 			}
 			expire = "3000.01.01.01"
-			id = -1
 		}
 		field_marshal = {
 			skill = 5
@@ -531,7 +541,7 @@ characters = {
 			defense_skill = 3
 			planning_skill = 2
 			logistics_skill = 3
-			legacy_id = 12345
+			legacy_id = -1
 			traits = {
 				strong_trait
 				charismatic_trait
@@ -708,7 +718,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = NCR_ranger_jackson_research_advisor
+			idea_token = NCR_ranger_jackson_theorist
 			desc = NCR_ranger_jackson_desc
 			ledger = army
 			allowed = {
@@ -735,7 +745,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = NCR_mr_fantastic_research_advisor
+			idea_token = NCR_mr_fantastic_theorist
 			ledger = army
 			removal_cost = 300
 			allowed = {
@@ -743,6 +753,9 @@ characters = {
 					original_tag = NCR
 					original_tag = MOT
 				}
+			}
+					visible = {
+				wild_wasteland = yes
 			}
 			available = {
 				controls_state = 417
@@ -859,7 +872,10 @@ characters = {
 				original_tag = NCR
 			}
 			available = {
-				has_completed_focus = ncr_permanent_hub_advisors
+							if = {
+					limit = { tag = NCR }
+					has_completed_focus = ncr_permanent_hub_advisors
+				}
 			}
 			traits = {
 				ncr_dodge_trait
@@ -869,7 +885,7 @@ characters = {
 			}
 			cost = 100
 			ai_will_do = {
-				factor = 12	  # Very strong relative to the others
+				factor = 12	 # Very strong relative to the others
 			}
 		}
 	}
@@ -1033,7 +1049,7 @@ characters = {
 			allowed = {
 				OR = {
 					original_tag = NCR
-					original_tag = DAY
+					original_tag = BON
 				}
 			}
 			available = {
@@ -1049,7 +1065,6 @@ characters = {
 			}
 		}
 	}
-
 	NCR_lieutenant_lloyd_groves = {
 		name = NCR_LLOYD_GROVES_NAME
 		portraits = {
@@ -1095,6 +1110,7 @@ characters = {
 		advisor = {
 			slot = cultural_advisor
 			idea_token = NCR_veronicacultural_advisor
+			desc = "NCR_VERONICA_NAME_desc"
 			allowed = {
 				OR = {
 					original_tag = NCR
@@ -1160,7 +1176,7 @@ characters = {
 		advisor = {
 			slot = high_command
 			idea_token = NCR_granite_high_command
-			desc = NCR_granite_desc
+			# desc = NCR_granite_desc
 			ledger = army
 			allowed = {
 				original_tag = NCR

@@ -49,20 +49,10 @@ set_technology = {
 	support_weaponry = 1
 	anti_tank_equipment_tech_1 = 1
 	spec_ops_equipment_tech_1 = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
 }
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-	}
-}
-
-
 
 set_stability = 0.33
 set_war_support = 0.46

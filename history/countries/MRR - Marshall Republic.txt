@@ -48,18 +48,10 @@ set_technology = {
 	fireteam_weaponry_tech = 1
 	bike_tech_1 = 1
 	stripped_pa_tech = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		#waterproof_sealing_tech = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 add_ideas = {

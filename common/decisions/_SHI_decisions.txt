@@ -1,6 +1,6 @@
 SHI_infiltration_category = {
 	SHI_infiltration_focus = {
-		fire_only_once = no
+		
 		days_remove = 30
 		icon = GFX_decision_pistol_suppressed
 		ai_will_do = {
@@ -39,7 +39,7 @@ SHI_infiltration_category = {
 
 SHI_mandate_over_california = {
 	SHI_establish_mandate = {
-		fire_only_once = no
+		
 		#days_remove = 30
 		icon = GFX_decision_teapot
 		ai_will_do = {
@@ -181,7 +181,7 @@ SHI_bos_smuggling_category = {
 			}
 			SHI = {
 				exists = yes
-				is_puppet = no
+				is_subject = no
 			}
 		}
 		complete_effect = {
@@ -199,6 +199,7 @@ SHI_bos_smuggling_category = {
 			SHI = {
 				country_event = nf_shi.24
 				add_tech_bonus = {
+					name = tech_bonus_event_tt
 					bonus = 0.6
 					ahead_reduction = 1.1
 					uses = 4
@@ -223,7 +224,7 @@ SHI_bos_smuggling_category = {
 		available = {
 			SHI = {
 				exists = yes
-				is_puppet = no
+				is_subject = no
 			}
 		}
 		custom_cost_trigger = {
@@ -247,6 +248,7 @@ SHI_bos_smuggling_category = {
 		remove_effect = {
 			SHI = {
 				add_tech_bonus = {
+					name = tech_bonus_event_tt
 					bonus = 0.4
 					uses = 4
 					category = energy_weaponry_tech_category
@@ -275,7 +277,7 @@ SHI_bos_smuggling_category = {
 		available = {
 			SHI = {
 				exists = yes
-				is_puppet = no
+				is_subject = no
 			}
 		}
 		custom_cost_trigger = {
@@ -294,6 +296,7 @@ SHI_bos_smuggling_category = {
 			SHI = {
 				add_manpower = 75
 				add_tech_bonus = {
+					name = tech_bonus_event_tt
 					bonus = 0.5
 					uses = 3
 					category = cat_land_doctrine
@@ -311,7 +314,7 @@ SHI_bos_smuggling_category = {
 			caps_cost_trigger = yes
 			SHI = {
 				exists = yes
-				is_puppet = no
+				is_subject = no
 			}
 		}
 		custom_cost_trigger = {

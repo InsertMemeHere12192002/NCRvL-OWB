@@ -11,7 +11,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = ROGUE_RANGER_DESC
+			desc = DES_ROGUE_RANGER_DESC
 			ideology = benevolent_dictatorship
 			expire = "3000.01.01.01"
 			traits = {
@@ -197,7 +197,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = DES_hell_razor_research_advisor
+			idea_token = DES_hell_razor_theorist
 			allowed = {
 				original_tag = DES
 			}
@@ -748,7 +748,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = DES_the_way_of_the_ranger_research_advisor
+			idea_token = DES_the_way_of_the_ranger_theorist
 			allowed = {
 				original_tag = DES
 			}
@@ -773,7 +773,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = DES_tycho_senior_jr_research_advisor
+			idea_token = DES_tycho_senior_jr_theorist
 			allowed = {
 				original_tag = DES
 			}
@@ -798,7 +798,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = DES_dexter_cunningham_research_advisor
+			idea_token = DES_dexter_cunningham_theorist
 			allowed = {
 				original_tag = DES
 			}
@@ -823,7 +823,7 @@ characters = {
 		}
 		advisor = {
 			slot = theorist
-			idea_token = DES_henry_dundy_research_advisor
+			idea_token = DES_henry_dundy_theorist
 			allowed = {
 				original_tag = DES
 			}

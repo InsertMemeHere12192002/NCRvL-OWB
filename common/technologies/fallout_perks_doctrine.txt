@@ -2369,7 +2369,6 @@ technologies = {
 	}
 
 	terrain_harsh_tech = {
-
 		infantry = {
 			default_morale = 0.01
 			urban = {
@@ -2445,7 +2444,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_infantry = {
+		fake_intel_unit = {
 			default_morale = 0.01
 			urban = {
 				attack = 0.05
@@ -2460,7 +2459,7 @@ technologies = {
 				defence = 0.05
 			}
 		}
-		super_mutant_aux_infantry = {
+		gary_unit = {
 			default_morale = 0.01
 			urban = {
 				attack = 0.05
@@ -2508,12 +2507,15 @@ technologies = {
 
 		xp_research_type = army
 		xp_unlock_cost = 50
+		on_research_complete = {
+        	army_experience = -50
+    	}
 		doctrine = yes
 
 		XOR = { terrain_mountain_tech terrain_plains_tech terrain_jungle_tech }
 
 		folder = {
-			name = land_doctrine_folder
+			name = fallout_perks_doctrine_folder
 			position = { x = @Row_tactics_left_2 y = @Col_infantry }
 		}
 
@@ -2539,7 +2541,6 @@ technologies = {
 	}
 
 	terrain_harsh_tech_2 = {
-
 		spec_ops = {
 			default_morale = 0.01
 			urban = {
@@ -2772,7 +2773,6 @@ technologies = {
 	}
 
 	terrain_harsh_tech_3 = {
-
 		combat_robot = {
 			default_morale = 0.01
 			urban = {
@@ -2870,7 +2870,6 @@ technologies = {
 	}
 
 	terrain_harsh_tech_4 = {
-
 		motorized = {
 			default_morale = 0.01
 			urban = {

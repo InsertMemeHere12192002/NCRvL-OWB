@@ -46,7 +46,10 @@ equipments = {
 		lend_lease_cost = 8
 
 		build_cost_ic = 125
-		resources = {
+	resources = {
+			metal = 2
+			water = 2
+			energy = 2
 		}
 
 		manpower = 10
@@ -98,6 +101,9 @@ equipments = {
 
 		build_cost_ic = 135
 		resources = {
+			metal = 2
+			water = 2
+			energy = 2
 		}
 
 		manpower = 10
@@ -149,6 +155,9 @@ equipments = {
 
 		build_cost_ic = 135
 		resources = {
+			metal = 2
+			water = 2
+			energy = 2
 
 		}
 
@@ -200,8 +209,10 @@ equipments = {
 		lend_lease_cost = 8
 
 		build_cost_ic = 135
-		resources = {
-
+			resources = {
+			metal = 2
+			water = 2
+			energy = 2
 		}
 
 		manpower = 10

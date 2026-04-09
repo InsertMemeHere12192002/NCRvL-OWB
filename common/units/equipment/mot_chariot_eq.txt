@@ -9,11 +9,6 @@ equipments = {
 
 		interface_category = interface_category_land
 
-		upgrades = {
-			#pa_redundancy_upgrade
-			#pa_production_upgrade
-		}
-
 		maximum_speed = 9
 		reliability = 0.75
 		armor_value = 15
@@ -32,10 +27,10 @@ equipments = {
 
 		build_cost_ic = 10
 		resources = {
+			water = 1
 		}
 	}
 
-	# Motorcycles
 	chariot_equipment_1 = {
 		archetype = chariot_equipment
 		priority = 10

@@ -1,7 +1,5 @@
 equipments = {
-    #------------------------
-    # special forces equipment
-    #------------------------
+
     implant_equipment = {
 		is_archetype = yes
 		is_buildable = no
@@ -10,10 +8,6 @@ equipments = {
 		group_by = archetype
 
 		interface_category = interface_category_land
-
-		upgrades = {
-
-		}
 
 		reliability = 0.8
 
@@ -28,10 +22,10 @@ equipments = {
 		build_cost_ic = 6
 
 		resources = {
+			water = 1
 		}
 	}
 
-	#Tier 1 Implants
 	implant_equipment_1 = {
 		archetype = implant_equipment
 		priority = 10

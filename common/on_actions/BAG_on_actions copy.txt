@@ -1,0 +1,138 @@
+# on_actions = {
+# 	on_startup = {
+# 		effect = {
+# 			set_global_flag = colorado_war_flag
+# 			BAG = {
+# 				country_event = nf_baggers.1000
+# 			}
+# 		}
+# 	}
+# 	on_declare_war = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					tag = BAG
+# 					OR = {
+# 						FROM = {
+# 							tag = LUM
+# 						}
+# 						FROM = {
+# 							tag = WHD
+# 						}
+# 					}
+# 					OR = {
+# 						has_country_flag = nf_baggers.8_offensive
+# 						has_country_flag = nf_baggers.8_defensive
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						has_country_flag = nf_baggers.8_offensive
+# 					}
+# 					clr_country_flag = nf_baggers.8_offensive
+# 					add_timed_idea = {
+# 						idea = mot_idea_plan_the_offensive
+# 						days = 120
+# 					}
+# 				}
+# 				if = {
+# 					limit = {
+# 						has_country_flag = nf_baggers.8_defensive
+# 					}
+# 					clr_country_flag = nf_baggers.8_defensive
+# 					add_timed_idea = {
+# 						idea = bag_focus_survival
+# 						days = 120
+# 					}
+# 				}
+# 			}
+# 		}
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					tag = BAG
+# 					has_completed_focus = bag_operation_bulletstorm
+# 					OR = {
+# 						FROM = {
+# 							tag = BLC
+# 						}
+# 						FROM = {
+# 							tag = GLW
+# 						}
+# 					}
+# 				}
+# 				add_timed_idea = {
+# 					idea = bag_focus_dome
+# 					days = 180
+# 				}
+# 			}
+# 		}
+# 	}
+# 	on_state_control_changed = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					# Execute if Baggers captures Boulder from Glowbugs or Black Canyon
+# 					tag = BAG
+# 					FROM = {
+# 						OR = {
+# 							tag = GLW
+# 							tag = BLC
+# 						}
+# 					}
+# 					FROM.FROM = {
+# 						state = 568
+# 					}
+# 				}
+# 				BAG = {
+# 					country_event = nf_baggers.27
+# 				}
+# 			}
+# 		}
+# 	}
+# 	on_monthly_BAG = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					BAG = {
+# 						is_ai = yes
+# 						has_completed_focus = bag_rediscover_fifth_zax_mainframe_level
+# 					}
+# 				}
+# 				set_country_flag = DOME_ZAX_FIXED
+# 			}
+# 		}
+# 	}
+# 	on_daily_BAG = {
+# 		effect = {
+# 			if = {
+# 				limit = {
+# 					has_variable = zax_days_trigger
+# 					check_variable = {
+# 						zax_days_trigger > 0
+# 					}
+# 					has_active_mission = bag_repairing_zax_mission
+# 				}
+# 				add_to_variable = {
+# 					zax_days_trigger = -1
+# 				}
+# 			}
+# 		}
+# 	}
+# 	on_capitulation = {
+#         effect = {
+#             if = {
+#                 limit = {
+#                     ROOT = { tag = BLC }
+# 					BAG = {
+# 						exists = yes
+# 						has_completed_focus = bag_start_of_beautiful_friendship
+# 					}
+#                 }
+#                 BAG = {
+#                     country_event = nf_baggers.202
+#                 }
+#             }
+#         }
+#     }
+# }

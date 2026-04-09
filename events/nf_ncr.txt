@@ -290,9 +290,9 @@ country_event = { # Allgood's Fury
 			modifier = {
 				factor = 0
 				OR = {
-					NCR_has_ai_behavior_allgood = yes
-					NCR_has_ai_behavior_electoral_deadlock_allgood = yes
-					NCR_has_ai_behavior_hayes = yes
+					has_country_flag = NCR_ai_behavior_allgood
+					has_country_flag = NCR_ai_behavior_electoral_deadlock_allgood
+					has_country_flag = NCR_ai_behavior_hayes
 				}
 			}
 		}
@@ -309,8 +309,8 @@ country_event = { # Allgood's Fury
 			modifier = {
 				factor = 0
 				OR = {
-					NCR_has_ai_behavior_kimball = yes
-					NCR_has_ai_behavior_electoral_deadlock_kimball = yes
+					has_country_flag = NCR_ai_behavior_kimball
+					has_country_flag = NCR_ai_behavior_electoral_deadlock_kimball
 				}
 			}
 		}
@@ -337,6 +337,17 @@ country_event = { # This Congress has No Confidence in President Kimball
 				NOT = { has_idea = ncr_corruption_overlooked }
 			}
 			add_ideas = ncr_corruption_overlooked
+		}
+				hidden_effect = {
+			every_country = {
+				limit = {
+					OR = {
+						is_neighbor_of = NCR
+						news_is_west_tag = yes
+					}
+				}
+				news_event = { id = news_cali.24 hours = 6 random_hours = 3 }
+			}
 		}
 	}
 }
@@ -691,6 +702,7 @@ country_event = { # Reno Annexation
 		ai_chance = {
 			base = 0
 		}
+
 			NCR = {
 				NEW = {
 					become_puppet = yes
@@ -966,6 +978,7 @@ country_event = { #Kimballs creates Canyonlands
 							autonomy_state = autonomy_incorporated_territory
 						}
 					}
+
 				#retire_ideology_leader = people
 				add_country_leader_role = {
 					character = FRI_big_jim
@@ -973,8 +986,8 @@ country_event = { #Kimballs creates Canyonlands
 					Country_leader = {
 						ideology = peoples_militia
 						expire = "3000.01.01.01"
-						traits = {
-						}
+						#traits = {
+						#}
 					}
 				}
 				create_or_join_new_california = yes
@@ -1117,59 +1130,59 @@ country_event = { #Pay taxes
 }
 
 add_namespace = ncr_test
-country_event = {
-	id = ncr_test.1
-	title = ncr_test.1.t
-	desc = ncr_test.1.d
-	picture = GFX_event_NCR_victory
-
-	is_triggered_only = yes
-	option = {
-		name = ncr_test.1.a
-		annex_country = {
-			target = WHT
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = SOR
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = SLE
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = DEA
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = CLK
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = TAR
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = CRZ
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = NCN
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = UIN
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = CES
-			transfer_troops = yes
-		}
-	}
-}
-
-
+#country_event = {
+#	id = ncr_test.1
+#	title = ncr_test.1.t
+#	desc = ncr_test.1.d
+#	picture = GFX_event_NCR_victory
+#
+#	is_triggered_only = yes
+#	option = {
+#		name = ncr_test.1.a
+#		annex_country = {
+#			target = WHT
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = SOR
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = SLE
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = DEA
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = CLK
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = TAR
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = CRZ
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = NCN
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = UIN
+#			transfer_troops = yes
+#		}
+#		annex_country = {
+#			target = CES
+#			transfer_troops = yes
+#		}
+#	}
+#}
+#
+#
 add_namespace = ncr_allgood
 
 country_event = { # President Allgood's Inagural Address
@@ -1226,6 +1239,7 @@ country_event = { #Baseball
 			base = 100
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.5
 			uses = 1
 			category = electronics
@@ -2180,16 +2194,18 @@ news_event = { # Moore Fails
 		name = ncr_crisis.9.a
 		BON = {
 			kill_country_leader = yes
-			create_country_leader = {
-				name = "Bill Calhoun"
-				desc = "Calhoun_DESC"
-				picture = GFX_Portrait_NCR_calhoun_follower
-				expire = "3000.1.1"
-				ideology = peoples_militia
-				traits = {
-					follower_buddy
-					well_liked_leader
-					expert_negotiator
+			add_country_leader_role = {
+				character = BON_bill_calhoun
+				promote_leader = yes
+				country_leader = {
+					desc = BON_BILL_CALHOUN_DESC
+					ideology = peoples_militia
+					traits = {
+						follower_buddy
+						well_liked_leader
+						expert_negotiator
+					}
+					expire = "3000.1.1"
 				}
 			}
 		}
@@ -2199,7 +2215,10 @@ news_event = { # Moore Fails
 			remove_ideas = ncr_veg_treaty_of_new_vegas
 		}
 		NCR = {
-			news_event = ncr_crisis.11
+				news_event = {
+				days = 5
+				id = ncr_crisis.11
+			}
 			remove_ideas = ncr_veg_treaty_of_new_vegas
 		}
 		VEG = {
@@ -2236,16 +2255,20 @@ news_event = { # The  People United
 	picture = GFX_event_NCR_congress
 	option = { #
 		name = ncr_crisis.10.a
-		BON = {
+BON = {
 			kill_country_leader = yes
-			create_country_leader = {
-				name = "Bill Calhoun"
-				desc = "Calhoun_DESC"
-				picture = GFX_Portrait_NCR_calhoun_follower
-				expire = "3000.1.1"
-				ideology = peoples_militia
-				traits = {
-					follower_buddy
+			add_country_leader_role = {
+				character = BON_bill_calhoun
+				promote_leader = yes
+				country_leader = {
+					desc = BON_BILL_CALHOUN_DESC
+					ideology = peoples_militia
+					traits = {
+						follower_buddy
+						well_liked_leader
+						expert_negotiator
+					}
+					expire = "3000.1.1"
 				}
 			}
 		}
@@ -2290,7 +2313,7 @@ country_event = { # Barons
 		if = {
 			limit = {
 				any_country = {
-					is_puppet_of = NCR
+					is_subject_of = NCR
 				}
 			}
 			PREV = {
@@ -2394,7 +2417,7 @@ country_event = { # Barons
 		if = {
 			limit = {
 				any_country = {
-					is_puppet_of = NCR
+					is_subject_of = NCR
 				}
 			}
 			PREV = {
@@ -2442,26 +2465,20 @@ country_event = { # There Was Only Ever One
 			elites = 0
 			intellectuals = 0
 		}
-		create_country_leader = {
-			name = "NCR_MOORE_NAME"
-			desc = "CASSANDRA_MOORE_DESC"
-			picture = GFX_Portrait_NCR_moore
-			expire = "3000.1.1"
-			ideology = benevolent_dictatorship
-			traits = {
-				president_general
-			}
-		}
+		promote_character = NCR_colonel_moore
 		set_cosmetic_tag = NCR_moore
 		set_party_name = {
 			ideology = ruler
-			long_name = "Commission For Preservation of the Republic"
-			name = "COMPREP"
+			long_name = NCR_comprep_long
+			name = NCR_comprep_short
 		}
 		custom_effect_tooltip = MOORE_TT
 		hidden_effect = {
-			country_event = ncr_order.6
-			if = {
+			country_event =  {
+				id = ncr_order.6
+				days = 10
+			}
+						if = {
 				limit = {
 					MOT = {
 						exists = yes
@@ -2531,28 +2548,28 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = ncr_order.5
-	title = ncr_order.5.t
-	desc = ncr_order.5.d
-
-	is_triggered_only = yes
-
-	option = {
-		name = ncr_order.5.a
-		custom_effect_tooltip = ncr_eliminate_ghouls_option_tt
-		hidden_effect = {
-			set_country_flag = ncr_eliminate_ghouls_chosen
-		}
-	}
-	option = {
-		name = ncr_order.5.b
-		custom_effect_tooltip = ncr_conscript_ghouls_option_tt
-		hidden_effect = {
-			set_country_flag = ncr_ghoul_conscripts_chosen
-		}
-	}
-}
+#country_event = {
+#	id = ncr_order.5
+#	title = ncr_order.5.t
+#	desc = ncr_order.5.d
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ncr_order.5.a
+#		custom_effect_tooltip = ncr_eliminate_ghouls_option_tt
+#		hidden_effect = {
+#			set_country_flag = ncr_eliminate_ghouls_chosen
+#		}
+#	}
+#	option = {
+#		name = ncr_order.5.b
+#		custom_effect_tooltip = ncr_conscript_ghouls_option_tt
+#		hidden_effect = {
+#			set_country_flag = ncr_ghoul_conscripts_chosen
+#		}
+#	}
+#}
 country_event = {#Choosing the flag
 	id = ncr_order.6
 	picture = GFX_event_ncr_moore_flags
@@ -2594,11 +2611,9 @@ country_event = {
 		name = ncr_order.7.a
 		trigger = {
 			NOT = {
-				OR = {
-					has_country_flag = RDS_commie_tree_unlock
-					has_country_flag = RDS_sheriff_tree_unlock
-					has_country_flag = RDS_flynn_independent_flag
-				}
+				has_country_flag = RDS_commie_tree_unlock
+				has_country_flag = RDS_sheriff_tree_unlock
+				has_country_flag = RDS_flynn_independent_flag
 			}
 		}
 		RDS = {
@@ -2782,7 +2797,7 @@ country_event = {
 				inherit_technology = NCR
 				set_capital = { state = 268 }
 				268 = {
-					set_state_name = ncr_moore_phoenix
+					set_state_name = STATE_268_NCR
 					add_core_of = NFT
 				}
 			}
@@ -2808,7 +2823,7 @@ country_event = {
 			value = 1
 		}
 		46 = {
-			set_state_name = "Ghost Valley"
+			set_state_name = STATE_46_NCR
 			add_extra_state_shared_building_slots = 10
 			add_building_construction = {
 				type = arms_factory
@@ -3433,18 +3448,18 @@ country_event = { #Calhoun holds elections
 			state = 1
 		}
 		1 = {
-			set_state_name = "Starfather's Church"
+			set_state_name = STATE_1_NCR
 			hidden_effect = {
 				set_province_name = {
 					id = 2409
-					name = "Starfather's Church"
+					name = VICTORY_POINTS_2409_NCR
 				}
 			}
 		}
 		set_party_name = {
 			ideology = people
-			long_name = "Starfather's Children"
-			name = "Starfather's Children"
+			long_name = NCR_starfather_long
+			name = NCR_starfather_short
 		}
 		country_event = ncr_dharma.181
 		hidden_effect = {
@@ -3502,8 +3517,8 @@ country_event = { #Calhoun holds elections
 		}
 		set_party_name = {
 			ideology = ruler
-			long_name = "The Crane School"
-			name = "The Crane School"
+			long_name = NCR_crane_school_long
+			name = NCR_crane_school_short
 		}
 		hidden_effect = {
 			set_politics = {
@@ -3631,6 +3646,7 @@ country_event = {
 			}
 		}
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.15
 			uses = 1
 			category = industry
@@ -3643,6 +3659,7 @@ country_event = {
 			base = 0
 		}
 		army_experience = 15
+		add_political_power = 50
 		NCR = { news_event = ncr_expansion.4 }
 	}
 }
@@ -3687,6 +3704,7 @@ news_event = {
 	option = {
 		name = ncr_expansion.4.a
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			bonus = 0.3
 			uses = 2
 			category = infantry_tech_category
@@ -3706,10 +3724,7 @@ country_event = {
 	option = {
 		name = ncr_expansion.5.a
 		ai_chance = {
-			base = 1
-			modifier = {
-				add = 50
-			}
+			base = 10
 		}
 		add_war_support = 0.10
 		NCR = { news_event = ncr_expansion.6 }
@@ -3718,7 +3733,11 @@ country_event = {
 	option = {
 		name = ncr_expansion.5.b
 		ai_chance = {
-			base = 0
+			base = 2	# Small chance to accept
+			modifier = {
+				factor = 1.5
+				has_country_leader = { character = NEW_mr_bishop ruling_only = yes }
+			}
 		}
 		add_popularity = {
 			ideology = people
@@ -3785,6 +3804,7 @@ news_event = {
 				modifier = ncrbuddy
 			}
 		}
+		add_political_power = 50
 	}
 }
 
@@ -4121,24 +4141,25 @@ news_event = {
 	}
 }
 
-news_event = {
-	id = ncr_expansion.21
-	title = ncr_expansion.21t
-	desc = ncr_expansion.21.d
-	picture = GFX_event_NCR_watch
-
-	is_triggered_only = yes
-
-	option = {
-		name = ncr_expansion.21.a
-		add_tech_bonus = {
-			bonus = 0.25
-			uses = 2
-			category = cat_land_doctrine
-		}
-		add_equipment_to_stockpile = { type = energy_equipment_2 amount = 50  producer = USA}
-	}
-}
+#news_event = {
+#	id = ncr_expansion.21
+#	title = ncr_expansion.21t
+#	desc = ncr_expansion.21.d
+#	picture = GFX_event_NCR_watch
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = ncr_expansion.21.a
+#		add_tech_bonus = {
+#			name = tech_bonus_event_tt
+#			bonus = 0.25
+#			uses = 2
+#			category = cat_land_doctrine
+#		}
+#		add_equipment_to_stockpile = { type = energy_equipment_2 amount = 50  producer = USA}
+#	}
+#}
 country_event = {
 	id = ncr_expansion.22
 	title = ncr_expansion.22.t
@@ -4304,7 +4325,7 @@ news_event = {
 		name = ncr_expansion.28.a
 		trigger = {
 			has_country_leader = {
-				name = "Aaron Kimball"
+				character = NCR_aaron_kimball
 				ruling_only = yes
 			}
 		}
@@ -4317,7 +4338,7 @@ news_event = {
 				remove_idea = MXS_slave_labor
 				add_idea = MXS_slave_labor_2
 			}
-			set_cosmetic_tag = MXS_NCR
+			#set_cosmetic_tag = MXS_NCR
 		}
 	}
 
@@ -4326,7 +4347,7 @@ news_event = {
 		name = ncr_expansion.28.b
 		trigger = {
 			has_country_leader = {
-				name = "Grant C. Hayes"
+				character = NCR_grant_c_hayes
 				ruling_only = yes
 			}
 		}
@@ -4339,7 +4360,7 @@ news_event = {
 				remove_idea = MXS_slave_labor
 				add_idea = MXS_slave_labor_2
 			}
-			set_cosmetic_tag = MXS_NCR
+			#set_cosmetic_tag = MXS_NCR
 		}
 	}
 
@@ -4348,7 +4369,7 @@ news_event = {
 		name = ncr_expansion.28.c
 		trigger = {
 			has_country_leader = {
-				name = "Allgood Murphy"
+				character = NCR_allgood_murphy
 				ruling_only = yes
 			}
 		}
@@ -4363,7 +4384,7 @@ news_event = {
 		name = ncr_expansion.28.e
 		trigger = {
 			has_country_leader = {
-				name = "Anton Flynn"
+				character = NCR_anton_flynn
 				ruling_only = yes
 			}
 		}
@@ -4373,7 +4394,7 @@ news_event = {
 				remove_idea = MXS_slave_labor
 				add_idea = MXS_slave_labor_3
 			}
-			set_cosmetic_tag = MXS_NCR
+			#set_cosmetic_tag = MXS_NCR
 			FOU = {
 				become_puppet = yes
 			}
@@ -4381,20 +4402,43 @@ news_event = {
 	}
 }
 
-news_event = {
+country_event = {
 	id = ncr_expansion.29
 	title = ncr_expansion.29.t
 	desc = ncr_expansion.29.d
-	picture = GFX_event_MOJ_ncr_treaty
+	picture = GFX_event_ncr_military_base
 	is_triggered_only = yes
 	option = {
 		name = ncr_expansion.29.a
+				ai_chance = {
+			base = 10
+		}
+		# 		NEW = {
+		# 	country_event = {
+		# 		id = ncr_expansion.30
+		# 		hours = 12
+		# 	}
+		# }
+		# custom_effect_tooltip = ncr_expansion.29.a_tt
 	}
 	option = {
 		name = ncr_expansion.29.b
+				ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				NEW = { is_ai = no }
+			}
 	}
+	# NEW = {
+	# 		country_event = {
+	# 			id = ncr_expansion.5
+	# 			hours = 12
+	# 		}
+	# 	}
+	# 	custom_effect_tooltip = ncr_expansion.29.b_tt
+	 }
 }
-
 
 
 add_namespace = ncr_hayes
@@ -4497,7 +4541,7 @@ news_event = {
 				set_country_flag = area_51_done_flag
 				modifier = {
 					factor = 0
-					NOT = { has_global_flag = area_51_easter_egg_toggle_enabled_global_flag }
+					NOT = { has_country_flag = area_51_easter_egg_toggle_enabled_global_flag }
 				}
 			}
 			20 = {
@@ -4510,8 +4554,8 @@ news_event = {
 					factor = 0
 					OR = {
 						is_ai = no
-						NOT = { has_global_flag = area_51_commander_keen_enabled_global_flag }
-						has_global_flag = UFO_invasion_enabled_global_flag
+						NOT = { has_country_flag = area_51_commander_keen_enabled_global_flag }
+						has_country_flag = UFO_invasion_enabled_global_flag
 					}
 				}
 			}
@@ -4628,7 +4672,7 @@ country_event = {
 			value = 1
 		}
 		157 = {
-			set_state_name = "Lost Hills Ruins"
+			set_state_name = STATE_157_NCR_RUINS
 		}
 	}
 	option = {
@@ -4644,7 +4688,7 @@ country_event = {
 			value = 1
 		}
 		412 = {
-			set_state_name = "Maxson Bunker Ruins"
+			set_state_name = STATE_412_NCR_RUINS
 		}
 	}
 	option = {
@@ -5007,6 +5051,7 @@ news_event = {
 	option = {
 		name = ncr_murphy.7.a
 		add_tech_bonus = {
+			name = tech_bonus_event_tt
 			category = industry_specialisation_category
 			bonus = 0.4
 			uses = 2
@@ -5037,7 +5082,7 @@ news_event = {
 
 	option = {
 		name = ncr_murphy.9.a
-		add_ideas = ncr_tera
+		add_ideas = NCR_ERA
 	}
 }
 country_event = {#Murphy meets with Luchas
@@ -5050,6 +5095,19 @@ country_event = {#Murphy meets with Luchas
 
 	option = {
 		name = ncr_murphy.10.a
+		country_event = ncr_murphy.101
+	}
+}
+country_event = {#Murphy meets with Luchas
+	id = ncr_murphy.101
+	title = ncr_murphy.101.t
+	desc = ncr_murphy.101.d
+	picture = GFX_event_ffi_ring
+
+	is_triggered_only = yes
+
+	option = {
+		name = ncr_murphy.101.a
 		army_experience = 30
 	}
 }
@@ -5199,7 +5257,7 @@ country_event = {#Gordon now leads VC
 			set_politics = {
 				ruling_party = ruler
 			}
-			set_cosmetic_tag = VLT_gordon_ncr
+			set_cosmetic_tag = VLT_NCR
 			hidden_effect = {
 				set_country_flag = cult_of_renewal_rising
 				set_country_flag = vlt_question_of_faith_greed
@@ -5460,6 +5518,26 @@ country_event = {
 			ncr_elections_add_support_effect = yes
 			custom_effect_tooltip = kimball_redding_1_tt
 		}
+				if = {
+			limit = {
+				has_country_flag = kimball_shady_sands_businesses_happy
+			}
+			set_temp_variable = { state_id = 5 }
+			set_temp_variable = { candidate_id = global.first_candidate_id }
+			set_temp_variable = { support_to_add = 30 }
+			ncr_elections_add_support_effect = yes
+			custom_effect_tooltip = kimball_shady_sands_businesses_happy_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = kimball_brahmin_barons_happy
+			}
+			set_temp_variable = { state_id = 4 }
+			set_temp_variable = { candidate_id = global.first_candidate_id }
+			set_temp_variable = { support_to_add = 30 }
+			ncr_elections_add_support_effect = yes
+			custom_effect_tooltip = kimball_barons_happy_tt
+		}
 		set_country_flag = ncr_elections_gui_allowed_flag
 		activate_mission = ncr_presidential_election_countdown
 		custom_effect_tooltip = ncr_election_tt
@@ -5549,6 +5627,26 @@ country_event = {
 			ncr_elections_add_support_effect = yes
 			custom_effect_tooltip = kimball_redding_1_tt
 		}
+				if = {
+			limit = {
+				has_country_flag = kimball_shady_sands_businesses_happy
+			}
+			set_temp_variable = { state_id = 5 }
+			set_temp_variable = { candidate_id = global.first_candidate_id }
+			set_temp_variable = { support_to_add = 30 }
+			ncr_elections_add_support_effect = yes
+			custom_effect_tooltip = kimball_shady_sands_businesses_happy_tt
+		}
+		if = {
+			limit = {
+				has_country_flag = kimball_brahmin_barons_happy
+			}
+			set_temp_variable = { state_id = 4 }
+			set_temp_variable = { candidate_id = global.first_candidate_id }
+			set_temp_variable = { support_to_add = 30 }
+			ncr_elections_add_support_effect = yes
+			custom_effect_tooltip = kimball_barons_happy_tt
+		}
 	}
 	option = {
 		name = ncr_election.1.c # Hayes and Murphy - go with Murphy
@@ -5572,7 +5670,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = murphy_support_industry_maxson
+				has_country_flag = ncr_murphy_pleased_maxson
 			}
 			set_temp_variable = { state_id = 3 }
 			set_temp_variable = { candidate_id = global.first_candidate_id }
@@ -5672,7 +5770,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = murphy_support_industry_maxson
+				has_country_flag = ncr_murphy_pleased_maxson
 			}
 			set_temp_variable = { state_id = 3 }
 			set_temp_variable = { candidate_id = global.first_candidate_id }
@@ -5989,8 +6087,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					NCR_has_ai_behavior_electoral_deadlock_kimball = yes
-					NCR_has_ai_behavior_electoral_deadlock_allgood = yes
+					has_country_flag = NCR_ai_behavior_electoral_deadlock_kimball
+					has_country_flag = NCR_ai_behavior_electoral_deadlock_allgood
 				}
 			}
 			complete_national_focus = ncr_electoral_deadlock
@@ -6007,7 +6105,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				NCR_has_ai_behavior_hayes = yes
+				has_country_flag = NCR_ai_behavior_hayes
 			}
 			if = {
 				limit = {

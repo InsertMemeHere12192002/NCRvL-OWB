@@ -24,7 +24,7 @@ equipments = {
 			}
 			# fixed_ship_battery_slot_1 = {
 			# 	required = no
-			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			# }
 			fixed_ship_detection_slot = {
 				required = no
@@ -66,34 +66,33 @@ equipments = {
 				required = no
 				allowed_module_categories = { heavy_ship_special_module heavy_ship_storage_module ship_detection_module }
 			}
-			# rear_2_custom_slot = {
-			# 	required = no
-			# 	allowed_module_categories = {
-			# 		ship_point_defense_module
-			# 		light_ship_deck_weapon
-			# 		medium_ship_deck_weapon
-			# 		heavy_ship_deck_weapon
-			# 		carrier_deck_module
-			# 	}
-			# }
+			rear_2_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_point_defense_module
+					light_ship_deck_weapon
+					medium_ship_deck_weapon
+					heavy_ship_deck_weapon
+				}
+			}
 		}
 
 		default_modules = {
 			fixed_ship_command_slot = ship_command_module_1
 			fixed_ship_engine_slot = heavy_ship_oars_module
 			fixed_ship_battery_slot = ship_heavy_mounted_gun_module
-			# fixed_ship_battery_slot_1 = empty
+			# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
 			fixed_ship_detection_slot = empty
 			# fixed_ship_detection_slot_1 = empty
 			fixed_ship_armour_slot = empty
-			fixed_ship_point_defense_slot = empty
-			# fixed_ship_point_defense_slot_1 = empty
+			fixed_ship_point_defense_slot = ship_medium_mounted_gun_module
+			# fixed_ship_point_defense_slot_1 = ship_pd_module_1
 			fixed_ship_communication_slot = empty
 			# fixed_ship_storage_slot = empty
 			front_1_custom_slot = empty
 			mid_1_custom_slot = empty
 			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
+			rear_2_custom_slot = ship_heavy_mounted_gun_module
 		}
 
 		lg_armor_piercing = 1
@@ -152,11 +151,11 @@ equipments = {
 			fixed_ship_engine_slot = inherit
 			fixed_ship_battery_slot = {
 				required = yes
-				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module }
 			}
 			# fixed_ship_battery_slot_1 = {
 			# 	required = no
-			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			# }
 			fixed_ship_detection_slot = inherit
 			# fixed_ship_detection_slot_1 = {
@@ -188,7 +187,7 @@ equipments = {
 					light_ship_deck_weapon
 					medium_ship_deck_weapon
 					heavy_ship_deck_weapon
-					carrier_deck_module
+
 				}
 			}
 			mid_1_custom_slot = {
@@ -206,19 +205,19 @@ equipments = {
 			fixed_ship_command_slot = ship_command_module_1
 			fixed_ship_engine_slot = heavy_ship_oars_module
 			fixed_ship_battery_slot = ship_heavy_mounted_gun_module
-			# fixed_ship_battery_slot_1 = empty
-			fixed_ship_detection_slot = empty
-			# fixed_ship_detection_slot_1 = empty
-			fixed_ship_armour_slot = empty
-			fixed_ship_point_defense_slot = empty
-			# fixed_ship_point_defense_slot_1 = empty
-			fixed_ship_communication_slot = empty
-			# fixed_ship_storage_slot = empty
-			front_1_custom_slot = empty
-			front_2_custom_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
+			# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
+			fixed_ship_detection_slot = ship_detection_module_1
+			# fixed_ship_detection_slot_1 = ship_detection_module_1
+			fixed_ship_armour_slot = heavy_ship_armour_module_1
+			fixed_ship_point_defense_slot = ship_medium_mounted_gun_module
+			# fixed_ship_point_defense_slot_1 = ship_pd_module_1
+			fixed_ship_communication_slot = ship_communications_module_1
+			# fixed_ship_storage_slot = heavy_ship_storage_module_1
+			front_1_custom_slot = heavy_ship_subsurface_module_1
+			front_2_custom_slot = ship_medium_mounted_gun_module
+			mid_1_custom_slot = heavy_ship_oars_module
+			rear_1_custom_slot = heavy_ship_storage_module_1
+			rear_2_custom_slot = ship_heavy_mounted_gun_module
 		}
 
 		surface_detection = 24
@@ -231,7 +230,7 @@ equipments = {
 		build_cost_ic = 1600
 			resources = {
 				metal = 4
-				water = 4
+				water = 3
 			}
 
 		manpower = 24
@@ -250,11 +249,11 @@ equipments = {
 			fixed_ship_engine_slot = inherit
 			fixed_ship_battery_slot = {
 				required = yes
-				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			}
 			# fixed_ship_battery_slot_1 = {
 			# 	required = no
-			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			# }
 			fixed_ship_detection_slot = inherit
 			# fixed_ship_detection_slot_1 = {
@@ -286,7 +285,7 @@ equipments = {
 					light_ship_deck_weapon
 					medium_ship_deck_weapon
 					heavy_ship_deck_weapon
-					carrier_deck_module
+					
 				}
 			}
 			mid_1_custom_slot = {
@@ -305,20 +304,20 @@ equipments = {
 			fixed_ship_command_slot = ship_command_module_1
 			fixed_ship_engine_slot = heavy_ship_oars_module
 			fixed_ship_battery_slot = ship_heavy_mounted_gun_module
-			# fixed_ship_battery_slot_1 = empty
-			fixed_ship_detection_slot = empty
-			# fixed_ship_detection_slot_1 = empty
-			fixed_ship_armour_slot = empty
-			fixed_ship_point_defense_slot = empty
-			# fixed_ship_point_defense_slot_1 = empty
-			fixed_ship_communication_slot = empty
-			# fixed_ship_storage_slot = empty
-			front_1_custom_slot = empty
-			front_2_custom_slot = empty
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
+			# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
+			fixed_ship_detection_slot = ship_detection_module_1
+			# fixed_ship_detection_slot_1 = ship_detection_module_1
+			fixed_ship_armour_slot = heavy_ship_armour_module_1
+			fixed_ship_point_defense_slot = ship_medium_mounted_gun_module
+			# fixed_ship_point_defense_slot_1 = ship_pd_module_1
+			fixed_ship_communication_slot = ship_communications_module_1
+			# fixed_ship_storage_slot = heavy_ship_storage_module_1
+			front_1_custom_slot = heavy_ship_subsurface_module_1
+			front_2_custom_slot = ship_medium_mounted_gun_module
+			mid_1_custom_slot = heavy_ship_oars_module
+			mid_2_custom_slot = ship_heavy_mounted_gun_module
+			rear_1_custom_slot = heavy_ship_storage_module_1
+			rear_2_custom_slot = ship_heavy_mounted_gun_module
 		}
 
 		surface_detection = 28
@@ -351,11 +350,11 @@ equipments = {
 			fixed_ship_engine_slot = inherit
 			fixed_ship_battery_slot = {
 				required = yes
-				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			}
 			# fixed_ship_battery_slot_1 = {
 			# 	required = no
-			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			# }
 			fixed_ship_detection_slot = inherit
 			# fixed_ship_detection_slot_1 = {
@@ -388,7 +387,7 @@ equipments = {
 					light_ship_deck_weapon
 					medium_ship_deck_weapon
 					heavy_ship_deck_weapon
-					carrier_deck_module
+					
 				}
 			}
 			mid_1_custom_slot = {
@@ -407,20 +406,20 @@ equipments = {
 			fixed_ship_command_slot = ship_command_module_1
 			fixed_ship_engine_slot = heavy_ship_oars_module
 			fixed_ship_battery_slot = ship_heavy_mounted_gun_module
-			# fixed_ship_battery_slot_1 = empty
-			fixed_ship_detection_slot = empty
-			# fixed_ship_detection_slot_1 = empty
-			fixed_ship_armour_slot = empty
-			fixed_ship_point_defense_slot = empty
-			# fixed_ship_point_defense_slot_1 = empty
-			fixed_ship_communication_slot = empty
-			# fixed_ship_storage_slot = empty
-			front_1_custom_slot = empty
-			front_2_custom_slot = empty
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
+			# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
+			fixed_ship_detection_slot = ship_detection_module_1
+			# fixed_ship_detection_slot_1 = ship_detection_module_1
+			fixed_ship_armour_slot = heavy_ship_armour_module_1
+			fixed_ship_point_defense_slot = ship_medium_mounted_gun_module
+			# fixed_ship_point_defense_slot_1 = ship_pd_module_1
+			fixed_ship_communication_slot = ship_communications_module_1
+			# fixed_ship_storage_slot = heavy_ship_storage_module_1
+			front_1_custom_slot = heavy_ship_subsurface_module_1
+			front_2_custom_slot = ship_medium_mounted_gun_module
+			mid_1_custom_slot = heavy_ship_oars_module
+			mid_2_custom_slot = ship_heavy_mounted_gun_module
+			rear_1_custom_slot = heavy_ship_storage_module_1
+			rear_2_custom_slot = ship_heavy_mounted_gun_module
 		}
 
 		surface_detection = 32
@@ -453,11 +452,11 @@ equipments = {
 			fixed_ship_engine_slot = inherit
 			fixed_ship_battery_slot = {
 				required = yes
-				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+				allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			}
 			# fixed_ship_battery_slot_1 = {
 			# 	required = no
-			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module carrier_deck_module }
+			# 	allowed_module_categories = { light_ship_deck_weapon medium_ship_deck_weapon heavy_ship_deck_weapon ship_point_defense_module  }
 			# }
 			fixed_ship_detection_slot = inherit
 			# fixed_ship_detection_slot_1 = {
@@ -489,7 +488,7 @@ equipments = {
 					light_ship_deck_weapon
 					medium_ship_deck_weapon
 					heavy_ship_deck_weapon
-					carrier_deck_module
+					
 				}
 			}
 			mid_1_custom_slot = {
@@ -509,21 +508,21 @@ equipments = {
 			fixed_ship_command_slot = ship_command_module_1
 			fixed_ship_engine_slot = heavy_ship_oars_module
 			fixed_ship_battery_slot = ship_heavy_mounted_gun_module
-			# fixed_ship_battery_slot_1 = empty
-			fixed_ship_detection_slot = empty
-			# fixed_ship_detection_slot_1 = empty
-			fixed_ship_armour_slot = empty
-			fixed_ship_point_defense_slot = empty
-			# fixed_ship_point_defense_slot_1 = empty
-			fixed_ship_communication_slot = empty
-			# fixed_ship_storage_slot = empty
-			front_1_custom_slot = empty
-			front_2_custom_slot = empty
-			mid_1_custom_slot = empty
-			mid_2_custom_slot = empty
-			mid_3_custom_slot = empty
-			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
+			# fixed_ship_battery_slot_1 = ship_heavy_mounted_gun_module
+			fixed_ship_detection_slot = ship_detection_module_1
+			# fixed_ship_detection_slot_1 = ship_detection_module_1
+			fixed_ship_armour_slot = heavy_ship_armour_module_1
+			fixed_ship_point_defense_slot = ship_medium_mounted_gun_module
+			# fixed_ship_point_defense_slot_1 = ship_pd_module_1
+			fixed_ship_communication_slot = ship_communications_module_1
+			# fixed_ship_storage_slot = heavy_ship_storage_module_1
+			front_1_custom_slot = heavy_ship_subsurface_module_1
+			front_2_custom_slot = ship_medium_mounted_gun_module
+			mid_1_custom_slot = heavy_ship_oars_module
+			mid_2_custom_slot = ship_heavy_mounted_gun_module
+			mid_3_custom_slot = ship_heavy_mounted_gun_module
+			rear_1_custom_slot = heavy_ship_storage_module_1
+			rear_2_custom_slot = ship_heavy_mounted_gun_module
 		}
 
 		surface_detection = 36

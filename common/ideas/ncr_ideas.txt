@@ -58,14 +58,6 @@ ideas = {
 				agriculture_tech = 0.1
 			}
 		}
-		ncr_idea_war_ready_economy = {
-			picture = VEG_Good_Business
-			modifier = {
-				production_speed_industrial_complex_factor = -0.1
-				production_speed_arms_factory_factor = 0.1
-				production_factory_max_efficiency_factor = 0.05
-			}
-		}
 		ncr_osi_expanded_idea_2 = {
 
 			picture = generic_medicine
@@ -90,6 +82,7 @@ ideas = {
 				electronics = 0.1
 			}
 		}
+
 		ncr_tera = {
 
 			picture = generic_medicine
@@ -170,6 +163,16 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 			}
 		}
+				ncr_idea_war_ready_economy = {
+			picture = VEG_Good_Business
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
 		ncr_idea_war_ready_economy_2 = {
 			picture = VEG_Good_Business
 			modifier = {
@@ -179,6 +182,7 @@ ideas = {
 				production_speed_dockyard_factor = 0.1
 			}
 		}
+
 				ncr_diversified_weapons_contracts_idea = {
 			picture = generic_war_preparation
 			modifier = {
@@ -251,6 +255,9 @@ ideas = {
 		## Initial Focus Ideas
 		ncr_idea_repay_debts = {
 			picture = aradesh
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.05
 				stability_factor = 0.05
@@ -260,6 +267,9 @@ ideas = {
 		}
 		ncr_idea_kindness_to_strangers = {
 			picture = generic_medicine
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				compliance_gain = 0.02
 				exodus_national_appeal = 0.1
@@ -268,6 +278,9 @@ ideas = {
 		}
 		ncr_idea_self_sacrifice = {
 			picture = generic_medal
+			allowed_civil_war = {
+				always = yes
+			}
 			modifier = {
 				country_resource_water = 8
 				production_factory_max_efficiency_factor = 0.03
@@ -406,9 +419,7 @@ ideas = {
 			}
 
 			removal_cost = -1
-			modifier = {
-				navy_max_range_factor = 0.2
-			}
+			
 			equipment_bonus = {
 				ship_hull_light = {
 					build_cost_ic = -0.1
@@ -430,6 +441,9 @@ ideas = {
 					build_cost_ic = -0.1
 					instant = yes
 				}
+			}
+			modifier = {
+				navy_max_range_factor = 0.2
 			}
 		}
 		california_navy_sweet = {
@@ -504,6 +518,7 @@ ideas = {
 				land_reinforce_rate = 0.1
 			}
 		}
+
 
 
 		### Hayes
@@ -692,7 +707,6 @@ ideas = {
 			modifier = {
 				special_forces_min = 40
 			}
-
 			research_bonus = {
 				energy_weaponry_tech_category = -0.50
 				power_armor_tech_category = -0.25
@@ -1189,7 +1203,7 @@ ideas = {
 			picture = generic_dam
 			available = {
 				owns_state = 252
-				BON = { exists = yes }
+				country_exists = BON
 			}
 			removal_cost = -1
 			modifier = {
@@ -1441,8 +1455,8 @@ ideas = {
 		# 		non_core_manpower = 0.05
 		# 	}
 		# }
-		NCR_protectors_of_justice = {
-			picture = generic_helm_ranger
+		NCR_protectors_of_justice_idea = {
+			picture = generic_ranger_helm
 			allowed = {
 				always = no
 			}

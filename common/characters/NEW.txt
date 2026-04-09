@@ -82,7 +82,7 @@ characters = {
 		}
 	}
 	NEW_thradd_the_immortal = {
-		name = "Chief Thradd"
+		name = NEW_THRADD_NAME
 		portraits = {
 			army = {
 				large = GFX_Portrait_NEW_thradd
@@ -104,11 +104,7 @@ characters = {
 			available = {
 				has_completed_focus = new_thradd
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-			}
+
 			traits = {
 				immortal_titan
 			}
@@ -202,7 +198,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = NEW_MAMA_NAME_DESC
+			desc = NEW_MAMA_DESC
 			ideology = military_government
 			expire = "3000.01.01.01"
 			id = 10062
@@ -231,14 +227,7 @@ characters = {
 			available = {
 				has_completed_focus = new_roaring
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-				NOT = {
-					has_cosmetic_tag = THR_cosmetic_tag
-				}
-			}
+
 			traits = {
 				the_bear_of_reno
 			}
@@ -281,11 +270,7 @@ characters = {
 			available = {
 				has_completed_focus = new_roadpsychos
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-			}
+
 			traits = {
 				blitzer
 			}
@@ -317,14 +302,7 @@ characters = {
 			available = {
 				has_completed_focus = new_artillery
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-				NOT = {
-					has_cosmetic_tag = THR_cosmetic_tag
-				}
-			}
+
 			traits = {
 				flash_in_the_pan
 			}
@@ -383,11 +361,7 @@ characters = {
 			available = {
 				has_completed_focus = new_pablos
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-			}
+
 			traits = {
 				conquistador_captain
 			}
@@ -430,11 +404,7 @@ characters = {
 			available = {
 				has_completed_focus = new_vengefulsons
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-			}
+
 			traits = {
 				burning_avenger
 			}
@@ -466,11 +436,7 @@ characters = {
 			available = {
 				has_completed_focus = new_gladiators
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-			}
+
 			traits = {
 				erratic_engineer
 			}
@@ -508,11 +474,7 @@ characters = {
 			available = {
 				has_completed_focus = new_mutanttech
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-			}
+
 			traits = {
 				ancient_tactician
 			}
@@ -806,14 +768,7 @@ characters = {
 			available = {
 				has_completed_focus = new_enctech
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-				NOT = {
-					has_cosmetic_tag = THR_cosmetic_tag
-				}
-			}
+
 			research_bonus = {
 				energy_weaponry_tech_category = 0.1
 			}
@@ -842,16 +797,35 @@ characters = {
 			available = {
 				has_completed_focus = new_sanctuary
 			}
-			visible = {
-				NOT = {
-					has_cosmetic_tag = ENC_cosmetic_tag
-				}
-				NOT = {
-					has_cosmetic_tag = THR_cosmetic_tag
-				}
-			}
+
 			traits = {
 				pre_war_administrator
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 10
+			}
+		}
+	}
+	NEW_big_shot_bob = {
+		name = NEW_big_shot_bob_name
+		portraits = {
+			army = {
+				small = GFX_idea_generic_political_advisor_europe_1
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = NEW_big_shot_bob_theorist
+			ledger = army
+			allowed = {
+				original_tag = NEW
+			}
+			traits = {
+				military_theorist
+			}
+			research_bonus = {
+				cat_land_doctrine = 0.15
 			}
 			cost = 100
 			ai_will_do = {
@@ -884,32 +858,7 @@ characters = {
 			}
 		}
 	}
-	NEW_big_shot_bob = {
-		name = NEW_big_shot_bob_name
-		portraits = {
-			army = {
-				small = GFX_idea_generic_political_advisor_europe_1
-			}
-		}
-		advisor = {
-			slot = theorist
-			idea_token = NEW_big_shot_bob_research_advisor
-			ledger = army
-			allowed = {
-				original_tag = NEW
-			}
-			traits = {
-				military_theorist
-			}
-			research_bonus = {
-				cat_land_doctrine = 0.15
-			}
-			cost = 100
-			ai_will_do = {
-				factor = 10
-			}
-		}
-	}
+	
 	# NEW_ferath = {
 	# 	name = NEW_ferath
 	# 	portraits = {

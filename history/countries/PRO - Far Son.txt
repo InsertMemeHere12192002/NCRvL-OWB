@@ -51,24 +51,17 @@ set_technology = {
 	raider_reckless_aggression = 1
 	burrowing_beast_unlock_tech = 1
 	spec_ops_equipment_tech_1 = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.4
 set_war_support = 0.46
 set_research_slots = 3
 #set_country_flag = is_raider_nation
+set_country_flag = is_wyoming_nation
 set_country_flag = no_generic_chief
 set_country_flag = no_generic_high_command
 set_country_flag = no_generic_advisor

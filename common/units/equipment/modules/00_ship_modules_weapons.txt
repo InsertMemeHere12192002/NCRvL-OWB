@@ -719,4 +719,5 @@ equipment_modules = {
 
 		critical_parts = { damaged_super_heavy_guns }
 	}
+}
 # Error log parses an error if there is an ending } here, just ignore the cwtools error

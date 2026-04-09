@@ -1,0 +1,246 @@
+ideas = {
+	economy = {
+		law = yes
+		# BLC Unique Laws
+		blc_isolated_economy = {
+			picture = gov_idea_economy_builder
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.3
+				production_speed_arms_factory_factor = -0.5
+				production_speed_industrial_complex_factor = -0.1
+				conversion_cost_civ_to_mil_factor = 0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				caps_income_modifier = -0.25
+				caps_expense_modifier = -0.5
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+		blc_fishing_economy = {
+			picture = economy_fisherman
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_dockyard_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.4
+				industrial_capacity_dockyard = 0.15
+				conversion_cost_civ_to_mil_factor = 0.15
+				conversion_cost_mil_to_civ_factor = -0.45
+				caps_income_modifier = -0.20
+				caps_expense_modifier = -0.4
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+		blc_mining_economy = {
+			picture = gov_idea_economy_miner
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.25
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = -0.4
+				conversion_cost_civ_to_mil_factor = 0.45
+				conversion_cost_mil_to_civ_factor = -0.15
+				local_resources_factor = 0.15
+				caps_income_modifier = -0.20
+				caps_expense_modifier = -0.4
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+		blc_rearming_economy = {
+			picture = unique_economy_roaring_economy
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.20
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_metal_generator_factor = 0.15
+				industrial_capacity_factory = 0.15
+				production_speed_arms_factory_factor = -0.2
+				conversion_cost_civ_to_mil_factor = -0.5
+				conversion_cost_mil_to_civ_factor = 0.1
+				evolution_income_source_modifier_2 = 0.2
+				caps_node_trade_modifier = 0.2
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+		blc_rearmed_economy = {
+			picture = unique_economy_remiliterised_economy
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.20
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				conversion_cost_civ_to_mil_factor = -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				evolution_income_source_modifier_2 = 0.1
+				caps_node_trade_modifier = 0.1
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+		blc_polite_society = {
+			picture = gov_idea_economy_commander
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				conscription = -0.005
+				consumer_goods_expected_value = 0.15
+				production_speed_arms_factory_factor = 0.25
+				conversion_cost_civ_to_mil_factor = -0.25
+				conversion_cost_mil_to_civ_factor = 0.25
+				evolution_income_source_modifier_2 = -0.1
+				caps_node_trade_modifier = -0.1
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+		blc_war_economy = {
+			picture = gov_idea_economy_mushroom_cloud
+			allowed = {
+				original_tag = BLC
+			}
+			# available = {
+			# 	#
+			# }
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				conscription = -0.03
+				consumer_goods_expected_value = 0.10
+				production_speed_arms_factory_factor = 0.35
+				industrial_capacity_dockyard = 0.15
+				conversion_cost_civ_to_mil_factor = -0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				evolution_income_source_modifier_2 = -0.3
+				caps_node_trade_modifier = -0.3
+				special_forces_cap = 0.15
+			}
+			allowed_to_remove = {
+				BLC = {
+					OR = {
+						# has_completed_focus = blc_kickstart_our_economy
+						num_of_factories > 29
+						power_balance_value = {
+							id = BLC_centralization_scale
+							value > 0.99
+						}
+					}
+				}
+			}
+		}
+	}
+}

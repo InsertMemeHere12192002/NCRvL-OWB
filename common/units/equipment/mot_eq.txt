@@ -10,17 +10,12 @@ equipments = {
 
 		interface_category = interface_category_land
 
-		upgrades = {
-			#pa_redundancy_upgrade
-			#pa_production_upgrade
-		}
-
 		#Space taken in convoy
 		lend_lease_cost = 5
 		reliability = 0.8
 		build_cost_ic = 2
 		resources = {
-
+			metal = 1
 		}
 	}
 

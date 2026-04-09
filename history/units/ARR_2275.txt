@@ -68,7 +68,7 @@ units = {
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Arroyo Sentries"
+		name = "The Six Men"
 		location = 2722
 		division_template = "Settlement-Guard"
 		start_experience_factor = 1.0

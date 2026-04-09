@@ -647,8 +647,12 @@ country_event = { # TAA wants to be buddies :3
 
 
 	option = { # Accept
-		name = nf_tbh.132.a
-		TBH = { add_to_faction = TAA }
+		name = nf_tbh.323.a
+		TBH = {
+			TAA = {
+				join_prev_faction = yes
+			}
+		}
 		ai_chance = {
 			base = 50
 			modifier = {
@@ -660,7 +664,7 @@ country_event = { # TAA wants to be buddies :3
 		}
 	}
 	option = { # no
-		name = nf_tbh.132.b
+		name = nf_tbh.323.b
 		TAA = { country_event = nf_taa.132 }
 		ai_chance = {
 			base = 50

@@ -41,14 +41,19 @@ ideas = {
 				caps_node_trade_modifier = 0.4
 			}
 			allowed_to_remove = {
-				OR = {
-					has_war_support > 0.5
-					has_war = yes
-				}
-				any_enemy_country = {
-					ic_ratio = {
-						tag = ROOT
-						ratio > 0.2
+							or = {
+					OR = {
+						has_war_support > 0.5
+						has_war = yes
+					}
+					any_enemy_country = {
+						ic_ratio = {
+							tag = ROOT
+							ratio > 0.2
+						}
+					}
+					NOT = {
+						has_country_flag = locked_economy_law
 					}
 				}
 			}
@@ -77,9 +82,14 @@ ideas = {
 				caps_node_trade_modifier = 0.35
 			}
 			allowed_to_remove = {
-				OR = {
-					has_war_support > 0.6
-					has_war = yes
+				or = {
+					OR = {
+						has_war_support > 0.6
+						has_war = yes
+					}
+					NOT = {
+						has_country_flag = locked_economy_law
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -104,6 +114,17 @@ ideas = {
 				evolution_income_source_modifier_2 = 0.3
 				caps_node_trade_modifier = 0.3
 			}
+			allowed_to_remove = {
+				OR = {
+					OR = {
+						has_war_support > 0.6
+						has_war = yes
+					}
+					NOT = {
+						has_country_flag = locked_economy_law
+					}
+				}
+			}
 			cancel_if_invalid = no
 		}
 		civilian_economy = {
@@ -114,11 +135,6 @@ ideas = {
 			# visible = {
 			# 	use_generic_economic_laws = yes
 			# }
-			available = {
-				NOT = {
-					original_tag = CES
-				}
-			}
 			cost = 150
 			removal_cost = -1
 			modifier = {
@@ -137,6 +153,11 @@ ideas = {
 				modifier = {
 					add = 1000
 					has_idea = scavenging_law
+				}
+			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
 				}
 			}
 		}
@@ -171,6 +192,11 @@ ideas = {
 						has_idea = scavenging_law
 						has_idea = civilian_economy
 					}
+				}
+			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
 				}
 			}
 		}
@@ -210,6 +236,11 @@ ideas = {
 					}
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
+				}
+			}
 		}
 		war_economy = {
 			allowed = {
@@ -226,6 +257,10 @@ ideas = {
 					original_tag = CES
 				}
 			}
+			# Redundant due to above allowed block @Tran
+			# visible = {
+			# 	use_generic_economic_laws = yes
+			# }
 			cost = 150
 			removal_cost = -1
 			modifier = {
@@ -245,6 +280,11 @@ ideas = {
 						has_idea = low_economic_mobilisation
 						has_idea = partial_economic_mobilisation
 					}
+				}
+			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
 				}
 			}
 		}
@@ -272,6 +312,7 @@ ideas = {
 					limit = { original_tag = TLP }
 					NOT = { has_idea = army_with_a_state }
 				}
+				NOT = { has_country_flag = locked_economy_law }
 			}
 			cost = 150
 			removal_cost = -1
@@ -334,12 +375,12 @@ ideas = {
 				has_completed_focus = ncr_moore_ncr_is_prosperity
 			}
 			modifier = {
+				consumer_goods_expected_value = 0.05
 				political_power_factor = -0.25
 				stability_factor = -0.4
 				ruler_drift = 0.1
 				min_export = -0.05
 				production_speed_buildings_factor = 0.1
-				production_speed_industrial_complex_factor = 0.05
 				conversion_cost_civ_to_mil_factor = -0.5
 				production_factory_efficiency_gain_factor = 0.1
 				production_lack_of_resource_penalty_factor = -0.2
@@ -459,6 +500,11 @@ ideas = {
 					add = 500
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
+				}
+			}
 		}
 		export_focus = {
 			allowed = {
@@ -536,6 +582,11 @@ ideas = {
 					factor = 0.5
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
+				}
+			}
 		}
 		limited_exports = {
 			allowed = {
@@ -580,6 +631,11 @@ ideas = {
 					add = 98
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					has_country_flag = locked_economy_law
+				}
+			}
 		}
 		closed_economy = {
 			allowed = {
@@ -598,14 +654,19 @@ ideas = {
 				}
 			}
 			allowed_to_remove = {
-				if = {
-					limit = {
-						OR = {
-							original_tag = TNK
-							original_tag = TVT
+				OR = {
+					if = {
+						limit = {
+							OR = {
+								original_tag = TNK
+								original_tag = TVT
+							}
 						}
+						always = no
 					}
-					always = no
+					NOT = {
+						has_country_flag = locked_economy_law
+					}
 				}
 			}
 			cost = 150
@@ -748,7 +809,6 @@ ideas = {
 			}
 		}
 		ncr_sphere2 = {
-			picture = idea_ncr_sphere
 			allowed = {
 				use_generic_trade_laws = yes
 			}
@@ -829,7 +889,15 @@ ideas = {
                 trade_cost_for_target_factor = -0.2
             }
 			allowed_to_remove = {
-				has_war_with = NCR
+				OR = {
+					NCR = {
+						OR = {
+							exists = no
+							has_country_flag = ncr_crisis
+						}
+					}
+					has_war_with = NCR
+				}
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -852,6 +920,7 @@ ideas = {
 				}
 			}
 		}
+
 		bag_sphere = {
 			allowed = {
 				use_generic_trade_laws = yes
@@ -1103,7 +1172,6 @@ ideas = {
 				# is_canadian_nation = yes
 				NOT = {
 					OR = {
-						original_tag = VER
 						original_tag = LOI
 						original_tag = BGR
 						original_tag = STC
@@ -1197,13 +1265,18 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		currencycad = {
-			picture = gov_idea_bottle_cap
+			picture = gov_idea_CAD
 			#cost = 150
 			removal_cost = -1
 			# NOTE FOR CHANGING THESE MODIFIERS: The Caps GUI uses manual localisation with a tooltip to tell players the modifiers of their currency on hover
 			# If you change any of these numbers, you NEED to also update currencycad_info for players to know what the true effects of the currency are
 			modifier = {
 				caps_flat_income_modifier = 5
+				stability_factor = 0.10
+				min_export = -0.2
+				trade_opinion_factor = -0.1
+				caps_income_modifier = -0.1
+				overlord_trade_cost_factor = -0.2
 				#caps_country_trade_modifier = 0.30
 			}
 			cancel_if_invalid = no
@@ -1222,12 +1295,13 @@ ideas = {
 		}
 		currencypeso = {
 			picture = gov_idea_peso
-
 			#cost = 150
 			removal_cost = -1
 			# NOTE FOR CHANGING THESE MODIFIERS: The Caps GUI uses manual localisation with a tooltip to tell players the modifiers of their currency on hover
 			# If you change any of these numbers, you NEED to also update currencypeso_info for players to know what the true effects of the currency are
 			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
 				caps_flat_income_modifier = 12
 				#caps_country_trade_modifier = 0.30
 			}
@@ -1261,6 +1335,7 @@ ideas = {
 				caps_flat_income_modifier = 9
 				#caps country_trade_modifier = 0.30
 			}
+
 						cancel_if_invalid = no
 		}
 			currencycomputerchip = {
@@ -1488,6 +1563,7 @@ ideas = {
 					NOT = {
 						is_super_mutant_nation_allowed_block = yes
 						is_brotherhood_nation_allowed_block = yes
+						original_tag = URA
 					}
 					original_tag = TBH
 					original_tag = LNS

@@ -1,0 +1,95 @@
+bag_boulder_dome_decisions = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_event_boulder_dome_panorama
+	allowed = {
+		original_tag = BAG
+	}
+	visible = {
+		NOT = {
+			has_country_flag = BAG_boulder_fail_flag
+		}
+	}
+	#visible = {
+	#	OR = {
+	#		has_completed_focus = bag_fill_out_damage_report
+	#		is_debug = yes
+	#	}
+	#}
+	#scripted_gui = boulder_dome_decision_gui
+	priority = 500
+}
+
+bag_expedition_bop = {
+	icon = GFX_decision_category_power_struggle
+	allowed = {
+		original_tag = BAG
+	}
+	priority = 175
+}
+
+bag_new_colorado_republic_decisions = {
+	icon = GFX_decision_category_generic_democracy
+	allowed = {
+		original_tag = BAG
+	}
+	visible = {
+		OR = {
+			# has_completed_focus = bag_capital_of_republic
+			# has_completed_focus = bag_flag_of_republic
+		}
+		NOT = {
+			has_country_flag = bag_capital_chosen
+		}
+	}
+	visible_when_empty = no
+	priority = 155
+}
+
+bag_military_hierarchy_decisions = {
+	icon = GFX_decision_category_military_operation
+	picture = GFX_event_ncr_bbq
+	allowed = {
+		original_tag = BAG
+	}
+	visible = {
+		# has_completed_focus = bag_promote_our_heroes
+	}
+	visible_when_empty = no
+	priority = 150
+}
+
+bag_territorial_management_decisions = {
+	icon = GFX_decision_category_border_war
+	allowed = {
+		original_tag = BAG
+	}
+	visible = {
+		# has_completed_focus = bag_taming_rockies
+	}
+	visible_when_empty = no
+	priority = 125
+}
+
+bag_foreign_affairs = {
+	icon = GFX_decision_category_border_war
+	allowed = {
+		original_tag = BAG
+	}
+	visible = {
+		# has_completed_focus = bag_other_end_of_deal
+	}
+	visible_when_empty = no
+	priority = 110
+}
+
+bag_capture_zax = {
+	icon = GFX_decision_category_border_war
+	allowed = {
+		original_tag = BAG
+	}
+	visible = {
+		# has_completed_focus = bag_operation_deep_thought
+	}
+	visible_when_empty = no
+	priority = 109
+}

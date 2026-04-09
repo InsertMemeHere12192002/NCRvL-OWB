@@ -14,8 +14,6 @@ focus_tree = {
 		cost = 7
 		x = 13
 		y = 0
-		available = {
-		}
 		completion_reward = {
 			country_event = nf_mojave_brotherhood.1
 		}
@@ -1000,11 +998,11 @@ focus_tree = {
 			}
 			set_province_name = {
 				id = 5764
-				name = "Helios Citadel"
+				name = VICTORY_POINTS_5764_MOJ
 			}
 			hidden_effect = {
 				417 = {
-					set_state_name = "Helios Citadel"
+					set_state_name = STATE_417_MOJ
 				}
 			}
 		}
@@ -1479,6 +1477,7 @@ focus_tree = {
 				}
 			}
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.33
 				uses = 1
 				category = radar_tech
@@ -1545,7 +1544,7 @@ focus_tree = {
 	}
 	focus = {
 		id = moj_the_cipher_expedition
-		icon = GFX_goal_TTM_PNT_Flag
+		icon = GFX_goal_TTM_CIP_Flag
 		cost = 60
 		x = 2
 		y = 0
@@ -1596,8 +1595,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = power_armor_equipment_4
-				amount = 150
+				type = power_armor_equipment_5
+				amount = 100
 				producer = USA
 			}
 		}
@@ -1761,6 +1760,7 @@ focus_tree = {
 		}
 		available = {
 			ai_has_no_other_wars_or_wargoals = yes
+			is_subject = no
 		}
 		bypass = {
 			VEG = {
@@ -1796,6 +1796,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.33
 				uses = 1
 				category = electronics
@@ -1814,6 +1815,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.66
 				uses = 1
 				category = robotics_tech_category
@@ -1859,6 +1861,7 @@ focus_tree = {
 				legacy_id = -1
 			}
 			add_tech_bonus = {
+				name = tech_bonus_tree_tt
 				bonus = 0.33
 				uses = 1
 				category = robotics_tech_category

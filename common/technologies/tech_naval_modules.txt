@@ -794,7 +794,7 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = naval_medium_weapon_tech_2
+			leads_to_tech = naval_medium_weapon_module_tech_3
 			research_cost_coeff = 1
 		}
 
@@ -1275,6 +1275,7 @@ technologies = {
 		}
 	}
 
+	# super heavy weapons
 	naval_super_heavy_weapon_module_tech_3 = {
 
 		enable_equipment_modules = {
@@ -2177,6 +2178,7 @@ technologies = {
 	naval_fire_protection_tech_1 = {
 
 		critical_receive_chance = -0.05
+		naval_critical_effect_factor = -0.04
 
 		path = {
 			leads_to_tech = naval_fire_protection_tech_2
@@ -2223,6 +2225,7 @@ technologies = {
 	naval_fire_protection_tech_2 = {
 
 		critical_receive_chance = -0.05
+		naval_critical_effect_factor = -0.04
 
 		path = {
 			leads_to_tech = naval_fire_protection_tech_3

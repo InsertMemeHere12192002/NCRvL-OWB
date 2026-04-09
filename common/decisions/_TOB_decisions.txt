@@ -1,0 +1,87 @@
+
+political_actions = {
+	TOB_release_mesmeralda = {
+		icon = GFX_decision_movie_fish
+		allowed = {
+			tag = TOB
+		}
+		visible = {
+			# has_completed_focus = tob_embrace_hubris_1
+			MZZ = {
+				exists = no
+			}
+		}
+		available = {
+			#MZZ is a tag alias that returns true if you have Mesmeralda in your country.
+			MZZ = {
+				all_core_land_owned_by_prev = yes
+			}
+		}
+		cost = 50
+		fixed_random_seed = no
+		fire_only_once = yes
+		complete_effect = {
+			#MZZ is a tag alias that returns true if you have Mesmeralda in your country.
+			TOB = {
+				add_political_power = 500
+				add_manpower = 5000
+				release = MZZ
+				MZZ = {
+					add_political_power = 500
+					add_manpower = 5000
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+	TOB_invite_mesmeralda = {
+		icon = GFX_decision_movie_fish
+		allowed = {
+			tag = TOB
+		}
+		visible = {
+			# has_completed_focus = tob_embrace_hubris_1
+		}
+		available = {
+			OR = {
+				is_in_faction = no
+				is_caesars_legion_member = yes
+			}
+			#MZZ is a tag alias that returns true if you have Mesmeralda in your country.
+			MZZ = {
+				is_subject = no
+				NOT = {
+					has_war_with = TOB
+				}
+				is_neighbor_of = TOB
+			}
+		}
+		cost = 50
+		fixed_random_seed = no
+		fire_only_once = yes
+		complete_effect = {
+			if = {
+				limit = {
+					is_in_faction = no
+				}
+				create_or_join_realm_of_hubris = yes
+				#MZZ is a tag alias that returns true if you have Mesmeralda in your country.
+				MZZ = {
+					invite_to_realm_of_hubris = yes
+				}
+			}
+			#Have to be in the legion to get this invite option
+			else = {
+				#MZZ is a tag alias that returns true if you have Mesmeralda in your country.
+				MZZ = {
+					invite_to_caesars_legion = yes
+				}
+			}
+		}
+		ai_will_do = {
+			base = 10000
+		}
+	}
+}

@@ -1099,7 +1099,7 @@ implant_cybernetic_warform_tech = {
 					country_event = {
 						id = implant_events.1
 						days = 15
-						random = 240
+						random_hours = 240
 					}
 				}
 				if = {

@@ -1,7 +1,9 @@
-state={
-	id=1158
-	name="STATE_1158"
+state = {
+	id = 1158
+	name = "STATE_1158"
 	history = {
+		owner = TBH
+		add_core_of = TBH
 		victory_points = {
 			16916 6
 		}
@@ -13,11 +15,11 @@ state={
 			industrial_complex = 1
 		}
 	}
-	provinces={
+	provinces = {
 		8677 16857 16895 16913 16916 16922 16927 16931
 	}
-	manpower=4420
-	buildings_max_level_factor=1.000
-	state_category=rural
-	local_supplies=0.000
+	manpower = 4420
+	buildings_max_level_factor = 1.000
+	state_category = rural
+	local_supplies = 0.000
 }

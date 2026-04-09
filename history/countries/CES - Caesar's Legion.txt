@@ -60,34 +60,23 @@ set_technology = {
 
 	# Vehicles
 	bike_tech_1 = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		nautics_tech_2 = 1
+	nautics_tech_1 = 1
+	#nautics_tech_2 = 1
 		light_navy_hull_tech_1 = 1
 		light_navy_hull_tech_2 = 1
-		waterproof_sealing_tech = 1
+		#waterproof_sealing_tech = 1
 		medium_navy_hull_tech_1 = 1
 		naval_invasion_tech_1 = 1
-		naval_invasion_tech_2 = 1
+		# naval_invasion_tech_2 = 1
 		heavy_navy_hull_tech_1 = 1
 		naval_module_tech = 1
 		naval_armour_tech_1 = 1
-		naval_hard_point_tech = 1
-		naval_pd_module_tech_1 = 1
-		naval_communications_module_tech_1 = 1
-		naval_weapons_module_tech = 1
+		#naval_pd_module_tech_1  = 1
+		#naval_communications_module_tech_1 = 1
+		#naval_weapons_module_tech = 1
 		naval_support_module_tech = 1
-		multi_deck_construction_tech = 1
-	}
+		#multi_deck_construction_tech = 1
 }
-
-
 
 set_stability = 0.35
 set_war_support = 0.37
@@ -133,7 +122,6 @@ add_ideas = {
 	cultofmars
 	national_spirit_rejection_of_automation
 	CES_lanius_campaign
-	# slavers_idea_2
 	tribal_recruitment
 	undesirables_law_petty
 	legionary_state
@@ -174,8 +162,8 @@ recruit_character = CES_vulpes
 recruit_character = CES_malpais
 recruit_character = CES_gaius_duilius
 recruit_character = CES_hashkeh_naabaah
-recruit_character = CES_preist_david
-recruit_character = CES_preist_selene
+recruit_character = CES_priest_david
+recruit_character = CES_priest_selene
 recruit_character = CES_bares_his_teeth
 recruit_character = CES_carmine
 recruit_character = CES_earnhardt
@@ -243,7 +231,7 @@ if = {
 		has_dlc = "La Resistance"
 	}
 	create_operative_leader = {
-		name = "Vulpes Inculta"
+		name = CES_vulpes_operative
 		gfx = GFX_Portrait_CES_Vulpes_Inculta
 		skill = 4
 		traits = { operative_gecko operative_smooth_talker operative_ninja operative_frumentarius operative_vulpes }
@@ -252,6 +240,12 @@ if = {
 		nationalities = { CES }
 	}
 	add_ideas = legion_training
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "La Resistance" }
+	}
+	add_ideas = legion_training_non_lar
 }
 
 create_equipment_variant = {

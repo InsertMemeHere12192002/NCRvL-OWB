@@ -2244,10 +2244,14 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 1.5
+			factor = 3
 			modifier = {
 				factor = 0.5
 				has_manpower > 4000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2287,12 +2291,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2276.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 4000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2332,12 +2340,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2277.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 4000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2376,12 +2388,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2278.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 4000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2422,12 +2438,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2279.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 4000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2468,12 +2488,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2280.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 4000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2513,12 +2537,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2281.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 8000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}
@@ -2553,12 +2581,16 @@ technologies = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 1.5
+				factor = 3
 				date > "2283.1.1"
 			}
 			modifier = {
 				factor = 0.5
 				has_manpower > 10000
+			}
+			modifier = {
+				factor = 2
+				has_manpower < 750
 			}
 		}
 	}

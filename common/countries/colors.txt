@@ -1585,8 +1585,12 @@ FBH = {
 	color = rgb { 227 154 66 }
 	color_ui = rgb { 227 154 66}
 }
-}
+
 DAG = {
 	color = rgb { 151 12 12 }
 	color_ui = rgb { 151 12 12 }
+}
+WOO = {
+	color = rgb { 41 206 218 }
+	color_ui = rgb { 41 206 218 }
 }

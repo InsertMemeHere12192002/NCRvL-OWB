@@ -52,18 +52,10 @@ set_technology = {
 	bike_tech_1 = 1
 	raider_reckless_aggression = 1
 	terror_tactics = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		#waterproof_sealing_tech = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.2
@@ -88,12 +80,10 @@ set_popularities = {
 
 add_ideas = {
 	raider_nation
-	# slavers_idea_1
 	oregon_cannibal_widespread_cannibalism
 	undesirables_law_raider
 	raider_bands
 }
-set_country_flag = slavery_allowed
 
 recruit_character = JAC_banshee
 recruit_character = JAC_rayford_the_fang

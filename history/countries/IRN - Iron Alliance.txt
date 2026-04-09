@@ -60,18 +60,10 @@ set_technology = {
 	weight_support_frame_pa_tech_2 = 1
 	wasteland_pa_tech = 1
 	simple_servo_tech = 1
-}
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		naval_invasion_tech_1 = 1
-	}
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	naval_invasion_tech_1 = 1
 }
 
 set_stability = 0.3
@@ -159,7 +151,7 @@ add_timed_idea = {
 }
 
 recruit_character = IRN_bulleteater
-
+recruit_character = IRN_red
 add_manpower = 500
 
 add_equipment_to_stockpile = {

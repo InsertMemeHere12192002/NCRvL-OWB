@@ -59,6 +59,18 @@ set_technology = {
 	pre_agriculture_industry_tech = 1
 	agriculture_industry_tech_1 = 1
 	agriculture_industry_tech_2 = 1
+	nautics_tech_1 = 1
+	light_navy_hull_tech_1 = 1
+	#waterproof_sealing_tech = 1
+	medium_navy_hull_tech_1 = 1
+	#multi_deck_construction_tech = 1
+	heavy_navy_hull_tech_1 = 1
+	naval_invasion_tech_1 = 1
+	naval_module_tech = 1
+	naval_armour_tech_1 = 1
+	#naval_pd_module_tech_1  = 1
+	#naval_communications_module_tech_1 = 1
+	#naval_weapons_module_tech = 1
 }
 
 set_country_flag = dont_give_settler_generic_political_advisors
@@ -75,26 +87,6 @@ set_country_flag = is_settler_nation
 set_country_flag = grand_doctrine_ai
 set_country_flag = grand_infantry_doctrine_ai
 set_country_flag = is_california_nation
-
-if = {
-	limit = {
-		has_dlc = "Man the Guns"
-	}
-	set_technology = {
-		nautics_tech_1 = 1
-		light_navy_hull_tech_1 = 1
-		waterproof_sealing_tech = 1
-		medium_navy_hull_tech_1 = 1
-		multi_deck_construction_tech = 1
-		heavy_navy_hull_tech_1 = 1
-		naval_invasion_tech_1 = 1
-		naval_module_tech = 1
-		naval_armour_tech_1 = 1
-		naval_pd_module_tech_1 = 1
-		naval_communications_module_tech_1 = 1
-		naval_weapons_module_tech = 1
-	}
-}
 
 set_stability = 0.4
 set_war_support = 0.5

@@ -44,7 +44,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
-	spriteType = {   # Needs one
+	spriteType = {
 		name = "GFX_unit_category_spec_ops_icon_small"
 		texturefile = "gfx/texticons/unit_spec_ops_icon_small.dds"
 		legacy_lazy_load = no
@@ -269,7 +269,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
-	spriteType = {  # needs one
+	spriteType = {
 		name = "GFX_unit_category_special_forces_icon_small"
 		texturefile = "gfx/texticons/unit_spec_ops_icon_small.dds"
 		legacy_lazy_load = no
@@ -1306,7 +1306,6 @@ spriteTypes = {
 		textureFile = "gfx/interface/counters/divisions_large/unit_anti_tank_support_icon.dds"
 		noOfFrames = 2
 	}
-
 	spriteType = {
 		name = "GFX_unit_anti_tank_company_icon_medium_white"
 		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_anti_tank_support_icon.dds"
@@ -1319,13 +1318,13 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
-
 	spriteType = {
 		name = "GFX_unit_anti_tank_infantry_icon_medium"
 		textureFile = "gfx/interface/counters/divisions_large/unit_anti_tank_infantry_icon.dds"
 		noOfFrames = 2
 	}
 
+	# anti tank support
 	spriteType = {
 		name = "GFX_unit_anti_tank_infantry_icon_medium_white"
 		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_anti_tank_infantry_icon.dds"
@@ -1957,5 +1956,4 @@ spriteTypes = {
 		legacy_lazy_load = no
 		noOfFrames = 2
 	}
-
 }
