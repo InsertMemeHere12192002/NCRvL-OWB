@@ -2345,4 +2345,36 @@ focus_tree = {
 			}
 		}
 	}
-}
+	focus = {
+		id = EHT_Mormon_conquest
+		icon = GFX_goal_WHT_generic_flag
+		cost  = 30
+		available = {	
+			WHT = {
+                all_core_land_owned_by_prev_sphere = yes
+            }
+		}
+		prerequisite = {
+			focus = EHT_ruby
+		}
+		x = -2
+		y = 1
+		relative_position_id = EHT_ruby
+		completion_reward = {
+			add_research_slot = 1
+			CLK = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			TAR = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			NCN = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+			ANO = {
+				ROOT = {
+					grant_wargoals_on_core_states_of_prev_force_ai_war = yes
+				}
+			}
+		}
+	}
