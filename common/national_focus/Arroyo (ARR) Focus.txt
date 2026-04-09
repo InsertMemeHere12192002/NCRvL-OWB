@@ -1220,12 +1220,12 @@ focus_tree = {
 			set_technology = {
 				CES_mercenary_training_tech = 1
 			}
-			59 = {
-				start_resistance = yes
-				custom_effect_tooltip = ""				# PDX forgot the newline for the previous tooltip, so this is here. Love LAR, definitely a finished DLC
-				force_enable_resistance = NEW
-				set_resistance = 30
-			}
+			# 59 = {
+			# 	start_resistance = yes
+			# 	custom_effect_tooltip = ""				# PDX forgot the newline for the previous tooltip, so this is here. Love LAR, definitely a finished DLC
+			# 	force_enable_resistance = NEW
+			# 	set_resistance = 30
+			# }
 			country_event = {
 				id = nf_arroyo.16
 			}

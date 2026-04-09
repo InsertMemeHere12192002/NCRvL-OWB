@@ -712,9 +712,6 @@ technologies = {
 			amphibious_beast_creature
 		}
 
-		sub_technologies = {
-		}
-
 		categories = {
 			creatures_tech_category
 			amphibious_tech_category
@@ -1020,9 +1017,6 @@ technologies = {
 			deathclaw_equipment_1
 		}
 
-		sub_technologies = {
-		}
-
 		categories = {
 			creatures_tech_category
 			deathclaw_tech_category
@@ -1187,9 +1181,6 @@ technologies = {
 
 		enable_equipments = {
 			deathclaw_equipment_2
-		}
-
-		sub_technologies = {
 		}
 
 		categories = {
@@ -1474,8 +1465,6 @@ technologies = {
 			deathclaw_equipment_3
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -1601,9 +1590,6 @@ technologies = {
 
 		enable_subunits = {
 			deathclaw_special_forces
-		}
-
-		sub_technologies = {
 		}
 
 		categories = {
@@ -1750,9 +1736,6 @@ technologies = {
 			feral_ghoul
 		}
 
-		sub_technologies = {
-		}
-
 		categories = {
 			creatures_tech_category
 			feral_tech_category
@@ -1820,8 +1803,6 @@ technologies = {
 			feral_ghoul_equipment_2
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -1899,8 +1880,6 @@ technologies = {
 			feral_ghoul_equipment_armored
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -1972,8 +1951,6 @@ technologies = {
 			feral_ghoul_equipment_glowing
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -2095,8 +2072,6 @@ technologies = {
 			beast_creature
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -2166,8 +2141,6 @@ technologies = {
 			beast_creature_equipment_2
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -2255,8 +2228,6 @@ technologies = {
 			beast_creature_equipment_heavy
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -2356,8 +2327,6 @@ technologies = {
 			beast_creature_equipment_dusky
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category
@@ -2407,8 +2376,6 @@ technologies = {
 			beast_creature_equipment_stalker
 		}
 
-		sub_technologies = {
-		}
 
 		categories = {
 			creatures_tech_category

@@ -1284,7 +1284,7 @@ spawn_thunderbirds_event_effect = {
 			# Thunderbirds load the focus tree from Eighties and complete their focus
 			load_focus_tree = { tree = eht_nf keep_completed = yes }
 			setup_thunderbird_tree = yes
-			complete_national_focus = EHT_second_nevada_road_war
+			# complete_national_focus = EHT_second_nevada_road_war
 
 			# Thunderbirds get copies of all the standard ideas (some specific ones handled separately) from Eighties and the same government laws as them
 			transfer_eighties_ideas = yes
