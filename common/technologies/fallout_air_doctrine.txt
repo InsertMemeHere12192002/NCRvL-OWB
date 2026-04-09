@@ -738,6 +738,7 @@ technologies = {
 				add_ideas = mechanical_knowhow_doctrine_idea
 			}
 			custom_effect_tooltip = mechanical_knowhow_doctrine_tt
+			air_experience = -50
 		}
 
 		XOR = { comprehensive_theory_doctrine }
@@ -780,10 +781,6 @@ technologies = {
 				NOT = { has_tech = settled_civilization }
 			}
 		}
-
-    on_research_complete = {
-        air_experience = -50
-    }
 
 		ai_research_weights = {
 			cat_air_doctrine = -0.5
@@ -1528,6 +1525,7 @@ technologies = {
 				add_ideas = practical_launch_mechanisms_doctrine_idea
 			}
 			custom_effect_tooltip = practical_launch_mechanisms_doctrine_tt
+			air_experience = -50
 		}
 
 		path = {
@@ -1568,10 +1566,6 @@ technologies = {
 				NOT = { has_tech = settled_civilization }
 			}
 		}
-
-    on_research_complete = {
-        air_experience = -50
-    }
 
 		ai_research_weights = {
 			cat_air_doctrine = -0.5
@@ -2097,10 +2091,6 @@ technologies = {
 				is_major = yes
 			}
 		}
-
-		on_research_complete = {
-        	air_experience = -50
-    	}
 
 		on_research_complete = {
         	air_experience = -50

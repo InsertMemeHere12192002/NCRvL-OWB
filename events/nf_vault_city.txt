@@ -245,7 +245,7 @@ country_event = {
 
 	option = {
 		name = nf_vault_city.7.a
-		complete_national_focus = vlt_a_new_direction
+		# complete_national_focus = vlt_a_new_direction
 		set_politics = {
 			ruling_party = people
 		}
@@ -2383,8 +2383,8 @@ country_event = {
 					slot = high_command
 					cost = 0
 					idea_token = VLT_zomak_advisor
-					#traits = {
-					#}
+					traits = {
+					}
 				}
 			activate = yes
 			}

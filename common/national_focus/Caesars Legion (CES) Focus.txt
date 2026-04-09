@@ -21,9 +21,8 @@ focus_tree = {
                     days = 2
                 }
             }
-            country_event = {
-                id = nf_legion.3
-            }			# Expedition To Blackfoot
+            country_event = nf_legion.3
+            # Expedition To Blackfoot
         }
     }
     focus = {
@@ -36,9 +35,8 @@ focus_tree = {
         x = 18
         y = 1
         completion_reward = {
-            country_event = {
-                id = nf_legion.4
-            }			# Death In The Canyons
+            country_event = nf_legion.4
+            # Death In The Canyons
         }
     }
     focus = {
@@ -51,9 +49,8 @@ focus_tree = {
         x = 18
         y = 2
         completion_reward = {
-            country_event = {
-                id = nf_legion.5
-            }			# The Malpais Legate
+            country_event = nf_legion.5
+    		# The Malpais Legate
         }
     }
     focus = {
@@ -67,9 +64,8 @@ focus_tree = {
         y = 1
         relative_position_id = ces_the_malpais_legate
         completion_reward = {
-            country_event = {
-                id = nf_legion.6
-            }			# Caesar, Son Of Mars
+            country_event = nf_legion.6
+			# Caesar, Son Of Mars
             hidden_effect = {
                 news_event = {
                     id = nf_legion.7
@@ -2342,6 +2338,7 @@ focus_tree = {
                 log = "[GetDateText]: [Root.GetName] ces_warchief_guidance entered"
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.75
                 uses = 1
                 category = spec_force_equipment_tech_category
@@ -2582,6 +2579,7 @@ focus_tree = {
                 log = "[GetDateText]: [Root.GetName] ces_return_chariots entered"
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 1
                 uses = 1
                 category = vehicle_tech_category
@@ -3733,6 +3731,7 @@ focus_tree = {
                 establish_followers = yes
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 1
                 uses = 2
                 category = support_medical_tech_category
@@ -3874,6 +3873,7 @@ focus_tree = {
             }
             else = {
                 add_tech_bonus = {
+                    name = tech_bonus_tree_tt
                     bonus = 0.5
                     uses = 3
                     category = cat_elite_army
@@ -5153,9 +5153,7 @@ focus_tree = {
             focus = ces_caesar_son_of_mars
         }
         completion_reward = {
-            country_event = {
-                id = nf_legion.47
-            }
+            country_event = nf_legion.47
             add_to_variable = { CES.ultima_vulpes = 1 }
             custom_effect_tooltip = ces_add_two_vulpes_opinion
         }
@@ -5197,6 +5195,7 @@ focus_tree = {
         }
         completion_reward = {
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = motorized_equipment_category
@@ -5217,9 +5216,7 @@ focus_tree = {
             focus = ces_caesar_son_of_mars
         }
         completion_reward = {
-            country_event = {
-                id = nf_legion.42
-            }
+            country_event =nf_legion.42
         }
     }
     focus = {
@@ -5279,6 +5276,7 @@ focus_tree = {
                 country_event = nf_legion.43
             } # GDH can rig the investigation
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.3
                 uses = 2
                 category = encryption_tech
@@ -5320,9 +5318,7 @@ focus_tree = {
             }
         }
         completion_reward = {
-            country_event = {
-                id = nf_legion.48
-            }
+            country_event =  nf_legion.48
         }
     }
     focus = {
@@ -5485,11 +5481,13 @@ focus_tree = {
                 }
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 1
                 uses = 3
                 category = naval_tech_category
             }
             add_doctrine_cost_reduction = {
+                name = tech_bonus_tree_tt
                 cost_reduction = 1
                 uses = 3
                 category = cat_naval_doctrine
@@ -5825,6 +5823,7 @@ focus_tree = {
         y = 1
         completion_reward = {
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 2
                 category = support_tech_category
@@ -6496,41 +6495,49 @@ focus_tree = {
                 vehicles_tech_level_scientific = 1
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = industry
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = electronics
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = infantry_tech_category
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = vehicle_tech_category
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = infantry_weapons_tech_category
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = support_tech_category
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = cat_land_doctrine
             }
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 1
                 category = power_armor_tech_category
@@ -6765,6 +6772,7 @@ focus_tree = {
             add_caps = yes
             add_ideas = CES_lessons_denver
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 1
                 uses = 2
                 category = support_logistics_tech_category
@@ -6959,6 +6967,7 @@ focus_tree = {
         completion_reward = {
             army_experience = -15
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.75
                 uses = 2
                 ahead_reduction = 1
@@ -7115,6 +7124,7 @@ focus_tree = {
         y = 1
         completion_reward = {
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.5
                 uses = 3
                 category = industry
@@ -7154,6 +7164,7 @@ focus_tree = {
         y = 1
         completion_reward = {
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.75
                 uses = 2
                 category = infantry_tech_category
@@ -7174,6 +7185,7 @@ focus_tree = {
         y = 1
         completion_reward = {
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 1.5
                 uses = 1
                 category = cat_land_doctrine
@@ -8160,25 +8172,20 @@ focus_tree = {
                     add_building_construction = {
                         type = bunker2
                         level = 1
-                        province = {
-                            id = 9073
-                        }
+                        province =  9073
                         instant_build = yes
                     }
                     add_building_construction = {
                         type = bunker
                         level = 1
-                        province = {
-                            id = 1623
-                        }
+                        province = 1623
+
                         instant_build = yes
                     }
                     add_building_construction = {
                         type = bunker2
                         level = 1
-                        province = {
-                            id = 1623
-                        }
+                        province = 1623
                         instant_build = yes
                     }
                 }
@@ -8495,14 +8502,10 @@ focus_tree = {
 						owns_state = 5
 					}
 				}
-				country_event = {
-					id = nf_legion.131
-				}
+                country_event = nf_legion.131
 			}
 			else = {
-				country_event = {
-					id = nf_legion.132
-				}
+                country_event = nf_legion.132
 			}
         }
     }
@@ -8842,6 +8845,7 @@ focus_tree = {
 			set_temp_variable = { caps_to_add = -200 }
 			add_caps = yes
 			add_tech_bonus = {
+                name = tech_bonus_tree_tt
 				uses = 1
                 ahead_reduction = 1
 				bonus = 1
@@ -8898,26 +8902,31 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_tech_bonus = {
+                name = tech_bonus_tree_tt
 				uses = 1
 				bonus = 0.5
 				category = infantry_weapons_tech_category
 			}
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
 				uses = 1
 				bonus = 0.5
 				category = support_tech_category
 			}
 			add_tech_bonus = {
+                name = tech_bonus_tree_tt
 				uses = 1
 				bonus = 0.5
 				category = air_tech_category
 			}
 			add_tech_bonus = {
+                name = tech_bonus_tree_tt
 				uses = 1
 				bonus = 0.5
 				category = industry
 			}
 			add_doctrine_cost_reduction = {
+                name = tech_bonus_tree_tt
 				uses = 1
 				cost_reduction = 0.5
 				category = cat_land_doctrine
@@ -9093,7 +9102,7 @@ focus_tree = {
 							controller = {
 								OR = {
 									is_in_faction_with = ROOT
-									is_puppet_of = ROOT
+									is_subject_of = ROOT
 									tag = ROOT
 								}
 							}
@@ -9126,7 +9135,7 @@ focus_tree = {
 							controller = {
 								OR = {
 									is_in_faction_with = ROOT
-									is_puppet_of = ROOT
+									is_subject_of = ROOT
 									tag = ROOT
 								}
 							}
@@ -9237,9 +9246,7 @@ focus_tree = {
 		relative_position_id = ces_reservation_frank
 		completion_reward = {
 			add_ideas = CES_ghoul_dogs
-			country_event = {
-				id = nf_legion.133
-			}
+            country_event = nf_legion.133
 		}
 	}
     focus = {
@@ -9404,6 +9411,7 @@ focus_tree = {
             }
             else = {
                 add_tech_bonus = {
+                    name = tech_bonus_tree_tt
                     bonus = 0.4
                     uses = 2
                     category = air_tech_category
@@ -9465,6 +9473,7 @@ focus_tree = {
         completion_reward = {
             army_experience = 10
             add_tech_bonus = {
+                name = tech_bonus_tree_tt
                 bonus = 0.25
                 uses = 1
                 category = industry
@@ -9707,6 +9716,7 @@ focus_tree = {
                     has_completed_focus = ces_somnus_warriors
                 }
                 add_tech_bonus = {
+                    name = tech_bonus_tree_tt
                     bonus = 0.5
                     uses = 1
                     category = spec_force_tech_category
@@ -9717,6 +9727,7 @@ focus_tree = {
                     has_completed_focus = ces_might_of_goliaths
                 }
                 add_tech_bonus = {
+                    name = tech_bonus_tree_tt
                     bonus = 0.5
                     uses = 1
                     category = infantry_weapons_tech_category
@@ -9760,7 +9771,3 @@ focus_tree = {
         }
     }
 }
-
-
-
-# vim: set ft=pdx tw=79 :

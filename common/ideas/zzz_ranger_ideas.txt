@@ -26,26 +26,18 @@ ideas = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-			}
-			equipment_bonus = {
 				spec_ops_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-			}
-			equipment_bonus = {
 				fireteam_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-			}
-			equipment_bonus = {
 				anti_tank_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
 				}
-			}
-			equipment_bonus = {
 				demolitions_equipment = {
 					build_cost_ic = -0.05
 					instant = yes
@@ -744,50 +736,36 @@ ideas = {
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				spec_ops_equipment = {
 					instant = yes
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				anti_tank_equipment = {
 					instant = yes
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				fireteam_equipment = {
 					instant = yes
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				demolitions_equipment = {
 					instant = yes
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				anti_air_equipment = {
 					instant = yes
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				power_armor_equipment = {
 					instant = yes
 					hard_attack = 0.075
 					ap_attack = 0.1
 				}
-			}
-			equipment_bonus = {
 				heavy_infantry_equipment = {
 					instant = yes
 					hard_attack = 0.075

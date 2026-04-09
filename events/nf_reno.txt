@@ -1355,24 +1355,24 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = {
-		name = nf_reno.36.a
-		trigger = {
-			NOT = {
-				has_country_flag = friendship_with_fault_city
-			}
-		}
-		complete_national_focus = new_brokenrejecthumanity
-	}
-	option = {
-		name = nf_reno.36.b
-		trigger = {
-			NOT = {
-				has_country_flag = friendship_with_fault_city
-			}
-		}
-		complete_national_focus = new_brokenreturntosymbiosis
-	}
+	# option = {
+	# 	name = nf_reno.36.a
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_country_flag = friendship_with_fault_city
+	# 		}
+	# 	}
+	# 	complete_national_focus = new_brokenrejecthumanity
+	# }
+	# option = {
+	# 	name = nf_reno.36.b
+	# 	trigger = {
+	# 		NOT = {
+	# 			has_country_flag = friendship_with_fault_city
+	# 		}
+	# 	}
+	# 	complete_national_focus = new_brokenreturntosymbiosis
+	# }
 	option = {
 		name = nf_reno.36.c
 		trigger = {

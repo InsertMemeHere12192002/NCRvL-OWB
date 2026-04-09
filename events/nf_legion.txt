@@ -579,7 +579,7 @@ country_event = {
 		name = nf_legion.420.b
 		add_stability = -0.1
 		add_war_support = -0.1
-		country_event = nf_legion.70
+		news_event = nf_legion.70
 	}
 }
 
