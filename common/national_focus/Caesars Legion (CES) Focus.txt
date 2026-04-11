@@ -3814,6 +3814,8 @@ focus_tree = {
         }
         available = {
             has_tech = ballistic_fireteam_weaponry_tech_3
+            date > 2280.01.01
+
         }
         completion_reward = {
             news_event = nf_legion.93
@@ -7240,6 +7242,7 @@ focus_tree = {
         }
         available = {
             has_tech = flamer_demolitions_weaponry_tech_3
+            date > 2280.01.01
         }
         x = 1
         y = 1
