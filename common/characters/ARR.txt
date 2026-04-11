@@ -1,0 +1,103 @@
+characters = {
+	ARR_chosen_one = {
+		name = ARR_CHOSEN_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_ARR_chosen_one
+			}
+		}
+		country_leader = {
+			desc = ARR_CHOSEN_DESC
+			ideology = chieftain
+			traits = {
+				well_liked_leader
+				popular_figurehead
+			}
+			expire = "3000.01.01.01"
+			id = -1
+		}
+		field_marshal = {
+			traits = {
+				strong_trait
+				perceptive_trait
+				enduring_trait
+				charismatic_trait
+				intelligent_trait
+				agile_trait
+				lucky_trait
+			}
+			skill = 5
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 4
+			visible = { 
+				OR = {
+					has_completed_focus = arr_a_quiet_return
+					has_completed_focus = arr_a_glorious_return
+				}
+			}
+		}
+	}
+	ARR_chitsa = {
+		name = ARR_CHITSA_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_ARR_chitsa
+			}
+		}
+		country_leader = {
+			desc = ARR_CHITSA_DESC
+			ideology = militarist_technocracy
+			traits = {
+			}
+			expire = "3000.1.1.12"
+			id = -1
+		}
+	}
+	ARR_dimitri = {
+		name = ARR_DIMITRI_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_ARR_dimitri
+			}
+		}
+		country_leader = {
+			desc = ARR_DIMITRI_DESC
+			ideology = technocracy
+			traits = {
+			}
+			expire = "3000.1.1.12"
+			id = -1
+		}
+	}
+	ARR_nagor = {
+		name = ARR_NAGOR_NAME
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_ARR_nagor
+			}
+		}
+		country_leader = {
+			desc = ARR_NAGOR_DESC
+			ideology = unlimited_democracy
+			traits = {
+			}
+			expire = "3000.1.1.12"
+			id = -1
+		}
+		corps_commander = {
+			traits = {
+				strong_trait
+				enduring_trait
+				hill_fighter
+			}
+			legacy_id = 12175
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+}
