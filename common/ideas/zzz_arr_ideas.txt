@@ -25,7 +25,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				political_power_gain = -0.5
+				political_power_gain = -0.1
 			}
 		}
 		arr_exerting_influence_2 = {
@@ -121,7 +121,7 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.15
 			}
 		}
 
@@ -138,6 +138,11 @@ ideas = {
 					instant = yes
 				}
 			}
+			# medical_chem_company = {
+			# 		casualty_trickleback = 0.1
+			# 		reliability = 0.05
+			# 		instant = yes
+			# 	} doesn't work need to make it a tech
 		}
 
 		arr_memories_of_captivity = {
@@ -485,7 +490,6 @@ ideas = {
 			removal_cost = 1
 			modifier = {
 				monthly_population = 0.2
-				consumer_goods_expected_value = 0.03
 			}
 		}
 		arr_ncr_taxes = {
@@ -494,7 +498,15 @@ ideas = {
 			removal_cost = 1
 			modifier = {
 				consumer_goods_expected_value = -0.08
-				caps_income_modifier = -0.10
+				caps_income_modifier = +0.10
+			}
+			32 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
 			}
 		}
 		ncr_arr_taxes = {
@@ -502,7 +514,6 @@ ideas = {
 			allowed_civil_war = { always = yes }
 			removal_cost = 1
 			modifier = {
-				consumer_goods_expected_value = 0.02
 				caps_income_modifier = 0.10
 			}
 		}
@@ -582,6 +593,25 @@ ideas = {
 			modifier = {
 				motorized_attack_factor = 0.05
 				motorized_defence_factor = 0.05
+			}
+		}
+		arroyo_special_forces_bonus = {
+			picture = generic_idea
+			allowed = { original_tag = ARR }  # Arroyo tag
+			modifier = {
+				special_forces_attack_factor = 0.1
+				special_forces_defence_factor = 0.1
+			}
+		}
+	}
+	arroyo_reliable_warfare_bonus = {
+		picture = generic_idea
+		allowed = { original_tag = ARR }
+		hidden = yes
+		equipment_bonus = {
+			infantry_equipment = {
+				build_cost_ic = -0.10
+				instant = yes
 			}
 		}
 	}
